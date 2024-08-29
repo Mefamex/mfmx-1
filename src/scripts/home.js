@@ -33,6 +33,7 @@ const links = [
 ]
 
 const divSol = document.querySelector("#divSol");
+divSol.width = window.innerWidth * 0.13; divSol.height = window.innerHeight;
 const canva = document.querySelector("canvas"); console.log(canva);
 canva.width = window.innerWidth * 0.13; canva.height = window.innerHeight;
 

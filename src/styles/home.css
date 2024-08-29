@@ -138,8 +138,6 @@ body {
 }
 
 #divSol{
-    width: 13vw;
-    height: 100vh;
     align-self: flex-start;
     justify-self: start;
 }
