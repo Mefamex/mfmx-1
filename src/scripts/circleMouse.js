@@ -1,8 +1,8 @@
 console.log("JavaScript dosyası: src/circleMouse.js : yükleniyor.");
 var body = document.querySelector("body"); console.log("cathced: circleMouse.js : body", body);
 
-const canva = document.querySelector("canvas"); console.log("cathced :CircleMouse.js : canva:", body);
-canva.width = window.innerWidth; canva.height = window.innerHeight;
+const canvaCircle = document.querySelector("#canvabalon"); console.log("cathced :CircleMouse.js : canvaCircle:", body);
+canvaCircle.width = window.innerWidth; canvaCircle.height = window.innerHeight;
 
 function getRandomColor() { return '#' + Math.floor(Math.random() * 16777215).toString(16); }
 
@@ -10,7 +10,7 @@ function getRandomColor() { return '#' + Math.floor(Math.random() * 16777215).to
 
 class canvasTail {
     constructor(element = null, options = {}) {
-        this.canvas = canva;
+        this.canvas = canvaCircle;
         this.ctx = this.canvas.getContext('2d');
         this.tail = [];
         this.tailLength = 20;
@@ -45,7 +45,7 @@ class canvasTail {
 }
 
 class TrackingCircleWithSpeed {
-    constructor(element, parentt = null, rand_color = "5000", rand_size = "100", rand_size_range = [5, 50, "px"], options = {}) {
+    constructor(element, parentt = null, rand_color = "5000", rand_size = "100", rand_size_range = [5, 40, "px"], options = {}) {
         /* 
         rand_color: 0 => "default is blue"
         rand_color: "0" => "color is random but not changing with milisecond " 
@@ -72,6 +72,7 @@ class TrackingCircleWithSpeed {
         this.element.style.top = window.innerHeight / 2 + "px";
         this.element.style.left = window.innerWidth / 2 + "px";
         this.element.style.zIndex = "-100";
+        this.element.style.opacity= "20%";
 
         // Append to parent if provided
         if (parentt) { parentt.appendChild(this.element); }
@@ -82,7 +83,7 @@ class TrackingCircleWithSpeed {
         this.centerX = this.element.offsetWidth / 2; // Center coordinates of the circle
         this.centerY = this.element.offsetHeight / 2;
         this.speed = 5; this.angle = 6.5;
-        this.minSpeed = Math.random() * 10 + 5; this.maxSpeed = 50; this.minminspeed = this.minSpeed + 0;
+        this.minSpeed = Math.random() * 10 + 5; this.maxSpeed = 40; this.minminspeed = this.minSpeed + 0;
         this.targetIsSameCord = [0, 0, 0]; // x y and duraction
         this.diagonalPixels = Math.sqrt(window.innerHeight ** 2 + window.innerWidth ** 2);
         this.then = Date.now(); this.interval = 1000 / 60;
@@ -97,7 +98,7 @@ class TrackingCircleWithSpeed {
         setTimeout(this.animate, 1000);
         if (parseFloat(this.rand_color) > 0) { setInterval(() => { this.element.style.backgroundColor = getRandomColor(); }, parseFloat(this.rand_color)); }
 
-        // this.canva = new canvasTail(element = this.element);
+    //  this.canvaCircle = new canvasTail(element = this.element);
     }
 
     random_element_size() {
@@ -146,7 +147,7 @@ class TrackingCircleWithSpeed {
             if (fark > Math.PI) { fark = fark - 2 * Math.PI; }
             else if (fark < -Math.PI) { fark = 2 * Math.PI + fark; }
             // Smoothly adjust angle towards desired angle
-            this.angle += fark * (Math.random() * 0.2);
+            this.angle += fark * ( (Math.random() * 0.10 )+0.05);
 
             // angle fit between PI
             if (this.angle < -Math.PI) { this.angle = Math.PI; }
@@ -162,7 +163,7 @@ class TrackingCircleWithSpeed {
             // Update circle position
             this.element.style.left = Math.max(0, Math.min(window.innerWidth - this.element.offsetWidth, this.element.offsetLeft + dxMove)) + 'px';
             this.element.style.top = Math.max(0, Math.min(window.innerHeight - this.element.offsetHeight, this.element.offsetTop + dyMove)) + 'px';
-            //    this.canva.action(this.element.offsetLeft + parseInt(this.element.style.left), this.element.offsetTop + parseInt(this.element.style.top));
+      //          this.canvaCircle.action(this.element.offsetLeft + parseInt(this.element.style.left), this.element.offsetTop + parseInt(this.element.style.top));
 
         }
         requestAnimationFrame(this.animate);
@@ -170,6 +171,13 @@ class TrackingCircleWithSpeed {
 }
 
 
+new TrackingCircleWithSpeed();
+new TrackingCircleWithSpeed();
+new TrackingCircleWithSpeed();
+new TrackingCircleWithSpeed();
+new TrackingCircleWithSpeed();
+new TrackingCircleWithSpeed();
+new TrackingCircleWithSpeed();
 new TrackingCircleWithSpeed();
 new TrackingCircleWithSpeed();
 new TrackingCircleWithSpeed();
