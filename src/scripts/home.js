@@ -33,9 +33,9 @@ const links = [
 ]
 
 const divSol = document.querySelector("#divSol");
-divSol.width = window.innerWidth * 0.13; divSol.height = window.innerHeight;
-const canva = document.querySelector("canvas"); console.log(canva);
-canva.width = window.innerWidth * 0.13; canva.height = window.innerHeight;
+//divSol.width = "13vw"; divSol.height = window.innerHeight+0;
+const canva = document.querySelector("#canvaSM"); console.log(canva);
+canva.width = window.innerWidth * 0.13; canva.height = window.innerHeight+0;
 
 
 
@@ -61,6 +61,8 @@ class LEFT_ELLIPSE {
     }
 
     size_changed() {
+        this.buttonWidth = (window.innerHeight * 0.02 + window.innerWidth * 0.02);
+        this.buttonHeight = this.buttonWidth + 0;
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.ellipseCenterY = window.innerHeight * 0.5;
         this.ellipseRadiusX = window.innerWidth * 0.1;
@@ -86,7 +88,7 @@ class LEFT_ELLIPSE {
             button.addEventListener('click', function () { window.location.href = links[i]; });
             // Add event listeners for mouseenter and mouseleave
             button.addEventListener('mouseenter', () => { this.isAnimating = false; });
-            button.addEventListener('mouseleave', () => { this.isAnimating = true;});
+            button.addEventListener('mouseleave', () => { this.isAnimating = true; });
             this.canvas.parentElement.appendChild(button);
             this.buttons.push(button);
         }
@@ -96,43 +98,41 @@ class LEFT_ELLIPSE {
     reOrganizeButtons() {
         for (let i = 0; i < this.numButtons; i++) {
             let button = this.buttons[i];
-            const angle = -Math.PI + i * (2 * Math.PI) / this.numButtons;
+            const angle = -Math.PI + i * (2* Math.PI) / this.numButtons; // yarim -Math.PI/2 + i * ( Math.PI) / this.numButtons;
             const buttonX = this.ellipseCenterX + this.ellipseRadiusX * Math.cos(angle) - this.buttonWidth / 2 + this.canvas.offsetLeft;
             const buttonY = this.ellipseCenterY + this.ellipseRadiusY * Math.sin(angle) - this.buttonHeight / 2 + this.canvas.offsetTop;
-            this.startAngles.push(-Math.PI + i * (2 * Math.PI) / this.numButtons);
+            this.startAngles.push(angle+0);
 
             button.style.width = this.buttonWidth + "px";
             button.style.height = this.buttonHeight + "px";
             button.style.left = buttonX + "px";
             button.style.top = buttonY + "px";
-
         }
         this.then = Date.now() + 500;
     }
 
     animate() {
         if (Date.now() - this.then > this.interval) {
-            if (!this.isAnimating &&this.movementSpeed>0 ){this.movementSpeed*=0.9;}
-            else if(this.movementSpeed<0.008){this.movementSpeed+=0.0001;}
+            if (!this.isAnimating && this.movementSpeed > 0) { this.movementSpeed *= 0.9; }
+            else if (this.movementSpeed < 0.008) { this.movementSpeed += 0.0001; }
             this.then = Date.now() - ((Date.now() - this.then) % this.interval);
 
             this.buttons.forEach((button, index) => {
-                let angle = -Math.PI + index * (2 * Math.PI) / this.numButtons + this.startAngles[index];
                 this.startAngles[index] += this.movementSpeed;
 
                 let newX = this.ellipseCenterX + this.ellipseRadiusX * Math.cos(this.startAngles[index]) - this.buttonWidth / 2 + this.canvas.offsetLeft;
                 let newY = this.ellipseCenterY + this.ellipseRadiusY * Math.sin(this.startAngles[index]) - this.buttonHeight / 2 + this.canvas.offsetTop;
                 if (newX < this.ellipseCenterX - this.buttonWidth) {
-                    this.startAngles[index] += this.movementSpeed;
+                    this.startAngles[index] += this.movementSpeed*2;
                     newX = this.ellipseCenterX + this.ellipseRadiusX * Math.cos(this.startAngles[index]) - this.buttonWidth / 2 + this.canvas.offsetLeft;
                     newY = this.ellipseCenterY + this.ellipseRadiusY * Math.sin(this.startAngles[index]) - this.buttonHeight / 2 + this.canvas.offsetTop;
                 }
                 button.style.left = newX + "px";
                 button.style.top = newY + "px";
 
-                if (this.startAngles[index] > 2 * Math.PI) { this.startAngles[index] -= 2 * Math.PI; }
+                if (this.startAngles[index] > 2 * Math.PI) { this.startAngles[index] -= 2 * Math.PI;}
             });
-        } requestAnimationFrame(() => this.animate()); 
+        } requestAnimationFrame(() => this.animate());
     }
 }
 
@@ -169,7 +169,6 @@ function hakkimda_al() {
 
 function resized() {
     mfmx_symbol.style.height = (window.innerHeight - h1mfmx.offsetHeight) + "px";
-    console.log(window.innerWidth, window.innerHeight, h1mfmx.offsetHeight);
     left_ellipse.size_changed();
 }
 
