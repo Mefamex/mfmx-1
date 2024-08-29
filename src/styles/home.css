@@ -45,22 +45,20 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr;
     background-color: #111111;
     overflow: hidden;
 }
 
-
-
 #h1mfmx {
-    position: absolute;
     margin: 0;
-    justify-self: center;
+    top: 0;
+    position: absolute;
+    place-self: center;
     font-size: 10vw;
     font-family: "Gill Sans MT";
     color: #eeeeff;
     text-decoration: none;
-    -webkit-text-stroke: 0.5vw hsl(0, 100%, 22%);
+    filter: drop-shadow(0vh 0vh 2vh red);
     grid-row: 1;
 }
 
@@ -84,7 +82,7 @@ body {
     grid-row: 2;
     bottom: 0;
     opacity: 100%;
-    filter: drop-shadow(0 -1vh 1vh red);
+    filter: drop-shadow(0vh 0vh 2vh red);
     pointer-events: none;
     user-select: none;
 }
@@ -97,7 +95,7 @@ body {
     justify-self: end;
     width: 15vw;
     height: 80vh;
-    background-color:#00083873;
+    background-color: #00083873;
     display: flex;
     flex-direction: column;
     pointer-events: none;
@@ -128,7 +126,6 @@ body {
     overflow: hidden;
 }
 
-
 #mailSagBas {
     align-self: center;
     display: block;
@@ -137,12 +134,14 @@ body {
     animation: entranceBottom 3s normal forwards;
 }
 
-#divSol{
+#divSol {
     align-self: flex-start;
     justify-self: start;
+    width: 13vw;
+    height: 100vh;
 }
 
-.buttonsLeft{
+.buttonsLeft {
     position: absolute;
     cursor: pointer;
     display: flex;
@@ -150,7 +149,7 @@ body {
     filter: grayscale(80%);
     animation: entranceLeft 8s normal forwards;
 }
-.buttonsLeft:hover{
+.buttonsLeft:hover {
     scale: 1.5;
     filter: grayscale(0%);
     filter: drop-shadow(0 0 1vh white);
