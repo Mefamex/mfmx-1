@@ -60,7 +60,7 @@ ROBOTIC
 + Java
 + Lua
 
-DECLARATİVE LANG.
+DECLARATIVE LANG.
 + SQL
 + Html
 + Css
@@ -129,7 +129,7 @@ ONLINE RESOURCES
 
 
 
---- MOBİL APP DEVELOPMENT ---
+--- MOBIL APP DEVELOPMENT ---
 CROSS-PLATFORM FRAMEWORKS
 + Flutter (Dart)
 + React Native (Java Script)
@@ -138,7 +138,7 @@ CROSS-PLATFORM FRAMEWORKS
 + Ionic
 + Cordova
 
-NATİVE MOBİLE DEVELOPMENT
+NATIVE MOBILE DEVELOPMENT
 + Java (Android)
 + Swift (IOS)
 + Kotlin (Android)
@@ -150,7 +150,7 @@ NATİVE MOBİLE DEVELOPMENT
 
 
 --- GAME DEVELOPMENT ---
-GAME ENGİNES
+GAME ENGINES
 + Unity (C#)
 + Unreal Engine (C++)
 + Godot (GDScipt)
