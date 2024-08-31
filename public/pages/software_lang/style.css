@@ -96,6 +96,7 @@ main {
     text-align: start;
     line-height: 1.5;
     transition: 0.1s;
+    cursor: pointer;
 }
 
 .div3:hover {
