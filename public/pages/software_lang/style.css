@@ -11,7 +11,7 @@ header {
     background-color: #000000;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 2em;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 1vw;
 }
@@ -19,8 +19,8 @@ header {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 1em;
-    text-align: center;
+    padding: 1rem;
+    text-align: start;
     clear: both;
 }
 
@@ -45,13 +45,12 @@ main {
 .div1 {
     border: 2px solid black;
     font-weight: bolder;
-    font-size: 1.5em;
     margin-block-end: 1em;
     flex-grow: 1;
 }
 .div1 > h3 {
     margin: 0.5em;
-    font-size: 0.9em;
+    font-size: 2rem;
     text-decoration: underline;
 }
 .div11 {
@@ -59,7 +58,6 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    font-size: 0.9em;
 }
 
 .div2 {
@@ -72,17 +70,17 @@ main {
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: ease-out 0.3s;
-    border-radius: 10px;
+    border-radius: 10%;
     background-color: #a8a8a88c;
 }
 .div2:hover {
     box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
     background-color: #a8a8a8;
-    scale: 1.5;
+    scale: 1.2;
 }
 
 .div2 > h6 {
-    font-size: 0.6em;
+    font-size: 1.2rem;
     margin: 0;
     margin-bottom: 0.5em;
     min-height: 3.5em;
@@ -94,13 +92,16 @@ main {
 
 .div3 {
     font-weight: normal;
-    font-size: 0.6em;
+    font-size: 1rem;
     text-align: start;
     line-height: 1.5;
     transition: 0.1s;
 }
 
 .div3:hover {
+    border-radius: 10%;
+    scale: 1.2;
+    color: azure;
     background-color: rgba(77, 77, 77, 0.527);
     box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
     font-weight: bolder;

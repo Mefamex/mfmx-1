@@ -51,4 +51,4 @@ def jsonToJson():
     print(json.dumps(data, indent=4))
 
 
-jsonToJson()
+txtToJson()

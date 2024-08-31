@@ -80,6 +80,12 @@ CONCURERRENCY ORIENTED
 
 
 --- WEB DEVELOPMENT ---
+CORE TECHNOLOHIES
++ Html
++ Css
++ JavaCcript
++ PHP
+
 FRONTEND FRAMEWORKS
 + React
 + Angular
@@ -90,6 +96,7 @@ FRONTEND FRAMEWORKS
 
 BACKEND FRAMEWORKS
 + Node.Js
++ PHP
 + Django
 + Flask
 + Ruby On Rails

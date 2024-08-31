@@ -1,9 +1,6 @@
 User-agent: *
 
 Disallow: /src/
-Disallow: /public/css/
-Disallow: /public/img/
-Disallow: /public/js/
 Disallow: /*.pdf
 DisAllow: /*.js
 DisAllow: /*.css
