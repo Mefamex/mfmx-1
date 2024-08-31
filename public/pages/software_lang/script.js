@@ -1,86 +1,33 @@
-const jsonData = {
-    "SOFTWARE LANGUAGES": {
-        "SCRIPTING LANG.": [
-            "Python",
-            "Javascript",
-            "Ruby",
-            "PHP",
-            "Perl",
-            "Tcl",
-            "Lua",
-            "R"
-        ],
-        "OBJECT-ORIENTED LANG.": [
-            "Java",
-            "C#",
-            "C++",
-            "Delphi",
-            "Swift",
-            "Kotlin",
-            "Scala"
-        ],
-        // ...
-    },
-    "WEB DEVELOPMENT": {
-        "FRONTEND FRAMEWORKS": [
-            "React",
-            "Angular",
-            "Vue.js",
-            "Ember.js",
-            "Backbone.js",
-            "Riot.js"
-        ],
-        "BACKEND FRAMEWORKS": [
-            "Node.js",
-            "Django",
-            "Flask",
-            "Ruby on Rails",
-            "Laravel",
-            "Spring Boot",
-            "Express.js",
-            "Koa.js",
-            "Pyramid",
-            "Phoenix"
-        ],
-        // ...
-    }
-};
+let jsonData = {};
+const tableBody = document.getElementById('table-body');
 
-const tableHtml = [];
+fetch('/public/pages/software_lang/output.json')
+  .then(response => response.json()).then(data => { jsonData = data; console.log("data fetched with keys:", Object.keys(jsonData).length); createTable(jsonData, tableBody); })
+  .catch(error => console.error('Error:', error));
 
-for (const category in jsonData) {
-    const categoryHtml = `<section id="${category.toLowerCase().replace(/\s+/g, '-')}"">
-        <h2>${category}</h2>
-        <table>
-            <tr>
-                <th>Category</th>
-                <th>Languages</th>
-            </tr>`;
+function createTable(jsonData, tableBody) {
+  console.log("jsonData size of keys:", Object.keys(jsonData).length);
+  console.log("The TableBody", tableBody);
 
-    for (const subcategory in jsonData[category]) {
-        const languages = jsonData[category][subcategory].join(', ');
-        categoryHtml += `<tr>
-            <td>${subcategory}</td>
-            <td>${languages}</td>
-        </tr>`;
-    }
 
-    categoryHtml += `</table>
-    </section>`;
-
-    tableHtml.push(categoryHtml);
+  Object.keys(jsonData).forEach(c1 => {
+    let div1 = document.createElement("div");
+    div1.classList = "div1"; tableBody.appendChild(div1);
+    let d1title = document.createElement("h3"); div1.appendChild(d1title);
+    d1title.textContent = c1;
+    let div11 = document.createElement("div");
+    div11.classList = "div11"; div1.appendChild(div11);
+    Object.keys(jsonData[c1]).forEach(c2 => {
+      let div2 = document.createElement("ul");
+      div2.classList = "div2"; div11.appendChild(div2);
+      let d2title = document.createElement("h6"); div2.appendChild(d2title);
+      d2title.textContent = c2;
+      jsonData[c1][c2].forEach(c3 => {
+        let div3 = document.createElement("li");
+        div3.classList = "div3"; div2.appendChild(div3);
+        div3.textContent = "+ " + c3;
+      }); // c3
+    }); // c2
+  }); // c1
 }
 
-const html = `<body>
-    <header>
-        <h1>Programming Languages and Tools</h1>
-    </header>
-    <main>
-        ${tableHtml.join('')}
-    </main>
-    <footer>
-        <p>&copy; 2024 MefameX</p>
-    </footer>
-</body>`;
-
-document.body.innerHTML = html;
