@@ -1,0 +1,41 @@
+D:\SOFTWARE\Webb\mfmx-1
+|      public
+|      |      blog
+|      |      |      index.html
+|      |      css
+|      |      |      styel.css
+|      |      cv
+|      |      |      index.html
+|      |      img
+|      |      js
+|      |      |      script.js
+|      |      projetcs
+|      |      |      index.html
+|      |      index.html
+|      src
+|      |      assets
+|      |      |      data
+|      |      |      icons
+|      |      |      images
+|      |      |      pdf
+|      |      |      videos
+|      |      components
+|      |      |      Footer.js
+|      |      |      Header.js
+|      |      data
+|      |      |      navigation.json
+|      |      scripts
+|      |      |      contactme.js
+|      |      |      home.js
+|      |      styles
+|      |      |      global.css
+|      |      |      home.css
+|      .gitignore
+|      DirExVis_2024-08-25 19.42.48.txt
+|      FileLister.py
+|      index.html
+|      navigation.json
+|      package.json
+|      readme.md
+|      robots.txt
+|      sitemap.xml

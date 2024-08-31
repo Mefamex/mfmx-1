@@ -1,0 +1,21 @@
+User-agent: *
+
+Disallow: /src/
+Disallow: /public/css/
+Disallow: /public/img/
+Disallow: /public/js/
+Disallow: /*.pdf
+DisAllow: /*.js
+DisAllow: /*.css
+DisAllow: /*.gitignore
+DisAllow: /*.json
+
+
+Allow: /public/*.html
+Allow: /*.html
+Allow: /*.md
+Allow: /*.txt
+Allow: /*.xml
+
+
+Sitemap: https://mefamex.com/sitemap.xml
