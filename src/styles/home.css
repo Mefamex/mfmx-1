@@ -220,12 +220,12 @@ main {
     border-radius: 5vh;
     border: 1vh double white;
     padding-inline: 1vw;
-    padding-block: 1vh;
+    padding-block: 0.8vh;
     font-weight: bold;
     font-size: 1dvw;
     cursor: pointer;
     transition: all 0.2s ease-out;
-    filter: opacity(0.2);
+    filter: opacity(0.4);
 }
 #cardLink:hover,
 #cardLink.hover {
