@@ -50,7 +50,7 @@
     }
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1300px) {
 }
 @media only screen and (max-width: 750px) {
     #divSag {
@@ -70,6 +70,9 @@
     .cardPrgf {
         font-size: 3dvw !important;
     }
+    #cardLink{
+        display: none !important;
+    }
 }
 @media only screen and (min-width: 750px) and (max-width: 1100px) {
     .card {
@@ -80,6 +83,9 @@
     }
     .cardPrgf {
         font-size: 2dvw !important;
+    }
+    #cardLink{
+        display: none !important;
     }
 }
 
@@ -190,14 +196,14 @@ main {
     width: 50vw; /* 13vw*/
     height: 100vh;
     overflow: hidden;
-    /* animation: entranceLeft 6s ease-out forwards;*/
+    animation: entranceLeft 6s ease-out forwards;
 }
 .buttonsLeft {
     position: absolute;
     cursor: pointer;
     display: flex;
     object-fit: contain;
-    /*  animation: entranceLeft 8s normal forwards;*/
+    animation: entranceLeft 8s normal forwards;
     transition: 0.2s;
     border-radius: 25%;
     background-color: rgba(255, 255, 255, 0.473);
@@ -248,6 +254,7 @@ main {
     row-gap: 1dvh;
     column-gap: 1dvw;
     overflow: auto;
+    animation: entranceBottom 4s normal forwards;
 }
 .card {
     width: 50%;
@@ -260,6 +267,7 @@ main {
     padding-inline: 1vw;
     padding-block: 1vh;
     transition: all 0.5s ease-out;
+    animation: entranceBottom 4s normal forwards;
 }
 .cardTitle {
     padding-inline: 1dvw;
