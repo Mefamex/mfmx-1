@@ -32,7 +32,7 @@ divSol.appendChild(divSolCard);
 const divCardContainer = document.createElement("div"); divCardContainer.id = "divCardContainer";
 const infoCards = [
     { title: "WEB SİTESİ HAKKINDA", content: " Bu internet sayfası,yazılım ve Mefamex hakkında bazı bilgileri <b>'/public'</b> bölümünde paylaşmak için açılmıştır." },
-    { title: "Yazılım", content: "Bu sayfada yazılım ile ilgili notlar yer almaktadır." },
+    { title: "Yazılım", content: "<a href='/public/pages/software_lang/index.html'>mefamex.com/yazilim </a>" },
     { title: "MEFAMEX KİMDİR?", content: "yakında..." },
     { title: "PROJELER", content: "Paylaşmak istediğim yazılım - kodlama - programa ile ilgili projeler. <br> yakında..." },
     { title: "CV", content: " " },
