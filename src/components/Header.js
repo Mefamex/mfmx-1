@@ -53,6 +53,11 @@ function CreateHeader() {
     navBarProj.id = "navBarProj";
     navBarProj.textContent = "PROJELER";
     navBarProj.href = "/public/pages/projects"
+    devServer: {
+        historyApiFallback: true
+      }
 }
-
+devServer: {
+    historyApiFallback: true
+  }
 
