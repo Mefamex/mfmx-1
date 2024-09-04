@@ -94,6 +94,7 @@ body {
     display: grid;
     position: absolute;
     overflow: hidden;
+    background-color: black;
 }
 main {
     margin: 0;
