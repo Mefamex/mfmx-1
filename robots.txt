@@ -8,7 +8,6 @@ DisAllow: /*.gitignore
 DisAllow: /*.json
 
 
-Allow: /public/*.html
 Allow: /*.html
 Allow: /*.md
 Allow: /*.txt

@@ -5,27 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/"> <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
+    <base href="/">
+    <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
     <title>Mefamex -Anasayfa-Home</title>
     <meta name="keywords"
         content="MEFAMEX mefamex mefamex.com mefamex.com.tr www.mefamex.com www.mefamex.com.tr Mehmet Akif Akkoç mehmet akif akkoç memofika mfmc-58 mfmc_58">
     <meta name="description"
-        content="Persolan Website | Kişisel Web Sitesi | Hakkında | Sosyal Medya | Blog | Projeler | Mefamex proje">
+        content="Persolan Website | Kişisel Web Sitesi | Hakkımda | Sosyal Medya | Blog | Projeler">
 
-    <link rel="stylesheet" href="./src/styles/home.css"> 
+    <link rel="stylesheet" href="./src/styles/home.css">
     <link rel="icon" sizes="64x64" href="./src/assets/images/mfmx/mfmx-64.png">
     <link rel="icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png">
 
 </head>
 
 <body>
+    <img src="/src/assets/images/background/home_bg.png" loading="lazy"
+        style="position: fixed;filter: blur(3px) grayscale(0.2) ; justify-self: center;object-fit: fill;z-index: -1;width: 100%;"
+        alt="mefamex.logo">
+
     <main>
-        <div id="divSol"></div>
-        <h1 id="h1mfmx">MEFAMEX</h1>
-        <p id="parag1">You can find on the website: about, biography, social media accounts, projects, blog, history... </p>
         <img id="mfmx_symbol" src="/src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" alt="mefamex_symbol_bgb.png">
+        <h1 id="h1mfmx">MEFAMEX</h1>
+        <div id="divSol"></div>
+        <div id="divSag">
+            <h2 id="hakkimdaSagBas">WEBSİTESİ <br>HAKKINDA</h2>
+            <p id="hakkimdaPrgf">Bu websitesi <br>MEFAMEX PORTFOLYO <br> amacı ile hazırlanmıştır. <br><br>Hakkında,
+                iletişim, yazılım & mefamex, projeler, blog gibi alt sayfalarda da paylaşımlar yapılacaktır. <br><br>Bu
+                sitede yer alan tüm bilgiler halihazırda internette bulunduğundan dolayı hiçbir sorumluluk kabul
+                edilmemektedir. <br><br> Websitesi 20.08.2024 tarihinde açılmıştır. Şu anki arayüzü 04.09.2024 tarihinde
+                yüklenmiştir. <br><br>Sayfada kullanılan tüm kodlar MEFAMEX tarafından yazılmıştır. <br><br><br> </p>
+            <h3 id="mailSagBas">support@mefamex.com</h3>
+        </div>
+        <div id="divCardContainer"></div>
     </main>
-   <!-- <script src="./src/scripts/circleMouse.js"></script> -->
+
+    <!-- <script src="./src/scripts/circleMouse.js"></script> -->
     <script src="./src/scripts/home.js"></script>
 </body>
 

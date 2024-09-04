@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.mefamex.com/">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.mefamex.com/</loc>
-    <lastmod>2024-08-25</lastmod>
+    <loc>https://mefamex.com/</loc>
+    <lastmod>2024-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://mefamex.com/public/pages/about/</loc>
+    <lastmod>2024-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://mefamex.com/public/pages/blog/</loc>
+    <lastmod>2024-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://mefamex.com/public/pages/contact/</loc>
+    <lastmod>2024-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://mefamex.com/public/pages/projects/</loc>
+    <lastmod>2024-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://mefamex.com/public/pages/software/</loc>
+    <lastmod>2024-09-04</lastmod>
   </url>
 </urlset>
