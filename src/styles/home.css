@@ -49,8 +49,7 @@
         transform: translateX(-2dvw);
     }
 }
-
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 750px) {
 }
 @media only screen and (max-width: 750px) {
     #divSag {
@@ -61,17 +60,18 @@
         width: 85dvw !important;
         left: 15dvw !important;
     }
+    #cardLink {
+        display: none !important;
+    }
     .card {
         width: 80% !important;
+        justify-self: center !important;
     }
     .cardTitle {
         font-size: 3dvw !important;
     }
     .cardPrgf {
         font-size: 3dvw !important;
-    }
-    #cardLink{
-        display: none !important;
     }
 }
 @media only screen and (min-width: 750px) and (max-width: 1100px) {
@@ -84,32 +84,26 @@
     .cardPrgf {
         font-size: 2dvw !important;
     }
-    #cardLink{
-        display: none !important;
-    }
 }
 
 body {
-    z-index: -10;
     margin: 0;
     padding: 0;
     width: 100dvw;
     height: 100dvh;
     display: grid;
     position: absolute;
-    background-color: #1f0101;
     overflow: hidden;
 }
 main {
-    z-index: -9;
     margin: 0;
     padding: 0;
     display: grid;
-    background-color: #111111;
     overflow: hidden;
+    background-color: #000000a0;
+    background-blend-mode: multiply;
 }
 #h1mfmx {
-    z-index: -8;
     margin: 0;
     top: 0;
     position: absolute;
@@ -120,9 +114,8 @@ main {
     text-decoration: none;
     filter: drop-shadow(0vh 0vh 2vh red);
     grid-row: 1;
-
+    animation: entranceUp 1s ease-out forwards;
 }
-
 #parag1 {
     position: absolute;
     margin: 0;
@@ -133,9 +126,9 @@ main {
     text-decoration: none;
     pointer-events: none;
     user-select: none;
+    animation: entranceUp 3s normal forwards;
 }
 #mfmx_symbol {
-    z-index: -8;
     position: absolute;
     justify-self: center;
     height: 80dvh;
@@ -179,8 +172,16 @@ main {
     text-wrap: wrap;
     text-align: left;
     line-height: 1.7vw;
-    font-size: 1.22vw;
+    font-size: 1.20vw;
     overflow: hidden;
+}
+@keyframes scrollDown {
+    to {
+      max-height: 100%;
+    }
+  }
+#hakkimdaPrgf.animate{
+    animation: scrollDown 2s forwards;
 }
 #mailSagBas {
     align-self: center;
@@ -189,6 +190,8 @@ main {
     font-size: 1vw;
     animation: entranceBottom 3s normal forwards;
     animation: down 3s infinite ease-in-out 2s;
+    user-select: all;
+    pointer-events: all;
 }
 #divSol {
     align-self: flex-start;
@@ -210,36 +213,34 @@ main {
     padding: 1vh;
 }
 .buttonsLeft:hover {
-    z-index: 1;
     scale: 1.5;
     filter: drop-shadow(0 0 3vh white);
     background-color: white;
     border-radius: 50%;
 }
 #cardLink {
-    z-index: 5;
     display: flex;
     position: absolute;
     width: min-content;
     height: min-content;
+    top:0px;
+    left:5dvw;
     background-color: rgba(255, 255, 255, 0.651);
     border-radius: 5vh;
     border: 1vh double white;
     padding-inline: 1vw;
-    padding-block: 0.8vh;
+    padding-block: 1vh;
     font-weight: bold;
     font-size: 1dvw;
     cursor: pointer;
     transition: all 0.2s ease-out;
-    filter: opacity(0.7);
+    filter: opacity(0.5);
 }
-#cardLink:hover,
 #cardLink.hover {
-    z-index: 10;
     filter: opacity(1) !important;
     transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.877);
 }
-
 #divCardContainer {
     position: absolute;
     display: grid;
@@ -247,27 +248,35 @@ main {
     width: 70dvw;
     bottom: 0;
     align-content: space-between;
-    justify-items: center;
     justify-self: center;
     padding-inline: 1dvw;
     padding-block: 1dvh;
     row-gap: 1dvh;
     column-gap: 1dvw;
-    overflow: auto;
-    animation: entranceBottom 4s normal forwards;
 }
 .card {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     height: min-content;
+    justify-self: start;
     background-color: rgba(204, 204, 204, 0.87);
     border-radius: 5vh;
     border: 1vh double white;
     padding-inline: 1vw;
     padding-block: 1vh;
-    transition: all 0.5s ease-out;
-    animation: entranceBottom 4s normal forwards;
+    transition: all 0.5s ease-in-out;
+    animation: entranceBottom 0.8s ease-out forwards;
+}
+.card:nth-child(even) {
+    justify-self: end;
+}
+.card.hover {
+    border-color: red;
+    transition: all 0.5s normal;
+    background-color: rgb(204, 204, 204);
+    box-shadow: 0 0 2vw 0 #ffffff;
+    scale: 1.2;
 }
 .cardTitle {
     padding-inline: 1dvw;

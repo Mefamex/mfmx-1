@@ -1,12 +1,10 @@
 setTimeout(function (e) { go(); }, 1000);
 
-var main = document.querySelector("main");
+
+const main = document.querySelector("main");
 const h1mfmx = document.querySelector("#h1mfmx");
 const mfmx_symbol = document.querySelector("#mfmx_symbol");
-var divSag = document.createElement("div"); divSag.id = "divSag";
-var hakkimdaSagBas = document.createElement("h2"); hakkimdaSagBas.id = "hakkimdaSagBas"; hakkimdaSagBas.textContent = "HAKKIMDA";
-var mailSagBas = document.createElement("h3"); mailSagBas.id = "mailSagBas"; mailSagBas.textContent = "support@mefamex.com";
-var hakkimdaPrgf = document.createElement("p"); hakkimdaPrgf.id = "hakkimdaPrgf"; hakkimdaPrgf.textContent = "loading..."
+const hakkimdaPrgf = document.querySelector("#hakkimdaPrgf");
 const icons_path = [
     "/src/assets/icons/facebook_icon.png",
     "/src/assets/icons/github_icon.png",
@@ -29,14 +27,14 @@ const divSolCard = document.createElement("div"); divSolCard.id = "cardLink";
 divSolCard.addEventListener('click', () => { linked(divSolCard.href) }); divSolCard.href = "https://mefamex.com";
 divSol.appendChild(divSolCard);
 
-const divCardContainer = document.createElement("div"); divCardContainer.id = "divCardContainer";
+const divCardContainer = document.querySelector("#divCardContainer");
 const infoCards = [
-    { title: "WEB SİTESİ HAKKINDA", content: " Bu internet sayfası,yazılım ve Mefamex hakkında bazı bilgileri <b>'/public'</b> bölümünde paylaşmak için açılmıştır." },
-    { title: "Yazılım", content: "<a href='/public/pages/software_lang/index.html'>mefamex.com/yazilim </a>" },
-    { title: "MEFAMEX KİMDİR?", content: "yakında..." },
-    { title: "PROJELER", content: "Paylaşmak istediğim yazılım - kodlama - programa ile ilgili projeler. <br> yakında..." },
+    { title: "HAKKIMDA", href: "/public/pages/about", content: " Bu internet sayfası,yazılım ve Mefamex hakkında bazı bilgileri <b>'/public'</b> bölümünde paylaşmak için açılmıştır." },
+    { title: "Yazılım", href: "/public/pages/software", content: "mefamex.com/software" },
+    { title: "İLETİŞİM", href: "/public/pages/contact", content: "Mail-to <br> SOSYAL MEDYA" },
+    { title: "PROJELER", href: "/public/pages/projects", content: "Paylaşmak istediğim yazılım - kodlama - programa ile ilgili projeler. <br> yakında..." },
     { title: "CV", content: " " },
-    { title: "BLOG", content: "yakında..." },
+    { title: "BLOG", href: "/public/pages/blog", content: "yakında..." },
 ]
 
 class CARD_CONTAINER {
@@ -45,25 +43,31 @@ class CARD_CONTAINER {
         this.infoCards = cards;
     }
 
-    createCards(cards) {
-        if (cards){this.infoCards.add(cards);}
-        this.infoCards.forEach((infoCard) => {
-            let card = document.createElement("div"); card.classList.add("card");
-            this.element.appendChild(card);
-            let title = document.createElement("h5"); title.classList.add("cardTitle"); card.appendChild(title);
-            title.textContent = infoCard.title + "";
-            let prgf = document.createElement("p"); prgf.classList.add("cardPrgf"); card.appendChild(prgf);
-            prgf.innerHTML = infoCard.content + "";
+    createCards(cards) { if (cards) { this.infoCards.append(cards); } this.createOneCard(this.infoCards, 0); }
 
-        })
+    createOneCard(infoCards, index = 0) {
+        if (index >= infoCards.length) { return NaN; }
+        let infoCard = infoCards[index];
+        let card = document.createElement("div"); card.classList.add("card");
+        let title = document.createElement("h5"); title.classList.add("cardTitle"); card.appendChild(title);
+        title.textContent = infoCard.title + "";
+        let prgf = document.createElement("p"); prgf.classList.add("cardPrgf"); card.appendChild(prgf);
+        prgf.innerHTML = infoCard.content + "";
+        card.onmouseover = () => { card.classList.add('hover'); }
+        card.onmouseout = () => card.classList.remove('hover');
+        if (infoCard.href) {
+            card.style.cursor = "pointer";
+            card.addEventListener('click', function () { linked(infoCard.href, "Mefamex.com ->" + infoCard.title) });
+        }
+        this.element.appendChild(card);
+        setTimeout(() => { this.createOneCard(infoCards, index + 1); }, index % 2 * 500);
     }
+}
+
+const cardContainer = new CARD_CONTAINER(divCardContainer, infoCards);
 
 
-
-} const cardContainer = new CARD_CONTAINER(divCardContainer, infoCards);
-
-
-function linked(href) {
+function linked(href, content = "") {
     document.querySelector("body").innerHTML = "";
     let div = document.createElement("div");
     document.querySelector("body").appendChild(div);
@@ -74,7 +78,8 @@ function linked(href) {
     div.style.textAlign = "center"; div.style.textWrap = "wrap";
     div.style.transition = "all 2s";
     let p = document.createElement("p");
-    p.innerHTML = "Connecting to: <br>" + href + "<br><br>";
+    if (String(content).length > 2) { content += "<br><br>" + href } else { content = href + "" }
+    p.innerHTML = "Connecting to: <br>" + content + "<br><br>";
     let p1 = document.createElement("p");
     p1.textContent = "please wait 3 second...";
     p.style.maxWidth = "100vw";
@@ -86,8 +91,6 @@ function linked(href) {
     setTimeout(() => { p1.textContent = 'please wait...' }, 3000);
     setTimeout(() => { p1.innerHTML = 'Your connection is slow <br> you can copy paste the link <br> or allow the permissions <br> yönlendirmeye izin veriniz...' }, 5000);
     console.log(href);
-
-
 }
 
 
@@ -107,6 +110,8 @@ class LEFT_BUTTONS {
         this.then = 0; this.interval = 1000 / 30;
         this.frame = 0;
         this.card = card; this.card.timer = 0;
+        this.card.onmouseover = () => { this.card.classList.add('hover'); }
+        this.card.onmouseout = () => { this.card.classList.remove("hover") }
     }
 
     start() {
@@ -147,25 +152,24 @@ class LEFT_BUTTONS {
         this.card.sm = sm;
         this.card.textContent = sm.href + "";
         this.card.href = sm.href + "";
-        
         this.reOrganizeCard();
     }
     reOrganizeCard() {
         if (!this.card.sm) {
             let sm = this.button_animating[0];
-            this.card.style.left = "5vw"
-            this.card.style.top = "0";
+            /*    this.card.style.left = "5vw"
+                this.card.style.top = "0";*/
             this.card.textContent = sm.href + "";
             this.card.href = sm.href + "";
         }
         else {
-            this.card.style.left = parseFloat(this.card.sm.style.left) + this.card.sm.clientWidth * 1.3 + "px";
-            this.card.style.top = parseFloat(this.card.sm.style.top) + this.buttonHeight / 2 - this.card.clientHeight / 2 + "px";
+            /*   this.card.style.left = parseFloat(this.card.sm.style.left) + this.card.sm.clientWidth * 1.3 + "px";
+               this.card.style.top = parseFloat(this.card.sm.style.top) + this.buttonHeight / 2 - this.card.clientHeight / 2 + "px";*/
         }
     }
     unshowCard() {
         if (Date.now() - this.card.timer > 2000 && this.isAnimating) { this.card.sm = NaN }
-        else { setTimeout(() => { this.unshowCard() }, 2000);}
+        else { setTimeout(() => { this.unshowCard() }, 2000); }
     }
 
     reOrganizeButtons() {
@@ -188,7 +192,7 @@ class LEFT_BUTTONS {
         if (Date.now() - this.then > this.interval) {
             this.then = Date.now() - ((Date.now() - this.then) % this.interval);
             if (!this.isAnimating && this.movementSpeed > 0) { this.movementSpeed *= 0.9; this.card.classList.add("hover"); }
-            else if (this.movementSpeed < 0.008) { this.movementSpeed += 0.0001;  this.card.classList.remove("hover"); }
+            else if (this.movementSpeed < 0.008) { this.movementSpeed += 0.0001; this.card.classList.remove("hover"); }
             this.reOrganizeCard();
             if (this.button_animating[0].angle > this.stepAngle && this.button_animating.length < this.numButtons) {
                 this.button_animating.unshift((this.buttons[(this.button_animating[0].sira + 1) % this.numButtons]))
@@ -220,46 +224,34 @@ class LEFT_BUTTONS {
 
 const left_buttons = new LEFT_BUTTONS(divSol, divSolCard);
 function go() {
-    divSag.appendChild(hakkimdaSagBas);
-    divSag.appendChild(hakkimdaPrgf); setTimeout(function (e) { hakkimda_al(); }, 1000);
-    divSag.appendChild(mailSagBas);
-    main.appendChild(divSag);
     left_buttons.start()
     main.appendChild(divCardContainer);
     cardContainer.createCards();
     resized();
 
     setTimeout(() => {
-
-
         const resizeObserver = new ResizeObserver(() => { resized(); });
         resizeObserver.observe(main);
+        animateScroll();
     }, 2000)
 }
-
-
-function hakkimda_al() {
-    let text = "checking humantiy activity..."; hakkimdaPrgf.textContent = text + "";
-    fetch('/src/assets/texts/main_hakkimda.txt')
-        .then(response => response.text()).then(data => { text = data; })
-        .catch(error => { console.error('Hata oluştu:', error); text = 'Hata oluştu:' + error; });
-    let index = 0; hakkimdaPrgf.textContent = text.slice(0, index);
-    const write = () => {
-        if (index < text.length && index < 500) {
-            hakkimdaPrgf.textContent = text.slice(0, index + 1);
-            index++; setTimeout(write, (1000 - index) / 40);
-        }
-        else { hakkimdaPrgf.textContent = text; }
-    }; write();
+let scrollHeight = hakkimdaPrgf.scrollHeight/2;
+let scrollTop = 0; const scrollAdd = 2;
+function animateScroll() {
+    scrollTop += scrollAdd; // adjust the increment value to control the animation speed
+    hakkimdaPrgf.scrollTop = scrollTop;
+    if (scrollTop > scrollHeight ) { scrollTop=-scrollHeight/2; }
+    console.log(scrollTop,scrollHeight);
+    
+    setTimeout(animateScroll, 30);
 }
 
 
 
 function resized() {
+    scrollHeight = hakkimdaPrgf.scrollHeight/2;
     mfmx_symbol.style.height = (main.clientHeight - h1mfmx.offsetHeight) + "px";
-    divCardContainer.style.height =( main.clientHeight - h1mfmx.clientHeight)*0.99 + "px";
-
-    // left_ellipse.size_changed();
+    divCardContainer.style.height = (main.clientHeight - h1mfmx.clientHeight) * 0.99 + "px";
     left_buttons.size_changed();
 }
 

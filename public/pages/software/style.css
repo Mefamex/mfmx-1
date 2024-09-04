@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: start;
+    clear: both;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    max-width: 98%;
+}
+
+#table-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    text-wrap: wrap;
+    column-count: 2;
+}
+
+.div1 {
+    border: 2px solid black;
+    font-weight: bolder;
+    margin-block-end: 1em;
+    flex-grow: 1;
+}
+.div1 > h3 {
+    margin: 0.5em;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+.div11 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.div2 {
+    font-weight: bold;
+    list-style-type: none;
+    margin-inline: 0em;
+    margin-block: 0.5em;
+    padding: 20px;
+    height: min-content;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: ease-out 0.3s;
+    border-radius: 10%;
+    background-color: #a8a8a88c;
+}
+.div2:hover {
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+    background-color: #a8a8a8;
+    scale: 1.2;
+}
+
+.div2 > h6 {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 0.5em;
+    min-height: 3.5em;
+    width: min-content;
+    align-content: space-around;
+    margin-inline: auto;
+    text-wrap: wrap;
+}
+
+.div3 {
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: start;
+    line-height: 1.5;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.div3:hover {
+    border-radius: 10%;
+    scale: 1.2;
+    color: azure;
+    background-color: rgba(77, 77, 77, 0.527);
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+    font-weight: bolder;
+}

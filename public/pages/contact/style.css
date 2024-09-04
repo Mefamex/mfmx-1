@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    min-height: 100dvh;
+    display: grid;
+    position: absolute;
+    background-color: #110101;
+}
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 85dvh;
+    color: whitesmoke;
+    font-size: x-large;
+}
+ul{
+    margin-inline: auto;
+}
+
+a{
+    color: aqua;
+}
+li{
+    margin-bottom: 1rem;
+}

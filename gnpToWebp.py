@@ -1,4 +1,5 @@
 from PIL import Image
+import os
 
 """
 dont forget to update pillow and roboflow
@@ -31,3 +32,10 @@ def png_to_webp(input_file, output_file, quality=85):
 input_image = "input.png"
 output_image = "output.webp"
 png_to_webp(input_image, output_image)
+
+"""
+for q1, q2, q3 in os.walk(os.getcwd()):
+    for q in q3:
+        png_to_webp(q, "".join(q.split(".")[:-1]) + ".webp")
+    break
+"""
