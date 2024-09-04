@@ -24,7 +24,7 @@ const links = [
 
 const divSol = document.querySelector("#divSol");
 const divSolCard = document.createElement("div"); divSolCard.id = "cardLink";
-divSolCard.addEventListener('click', () => {window.location.href=divSolCard.href }); divSolCard.href = "https://mefamex.com";
+divSolCard.addEventListener('click', () => { window.location.href = divSolCard.href }); divSolCard.href = "https://mefamex.com";
 divSol.appendChild(divSolCard);
 
 const divCardContainer = document.querySelector("#divCardContainer");
@@ -57,7 +57,7 @@ class CARD_CONTAINER {
         card.onmouseout = () => card.classList.remove('hover');
         if (infoCard.href) {
             card.style.cursor = "pointer";
-            card.addEventListener('click', function () { window.location.href= infoCard.href;});
+            card.addEventListener('click', function () { window.location.href = infoCard.href; });
         }
         this.element.appendChild(card);
         setTimeout(() => { this.createOneCard(infoCards, index + 1); }, index % 2 * 500);
@@ -108,7 +108,7 @@ class LEFT_BUTTONS {
             button.classList.add("buttonsLeft");
             button.src = icons_path[i];
             button.href = links[i]; button.target = "_blank";
-            button.addEventListener('click', function () {window.location.href= links[i]; });
+            button.addEventListener('click', function () { window.location.href = links[i]; });
 
             button.addEventListener('mouseenter', () => { this.isAnimating = false; this.showCard(button) });
             button.addEventListener('mouseleave', () => { this.isAnimating = true; this.card.timer = Date.now(); this.unshowCard() });
@@ -207,21 +207,19 @@ function go() {
         animateScroll();
     }, 2000)
 }
-let scrollHeight = hakkimdaPrgf.scrollHeight/2;
+let scrollHeight = hakkimdaPrgf.scrollHeight / 2;
 let scrollTop = 0; const scrollAdd = 2;
 function animateScroll() {
     scrollTop += scrollAdd; // adjust the increment value to control the animation speed
     hakkimdaPrgf.scrollTop = scrollTop;
-    if (scrollTop > scrollHeight ) { scrollTop=-scrollHeight/2; }
-    console.log(scrollTop,scrollHeight);
-    
+    if (scrollTop > scrollHeight) { scrollTop = -scrollHeight / 2; }
     setTimeout(animateScroll, 30);
 }
 
 
 
 function resized() {
-    scrollHeight = hakkimdaPrgf.scrollHeight/2;
+    scrollHeight = hakkimdaPrgf.scrollHeight / 2;
     mfmx_symbol.style.height = (main.clientHeight - h1mfmx.offsetHeight) + "px";
     divCardContainer.style.height = (main.clientHeight - h1mfmx.clientHeight) * 0.99 + "px";
     left_buttons.size_changed();
