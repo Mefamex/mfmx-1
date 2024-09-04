@@ -24,7 +24,7 @@ const links = [
 
 const divSol = document.querySelector("#divSol");
 const divSolCard = document.createElement("div"); divSolCard.id = "cardLink";
-divSolCard.addEventListener('click', () => { linked(divSolCard.href) }); divSolCard.href = "https://mefamex.com";
+divSolCard.addEventListener('click', () => {window.location.href=divSolCard.href }); divSolCard.href = "https://mefamex.com";
 divSol.appendChild(divSolCard);
 
 const divCardContainer = document.querySelector("#divCardContainer");
@@ -57,7 +57,7 @@ class CARD_CONTAINER {
         card.onmouseout = () => card.classList.remove('hover');
         if (infoCard.href) {
             card.style.cursor = "pointer";
-            card.addEventListener('click', function () { linked(infoCard.href, "Mefamex.com ->" + infoCard.title) });
+            card.addEventListener('click', function () { window.location.href= infoCard.href;});
         }
         this.element.appendChild(card);
         setTimeout(() => { this.createOneCard(infoCards, index + 1); }, index % 2 * 500);
@@ -65,34 +65,6 @@ class CARD_CONTAINER {
 }
 
 const cardContainer = new CARD_CONTAINER(divCardContainer, infoCards);
-
-
-function linked(href, content = "") {
-    document.querySelector("body").innerHTML = "";
-    let div = document.createElement("div");
-    document.querySelector("body").appendChild(div);
-    div.style.zIndex = 100; div.style.position = "absolute"; div.style.display = "grid";
-    div.style.placeSelf = "center"; div.style.placeContent = "center";
-    div.style.width = "100dvw"; div.style.height = "100dvh";
-    div.style.backgroundColor = "black"; div.style.color = "white";
-    div.style.textAlign = "center"; div.style.textWrap = "wrap";
-    div.style.transition = "all 2s";
-    let p = document.createElement("p");
-    if (String(content).length > 2) { content += "<br><br>" + href } else { content = href + "" }
-    p.innerHTML = "Connecting to: <br>" + content + "<br><br>";
-    let p1 = document.createElement("p");
-    p1.textContent = "please wait 3 second...";
-    p.style.maxWidth = "100vw";
-    div.style.fontSize = "xx-large";
-    div.appendChild(p); div.appendChild(p1);
-    setTimeout(() => { window.location.href = href; }, 1500);
-    setTimeout(() => { p1.textContent = 'please wait --> 2 <-- second...' }, 1000);
-    setTimeout(() => { p1.textContent = 'please wait --> 1 <-- second...' }, 2000);
-    setTimeout(() => { p1.textContent = 'please wait...' }, 3000);
-    setTimeout(() => { p1.innerHTML = 'Your connection is slow <br> you can copy paste the link <br> or allow the permissions <br> yönlendirmeye izin veriniz...' }, 5000);
-    console.log(href);
-}
-
 
 
 class LEFT_BUTTONS {
@@ -136,7 +108,7 @@ class LEFT_BUTTONS {
             button.classList.add("buttonsLeft");
             button.src = icons_path[i];
             button.href = links[i]; button.target = "_blank";
-            button.addEventListener('click', function () { linked(links[i]) });
+            button.addEventListener('click', function () {window.location.href= links[i]; });
 
             button.addEventListener('mouseenter', () => { this.isAnimating = false; this.showCard(button) });
             button.addEventListener('mouseleave', () => { this.isAnimating = true; this.card.timer = Date.now(); this.unshowCard() });
