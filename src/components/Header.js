@@ -2,7 +2,7 @@ console.log("/src/components/header.js");
 
 
 export function CreateHeader() {
-    const header = document.querySelector("header");
+    const header = document.createElement("header");
     console.log("catched header:", header);
 
     const divLeft = document.createElement("div"); header.appendChild(divLeft);
@@ -53,11 +53,6 @@ export function CreateHeader() {
     navBarProj.id = "navBarProj";
     navBarProj.textContent = "PROJELER";
     navBarProj.href = "/public/pages/projects"
-    devServer: {
-        historyApiFallback: true
-      }
+return header
 }
-devServer: {
-    historyApiFallback: true
-  }
 
