@@ -1,15 +1,8 @@
 User-agent: *
 
-Disallow: /src/
-DisAllow: /*.js
-DisAllow: /*.css
 
-
-Allow: /*.html
-Allow: /*.md
-Allow: /*.txt
-Allow: /*.xml
-Allow: /*.json
+Allow: *
+Allow: /*
 
 
 Sitemap: https://mefamex.com/sitemap.xml
