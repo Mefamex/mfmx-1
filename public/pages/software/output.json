@@ -1,0 +1,567 @@
+{
+    "SOFTWARE LANGUAGES": {
+        "SCRIPTING LANG.": [
+            "Python",
+            "Javascript",
+            "Ruby",
+            "PHP",
+            "Perl",
+            "Tcl",
+            "Lua",
+            "R"
+        ],
+        "OBJECT-ORIENTED LANG.": [
+            "Java",
+            "C#",
+            "C++",
+            "Delphi",
+            "Swift",
+            "Kotlin",
+            "Scala"
+        ],
+        "FUNCTIONAL PROGRAMMING LANG.": [
+            "Go",
+            "Swift",
+            "Kotlin",
+            "Haskell",
+            "Lisp",
+            "Scala",
+            "R",
+            "Julia",
+            "Clojure"
+        ],
+        "TYPE SYSTEMS": [
+            "Typescript",
+            "Flow",
+            "Rust"
+        ],
+        "COMMAND LINE": [
+            "Bash - Zsh",
+            "PowerShell",
+            "Cmd",
+            "Perl",
+            "Fish/Tcsh/Ksh"
+        ],
+        "SYSTEM PROGRAMMING": [
+            "C / C++",
+            "Rust",
+            "Go",
+            "Assembly (x86 & Arm)",
+            "D",
+            "Fortran",
+            "Cobol"
+        ],
+        "ROBOTIC": [
+            "Arduino",
+            "Raspberry Pi",
+            "C++",
+            "Python",
+            "Matlab",
+            "ROS",
+            "Java",
+            "Lua"
+        ],
+        "DECLARATIVE LANG.": [
+            "SQL",
+            "Html",
+            "Css",
+            "Prolog",
+            "XML",
+            "Json",
+            "Yaml"
+        ],
+        "CONCURERRENCY ORIENTED": [
+            "Java",
+            "Rust",
+            "Erlang",
+            "Go",
+            "Haskell",
+            "Scala"
+        ]
+    },
+    "WEB DEVELOPMENT": {
+        "CORE TECHNOLOHIES": [
+            "Html",
+            "Css",
+            "JavaCcript",
+            "PHP"
+        ],
+        "FRONTEND FRAMEWORKS": [
+            "React",
+            "Angular",
+            "Vue.Js",
+            "Ember.js",
+            "Backbone.js",
+            "Riot.js"
+        ],
+        "BACKEND FRAMEWORKS": [
+            "Node.Js",
+            "PHP",
+            "Django",
+            "Flask",
+            "Ruby On Rails",
+            "Laravel",
+            "Spring Boot",
+            "Express.js",
+            "Koa.js",
+            "Pyramid",
+            "Phoenix"
+        ],
+        "WEB ASSEMBLY": [
+            "Asp.Net",
+            "Blazor",
+            "WebAssembly"
+        ],
+        "STATIC SITE GENERATOR": [
+            "Next.js",
+            "Gatsby",
+            "Hugo",
+            "Jekyll",
+            "Middleman",
+            "Brunch"
+        ],
+        "TEMPLATING ENGINES": [
+            "Handlebars",
+            "Mustache",
+            "Ejs",
+            "Pug",
+            "Liquid",
+            "Jinja2 (py)"
+        ],
+        "ONLINE RESOURCES": [
+            "MDN Web Docs",
+            "W3Schools",
+            "FreeCodeCamp",
+            "Web Development Subreddit"
+        ]
+    },
+    "MOBIL APP DEVELOPMENT": {
+        "CROSS-PLATFORM FRAMEWORKS": [
+            "Flutter (Dart)",
+            "React Native (Java Script)",
+            "Lonic (Java Script)",
+            "PhoneGap (Java Script)",
+            "Ionic",
+            "Cordova"
+        ],
+        "NATIVE MOBILE DEVELOPMENT": [
+            "Java (Android)",
+            "Swift (IOS)",
+            "Kotlin (Android)",
+            "Xamarin (C#)",
+            "Objective-C (IOS)",
+            "RubyMotion (Ruby)",
+            "RubyMotion (JavaScript)"
+        ]
+    },
+    "GAME DEVELOPMENT": {
+        "GAME ENGINES": [
+            "Unity (C#)",
+            "Unreal Engine (C++)",
+            "Godot (GDScipt)",
+            "Cocos2d-x (C++)",
+            "GameMaker Studio",
+            "Phaser",
+            "Construct 3",
+            "CryEngine",
+            "LOVE"
+        ],
+        "GAME PROGRAMMING LANGUAGES": [
+            "C#",
+            "C++",
+            "GDSript",
+            "JavaScript",
+            "Lua",
+            "Gml"
+        ],
+        "GAME ENGINE BENCHMARKS": [
+            "Unity Benchmark",
+            "Unreal Engine Benchmark",
+            "3DMark",
+            "GFXBench",
+            "Basemark"
+        ],
+        "GAME JAMS": [
+            "Ludum Dare",
+            "Game Jolt",
+            "Itch.io Game Jam",
+            "GitHub Game Jam"
+        ]
+    },
+    "EDITORS": {
+        "TEXT EDITORS": [
+            "Notepad",
+            "Sublime Text",
+            "Atom",
+            "Visual Studio Code",
+            "Emacs",
+            "Vim"
+        ],
+        "INTEGRATED DEVELOPMENT ENVIRONMENTS (IDEs)": [
+            "Eclipse",
+            "IntelliJ",
+            "Visual Studio",
+            "NetBeans",
+            "Android Studio",
+            "Xcode",
+            "CODE EDITORS +",
+            "Brackets",
+            "Light Table",
+            "Komodo Edit",
+            "Ultra",
+            "TextMate"
+        ],
+        "MARKDOWN EDITORS": [
+            "Mou",
+            "Typora",
+            "Uly",
+            "Byword",
+            "Marked"
+        ]
+    },
+    "ARTIFICIAL INTELLIGENCE": {
+        "AI SOFTWARE LANGUAGES": [
+            "Python",
+            "R",
+            "Matlab",
+            "Julia"
+        ],
+        "MACHINE & DEEP LEARNING": [
+            "Tensorflow",
+            "PyTorch",
+            "Keras",
+            "Scikit-Learn"
+        ],
+        "DATA SCIENCE AND ANALYSIS": [
+            "NumPy",
+            "SciPy",
+            "Matplotlib",
+            "Pandas",
+            "R",
+            "Matlab"
+        ],
+        "COMPUTER VISION": [
+            "OpenCV",
+            "Pillow",
+            "PyTorch",
+            "MediaPipe",
+            "ITK-SNAP",
+            "VTK"
+        ],
+        "NATURAL LANGUAGE PROCESSING": [
+            "NLTK",
+            "SpaCy",
+            "Hugging Face Transformers"
+        ],
+        "ROBOTIC": [
+            "ROS",
+            "Gazebo",
+            "V-REP"
+        ]
+    },
+    "DATABASE": {
+        "DATABASE PROGRAMMING LANGUAGES AND TOOLS": [
+            "SQL",
+            "Java",
+            "Python",
+            "JavaScipt",
+            "C#",
+            "Node.js",
+            "Cypher",
+            "Ruby",
+            "Go",
+            "R",
+            "PL/SQL",
+            "T-SQL"
+        ],
+        "RELATOIONAL DATABASES": [
+            "Mysql",
+            "Postgresql",
+            "Sql Server",
+            "Oracle",
+            "DB2",
+            "Firebird",
+            "Sybase"
+        ],
+        "NOSQL DATABASES": [
+            "Mongodb",
+            "Cassandra",
+            "Redis",
+            "CouchDB",
+            "RavenDB",
+            "Amazon DynamoDB"
+        ],
+        "HIERARCHICAL DATABASES": [
+            "IMS",
+            "Adabas"
+        ],
+        "NEW GENERATION DATABASES": [
+            "Graph (Neo4j, ArangoDB)",
+            "Document (MongoDB, Couchbase)",
+            "Time Series (InfluxDB, TimescaleDB)",
+            "NewSQL (CockroachDB, YugabyteDB)",
+            "Amazon Neptune",
+            "OrientDB",
+            "FaunaDB"
+        ],
+        "DATABASES MANAGEMENT AND OPERATIONS": [
+            "SQL",
+            "ORM"
+        ],
+        "CLOUD DATABASES": [
+            "AWS",
+            "RDS",
+            "Azure Sql",
+            "Azure Cosmos DB",
+            "Google Cloud SQL",
+            "Google Cloud Firestore"
+        ]
+    },
+    "CLOUD PLATFORMS": {
+        "CLOUD PROVIDERS": [
+            "Aws",
+            "Azure",
+            "Google Cloud Platform",
+            "Alibaba Cloud",
+            "IBM Cloud",
+            "Oracle Cloud"
+        ],
+        "CONTAINERIZATION": [
+            "Docker",
+            "Kubernetes",
+            "Rkt",
+            "Open Container Initiative (OCI)",
+            "Containerd"
+        ],
+        "INFRASTRUCTURE AS CODE": [
+            "Terraform",
+            "Jenkins",
+            "AWS CloudFormation",
+            "Azure Resource Manager (ARM)",
+            "Google Cloud Cloud Development Kit (CDK)",
+            "GitLab CI/CD",
+            "CircleCI",
+            "Travis CI"
+        ],
+        "CLOUD SECURITY": [
+            "AWS IAM (Identity and Access Management)",
+            "Azure Active Directory (AAD)",
+            "Google Cloud Identity and Access Management (IAM)",
+            "Cloud Security Gateways (CSG)",
+            "Cloud Access Security Broker (CASB)",
+            "Cloud Workload Protection Platform (CWPP)"
+        ]
+    },
+    "DEVOPS": {
+        "DEVOPS TOOLS": [
+            "Puppet",
+            "Chef",
+            "SaltStack"
+        ],
+        "CULTURE": [
+            "Collaboration",
+            "Communication"
+        ],
+        "SECURITY": [
+            "Vulnerability Management",
+            "Compliance"
+        ],
+        "CONTINUOUS TESTING": [
+            "Unit Testing",
+            "Integration Testing",
+            "UI Testing"
+        ],
+        "CONTINUOUS INTEGRATION": [
+            "Jenkins",
+            "Travis Cl",
+            "Circle Cl",
+            "GitLab CI/CD"
+        ],
+        "CONTINUOUS DEPLOYMENT": [
+            "Docker",
+            "Kubernetes",
+            "Ansible",
+            "Azure DevOps"
+        ],
+        "CONTINUOUS MONITORING": [
+            "Prometheus",
+            "Grafana",
+            "New Relic"
+        ],
+        "CONTINUOUS FEEDBACK": [
+            "User Feedback",
+            "Code Review"
+        ]
+    },
+    "TEST AND AUTOMATION": {
+        "TEST AUTOMATION FRAMEWORKS": [
+            "Selenium",
+            "Appium",
+            "Cypress"
+        ],
+        "UNIT TESTING FRAMEWORKS": [
+            "JUnit",
+            "TestNG",
+            "PyUnit"
+        ],
+        "INTEGRATION TESTING TOOLS": [
+            "Postman"
+        ],
+        "END-TO-END TESTING": [
+            "Cypress",
+            "Jest",
+            "TestCafe",
+            "Puppeteer"
+        ]
+    },
+    "VERSION CONTROL": {
+        "BASIC CONCEPTS": [
+            "Repository",
+            "Commit",
+            "Branch",
+            "Merge",
+            "Tag"
+        ],
+        "IDE INTEGRATIONS": [
+            "Visual Studio",
+            "IntelliJ",
+            "Eclipse",
+            "Netbenas",
+            "Sublime Text"
+        ],
+        "CI/CD INTEGRATIONS": [
+            "GitLab",
+            "Jenkins",
+            "Travis Cl",
+            "Azure DevOps"
+        ],
+        "PROJECT MANAGEMENT INTEGRATIONS": [
+            "Jira",
+            "Trello",
+            "Asana",
+            "Micrsoft Teams",
+            "Slack"
+        ],
+        "CODE REVIEW INTEGRATIONS": [
+            "Gerrit",
+            "Crucible",
+            "CodeScene",
+            "Codecov",
+            "SonarQube"
+        ],
+        "CLOUD PLATFORMS INTEGRATIONS": [
+            "GitHub",
+            "GitLab",
+            "Bitbucket",
+            "AWS CodeCommit",
+            "Google Cloud Source Repositories"
+        ],
+        "WORKFLOWS": [
+            "Centralized Workflow",
+            "Feature Branch Workflow",
+            "Git Flow Workflow",
+            "Forking Workflow"
+        ],
+        "CENTRALIZED": [
+            "Svn (Subversion)",
+            "Cvs (Concurrent Versions System)",
+            "Perforce",
+            "Microsoft Visual SourceSafe (VSS)"
+        ],
+        "DISTRIBUTED": [
+            "Git",
+            "Mercurial",
+            "Darcs",
+            "Bazaar"
+        ],
+        "SERVICE": [
+            "GitHub",
+            "Bitbucket",
+            "GitLab"
+        ]
+    },
+    "PROJECT MANAGEMENT": {
+        "AGILE": [
+            "Jira",
+            "Trello",
+            "Asana",
+            "Basecamp",
+            "VersionOne",
+            "Rally"
+        ],
+        "WATERFALL": [
+            "Microsoft Project",
+            "OpenProject",
+            "Podio"
+        ],
+        "HYBRID": [
+            "CA PPM",
+            "Planview"
+        ],
+        "FREE AND OPEN-SOURCE": [
+            "Taiga",
+            "OpenProject"
+        ],
+        "COLLABORATION": [
+            "Slack",
+            "Microsoft Teams"
+        ],
+        "TIME TRACKING": [
+            "Toggl",
+            "Harvest"
+        ],
+        "RESOURCE MANAGEMENT": [
+            "Resource Guru",
+            "Mavenlink"
+        ]
+    },
+    "INTEGRATION TOOLS": {
+        "API INTEGRATIONS": [
+            "Amazon API Gateway",
+            "Kong",
+            "Tyk",
+            "Swagger",
+            "OpenAPI",
+            "Apigee",
+            "API Management (Azure)",
+            "Google Cloud Endpoints"
+        ],
+        "CONNECTORS": [
+            "Zapier",
+            "MuleSoft",
+            "Talend",
+            "Jitterbit",
+            "Dell Boomi",
+            "Informatica PowerCenter"
+        ],
+        "DATA INTEGRATION": [
+            "Talend",
+            "Informatica",
+            "Microsoft SQL Server Integration Services (SSIS)",
+            "Oracle Data Integrator",
+            "IBM InfoSphere DataStage",
+            "SAP Data Services"
+        ],
+        "CLOUD INTEGRATION": [
+            "AWS Lambda",
+            "Azure Functions",
+            "Google Cloud Functions",
+            "Cloud Foundry",
+            "Heroku",
+            "OpenShift"
+        ],
+        "MESSAGE QUEUENING": [
+            "RabbitMQ",
+            "Apache Kafka",
+            "Amazon SQS",
+            "Microsoft Azure Service Bus",
+            "Google Cloud Pub/Sub"
+        ],
+        "FILE TRANSFER": [
+            "SFTP",
+            "FTPS",
+            "AS2",
+            "MFT (Managed File Transfer)"
+        ]
+    }
+}

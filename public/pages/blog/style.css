@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    min-height: 100dvh;
+    display: grid;
+    position: absolute;
+    background-color: #1f0101;
+}
+main {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    min-height: 85dvh;
+}
