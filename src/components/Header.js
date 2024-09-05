@@ -1,8 +1,7 @@
 console.log("/src/components/header.js");
-CreateHeader();
 
 
-function CreateHeader() {
+export function CreateHeader() {
     const header = document.querySelector("header");
     console.log("catched header:", header);
 
