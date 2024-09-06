@@ -1,0 +1,303 @@
+@keyframes entranceRight {
+    from {
+        opacity: 0;
+        transform: translateX(15vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes entranceBottom {
+    from {
+        opacity: 0;
+        transform: translateY(15vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes entranceUp {
+    from {
+        opacity: 0;
+        transform: translateY(-15vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes entranceLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes down {
+    0% {
+        transform: translateX(-2dvw);
+    }
+    50% {
+        transform: translateX(2dvw);
+    }
+    100% {
+        transform: translateX(-2dvw);
+    }
+}
+@media only screen and (min-width: 750px) {
+}
+@media only screen and (max-width: 750px) {
+    #divSag {
+        display: none !important;
+    }
+    #divCardContainer {
+        grid-template-columns: 1fr !important;
+        width: 85dvw !important;
+        left: 15dvw !important;
+    }
+    #cardLink {
+        display: none !important;
+    }
+    .card {
+        width: 80% !important;
+        justify-self: center !important;
+    }
+    .cardTitle {
+        font-size: 3dvw !important;
+    }
+    .cardPrgf {
+        font-size: 3dvw !important;
+    }
+}
+@media only screen and (min-width: 750px) and (max-width: 1100px) {
+    .card {
+        width: 80% !important;
+    }
+    .cardTitle {
+        font-size: 2.5dvw !important;
+    }
+    .cardPrgf {
+        font-size: 2dvw !important;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    position: absolute;
+    overflow: hidden;
+    background-color: black;
+}
+main {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    overflow: hidden;
+    background-color: #000000a0;
+    background-blend-mode: multiply;
+}
+#h1mfmx {
+    margin: 0;
+    top: 0;
+    position: absolute;
+    place-self: center;
+    font-size: 10vw;
+    font-family: "Gill Sans MT";
+    color: white;
+    text-decoration: none;
+    filter: drop-shadow(0vh 0vh 2vh red);
+    grid-row: 1;
+    animation: entranceUp 1s ease-out forwards;
+}
+#parag1 {
+    position: absolute;
+    margin: 0;
+    justify-self: center;
+    font-size: 1vw;
+    top: 10vw;
+    color: #eeeeff;
+    text-decoration: none;
+    pointer-events: none;
+    user-select: none;
+    animation: entranceUp 3s normal forwards;
+}
+#mfmx_symbol {
+    position: absolute;
+    justify-self: center;
+    height: 80dvh;
+    grid-row: 2;
+    bottom: 0;
+    opacity: 100%;
+    filter: drop-shadow(0vh 0vh 2vh red);
+    pointer-events: none;
+    user-select: none;
+}
+#divSag {
+    float: right;
+    position: absolute;
+    border-radius: 4vw 0 0 2vw;
+    align-self: center;
+    justify-self: end;
+    width: 15vw;
+    height: 80vh;
+    background-color: #00083873;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    user-select: none;
+    animation: entranceRight 3s normal forwards;
+}
+#hakkimdaSagBas {
+    display: block;
+    color: rgb(246, 250, 215);
+    font-size: 2vw;
+    text-decoration: underline;
+    text-decoration-color: white;
+    place-self: center;
+    animation: entranceUp 3s normal forwards;
+}
+#hakkimdaPrgf {
+    display: block;
+    flex-grow: 1;
+    color: antiquewhite;
+    margin-block-start: 0;
+    padding-inline: 0.5vw;
+    text-wrap: wrap;
+    text-align: left;
+    line-height: 1.7vw;
+    font-size: 1.20vw;
+    overflow: hidden;
+}
+@keyframes scrollDown {
+    to {
+      max-height: 100%;
+    }
+  }
+#hakkimdaPrgf.animate{
+    animation: scrollDown 2s forwards;
+}
+#mailSagBas {
+    align-self: center;
+    display: block;
+    color: white;
+    font-size: 1vw;
+    animation: entranceBottom 3s normal forwards;
+    animation: down 3s infinite ease-in-out 2s;
+    user-select: all;
+    pointer-events: all;
+}
+#divSol {
+    align-self: flex-start;
+    justify-self: start;
+    width: 50vw; /* 13vw*/
+    height: 100vh;
+    overflow: hidden;
+    animation: entranceLeft 6s ease-out forwards;
+}
+.buttonsLeft {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    object-fit: contain;
+    animation: entranceLeft 8s normal forwards;
+    transition: 0.2s;
+    border-radius: 25%;
+    background-color: rgba(255, 255, 255, 0.473);
+    padding: 1vh;
+}
+.buttonsLeft:hover {
+    scale: 1.5;
+    filter: drop-shadow(0 0 3vh white);
+    background-color: white;
+    border-radius: 50%;
+}
+#cardLink {
+    display: flex;
+    position: absolute;
+    width: min-content;
+    height: min-content;
+    top:0px;
+    left:5dvw;
+    background-color: rgba(255, 255, 255, 0.651);
+    border-radius: 5vh;
+    border: 1vh double white;
+    padding-inline: 1vw;
+    padding-block: 1vh;
+    font-weight: bold;
+    font-size: 1dvw;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    filter: opacity(0.5);
+}
+#cardLink.hover {
+    filter: opacity(1) !important;
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.877);
+}
+#divCardContainer {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70dvw;
+    bottom: 0;
+    align-content: space-between;
+    justify-self: center;
+    padding-inline: 1dvw;
+    padding-block: 1dvh;
+    row-gap: 1dvh;
+    column-gap: 1dvw;
+}
+.card {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    justify-self: start;
+    background-color: rgba(204, 204, 204, 0.87);
+    border-radius: 5vh;
+    border: 1vh double white;
+    padding-inline: 1vw;
+    padding-block: 1vh;
+    transition: all 0.5s ease-in-out;
+    animation: entranceBottom 0.8s ease-out forwards;
+}
+.card:nth-child(even) {
+    justify-self: end;
+}
+.card.hover {
+    border-color: red;
+    transition: all 0.5s normal;
+    background-color: rgb(204, 204, 204);
+    box-shadow: 0 0 2vw 0 #ffffff;
+    scale: 1.2;
+}
+.cardTitle {
+    padding-inline: 1dvw;
+    padding-block: 1dvh;
+    display: inline;
+    width: fit-content;
+    margin: 0;
+    align-self: center;
+    text-align: center;
+    font-size: 1.5dvw;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.514);
+    border-radius: 1dvh 1dvw;
+}
+.cardPrgf {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2dvw;
+    font-weight: normal;
+    overflow: auto;
+    filter: drop-shadow(0 0 2px rgb(203, 255, 252));
+}
