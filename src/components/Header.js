@@ -2,7 +2,7 @@ console.log("/src/components/header.js");
 CreateHeader();
 
 function CreateHeader() {
-    const header = document.createElement("header");
+    const header = document.querySelector("header");
     console.log("catched header:", header);
 
     const divLeft = document.createElement("div"); header.appendChild(divLeft);
