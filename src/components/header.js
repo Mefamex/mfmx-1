@@ -29,7 +29,7 @@ function CreateHeader() {
     const navBarHome = document.createElement("a"); navBar.appendChild(navBarHome);
     navBarHome.id = "navBarHome";
     navBarHome.textContent = "ANASAYFA"
-    navBarHome.href = "https://mefamex.com"
+    navBarHome.href = "/"
 
 
     const navBarContact = document.createElement("a"); navBar.appendChild(navBarContact);
