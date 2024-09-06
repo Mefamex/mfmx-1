@@ -44,7 +44,7 @@ class DirExVis:
     details_size, details_date, details_folderCount = False, False, False
     width: int = 35
     maxNameLength: list = [0, 0]  # name, depth
-    passDotDirs : bool = True # passing dirs and files is starts with dot (.)
+    passDotDirs: bool = True  # passing dirs and files is starts with dot (.)
 
     @staticmethod
     def unixToDate(unix: int | float) -> str:
@@ -92,27 +92,27 @@ class DirExVis:
                 directory name, type, size, modification time, and depth within the directory hierarchy.
                 The gathered data is stored in a dictionary for further processing or analysis.
 
-        Args:
+         Args:
             self: A reference to the `DirExVis` object.
             path (str, optional): The path of the directory to start traversing. Defaults to the current directory.
             depth (int, optional): The current depth level within the directory structure. Defaults to 0.
             data (dict, optional): A dictionary to store file and directory information. Defaults to `self.datas`.
 
-        Returns:
+         Returns:
             None
 
 
-        Bu metot, belirtilen bir dizin yolundan başlayarak tüm alt dizinleri ve dosyaları rekürsif olarak inceler.
+         Bu metot, belirtilen bir dizin yolundan başlayarak tüm alt dizinleri ve dosyaları rekürsif olarak inceler.
                 Her bir dosya veya dizin için belirli bilgileri (ad, tür, boyut, son değiştirme tarihi, derinlik)
                 toplar ve `data` sözlüğünde saklar.
 
-        Args:
+         Args:
             self: DirExVis sınıfının bir örneği.
             path (str, optional): Gezinilecek dizinin yolu. Varsayılan olarak mevcut çalışma dizini.
             depth (int, optional): Gezinilen dizinin derinliği. Varsayılan olarak 0.
             data (dict, optional): Dosya ve dizin bilgilerini saklamak için bir sözlük. Varsayılan olarak `self.datas`.
 
-        Returns:
+         Returns:
             None
         """
 
@@ -123,9 +123,9 @@ class DirExVis:
         files = []
         for entry in os.listdir(path):
             entry_path = os.path.join(path, entry)
-            if self.passDotDirs and entry.startswith("."): continue
+            if self.passDotDirs and entry.startswith("."):continue
             if os.path.isdir(entry_path):
-                
+
                 data[entry] = [
                     depth + 1,
                     "dir",
