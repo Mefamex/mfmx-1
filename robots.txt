@@ -1,9 +1,8 @@
 User-agent: *
-
 Allow: /
-Allow: *
-Allow: /*
+Disallow: /src/
 
+Crawl-delay: 10
 
 Sitemap: https://mefamex.com/sitemap.xml
 Sitemap: https://www.mefamex.com/sitemap.xml

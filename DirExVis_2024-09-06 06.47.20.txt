@@ -1,9 +1,5 @@
 C:\Users\Mefamex\Desktop\mfmx-1
 |      public
-|      |      cv
-|      |      |      index.html
-|      |      |      script.js
-|      |      |      style.css
 |      |      pages
 |      |      |      about
 |      |      |      |      index.html
@@ -14,6 +10,10 @@ C:\Users\Mefamex\Desktop\mfmx-1
 |      |      |      |      script.js
 |      |      |      |      style.css
 |      |      |      contact
+|      |      |      |      index.html
+|      |      |      |      script.js
+|      |      |      |      style.css
+|      |      |      cv
 |      |      |      |      index.html
 |      |      |      |      script.js
 |      |      |      |      style.css
@@ -91,8 +91,7 @@ C:\Users\Mefamex\Desktop\mfmx-1
 |      |      |      mouse_tail.js
 |      |      styles
 |      |      |      home.css
-|      .htaccess
-|      DirExVis_2024-09-04 17.10.19.txt
+|      DirExVis_2024-09-06 06.43.18.txt
 |      exnavgation
 |      FileLister.py
 |      gnpToWebp.py
