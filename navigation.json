@@ -1,28 +1,50 @@
 {
-  "pages": [
+  "menu": [
     {
       "title": "Home",
-      "path": "/"
+      "href": "/"
     },
     {
-      "title": "Blog",
-      "path": "/public/pages/blog/"
+      "title": "Pages",
+      "submenu": [
+        {
+          "title": "CV",
+          "href": "/cv/"
+        },
+        {
+          "title": "About",
+          "href": "/pages/about/"
+        },
+        {
+          "title": "Blog",
+          "href": "/pages/blog/"
+        },
+        {
+          "title": "Contact",
+          "href": "/pages/contact/"
+        },
+        {
+          "title": "Games",
+          "href": "/pages/games/"
+        },
+        {
+          "title": "Projects",
+          "href": "/pages/projects/"
+        },
+        {
+          "title": "Software",
+          "href": "/pages/software/"
+        }
+      ]
     },
     {
-      "title": "Projects",
-      "path": "/public/pages/projects"
-    },
-    {
-      "title": "About",
-      "path": "/public/pages/about"
-    },
-    {
-      "title": "Contact",
-      "path": "/public/pages/contact"
-    },
-    {
-      "title": "Software",
-      "path": "/public/pages/software"
+      "title": "Games",
+      "submenu": [
+        {
+          "title": "Queaz",
+          "href": "/games/queaz/"
+        }
+      ]
     }
   ]
 }
