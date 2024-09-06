@@ -18,13 +18,9 @@ current_timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
 sitemap_file = open("sitemap_auto.xml", "w")
 
 # Write the XML header
-sitemap_file.write(
-    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n'
-)
+sitemap_file.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">\n')
 
 # Iterate through the HTML files in the directory
-
-
 for root, dirs, files in os.walk(directory_path):
     for file in files:
         if file.endswith(".html"):
