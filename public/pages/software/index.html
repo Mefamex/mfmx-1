@@ -8,7 +8,8 @@
     <base href="/">
     <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
     <title>Yazılım Dilleri ve Araçları</title>
-    <meta name="keywords" content="mefamex mefamex.com www.mefamex.com Yazılım Dilleri ve Araçları | Software Languages and Tools | Yazılım Haritasi">
+    <meta name="keywords"
+        content="mefamex mefamex.com www.mefamex.com Yazılım Dilleri ve Araçları | Software Languages and Tools | Yazılım Haritasi">
     <meta name="description"
         content="Prepared By MEFAMEX | Yazılım Dilleri ve Araçları | Software Languages and Tools | Yazılım Haritasi | Yazılım Çeşitleri | Yazılım Teknolojieri">
 
@@ -22,8 +23,13 @@
 <body>
 
     <header>
-        <h1 style="padding: inherit; font-size: inherit;">Programming Languages and Tools</h1>
+        <link rel="stylesheet" type="text/css" href="/src/components/header.css">
     </header>
+
+    <div id="title">
+        <h1 style="padding: inherit; font-size: inherit;">Programming Languages and Tools</h1>
+    </div>
+
     <main id="container">
         <p style="font-size: 1.2em;">Bu rehberde; programlama dilleri, çerçeveler,
             veritabanları, bulut platformları, DevOps, test etme ve daha fazlasıyla ilgili bölümlerle, becerilerinizi
@@ -37,16 +43,22 @@
         </p>
         <div id="table-body"></div>
     </main>
-    <footer></footer>
-    <script src="/public/pages/software/script.js"></script>
+
+
+    <footer>
+        <link rel="stylesheet" type="text/css" href="/src/components/footer.css">
+    </footer>
+
+
 
     <img src="/src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp"
         style="position: fixed;height: 80%;top:10%;justify-self: center;filter: drop-shadow(0 0 0.5vh black) drop-shadow(0 0 0.1vh rgba(255, 0, 0, 0.384)); z-index: -10;opacity: 25%;"
         alt="mefamex.logo">
 
 
-        <script src="/src/components/header.js" type="application/javascript"></script>
-        <script src="/src/components/footer.js" type="application/javascript"></script>
+    <script src="/public/pages/software/script.js"></script>
+    <script src="/src/components/header.js" type="application/javascript"></script>
+    <script src="/src/components/footer.js" type="application/javascript"></script>
 
 
 </body>
