@@ -2,15 +2,10 @@
 RewriteEngine On
 
 # Rewrite rules for clean URLs
-RewriteRule ^pages/([^/]+)/?$ pages/$1/index.html [L]
-
-# Serve static files directly
-RewriteRule ^public/pages/(.*)$ public/pages/$1 [L]
+RewriteRule ^pages/([^/]+)/?$ /$1/index.html [L]
 
 # Route all other requests to index.html
 RewriteRule ^(.*)$ index.html [L]
-
-
 
 AddType application/json .json
 AddType application/javascript .js 
