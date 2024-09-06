@@ -1,6 +1,7 @@
 import os, datetime
 
 # Set the directory path where your HTML files are located
+os.chdir("..")
 directory_path = os.getcwd()
 
 # Set the base URL for your website
