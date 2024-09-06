@@ -1,9 +1,0 @@
-User-agent: *
-
-Allow: /
-Allow: *
-Allow: /*
-
-
-Sitemap: https://mefamex.com/sitemap.xml
-Sitemap: https://www.mefamex.com/sitemap.xml
