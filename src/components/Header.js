@@ -1,7 +1,7 @@
 console.log("/src/components/header.js");
+CreateHeader();
 
-
-export function CreateHeader() {
+function CreateHeader() {
     const header = document.createElement("header");
     console.log("catched header:", header);
 
@@ -53,6 +53,5 @@ export function CreateHeader() {
     navBarProj.id = "navBarProj";
     navBarProj.textContent = "PROJELER";
     navBarProj.href = "/public/pages/projects"
-return header
 }
 
