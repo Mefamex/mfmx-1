@@ -2,6 +2,7 @@ CreateHeader();
 
 function CreateHeader() {
     const header = document.querySelector("header");
+    header.innerHTML=`<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
 
     const divLeft = document.createElement("div"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"
