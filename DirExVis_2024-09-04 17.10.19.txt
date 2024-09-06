@@ -1,0 +1,102 @@
+D:\SOFTWARE\Webb\mfmx-1
+|      public
+|      |      cv
+|      |      |      index.html
+|      |      |      script.js
+|      |      |      style.css
+|      |      pages
+|      |      |      about
+|      |      |      |      index.html
+|      |      |      |      script.js
+|      |      |      |      style.css
+|      |      |      blog
+|      |      |      |      index.html
+|      |      |      |      script.js
+|      |      |      |      style.css
+|      |      |      contact
+|      |      |      |      index.html
+|      |      |      |      script.js
+|      |      |      |      style.css
+|      |      |      games
+|      |      |      |      queaz
+|      |      |      |      |      index.html
+|      |      |      |      |      queaz_game.js
+|      |      |      |      |      script.js
+|      |      |      |      |      style.css
+|      |      |      projects
+|      |      |      |      index.html
+|      |      |      |      script.js
+|      |      |      |      style.css
+|      |      |      software
+|      |      |      |      cevir.py
+|      |      |      |      index.html
+|      |      |      |      input.txt
+|      |      |      |      output.json
+|      |      |      |      script.js
+|      |      |      |      style.css
+|      |      |      |      tempCodeRunnerFile.py
+|      |      index.html
+|      src
+|      |      assets
+|      |      |      data
+|      |      |      icons
+|      |      |      |      cloudflare.png
+|      |      |      |      facebook_icon.png
+|      |      |      |      github_icon.png
+|      |      |      |      instagram_icon.png
+|      |      |      |      linkedin_icon.png
+|      |      |      |      ssl.png
+|      |      |      |      x_twitter_icon.png
+|      |      |      |      youtube_icon.png
+|      |      |      images
+|      |      |      |      background
+|      |      |      |      |      home_bg.png
+|      |      |      |      mfmx
+|      |      |      |      |      mfmx-1000.png
+|      |      |      |      |      mfmx-144.png
+|      |      |      |      |      mfmx-1500-2500.png
+|      |      |      |      |      mfmx-2500.png
+|      |      |      |      |      mfmx-256.png
+|      |      |      |      |      mfmx-300-500.png
+|      |      |      |      |      mfmx-3000.png
+|      |      |      |      |      mfmx-450-750.png
+|      |      |      |      |      mfmx-512.png
+|      |      |      |      |      mfmx-64.png
+|      |      |      |      |      mfmx-90-150.png
+|      |      |      |      mfmx_icon
+|      |      |      |      |      mefamex_logo.png
+|      |      |      |      |      mefamex_logo_bg.png
+|      |      |      |      |      mefamex_logo_bgb.png
+|      |      |      |      |      mefamex_logo_sb.png
+|      |      |      |      mfmx_symbol
+|      |      |      |      |      mefamex_logo.png
+|      |      |      |      |      mefamex_logo_bg.png
+|      |      |      |      |      mefamex_logo_bgb.png
+|      |      |      |      |      mefamex_logo_bgb.webp
+|      |      |      |      |      mefamex_logo_sb.png
+|      |      |      pdf
+|      |      |      texts
+|      |      |      videos
+|      |      components
+|      |      |      footer.css
+|      |      |      footer.js
+|      |      |      header.css
+|      |      |      header.js
+|      |      data
+|      |      |      navigation.json
+|      |      scripts
+|      |      |      canvaSocMed.js
+|      |      |      circleMouse.js
+|      |      |      contactme.js
+|      |      |      home.js
+|      |      |      mouse_tail.js
+|      |      styles
+|      |      |      home.css
+|      exnavgation
+|      FileLister.py
+|      gnpToWebp.py
+|      index.html
+|      navigation.json
+|      package.json
+|      robots.txt
+|      sitemap.xml

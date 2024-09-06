@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "title": "Home",
+      "path": "/"
+    },
+    {
+      "title": "Blog",
+      "path": "/public/pages/blog/"
+    },
+    {
+      "title": "Projects",
+      "path": "/public/pages/projects"
+    },
+    {
+      "title": "About",
+      "path": "/public/pages/about"
+    },
+    {
+      "title": "Contact",
+      "path": "/public/pages/contact"
+    },
+    {
+      "title": "Software",
+      "path": "/public/pages/software"
+    }
+  ]
+}

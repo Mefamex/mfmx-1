@@ -1,0 +1,65 @@
+header {
+    display: flex;
+    flex-direction: row;
+    top: 0px;
+    width: 100%;
+    height: 10dvh;
+    background-color: #222832;
+}
+
+#headerDivLeft {
+    display: flex;
+    left: 0px;
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5vw;
+    margin-left: 0.5vw;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+#headerDivLeftIcon {
+    height: 80%;
+}
+
+#headerDivLeftText {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-size: 3dvh;
+}
+.headerDivLeftHover {
+    filter: drop-shadow(0 0 1dvh rgb(16, 255, 203));
+    scale: 1.5;
+    transform: translate(1.5vw, 0.5dvh);
+}
+#headerNavBar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.356);
+    height: 80%;
+    align-self: center;
+    align-items: center;
+    margin-inline:  auto;
+    gap: 0.4dvw;
+    border-radius: 1rem;
+    padding-inline: 0.5dvw;
+}
+#headerNavBar >a {
+    display: block;
+    align-content: center;
+    text-decoration: none;
+    padding-inline: 0.5dvw;
+    height: 80%;
+    background-color: #000000;
+    color: #f0f0ff;
+    font-size: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+#headerNavBar > a:hover{
+    background-color: whitesmoke;
+    color: black;
+    font-weight: 900;
+}

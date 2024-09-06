@@ -1,0 +1,26 @@
+{
+    "pages": [
+        {
+            "title": "Home",
+            "path": "/"
+        },
+        {
+            "title": "Blog",
+            "path": "/public/pages/blog/"
+        },
+        {
+            "title": "Projects",
+            "path": "/public/pages/projects",
+            "children": [
+                {
+                  "title": "Yazılım Geliştirme",
+                  "path": "/projects/yazilim-gelistirme"
+                },
+                {
+                  "title": "Web Tasarım",
+                  "path": "/projects/web-tasarim"
+                }
+              ]
+        }
+    ]
+}
