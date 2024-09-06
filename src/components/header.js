@@ -10,7 +10,6 @@ function CreateHeader() {
     divLeft.onmouseout = function () { divLeft.classList.remove("headerDivLeftHover") };
 
 
-
     const divLeftIcon = document.createElement("img"); divLeft.appendChild(divLeftIcon);
     divLeftIcon.id = "headerDivLeftIcon"
     divLeftIcon.src = "/src/assets/images/mfmx_icon/mefamex_logo_bgb.png";
@@ -31,16 +30,15 @@ function CreateHeader() {
     navBarHome.textContent = "ANASAYFA"
     navBarHome.href = "/"
 
+    const navBarAbout = document.createElement("a"); navBar.appendChild(navBarAbout);
+    navBarAbout.id = "navBarAbout";
+    navBarAbout.textContent = "HAKKIMDA";
+    navBarAbout.href = "/public/pages/about"
 
     const navBarContact = document.createElement("a"); navBar.appendChild(navBarContact);
     navBarContact.id = "navBarContact";
     navBarContact.textContent = "İLETİŞİM";
     navBarContact.href = "/public/pages/contact"
-
-    const navBarAbout = document.createElement("a"); navBar.appendChild(navBarAbout);
-    navBarAbout.id = "navBarAbout";
-    navBarAbout.textContent = "HAKKIMDA";
-    navBarAbout.href = "/public/pages/about"
 
     const navBarSL = document.createElement("a"); navBar.appendChild(navBarSL);
     navBarSL.id = "navBarSL";
