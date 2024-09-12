@@ -6,12 +6,12 @@ const h1mfmx = document.querySelector("#h1mfmx");
 const mfmx_symbol = document.querySelector("#mfmx_symbol");
 const hakkimdaPrgf = document.querySelector("#hakkimdaPrgf");
 const icons_path = [
-    "/src/assets/icons/facebook_icon.png",
-    "/src/assets/icons/github_icon.png",
-    "/src/assets/icons/instagram_icon.png",
-    "/src/assets/icons/linkedin_icon.png",
-    "/src/assets/icons/x_twitter_icon.png",
-    "/src/assets/icons/youtube_icon.png",
+    "src/assets/icons/facebook_icon.png",
+    "src/assets/icons/github_icon.png",
+    "src/assets/icons/instagram_icon.png",
+    "src/assets/icons/linkedin_icon.png",
+    "src/assets/icons/x_twitter_icon.png",
+    "src/assets/icons/youtube_icon.png",
 ]
 const links = [
     "https://www.facebook.com/mefamex58/",

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
+    <!--<base href="/"> -->
     <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
     <title>Anasayfa - MEFAMEX</title>
     <meta name="keywords"
@@ -13,19 +13,19 @@
     <meta name="description"
         content="Personal Website | Kişisel Web Sitesi | Hakkımda | İletişim | Sosyal Medya | Projeler | Blog">
 
-    <link rel="stylesheet" href="./src/styles/home.css">
-    <link rel="icon" sizes="64x64" href="./src/assets/images/mfmx/mfmx-64.png">
-    <link rel="icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png">
+    <link rel="stylesheet" href="src/styles/home.css">
+    <link rel="icon" sizes="64x64" href="src/assets/images/mfmx/mfmx-64.png">
+    <link rel="icon" sizes="144x144" href="src/assets/images/mfmx/mfmx-144.png">
 
 </head>
 
 <body>
-    <img src="/src/assets/images/background/home_bg.png" loading="lazy"
-        style="position: fixed;filter: blur(3px) grayscale(0.2) ; justify-self: center;object-fit: fill;z-index: -1;width: 100%;"
-        alt="mefamex.logo">
+    <img src="src/assets/images/background/home_bg.png" alt="mefamex.logo"
+        style="position: fixed; filter: blur(3px) grayscale(0.2); justify-self: center; object-fit: cover;z-index: -1;width: 100%; height: 100%;overflow: hidden;"
+        >
 
     <main>
-        <img id="mfmx_symbol" src="/src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" alt="mefamex_symbol_bgb.png">
+        <img id="mfmx_symbol" src="src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" alt="mefamex_symbol_bgb.png">
         <h1 id="h1mfmx">MEFAMEX</h1>
         <div id="divSol"></div>
         <div id="divSag">
@@ -41,7 +41,7 @@
     </main>
 
     <!-- <script src="./src/scripts/circleMouse.js"></script> -->
-    <script src="./src/scripts/home.js"></script>
+    <script src="src/scripts/home.js"></script>
 </body>
 
 </html>
