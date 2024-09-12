@@ -173,15 +173,15 @@ main {
     text-wrap: wrap;
     text-align: left;
     line-height: 1.7vw;
-    font-size: 1.20vw;
+    font-size: 1.2vw;
     overflow: hidden;
 }
 @keyframes scrollDown {
     to {
-      max-height: 100%;
+        max-height: 100%;
     }
-  }
-#hakkimdaPrgf.animate{
+}
+#hakkimdaPrgf.animate {
     animation: scrollDown 2s forwards;
 }
 #mailSagBas {
@@ -224,8 +224,8 @@ main {
     position: absolute;
     width: min-content;
     height: min-content;
-    top:0px;
-    left:5dvw;
+    top: 0px;
+    left: 5dvw;
     background-color: rgba(255, 255, 255, 0.651);
     border-radius: 5vh;
     border: 1vh double white;
@@ -277,7 +277,6 @@ main {
     transition: all 0.5s normal;
     background-color: rgb(204, 204, 204);
     box-shadow: 0 0 2vw 0 #ffffff;
-    scale: 1.2;
 }
 .cardTitle {
     padding-inline: 1dvw;
@@ -296,7 +295,7 @@ main {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size: 1.2dvw;
+    font-size: 1rem;
     font-weight: normal;
     overflow: auto;
     filter: drop-shadow(0 0 2px rgb(203, 255, 252));
