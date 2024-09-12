@@ -6,7 +6,7 @@ function CreateHeader() {
 
     const footerText = document.createElement("h1"); footer.appendChild(footerText);
     footerText.id = "footerText";
-    footerText.innerHTML = "&copy; 2023 MEFAMEX";
+    footerText.innerHTML = "&copy; 2024 MEFAMEX , all right reserved.";
 
 }
 
