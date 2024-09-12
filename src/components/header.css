@@ -3,7 +3,7 @@ header {
     flex-direction: row;
     top: 0px;
     width: 100%;
-    height: 10dvh;
+    height: 5rem;
     background-color: #0e1013;
 }
 
@@ -26,8 +26,9 @@ header {
     margin: 0px;
     padding: 0px;
     color: white;
-    font-size: 3dvh;
+    font-size: min(calc(2dvw), 3rem);
 }
+
 .headerDivLeftHover {
     filter: drop-shadow(0 0 1dvh rgb(255, 13, 0));
 }
@@ -39,16 +40,16 @@ header {
     height: 80%;
     align-self: center;
     align-items: center;
-    margin-inline:  auto;
-    gap: 0.4dvw;
+    margin-inline: auto;
+    gap: 2dvw;
     border-radius: 1rem;
     padding-inline: 0.5dvw;
 }
-#headerNavBar >a {
+#headerNavBar > a {
     display: block;
     align-content: center;
     text-decoration: none;
-    padding-inline: 0.5dvw;
+    padding-inline: 1dvw;
     height: 80%;
     background-color: #000000;
     color: #f0f0ff;
@@ -56,8 +57,27 @@ header {
     border-radius: 1rem;
     transition: all 0.3s ease-in-out;
 }
-#headerNavBar > a:hover{
+#headerNavBar > a:hover {
     background-color: whitesmoke;
     color: black;
-    font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 3rem;
+    }
+    #headerDivLeftText {
+        font-size: 1rem;
+    }
+    #headerNavBar {
+        margin-inline: 0px;
+        width: 100%;
+        border-radius: 0;
+    }
+    #headerNavBar > a {
+        font-size: 0.7rem;
+        border-radius: 1rem;
+        margin-inline: auto;
+        background-color: rgba(185, 155, 100, 0);
+    }
 }

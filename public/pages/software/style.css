@@ -33,6 +33,7 @@ main {
     text-align: center;
     text-wrap: wrap;
     column-count: 2;
+    gap: 2dvw;
 }
 
 .div1 {
@@ -40,6 +41,7 @@ main {
     font-weight: bolder;
     margin-block-end: 1em;
     flex-grow: 1;
+    margin-bottom: 3dvw;
 }
 .div1 > h3 {
     margin: 0.5em;
@@ -60,7 +62,6 @@ main {
     margin-block: 0.5em;
     padding: 20px;
     height: min-content;
-
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: ease-out 0.3s;
     border-radius: 10%;
@@ -69,7 +70,6 @@ main {
 .div2:hover {
     box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
     background-color: #a8a8a8;
-    scale: 1.2;
 }
 
 .div2 > h6 {
@@ -89,14 +89,4 @@ main {
     text-align: start;
     line-height: 1.5;
     transition: 0.1s;
-    cursor: pointer;
-}
-
-.div3:hover {
-    border-radius: 10%;
-    scale: 1.2;
-    color: azure;
-    background-color: rgba(77, 77, 77, 0.527);
-    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
-    font-weight: bolder;
 }
