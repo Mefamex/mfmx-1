@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100dvw;
+    width: 99vw;
     min-height: 100dvh;
     display: grid;
     position: absolute;
@@ -10,13 +10,16 @@ body {
 main {
     margin: 0;
     padding: 0;
+    padding-top: 2rem;
     display: flex;
+    flex-direction: column;
     min-height: 85dvh;
     color: whitesmoke;
     font-size: x-large;
+    align-items: center;
 }
 ul{
-    margin-inline: auto;
+    margin-top: 5rem;
 }
 
 a{
