@@ -28,10 +28,10 @@ function CreateHeader() {
 
     const navBarList = [
         { text: "ANASAYFA", link: "https://mefamex.com/" },
-        { text: "HAKKIMDA", link: "https://mefamex.com/public/pages/about/index.html" },
-        { text: "İLETİŞİM", link: "https://mefamex.com/public/pages/contact/index.html" },
-        { text: "YAZILIM", link: "https://mefamex.com/public/pages/software/index.html" },
-        { text: "PROJELER", link: "https://mefamex.com/public/pages/projects/index.html" }
+        { text: "HAKKIMDA", link: "https://mefamex.com/public/pages/about/" },
+        { text: "İLETİŞİM", link: "https://mefamex.com/public/pages/contact/" },
+        { text: "YAZILIM", link: "https://mefamex.com/public/pages/software/" },
+        { text: "PROJELER", link: "https://mefamex.com/public/pages/projects/" }
     ]
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
