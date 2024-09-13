@@ -1,10 +1,10 @@
 :root {
     --bg-main: #2f3640;
     --bg-h2: #e67e22;
-    --header-height:5rem;
-    --scroll:0px;
+    --header-height: 5rem;
+    --scroll: 0px;
 }
-*{
+* {
     scroll-behavior: smooth;
 }
 body {
@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #424242;
+    min-width: 1000px;
 }
 main {
     display: flex;
@@ -32,11 +33,11 @@ main #table-body section h1 {
     padding-block: 1rem;
     margin-top: 5rem;
 }
-main #table-body section fieldset legend{
+main #table-body section fieldset legend {
     color: chartreuse;
     font-size: 1.3rem;
 }
-main #table-body section fieldset ul{
+main #table-body section fieldset ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -44,15 +45,15 @@ main #table-body section fieldset ul{
     flex-direction: column;
     color: azure;
 }
-main #table-body section fieldset ul li{
+main #table-body section fieldset ul li {
     user-select: none;
     display: flex;
     gap: 1rem;
 }
-main #table-body section fieldset ul li h3{
+main #table-body section fieldset ul li h3 {
     margin-block: auto;
 }
-main #table-body section fieldset ul li h3::after{
+main #table-body section fieldset ul li h3::after {
     content: ":";
 }
 /* MAIN OVER
@@ -78,15 +79,15 @@ main #table-body section fieldset ul li h3::after{
     flex-direction: column;
     background-color: #00000082;
 }
-#sidebarSection{
+#sidebarSection {
     top: max(3px, calc(var(--header-height) - var(--scroll)));
-    padding-top: min(5rem , calc(var(--scroll) - var(--header-height)));
+    padding-top: min(5rem, calc(var(--scroll) - var(--header-height)));
     display: flex;
     position: sticky;
     flex-direction: column;
     width: max-content;
 }
-#sidebar > #sidebarSection > a{
+#sidebar > #sidebarSection > a {
     text-align: center;
     margin: 0;
     padding: auto;
@@ -120,7 +121,7 @@ main #table-body section fieldset ul li h3::after{
     transition: background-color 0.2s ease-out;
     transition: color 0.2s ease-out;
 }
-#sidebar li a{
+#sidebar li a {
     color: white;
     text-decoration: none;
 }
@@ -139,8 +140,8 @@ main #table-body section fieldset ul li h3::after{
 .
 ......RESPOINSIVE DESIGN */
 @media screen and (max-width: 768px) {
-    #sidebarSection{
-        top:3rem;
+    #sidebarSection {
+        top: 3rem;
         padding-top: 0;
     }
 }
