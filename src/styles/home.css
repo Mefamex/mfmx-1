@@ -38,17 +38,6 @@
         transform: translateX(0);
     }
 }
-@keyframes down {
-    0% {
-        transform: translateX(-2dvw);
-    }
-    50% {
-        transform: translateX(2dvw);
-    }
-    100% {
-        transform: translateX(-2dvw);
-    }
-}
 @media only screen and (min-width: 750px) {
 }
 @media only screen and (max-width: 750px) {
@@ -190,7 +179,6 @@ main {
     color: white;
     font-size: 1vw;
     animation: entranceBottom 3s normal forwards;
-    animation: down 3s infinite ease-in-out 2s;
     user-select: all;
     pointer-events: all;
 }

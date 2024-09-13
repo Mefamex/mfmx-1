@@ -8,5 +8,3 @@ function CreateHeader() {
     footerText.id = "footerText";
     footerText.innerHTML = "&copy; 2024 MEFAMEX , ALL RIGHT RESERVED";
 }
-
-
