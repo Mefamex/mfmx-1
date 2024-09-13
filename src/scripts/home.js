@@ -29,12 +29,12 @@ divSol.appendChild(divSolCard);
 
 const divCardContainer = document.querySelector("#divCardContainer");
 const infoCards = [
-    { title: "HAKKIMDA", href: "/public/pages/about", content: " Bu internet sayfası,yazılım ve Mefamex hakkında bazı bilgileri <b>'/public'</b> bölümünde paylaşmak için açılmıştır." },
-    { title: "Yazılım", href: "/public/pages/software", content: "mefamex.com/software" },
-    { title: "İLETİŞİM", href: "/public/pages/contact", content: "Mail-to <br> SOSYAL MEDYA" },
-    { title: "PROJELER", href: "/public/pages/projects", content: "Paylaşmak istediğim yazılım - kodlama - programa ile ilgili projeler. <br> yakında..." },
+    { title: "HAKKIMDA", href: "/public/pages/about/", content: " Bu internet sayfası,yazılım ve Mefamex hakkında bazı bilgileri <b>'/public'</b> bölümünde paylaşmak için açılmıştır." },
+    { title: "Yazılım", href: "/public/pages/software/", content: "mefamex.com/software" },
+    { title: "İLETİŞİM", href: "/public/pages/contact/", content: "Mail-to <br> SOSYAL MEDYA" },
+    { title: "PROJELER", href: "/public/pages/projects/", content: "Paylaşmak istediğim yazılım - kodlama - programa ile ilgili projeler. <br> yakında..." },
     { title: "CV", content: " " },
-    { title: "BLOG", href: "/public/pages/blog", content: "yakında..." },
+    { title: "BLOG", href: "/public/pages/blog/", content: "yakında..." },
 ]
 
 class CARD_CONTAINER {
