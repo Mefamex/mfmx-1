@@ -10,7 +10,6 @@ function CreateHeader() {
     divLeft.onmouseover = () => { divLeft.classList.add("headerDivLeftHover") }
     divLeft.onmouseout = function () { divLeft.classList.remove("headerDivLeftHover") };
 
-
     const divLeftIcon = document.createElement("img"); divLeft.appendChild(divLeftIcon);
     divLeftIcon.id = "headerDivLeftIcon"
     divLeftIcon.src = "/src/assets/images/mfmx_icon/mefamex_logo_bgb.png";
@@ -19,8 +18,6 @@ function CreateHeader() {
     const divLeftText = document.createElement("h1"); divLeft.appendChild(divLeftText);
     divLeftText.id = "headerDivLeftText";
     divLeftText.textContent = "MEFAMEX";
-
-
 
 
     const navBar = document.createElement("nav"); header.appendChild(navBar);
@@ -50,5 +47,7 @@ function CreateHeader() {
     navBarProj.id = "navBarProj";
     navBarProj.textContent = "PROJELER";
     navBarProj.href = "/public/pages/projects"
+
+
 }
 
