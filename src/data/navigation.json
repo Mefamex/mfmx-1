@@ -10,19 +10,19 @@
     },
     {
       "title": "Projects",
-      "path": "/public/pages/projects"
+      "path": "/public/pages/projects/"
     },
     {
       "title": "About",
-      "path": "/public/pages/about"
+      "path": "/public/pages/about/"
     },
     {
       "title": "Contact",
-      "path": "/public/pages/contact"
+      "path": "/public/pages/contact/"
     },
     {
       "title": "Software",
-      "path": "/public/pages/software"
+      "path": "/public/pages/software/"
     }
   ]
 }
