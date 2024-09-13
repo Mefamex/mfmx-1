@@ -31,3 +31,11 @@ function createTable(jsonData, tableBody) {
   }); // c1
 }
 
+const root = document.documentElement;
+window.addEventListener('scroll', function () { root.style.setProperty('--scroll', window.scrollY + 'px'); });
+
+
+const sidebarWidth = document.querySelector("#sidebar").offsetWidth;
+const mainMarginLeft = document.querySelector("main").style.marginLeft;
+
+document.querySelector("main").style.marginLeft = document.querySelector("#sidebar").offsetWidth;
