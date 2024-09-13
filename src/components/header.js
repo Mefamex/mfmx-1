@@ -27,11 +27,11 @@ function CreateHeader() {
     navBar.id = "headerNavBar";
 
     const navBarList = [
-        { text: "ANASAYFA", link: "/" },
-        { text: "HAKKIMDA", link: "/public/pages/about" },
-        { text: "İLETİŞİM", link: "/public/pages/contact" },
-        { text: "YAZILIM", link: "/public/pages/software" },
-        { text: "PROJELER", link: "/public/pages/projects" }
+        { text: "ANASAYFA", link: "https://mefamex.com/index.html" },
+        { text: "HAKKIMDA", link: "https://mefamex.com/public/pages/about/index.html" },
+        { text: "İLETİŞİM", link: "https://mefamex.com/public/pages/contact/index.html" },
+        { text: "YAZILIM", link: "https://mefamex.com/public/pages/software/index.html" },
+        { text: "PROJELER", link: "https://mefamex.com/public/pages/projects/index.html" }
     ]
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
@@ -42,7 +42,7 @@ function CreateHeader() {
     const navBarHideButton = document.createElement("a"); header.appendChild(navBarHideButton);
     navBarHideButton.id = "navBarHideButton"; navBarHideButton.className = "unselected";
     navBarHideButton.title = "MENU";
-    navBarHideButton.onclick = () => {navBarHideButton.className = navBarHideButton.className == 'unselected' ? 'selected' : 'unselected';navBarHidden.className = navBarHideButton.className;}
+    navBarHideButton.onclick = () => { navBarHideButton.className = navBarHideButton.className == 'unselected' ? 'selected' : 'unselected'; navBarHidden.className = navBarHideButton.className; }
 
 
     const navBarHidden = document.createElement("section"); header.appendChild(navBarHidden);
@@ -52,6 +52,6 @@ function CreateHeader() {
         temp_item.textContent = item.text; temp_item.href = item.link;
         temp_item.style.display = "block"; temp_item.style.color = "white";
     })
-    window.addEventListener('scroll', function(){navBarHideButton.className='unselected';});
+    window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 }
 
