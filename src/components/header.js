@@ -27,7 +27,7 @@ function CreateHeader() {
     navBar.id = "headerNavBar";
 
     const navBarList = [
-        { text: "ANASAYFA", link: "https://mefamex.com/index.html" },
+        { text: "ANASAYFA", link: "https://mefamex.com/" },
         { text: "HAKKIMDA", link: "https://mefamex.com/public/pages/about/index.html" },
         { text: "İLETİŞİM", link: "https://mefamex.com/public/pages/contact/index.html" },
         { text: "YAZILIM", link: "https://mefamex.com/public/pages/software/index.html" },
