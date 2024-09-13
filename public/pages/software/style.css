@@ -1,11 +1,15 @@
+:root {
+    --bg-main: #2f3640;
+    --bg-h2: #e67e22;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
-    background-color: #ffffff;
+    background-color: #424242;
 }
-
 
 main {
     display: flex;

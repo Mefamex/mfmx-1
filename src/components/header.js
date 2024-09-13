@@ -2,7 +2,7 @@ CreateHeader();
 
 function CreateHeader() {
     const header = document.querySelector("header");
-    header.innerHTML=`<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
+    header.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
 
     const divLeft = document.createElement("div"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"
@@ -17,37 +17,36 @@ function CreateHeader() {
 
     const divLeftText = document.createElement("h1"); divLeft.appendChild(divLeftText);
     divLeftText.id = "headerDivLeftText";
-    divLeftText.textContent = "MEFAMEX";
+    divLeftText.textContent = "MEFAMEX.com";
 
 
     const navBar = document.createElement("nav"); header.appendChild(navBar);
     navBar.id = "headerNavBar";
 
-    const navBarHome = document.createElement("a"); navBar.appendChild(navBarHome);
-    navBarHome.id = "navBarHome";
-    navBarHome.textContent = "ANASAYFA"
-    navBarHome.href = "/"
-
-    const navBarAbout = document.createElement("a"); navBar.appendChild(navBarAbout);
-    navBarAbout.id = "navBarAbout";
-    navBarAbout.textContent = "HAKKIMDA";
-    navBarAbout.href = "/public/pages/about"
-
-    const navBarContact = document.createElement("a"); navBar.appendChild(navBarContact);
-    navBarContact.id = "navBarContact";
-    navBarContact.textContent = "İLETİŞİM";
-    navBarContact.href = "/public/pages/contact"
-
-    const navBarSL = document.createElement("a"); navBar.appendChild(navBarSL);
-    navBarSL.id = "navBarSL";
-    navBarSL.textContent = "YAZILIM";
-    navBarSL.href = "/public/pages/software"
-
-    const navBarProj = document.createElement("a"); navBar.appendChild(navBarProj);
-    navBarProj.id = "navBarProj";
-    navBarProj.textContent = "PROJELER";
-    navBarProj.href = "/public/pages/projects"
+    const navBarList = [
+        { text: "ANASAYFA", link: "/" },
+        { text: "HAKKIMDA", link: "/public/pages/about" },
+        { text: "İLETİŞİM", link: "/public/pages/contact" },
+        { text: "YAZILIM", link: "/public/pages/software" },
+        { text: "PROJELER", link: "/public/pages/projects" }
+    ]
+    navBarList.forEach((item) => {
+        let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
+        temp_item.textContent = item.text; temp_item.href = item.link;
+    })
 
 
+    const navBarHideButton = document.createElement("a"); header.appendChild(navBarHideButton);
+    navBarHideButton.id = "navBarHideButton"; navBarHideButton.className = "unselected"; navBarHideButton.textContent = "...";
+    navBarHideButton.onclick = () => navBarHideButton.className = navBarHideButton.className == 'unselected' ? 'selected' : 'unselected';
+    navBarHideButton.title="MENU";
+
+    const navBarHidden = document.createElement("section"); header.appendChild(navBarHidden);
+    navBarHidden.id = "navBarHidden";
+    navBarList.forEach((item) => {
+        let temp_item = document.createElement("a"); navBarHidden.appendChild(temp_item);
+        temp_item.textContent = item.text; temp_item.href = item.link;
+        temp_item.style.display="block"; temp_item.style.color="white";
+    })
 }
 
