@@ -1,11 +1,15 @@
 :root {
-    --bg-main: #2f3640;
+    --color-bg-main: rgb(15 15 15);
+    --color-white: rgb(241, 241, 241);
+    --color-white-2: rgb(170, 170, 170);
     --bg-h2: #e67e22;
-    --header-height:5rem;
-    --scroll:0px;
+    --header-height: 5rem;
+    --scroll: 0px;
 }
-*{
+* {
     scroll-behavior: smooth;
+    color: var(--color-white);
+    transition: all 100ms ease-in-out;
 }
 body {
     font-family: Arial, sans-serif;
@@ -14,14 +18,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #424242;
+    background-color: var(--color-bg-main);
+    min-width: 1000px;
 }
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    margin-left: 1dvw;
+    margin-inline: 1dvw;
 }
 main #table-body section h1 {
     margin-block: auto;
@@ -31,12 +36,13 @@ main #table-body section h1 {
     text-align: center;
     padding-block: 1rem;
     margin-top: 5rem;
+    text-shadow: 0 0 0.3rem  rgb(255, 255, 255);
 }
-main #table-body section fieldset legend{
+main #table-body section fieldset legend {
     color: chartreuse;
     font-size: 1.3rem;
 }
-main #table-body section fieldset ul{
+main #table-body section fieldset ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -44,15 +50,15 @@ main #table-body section fieldset ul{
     flex-direction: column;
     color: azure;
 }
-main #table-body section fieldset ul li{
+main #table-body section fieldset ul li {
     user-select: none;
     display: flex;
     gap: 1rem;
 }
-main #table-body section fieldset ul li h3{
+main #table-body section fieldset ul li h3 {
     margin-block: auto;
 }
-main #table-body section fieldset ul li h3::after{
+main #table-body section fieldset ul li h3::after {
     content: ":";
 }
 /* MAIN OVER
@@ -71,60 +77,63 @@ main #table-body section fieldset ul li h3::after{
 .
 .....SIDEBAR....*/
 #sidebar {
-    width: max-content;
     position: relative;
     left: 0;
     display: flex;
     flex-direction: column;
     background-color: #00000082;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-#sidebarSection{
+#sidebarSection {
     top: max(3px, calc(var(--header-height) - var(--scroll)));
-    padding-top: min(5rem , calc(var(--scroll) - var(--header-height)));
+    padding-top: min(5rem, calc(var(--scroll) - var(--header-height)));
     display: flex;
     position: sticky;
     flex-direction: column;
     width: max-content;
 }
-#sidebar > #sidebarSection > a{
+#sidebar > #sidebarSection > #sidebarTitle {
     text-align: center;
     margin: 0;
     padding: auto;
     border: 0.2rem solid white;
-    color: rgb(255, 255, 255);
+    color: var(--color-white-2);
     font-size: 2rem;
     font-weight: 700;
 }
-#sidebar ul {
+#sidebar > #sidebarSection > #sidebarTitle:hover {
+    text-decoration-color: red;
+    color: rgb(255, 255, 255);
+}
+#sidebar #sidebarList {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
-    overflow-x: none;
+    margin: 0 0 0 1rem;
+    overflow-y: auto;
+    overflow-x: visible;
     max-height: 80dvh;
-    padding: 1rem;
+    border-left: 0.1rem solid white;
 }
-#sidebar li {
-    list-style-type: none;
-    margin: 0.1rem 0;
-    padding: 1rem 0;
-    color: rgb(139, 139, 139);
-    cursor: pointer;
-    width: 100%;
+#sidebar #sidebarList a {
+    display: flex;
+    width: -webkit-fill-available;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    padding: 0.8rem 0.8rem 0.8rem 0;
+    color: var(--color-white);
+    border: 0.2rem solid rgba(255, 255, 255, 0);
 }
-#sidebar li:hover {
+#sidebar #sidebarList a::before {
+    content: "-> ";
+}
+#sidebar #sidebarList a:hover {
     background-color: #294966;
-    color: white;
-    transition: background-color 0.2s ease-out;
-    transition: color 0.2s ease-out;
+    cursor: pointer;
+    text-decoration-color: red;
+    color: rgb(255, 255, 255);
+    border-color: white;
+    border-radius: 0 1rem 1rem 0;
 }
-#sidebar li a{
-    color: white;
-    text-decoration: none;
-}
-
 /* SIDEBAR OVER
 .
 .
@@ -139,8 +148,8 @@ main #table-body section fieldset ul li h3::after{
 .
 ......RESPOINSIVE DESIGN */
 @media screen and (max-width: 768px) {
-    #sidebarSection{
-        top:3rem;
+    #sidebarSection {
+        top: 3rem;
         padding-top: 0;
     }
 }

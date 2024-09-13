@@ -1,4 +1,9 @@
 
+window.addEventListener('scroll', function () { document.documentElement.style.setProperty('--scroll', window.scrollY + 'px'); });
+document.querySelector("main").style.marginLeft = document.querySelector("#sidebar").offsetWidth;
+
+
+
 /*
 let jsonData = {};
 const tableBody = document.getElementById('table-body');
@@ -35,6 +40,3 @@ function createTable(jsonData, tableBody) {
 
 */
 
-
-window.addEventListener('scroll', function () { document.documentElement.style.setProperty('--scroll', window.scrollY + 'px'); });
-document.querySelector("main").style.marginLeft = document.querySelector("#sidebar").offsetWidth;

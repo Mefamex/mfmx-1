@@ -23,7 +23,6 @@ C:\Users\Mefamex\Desktop\mfmx-1
 |      |      |      |      |      queaz_game.js
 |      |      |      |      |      script.js
 |      |      |      |      |      style.css
-|      |      |      |      index.html
 |      |      |      projects
 |      |      |      |      index.html
 |      |      |      |      script.js
@@ -36,17 +35,24 @@ C:\Users\Mefamex\Desktop\mfmx-1
 |      |      |      |      script.js
 |      |      |      |      style.css
 |      |      |      |      tempCodeRunnerFile.py
-|      |      |      index.html
-|      |      index.html
+|      |      |      |      Yazilim_Ayrintili.txt
+|      py
+|      |      FileLister.js
+|      |      FileLister.py
+|      |      gnpToWebp.py
+|      |      sitemapCreator.py
 |      src
 |      |      assets
 |      |      |      icons
+|      |      |      |      =.ico
 |      |      |      |      cloudflare.png
 |      |      |      |      facebook_icon.png
 |      |      |      |      github_icon.png
 |      |      |      |      instagram_icon.png
 |      |      |      |      linkedin_icon.png
 |      |      |      |      ssl.png
+|      |      |      |      x.ico
+|      |      |      |      X.svg
 |      |      |      |      x_twitter_icon.png
 |      |      |      |      youtube_icon.png
 |      |      |      images
@@ -91,13 +97,10 @@ C:\Users\Mefamex\Desktop\mfmx-1
 |      |      |      mouse_tail.js
 |      |      styles
 |      |      |      home.css
-|      DirExVis_2024-09-06 06.43.18.txt
+|      DirExVis_2024-09-06 06.47.20.txt
 |      exnavgation
-|      FileLister.py
-|      gnpToWebp.py
 |      index.html
 |      navigation.json
 |      package.json
 |      robots.txt
 |      sitemap.xml
-|      sitemap_index.xml

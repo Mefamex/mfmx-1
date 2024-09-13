@@ -1,7 +1,7 @@
 CreateHeader();
 
 function CreateHeader() {
-    const header = document.querySelector("header");
+    const header = document.querySelector("header");header.id="header"
     header.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
 
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
