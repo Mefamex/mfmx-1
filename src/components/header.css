@@ -34,6 +34,7 @@ header {
     background-color: #0e101348;
     border-radius: 2rem;
     padding-inline: 1rem;
+    z-index: 1000;
 }
 #headerDivLeftIcon {
     height: 80%;

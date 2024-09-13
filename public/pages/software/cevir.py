@@ -5,7 +5,7 @@ def txtToJson():
     data = {}
     cc1, cc2 = 0, 0
 
-    with open("./public/pages/software_lang/input.txt", "r") as f:
+    with open("C:/Users/Mefamex/Desktop/mfmx-1/public/pages/software/Yazilim_Ayrintili.txt", "r") as f:
         for line in f:
             line = line.strip()
             if line in ["", " ", "  ", "\n", " \n", " \n "]:
@@ -13,10 +13,10 @@ def txtToJson():
             elif line.startswith("---"):
                 cc1 = line[3:-3].strip()
                 data[cc1] = {}
-            elif line.startswith("+"):
-                value = line[2:].strip()
+            elif ":" in line:
+                value = line.strip()
                 if cc1 is not None:
-                    data[cc1][cc2].append(value)
+                    data[cc1][cc2].append(value.split(":"))
             else:
                 cc2 = line[:].strip()
                 data[cc1][cc2] = []
@@ -26,8 +26,12 @@ def txtToJson():
     # Sözlüğü JSON formatına dönüştür
     json_data = json.dumps(data, indent=4)
 
-    with open("./public/pages/software_lang/output.json", "w") as f:
+    with open("C:/Users/Mefamex/Desktop/mfmx-1/public/pages/software/output.json", "w") as f:
         json.dump(data, f, indent=4)
+
+
+
+
 
 
 def jsonToList():
@@ -44,11 +48,21 @@ def jsonToList():
         print(type(q))
 
 
+
+
+
+
+
 def jsonToJson():
-    with open("./public/pages/software_lang/output.json", "r") as f:
+    with open("C:/Users/Mefamex/Desktop/mfmx-1/public/pages/software/output.json", "r") as f:
         data = json.load(f)
 
     print(json.dumps(data, indent=4))
 
 
+
+
+
+
 txtToJson()
+jsonToJson()

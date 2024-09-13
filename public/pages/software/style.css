@@ -4,7 +4,9 @@
     --header-height:5rem;
     --scroll:0px;
 }
-
+*{
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,6 +21,20 @@ main {
     flex-direction: column;
     justify-content: center;
     flex: 1;
+    margin-left: 1dvw;
+}
+main #table-body section h1 {
+    margin-block: auto;
+    color: rgb(0, 0, 0);
+    background-color: #294966;
+    font-size: 3rem;
+    text-align: center;
+    padding-block: 1rem;
+    margin-top: 5rem;
+}
+main #table-body section fieldset legend{
+    color: chartreuse;
+    font-size: 1.3rem;
 }
 main #table-body section fieldset ul{
     list-style-type: none;
@@ -26,9 +42,10 @@ main #table-body section fieldset ul{
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    color: azure;
 }
 main #table-body section fieldset ul li{
+    user-select: none;
     display: flex;
     gap: 1rem;
 }
@@ -59,7 +76,7 @@ main #table-body section fieldset ul li h3::after{
     left: 0;
     display: flex;
     flex-direction: column;
-    background-color: #00240e4e;
+    background-color: #00000082;
 }
 #sidebarSection{
     top: max(3px, calc(var(--header-height) - var(--scroll)));
@@ -74,7 +91,7 @@ main #table-body section fieldset ul li h3::after{
     margin: 0;
     padding: auto;
     border: 0.2rem solid white;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -84,12 +101,16 @@ main #table-body section fieldset ul li h3::after{
     align-items: flex-start;
     padding: 0;
     margin: 0;
+    overflow-y: scroll;
+    overflow-x: none;
+    max-height: 80dvh;
+    padding: 1rem;
 }
 #sidebar li {
     list-style-type: none;
     margin: 0.1rem 0;
     padding: 1rem 0;
-    color: white;
+    color: rgb(139, 139, 139);
     cursor: pointer;
     width: 100%;
 }

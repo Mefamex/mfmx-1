@@ -1,6 +1,7 @@
+
+/*
 let jsonData = {};
 const tableBody = document.getElementById('table-body');
-
 fetch('/public/pages/software/output.json')
   .then(response => response.json()).then(data => { jsonData = data; console.log("data fetched with keys:", Object.keys(jsonData).length); createTable(jsonData, tableBody); })
   .catch(error => console.error('Error:', error));
@@ -9,33 +10,31 @@ function createTable(jsonData, tableBody) {
   console.log("jsonData size of keys:", Object.keys(jsonData).length);
   console.log("The TableBody", tableBody);
 
-
   Object.keys(jsonData).forEach(c1 => {
-    let div1 = document.createElement("div");
-    div1.classList = "div1"; tableBody.appendChild(div1);
-    let d1title = document.createElement("h3"); div1.appendChild(d1title);
-    d1title.textContent = c1;
-    let div11 = document.createElement("div");
-    div11.classList = "div11"; div1.appendChild(div11);
+    let sectionn = document.createElement("section");
+    sectionn.id = c1.toLowerCase().replaceAll(" ", "-"); tableBody.appendChild(sectionn);
+    let d1title = document.createElement("h1"); d1title.textContent=c1; sectionn.appendChild(d1title);
+
+
     Object.keys(jsonData[c1]).forEach(c2 => {
-      let div2 = document.createElement("ul");
-      div2.classList = "div2"; div11.appendChild(div2);
-      let d2title = document.createElement("h6"); div2.appendChild(d2title);
-      d2title.textContent = c2;
+      let field = document.createElement("fieldset"); sectionn.appendChild(field);
+      let legentt = document.createElement("legend"); field.appendChild(legentt);
+      let legenttH2 = document.createElement("h2"); legentt.appendChild(legenttH2);
+      legenttH2.textContent = c2;legentt.id = c2.toLowerCase().replaceAll(" ", "-");
+
+      let ull = document.createElement("ul"); field.appendChild(ull);
+
       jsonData[c1][c2].forEach(c3 => {
-        let div3 = document.createElement("li");
-        div3.classList = "div3"; div2.appendChild(div3);
-        div3.textContent = "+ " + c3;
+        let div3 = document.createElement("li"); ull.appendChild(div3);
+        let div3tit = document.createElement("h3"); div3tit.textContent = c3[0]; div3.appendChild(div3tit);
+        let div3p = document.createElement("p"); div3p.textContent = c3[1]; div3.appendChild(div3p);
       }); // c3
     }); // c2
   }); // c1
 }
 
-const root = document.documentElement;
-window.addEventListener('scroll', function () { root.style.setProperty('--scroll', window.scrollY + 'px'); });
+*/
 
 
-const sidebarWidth = document.querySelector("#sidebar").offsetWidth;
-const mainMarginLeft = document.querySelector("main").style.marginLeft;
-
+window.addEventListener('scroll', function () { document.documentElement.style.setProperty('--scroll', window.scrollY + 'px'); });
 document.querySelector("main").style.marginLeft = document.querySelector("#sidebar").offsetWidth;
