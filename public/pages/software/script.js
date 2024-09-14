@@ -17,6 +17,7 @@ function sideBarFunc(event) {
   sectionElement.querySelectorAll('fieldset > legend').forEach((legend) => {
     let sideList2a = document.createElement("a"); sideList2a.className = "sidebar-tooltip-child"
     sideList2a.textContent = legend.children[0].textContent;
+    sideList2a.href="public/pages/software/#"+legend.id;
     tooltip.appendChild(sideList2a)
   });
   const sectionRect = document.querySelector("#sidebarSection").getBoundingClientRect();
@@ -43,11 +44,9 @@ function checkToolTipDisplay(event, kontrol = false) {
 
 
 
-
 document.getElementById('sidebarList').addEventListener('mouseover', (event) => { if (event.target.tagName.toLowerCase() === 'a') { sideBarFunc(event); } });
 tooltip.addEventListener('mouseover',()=>{lastToolTipSeen = new Date;});
 window.addEventListener('mouseover', (event) => { mouseOn = event;})
-
 
 sidebarShowButton.addEventListener('click', () => { if (sidebarShowButton.style.display != 'none') {sidebarShowButton.classList.toggle("active");}});
 /*

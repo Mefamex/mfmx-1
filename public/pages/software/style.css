@@ -86,6 +86,9 @@ main {
 .
 .
 .....SIDEBAR....*/
+.active{
+    text-decoration-color: red;
+}
 #sidebar {
     position: relative;
     left: 0;
