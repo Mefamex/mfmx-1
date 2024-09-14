@@ -5,8 +5,6 @@
     --bg-h2: #e67e22;
     --header-height: 5rem;
     --scroll: 0px;
-    --header-height: 5rem;
-    --scroll: 0px;
 }
 * {
     scroll-behavior: smooth;
