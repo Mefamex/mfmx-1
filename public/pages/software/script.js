@@ -2,38 +2,38 @@
 window.addEventListener('scroll', function () { document.documentElement.style.setProperty('--scroll', window.scrollY + 'px'); });
 document.querySelector("main").style.marginLeft = document.querySelector("#sidebar").offsetWidth;
 
-const sidebar = document.getElementById('sidebar')
+const sidebar = document.getElementById('sidebar');
 const tooltip = document.getElementById('sidebar-tooltip');
+const sidebarShowButton = document.getElementById('sidebarShowButton');
 
 let lastToolTipSeen = new Date();
 let lastToolTipSeenControlCount = 0;
 let mouseOn;
 
-
-
-
 function sideBarFunc(event) {
   lastToolTipSeen = new Date; tooltip.innerHTML = '';
   const parentTitle = event.target.getAttribute('href').split("#")[1];
   const sectionElement = document.querySelector("#table-body > section~#" + parentTitle);
-  
   sectionElement.querySelectorAll('fieldset > legend').forEach((legend) => {
     let sideList2a = document.createElement("a"); sideList2a.className = "sidebar-tooltip-child"
     sideList2a.textContent = legend.children[0].textContent;
     tooltip.appendChild(sideList2a)
-  })
-  tooltip.style.top = `${event.pageY}px`;
-  tooltip.style.left = sidebar.clientWidth + "px";
+  });
+  const sectionRect = document.querySelector("#sidebarSection").getBoundingClientRect();
+  const tooltipRect = tooltip.getBoundingClientRect();
+  let top = event.target.getBoundingClientRect().top;
+  if (top + tooltipRect.height > sectionRect.bottom) { top = sectionRect.bottom - tooltipRect.height; }
+  tooltip.style.top = `${top}px`;
+  tooltip.style.left = event.target.getBoundingClientRect().right + "px";
   tooltip.style.display = 'flex';
   checkToolTipDisplay(event);
 };
 
-
-
-
 function checkToolTipDisplay(event, kontrol = false) {
   if (new Date() - lastToolTipSeen > 1000 && !sidebar.contains(mouseOn.target) && !tooltip.contains(mouseOn.target)) {
-    tooltip.style.display = 'none'; tooltip.innerHTML = ''; if (kontrol) { lastToolTipSeenControlCount -= 1; } return;
+    tooltip.style.display = 'none'; tooltip.innerHTML = ''; if(sidebarShowButton.classList.contains('active')){sidebarShowButton.classList.remove('active');};
+    
+    if (kontrol) { lastToolTipSeenControlCount -= 1; } return;
   }
   if (kontrol && lastToolTipSeenControlCount <= 1 || lastToolTipSeenControlCount < 1) {
     setTimeout(() => { checkToolTipDisplay(event, kontrol = true) }, 100);
@@ -45,11 +45,11 @@ function checkToolTipDisplay(event, kontrol = false) {
 
 
 document.getElementById('sidebarList').addEventListener('mouseover', (event) => { if (event.target.tagName.toLowerCase() === 'a') { sideBarFunc(event); } });
+tooltip.addEventListener('mouseover',()=>{lastToolTipSeen = new Date;});
+window.addEventListener('mouseover', (event) => { mouseOn = event;})
 
-window.addEventListener('mouseover', (event) => { mouseOn = event; })
 
-
-
+sidebarShowButton.addEventListener('click', () => { if (sidebarShowButton.style.display != 'none') {sidebarShowButton.classList.toggle("active");}});
 /*
 let jsonData = {};
 const tableBody = document.getElementById('table-body');
