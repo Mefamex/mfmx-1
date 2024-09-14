@@ -13,7 +13,7 @@ let mouseOn;
 function sideBarFunc(event) {
   lastToolTipSeen = new Date; tooltip.innerHTML = '';
   const parentTitle = event.target.getAttribute('href').split("#")[1];
-  const sectionElement = document.querySelector("#table-body > section~#" + parentTitle);
+  const sectionElement = document.querySelector("#table-body > #" + parentTitle);
   sectionElement.querySelectorAll('fieldset > legend').forEach((legend) => {
     let sideList2a = document.createElement("a"); sideList2a.className = "sidebar-tooltip-child"
     sideList2a.textContent = legend.children[0].textContent;
