@@ -28,7 +28,12 @@ main {
     flex: 1;
     margin-inline: 1dvw;
 }
-main #table-body section h1 {
+#table-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#table-body section h1 {
     margin-block: auto;
     color: rgb(0, 0, 0);
     background-color: #294966;
@@ -40,15 +45,15 @@ main #table-body section h1 {
     border: 0.5rem double;
     border-bottom-style: outset;
 }
-main #table-body section h1:hover {
+#table-body section h1:hover {
     border-bottom-style: inset;
     border-color: white;
 }
-main #table-body section fieldset legend {
+#table-body section fieldset legend {
     color: chartreuse;
     font-size: 1.3rem;
 }
-main #table-body section fieldset ul {
+#table-body section fieldset ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -56,15 +61,15 @@ main #table-body section fieldset ul {
     flex-direction: column;
     color: azure;
 }
-main #table-body section fieldset ul li {
+#table-body section fieldset ul li {
     user-select: none;
     display: flex;
     gap: 1rem;
 }
-main #table-body section fieldset ul li h3 {
+#table-body section fieldset ul li h3 {
     margin-block: auto;
 }
-main #table-body section fieldset ul li h3::after {
+#table-body section fieldset ul li h3::after {
     content: ":";
 }
 /* MAIN OVER
@@ -101,7 +106,7 @@ main #table-body section fieldset ul li h3::after {
 #sidebar > #sidebarSection > #sidebarTitle {
     text-align: center;
     margin: 0;
-    padding: auto;
+    padding: 0;
     border: 0.2rem solid white;
     color: var(--color-white-2);
     font-size: 2rem;
@@ -139,6 +144,24 @@ main #table-body section fieldset ul li h3::after {
     color: rgb(255, 255, 255);
     border-color: white;
     border-radius: 0 1rem 1rem 0;
+}
+#sidebar-tooltip {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 0;
+    left: 100%;
+    width: auto;
+    height: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+#sidebar-tooltip .sidebar-tooltip-child{
+    border: 2px solid white;
+    margin-block: 0.2rem;
+    transition: all 500ms ease-in-out;
 }
 /* SIDEBAR OVER
 .

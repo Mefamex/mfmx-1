@@ -2,6 +2,52 @@
 window.addEventListener('scroll', function () { document.documentElement.style.setProperty('--scroll', window.scrollY + 'px'); });
 document.querySelector("main").style.marginLeft = document.querySelector("#sidebar").offsetWidth;
 
+const sidebar = document.getElementById('sidebar')
+const tooltip = document.getElementById('sidebar-tooltip');
+
+let lastToolTipSeen = new Date();
+let lastToolTipSeenControlCount = 0;
+let mouseOn;
+
+
+
+
+function sideBarFunc(event) {
+  lastToolTipSeen = new Date; tooltip.innerHTML = '';
+  const parentTitle = event.target.getAttribute('href').split("#")[1];
+  const sectionElement = document.querySelector("#table-body > section~#" + parentTitle);
+  
+  sectionElement.querySelectorAll('fieldset > legend').forEach((legend) => {
+    let sideList2a = document.createElement("a"); sideList2a.className = "sidebar-tooltip-child"
+    sideList2a.textContent = legend.children[0].textContent;
+    tooltip.appendChild(sideList2a)
+  })
+  tooltip.style.top = `${event.pageY}px`;
+  tooltip.style.left = sidebar.clientWidth + "px";
+  tooltip.style.display = 'flex';
+  checkToolTipDisplay(event);
+};
+
+
+
+
+function checkToolTipDisplay(event, kontrol = false) {
+  if (new Date() - lastToolTipSeen > 1000 && !sidebar.contains(mouseOn.target) && !tooltip.contains(mouseOn.target)) {
+    tooltip.style.display = 'none'; tooltip.innerHTML = ''; if (kontrol) { lastToolTipSeenControlCount -= 1; } return;
+  }
+  if (kontrol && lastToolTipSeenControlCount <= 1 || lastToolTipSeenControlCount < 1) {
+    setTimeout(() => { checkToolTipDisplay(event, kontrol = true) }, 100);
+    lastToolTipSeenControlCount = 1;
+  }
+}
+
+
+
+
+document.getElementById('sidebarList').addEventListener('mouseover', (event) => { if (event.target.tagName.toLowerCase() === 'a') { sideBarFunc(event); } });
+
+window.addEventListener('mouseover', (event) => { mouseOn = event; })
+
 
 
 /*
