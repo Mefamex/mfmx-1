@@ -5,7 +5,10 @@
     --bg-h2: #e67e22;
     --header-height: 5rem;
     --scroll: 0px;
+    --header-height: 5rem;
+    --scroll: 0px;
 }
+* {
 * {
     scroll-behavior: smooth;
     color: var(--color-white);
@@ -39,9 +42,11 @@ main #table-body section h1 {
     text-shadow: 0 0 0.3rem  rgb(255, 255, 255);
 }
 main #table-body section fieldset legend {
+main #table-body section fieldset legend {
     color: chartreuse;
     font-size: 1.3rem;
 }
+main #table-body section fieldset ul {
 main #table-body section fieldset ul {
     list-style-type: none;
     padding: 0;
@@ -51,13 +56,16 @@ main #table-body section fieldset ul {
     color: azure;
 }
 main #table-body section fieldset ul li {
+main #table-body section fieldset ul li {
     user-select: none;
     display: flex;
     gap: 1rem;
 }
 main #table-body section fieldset ul li h3 {
+main #table-body section fieldset ul li h3 {
     margin-block: auto;
 }
+main #table-body section fieldset ul li h3::after {
 main #table-body section fieldset ul li h3::after {
     content: ":";
 }
@@ -85,7 +93,9 @@ main #table-body section fieldset ul li h3::after {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 #sidebarSection {
+#sidebarSection {
     top: max(3px, calc(var(--header-height) - var(--scroll)));
+    padding-top: min(5rem, calc(var(--scroll) - var(--header-height)));
     padding-top: min(5rem, calc(var(--scroll) - var(--header-height)));
     display: flex;
     position: sticky;
@@ -150,6 +160,9 @@ main #table-body section fieldset ul li h3::after {
 @media screen and (max-width: 768px) {
     #sidebarSection {
         top: 3rem;
+    #sidebarSection {
+        top: 3rem;
         padding-top: 0;
     }
 }
+
