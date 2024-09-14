@@ -38,7 +38,13 @@ main #table-body section h1 {
     text-align: center;
     padding-block: 1rem;
     margin-top: 5rem;
-    text-shadow: 0 0 0.3rem  rgb(255, 255, 255);
+    text-shadow: 0 0 0.3rem rgb(255, 255, 255);
+    border: 0.5rem double;
+    border-bottom-style: outset;
+}
+main #table-body section h1:hover {
+    border-bottom-style: inset;
+    border-color: white;
 }
 main #table-body section fieldset legend {
     color: chartreuse;
@@ -88,7 +94,6 @@ main #table-body section fieldset ul li h3::after {
 }
 #sidebarSection {
     top: max(3px, calc(var(--header-height) - var(--scroll)));
-    padding-top: min(5rem, calc(var(--scroll) - var(--header-height)));
     padding-top: min(5rem, calc(var(--scroll) - var(--header-height)));
     display: flex;
     position: sticky;
@@ -153,9 +158,6 @@ main #table-body section fieldset ul li h3::after {
 @media screen and (max-width: 768px) {
     #sidebarSection {
         top: 3rem;
-    #sidebarSection {
-        top: 3rem;
         padding-top: 0;
     }
 }
-
