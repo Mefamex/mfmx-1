@@ -1,14 +1,14 @@
 CreateHeader();
 
 function CreateHeader() {
-    const header = document.querySelector("header");header.id="header"
+    const header = document.querySelector("header"); header.id = "header"
     header.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
 
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
     headerDivLeftSpace.style.display = "flex"; //for divleft to center
 
-    const divLeft = document.createElement("div"); header.appendChild(divLeft);
-    divLeft.id = "headerDivLeft"
+    const divLeft = document.createElement("a"); header.appendChild(divLeft);
+    divLeft.id = "headerDivLeft"; divLeft.href = "/"
     divLeft.addEventListener('click', () => { window.location.href = "/" });
     divLeft.onmouseover = () => { divLeft.classList.add("headerDivLeftHover") }
     divLeft.onmouseout = function () { divLeft.classList.remove("headerDivLeftHover") };
