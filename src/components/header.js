@@ -3,7 +3,7 @@ CreateHeader();
 function CreateHeader() {
     const header = document.querySelector("header"); header.id = "header"
     header.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
-
+a
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
     headerDivLeftSpace.style.display = "flex"; //for divleft to center
 
