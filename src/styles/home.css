@@ -104,7 +104,7 @@ main #divSol a {
     width: fit-content;
     height: fit-content;
     transition: all 200ms ease-in-out;
-    /*animation: entranceLeft 0.9s ease-out 2s both;*/
+    animation: entranceLeft 0.9s ease-out 2s both;
 }
 main #divSol a img {
     width: var(--divLeft-img-size);
