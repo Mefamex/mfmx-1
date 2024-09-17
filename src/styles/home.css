@@ -69,7 +69,7 @@ main {
     overflow: hidden;
 }
 main #divSol {
-    width: fit-content;
+    width: calc(var(--divLeft-img-size)*1.5);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -82,20 +82,33 @@ main #divSol a {
     width: fit-content;
     height: fit-content;
     transition: all 200ms ease-in-out;
-    animation: entranceLeft 0.9s ease-out 2s both;
+    /*animation: entranceLeft 0.9s ease-out 2s both;*/
 }
 main #divSol a img {
     width: var(--divLeft-img-size);
     object-fit: contain;
     background-color: rgba(255, 255, 255, 0.096);
-    transition: all 200ms ease-in-out;
     padding: calc(var(--divLeft-img-size) * 0.2);
     border-radius: 20%;
     filter: drop-shadow(0 0 calc(var(--divLeft-img-size) * 0.06) white);
+    transition: all 200ms ease-in-out;
 }
 main #divSol a:hover img {
     filter: drop-shadow(0 0 0.5rem white);
     background-color: rgba(255, 255, 255, 0.473);
+}
+main #divSol a.slide-out {
+    animation: 3s linear 1s infinite running sun-rise; /* slide out animation */
+}
+@keyframes sun-rise {
+    from {
+        /* pushes the sun down past the viewport */
+        transform: translateY(110vh);
+    }
+    to {
+        /* returns the sun to its default position */
+        transform: translateY(0);
+    }
 }
 main #divCardContainer {
     flex: 1;
@@ -123,6 +136,11 @@ main #divCardContainer .card {
     -webkit-animation: slit-in-vertical 0.9s ease-out both;
     animation: slit-in-vertical 0.9s ease-out 2s both;
 }
+main #divCardContainer .card:hover {
+    transition: all 200ms ease-in-out;
+    background-color: rgb(255, 255, 255);
+    border-color: red;
+}
 main #divCardContainer .card .cardTitle {
     padding-inline: 1dvw;
     padding-block: 1dvh;
@@ -136,6 +154,10 @@ main #divCardContainer .card .cardTitle {
     background-color: rgba(255, 255, 255, 0.514);
     color: black;
     border-radius: 1dvh 1dvw;
+}
+main #divCardContainer .card:hover .cardTitle {
+    text-decoration-color: red;
+    background-color: rgb(192, 192, 192);
 }
 main #divCardContainer .card .cardPrgf {
     margin: 0;
@@ -220,7 +242,7 @@ main #divSag #divSagMail {
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.527); /* subtle shadow effect */
 }
 ::-webkit-scrollbar-button {
-    display:none ;
+    display: none;
 }
 /**/
 /**/
