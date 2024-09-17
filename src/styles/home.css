@@ -81,7 +81,7 @@ main #divSol a {
     width: fit-content;
     height: fit-content;
     transition: all 200ms ease-in-out;
-    animation: entranceLeft 0.9s ease-out both;
+    animation: entranceLeft 0.9s ease-out 2s both;
 }
 main #divSol a img {
     width: var(--divLeft-img-size);
@@ -120,7 +120,7 @@ main #divCardContainer .card {
     padding-block: 1dvh;
     transition: all 0.5s ease-in-out;
     -webkit-animation: slit-in-vertical 0.9s ease-out both;
-    animation: slit-in-vertical 0.9s ease-out both;
+    animation: slit-in-vertical 0.9s ease-out 2s both;
 }
 main #divCardContainer .card .cardTitle {
     padding-inline: 1dvw;
