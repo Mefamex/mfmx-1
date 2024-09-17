@@ -11,7 +11,6 @@ body {
     overflow: hidden;
     background-color: black;
 }
-
 #background_img {
     position: fixed;
     filter: blur(3px) grayscale(0.2);
@@ -22,7 +21,6 @@ body {
     overflow: hidden;
     z-index: -99;
 }
-
 #background_mid {
     position: absolute;
     display: flex;
@@ -33,7 +31,6 @@ body {
     align-items: center;
     z-index: -98;
 }
-
 #background_mid #h1mfmx {
     flex-basis: auto;
     padding: 0;
@@ -46,7 +43,6 @@ body {
     overflow: hidden;
     max-width: 100dvw;
 }
-
 #background_mid #mfmx_symbol_img {
     object-fit: contain; /* if contain : Prevent stretching and maintain aspect ratio */
     flex-grow: 1;
@@ -77,6 +73,32 @@ main #divSol {
     justify-content: space-around;
     transition: all 200ms ease-in-out;
     overflow: hidden;
+}
+#cardLink {
+    z-index: 99;
+    display: none;
+    position: absolute;
+    width: min-content;
+    height: min-content;
+    top: 0px;
+    left: 5dvw;
+    background-color: rgba(255, 255, 255, 0.651);
+    color: black;
+    border-radius: 5vh;
+    border: 1vh double white;
+    padding-inline: 1vw;
+    padding-block: 1vh;
+    font-weight: bold;
+    font-size: 1dvw;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    filter: opacity(0.5);
+}
+#cardLink.active {
+    display: flex;
+    filter: opacity(1) !important;
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.877);
 }
 main #divSol a {
     width: fit-content;
