@@ -9,40 +9,35 @@
       "submenu": [
         {
           "title": "CV",
-          "href": "/cv/"
+          "href": "/public/pages/cv/"
         },
         {
           "title": "About",
-          "href": "/pages/about/"
+          "href": "/public/pages/about/"
         },
         {
           "title": "Blog",
-          "href": "/pages/blog/"
+          "href": "/public/pages/blog/"
         },
         {
           "title": "Contact",
-          "href": "/pages/contact/"
+          "href": "/public/pages/contact/"
         },
         {
           "title": "Games",
-          "href": "/pages/games/"
+          "href": "/public/pages/games/"
         },
         {
           "title": "Projects",
-          "href": "/pages/projects/"
+          "href": "/public/pages/projects/"
         },
         {
           "title": "Software",
-          "href": "/pages/software/"
-        }
-      ]
-    },
-    {
-      "title": "Games",
-      "submenu": [
+          "href": "/public/pages/software/"
+        },
         {
-          "title": "Queaz",
-          "href": "/games/queaz/"
+          "title": "Software",
+          "href": "/public/pages//games/queaz/"
         }
       ]
     }
