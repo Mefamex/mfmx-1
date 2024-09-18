@@ -41,8 +41,6 @@ function slideDownAnimationNext() {
     if (window.innerWidth > 750) { cardLink_Organize(); cardLink.style.display = "flex" } else { cardLink.style.display = "none" }
 }
 function cardLink_Organize() {
-console.log(cardLink_target);
-
     if (cardLink_target) {
         cardLink.style.left = cardLink_target.getBoundingClientRect().right + "px";
         cardLink.style.top = cardLink_target.getBoundingClientRect().top + cardLink_target.offsetHeight / 2 - cardLink.offsetHeight / 2 + "px";
