@@ -97,7 +97,6 @@ main #divSol {
 #cardLink.active {
     display: flex;
     filter: opacity(1) !important;
-    transform: scale(1.2);
     background-color: rgba(255, 255, 255, 0.877);
 }
 main #divSol a {
@@ -118,9 +117,6 @@ main #divSol a img {
 main #divSol a:hover img {
     filter: drop-shadow(0 0 0.5rem white);
     background-color: rgba(255, 255, 255, 0.473);
-}
-main #divSol a.slide-out {
-    animation: 3s linear 1s infinite running sun-rise; /* slide out animation */
 }
 @keyframes sun-rise {
     from {

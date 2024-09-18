@@ -1,3 +1,7 @@
+body{
+    width: 99.5vw !important;
+    overflow-x: hidden !important;
+}
 footer {
     display: flex;
     flex-direction: row;
@@ -7,6 +11,8 @@ footer {
     background-color:  #0e1013;
     align-content: center;
     justify-content: center;
+    border-top: 0.1dvh solid white;
+    margin-top: 1dvh;
 }
 #footerText{
     color: white;
