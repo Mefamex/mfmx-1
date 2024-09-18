@@ -249,9 +249,9 @@ main #divSag #divSagMail {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #44444473; /* dark gray thumb color */
+    background-color: #7e7e7e8e; /* dark gray thumb color */
     border-radius: 10px; /* rounded corners for the thumb */
-    border: 2px solid #33333375; /* dark gray border around the thumb */
+    border: 2px solid #ff000075; /* dark gray border around the thumb */
 }
 
 ::-webkit-scrollbar-track {
