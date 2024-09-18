@@ -23,7 +23,7 @@ function slideDownAnimation() {
         cardLink.addEventListener('mouseover', () => { leftButtonsActive = false; mouseOnCardLink = true; });
         cardLink.addEventListener('mouseout', () => { leftButtonsActive = true; mouseOnCardLink = false; });
     })
-    slideDownAnimationNext();
+    setInterval(slideDownAnimationNext, 50);
 }
 function slideDownAnimationNext() {
     if (leftButtonsActive) {
@@ -33,11 +33,10 @@ function slideDownAnimationNext() {
             if (leftButtonsTop[index] > 90) {
                 leftButtonsTop[index] = -10; cardLink_secret_target = leftButtons[index - 1 < 0 ? leftButtonsCount - 1 : index - 1];
             }
-            if (leftButtonsTop[index] < 0) { element.style.left = leftButtonsTop[index] + "vw"; element.style.opacity = 0; }
-            else { element.style.left = 0; element.style.opacity = 1; }
+            if (leftButtonsTop[index] < 3) { element.style.left = leftButtonsTop[index] + "vw";}
+            else { element.style.left = 0; }
         });
     }
-    setTimeout(slideDownAnimationNext, 50);
     if (window.innerWidth > 750) { cardLink_Organize(); cardLink.style.display = "flex" } else { cardLink.style.display = "none" }
 }
 function cardLink_Organize() {
@@ -45,7 +44,7 @@ function cardLink_Organize() {
         cardLink.style.left = cardLink_target.getBoundingClientRect().right + "px";
         cardLink.style.top = cardLink_target.getBoundingClientRect().top + cardLink_target.offsetHeight / 2 - cardLink.offsetHeight / 2 + "px";
         cardLink.classList.add("active");
-        cardLink.href = cardLink_target.href; cardLink.textContent = "www."+ cardLink_target.href.slice(8);
+        cardLink.href = cardLink_target.href; cardLink.textContent = "www." + cardLink_target.href.slice(8);
         cardLink_target_time = new Date().getTime();
     }
     else if (mouseOnCardLink) {
@@ -59,7 +58,7 @@ function cardLink_Organize() {
         cardLink.classList.remove("active");
         cardLink.style.top = window.innerHeight - cardLink.offsetHeight + "px";
         if (cardLink_secret_target) {
-            cardLink.href = cardLink_secret_target.href; cardLink.textContent = "www."+ cardLink_secret_target.href.slice(8);
+            cardLink.href = cardLink_secret_target.href; cardLink.textContent = "www." + cardLink_secret_target.href.slice(8);
         }
     }
 }
