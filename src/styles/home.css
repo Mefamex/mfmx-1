@@ -215,7 +215,7 @@ main #divSag #divSagPrgf {
     padding-inline: 0.5dvw;
     text-wrap: wrap;
     overflow-wrap: anywhere;
-    text-align: left;
+    text-align: justify;
     line-height: 1.7dvw;
     font-size: 1.2dvw;
     overflow-x: hidden;
