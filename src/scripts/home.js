@@ -33,7 +33,7 @@ function slideDownAnimationNext() {
             if (leftButtonsTop[index] > 90) {
                 leftButtonsTop[index] = -10; cardLink_secret_target = leftButtons[index - 1 < 0 ? leftButtonsCount - 1 : index - 1];
             }
-            if (leftButtonsTop[index] < 3) { element.style.left = leftButtonsTop[index] + "vw";}
+            if (leftButtonsTop[index] < 2) { element.style.left = leftButtonsTop[index] + "vw"; }
             else { element.style.left = 0; }
         });
     }
@@ -41,8 +41,8 @@ function slideDownAnimationNext() {
 }
 function cardLink_Organize() {
     if (cardLink_target) {
-        cardLink.style.left = cardLink_target.getBoundingClientRect().right + "px";
-        cardLink.style.top = cardLink_target.getBoundingClientRect().top + cardLink_target.offsetHeight / 2 - cardLink.offsetHeight / 2 + "px";
+        /*cardLink.style.left = cardLink_target.getBoundingClientRect().right + "px";
+        cardLink.style.top = cardLink_target.getBoundingClientRect().top + cardLink_target.offsetHeight / 2 - cardLink.offsetHeight / 2 + "px";*/
         cardLink.classList.add("active");
         cardLink.href = cardLink_target.href; cardLink.textContent = "www." + cardLink_target.href.slice(8);
         cardLink_target_time = new Date().getTime();
@@ -56,6 +56,7 @@ function cardLink_Organize() {
     }
     else if (new Date().getTime() - cardLink_target_time > 1500) {
         cardLink.classList.remove("active");
+        cardLink.style.left = leftButtons[0].offsetWidth + "px";
         cardLink.style.top = window.innerHeight - cardLink.offsetHeight + "px";
         if (cardLink_secret_target) {
             cardLink.href = cardLink_secret_target.href; cardLink.textContent = "www." + cardLink_secret_target.href.slice(8);
