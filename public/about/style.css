@@ -1,3 +1,8 @@
+:root {
+    --color-bg-main: rgb(15 15 15);
+    --color-white: rgb(241, 241, 241);
+    --color-white-2: rgb(170, 170, 170);
+}
 body {
     margin: 0;
     padding: 0;
@@ -5,11 +10,50 @@ body {
     min-height: 100dvh;
     display: grid;
     position: absolute;
-    background-color: #1f0101;
+    background-color: var(--color-bg-main);
 }
 main {
     margin: 0;
     padding: 0;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     min-height: 85dvh;
+}
+main h1 {
+    text-align: center;
+    color: var(--color-white);
+}
+
+main p {
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 2dvh;
+    text-align: justify;
+    font-size: large;
+    color: var(--color-white-2);
+    line-height: 1.5;
+}
+
+main p:hover {
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        var(--color-white-2),
+        var(--color-white-2),
+        var(--color-white),
+        var(--color-white-2),
+        var(--color-white-2)
+    );
+    background-clip: text;
+    background-size: 300% 1.2em;
+    animation: radialGradient 2s linear infinite;
+}
+
+@keyframes radialGradient {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
