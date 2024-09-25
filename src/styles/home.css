@@ -1,6 +1,6 @@
 :root {
     --bg-tittle-font: 10rem;
-    --divLeft-img-size: 4dvw;
+    --divLeft-img-size: 3dvw;
 }
 body {
     display: grid;
@@ -65,7 +65,7 @@ main {
     overflow: hidden;
 }
 main #divSol {
-    width: calc(var(--divLeft-img-size)*1.5);
+    width: calc(var(--divLeft-img-size) * 1.5);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -102,11 +102,12 @@ main #divSol {
 main #divSol a {
     width: fit-content;
     height: fit-content;
-    transition: all 200ms ease-in-out;
+    transition: all 50ms normal;
     animation: entranceLeft 0.9s ease-out 2s both;
 }
 main #divSol a img {
     width: var(--divLeft-img-size);
+    height: auto;
     object-fit: contain;
     background-color: rgba(255, 255, 255, 0.096);
     padding: calc(var(--divLeft-img-size) * 0.2);
@@ -170,12 +171,13 @@ main #divCardContainer .card .cardTitle {
     font-size: 2em;
     font-weight: bolder;
     background-color: rgba(255, 255, 255, 0.514);
+    text-decoration-color: rgba(255, 255, 255, 0.514);
     color: black;
-    border-radius: 1dvh 1dvw;
 }
 main #divCardContainer .card:hover .cardTitle {
     text-decoration-color: red;
     background-color: rgb(192, 192, 192);
+    border-radius: 0.5rem;
 }
 main #divCardContainer .card .cardPrgf {
     margin: 0;
@@ -356,16 +358,27 @@ main #divSag #divSagMail {
 /**/
 @media only screen and (max-width: 550px) {
     :root {
-        --divLeft-img-size: 10dvw;
+        --divLeft-img-size: 6dvw;
     }
     body {
         font-size: 3vw;
+    }
+    main #divCardContainer {
+        grid-template-columns: 1fr !important;
+        margin-left: 2vw;
+        margin-right: 7vw;
+        gap: 0;
+    }
+    main #divCardContainer .card {
+        width: -webkit-fill-available;
+        margin-top: 1rem;
     }
     #divSag {
         display: none !important;
     }
 }
-@media only screen and (max-width: 750px) {
+
+@media only screen and (min-width: 550px) and (max-width: 900px) {
     main #divCardContainer {
         grid-template-columns: 1fr !important;
         margin-left: 2vw;
@@ -376,6 +389,7 @@ main #divSag #divSagMail {
         width: fit-content;
     }
 }
+
 @media only screen and (max-width: 1000px) {
     :root {
         --bg-tittle-font: 15dvw;
