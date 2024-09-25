@@ -17,7 +17,7 @@ function sideBarFunc(event) {
   sectionElement.querySelectorAll('fieldset > legend').forEach((legend) => {
     let sideList2a = document.createElement("a"); sideList2a.className = "sidebar-tooltip-child"
     sideList2a.textContent = legend.children[0].textContent;
-    sideList2a.href = "public/pages/software/#" + legend.id;
+    sideList2a.href = "public/software/#" + legend.id;
     tooltip.appendChild(sideList2a)
   });
   const sectionRect = document.querySelector("#sidebarSection").getBoundingClientRect();
@@ -52,7 +52,7 @@ sidebarShowButton.addEventListener('click', () => { if (sidebarShowButton.style.
 /*
 let jsonData = {};
 const tableBody = document.getElementById('table-body');
-fetch('/public/pages/software/output.json')
+fetch('/public/software/output.json')
   .then(response => response.json()).then(data => { jsonData = data; console.log("data fetched with keys:", Object.keys(jsonData).length); createTable(jsonData, tableBody); })
   .catch(error => console.error('Error:', error));
 

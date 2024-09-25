@@ -3,7 +3,7 @@ import json
 data = {}
 cc1, cc2 = 0, 0
 
-with open("./public/pages/software_lang/input.txt", "r") as f:
+with open("./public/software_lang/input.txt", "r") as f:
     for line in f:
         line = line.strip()
         if line in ["", " ", "  ", "\n", " \n", " \n "]:
@@ -25,5 +25,5 @@ print(data)
 # Sözlüğü JSON formatına dönüştür
 json_data = json.dumps(data, indent=4)
 
-with open("./public/pages/software_lang/output.json", "w") as f:
+with open("./public/software_lang/output.json", "w") as f:
     json.dump(data, f, indent=4)
