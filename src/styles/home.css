@@ -102,7 +102,7 @@ main #divSol {
 main #divSol a {
     width: fit-content;
     height: fit-content;
-    transition: all 50ms normal;
+    transition: all 50ms ease;
     animation: entranceLeft 0.9s ease-out 2s both;
 }
 main #divSol a img {
