@@ -51,6 +51,7 @@ body {
     opacity: 60%;
     filter: drop-shadow(0 0 1rem red);
     pointer-events: none;
+    -webkit-user-select: none;
     user-select: none;
     overflow: hidden;
 }
@@ -215,9 +216,9 @@ main #divSag #divSagPrgf {
     color: antiquewhite;
     margin-block-start: 0;
     padding-inline: 0.5dvw;
-    text-wrap: wrap;
+    overflow-wrap: wrap;
     overflow-wrap: anywhere;
-    text-align: justify;
+    text-align: left;
     line-height: 1.7dvw;
     font-size: 1.2dvw;
     overflow-x: hidden;
@@ -229,6 +230,7 @@ main #divSag #divSagMail {
     color: white;
     font-size: 1dvw;
     animation: entranceBottom 3s normal forwards;
+    -webkit-user-select: all;
     user-select: all;
     pointer-events: all;
     overflow-wrap: anywhere;

@@ -1,3 +1,8 @@
+:root {
+    --color-bg-main: rgb(15 15 15);
+    --color-white: rgb(241, 241, 241);
+    --color-white-2: rgb(170, 170, 170);
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,7 +28,9 @@ main {
     justify-self: center;
     max-width: 98%;
 }
-
+main > p {
+    font-size: x-large;
+}
 #table-body {
     display: grid;
     border: 2px solid #ff0000;

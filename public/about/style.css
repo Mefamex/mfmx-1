@@ -29,8 +29,8 @@ main p {
     max-width: fit-content;
     margin-inline: auto;
     margin-top: 2dvh;
-    text-align: justify;
-    font-size: large;
+    text-align: left;
+    font-size: xx-large;
     color: var(--color-white-2);
     line-height: 1.5;
 }
@@ -49,6 +49,12 @@ main p:hover {
     background-size: 300% 1.2em;
     animation: radialGradient 2s linear infinite;
 }
+
+.underline{
+    text-decoration: underline;
+}
+
+
 
 @keyframes radialGradient {
     0% {

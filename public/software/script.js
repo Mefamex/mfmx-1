@@ -1,6 +1,6 @@
 
 window.addEventListener('scroll', function () { document.documentElement.style.setProperty('--scroll', window.scrollY + 'px'); });
-document.querySelector("main").style.marginLeft = document.querySelector("#sidebar").offsetWidth;
+
 
 const sidebar = document.getElementById('sidebar');
 const tooltip = document.getElementById('sidebar-tooltip');

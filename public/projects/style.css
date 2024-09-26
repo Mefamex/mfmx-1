@@ -1,3 +1,12 @@
+:root {
+    --color-bg-main: rgb(15 15 15);
+    --color-white: rgb(241, 241, 241);
+    --color-white-2: rgb(170, 170, 170);
+}
+* {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
 body {
     margin: 0;
     padding: 0;
@@ -5,7 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, #303030, #000000);
+    background-image: linear-gradient(to bottom, var(--color-bg-main), #000000);
 }
 main {
     margin: 0;
@@ -14,19 +23,25 @@ main {
     flex-direction: column;
     min-height: 85vh;
 }
-section{
+main > h1 {
+    color: wheat;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 5rem;
 }
-fieldset{
+fieldset {
     display: inline-block;
-    color: aliceblue;
+    color: var(--color-white);
     font-size: 2rem;
 }
-legend{
+legend {
     color: chartreuse;
     border: 2px solid rgb(192, 192, 192);
     padding: 10px;
@@ -34,9 +49,24 @@ legend{
     text-decoration: underline;
     text-decoration-color: antiquewhite;
 }
-li{
+li {
     margin-top: 0.8rem;
 }
-ul{
+ul {
     font-size: 0.7em;
+}
+@media only screen and (max-width: 550px) {
+    body {
+        font-size: 3vw;
+    }
+    main {
+        margin: 0;
+        padding-inline: 1rem;
+    }
+    section {
+        gap: 2rem;
+    }
+    fieldset {
+        font-size: 1.5rem;
+    }
 }

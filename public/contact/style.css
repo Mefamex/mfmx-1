@@ -28,3 +28,6 @@ a{
 li{
     margin-top: 1rem;
 }
+legend{
+    color: chartreuse;  
+}

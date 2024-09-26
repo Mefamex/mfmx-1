@@ -21,12 +21,20 @@ body {
     background-color: var(--color-bg-main);
     min-width: 500px;
 }
+#middle{
+    display: flex;
+    flex-direction: row;
+}
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    margin-inline: 1dvw;
+    margin-inline: 2dvw;
+}
+#main > #title1{
+    text-align: center;
+    font-size: 2rem;
 }
 #table-body {
     display: flex;
@@ -34,14 +42,14 @@ main {
     flex: 1;
 }
 #table-body section h1 {
-    margin-block: auto;
+    margin-top: 8rem;
+    margin-bottom: 0.5rem;
     color: rgb(0, 0, 0);
-    background-color: #294966;
+    background-color:var(--color-white);
     font-size: 2.5rem;
+    font-weight: 900;
     text-align: center;
     padding-block: 1rem;
-    margin-top: 5rem;
-    text-shadow: 0 0 0.3rem rgb(255, 255, 255);
     border: 0.5rem double;
     border-bottom-style: outset;
 }
@@ -111,7 +119,6 @@ main {
     margin: 0;
     padding: 0;
     width: 100%;
-    border: 0.2rem solid white;
     color: var(--color-white-2);
     font-size: 2rem;
     font-weight: 700;
@@ -138,6 +145,7 @@ main {
     padding: 0.8rem 0.8rem 0.8rem 0;
     color: var(--color-white);
     border: 0.2rem solid rgba(255, 255, 255, 0);
+    text-decoration-color: transparent;
 }
 #sidebar #sidebarList a::before {
     content: "-> ";
@@ -170,8 +178,10 @@ main {
     border: 0.1rem solid #fff;
     border-radius: 0.6rem;
     margin-bottom: 0.5rem;
+    text-decoration-color: transparent;
 }
 .sidebar-tooltip-child:hover {
+    text-decoration-color: red;
     background-color: #6d6d6d;
     /*cursor: pointer;*/
 }
@@ -183,13 +193,13 @@ main {
     margin: 0;
     background-color: #3e000052;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 0.3rem;
     border-radius: 0.5rem;
     z-index: 999;
     transition: all 200ms ease-in-out;
     cursor: pointer;
-    font-family: monospace;
+    font-family: serif;
 }
 #sidebarShowButton:hover {
     background-color: rgb(97, 0, 0);
@@ -213,6 +223,9 @@ main {
 .
 ......RESPOINSIVE DESIGN */
 @media screen and (max-width: 768px) {
+    #main > #title1{
+        font-size: 3vw;
+    }
     #sidebarShowButton.active ~ #middle > #sidebar {
         display: flex;
         background-color: #000000;;

@@ -1,74 +1,38 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <base href="/" />
-        <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
-        <title>Games</title>
-        <meta name="keywords" content="mefamex games projects games" />
-        <meta name="description" content="Yapım aşamasında..." />
 
-        <link
-            rel="stylesheet"
-            href="/public/games/queaz/style.css"
-            type="text/css"
-        />
-        <link
-            rel="icon"
-            sizes="64x64"
-            href="./src/assets/images/mfmx/mfmx-64.png"
-        />
-        <link
-            rel="icon"
-            sizes="144x144"
-            href="./src/assets/images/mfmx/mfmx-144.png"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
+    <title>Games</title>
+    <meta name="keywords" content="mefamex games projects games" />
+    <meta name="description" content="Yapım aşamasında..." />
 
-    <body>
-        <header>
-            <h1 style="padding: inherit; font-size: inherit">
-                Programming Languages and Tools
-            </h1>
-        </header>
-        <main id="container">
-            <p style="font-size: 1.2em">
-                Linked-In uygulamasındaki oyun. ileride tamamlanıcaktır
-                <br /><br />
-                <i
-                    >prepared by <b>MEFAMEX</b><br />
-                    30.08.2024 - 01.09.2024 <br />
-                </i>
-            </p>
-            <div id="table-body"></div>
-        </main>
+    <link rel="stylesheet" href="/public/games/queaz/style.css" type="text/css" />
 
-        <script src="/public/games/queaz/script.js"></script>
-        <script src="/public/games/queaz/queaz_game.js"></script>
-        <img
-            src="/src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp"
-            style="
-                position: fixed;
-                height: 80%;
-                top: 10%;
-                justify-self: center;
-                filter: drop-shadow(0 0 0.5vh black)
-                    drop-shadow(0 0 0.1vh rgba(255, 0, 0, 0.384));
-                z-index: -10;
-                opacity: 25%;
-            "
-            alt="mefamex.logo"
-        />
+    <link rel="icon" sizes="64x64" href="./src/assets/images/mfmx/mfmx-64.png" />
+    <link rel="icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png" />
+</head>
 
-        <script
-            src="/src/components/header.js"
-            type="application/javascript"
-        ></script>
-        <script
-            src="/src/components/footer.js"
-            type="application/javascript"
-        ></script>
-    </body>
+<body>
+    <script src="/src/components/importHeaderFooter.js" type="module" crossorigin="use-credentials"></script>
+    <header></header>
+    <h1>Queaz Game</h1>
+
+    <main id="container">
+        <p>LinkedIn uygulamasındaki oyun. ileride tamamlanıcaktır.</p>
+        <br><br>
+        <div id="table-body"></div>
+    </main>
+
+    
+    <script></script>
+
+
+    <footer></footer>
+    <script  src="/public/games/queaz/queaz_game.js" type="text/javascript"></script>
+</body>
+
 </html>

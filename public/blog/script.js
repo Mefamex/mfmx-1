@@ -1,1 +1,0 @@
-console.log("started: public/projects/script.js");
