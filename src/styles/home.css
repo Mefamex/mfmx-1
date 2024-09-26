@@ -373,7 +373,7 @@ main #divSag #divSagMail {
     }
     main #divCardContainer .card {
         width: -webkit-fill-available;
-        margin-top: 1rem;
+        margin-top: auto;
     }
     #divSag {
         display: none !important;
