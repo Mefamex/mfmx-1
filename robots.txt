@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /src/
 
 Crawl-delay: 10
 
