@@ -12,20 +12,252 @@
         content="mefamex, mehmet akif akkoç, özgeçmiş, cv, portfolio, portfolyo özgeçmiş, cv, portfolio, portfolyo" />
     <meta name="description" content="Mefamex CV ||| " />
 
-    <link rel="stylesheet" type="text/css" href="./src/styles/cv_style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./src/styles/cv_style.css" /> -->
 
     <link rel="icon" sizes="64x64" href="./src/assets/images/mfmx/mfmx-64.png" />
     <link rel="icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png" />
     <link rel="icon" sizes="256x256" href="./src/assets/images/mfmx/mfmx-256.png" />
     <link rel="icon" sizes="512x512" href="./src/assets/images/mfmx/mfmx-512.png" />
     <script src="./src/components/importHeaderFooter.js" type="module" crossorigin="use-credentials"></script>
+    <style>
+        :root {
+            --color-bg-main: rgb(15 15 15);
+            --color-white: rgb(241, 241, 241);
+            --color-white-2: rgb(170, 170, 170);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100dvw;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: var(--color-bg-main);
+            color: var(--color-white);
+        }
+
+        main {
+            width: 80vw;
+            min-height: 85dvh;
+            margin: auto;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-wrap: anywhere;
+            font-size: 1.5vw;
+            line-height: 1.5;
+        }
+
+        #page-title {
+            text-align: center;
+            color: var(--color-white);
+            margin: 0px;
+        }
+        #page-description{
+            margin: 0;
+            padding: 1vw 0;
+            width: 100%;
+            font-size: 1em;
+            text-align: left;
+            border-width: 0 0 0.2vw 0;
+            border-style: solid;
+            border-color: var(--color-white-2);
+        }
+
+        #languages {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 1vw 0 1vw 0;
+            font-size: 1.2em;
+            color: var(--color-white);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1vw;
+            border-width: 0 0 0.2vw 0;
+            border-style: solid;
+            border-color: var(--color-white-2);
+            a {
+                color: var(--color-white);
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                border: 0.1vw solid rgba(255, 255, 255, 0.208);
+                padding: 0.2vw 0.5vw;
+                transition: all .2s ease-in-out;
+            }
+
+            a:hover {
+                text-decoration-color: rgba(255, 255, 255, 0.728);
+                border-color: white;
+            }
+        }
+
+        .card {
+            width: 100%;
+            height: fit-content;
+            padding: 0;
+            margin: 3vw 0 0 0;
+
+            h2 {
+                margin: 0 auto 0 0;
+                width: fit-content;
+                padding: 0.25vw 2vw;
+                background-color: var(--color-white-2);
+                text-align: left;
+                font-size: 1.5em;
+                color: var(--color-bg-main);
+            }
+
+            p {
+                margin: 0;
+                padding: 0.5vw 1vw 1vw 1vw;
+                border-radius: 5px;
+                border: 0.1vw solid;
+                text-align: left;
+            }
+
+            p::before {
+                content: " ";
+                margin-right: 2vw;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            main {
+                width: 95vw;
+                font-size: 4vw;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header></header>
 
     <main>
-        <h1>BLOG SAYFASI DÜZENLENECEKTİR...</h1>
+        <h1 id="page-title">Yazılım ve MEFAMEX</h1>
+        <p id="page-description">Bu sayfada yazılım dilleri ile geçmişimi kabaca paylaşıyorum. Özgeçmişim ile ilgilenenler benimle
+            iletişime geçebilirler.</p>
+
+        <div id="languages" role="navigation">
+            <a href="#java_card">Java</a>
+            <a href="#linux_card">Linux</a>
+            <a href="#c-cpp_card">C / C++</a>
+            <a href="#csharp_card">C#</a>
+            <a href="#arduino_card">Arduino - Raspberry Pi</a>
+            <a href="#python_card">Python</a>
+            <a href="#html_card">Html Css JS</a>
+            <a href="#JS-family_card">React Angular Node.js</a>
+            <a href="#flutter_card">Flutter</a>
+        </div>
+
+        <div class="card" id="java_card">
+            <h2>Java</h2>
+            <p>2014 yılından itibaren Java ile Android uygulama geliştirmeye başladım. Android kontrolleri ve
+                özelleştirmeleri, küçük çaplı oyun, algoritmalardan karmaşık
+                araçlara kadar çeşitli projeler yaptım ve yer aldım.</p>
+        </div>
+
+        <div class="card" id="linux_card">
+            <h2>Linux</h2>
+            <p>
+                2016 yılından itibaren Kali Linux ve Ubuntu üzerinde derinlemesine çalışarak siber güvenlik ve sistem
+                yönetimi konularında ilerledim. Özellikle sızma testi araçları ve script geliştirme alanlarında deneyim
+                sahibiyim.
+            </p>
+        </div>
+
+        <div class="card" id="c-cpp_card">
+            <h2>C / C++</h2>
+            <p>
+                2018 yılından itibaren Orta seviyede C/C++ programlama bilgimle çeşitli projelerde yer aldım. Sistem
+                programlama, gömülü sistemler ve performans kritik uygulamalar geliştirme konusunda deneyimim
+                bulunmaktadır.
+            </p>
+        </div>
+
+        <div class="card" id="csharp_card">
+            <h2>C#</h2>
+            <p>
+                2019 yılından itibaren yoğun olarak ilerleme kat ettim. Diğer diller ile komplike uygulamalar
+                geliştirdim. Masaüstü Uygulamaları: C# ile Windows Forms ve WPF teknolojilerini kullanarak çeşitli
+                masaüstü uygulamaları geliştirdim. Veri girişi, raporlama ve otomasyon gibi işlevselliklere sahip
+                uygulamalar tasarladım.
+                Görselleştirme: Veri görselleştirme konusunda çeşitli araçlar (örneğin, Chart.js) kullanarak etkileşimli
+                grafikler ve tablolar oluşturdum. Bu sayede verileri daha anlaşılır hale getirdim.
+                Otomasyon: Repetitive görevleri otomatikleştirmek için C# ve .NET framework'ü kullandım. Bu sayede
+                verimlilik artışı sağladım ve hata oranını düşürdüm.
+                Freelance Projeler: Farklı müşteriler için özel projeler geliştirerek, farklı sektörlerde ve iş
+                gereksinimlerinde C# dilinin kullanımını deneyimledim.
+            </p>
+        </div>
+
+        <div class="card" id="arduino_card">
+            <h2>Arduino ve Raspberry Pi</h2>
+            <p>
+                2019 - 2021 yılları arasında Arduino ve Raspberry Pi ile birçok projede, eğitimlerde ve yarışmalarda rol
+                aldım.
+                Arduino ve Raspberry Pi platformlarını kullanarak IoT projeleri geliştirdim. Sensörlerden veri toplama,
+                veri işleme ve aktarma, uzaktan kontrol gibi konularda uygulamalar geliştirdim. Robotik projelerde
+                Arduino ve Raspberry Pi'yi kontrol ünitesi olarak kullanarak robot kol, çizgi izleyen robot gibi
+                sistemler geliştirdim. 2019 ODTÜ
+            </p>
+        </div>
+
+        <div class="card" id="python_card">
+            <h2>Python</h2>
+            <p>
+                2020 yılından itibaren veri analizi, makine öğrenmesi, derin öğrenme ve yapay zeka alanlarında
+                yoğunlaşarak Python üzerinde birçok proje geliştirdim. Özellikle derin öğrenme modelleri ve doğal dil
+                işleme konusunda uzmanlaşmaktayım.
+                Android ve masaüstü uygulamaları, veritabanı işlemleri ve veri görselleştirme konularında da deneyimim
+                bulunmaktadır.
+            </p>
+        </div>
+
+        <div class="card" id="html_card">
+            <h2>Html, Css, Java Script</h2>
+            <p>
+                2023 yılından itibaren projelerimi HTML, CSS ve Javasciprt ile destekliyorum. Bu dillerinin syntax
+                yapısına hakimim. Standartlara uygun, temiz ve okunaklı kod yazma konusunda titizim. Responsive tasarım
+                prensiplerine uygun olarak, farklı ekran boyutlarına uyum sağlayan web sayfaları geliştirdim. Bootstrap
+                ve benzeri frameworkleri kullanarak hızlı ve etkili tasarımlar oluşturdum. JavaScript ile etkileşimli
+                web sayfaları geliştirdim. DOM manipülasyonu, AJAX, Event handling gibi konularda deneyim sahibiyim.
+                Kendi web sitem dahil olmak üzere bir çok websitesi ve kişisel projelerimde HTML, CSS ve JavaScript
+                kullanarak farklı tasarımlar ve işlevsellikler geliştirdim.
+            </p>
+        </div>
+
+        <div class="card" id="JS-family_card">
+            <h2>React, Angular, Node.js</h2>
+            <p>
+                2024 yılından itibaren React, Angular ve Node.js gibi popüler teknolojilere hızlı bir şekilde
+                hakim oldum. Özellikle backend projelerinde Node.js ile RESTful API'ler geliştirerek, veri tabanları ile
+                etkileşim kurdum. Frontend tarafında ise React ve Angular ile dinamik ve kullanıcı dostu web
+                uygulamaları oluşturdum. Bu teknolojileri kullanarak, hem web hem de mobil projelerde tam stack
+                çözümler üretebilme yetkinliğine sahibim.
+            </p>
+        </div>
+
+        <div class="card" id="flutter_card">
+            <h2>Flutter</h2>
+            <p>
+                2024 yıllarının sonunda popülerliğinden dolayı öğrendiğim bir framework. Java'ya benzerliği nedeniyle
+                sytax'ına ve yapısına çabuk hakim olduğum Flutter ile de Android, iOS, Windows, Mac için native
+                performansta mobil uygulamalar geliştirdim.
+            </p>
+        </div>
+
     </main>
 
     <footer></footer>
