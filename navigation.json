@@ -2,14 +2,14 @@
   "menu": [
     {
       "title": "Home",
-      "href": "/"
+      "href": "/index.html"
     },
     {
       "title": "Pages",
       "submenu": [
         {
           "title": "CV",
-          "href": "/public/cv/"
+          "href": "/cv.html"
         },
         {
           "title": "About",
