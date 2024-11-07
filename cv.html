@@ -4,15 +4,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
     <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
-    <title>BLOG - Mefamex</title>
+    <title>Mefamex Resume (özgeçmiş)</title>
     <meta name="author" content="mefamex" />
     <meta name="robots" content="index, follow" />
+    <meta name="description" content="The resume of Mefamex, showcasing software development skills and experiences." />
     <meta name="keywords"
-        content="mefamex, mehmet akif akkoç, özgeçmiş, cv, portfolio, portfolyo özgeçmiş, cv, portfolio, portfolyo" />
-    <meta name="description" content="Mefamex CV ||| " />
+        content="mefamex, mefamex.com, www.mefamex.com,  Mehmet Akif Akkoç, mehmet akif akkoc, resume, özgeçmiş, cv, software" />
 
-    <!-- <link rel="stylesheet" type="text/css" href="./src/styles/cv_style.css" /> -->
+    <meta property="og:title" content="Mefamex - Resume" />
+    <meta property="og:description"
+        content="The resume of Mefamex, showcasing software development skills and experiences." />
+    <meta property="og:image" content="./src/assets/images/mfmx/mfmx-256.png" />
+    <meta property="og:url" content="https://mefamex.com/public/cv/index.html" />
+    <link rel="stylesheet" type="text/css" href="/public/cv/style.css" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mefamex - Resume" />
+    <meta name="twitter:description"
+        content="The resume of Mefamex, showcasing software development skills and experiences." />
+    <meta name="twitter:image" content="./src/assets/images/mfmx/mfmx-256.png" />
 
     <link rel="icon" sizes="64x64" href="./src/assets/images/mfmx/mfmx-64.png" />
     <link rel="icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png" />
@@ -28,7 +40,7 @@
 
         html {
             scroll-behavior: smooth;
-            }
+        }
 
         body {
             margin: 0;
@@ -61,7 +73,8 @@
             color: var(--color-white);
             margin: 0px;
         }
-        #page-description{
+
+        #page-description {
             margin: 0;
             padding: 1vw 0;
             width: 100%;
@@ -87,6 +100,7 @@
             border-width: 0 0 0.2vw 0;
             border-style: solid;
             border-color: var(--color-white-2);
+
             a {
                 color: var(--color-white);
                 text-decoration: underline;
@@ -146,7 +160,8 @@
 
     <main>
         <h1 id="page-title">Yazılım ve MEFAMEX</h1>
-        <p id="page-description">Bu sayfada yazılım dilleri ile geçmişimi kabaca paylaşıyorum. Özgeçmişim ile ilgilenenler benimle
+        <p id="page-description">Bu sayfada yazılım dilleri ile geçmişimi kabaca paylaşıyorum. Özgeçmişim ile
+            ilgilenenler benimle
             iletişime geçebilirler.</p>
 
         <div id="languages" role="navigation">
