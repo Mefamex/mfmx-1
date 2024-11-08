@@ -2,7 +2,7 @@
   "menu": [
     {
       "title": "Home",
-      "href": "/"
+      "href": "/index.html"
     },
     {
       "title": "Pages",
@@ -36,7 +36,7 @@
           "href": "/public/software/"
         },
         {
-          "title": "Software",
+          "title": "Queaz",
           "href": "/public/games/queaz/"
         }
       ]
