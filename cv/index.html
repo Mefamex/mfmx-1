@@ -32,138 +32,8 @@
     <link rel="icon" sizes="256x256" href="../src/assets/images/mfmx/mfmx-256.png" />
     <link rel="icon" sizes="512x512" href="../src/assets/images/mfmx/mfmx-512.png" />
 
-    <script src="../src/components/importHeaderFooter.js" type="module" crossorigin="use-credentials"></script>
-    <style>
-        :root {
-            --color-bg-main: rgb(15 15 15);
-            --color-white: rgb(241, 241, 241);
-            --color-white-2: rgb(170, 170, 170);
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100dvw;
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            background-color: var(--color-bg-main);
-            color: var(--color-white);
-        }
-
-        main {
-            width: 80vw;
-            min-height: 85dvh;
-            margin: auto;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-wrap: anywhere;
-            font-size: 1.5vw;
-            line-height: 1.5;
-        }
-
-        #page-title {
-            text-align: center;
-            color: var(--color-white);
-            margin: 0px;
-        }
-
-        #page-description {
-            margin: 0;
-            padding: 1vw 0;
-            width: 100%;
-            font-size: 1em;
-            text-align: left;
-            border-width: 0 0 0.2vw 0;
-            border-style: solid;
-            border-color: var(--color-white-2);
-        }
-
-        #languages {
-            width: 100%;
-            text-align: center;
-            margin: 0;
-            padding: 1vw 0 1vw 0;
-            font-size: 1.2em;
-            color: var(--color-white);
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 1vw;
-            border-width: 0 0 0.2vw 0;
-            border-style: solid;
-            border-color: var(--color-white-2);
-
-            a {
-                color: var(--color-white);
-                text-decoration: underline;
-                text-decoration-color: transparent;
-                border: 0.1vw solid rgba(255, 255, 255, 0.208);
-                padding: 0.2vw 0.5vw;
-                transition: all .2s ease-in-out;
-            }
-
-            a:hover {
-                text-decoration-color: rgba(255, 255, 255, 0.728);
-                border-color: white;
-            }
-        }
-
-        .card {
-            width: 100%;
-            height: fit-content;
-            padding: 0;
-            margin: 3vw 0 0 0;
-
-            h2 {
-                margin: 0 auto 0 0;
-                width: fit-content;
-                padding: 0.25vw 2vw;
-                background-color: var(--color-white-2);
-                text-align: left;
-                font-size: 1.5em;
-                color: var(--color-bg-main);
-            }
-
-            p {
-                margin: 0;
-                padding: 0.5vw 1vw 1vw 1vw;
-                border-radius: 5px;
-                border: 0.1vw solid;
-                text-align: left;
-            }
-
-            p::before {
-                content: " ";
-                margin-right: 2vw;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            main {
-                width: 90vw;
-                font-size: 3.5vw;
-            }
-
-            #languages {
-                font-size: 1em;
-                padding-block: 5vw;
-            }
-
-            .card {
-                margin: 5vw 0 0 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="../src/components/importHeaderFooter.js" type="module" crossorigin="use-credentials" async></script>
 </head>
 
 <body>
@@ -171,30 +41,29 @@
 
     <main>
         <h1 id="page-title">Yazılım ve MEFAMEX</h1>
-        <p id="page-description">Bu sayfada yazılım dilleri ile geçmişimi kabaca paylaşıyorum. Özgeçmişim ile
-            ilgilenenler benimle
-            iletişime geçebilirler.</p>
+        <p id="page-description">Bu sayfada yazılım ile alakalı olan faaliyetlerimin geçimişini özetliyorum. Özgeçmişim
+            ile ilgilenenler benimle iletişime geçebilirler.</p>
 
         <div id="languages" role="navigation">
-            <a href="#java_card">Java</a>
-            <a href="#linux_card">Linux</a>
-            <a href="#c-cpp_card">C / C++</a>
-            <a href="#csharp_card">C#</a>
-            <a href="#arduino_card">Arduino - Raspberry Pi</a>
-            <a href="#python_card">Python</a>
-            <a href="#html_card">Html Css JS</a>
-            <a href="#JS-family_card">React Angular Node.js</a>
-            <a href="#flutter_card">Flutter</a>
+            <a href="#java">Java</a>
+            <a href="#linux">Linux</a>
+            <a href="#c-cpp">C / C++</a>
+            <a href="#csharp">C#</a>
+            <a href="#arduino">Arduino - Raspberry Pi</a>
+            <a href="#python">Python</a>
+            <a href="#html">Html Css JS</a>
+            <a href="#JS-family">React Angular Node.js</a>
+            <a href="#flutter">Flutter</a>
         </div>
 
-        <div class="card" id="java_card">
+        <div class="card" id="java">
             <h2>Java</h2>
             <p>2014 yılından itibaren Java ile Android uygulama geliştirmeye başladım. Android kontrolleri ve
                 özelleştirmeleri, küçük çaplı oyun, algoritmalardan karmaşık
                 araçlara kadar çeşitli projeler yaptım ve yer aldım.</p>
         </div>
 
-        <div class="card" id="linux_card">
+        <div class="card" id="linux">
             <h2>Linux</h2>
             <p>
                 2016 yılından itibaren Kali Linux ve Ubuntu üzerinde derinlemesine çalışarak siber güvenlik ve sistem
@@ -203,7 +72,7 @@
             </p>
         </div>
 
-        <div class="card" id="c-cpp_card">
+        <div class="card" id="c-cpp">
             <h2>C / C++</h2>
             <p>
                 2018 yılından itibaren Orta seviyede C/C++ programlama bilgimle çeşitli projelerde yer aldım. Sistem
