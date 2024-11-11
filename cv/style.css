@@ -31,6 +31,11 @@ body {
 }
 
 main {
+    background-image: linear-gradient(
+        rgb(0, 34, 0),
+        rgb(0, 0, 34),
+        rgb(34, 0, 0)
+    );
     width: 99vw;
     min-height: 85dvh;
     margin: auto;
@@ -51,7 +56,7 @@ main {
 
 #page-description {
     margin: 0px;
-    padding: 1vw ;
+    padding: 1vw;
     width: 80%;
     font-size: 0.9em;
     text-align: center;
@@ -79,7 +84,7 @@ main {
 
             .dikey-cizgi {
                 display: flex;
-                margin-inline: auto ;
+                margin-inline: auto;
                 width: 0px;
                 height: auto;
                 border: 0.1vw solid red;
@@ -100,21 +105,20 @@ main {
             height: fit-content;
             padding: 0;
 
-
-            h3{
-                display: inline-block;;
-                padding:0.5vw 2vw 0 2vw;
+            h333 {
+                display: inline-block;
+                padding: 0.5vw 2vw 0 2vw;
                 margin: 0;
                 text-align: left;
                 background-color: rgb(0, 86, 86);
             }
 
             p {
-                font-size: 0.8em;
+                font-size: 1em;
                 margin: 0;
+                padding-right: 3vw;
                 text-align: left;
             }
-
         }
     }
 }
@@ -124,7 +128,7 @@ main {
         width: 90vw;
         font-size: 3.5vw;
     }
-    #history .history-section img{
+    #history .history-section img {
         width: 10vw;
     }
 }
