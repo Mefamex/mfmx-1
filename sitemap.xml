@@ -15,43 +15,37 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mefamex.com/cv.html</loc>
+    <loc>https://mefamex.com/cv/</loc>
     <lastmod>2024-11-08T03:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mefamex.com/public/about/</loc>
+    <loc>https://mefamex.com/about/</loc>
     <lastmod>2024-11-08T03:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mefamex.com/public/blog/</loc>
+    <loc>https://mefamex.com/blog/</loc>
     <lastmod>2024-11-08T03:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mefamex.com/public/contact/</loc>
+    <loc>https://mefamex.com/contact/</loc>
     <lastmod>2024-11-08T03:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mefamex.com/public/games/queaz/</loc>
+    <loc>https://mefamex.com/projects/</loc>
     <lastmod>2024-11-08T03:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mefamex.com/public/projects/</loc>
-    <lastmod>2024-11-08T03:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://mefamex.com/public/software/</loc>
+    <loc>https://mefamex.com/software/</loc>
     <lastmod>2024-11-08T03:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
