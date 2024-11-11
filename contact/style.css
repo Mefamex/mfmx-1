@@ -1,0 +1,33 @@
+:root {
+    --color-bg-main: rgb(15 15 15);
+    --color-white: rgb(241, 241, 241);
+    --color-white-2: rgb(170, 170, 170);
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    min-height: 100dvh;
+    display: grid;
+    position: absolute;
+    background-color: var(--color-bg-main);
+}
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 85dvh;
+    color: var(--color-white);
+    font-size: x-large;
+}
+a{
+    color: aqua;
+}
+li{
+    margin-top: 1rem;
+}
+legend{
+    color: chartreuse;  
+}

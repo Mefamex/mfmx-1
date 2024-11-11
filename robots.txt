@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /src
+Disallow: /py
 
 Crawl-delay: 10
 

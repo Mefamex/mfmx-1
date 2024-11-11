@@ -1,0 +1,254 @@
+:root {
+    --color-bg-main: rgb(15 15 15);
+    --color-white: rgb(241, 241, 241);
+    --color-white-2: rgb(170, 170, 170);
+    --bg-h2: #e67e22;
+    --header-height: 5rem;
+    --scroll: 0px;
+}
+* {
+    scroll-behavior: smooth;
+    color: var(--color-white);
+    transition: all 100ms ease-in-out;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bg-main);
+    min-width: 500px;
+}
+#middle{
+    display: flex;
+    flex-direction: row;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-inline: 2dvw;
+}
+#main > #title1{
+    text-align: center;
+    font-size: 2rem;
+}
+#table-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#table-body section h1 {
+    margin-top: 8rem;
+    margin-bottom: 0.5rem;
+    color: rgb(0, 0, 0);
+    background-color:var(--color-white);
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    padding-block: 1rem;
+    border: 0.5rem double;
+    border-bottom-style: outset;
+}
+#table-body section h1:hover {
+    border-bottom-style: inset;
+    border-color: white;
+}
+#table-body section fieldset legend h2 {
+    color: chartreuse;
+    font-size: 2rem;
+}
+#table-body section fieldset ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: azure;
+}
+#table-body section fieldset ul li {
+    display: flex;
+    gap: 1rem;
+}
+#table-body section fieldset ul li h3 {
+    margin-block: auto;
+}
+#table-body section fieldset ul li h3::after {
+    content: ":";
+}
+/* MAIN OVER
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.....SIDEBAR....*/
+.active{
+    text-decoration-color: red;
+}
+#sidebar {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #00000082;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#sidebarSection {
+    top: max(3px, calc(var(--header-height) - var(--scroll)));
+    padding-top: min(5rem, calc(var(--scroll) - var(--header-height)));
+    display: flex;
+    width: auto;
+    position: sticky;
+    flex-direction: column;
+    width: max-content;
+}
+#sidebar > #sidebarSection > #sidebarTitle {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: var(--color-white-2);
+    font-size: 2rem;
+    font-weight: 700;
+}
+#sidebar > #sidebarSection > #sidebarTitle:hover {
+    text-decoration-color: red;
+    color: rgb(255, 255, 255);
+}
+#sidebar #sidebarList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 0 1rem;
+    overflow-y: auto;
+    overflow-x: visible;
+    max-height: 80dvh;
+    border-left: 0.1rem solid white;
+    width: auto;
+}
+#sidebar #sidebarList a {
+    display: flex;
+    width: -webkit-fill-available;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    padding: 0.8rem 0.8rem 0.8rem 0;
+    color: var(--color-white);
+    border: 0.2rem solid rgba(255, 255, 255, 0);
+    text-decoration-color: transparent;
+}
+#sidebar #sidebarList a::before {
+    content: "-> ";
+}
+#sidebar #sidebarList a:hover {
+    background-color: #294966;
+    cursor: pointer;
+    text-decoration-color: red;
+    color: rgb(255, 255, 255);
+    border-color: white;
+    border-radius: 0 1rem 1rem 0;
+}
+#sidebar-tooltip {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    top: 0;
+    left: 100%;
+    width: auto;
+    max-width: 30rem;
+    height: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar-tooltip-child {
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid #fff;
+    border-radius: 0.6rem;
+    margin-bottom: 0.5rem;
+    text-decoration-color: transparent;
+}
+.sidebar-tooltip-child:hover {
+    text-decoration-color: red;
+    background-color: #6d6d6d;
+    /*cursor: pointer;*/
+}
+#sidebarShowButton {
+    display: none;
+    position: fixed;
+    top: 0.5rem;
+    left: 0;
+    margin: 0;
+    background-color: #3e000052;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    z-index: 999;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    font-family: serif;
+}
+#sidebarShowButton:hover {
+    background-color: rgb(97, 0, 0);
+}
+#sidebarShowButton.active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+/* SIDEBAR OVER
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+......RESPOINSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    #main > #title1{
+        font-size: 3vw;
+    }
+    #sidebarShowButton.active ~ #middle > #sidebar {
+        display: flex;
+        background-color: #000000;;
+    }
+    #sidebarShowButton {
+        display: flex;
+    }
+    #sidebar {
+        display: none;
+        position: fixed;
+        font-size: 0.7rem;
+    }
+    #sidebarSection {
+        top: 3rem;
+        padding-top: 0;
+    }
+    .sidebar-tooltip-child{
+        font-size: 0.7rem;
+    }
+    #table-body section h1 {
+        font-size: 2rem;
+    }
+    #table-body section fieldset legend h2 {
+        font-size: 1.5rem;
+    }
+}
