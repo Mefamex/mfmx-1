@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- href ve src ile alandaki dosyaları çekerken alt dizinlerin de başlangıç konumunu root olarak ayarlar -->
     <title>Mefamex Resume (özgeçmiş)</title>
     <meta name="author" content="mefamex" />
     <meta name="robots" content="index, follow" />
@@ -17,7 +16,6 @@
         content="The resume of Mefamex, showcasing software development skills and experiences." />
     <meta property="og:image" content="../src/assets/images/mfmx/mfmx-256.png" />
     <meta property="og:url" content="https://mefamex.com/public/cv/index.html" />
-    <!-- <link rel="stylesheet" type="text/css" href="/public/cv/style.css" /> -->
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mefamex - Resume" />
@@ -43,116 +41,183 @@
         <h1 id="page-title">Yazılım ve MEFAMEX</h1>
         <p id="page-description">Bu sayfada yazılım ile alakalı olan faaliyetlerimin geçimişini özetliyorum. Özgeçmişim
             ile ilgilenenler benimle iletişime geçebilirler.</p>
+        <div class="cizgi"></div>
 
-        <div id="languages" role="navigation">
-            <a href="#java">Java</a>
-            <a href="#linux">Linux</a>
-            <a href="#c-cpp">C / C++</a>
-            <a href="#csharp">C#</a>
-            <a href="#arduino">Arduino - Raspberry Pi</a>
-            <a href="#python">Python</a>
-            <a href="#html">Html Css JS</a>
-            <a href="#JS-family">React Angular Node.js</a>
-            <a href="#flutter">Flutter</a>
+
+        <div id="history">
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/java.webp" alt="java.webp" loading="lazy">
+                <div class="card" id="java">
+                    <p>Java ile 2014 yılından itibaren Android uygulama geliştirmeye başladım. Android kontrolleri ve
+                        özelleştirmeleri, küçük çaplı oyun, algoritmalardan karmaşık
+                        araçlara kadar çeşitli projeler yaptım ve yer aldım.</p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/linux.webp" alt="linux.webp" loading="lazy">
+                <div class="card" id="linux">
+                    <p>
+                        Linux ile 2016 yılından itibaren Kali ve Ubuntu üzerinde derinlemesine çalışarak siber güvenlik
+                        ve sistem
+                        yönetimi konularında ilerledim. Özellikle sızma testi araçları ve script geliştirme alanlarında
+                        deneyim
+                        sahibiyim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/c.webp" alt="c.webp" loading="lazy">
+                <div class="card" id="c-cpp">
+                    <p>
+                        C ile 2018 yılından itibaren Orta seviyede C/C++ programlama bilgimle çeşitli projelerde yer
+                        aldım. Sistem
+                        programlama, gömülü sistemler ve performans kritik uygulamalar geliştirme konusunda deneyimim
+                        bulunmaktadır.
+                    </p>
+                </div>
+            </div>
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/cpp.webp" alt="cpp.webp" loading="lazy">
+                <div class="card" id="java">
+                    <p>C++/Cpp dilini C dili ile beraber ilerlettim.</p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/csharp.webp" alt="csharp.webp" loading="lazy">
+                <div class="card" id="csharp">
+                    <p>
+                        C# / C-sharp ile 2019 yılından itibaren yoğun olarak ilerleme kat ettim. Diğer diller ile
+                        komplike uygulamalar
+                        geliştirdim. Masaüstü Uygulamaları: Windows Forms ve WPF teknolojilerini kullanarak çeşitli
+                        masaüstü uygulamaları geliştirdim. Veri girişi, raporlama ve otomasyon gibi işlevselliklere
+                        sahip
+                        uygulamalar tasarladım.
+                        Görselleştirme: Veri görselleştirme konusunda çeşitli araçlar kullanarak etkileşimli
+                        grafikler ve tablolar oluşturdum. Bu sayede verileri daha anlaşılır hale getirdim.
+                        Freelance Projeler: Farklı müşteriler için özel projeler geliştirerek, farklı sektörlerde ve iş
+                        gereksinimlerinde C# dilinin kullanımını deneyimledim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/arduino.webp" alt="arduino.webp" loading="lazy">
+                <div class="card" id="arduino">
+                    <p>
+                        Arduino ile 2019 - 2021 yılları arasında birçok projede, eğitimlerde ve yarışmalarda rol
+                        aldım.
+                        Sensörlerden veri toplama, veri işleme ve aktarma, uzaktan kontrol gibi konularda uygulamalar
+                        geliştirdim. Robotik projelerde Arduino'yu kontrol ünitesi olarak kullanarak robot kol, çizgi
+                        izleyen robot gibi sistemler geliştirdim.
+                    </p>
+                </div>
+
+            </div>
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/raspberry.webp" alt="raspberry.webp" loading="lazy">
+                <div class="card" id="arduino">
+                    <p>
+                        Raspberry Pi ile 2019 - 2021 yılları arasında birçok projede, eğitimlerde ve yarışmalarda rol
+                        aldım. Sensörlerden veri toplama, veri işleme ve aktarma, uzaktan kontrol gibi konularda
+                        uygulamalar geliştirdim. Robotik projelerde Raspberry Pi'yi kontrol ünitesi olarak kullanarak
+                        robot kol, çizgi izleyen robot gibi sistemler geliştirdim.
+                    </p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/python.webp" alt="python.webp" loading="lazy">
+
+                <div class="card" id="python">
+                    <p>
+                        2020 yılından itibaren veri analizi, makine öğrenmesi, derin öğrenme ve yapay zeka alanlarında
+                        yoğunlaşarak Python üzerinde birçok proje geliştirdim. Özellikle derin öğrenme modelleri ve
+                        doğal dil
+                        işleme konusunda uzmanlaşmaktayım.
+                        Android ve masaüstü uygulamaları, veritabanı işlemleri ve veri görselleştirme konularında da
+                        deneyimim
+                        bulunmaktadır.
+                    </p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/html.webp" alt="html.webp" loading="lazy">
+                <div class="card" id="java">
+                    <p> HTML, CSS ve Javasciprt ile 2023 yılından itibaren projelerimi destekliyorum. Html ve Css'i
+                        Bootstrap'i olabildiğince az kullanarak kendi özgün kodlarımı yazma konusunda ısrarcı olmamdan
+                        mütevellit sytanx'ına ve frontend özelleştirmelerine hâkimim. Standartlara uygun, temiz ve
+                        okunaklı kod yazma konusunda titizim. Responsive tasarım
+                        prensiplerine uygun olarak, farklı ekran boyutlarına uyum sağlayan web sayfaları geliştirdim.
+                        Bootstrap
+                        ve benzeri frameworkleri kullanarak hızlı ve etkili tasarımlar oluşturdum. JavaScript ile
+                        etkileşimli
+                        web sayfaları geliştirdim. DOM manipülasyonu, AJAX, Event handling gibi konularda deneyim
+                        sahibiyim.
+                        Kendi web sitem dahil olmak üzere bir çok websitesi ve kişisel projelerimde HTML, CSS ve
+                        JavaScript
+                        kullanarak farklı tasarımlar ve işlevsellikler geliştirdim.</p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/react.webp" alt="react.webp" loading="lazy">
+                <div class="card" id="java">
+                    <p>2024 yılından itibaren React, Angular ve Node.js gibi popüler teknolojilere hızlı bir şekilde
+                        hakim oldum. Özellikle backend projelerinde Node.js ile RESTful API'ler geliştirerek, veri tabanları ile
+                        etkileşim kurdum. Frontend tarafında ise React ve Angular ile dinamik ve kullanıcı dostu web
+                        uygulamaları oluşturdum. Bu teknolojileri kullanarak, hem web hem de mobil projelerde tam stack
+                        çözümler üretebilme yetkinliğine sahibim.</p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/angular.webp" alt="angular.webp" loading="lazy">
+                <div class="card" id="java">
+                    <p>2024 yılından itibaren React, Angular ve Node.js gibi popüler teknolojilere hızlı bir şekilde
+                        hakim oldum. Özellikle backend projelerinde Node.js ile RESTful API'ler geliştirerek, veri tabanları ile
+                        etkileşim kurdum. Frontend tarafında ise React ve Angular ile dinamik ve kullanıcı dostu web
+                        uygulamaları oluşturdum. Bu teknolojileri kullanarak, hem web hem de mobil projelerde tam stack
+                        çözümler üretebilme yetkinliğine sahibim.</p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/node.webp" alt="node.webp" loading="lazy">
+                <div class="card" id="java">
+                    <p>2024 yılından itibaren React, Angular ve Node.js gibi popüler teknolojilere hızlı bir şekilde
+                        hakim oldum. Özellikle backend projelerinde Node.js ile RESTful API'ler geliştirerek, veri tabanları ile
+                        etkileşim kurdum. Frontend tarafında ise React ve Angular ile dinamik ve kullanıcı dostu web
+                        uygulamaları oluşturdum. Bu teknolojileri kullanarak, hem web hem de mobil projelerde tam stack
+                        çözümler üretebilme yetkinliğine sahibim.</p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <div class="time-trigger"> <span class="dikey-cizgi"></span> </div>
+                <img src="../src/assets/images/language_img/flutter.webp" alt="flutter.webp" loading="lazy">
+                <div class="card" id="java">
+                    <p>2024 yıllarının sonunda popülerliğinden dolayı öğrendiğim bir framework. Java'ya benzerliği nedeniyle
+                        sytax'ına ve yapısına çabuk hakim olduğum Flutter ile de Android, iOS, Windows, Mac için native
+                        performansta mobil uygulamalar geliştirdim.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="card" id="java">
-            <h2>Java</h2>
-            <p>2014 yılından itibaren Java ile Android uygulama geliştirmeye başladım. Android kontrolleri ve
-                özelleştirmeleri, küçük çaplı oyun, algoritmalardan karmaşık
-                araçlara kadar çeşitli projeler yaptım ve yer aldım.</p>
-        </div>
-
-        <div class="card" id="linux">
-            <h2>Linux</h2>
-            <p>
-                2016 yılından itibaren Kali Linux ve Ubuntu üzerinde derinlemesine çalışarak siber güvenlik ve sistem
-                yönetimi konularında ilerledim. Özellikle sızma testi araçları ve script geliştirme alanlarında deneyim
-                sahibiyim.
-            </p>
-        </div>
-
-        <div class="card" id="c-cpp">
-            <h2>C / C++</h2>
-            <p>
-                2018 yılından itibaren Orta seviyede C/C++ programlama bilgimle çeşitli projelerde yer aldım. Sistem
-                programlama, gömülü sistemler ve performans kritik uygulamalar geliştirme konusunda deneyimim
-                bulunmaktadır.
-            </p>
-        </div>
-
-        <div class="card" id="csharp_card">
-            <h2>C#</h2>
-            <p>
-                2019 yılından itibaren yoğun olarak ilerleme kat ettim. Diğer diller ile komplike uygulamalar
-                geliştirdim. Masaüstü Uygulamaları: C# ile Windows Forms ve WPF teknolojilerini kullanarak çeşitli
-                masaüstü uygulamaları geliştirdim. Veri girişi, raporlama ve otomasyon gibi işlevselliklere sahip
-                uygulamalar tasarladım.
-                Görselleştirme: Veri görselleştirme konusunda çeşitli araçlar (örneğin, Chart.js) kullanarak etkileşimli
-                grafikler ve tablolar oluşturdum. Bu sayede verileri daha anlaşılır hale getirdim.
-                Otomasyon: Repetitive görevleri otomatikleştirmek için C# ve .NET framework'ü kullandım. Bu sayede
-                verimlilik artışı sağladım ve hata oranını düşürdüm.
-                Freelance Projeler: Farklı müşteriler için özel projeler geliştirerek, farklı sektörlerde ve iş
-                gereksinimlerinde C# dilinin kullanımını deneyimledim.
-            </p>
-        </div>
-
-        <div class="card" id="arduino_card">
-            <h2>Arduino ve Raspberry Pi</h2>
-            <p>
-                2019 - 2021 yılları arasında Arduino ve Raspberry Pi ile birçok projede, eğitimlerde ve yarışmalarda rol
-                aldım.
-                Arduino ve Raspberry Pi platformlarını kullanarak IoT projeleri geliştirdim. Sensörlerden veri toplama,
-                veri işleme ve aktarma, uzaktan kontrol gibi konularda uygulamalar geliştirdim. Robotik projelerde
-                Arduino ve Raspberry Pi'yi kontrol ünitesi olarak kullanarak robot kol, çizgi izleyen robot gibi
-                sistemler geliştirdim. 2019 ODTÜ
-            </p>
-        </div>
-
-        <div class="card" id="python_card">
-            <h2>Python</h2>
-            <p>
-                2020 yılından itibaren veri analizi, makine öğrenmesi, derin öğrenme ve yapay zeka alanlarında
-                yoğunlaşarak Python üzerinde birçok proje geliştirdim. Özellikle derin öğrenme modelleri ve doğal dil
-                işleme konusunda uzmanlaşmaktayım.
-                Android ve masaüstü uygulamaları, veritabanı işlemleri ve veri görselleştirme konularında da deneyimim
-                bulunmaktadır.
-            </p>
-        </div>
-
-        <div class="card" id="html_card">
-            <h2>Html, Css, Java Script</h2>
-            <p>
-                2023 yılından itibaren projelerimi HTML, CSS ve Javasciprt ile destekliyorum. Bu dillerinin syntax
-                yapısına hakimim. Standartlara uygun, temiz ve okunaklı kod yazma konusunda titizim. Responsive tasarım
-                prensiplerine uygun olarak, farklı ekran boyutlarına uyum sağlayan web sayfaları geliştirdim. Bootstrap
-                ve benzeri frameworkleri kullanarak hızlı ve etkili tasarımlar oluşturdum. JavaScript ile etkileşimli
-                web sayfaları geliştirdim. DOM manipülasyonu, AJAX, Event handling gibi konularda deneyim sahibiyim.
-                Kendi web sitem dahil olmak üzere bir çok websitesi ve kişisel projelerimde HTML, CSS ve JavaScript
-                kullanarak farklı tasarımlar ve işlevsellikler geliştirdim.
-            </p>
-        </div>
-
-        <div class="card" id="JS-family_card">
-            <h2>React, Angular, Node.js</h2>
-            <p>
-                2024 yılından itibaren React, Angular ve Node.js gibi popüler teknolojilere hızlı bir şekilde
-                hakim oldum. Özellikle backend projelerinde Node.js ile RESTful API'ler geliştirerek, veri tabanları ile
-                etkileşim kurdum. Frontend tarafında ise React ve Angular ile dinamik ve kullanıcı dostu web
-                uygulamaları oluşturdum. Bu teknolojileri kullanarak, hem web hem de mobil projelerde tam stack
-                çözümler üretebilme yetkinliğine sahibim.
-            </p>
-        </div>
-
-        <div class="card" id="flutter_card">
-            <h2>Flutter</h2>
-            <p>
-                2024 yıllarının sonunda popülerliğinden dolayı öğrendiğim bir framework. Java'ya benzerliği nedeniyle
-                sytax'ına ve yapısına çabuk hakim olduğum Flutter ile de Android, iOS, Windows, Mac için native
-                performansta mobil uygulamalar geliştirdim.
-            </p>
-        </div>
-
     </main>
 
     <footer></footer>
