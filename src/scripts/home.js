@@ -1,3 +1,4 @@
+/***
 document.querySelectorAll('#divSol a').forEach((element, index) => {
     element.style.animationDelay = (2 + index * 0.3) + "s"; // adjust the delay value as needed
 });
@@ -41,8 +42,8 @@ function slideDownAnimationNext() {
 }
 function cardLink_Organize() {
     if (cardLink_target) {
-        /*cardLink.style.left = cardLink_target.getBoundingClientRect().right + "px";
-        cardLink.style.top = cardLink_target.getBoundingClientRect().top + cardLink_target.offsetHeight / 2 - cardLink.offsetHeight / 2 + "px";*/
+        //cardLink.style.left = cardLink_target.getBoundingClientRect().right + "px";
+        //cardLink.style.top = cardLink_target.getBoundingClientRect().top + cardLink_target.offsetHeight / 2 - cardLink.offsetHeight / 2 + "px";
         cardLink.classList.add("active");
         cardLink.href = cardLink_target.href; cardLink.textContent = "www." + cardLink_target.href.slice(8);
         cardLink_target_time = new Date().getTime();
@@ -65,3 +66,5 @@ function cardLink_Organize() {
 }
 setTimeout(slideDownAnimation, 5000);
 
+
+*/
