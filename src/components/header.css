@@ -53,6 +53,7 @@ header {
     margin-left: 0.5vw;
     cursor: pointer;
     transition: all 500ms normal;
+    -webkit-user-select: none;
     user-select: none;
     background-color: #0e101348;
     border-radius: 2rem;
@@ -113,6 +114,7 @@ header {
     align-self: center;
     filter: drop-shadow(0 0 0.2rem white);
     cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
 }
 #navBarHideButton.unselected {
