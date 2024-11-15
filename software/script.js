@@ -17,7 +17,7 @@ function sideBarFunc(event) {
   sectionElement.querySelectorAll('fieldset > legend').forEach((legend) => {
     let sideList2a = document.createElement("a"); sideList2a.className = "sidebar-tooltip-child"
     sideList2a.textContent = legend.children[0].textContent;
-    sideList2a.href = "public/software/#" + legend.id;
+    sideList2a.href = "#" + legend.id;
     tooltip.appendChild(sideList2a)
   });
   const sectionRect = document.querySelector("#sidebarSection").getBoundingClientRect();
@@ -41,8 +41,6 @@ function checkToolTipDisplay(event, kontrol = false) {
     lastToolTipSeenControlCount = 1;
   }
 }
-
-
 
 document.getElementById('sidebarList').addEventListener('mouseover', (event) => { if (event.target.tagName.toLowerCase() === 'a') { sideBarFunc(event); } });
 tooltip.addEventListener('mouseover', () => { lastToolTipSeen = new Date; });
