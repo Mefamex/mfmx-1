@@ -1,0 +1,145 @@
+D:\SOFTWARE\WEB\Websites\mfmx-1
+|      about
+|      |      index.html
+|      |      style.css
+|      blog
+|      |      index.html
+|      |      style.css
+|      contact
+|      |      index.html
+|      |      style.css
+|      cv
+|      |      index.html
+|      |      style.css
+|      games
+|      |      queaz
+|      |      |      index.html
+|      |      |      queaz_game.js
+|      |      |      style.css
+|      projects
+|      |      index.html
+|      |      style.css
+|      py
+|      |      FileLister.js
+|      |      FileLister.py
+|      |      gnpToWebp.py
+|      |      sitemapCreator.py
+|      software
+|      |      cevir.py
+|      |      index.html
+|      |      input.txt
+|      |      output.json
+|      |      script.js
+|      |      style.css
+|      |      tempCodeRunnerFile.py
+|      |      Yazilim_Ayrintili.txt
+|      src
+|      |      assets
+|      |      |      icons
+|      |      |      |      =.ico
+|      |      |      |      cloudflare.png
+|      |      |      |      facebook_icon.png
+|      |      |      |      github_icon.png
+|      |      |      |      instagram_icon.png
+|      |      |      |      linkedin_icon.png
+|      |      |      |      ssl.png
+|      |      |      |      x.ico
+|      |      |      |      X.svg
+|      |      |      |      x_twitter_icon.png
+|      |      |      |      youtube_icon.png
+|      |      |      images
+|      |      |      |      background
+|      |      |      |      |      home_bg.png
+|      |      |      |      |      home_bg.webp
+|      |      |      |      language_img
+|      |      |      |      |      asil
+|      |      |      |      |      |      angular.png
+|      |      |      |      |      |      arduino.png
+|      |      |      |      |      |      c.png
+|      |      |      |      |      |      cpp.jpg
+|      |      |      |      |      |      csharp.png
+|      |      |      |      |      |      flutter.jpg
+|      |      |      |      |      |      html.jpg
+|      |      |      |      |      |      java.png
+|      |      |      |      |      |      linux.jpg
+|      |      |      |      |      |      node.png
+|      |      |      |      |      |      python.png
+|      |      |      |      |      |      raspberry.jpg
+|      |      |      |      |      |      react.png
+|      |      |      |      |      |      windows.png
+|      |      |      |      |      png
+|      |      |      |      |      |      angular.png
+|      |      |      |      |      |      arduino.png
+|      |      |      |      |      |      c.png
+|      |      |      |      |      |      cpp.png
+|      |      |      |      |      |      cs.png
+|      |      |      |      |      |      flutter.png
+|      |      |      |      |      |      html.png
+|      |      |      |      |      |      java.png
+|      |      |      |      |      |      linux.png
+|      |      |      |      |      |      node.png
+|      |      |      |      |      |      python.png
+|      |      |      |      |      |      raspberry.png
+|      |      |      |      |      |      react.png
+|      |      |      |      |      |      windows.png
+|      |      |      |      |      angular.webp
+|      |      |      |      |      arduino.webp
+|      |      |      |      |      c.webp
+|      |      |      |      |      cpp.webp
+|      |      |      |      |      csharp.webp
+|      |      |      |      |      flutter.webp
+|      |      |      |      |      html.webp
+|      |      |      |      |      java.webp
+|      |      |      |      |      linux.webp
+|      |      |      |      |      node.webp
+|      |      |      |      |      python.webp
+|      |      |      |      |      raspberry.webp
+|      |      |      |      |      react.webp
+|      |      |      |      |      windows.webp
+|      |      |      |      mfmx
+|      |      |      |      |      mfmx-1000.png
+|      |      |      |      |      mfmx-144.png
+|      |      |      |      |      mfmx-1500-2500.png
+|      |      |      |      |      mfmx-16.png
+|      |      |      |      |      mfmx-2500.png
+|      |      |      |      |      mfmx-256.png
+|      |      |      |      |      mfmx-300-500.png
+|      |      |      |      |      mfmx-3000.png
+|      |      |      |      |      mfmx-32.png
+|      |      |      |      |      mfmx-450-750.png
+|      |      |      |      |      mfmx-512.png
+|      |      |      |      |      mfmx-64.png
+|      |      |      |      |      mfmx-90-150.png
+|      |      |      |      mfmx_icon
+|      |      |      |      |      mefamex_logo.png
+|      |      |      |      |      mefamex_logo_bg.png
+|      |      |      |      |      mefamex_logo_bgb.png
+|      |      |      |      |      mefamex_logo_sb.png
+|      |      |      |      mfmx_symbol
+|      |      |      |      |      mefamex_logo.png
+|      |      |      |      |      mefamex_logo_bg.png
+|      |      |      |      |      mefamex_logo_bgb.png
+|      |      |      |      |      mefamex_logo_bgb.webp
+|      |      |      |      |      mefamex_logo_sb.png
+|      |      |      |      4_6041858661402282267.jpg
+|      |      components
+|      |      |      footer.css
+|      |      |      header.css
+|      |      |      importHeaderFooter.js
+|      |      |      mefamex_logo_bgb.png
+|      |      data
+|      |      |      navigation.json
+|      |      scripts
+|      |      |      canvaSocMed.js
+|      |      |      circleMouse.js
+|      |      |      contactme.js
+|      |      |      home.js
+|      |      |      mouse_tail.js
+|      |      styles
+|      |      |      home.css
+|      DirExVis_2024-09-14 07.56.20.txt
+|      index.html
+|      navigation.json
+|      package.json
+|      robots.txt
+|      sitemap.xml
