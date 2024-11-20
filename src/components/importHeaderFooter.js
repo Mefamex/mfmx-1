@@ -55,7 +55,7 @@ function CreateHeader() {
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"; divLeft.href = "htps://mefamex.com"
-    divLeft.addEventListener('click', () => { window.location.href = "htps://mefamex.com" });
+    divLeft.addEventListener('click', () => { window.location.href = "https://mefamex.com" });
     divLeft.onmouseover = () => { divLeft.classList.add("headerDivLeftHover") }
     divLeft.onmouseout = function () { divLeft.classList.remove("headerDivLeftHover") };
 
