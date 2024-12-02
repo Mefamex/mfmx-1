@@ -289,5 +289,6 @@ main {
     .card {
         padding-block: 5vw;
         font-size: 0.8rem;
+        padding-inline: 3vw;
     }
 }
