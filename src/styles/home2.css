@@ -31,6 +31,7 @@ header {
     height: fit-content;
     align-items: center;
     margin: 0 0 1vw 0;
+    animation: entranceUp 1s normal forwards;
 }
 header h1 {
     margin: 1vw 0 0 0;
@@ -60,6 +61,7 @@ main {
     bottom: 0;
     position: sticky;
     display: flex;
+    margin:  0 0 0 5vw;
     flex-direction: column;
     height: auto;
     width: 20vw;
@@ -68,6 +70,7 @@ main {
     justify-self: start;
     align-items: center;
     justify-items: center;
+    animation: entranceLeft 1s normal forwards;
 }
 #mefamex_logo {
     width: 100%;
@@ -279,6 +282,8 @@ main {
         width: 50vw;
         top: 5%;
         min-height: 70vh;
+        margin: 0;
+        padding: 0;
     }
     #main_cards {
         flex-direction: column;
@@ -288,7 +293,7 @@ main {
     }
     .card {
         padding-block: 5vw;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         padding-inline: 3vw;
     }
 }
