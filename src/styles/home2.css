@@ -117,7 +117,11 @@ main {
     font-size: 1.2rem;
     border: 0.2rem solid rgba(255, 255, 255, 0.39);
     border-radius: calc(2vw + 2vh);
-    background: linear-gradient(to top, #005c9559 50%, rgba(0, 0, 32, 0.276) 75%);
+    background: linear-gradient(
+        to top,
+        #005c9559 50%,
+        rgba(0, 0, 32, 0.276) 75%
+    );
     background-repeat: no-repeat;
     background-size: 100% 250%;
     background-position: 0% 0%;
@@ -264,16 +268,16 @@ main {
 /**/
 
 @media only screen and (max-width: 600px) {
-    header{
+    header {
         position: sticky;
-        top:0;
+        top: 0;
     }
-    main{
+    main {
         flex-direction: column;
     }
     #left_card {
         width: 50vw;
-        top:5%;
+        top: 5%;
         min-height: 70vh;
     }
     #main_cards {
@@ -282,7 +286,8 @@ main {
         padding-right: 0;
         gap: 10vw;
     }
-    .card{
+    .card {
         padding-block: 5vw;
-        }
+        font-size: 1rem;
+    }
 }
