@@ -141,7 +141,7 @@ main {
 .card p {
     margin: 0;
     align-self: center;
-    text-align: start;
+    text-align: justify;
 }
 /**/
 /**/
