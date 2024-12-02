@@ -37,7 +37,7 @@ header h1 {
     font-size: 10vw;
     font-family: "Gill Sans MT";
     line-height: 0.8;
-    filter: drop-shadow(0 0 0.5vw rgba(100, 100, 200, 0.5));
+    filter: drop-shadow(0 0 0.5vw rgba(255, 0, 0, 0.605));
 }
 header p {
     margin: 0;
@@ -117,7 +117,7 @@ main {
     font-size: 1.2rem;
     border: 0.2rem solid rgba(255, 255, 255, 0.39);
     border-radius: calc(2vw + 2vh);
-    background: linear-gradient(to top, #0000ff 50%, rgba(0, 0, 32, 0.276) 75%);
+    background: linear-gradient(to top, #005c9559 50%, rgba(0, 0, 32, 0.276) 75%);
     background-repeat: no-repeat;
     background-size: 100% 250%;
     background-position: 0% 0%;
