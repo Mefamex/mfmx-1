@@ -313,7 +313,8 @@ main {
         margin: 0;
         padding-bottom: 5vw;
         -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 3vw 7vw rgba(134, 134, 134, 0.5);
     }
     header h1 {
         margin: 5vw 0 0 0;
@@ -345,8 +346,8 @@ main {
         gap: 10vw;
     }
     .card {
-        -webkit-backdrop-filter: blur(25px);
-        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
         padding-block: 0px 5vw;
         font-size: 0.9rem;
         padding-inline: 3vw;
