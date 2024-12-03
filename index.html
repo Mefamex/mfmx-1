@@ -27,8 +27,6 @@
             // değilse, ana sayfaya yönlendirilir.
             const currentPath = window.location.pathname;
             const subdirs = ['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'];
-            console.log();
-
             if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}/`))) {
                 window.location.href = currentPath.substring(0, currentPath.lastIndexOf('/'));
             } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
@@ -96,8 +94,7 @@
     <script type="text/javascript">
         (function () {
             document.querySelectorAll('main #main_cards .card').forEach((element, index) => {
-                element.style.animationDelay = (0.7 + index * 0.1) + "s";
-                element.style.opacity = 0;
+                element.style.animationDelay = (0.7 + index * 0.1) + "s"; element.style.opacity = 0;
                 setTimeout(() => setOpacity(element), 700);
             });
             function setOpacity(element) { element.style.opacity = 1; }
