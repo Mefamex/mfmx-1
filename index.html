@@ -3,13 +3,15 @@
 
 <head>
     <script type="text/javascript">
-        const currentPath = window.location.pathname;
-        // Eğer belirtilen alt dizinlerdeyse bir üst dizine çık
-        if (['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'].some(subdir => currentPath.startsWith(`/${subdir}`))) {
-            const newPath = currentPath.substring(0, currentPath.lastIndexOf('/'));
-            if (newPath === '') { window.location.href = '/'; }
-            window.location.href = newPath; // Bir üst dizine yönlendir
-        } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
+        (function () {
+            const currentPath = window.location.pathname;
+            // Eğer belirtilen alt dizinlerdeyse bir üst dizine çık
+            if (['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'].some(subdir => currentPath.startsWith(`/${subdir}`))) {
+                const newPath = currentPath.substring(0, currentPath.lastIndexOf('/'));
+                if (newPath === '') { window.location.href = '/'; }
+                window.location.href = newPath; // Bir üst dizine yönlendir
+            } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
+        })();
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -88,12 +90,14 @@
     </main>
 
     <script type="text/javascript">
-        document.querySelectorAll('main #main_cards .card').forEach((element, index) => {
-            element.style.animationDelay = (0.7 + index * 0.1) + "s";
-            element.style.opacity = 0;
-            setTimeout(() => setOpacity(element), 700);
-        });
-        function setOpacity(element) { element.style.opacity = 1; }
+        (function () {
+            document.querySelectorAll('main #main_cards .card').forEach((element, index) => {
+                element.style.animationDelay = (0.7 + index * 0.1) + "s";
+                element.style.opacity = 0;
+                setTimeout(() => setOpacity(element), 700);
+            });
+            function setOpacity(element) { element.style.opacity = 1; }
+        })();
     </script>
 </body>
 
