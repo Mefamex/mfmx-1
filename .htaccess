@@ -3,3 +3,9 @@ RewriteEngine On
 AddType application/json .json
 AddType application/javascript .js 
 AddType text/css .css
+
+ErrorDocument 404 /about/index.html
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^.*$ / [L,R=301]
