@@ -337,6 +337,8 @@ main {
         gap: 10vw;
     }
     .card {
+        -webkit-backdrop-filter: blur(25px);
+        backdrop-filter: blur(25px);
         padding-block: 0px 5vw;
         font-size: 0.9rem;
         padding-inline: 3vw;
