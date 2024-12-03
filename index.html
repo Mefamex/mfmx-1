@@ -21,18 +21,15 @@
     <link rel="icon" sizes="512x512" href="./src/assets/images/mfmx/mfmx-512.png" />
     <script type="text/javascript">
         (function () {
+            // Bu script, belirtilen alt dizinlerde (about, archive, blog, vb.) 
+            // olduğunda indexlenirse, kullanıcıyı bir üst dizine yönlendirir.
+            // Eğer kullanıcı kök dizinde değilse ve index.html sayfasında 
+            // değilse, ana sayfaya yönlendirilir.
             const currentPath = window.location.pathname;
-            // Alt dizinlerin listesini tanımla
             const subdirs = ['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'];
-
-            // Eğer belirtilen alt dizinlerdeyse ve en az iki alt dizin varsa bir üst dizine çık
             if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}`))) {
-                const segments = currentPath.split('/').filter(Boolean); // Boş dizinleri filtrele
-                if (segments.length >= 2) { // En az iki alt dizin kontrolü
-                    const newPath = currentPath.substring(0, currentPath.lastIndexOf('/'));
-                    console.log("----" + newPath + "-----");
-                    window.location.href = newPath; // Bir üst dizine yönlendir
-                }
+                const segments = currentPath.split('/').filter(Boolean);
+                if (segments.length >= 2) { window.location.href = currentPath.substring(0, currentPath.lastIndexOf('/')); }
             }
             if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
         })();
