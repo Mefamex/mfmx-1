@@ -1,239 +1,179 @@
 :root {
-    --bg-tittle-font: 10rem;
-    --divLeft-img-size: 3dvw;
+    --color-bg-main: rgb(4 5 31);
+    --color-white: rgb(241 241 241);
+    --color-white-2: rgb(213, 213, 213);
+    --scroll: 0px;
 }
 body {
     display: grid;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: black;
+    background-color: rgb(4 5 31);
+    color: var(--color-white);
 }
 #background_img {
     position: fixed;
-    filter: blur(3px) grayscale(0.2);
     justify-self: center;
     object-fit: cover;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     z-index: -99;
 }
-#background_mid {
-    position: absolute;
+
+header {
+    width: 100%;
+    margin: 0 0 1vw 0;
+    height: auto;
+    top: 0;
+    z-index: 5;
     display: flex;
     flex-direction: column;
-    height: 100dvh; /* Adjust to fill the available height */
-    width: 100dvw;
-    justify-self: center;
+    height: fit-content;
     align-items: center;
-    z-index: -98;
+    animation: entranceUp 0.5s normal forwards;
 }
-#background_mid #h1mfmx {
-    flex-basis: auto;
-    padding: 0;
-    margin: 0;
-    font-size: var(--bg-tittle-font);
+header h1 {
+    margin: 1vw 0 0 0;
+    font-size: 10vw;
     font-family: "Gill Sans MT";
-    color: white;
-    text-decoration: none;
-    filter: drop-shadow(0 0 1rem red);
-    overflow: hidden;
-    max-width: 100dvw;
+    line-height: 0.8;
+    filter: drop-shadow(0 0 0.3vw rgba(255, 0, 0, 0.605));
 }
-#background_mid #mfmx_symbol_img {
-    object-fit: contain; /* if contain : Prevent stretching and maintain aspect ratio */
-    flex-grow: 1;
-    height: 0;
-    width: fit-content;
-    opacity: 60%;
-    filter: drop-shadow(0 0 1rem red);
-    pointer-events: none;
-    -webkit-user-select: none;
-    user-select: none;
-    overflow: hidden;
+header p {
+    margin: 0;
+    color: var(--color-white-2);
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 0.8;
+    span {
+        font-size: 0.7em;
+    }
 }
-/*#cardLink {}*/
 
 main {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    height: 100dvh;
-    width: 100dvw;
-    overflow: hidden;
-}
-main #divSol {
-    width: calc(var(--divLeft-img-size) * 1.5);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transition: all 200ms ease-in-out;
-    overflow: hidden;
-}
-#cardLink {
-    z-index: 99;
-    display: none;
-    position: absolute;
-    width: min-content;
-    height: min-content;
-    top: 0px;
-    left: 5dvw;
-    background-color: rgba(255, 255, 255, 0.651);
-    color: black;
-    border-radius: 5vh;
-    border: 1vh double white;
-    padding-inline: 1vw;
-    padding-block: 1vh;
-    font-weight: bold;
-    font-size: 1dvw;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-    filter: opacity(0.5);
-}
-#cardLink.active {
-    display: flex;
-    filter: opacity(1) !important;
-    background-color: rgba(255, 255, 255, 0.877);
-}
-main #divSol a {
-    width: fit-content;
     height: fit-content;
-    transition: all 50ms ease;
-    animation: entranceLeft 0.9s ease-out 2s both;
-}
-main #divSol a img {
-    width: var(--divLeft-img-size);
-    height: auto;
-    object-fit: contain;
-    background-color: rgba(255, 255, 255, 0.096);
-    padding: calc(var(--divLeft-img-size) * 0.2);
-    border-radius: 20%;
-    filter: drop-shadow(0 0 calc(var(--divLeft-img-size) * 0.06) white);
-    transition: all 200ms ease-in-out;
-}
-main #divSol a:hover img {
-    filter: drop-shadow(0 0 0.5rem white);
-    background-color: rgba(255, 255, 255, 0.473);
-}
-@keyframes sun-rise {
-    from {
-        /* pushes the sun down past the viewport */
-        transform: translateY(110vh);
-    }
-    to {
-        /* returns the sun to its default position */
-        transform: translateY(0);
-    }
-}
-main #divCardContainer {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: space-evenly;
-    gap: 1em;
-    margin-top: var(--bg-tittle-font);
-    margin-left: calc(15dvw - var(--divLeft-img-size));
-    overflow: auto;
-}
-main #divCardContainer .card {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    height: min-content;
-    width: min-content;
-    justify-self: center;
-    background-color: rgba(204, 204, 204, 0.87);
-    border-radius: 5vh;
-    border: 1dvh double white;
-    padding-inline: 1dvw;
-    padding-block: 1dvh;
-    transition: all 0.5s ease-in-out;
-    -webkit-animation: slit-in-vertical 0.9s ease-out both;
-    animation: slit-in-vertical 0.9s ease-out 2s both;
-}
-main #divCardContainer .card:hover {
-    transition: all 200ms ease-in-out;
-    background-color: rgb(255, 255, 255);
-    border-color: red;
-}
-main #divCardContainer .card .cardTitle {
-    padding-inline: 1dvw;
-    padding-block: 1dvh;
-    display: inline;
-    width: fit-content;
-    margin: 0;
-    align-self: center;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bolder;
-    background-color: rgba(255, 255, 255, 0.514);
-    text-decoration-color: rgba(255, 255, 255, 0.514);
-    color: black;
-}
-main #divCardContainer .card:hover .cardTitle {
-    text-decoration-color: red;
-    background-color: rgb(192, 192, 192);
-    border-radius: 0.5rem;
-}
-main #divCardContainer .card .cardPrgf {
+    width: 100%;
     margin: 0;
     padding: 0;
-    text-align: center;
-    font-size: 1em;
-    font-weight: normal;
-    overflow: auto;
-    filter: drop-shadow(0 0 2px rgb(203, 255, 252));
 }
-main #divSag {
-    border-radius: 4dvw 0 0 2dvw;
-    align-self: center;
-    width: 15dvw;
-    height: 80dvh;
-    background-color: #00083873;
+
+#left_card {
+    bottom: 0px;
+    top: 0px;
+    position: sticky;
     display: flex;
+    margin: 0 0 0 5vw;
     flex-direction: column;
-    animation: entranceRight 3s normal forwards;
-    overflow: hidden;
+    height: auto;
+    width: 20vw;
+    max-height: 10%;
+    align-self: center;
+    justify-self: start;
+    align-items: center;
+    justify-items: center;
+    animation: entranceLeft 0.5s normal 0.3s both;
 }
-main #divSag #divSagTittle {
-    display: block;
-    color: rgb(246, 250, 215);
-    font-size: 2dvw;
-    text-decoration: underline;
-    text-decoration-color: white;
-    place-self: center;
-    animation: entranceUp 3s normal forwards;
-}
-main #divSag #divSagPrgf {
-    display: block;
-    flex-grow: 1;
-    height: 100%;
-    color: antiquewhite;
-    margin-block-start: 0;
-    padding-inline: 0.5dvw;
-    overflow-wrap: wrap;
-    overflow-wrap: anywhere;
-    text-align: left;
-    line-height: 1.7dvw;
-    font-size: 1.2dvw;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-main #divSag #divSagMail {
+#mefamex_logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: min(100%, 40vh);
+    object-fit: contain;
     text-align: center;
-    display: block;
-    color: white;
-    font-size: 1dvw;
-    animation: entranceBottom 3s normal forwards;
-    -webkit-user-select: all;
-    user-select: all;
-    pointer-events: all;
-    overflow-wrap: anywhere;
+}
+#mefamex_logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+#left_card h6 {
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.6vw;
+    margin: 0;
+}
+
+#main_cards {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-inline: 5vw;
+    align-self: center;
+    align-items: stretch;
+    justify-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.card {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: auto;
+    height: 100%;
+    flex: 1 1 calc(30% - 2.1vw);
+    flex-direction: column;
+    padding: 0 2rem 1rem 2rem;
+    font-size: 1.2rem;
+    /*border: 0.2rem solid rgba(255, 255, 255, 0.39);*/
+    border-radius: calc(2vw + 2vh);
+    background: linear-gradient(
+        to top,
+        rgba(0, 122, 122, 0.301) 50%,
+        rgba(0, 0, 0, 0.575) 75%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 250%;
+    background-position: 0% 0%;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
+}
+.card:hover {
+    transition: all 0.4s ease;
+    background-position: 0% 100%;
+    transform: scale(1.02);
+    box-shadow: 0 0 2vw rgba(255, 255, 255, 0.7),
+        0 0 1cqh rgba(255, 255, 255, 0.5);
+}
+.card h2 {
+    margin: 0px;
+    padding: 1vw 0 1vw 0;
+    align-self: center;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 106, 255, 0.479);
+    cursor: pointer;
+}
+.card:hover h2 {
+    text-decoration-color: rgb(255, 0, 0);
+}
+.card h2 a {
+    all: inherit;
+    margin: 0;
+    padding: 0;
+}
+.card p {
+    margin: 0;
+    align-self: center;
+    text-align: start;
+    font-size: 0.9em;
+    line-height: 1.3;
+}
+.card:nth-child(1){
+    flex-basis: 52%;
 }
 /**/
 /**/
@@ -358,42 +298,52 @@ main #divSag #divSagMail {
 /**/
 /**/
 /**/
-@media only screen and (max-width: 550px) {
-    :root {
-        --divLeft-img-size: 6dvw;
+
+@media only screen and (max-width: 600px) {
+    header {
+        position: fixed;
+        margin: 0;
+        padding-bottom: 5vw;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
     }
-    body {
+    header h1 {
+        margin: 5vw 0 0 0;
+        font-size: 17vw;
+        filter: drop-shadow(0.5vw 1vw 0.7vw rgba(255, 0, 0, 0.75));
+        line-height: 1;
+    }
+    header p {
         font-size: 3vw;
     }
-    main #divCardContainer {
-        grid-template-columns: 1fr !important;
-        margin-left: 2vw;
-        margin-right: 7vw;
-        gap: 0;
+    main {
+        flex-direction: column;
     }
-    main #divCardContainer .card {
-        width: -webkit-fill-available;
-        margin-top: auto;
+    #left_card {
+        width: 50vw;
+        top: 15%;
+        min-height: 65vh;
+        margin: 0;
+        padding: 0;
+        animation: entranceUp 0.5s normal 0.3s both;
     }
-    #divSag {
-        display: none !important;
+    #left_card h6 {
+        font-size: 2vw;
     }
-}
-
-@media only screen and (min-width: 550px) and (max-width: 900px) {
-    main #divCardContainer {
-        grid-template-columns: 1fr !important;
-        margin-left: 2vw;
-        margin-right: 7vw;
-        gap: 0;
+    #main_cards {
+        flex-direction: column;
+        width: 90%;
+        padding-right: 0;
+        gap: 10vw;
     }
-    main #divCardContainer .card {
-        width: fit-content;
+    .card {
+        padding-block: 0px 5vw;
+        font-size: 0.9rem;
+        padding-inline: 3vw;
+        box-shadow: 0 0 5vw rgba(255, 225, 225, 0.5);
     }
-}
-
-@media only screen and (max-width: 1000px) {
-    :root {
-        --bg-tittle-font: 15dvw;
+    .card h2 {
+        margin: 0;
+        padding: 5vw 0 3vw 0;
     }
 }
