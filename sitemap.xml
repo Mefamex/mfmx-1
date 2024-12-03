@@ -45,11 +45,5 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://mefamex.com/software/</loc>
-    <lastmod>2024-12-03T15:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
 
 </urlset>
