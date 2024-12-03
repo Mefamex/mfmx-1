@@ -29,8 +29,7 @@
             const subdirs = ['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'];
             if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}`))) {
                 console.log(currentPath.substring(0, currentPath.lastIndexOf('/')));
-            }
-            if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
+            } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
         })(); 
     </script>
 </head>
