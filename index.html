@@ -78,8 +78,16 @@
         </div>
     </main>
 
-    <script>
-        document.querySelectorAll('main #main_cards .card').forEach((element, index) => { element.style.animationDelay = (0.7 + index * 0.1) + "s"; });
+    <script type="text/javascript">
+        document.querySelectorAll('main #main_cards .card').forEach((element, index) => {
+            element.style.animationDelay = (0.7 + index * 0.1) + "s";
+            element.style.opacity = 0;
+            setTimeout(() => oppacity1(element), 700); // 700 ms bekle
+        });
+
+        function oppacity1(element) {
+            element.style.opacity = 1; // "oppacity" yerine "opacity"
+        }
 
         // Sayfanın URL'sini kontrol et
         if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
