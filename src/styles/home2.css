@@ -7,37 +7,40 @@
 body {
     display: grid;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: rgb(4 5 31);
     color: var(--color-white);
 }
 #background_img {
-    position: fixed; 
+    position: fixed;
     justify-self: center;
     object-fit: cover;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     z-index: -99;
 }
 
 header {
+    width: 100%;
+    margin: 0 0 1vw 0;
+    height: auto;
+    top: 0;
+    z-index: 5;
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: fit-content;
     align-items: center;
-    margin: 0 0 1vw 0;
-    animation: entranceUp 1s normal forwards;
+    animation: entranceUp 0.5s normal forwards;
 }
 header h1 {
     margin: 1vw 0 0 0;
     font-size: 10vw;
     font-family: "Gill Sans MT";
     line-height: 0.8;
-    filter: drop-shadow(0 0 0.5vw rgba(255, 0, 0, 0.605));
+    filter: drop-shadow(0 0 0.3vw rgba(255, 0, 0, 0.605));
 }
 header p {
     margin: 0;
@@ -45,8 +48,8 @@ header p {
     font-size: 1.5vw;
     text-align: center;
     line-height: 0.8;
-    span{
-        font-size: 0.5em;;
+    span {
+        font-size: 0.7em;
     }
 }
 
@@ -57,15 +60,14 @@ main {
     width: 100%;
     margin: 0;
     padding: 0;
-    /*background: linear-gradient(to bottom left, rgb(11, 11, 96), rgba(4, 5, 31, 0) 20%), linear-gradient(to bottom right, rgb(11, 11, 96), rgba(4, 5, 31, 0) 20%);*/
 }
 
 #left_card {
-    top: 0;
-    bottom: 0;
+    bottom: 0px;
+    top: 0px;
     position: sticky;
     display: flex;
-    margin:  0 0 0 5vw;
+    margin: 0 0 0 5vw;
     flex-direction: column;
     height: auto;
     width: 20vw;
@@ -74,7 +76,7 @@ main {
     justify-self: start;
     align-items: center;
     justify-items: center;
-    animation: entranceLeft 1s normal forwards;
+    animation: entranceLeft 0.5s normal 0.3s both;
 }
 #mefamex_logo {
     width: 100%;
@@ -122,24 +124,31 @@ main {
     box-sizing: border-box;
     padding: 0 2rem 1rem 2rem;
     font-size: 1.2rem;
-    border: 0.2rem solid rgba(255, 255, 255, 0.39);
+    /*border: 0.2rem solid rgba(255, 255, 255, 0.39);*/
     border-radius: calc(2vw + 2vh);
     background: linear-gradient(
         to top,
-        #005c9559 50%,
-        rgba(0, 0, 32, 0.276) 75%
+        rgba(0, 122, 122, 0.301) 50%,
+        rgba(0, 0, 0, 0.575) 75%
     );
     background-repeat: no-repeat;
     background-size: 100% 250%;
     background-position: 0% 0%;
-    -webkit-backdrop-filter: blur(50px);
-    backdrop-filter: blur(20px);
-    transition: all 0.3s ease-in-out;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
 }
 .card:hover {
+    transition: all 0.5s ease;
     background-position: 0% 100%;
     transform: scale(1.02);
-}
+    box-shadow: 0 0 2vw rgba(255, 255, 255, 0.7),
+        0 0 1cqh rgba(255, 255, 255, 0.5);
+} /*
+.card:hover:not(:hover){
+    opacity: 0.5;
+}*/
 .card h2 {
     margin: 1vw;
     align-self: center;
@@ -276,14 +285,17 @@ main {
 
 @media only screen and (max-width: 600px) {
     header {
-        position: sticky;
-        top: 0;
-        margin: 0 0 5vw 0;
+        position: fixed;
+        margin: 0;
+        padding-bottom: 5vw;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
     }
     header h1 {
         margin: 5vw 0 0 0;
         font-size: 17vw;
-        filter: drop-shadow(0.5vw 1vw rgba(255, 0, 0, 1));
+        filter: drop-shadow(0.5vw 1vw 0.7vw rgba(255, 0, 0, 0.75));
+        line-height: 1;
     }
     header p {
         font-size: 3vw;
@@ -294,7 +306,7 @@ main {
     #left_card {
         width: 50vw;
         top: 15%;
-        min-height: 50vh;
+        min-height: 65vh;
         margin: 0;
         padding: 0;
     }
@@ -311,5 +323,6 @@ main {
         padding-block: 5vw;
         font-size: 0.9rem;
         padding-inline: 3vw;
+        box-shadow: 0 0 5vw rgba(255, 225, 225, 0.5);
     }
 }
