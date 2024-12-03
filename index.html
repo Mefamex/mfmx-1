@@ -7,6 +7,7 @@
         // Eğer belirtilen alt dizinlerdeyse bir üst dizine çık
         if (['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'].some(subdir => currentPath.startsWith(`/${subdir}`))) {
             const newPath = currentPath.substring(0, currentPath.lastIndexOf('/'));
+            if (newPath === '') { window.location.href = '/'; }
             window.location.href = newPath; // Bir üst dizine yönlendir
         } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
     </script>
