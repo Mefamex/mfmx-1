@@ -30,26 +30,28 @@ main p {
     margin-inline: auto;
     margin-top: 2dvh;
     text-align: left;
-    font-size: xx-large;
+    font-size: 1.5rem;
     color: var(--color-white-2);
     line-height: 1.5;
-}
 
-main p:hover {
+    
     color: transparent;
     background: linear-gradient(
         to right,
         var(--color-white-2),
         var(--color-white-2),
+        var(--color-white-2),
+        var(--color-white-2),
         var(--color-white),
+        var(--color-white-2),
+        var(--color-white-2),
         var(--color-white-2),
         var(--color-white-2)
     );
     background-clip: text;
     background-size: 300% 1.2em;
-    animation: radialGradient 2s linear infinite;
+    animation: radialGradient 1s linear infinite;
 }
-
 .underline{
     text-decoration: underline;
 }
