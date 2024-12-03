@@ -74,8 +74,7 @@ main {
 }
 
 #left_card {
-    bottom: 0px;
-    top: 0px;
+    top: 0;
     position: sticky;
     display: flex;
     margin: 0 0 0 5vw;
@@ -83,7 +82,7 @@ main {
     height: auto;
     width: 20vw;
     max-height: 10%;
-    align-self: center;
+    align-self: flex-start;
     justify-self: start;
     align-items: center;
     justify-items: center;
