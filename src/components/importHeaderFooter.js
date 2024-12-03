@@ -78,7 +78,7 @@ function CreateHeader() {
         { text: "ANASAYFA", link: "https://mefamex.com/" },
         { text: "HAKKIMDA", link: "https://mefamex.com/about/" },
         { text: "İLETİŞİM", link: "https://mefamex.com/contact/" },
-        { text: "YAZILIM", link: "https://mefamex.com/software/" },
+        { text: "BLOG", link: "https://mefamex.com/blog/" },
         { text: "PROJELER", link: "https://mefamex.com/projects/" }
     ]
     navBarList.forEach((item) => {
