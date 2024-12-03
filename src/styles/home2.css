@@ -14,8 +14,7 @@ body {
     color: var(--color-white);
 }
 #background_img {
-    position: fixed;
-    filter: blur(30px) opacity(0.5);
+    position: fixed; 
     justify-self: center;
     object-fit: cover;
     width: 100dvw;
@@ -44,6 +43,11 @@ header p {
     margin: 0;
     color: var(--color-white-2);
     font-size: 1.5vw;
+    text-align: center;
+    line-height: 0.8;
+    span{
+        font-size: 0.5em;;
+    }
 }
 
 main {
@@ -274,16 +278,28 @@ main {
     header {
         position: sticky;
         top: 0;
+        margin: 0 0 5vw 0;
+    }
+    header h1 {
+        margin: 5vw 0 0 0;
+        font-size: 17vw;
+        filter: drop-shadow(0.5vw 1vw rgba(255, 0, 0, 1));
+    }
+    header p {
+        font-size: 3vw;
     }
     main {
         flex-direction: column;
     }
     #left_card {
         width: 50vw;
-        top: 5%;
-        min-height: 70vh;
+        top: 15%;
+        min-height: 50vh;
         margin: 0;
         padding: 0;
+    }
+    #left_card h6 {
+        font-size: 2vw;
     }
     #main_cards {
         flex-direction: column;
