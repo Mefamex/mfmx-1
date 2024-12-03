@@ -27,7 +27,12 @@
             // değilse, ana sayfaya yönlendirilir.
             const currentPath = window.location.pathname;
             const subdirs = ['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'];
-            if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}`))) {
+            console.log();
+
+            if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}/`))) {
+                console.log(currentPath);
+                console.log(currentPath.lastIndexOf('/'));
+
                 console.log(currentPath.substring(0, currentPath.lastIndexOf('/')));
             } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
         })(); 
