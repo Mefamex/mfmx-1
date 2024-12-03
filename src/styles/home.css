@@ -304,8 +304,8 @@ main {
         position: fixed;
         margin: 0;
         padding-bottom: 5vw;
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
     }
     header h1 {
         margin: 5vw 0 0 0;
