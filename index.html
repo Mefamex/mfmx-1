@@ -33,7 +33,8 @@
                     console.log("----" + newPath + "-----");
                     window.location.href = newPath; // Bir üst dizine yönlendir
                 }
-            } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
+            }
+            if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
         })();
     </script>
 </head>
