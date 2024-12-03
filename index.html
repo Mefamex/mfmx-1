@@ -28,8 +28,7 @@
             const currentPath = window.location.pathname;
             const subdirs = ['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'];
             if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}`))) {
-                const segments = currentPath.split('/').filter(Boolean);
-                if (segments.length >= 2) { window.location.href = currentPath.substring(0, currentPath.lastIndexOf('/')); }
+                console.log(currentPath.substring(0, currentPath.lastIndexOf('/')));
             }
             if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
         })();
