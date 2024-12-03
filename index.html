@@ -78,9 +78,14 @@
         </div>
     </main>
 
-    <script>        document.querySelectorAll('main #main_cards .card').forEach((element, index) => {
-            element.style.animationDelay = (0.7 + index * 0.1) + "s"; // adjust the delay value as needed
-        });</script>
+    <script>
+        document.querySelectorAll('main #main_cards .card').forEach((element, index) => { element.style.animationDelay = (0.7 + index * 0.1) + "s"; });
+
+        // Sayfanın URL'sini kontrol et
+        if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+            window.location.href = '/';
+        }
+    </script>
 </body>
 
 </html>
