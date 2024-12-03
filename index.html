@@ -71,6 +71,10 @@
             </div>
         </div>
     </main>
+
+    <script>        document.querySelectorAll('main #main_cards .card').forEach((element, index) => {
+        element.style.animationDelay = (0.7 + index * 0.1) + "s"; // adjust the delay value as needed
+    });</script>
 </body>
 
 </html>

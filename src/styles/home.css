@@ -24,6 +24,7 @@ body {
 }
 
 header {
+    color: rgb(200, 200, 200);
     width: 100%;
     margin: 0 0 1vw 0;
     height: auto;
@@ -33,14 +34,14 @@ header {
     flex-direction: column;
     height: fit-content;
     align-items: center;
-    animation: entranceUp 0.5s normal forwards;
+    animation: entranceUp 0.5s normal 0.2s both;
 }
 header h1 {
     margin: 1vw 0 0 0;
     font-size: 10vw;
     font-family: "Gill Sans MT";
     line-height: 0.8;
-    filter: drop-shadow(0 0 0.3vw rgba(255, 0, 0, 0.605));
+    filter: drop-shadow(0 0 0.3vw rgba(255, 0, 0, 0.6)) drop-shadow(0 0 0.5vw rgba(0, 238, 255, 0.3));
 }
 header p {
     margin: 0;
@@ -76,7 +77,7 @@ main {
     justify-self: start;
     align-items: center;
     justify-items: center;
-    animation: entranceLeft 0.5s normal 0.3s both;
+    animation: entranceLeft 0.5s normal 0.5s both;
 }
 #mefamex_logo {
     width: 100%;
@@ -90,7 +91,7 @@ main {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 0 0.3vw rgba(255, 255, 255, 1));
+    filter: drop-shadow(0 0 0.3vw rgba(255, 255, 255, 0.8));
 }
 #left_card h6 {
     box-sizing: border-box;
@@ -140,6 +141,8 @@ main {
     backdrop-filter: blur(15px);
     box-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
     transition: all 0.2s ease;
+    -webkit-animation: slit-in-vertical 1.5s normal both;
+    animation: slit-in-vertical 1.5s normal both;
 }
 .card:hover {
     transition: all 0.4s ease;
@@ -173,7 +176,7 @@ main {
     font-size: 0.9em;
     line-height: 1.3;
 }
-.card:nth-child(1){
+.card:nth-child(1) {
     flex-basis: 52%;
 }
 /**/
@@ -262,11 +265,13 @@ main {
         -webkit-transform: translateZ(-800px) rotateY(90deg);
         transform: translateZ(-800px) rotateY(90deg);
         opacity: 0;
+        background-color: white;
     }
-    54% {
+    20% {
         -webkit-transform: translateZ(-160px) rotateY(87deg);
-        transform: translateZ(-160px) rotateY(87deg);
+        transform: translateZ(-160px) rotateY(80deg);
         opacity: 1;
+        background-color: white;
     }
     100% {
         -webkit-transform: translateZ(0) rotateY(0);
@@ -278,11 +283,13 @@ main {
         -webkit-transform: translateZ(-800px) rotateY(90deg);
         transform: translateZ(-800px) rotateY(90deg);
         opacity: 0;
+        background-color: white;
     }
-    54% {
+    20% {
         -webkit-transform: translateZ(-160px) rotateY(87deg);
-        transform: translateZ(-160px) rotateY(87deg);
+        transform: translateZ(-160px) rotateY(80deg);
         opacity: 1;
+        background-color: white;
     }
     100% {
         -webkit-transform: translateZ(0) rotateY(0);
@@ -326,7 +333,7 @@ main {
         min-height: 65vh;
         margin: 0;
         padding: 0;
-        animation: entranceUp 0.5s normal 0.3s both;
+        animation: entranceUp 0.5s normal 0.5s both;
     }
     #left_card h6 {
         font-size: 2vw;
