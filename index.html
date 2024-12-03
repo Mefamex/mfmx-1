@@ -30,10 +30,7 @@
             console.log();
 
             if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}/`))) {
-                console.log(currentPath);
-                console.log(currentPath.lastIndexOf('/'));
-
-                console.log(currentPath.substring(0, currentPath.lastIndexOf('/')));
+                window.location.href = currentPath.substring(0, currentPath.lastIndexOf('/'));
             } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
         })(); 
     </script>
