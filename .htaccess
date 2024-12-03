@@ -3,3 +3,5 @@ RewriteEngine On
 AddType application/json .json
 AddType application/javascript .js 
 AddType text/css .css
+
+Redirect 301 /public https://mefamex.com/yeni-sayfa
