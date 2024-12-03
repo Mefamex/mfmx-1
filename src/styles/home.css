@@ -155,7 +155,7 @@ main {
     box-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
     transition: all 0.2s ease;
     -webkit-animation: slit-in-vertical 1.5s normal both;
-    animation: slit-in-vertical 1.5s normal both;
+    animation: slit-in-vertical 1.5s normal 1s both;
 }
 .card:hover {
     transition: all 0.4s ease;
