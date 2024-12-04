@@ -83,7 +83,7 @@ main {
     width: 20vw;
     max-height: 10%;
     align-self: flex-start;
-    justify-self: start;
+    justify-self: center;
     align-items: center;
     justify-items: center;
     animation: entranceLeft 0.5s normal 0.5s both;
