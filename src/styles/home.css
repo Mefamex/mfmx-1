@@ -350,7 +350,8 @@ main {
     #left_card {
         width: 50vw;
         top: 35vw;
-        margin: 0;
+        margin-block: 0;
+        margin-inline:auto;
         padding: 0;
         animation: entranceUp 0.5s normal 0.5s both;
     }
