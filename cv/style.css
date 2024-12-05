@@ -210,8 +210,8 @@ main {
 
 @media only screen and (max-width: 600px) {
     main {
-        width: 90vw;
-        font-size: 3.5vw;
+        width: 95vw;
+        font-size: 3.2vw;
     }
     #CV {
         padding: 0;
