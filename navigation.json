@@ -2,34 +2,52 @@
   "menu": [
     {
       "title": "Home",
-      "href": "/index.html"
+      "href": "/index.html",
+      "active": true,
+      "isVisible": true,
+      "icon": "./src/assets/images/mfmx/mfmx-64.png",
+      "icons": {
+        "small": "./src/assets/images/mfmx/mfmx-16.png",
+        "medium": "./src/assets/images/mfmx/mfmx-32.png",
+        "large": "./src/assets/images/mfmx/mfmx-64.png"
+      }
     },
     {
       "title": "Pages",
+      "active": true,
+      "isVisible": true,
       "submenu": [
         {
-          "title": "CV",
-          "href": "/cv/"
+          "title": "About",
+          "href": "/about/",
+          "active": true,
+          "isVisible": true,
+          "icon": "./src/assets/images/mfmx/mfmx-64.png"
         },
         {
-          "title": "About",
-          "href": "/about/"
+          "title": "Contact",
+          "href": "/contact/",
+          "icons": {
+            "small": "./src/assets/images/mfmx/mfmx-16.png",
+            "medium": "./src/assets/images/mfmx/mfmx-32.png",
+            "large": "./src/assets/images/mfmx/mfmx-64.png"
+          }
         },
         {
           "title": "Blog",
           "href": "/blog/"
         },
         {
-          "title": "Contact",
-          "href": "/contact/"
-        },
-        {
-          "title": "Games",
-          "href": "/games/"
+          "title": "CV",
+          "href": "/cv/"
         },
         {
           "title": "Projects",
           "href": "/projects/"
+        },
+        {
+          "title": "Games",
+          "href": "/games/"
         },
         {
           "title": "Software",
