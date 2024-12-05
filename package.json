@@ -1,5 +1,7 @@
 {
     "name": "mefamex",
     "version": "1.0.0",
-    "description": "Personal website and portfolio"
+    "description": "Personal website and portfolio",
+    "author": "Mefamex, Mehmet Akif AKKOÇ",
+    "homepage": "https://mefamex.com"
 }
