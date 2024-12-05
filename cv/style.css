@@ -12,6 +12,9 @@
     align-self: center;
     margin-block: 1vw;
 }
+.non-block {
+    display: inline;
+}
 
 html {
     scroll-behavior: smooth;
@@ -20,8 +23,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    width: 100dvw;
-    min-height: 100dvh;
+    width: 100vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,14 +34,39 @@ body {
 }
 
 main {
-    background-image: linear-gradient(
-        rgb(0, 34, 0),
+    background-image: -webkit-linear-gradient(
+        to bottom,
+        rgb(15, 15, 15),
+        rgb(15, 15, 15),
         rgb(0, 0, 34),
         rgb(34, 0, 0)
-    );
-    width: 99vw;
-    min-height: 85dvh;
-    margin: auto;
+    ); /* Safari ve eski Chrome için */
+    background-image: -moz-linear-gradient(
+        to bottom,
+        rgb(15, 15, 15),
+        rgb(15, 15, 15),
+        rgb(0, 0, 34),
+        rgb(34, 0, 0)
+    ); /* Eski Firefox için */
+    background-image: -ms-linear-gradient(
+        to bottom,
+        rgb(15, 15, 15),
+        rgb(15, 15, 15),
+        rgb(0, 0, 34),
+        rgb(34, 0, 0)
+    ); /* Eski Internet Explorer için */
+    background-image: linear-gradient(
+        to bottom,
+        rgb(15, 15, 15),
+        rgb(15, 15, 15),
+        rgb(0, 0, 34),
+        rgb(34, 0, 0)
+    ); /* Standart */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -61,6 +89,56 @@ main {
     font-size: 0.9em;
     text-align: center;
     padding-top: 0px;
+}
+
+#CV {
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding-inline: 2rem;
+
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        text-decoration: underline;
+        margin-block-start: 0;
+        margin-block-end: 0.5rem;
+    }
+    h4 {
+        margin: 0;
+    }
+    ul {
+        margin: 0;
+    }
+    li {
+        margin-block-end: 0.2rem;
+    }
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    a {
+        color: inherit;
+        text-decoration-color: aqua;
+    }
+    span {
+        display: block;
+        width: 100%;
+        height: 0.1rem;
+        background-color: white;
+        margin-block: 1rem 2rem;
+    }
+
+    #personal-information-content,
+    #personal-information-content2 {
+        margin-right: auto;
+        height: min-content;
+        width: fit-content;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
 }
 
 #history {
@@ -123,7 +201,7 @@ main {
     }
 }
 
-#updated-on{
+#updated-on {
     margin-top: 2vw;
     font-size: 0.9vw;
     text-align: left;
@@ -134,6 +212,20 @@ main {
     main {
         width: 90vw;
         font-size: 3.5vw;
+    }
+    #CV {
+        padding: 0;
+        font-size: 0.7rem;
+        ul {
+            padding-left: 1rem;
+        }
+        #personal-information-content {
+            margin-right: 0;
+            height: min-content;
+            width: fit-content;
+            -moz-column-count: 1;
+            column-count: 1;
+        }
     }
     #history .history-section img {
         width: 10vw;
