@@ -34,34 +34,25 @@ body {
 }
 
 main {
-    background-image: -webkit-linear-gradient(
-        to bottom,
-        rgb(15, 15, 15),
-        rgb(15, 15, 15),
-        rgb(0, 0, 34),
-        rgb(34, 0, 0)
-    ); /* Safari ve eski Chrome için */
-    background-image: -moz-linear-gradient(
-        to bottom,
-        rgb(15, 15, 15),
-        rgb(15, 15, 15),
-        rgb(0, 0, 34),
-        rgb(34, 0, 0)
-    ); /* Eski Firefox için */
-    background-image: -ms-linear-gradient(
-        to bottom,
-        rgb(15, 15, 15),
-        rgb(15, 15, 15),
-        rgb(0, 0, 34),
-        rgb(34, 0, 0)
-    ); /* Eski Internet Explorer için */
     background-image: linear-gradient(
         to bottom,
-        rgb(15, 15, 15),
-        rgb(15, 15, 15),
-        rgb(0, 0, 34),
-        rgb(34, 0, 0)
-    ); /* Standart */
+        rgb(118, 0, 0),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+        rgb(40, 40, 40),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+        rgb(40, 40, 40),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+        rgb(40, 40, 40),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+        rgb(10, 10, 10),
+    );
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
