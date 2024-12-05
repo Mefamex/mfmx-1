@@ -225,10 +225,10 @@ header {
     user-select: none;
 }
 #navBarHideButton.unselected {
-    content: url("../assets/icons/=.ico");
+    content: url("../src/assets/icons/=.ico");
 }
 #navBarHideButton.selected {
-    content: url("../assets/icons/x.ico");
+    content: url("../src/assets/icons/x.ico");
 }
 
 #navBarHidden {
