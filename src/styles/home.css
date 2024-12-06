@@ -106,6 +106,11 @@ main {
     max-height: min(100%, 40vh);
     object-fit: contain;
     text-align: center;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 #mefamex_logo img {
     max-width: 100%;
