@@ -44,6 +44,10 @@ header {
     height: fit-content;
     align-items: center;
     animation: entranceUp 0.5s normal 0.2s both;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 header h1 {
     font-family: "Gill Sans MT";
@@ -76,6 +80,7 @@ main {
 }
 
 #left_card {
+    
     top: 0;
     position: sticky;
     display: flex;
@@ -89,6 +94,10 @@ main {
     align-items: center;
     justify-items: center;
     animation: entranceLeft 0.5s normal 0.5s both;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 #mefamex_logo {
     width: 100%;
@@ -139,7 +148,7 @@ main {
     height: fit-content;
     flex: 1 1 calc(30% - 2.1vw);
     flex-direction: column;
-    padding: 0 2rem 0.5rem 2rem;
+    padding: 0 1.3rem 0.7rem 1.3rem;
     font-size: 1.2rem;
     /*border: 0.2rem solid rgba(255, 255, 255, 0.39);*/
     border-radius: calc(2vw + 2vh);
@@ -172,7 +181,7 @@ main {
     transition: all 0.4s ease;
     background-position: 0% 100%;
     transform: scale(1.02);
-    box-shadow: 0 0 2vw rgba(255, 255, 255, 0.7),
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7),
         0 0 1cqh rgba(255, 255, 255, 0.5);
 }
 .card h1 {
@@ -191,7 +200,7 @@ main {
 .card:hover h1 {
     text-decoration-color: rgb(255, 0, 0);
     a {
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 }
 .card h1 a {

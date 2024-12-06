@@ -28,7 +28,7 @@ main p {
     width: 80%;
     max-width: fit-content;
     margin-inline: auto;
-    margin-top: 2dvh;
+    margin-top: 1rem;
     text-align: left;
     font-size: 1.5rem;
     color: var(--color-white-2);
@@ -64,5 +64,16 @@ main p {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    main h1 {
+        font-size: 1.5rem;
+    }
+    main p {
+        width: 90%;
+        font-size: 0.8rem;
     }
 }
