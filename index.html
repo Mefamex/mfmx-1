@@ -12,7 +12,7 @@
     <meta name="keywords"
         content="MEFAMEX, mefamex, mefamex.com, mefamex.com.tr, www.mefamex.com, www.mefamex.com.tr, mehmet akif akkoç, memofika, mfmc-58, mfmc_58, Mefapax, MEFAMEX, kişisel web sitesi, yazılım, projeler, blog, iletişim, Mehmet Akif Akkoç, yapay zeka, web geliştirme, yazılım geliştirme, özgeçmiş, sosyal medya, teknoloji" />
     <meta name="description"
-        content="Personal Website | Kişisel Web Sitesi | Hakkımda | İletişim | Sosyal Medya | Projeler | Blog" />
+        content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
 
     <link rel="stylesheet" href="./src/styles/home.css" />
     <link rel="icon" sizes="16x16" href="./src/assets/images/mfmx/mfmx-16.png" />
@@ -28,7 +28,7 @@
             // Eğer kullanıcı kök dizinde değilse ve index.html sayfasında 
             // değilse, ana sayfaya yönlendirilir.
             const currentPath = window.location.pathname;
-            const subdirs = ['about', 'archive', 'blog', 'contact', 'cv', 'games', 'project', 'py', 'software'];
+            const subdirs = ['about', 'archive', 'blog', 'contact', 'cv', 'games', 'projects', 'py', 'software'];
             if (subdirs.some(subdir => currentPath.startsWith(`/${subdir}/`))) {
                 window.location.href = currentPath.substring(0, currentPath.lastIndexOf('/'));
             } else if (currentPath !== '/' && currentPath !== '/index.html') { window.location.href = '/'; }
