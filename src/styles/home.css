@@ -80,7 +80,6 @@ main {
 }
 
 #left_card {
-    
     top: 0;
     position: sticky;
     display: flex;
@@ -168,7 +167,7 @@ main {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     box-shadow: 0 0 0.5vw rgba(255, 255, 255, 0.5);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     -webkit-animation: slit-in-vertical 1.5s normal both;
     animation: slit-in-vertical 1.5s normal 1s both;
     &::after {
@@ -189,6 +188,7 @@ main {
     box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7),
         0 0 1cqh rgba(255, 255, 255, 0.5);
 }
+
 .card h1 {
     font-size: 1.6em;
     margin: 0px;
