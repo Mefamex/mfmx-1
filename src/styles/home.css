@@ -225,6 +225,10 @@ main {
 .card:nth-child(1) {
     flex-basis: 52%;
 }
+.card:nth-child(3) {
+    flex-basis: 37%;
+}
+
 /**/
 /**/
 /**/
