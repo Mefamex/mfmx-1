@@ -15,7 +15,8 @@
 body {
     display: grid;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     margin: 0;
     padding: 0;
     background-color: rgb(4 5 31);
@@ -65,6 +66,7 @@ header p {
 }
 
 main {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     height: fit-content;
@@ -113,37 +115,37 @@ main {
 }
 
 #main_cards {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
     width: 100%;
-    height: 100%;
-    margin: 2vw 0 3vw 0;
-    padding-inline: 5vw;
+    margin: 1vw 0 3vw 0;
+    padding-inline: 3vw;
     align-self: center;
     align-items: stretch;
     justify-items: center;
     justify-content: space-between;
-    gap: 2vw;
+    gap: 2rem;
 }
 
 .card {
+    box-sizing: border-box;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
     width: auto;
-    height: 100%;
+    height: fit-content;
     flex: 1 1 calc(30% - 2.1vw);
     flex-direction: column;
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 2rem 0.5rem 2rem;
     font-size: 1.2rem;
     /*border: 0.2rem solid rgba(255, 255, 255, 0.39);*/
     border-radius: calc(2vw + 2vh);
     background: linear-gradient(
         to top,
-        rgba(0, 122, 122, 0.301) 50%,
+        rgba(0, 79, 79, 0.301) 50%,
         rgba(0, 0, 0, 0.575) 75%
     );
     background-repeat: no-repeat;
@@ -151,10 +153,20 @@ main {
     background-position: 0% 0%;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    box-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0.5vw rgba(255, 255, 255, 0.5);
     transition: all 0.2s ease;
     -webkit-animation: slit-in-vertical 1.5s normal both;
     animation: slit-in-vertical 1.5s normal 1s both;
+    &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(-45deg, rgba(158, 0, 161, 0.2) 0%, rgba(0, 218, 222, 0.2) 100% );
+        transform: translate3d(0, 0, 0) scale(1);
+        border-radius: calc(2vw + 2vh);
+        filter: blur(20px);
+    }
 }
 .card:hover {
     transition: all 0.4s ease;
@@ -164,15 +176,15 @@ main {
         0 0 1cqh rgba(255, 255, 255, 0.5);
 }
 .card h1 {
-    font-size: 1.7em;
+    font-size: 1.6em;
     margin: 0px;
-    padding: 1vw 0 1vw 0;
+    padding: 1rem 0 0.5rem 0;
     align-self: center;
     text-align: center;
     font-family: myFont;
     /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
     text-decoration: underline;
-    text-decoration-color: rgba(0, 106, 255, 0.479);
+    text-decoration-color: rgb(0, 106, 255);
     cursor: pointer;
     transition: all 0.2s normal;
 }
@@ -193,7 +205,8 @@ main {
     text-align: start;
     font-size: 0.9em;
     line-height: 1.5;
-    margin-top: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .card:nth-child(1) {
     flex-basis: 52%;
@@ -369,6 +382,7 @@ main {
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         padding-block: 0px 3vw;
+        padding-inline: 1rem;
         font-size: 0.9rem;
         box-shadow: 0 0 1vw rgba(255, 225, 225, 0.5);
     }
