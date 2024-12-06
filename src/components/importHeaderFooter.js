@@ -259,7 +259,7 @@ header {
     }
     #headerDivLeft {
         position: relative;
-        height: 3rem;
+        height: 2.9rem;
     }
     #headerDivLeftText {
         font-size: 1rem;
