@@ -153,7 +153,7 @@ header {
     display: flex;
     position: fixed;
     left: 0px;
-    height: 5rem; /*same as header height */
+    height: 4.8rem; 
     width: fit-content;
     align-items: center;
     gap: 0.5vw;
@@ -162,7 +162,8 @@ header {
     transition: all 500ms normal;
     -webkit-user-select: none;
     user-select: none;
-    background-color: #0e101348;
+    background-color:  #0e1013e0;
+    border: 0.1vw solid red;
     border-radius: 2rem;
     padding-inline: 1rem;
     z-index: 1000;
@@ -182,7 +183,7 @@ header {
 }
 .headerDivLeftHover {
     background-color: #0e1013 !important;
-    border: 0.1rem solid white;
+    border: 0.1rem solid white !important;
 }
 
 #headerNavBar {

@@ -46,7 +46,7 @@ header {
     display: flex;
     position: fixed;
     left: 0px;
-    height: 5rem; /*same as header height */
+    height: 4.8rem;
     width: fit-content;
     align-items: center;
     gap: 0.5vw;
@@ -55,7 +55,8 @@ header {
     transition: all 500ms normal;
     -webkit-user-select: none;
     user-select: none;
-    background-color: #0e101348;
+    background-color: #0e1013e0;
+    border: 0.1vw solid red;
     border-radius: 2rem;
     padding-inline: 1rem;
     z-index: 1000;
@@ -67,15 +68,15 @@ header {
     margin: 0px;
     padding: 0px;
     color: white;
-    text-decoration:rgb(168, 75, 255) underline;
+    text-decoration: rgb(168, 75, 255) underline;
     font-size: 1rem;
 }
-#headerDivLeft:hover #headerDivLeftText{
+#headerDivLeft:hover #headerDivLeftText {
     text-decoration-color: rgb(255, 0, 0) !important;
 }
 .headerDivLeftHover {
     background-color: #0e1013 !important;
-    border: 0.1rem solid white;
+    border: 0.1rem solid white !important;
 }
 
 #headerNavBar {
@@ -121,7 +122,6 @@ header {
     content: url("../src/assets/icons/=.ico");
 }
 #navBarHideButton.selected {
-
     content: url("../assets/icons/x.ico");
 }
 
@@ -139,7 +139,7 @@ header {
     font-size: 1.1rem;
     border-radius: 1rem 0 0 3rem;
     counter-reset: i;
-    animation: entranceTop 0.7s  normal forwards;
+    animation: entranceTop 0.7s normal forwards;
 }
 /*#navBarHidden ~ .unseleceted{
     animation: entranceTop 0.7s  normal forwards !important;
