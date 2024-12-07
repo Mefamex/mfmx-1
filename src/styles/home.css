@@ -144,13 +144,13 @@ main {
 
 .card {
     box-sizing: border-box;
+    flex: 1 1 calc(30% - 2.1vw);
     -webkit-box-orient: vertical;
     display: -webkit-box;
     display: flex;
     justify-content: space-between;
     width: auto;
     height: fit-content;
-    flex: 1 1 calc(30% - 2.1vw);
     flex-direction: column;
     padding: 0 1.3rem 0.7rem 1.3rem;
     font-size: 1.2rem;
