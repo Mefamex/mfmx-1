@@ -32,7 +32,7 @@
 `<meta name="author" content="mefamex" />`
 
 # ROBOTS
-`<meta name="robots" content="all" />`
+`<meta name="robots" content="all" /> kullanma` 
 `<meta name="robots" content="index, follow" />`
 
 # KEYWORDS

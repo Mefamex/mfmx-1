@@ -18,7 +18,7 @@ function CreateFooter() {
     const style = document.createElement('style');
     style.innerHTML = `
 body{
-    width: 99.5vw !important;
+    width: 100% !important;
     overflow-x: hidden !important;
 }
 footer {
@@ -106,7 +106,7 @@ function CreateHeader() {
     const style = document.createElement('style');
     style.innerHTML = `
 ::-webkit-scrollbar {
-    width: calc(0.5vw + 6px); /* width of the scrollbar */
+    width: 0.8vw; /*calc(0.5vw + 6px); width of the scrollbar */
     height: 12px; /* height of the scrollbar */
     background-color: #00000067; /* dark gray background color */
     border-radius: 10px; /* rounded corners for the scrollbar */
@@ -119,10 +119,10 @@ function CreateHeader() {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #2f2f2f79; /* dark gray track color */
+    background-color: #1d1d1d; /* dark gray track color */
     border-radius: 1px; /* rounded corners for the track */
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.527); /* subtle shadow effect */
-}
+    box-shadow: inset 0 0 0.3rem rgba(255, 255, 255, 0.9); /* subtle shadow effect */
+    }
 ::-webkit-scrollbar-button {
     display: none;
 }
