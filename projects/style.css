@@ -26,6 +26,9 @@ a {
     color: inherit;
     text-decoration-color: aqua;
 }
+ul{
+    padding-inline-start: 1em;
+}
 #main_container {
     display: flex;
     flex-flow: row wrap;
