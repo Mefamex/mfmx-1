@@ -35,7 +35,7 @@ footer {
 }
 #footerText{
     color: white;
-    font-size: 2dvh;
+    font-size: 1.8vh;
 }
 `;
     footer.appendChild(style);
@@ -143,10 +143,12 @@ header {
     top: 0px;
     width: 100%;
     height: 5rem;
+    margin: 0;
     background-color: #0e1013;
     justify-content: space-between;
     border-bottom: 0.1dvh solid white;
-    margin-bottom: 1dvh;
+    box-shadow: 0 0.3vh 0.5vh rgba(255, 255, 255, 0.4), 0 1vh 0.5vh rgba(0, 0, 0, 0.4), 0 2vh 1vh rgba(0, 0, 0, 0.4);
+    z-index: 1000;
 }
 
 #headerDivLeft {
@@ -163,8 +165,9 @@ header {
     -webkit-user-select: none;
     user-select: none;
     background-color:  #0e1013e0;
-    border: 0.1vw solid red;
-    border-radius: 2rem;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.6), 0 0 1rem rgba(0, 0, 0, 1), 0 0 2rem rgba(0, 0, 0, 1);
+    border: 0.1vw solid rgba(100, 100, 100, 0.5);
+    border-radius: 1.5rem;
     padding-inline: 1rem;
     z-index: 1000;
 }
@@ -184,6 +187,9 @@ header {
 .headerDivLeftHover {
     background-color: #0e1013 !important;
     border: 0.1rem solid white !important;
+    scale:1.05;
+    transform:translateX(0.25rem) translateY(0.25rem);
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 1), 0 0 1rem rgba(0, 0, 0, 1), 0 0 2rem rgba(0, 0, 0, 1);
 }
 
 #headerNavBar {
@@ -259,7 +265,7 @@ header {
     }
     #headerDivLeft {
         position: relative;
-        height: 2.9rem;
+        height: 2.75rem;
     }
     #headerDivLeftText {
         font-size: 1rem;

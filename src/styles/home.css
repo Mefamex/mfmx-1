@@ -130,7 +130,6 @@ main {
 #main_cards {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
     flex-flow: row wrap;
     width: 100%;
     margin: 1vw 0 3vw 0;
