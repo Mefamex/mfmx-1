@@ -12,6 +12,12 @@
     font-family: myFont2;
     src: url("../assets/fonts/UbuntuMedium-rYwL.ttf");
 }
+.noSelect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 body {
     display: grid;
     width: 100%;
@@ -44,18 +50,13 @@ header {
     height: fit-content;
     align-items: center;
     animation: entranceUp 0.5s normal 0.2s both;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 header h1 {
     font-family: "Gill Sans MT";
     margin: 1vw 0 0 0;
     font-size: 10vw;
     line-height: 0.8;
-    filter: drop-shadow(0 0 0.3vw rgba(255, 0, 0, 0.6))
-        drop-shadow(0 0 0.5vw rgba(0, 238, 255, 0.3));
+    filter: drop-shadow(0 0 0.3vw rgba(255, 0, 0, 0.6)) drop-shadow(0 0 0.5vw rgba(0, 238, 255, 0.3));
 }
 header p {
     margin: 0;
@@ -93,10 +94,6 @@ main {
     align-items: center;
     justify-items: center;
     animation: entranceLeft 0.5s normal 0.5s both;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 #mefamex_logo {
     width: 100%;
@@ -105,11 +102,6 @@ main {
     max-height: min(100%, 40vh);
     object-fit: contain;
     text-align: center;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 #mefamex_logo img {
     max-width: 100%;
@@ -151,15 +143,11 @@ main {
     width: auto;
     height: fit-content;
     flex-direction: column;
-    padding: 0 1.3rem 0.7rem 1.3rem;
+    padding: 0 1.3rem 0.2rem 1.3rem;
     font-size: 1.2rem;
     /*border: 0.2rem solid rgba(255, 255, 255, 0.39);*/
     border-radius: calc(2vw + 2vh);
-    background: linear-gradient(
-        to top,
-        rgba(0, 79, 79, 0.301) 50%,
-        rgba(0, 0, 0, 0.575) 75%
-    );
+    background: linear-gradient(to top, rgba(0, 79, 79, 0.301) 50%, rgba(0, 0, 0, 0.575) 75%);
     background-repeat: no-repeat;
     background-size: 100% 250%;
     background-position: 0% 0%;
@@ -174,7 +162,7 @@ main {
         z-index: -1;
         position: absolute;
         inset: 0;
-        background: linear-gradient(-45deg, rgba(158, 0, 161, 0.2) 0%, rgba(0, 218, 222, 0.2) 100% );
+        background: linear-gradient(-45deg, rgba(158, 0, 161, 0.2) 0%, rgba(0, 218, 222, 0.2) 100%);
         transform: translate3d(0, 0, 0) scale(1);
         border-radius: calc(2vw + 2vh);
         filter: blur(20px);
@@ -184,8 +172,7 @@ main {
     transition: all 0.4s ease;
     background-position: 0% 100%;
     transform: scale(1.02);
-    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7),
-        0 0 1cqh rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7), 0 0 1cqh rgba(255, 255, 255, 0.5);
 }
 
 .card h1 {
@@ -221,8 +208,20 @@ main {
     margin-top: 0;
     margin-bottom: 0;
 }
+.card .last_card_updated {
+    margin-left: auto;
+    width: fit-content;
+    align-self: flex-end;
+    text-align: right;
+    margin-right: 1em !important;
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0;
+    opacity: 0.2;
+    line-height: 0.8;
+}
 .card:nth-child(1) {
-    flex-basis: 52%;
+    flex-basis: 45%;
 }
 .card:nth-child(3) {
     flex-basis: 37%;
@@ -381,7 +380,7 @@ main {
         width: 50vw;
         top: 35vw;
         margin-block: 0;
-        margin-inline:auto;
+        margin-inline: auto;
         padding: 0;
         animation: entranceUp 0.5s normal 0.5s both;
     }
@@ -398,7 +397,7 @@ main {
     .card {
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
-        padding-block: 0px 3vw;
+        padding-block: 0px 1vw;
         padding-inline: 1rem;
         font-size: 0.9rem;
         box-shadow: 0 0 1vw rgba(255, 225, 225, 0.5);

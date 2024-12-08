@@ -1,6 +1,6 @@
 const body = document.querySelector("body"); console.log(body);
- 
- 
+
+
 const canvas = document.querySelector("canvas"); console.log(canvas);
 canvas.width = window.innerWidth; canvas.height = window.innerHeight;
 
