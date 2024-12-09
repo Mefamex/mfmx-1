@@ -5,11 +5,13 @@ a {
 ul {
     padding-inline-start: 1em;
 }
-
 #main_container main {
+    flex-basis: 30%;
+    flex-grow: 1000;
     display: flex;
     flex-flow: row wrap;
     height: fit-content;
+    width: auto;
     margin: 0;
     section {
         flex: 1 1 20rem;
@@ -17,7 +19,7 @@ ul {
         flex-direction: column;
         justify-content: start;
         height: auto;
-        min-height: 20rem;
+        min-height: 10rem;
         width: 20rem;
         background-color: rgb(5, 5, 5);
         margin: 1rem;
@@ -43,11 +45,28 @@ ul {
         }
         p {
             line-height: 1.4;
-            margin-block:0.2em ;
-            &::before{
+            margin-block: 0.2em;
+            &::before {
                 content: " ■ ";
                 color: rgb(123, 255, 255);
             }
+        }
+    }
+    #section_Code {
+        flex-basis: 80%;
+        width: 100%;
+        code {
+            overflow:auto ;
+            white-space: pre-wrap !important; 
+            unicode-bidi: isolate;
+            display: inline-block; /* Satır içi blok olarak gösterir */
+            font-size: 0.7em;
+            font-family: 'Courier New', Courier, monospace; /* Monospace yazı tipi kullanır */
+            background-color: rgb(30, 30, 30); /* Açık gri arka plan rengi */
+            padding: 0.2em 0.4em; /* İç boşluk ekler */
+            border-radius: 4px; /* Kenarları yuvarlar */
+            border: 1px solid #ccc; /* Açık gri bir kenar ekler */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekler */
         }
     }
 }
