@@ -60,7 +60,7 @@
 # OG
 `<meta property="og:title" content="Mefamex - Resume" />`
 `<meta property="og:description" content="The resume of Mehmet Akif Akkoç, showcasing software development skills and experiences." />`
-`<meta property="og:image" content="../src/assets/images/mfmx/mfmx-256.png" />`
+`<meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />`
 `<meta property="og:url" content="https://mefamex.com/public/cv/" />`
 `<meta property="og:type" content="website" />`
 
