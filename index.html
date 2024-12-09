@@ -33,8 +33,8 @@
                 const subdirs = ["about", "archive", "blog", "contact", "cv", "games", "projects", "py", "software"];
                 if (subdirs.some((subdir) => currentPath.startsWith(`/${subdir}/`))) {
                     window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
-                } else if (currentPath !== "/" || currentPath !== "/index.html") {
-                    window.location.href = "/";
+                } else if ((currentPath !== "/" || currentPath !== "/index.html") && window.location.href.includes("mefamex.com","http")) {
+                    window.location.href="/";
                 }
             })();
         </script>
