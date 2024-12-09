@@ -26,7 +26,7 @@ a {
     color: inherit;
     text-decoration-color: aqua;
 }
-ul{
+ul {
     padding-inline-start: 1em;
 }
 #main_container {
@@ -47,7 +47,7 @@ ul{
     height: fit-content;
     width: auto;
     margin: 0;
-    section { 
+    section {
         flex: 1 1 20rem;
         display: flex;
         flex-direction: column;
@@ -61,17 +61,33 @@ ul{
         border: 0.1rem solid rgba(255, 255, 255, 0.2);
         border-radius: 1rem;
         transition: border-color 0.2s ease;
-        box-shadow: -0.1rem -0.2rem 0.1rem rgba(255, 255, 255, 0.4), 
-                    0 0.5rem 0.5rem rgba(54, 54, 54, 0.4),
-                    0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-        &:hover{
-            border-color:rgba(255, 255, 255, 0.7);
-            box-shadow: 0 -0.2rem 0.1rem rgba(255, 255, 255, 0.8), 
-                        0 0.5rem 0.5rem rgba(54, 54, 54, 0.8),
-                        0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+        box-shadow: -0.1rem -0.2rem 0.1rem rgba(255, 255, 255, 0.4), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.4), 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 -0.2rem 0.1rem rgba(255, 255, 255, 0.8), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.8), 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+        }
+    }
+    #mainWellcome {
+        flex-basis: 100%;
+        min-height: 15rem;
+        margin-bottom: 2rem;
+        margin-inline: 5%;
+        h1 {
+            text-align: center;
+            margin-block: 0.3rem;
+            font-size: 2.3em;
+        }
+        p {
+            line-height: 1.4;
+            margin-block:0.2em ;
+            &::before{
+                content: " ■ ";
+                color: rgb(123, 255, 255);
+            }
         }
     }
 }
+
 #main_container nav {
     flex-grow: 1;
     display: flex;
@@ -85,7 +101,7 @@ ul{
         width: 10rem;
         -ms-wrap-through: none;
         white-space: nowrap;
-        ul{
+        ul {
             padding-left: 1rem;
         }
     }
@@ -149,4 +165,9 @@ ul{
     100% {
         width: 10rem;
     }
+}
+@media only screen and (max-width: 600px) {
+    body{
+        font-size: 0.75rem;
+    };
 }
