@@ -2,7 +2,7 @@
   "menu": [
     {
       "title": "Home",
-      "href": "/index.html",
+      "href": "/",
       "active": true,
       "isVisible": true,
       "icon": "./src/assets/images/mfmx/mfmx-64.png",

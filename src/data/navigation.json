@@ -2,7 +2,7 @@
   "menu": [
     {
       "title": "Home",
-      "href": "/index.html"
+      "href": "/"
     },
     {
       "title": "Pages",
