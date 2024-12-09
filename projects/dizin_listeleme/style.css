@@ -60,13 +60,21 @@ ul {
             white-space: pre-wrap !important; 
             unicode-bidi: isolate;
             display: inline-block; /* Satır içi blok olarak gösterir */
-            font-size: 0.7em;
+            font-size: 0.6em;
             font-family: 'Courier New', Courier, monospace; /* Monospace yazı tipi kullanır */
             background-color: rgb(30, 30, 30); /* Açık gri arka plan rengi */
             padding: 0.2em 0.4em; /* İç boşluk ekler */
             border-radius: 4px; /* Kenarları yuvarlar */
             border: 1px solid #ccc; /* Açık gri bir kenar ekler */
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekler */
+            pre{
+                display: inherit;
+                font-family: inherit;
+                unicode-bidi: inherit;
+                white-space: inherit;
+                margin: 0;
+                padding: 0;
+            }
         }
     }
 }
