@@ -47,7 +47,7 @@ function CreateHeader() {
     //const header = document.querySelector("header"); 
     const header = document.createElement('header'); document.body.insertBefore(header, document.body.firstChild);
 
-    header.id = "header"
+    header.id = "header";
     //header.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
 
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
@@ -232,10 +232,10 @@ header {
     user-select: none;
 }
 #navBarHideButton.unselected {
-    content: url("../src/assets/icons/=.ico");
+    content: url("/src/assets/icons/=.ico");
 }
 #navBarHideButton.selected {
-    content: url("../src/assets/icons/x.ico");
+    content: url("/src/assets/icons/x.ico");
 }
 
 #navBarHidden {
