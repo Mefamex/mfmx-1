@@ -19,10 +19,11 @@ function CreateNavContainer() {
                 <div id="navContainer">
                     <h2>MENU</h2>
                     <ul>
-                        <li><a href="#yapayZeka">Yapay Zeka ve Makine Öğrenimi</a></li>
-                        <li><a href="#agVeGuvenlik">Ağ ve Güvenlik</a></li>
-                        <li><a href="#webGelistirme">Web Geliştirme ve API'ler</a></li>
-                        <li><a href="#diger">Diğer Projeler</a></li>
+                        <li><a href="https://mefamex.com/projects/#yapay_zeka">Yapay Zeka ve Makine Öğrenimi</a></li>
+                        <li><a href="https://mefamex.com/projects/#ag_ve_guvenlik">Ağ ve Güvenlik</a></li>
+                        <li><a href="https://mefamex.com/projects/#web_gelistirme">Web Geliştirme ve API'ler</a></li>
+                        <li><a href="https://mefamex.com/projects/#kali_linux">Kali Linux</a></li>
+                        <li><a href="https://mefamex.com/projects/#diger">Diğer Projeler</a></li>
                     </ul>
                 </div>
     `
