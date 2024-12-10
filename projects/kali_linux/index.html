@@ -111,6 +111,21 @@
                     </ul>
                     <br />
                     <p>Bu adımları takip ederek, Kali Linux'ta varsayılan önyükleyiciyi istediğiniz şekilde ayarlayabilirsiniz.</p>
+                    <br>
+                    <p>FULL CODE:</p>
+                    <code>
+sudo su
+nano /etc/default/grub
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=10
+
+GRUB_HIDDEN_TIMEOUT=5
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+
+(exit with 'ctrl-x & y & enter')
+
+update-grub
+                    </code>
                 </section>
             </main>
             <aside id="aside" name="aside"></aside>
