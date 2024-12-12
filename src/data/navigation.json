@@ -2,42 +2,66 @@
   "menu": [
     {
       "title": "Home",
-      "href": "/"
+      "href": "/",
+      "active": true,
+      "isVisible": true,
+      "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png",
+      "icons": {
+        "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
+        "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
+        "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
+      }
     },
     {
       "title": "Pages",
+      "active": true,
+      "isVisible": true,
       "submenu": [
         {
-          "title": "CV",
-          "href": "/cv.html"
-        },
-        {
           "title": "About",
-          "href": "/public/about/"
-        },
-        {
-          "title": "Blog",
-          "href": "/public/blog/"
+          "href": "/about/",
+          "active": true,
+          "isVisible": true,
+          "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
         },
         {
           "title": "Contact",
-          "href": "/public/contact/"
+          "href": "/contact/",
+          "icons": {
+            "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
+            "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
+            "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
+          }
         },
         {
-          "title": "Games",
-          "href": "/public/games/"
+          "title": "Blog",
+          "href": "/blog/"
+        },
+        {
+          "title": "CV",
+          "href": "/cv/"
         },
         {
           "title": "Projects",
-          "href": "/public/projects/"
+          "href": "/projects/",
+          "submenu": [
+            {
+              "title": "Dizin Listeleme",
+              "href": "/projects/dizin_listeleme/"
+            },
+            {
+              "title": "Kali Linux",
+              "href": "/projects/kali_linux/"
+            },
+            {
+              "title": "Html-Css Kitaplığı",
+              "href": "/projects/html_css_book/"
+            }
+          ]
         },
         {
           "title": "Software",
-          "href": "/public/software/"
-        },
-        {
-          "title": "Queaz",
-          "href": "/public/games/queaz/"
+          "href": "/software/"
         }
       ]
     }
