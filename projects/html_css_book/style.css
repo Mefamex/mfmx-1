@@ -8,10 +8,16 @@
 * Licensed under MIT (https://linkedin.com/in/Mefamex/) 
 */
 
+
+
+
 #main_container main {
+    flex-basis: 30%;
+    flex-grow: 1000;
     display: flex;
     flex-flow: row wrap;
     height: fit-content;
+    width: auto;
     margin: 0;
     section {
         flex: 1 1 20rem;
@@ -19,7 +25,7 @@
         flex-direction: column;
         justify-content: start;
         height: auto;
-        min-height: 20rem;
+        min-height: 10rem;
         width: 20rem;
         background-color: rgb(5, 5, 5);
         margin: 1rem;
@@ -52,14 +58,19 @@
             }
         }
     }
-}
-@media only screen and (max-width: 600px) {
-    #main_container{
-        flex-direction: column;
+    #boot_menusunde_onyukleyici_secme{
+        h2{
+            text-align: center;
+        }
+        ol{
+            &>li{
+                margin-block: 0.7em;
+            }
+        }
+        ul{
+            &>li{
+                margin-block: 0.3em;
+            }
+        }
     }
-    
-    #main_container main section{
-        min-height: 10rem;
-    }
-
 }
