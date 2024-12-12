@@ -5,11 +5,11 @@
       "href": "/",
       "active": true,
       "isVisible": true,
-      "icon": "./src/assets/images/mfmx/mfmx-64.png",
+      "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png",
       "icons": {
-        "small": "./src/assets/images/mfmx/mfmx-16.png",
-        "medium": "./src/assets/images/mfmx/mfmx-32.png",
-        "large": "./src/assets/images/mfmx/mfmx-64.png"
+        "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
+        "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
+        "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
       }
     },
     {
@@ -22,15 +22,15 @@
           "href": "/about/",
           "active": true,
           "isVisible": true,
-          "icon": "./src/assets/images/mfmx/mfmx-64.png"
+          "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
         },
         {
           "title": "Contact",
           "href": "/contact/",
           "icons": {
-            "small": "./src/assets/images/mfmx/mfmx-16.png",
-            "medium": "./src/assets/images/mfmx/mfmx-32.png",
-            "large": "./src/assets/images/mfmx/mfmx-64.png"
+            "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
+            "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
+            "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
           }
         },
         {
@@ -43,11 +43,21 @@
         },
         {
           "title": "Projects",
-          "href": "/projects/"
-        },
-        {
-          "title": "Games",
-          "href": "/games/"
+          "href": "/projects/",
+          "submenu": [
+            {
+              "title": "Dizin Listeleme",
+              "href": "/projects/dizin_listeleme/"
+            },
+            {
+              "title": "Kali Linux",
+              "href": "/projects/kali_linux/"
+            },
+            {
+              "title": "Html-Css Kitaplığı",
+              "href": "/projects/html_css_book/"
+            }
+          ]
         },
         {
           "title": "Software",
