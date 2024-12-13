@@ -8,7 +8,6 @@
 * Licensed under MIT (https://linkedin.com/in/Mefamex/) 
 */
 
-
 :root {
     --color-bg-main: rgb(15 15 15);
     --color-white: rgb(241, 241, 241);
@@ -23,15 +22,16 @@
     transition: all 0.2 ease;
 }
 body {
+    /* this styles applied in headerFooterJs
     margin: 0;
     padding: 0;
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
-    display: flex;
+    display: flex; 
     flex-direction: column;
+    color: white; */
     background-image: linear-gradient(to bottom, var(--color-bg-main), #000000);
-    color: white;
 }
 
 #main_container {
@@ -117,7 +117,7 @@ body {
         &::-webkit-scrollbar {
             width: 0.5rem;
         }
-        li{
+        li {
             padding-block: 0.2rem;
         }
     }
