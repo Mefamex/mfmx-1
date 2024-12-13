@@ -16,15 +16,16 @@
 .underline {
     text-decoration: underline;
 }
+/* this styles applied in headerFooterJs
 body {
     margin: 0;
     padding: 0;
     width: 100dvw;
     min-height: 100dvh;
-    display: grid;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-bg-main);
-}
+}*/
 main {
     margin: 0;
     padding: 0;
