@@ -34,18 +34,17 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: black;
 }
 
-body {
+body {/* this styles applied in headerFooterJs
     margin: 0;
     padding: 0;
     width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: absolute;*/
     align-items: center;
-    position: absolute;
     background-color: var(--color-bg-main);
     color: var(--color-white);
 }
