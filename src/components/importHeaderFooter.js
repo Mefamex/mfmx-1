@@ -19,9 +19,28 @@ function CreateFooter() {
     //set style to footer
     const style = document.createElement('style');
     style.innerHTML = `
-body{
+html{
+    display: flex !important;
+    flex-direction: column !important;
     width: 100% !important;
+    min-height: 100vh !important;
+    box-sizing: border-box !important;
     overflow-x: hidden !important;
+    overflow-y: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(15, 15, 15) !important;
+    color: white !important;
+}
+body {
+    width: 100% !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(15, 15, 15) !important;
 }
 footer {
     display: flex;

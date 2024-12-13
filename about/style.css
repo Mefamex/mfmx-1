@@ -13,6 +13,9 @@
     --color-white: rgb(241, 241, 241);
     --color-white-2: rgb(170, 170, 170);
 }
+.underline {
+    text-decoration: underline;
+}
 body {
     margin: 0;
     padding: 0;
@@ -44,29 +47,21 @@ main p {
     color: var(--color-white-2);
     line-height: 1.5;
 
-    
     color: transparent;
     background: linear-gradient(
         to right,
-        var(--color-white-2),
-        var(--color-white-2),
-        var(--color-white-2),
-        var(--color-white-2),
+        var(--color-white),
+        var(--color-white),
         var(--color-white),
         var(--color-white-2),
-        var(--color-white-2),
-        var(--color-white-2),
-        var(--color-white-2)
+        var(--color-white),
+        var(--color-white),
+        var(--color-white)
     );
     background-clip: text;
     background-size: 300% 1.2em;
-    animation: radialGradient 1s linear infinite;
+    animation: 1s linear infinite alternate radialGradient;
 }
-.underline{
-    text-decoration: underline;
-}
-
-
 
 @keyframes radialGradient {
     0% {
@@ -76,7 +71,6 @@ main p {
         background-position: 0% 50%;
     }
 }
-
 
 @media only screen and (max-width: 600px) {
     main h1 {
