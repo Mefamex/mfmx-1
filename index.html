@@ -39,11 +39,11 @@
             (function () {
                 // Bu script, belirtilen alt dizinlerde (about, archive, blog, vb.)
                 // olduğunda indexlenirse, kullanıcıyı bir üst dizine yönlendirir.
+                // çünkü index.html o dizinde yoksa bu html yüklenicektir.
                 // Eğer kullanıcı kök dizinde değilse ve index.html sayfasında
                 // değilse, ana sayfaya yönlendirilir.
                 const currentPath = window.location.pathname;
-                const subdirs = ["about", "archive", "blog", "contact", "cv", "projects"];
-                if (subdirs.some((subdir) => currentPath.startsWith(`/${subdir}/`))) {
+                if (["about", "archive", "blog", "contact", "cv", "projects"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) {
                     window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
                 } else if (currentPath !== "/" && currentPath !== "/index.html") {
                     if (window.location.href.includes("mefamex") && window.location.href.includes("http")) {
