@@ -6,8 +6,10 @@ CreateHeader();
 
 function CreateFooter() {
     //const footer = document.querySelector("footer");
-    const footer = document.createElement('footer'); document.body.appendChild(footer);
+    let footer = document.querySelector('body > footer') || document.createElement('footer');
+    if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
 
+    footer.id = "footer"; footer.innerHTML = "";
     //footer.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/footer.css">`
 
     const footerText = document.createElement("h1"); footer.appendChild(footerText);
@@ -44,10 +46,10 @@ footer {
 
 
 function CreateHeader() {
-    //const header = document.querySelector("header"); 
-    const header = document.createElement('header'); document.body.insertBefore(header, document.body.firstChild);
+    let header = document.querySelector('body > header') || document.createElement('header');
+    if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
 
-    header.id = "header";
+    header.id = "header"; header.innerHTML = "";
     //header.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
 
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
