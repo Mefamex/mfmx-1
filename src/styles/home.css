@@ -18,8 +18,11 @@
 }
 
 .noSelect {
+    /* calmayin :D yazmışlardı ama çaldım (NNB)*/
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
     -webkit-user-select: none;
-    -moz-user-select: none;
+    -o-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
