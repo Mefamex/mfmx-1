@@ -20,27 +20,27 @@ function CreateFooter() {
     const style = document.createElement('style');
     style.innerHTML = `
 html{
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    min-height: 100vh !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: rgb(15, 15, 15) !important;
-    color: white !important;
+    display: flex ;
+    flex-direction: column ;
+    width: 100% ;
+    min-height: 100vh ;
+    box-sizing: border-box ;
+    overflow-x: hidden ;
+    overflow-y: auto ;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: rgb(15, 15, 15) ;
+    color: white ;
 }
 body {
-    width: 100% !important;
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    box-sizing: border-box !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: rgb(15, 15, 15) !important;
+    width: 100% ;
+    min-height: 100vh ;
+    display: flex ;
+    flex-direction: column ;
+    box-sizing: border-box ;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: rgb(15, 15, 15) ;
 }
 footer {
     display: flex;
@@ -282,7 +282,9 @@ header {
 @media screen and (max-width: 768px) {
     header {
         height: 3rem;
-        position: sticky;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
     #headerDivLeft {
         position: relative;
@@ -300,6 +302,9 @@ header {
     #navBarHideButton.selected ~ #navBarHidden {
         display: flex;
     }
+    body{
+        padding-top: 3.1rem !important
+    };
 }
 `;
     header.appendChild(style);

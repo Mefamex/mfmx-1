@@ -157,7 +157,9 @@ header {
 @media screen and (max-width: 768px) {
     header {
         height: 3rem;
-        position: sticky;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
     #headerDivLeft {
         position: relative;
@@ -175,4 +177,7 @@ header {
     #navBarHideButton.selected ~ #navBarHidden {
         display: flex;
     }
+    body{
+        padding-top: 5rem !important
+    };
 }
