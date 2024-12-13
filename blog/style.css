@@ -18,14 +18,16 @@
     word-wrap: break-word;  
     color: var(--color-white);
 }
+
 body {
+    /* this styles applied in headerFooterJs
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: absolute;*/
     align-items: center;
-    position: absolute;
     background-color: var(--color-bg-main);
     font-size: 2vh;
 }
