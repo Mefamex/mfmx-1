@@ -38,9 +38,12 @@ function CreateAside() {
     aside.innerHTML = `
     <h2>SON DEĞİŞENLER</h2>
                 <ul>
-                    <li>Sayfa Tasarımı seçildi</li>
-                    <li>Tasarıma başlandı</li>
-                    <li>Talepler toplandı</li>
+                    <li ><a href="https://mefamex.com/projects/html_css_book/" > Project: Html-Css Kitaplığı </a> <p class="p_tooltip noSelect">12.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/kali_linux/" > Project: Kali Linux </a> <p class="p_tooltip noSelect">10.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/dizin_listeleme/" > Project: Dizin Listeme </a> <p class="p_tooltip noSelect">09.12.2024</p></li>
+                    <li>Tasarıma başlandı <p class="p_tooltip noSelect">07.12.2024</p></li>
+                    <li>Sayfa tasarımı <p class="p_tooltip noSelect">05.12.2024</p></li>
+                    <li>Talepler toplandı <p class="p_tooltip noSelect">18.11.2024</p></li>
                 </ul>
     `
 }
