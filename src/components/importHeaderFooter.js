@@ -147,14 +147,21 @@ function CreateHeader() {
 ::-webkit-scrollbar-button {
     display: none;
 }
-@keyframes entranceTop {
-    from {
+@keyframes entranceRight {
+    0% {
         opacity: 0;
-        transform: translateY(-3rem);
+        transform: translateX(5rem) translateY(-1rem) ;
+        scale:0.9;
     }
-    to {
+    90% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(-0.2rem) translateY(0.3rem);
+        scale:1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem) translateY(0rem);
+        scale:1;
     }
 }
 header {
@@ -247,16 +254,19 @@ header {
     display: none;
     height: 70%;
     align-self: center;
-    filter: drop-shadow(0 0 0.2rem white);
+    /*filter: drop-shadow(0 0 0.1rem white);*/
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
+    opacity:0.8;
 }
 #navBarHideButton.unselected {
     content: url("/src/assets/icons/=.ico");
 }
 #navBarHideButton.selected {
     content: url("/src/assets/icons/x.ico");
+    opacity:1;
+    filter: drop-shadow(0 0 0.1rem white);
 }
 
 #navBarHidden {
@@ -273,11 +283,9 @@ header {
     font-size: 1.1rem;
     border-radius: 1rem 0 0 3rem;
     counter-reset: i;
-    animation: entranceTop 0.7s  normal forwards;
+    animation: entranceRight 0.3s  ease-out forwards;
 }
-/*#navBarHidden ~ .unseleceted{
-    animation: entranceTop 0.7s  normal forwards !important;
-}*/
+
 
 @media screen and (max-width: 768px) {
     header {

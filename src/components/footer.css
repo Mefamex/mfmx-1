@@ -1,25 +1,25 @@
-html{
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    min-height: 100vh !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: rgb(15, 15, 15) !important;
-    color: white !important;
+html {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 15, 15);
+    color: white;
 }
 body {
-    width: 100% !important;
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    box-sizing: border-box !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: rgb(15, 15, 15) !important;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(15, 15, 15);
 }
 footer {
     display: flex;
@@ -35,5 +35,5 @@ footer {
 }
 #footerText {
     color: white;
-    font-size: 2dvh;
+    font-size: 1.8vh;
 }
