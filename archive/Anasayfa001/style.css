@@ -9,7 +9,7 @@
 */
 
 :root {
-    --bg-tittle-font: 10rem;
+    --bg-title-font: 10rem;
     --divLeft-img-size: 3dvw;
 }
 body {
@@ -45,7 +45,7 @@ body {
     flex-basis: auto;
     padding: 0;
     margin: 0;
-    font-size: var(--bg-tittle-font);
+    font-size: var(--bg-title-font);
     font-family: "Gill Sans MT";
     color: white;
     text-decoration: none;
@@ -146,7 +146,7 @@ main #divCardContainer {
     grid-template-columns: 1fr 1fr;
     align-content: space-evenly;
     gap: 1em;
-    margin-top: var(--bg-tittle-font);
+    margin-top: var(--bg-title-font);
     margin-left: calc(15dvw - var(--divLeft-img-size));
     overflow: auto;
 }
@@ -210,7 +210,7 @@ main #divSag {
     animation: entranceRight 3s normal forwards;
     overflow: hidden;
 }
-main #divSag #divSagTittle {
+main #divSag #divSagtitle {
     display: block;
     color: rgb(246, 250, 215);
     font-size: 2dvw;
@@ -404,6 +404,6 @@ main #divSag #divSagMail {
 
 @media only screen and (max-width: 1000px) {
     :root {
-        --bg-tittle-font: 15dvw;
+        --bg-title-font: 15dvw;
     }
 }
