@@ -2,6 +2,12 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
 |      |      index.html
 |      |      style.css
+|      archive
+|      |      Anasayfa001
+|      |      |      index.html
+|      |      |      mefamex_logo_bgb.png
+|      |      |      script.js
+|      |      |      style.css
 |      blog
 |      |      index.html
 |      |      style.css
@@ -17,7 +23,21 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      queaz_game.js
 |      |      |      style.css
 |      projects
+|      |      dizin_listeleme
+|      |      |      index.html
+|      |      |      style.css
+|      |      html_css_book
+|      |      |      index.html
+|      |      |      style.css
+|      |      kali_linux
+|      |      |      index.html
+|      |      |      style.css
+|      |      python_to_exe
+|      |      |      index.html
+|      |      |      style.css
 |      |      index.html
+|      |      page_aside.css
+|      |      page_asides.js
 |      |      style.css
 |      py
 |      |      FileLister.js
@@ -35,6 +55,22 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      Yazilim_Ayrintili.txt
 |      src
 |      |      assets
+|      |      |      fonts
+|      |      |      |      Pw-8qzz.otf
+|      |      |      |      Pw-Bold-YBgv.otf
+|      |      |      |      Pw-BoldItalic-reYA.otf
+|      |      |      |      Pw-BoldSuperitalic-Mwyr.otf
+|      |      |      |      Pw-Italic-K2yp.otf
+|      |      |      |      Pw-Light-2qrK.otf
+|      |      |      |      Pw-LightItalic-ve2O.otf
+|      |      |      |      Ubuntu-n1M0.ttf
+|      |      |      |      UbuntuBold-1YyB.ttf
+|      |      |      |      UbuntuBoldItalic-Rg86.ttf
+|      |      |      |      UbuntuItalic-Bpm8.ttf
+|      |      |      |      UbuntuLight-8zBJ.ttf
+|      |      |      |      UbuntuLightItalic-Ygw4.ttf
+|      |      |      |      UbuntuMedium-rYwL.ttf
+|      |      |      |      UbuntuMediumItalic-Myln.ttf
 |      |      |      icons
 |      |      |      |      =.ico
 |      |      |      |      cloudflare.png
@@ -49,8 +85,18 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      |      youtube_icon.png
 |      |      |      images
 |      |      |      |      background
-|      |      |      |      |      home_bg.png
-|      |      |      |      |      home_bg.webp
+|      |      |      |      |      gnpToWebp.py
+|      |      |      |      |      home_bg.psd
+|      |      |      |      |      home_bg_code.png
+|      |      |      |      |      home_bg_code.webp
+|      |      |      |      |      home_bg_code_blur.png
+|      |      |      |      |      home_bg_code_blur.webp
+|      |      |      |      |      home_bg_code_blur2.png
+|      |      |      |      |      home_bg_code_blur2.webp
+|      |      |      |      |      home_bg_square_blue_blur.png
+|      |      |      |      |      home_bg_square_blue_blur.webp
+|      |      |      |      |      home_bg_square_blur.png
+|      |      |      |      |      home_bg_square_blur.webp
 |      |      |      |      language_img
 |      |      |      |      |      asil
 |      |      |      |      |      |      angular.png
@@ -123,23 +169,32 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      |      |      mefamex_logo_sb.png
 |      |      |      |      4_6041858661402282267.jpg
 |      |      components
+|      |      |      =.ico
 |      |      |      footer.css
 |      |      |      header.css
 |      |      |      importHeaderFooter.js
 |      |      |      mefamex_logo_bgb.png
+|      |      |      x.ico
 |      |      data
 |      |      |      navigation.json
+|      |      My_nots
+|      |      |      head-tag.txt
+|      |      |      Legal_terms.txt
+|      |      |      privacy-policy(2).txt
+|      |      |      Privacy_Policy.txt
+|      |      |      SSS.txt
 |      |      scripts
 |      |      |      canvaSocMed.js
 |      |      |      circleMouse.js
-|      |      |      contactme.js
 |      |      |      home.js
 |      |      |      mouse_tail.js
 |      |      styles
 |      |      |      home.css
-|      DirExVis_2024-09-14 07.56.20.txt
+|      DirExVis_2024-11-15 15.47.59.txt
 |      index.html
 |      navigation.json
+|      notlarým472948288433.txt
 |      package.json
 |      robots.txt
 |      sitemap.xml
+|      yandex_2180e408af580940.html
