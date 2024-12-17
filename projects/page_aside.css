@@ -31,7 +31,8 @@ body {
     display: flex; 
     flex-direction: column;
     color: white; */
-    background-image: linear-gradient(to bottom, var(--color-bg-main), #000000);
+    background-color: rgb(20, 20, 20);
+    color: white;
 }
 
 #main_container {
@@ -40,6 +41,7 @@ body {
     height: fit-content;
     min-height: 85vh;
     width: 100%;
+    color: white;
     & > * {
         flex-grow: 1;
         flex-shrink: 1;
