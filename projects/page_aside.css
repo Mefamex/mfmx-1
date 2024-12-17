@@ -241,6 +241,7 @@ code {
     height: auto;
     display: inline-block;
     font-size: 0.9em;
+    line-height: 1.4;
     font-family: "Courier New", Courier, monospace;
     color: inherit;
     overflow: auto;
