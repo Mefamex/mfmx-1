@@ -62,10 +62,13 @@
 `<meta property="og:description" content="The resume of Mehmet Akif Akkoç, showcasing software development skills and experiences." />`
 `<meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />`
 `<meta property="og:url" content="https://mefamex.com/public/cv/" />`
-`<meta property="og:type" content="website" />`
+`<meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="MEFAMEX" />`
 
 # TWITTER CARD
-`<meta name="twitter:card" content="summary_large_image" />`
+`<meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@mefamex" />`
 `<meta name="twitter:title" content="Mefamex - Resume" />`
 `<meta name="twitter:description" content="The resume of Mehmet Akif Akkoç, showcasing software development skills and experiences." />`
 `<meta name="twitter:image" content="../src/assets/images/mfmx/mfmx-256.png" />`

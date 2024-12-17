@@ -58,4 +58,10 @@
             }
         }
     }
+    #section-5{
+        flex-basis: 50% !important;
+    }
+    #section-8{
+        flex-basis: 30rem ;
+    }
 }
