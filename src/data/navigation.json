@@ -14,58 +14,72 @@
     },
     {
       "title": "Pages",
-      "active": true,
+      "active": false,
       "isVisible": true,
       "submenu": [
         {
           "title": "About",
           "href": "/about/",
-          "active": true,
+          "active": false,
           "isVisible": true,
           "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
         },
         {
           "title": "Contact",
           "href": "/contact/",
-          "icons": {
-            "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
-            "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
-            "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
-          }
+          "active": false,
+          "isVisible": true,
+          "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png"
         },
         {
           "title": "Blog",
-          "href": "/blog/"
+          "href": "/blog/",
+          "active": false,
+          "isVisible": true
         },
         {
           "title": "CV",
-          "href": "/cv/"
+          "href": "/cv/",
+          "active": false,
+          "isVisible": true
         },
         {
           "title": "Projects",
           "href": "/projects/",
+          "active": false,
+          "isVisible": true,
           "submenu": [
             {
               "title": "Dizin Listeleme",
-              "href": "/projects/dizin_listeleme/"
+              "href": "/projects/dizin_listeleme/",
+              "active": false,
+              "isVisible": true
             },
             {
               "title": "Kali Linux",
-              "href": "/projects/kali_linux/"
+              "href": "/projects/kali_linux/",
+              "active": false,
+              "isVisible": true
             },
             {
               "title": "Html-Css Kitaplığı",
-              "href": "/projects/html_css_book/"
+              "href": "/projects/html_css_book/",
+              "active": false,
+              "isVisible": true
             },
             {
               "title": "Python To Exe",
-              "href": "/projects/python_to_exe/"
+              "href": "/projects/python_to_exe/",
+              "active": false,
+              "isVisible": true
             }
           ]
         },
         {
           "title": "Software",
-          "href": "/software/"
+          "href": "/software/",
+          "active": false,
+          "isVisible": true
         }
       ]
     }
