@@ -14,63 +14,53 @@
         },
         {
             "title": "Pages",
-            "active": false,
             "isVisible": true,
             "submenu": [
                 {
                     "title": "About",
                     "href": "/about/",
-                    "active": false,
                     "isVisible": true,
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
                 },
                 {
                     "title": "Contact",
                     "href": "/contact/",
-                    "active": false,
                     "isVisible": true,
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png"
                 },
                 {
                     "title": "Blog",
                     "href": "/blog/",
-                    "active": false,
                     "isVisible": true
                 },
                 {
                     "title": "CV",
                     "href": "/cv/",
-                    "active": false,
                     "isVisible": true
                 },
                 {
                     "title": "Projects",
                     "href": "/projects/",
-                    "active": false,
                     "isVisible": true,
                     "submenu": [
                         {
                             "title": "Dizin Listeleme",
                             "href": "/projects/dizin_listeleme/",
-                            "active": false,
                             "isVisible": true
                         },
                         {
                             "title": "Kali Linux",
                             "href": "/projects/kali_linux/",
-                            "active": false,
                             "isVisible": true
                         },
                         {
                             "title": "Html-Css Kitaplığı",
                             "href": "/projects/html_css_book/",
-                            "active": false,
                             "isVisible": true
                         },
                         {
                             "title": "Python To Exe",
                             "href": "/projects/python_to_exe/",
-                            "active": false,
                             "isVisible": true
                         }
                     ]
@@ -78,7 +68,6 @@
                 {
                     "title": "Software",
                     "href": "/software/",
-                    "active": false,
                     "isVisible": true
                 }
             ]
