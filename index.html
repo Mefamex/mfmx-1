@@ -39,7 +39,11 @@
     <meta name="twitter:url" content="https://mefamex.com/" />
     <meta name="twitter:date" content="2024-12-10T00:00:00Z" />
 
-    <link rel="stylesheet" type="text/css" href="./src/styles/home.css" />
+    <!-- Critical Performance Optimizations -->
+    <link rel="preload" href="./src/assets/images/background/home_bg_square_blue_blur.webp" as="image">
+    <link rel="preload" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" as="image">
+
+    <link rel="stylesheet" type="text/css" href="./src/styles/home.css" media="print" onload="this.media='all'" />
     <script type="text/javascript">
         (function () {
             // Bu script, belirtilen alt dizinlerde (about, archive, blog, vb.)
@@ -83,7 +87,6 @@
             }
     </script>
 
-    <!-- BreadcrumbList Schema -->
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
@@ -160,10 +163,17 @@
     }
     </script>
 
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self';">
+    <!--<style>
+        /* Critical CSS for initial render */
+        body { margin: 0; font-family: Arial, sans-serif; }
+        #background_img { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; object-fit: cover; }
+    </style>-->
 </head>
 
 <body>
-    <img id="background_img" src="./src/assets/images/background/home_bg_square_blue_blur.webp" alt="main_background" />
+    <img id="background_img" src="./src/assets/images/background/home_bg_square_blue_blur.webp" alt="Blue blurred background" loading="lazy"/>
     <header id="header" class="noSelect">
         <h1>MEFAMEX</h1>
         <p>
