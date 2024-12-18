@@ -1,1 +1,43 @@
 bir şey varsa vardır, yokluğu vardır. yokluğu da yoktur
+
+
+
+
+
+<!-- WebSite Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "MEFAMEX",
+                "url": "https://mefamex.com/",
+                "description": "Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog",
+                "publisher": { "@type": "Person", "name": "Mehmet Akif Akkoç" },
+                "creator": { "@type": "Organization", "name": "MEFAMEX" },
+                "author": { "@type": "Person", "name": "Mehmet Akif Akkoç" }
+            }
+        </script>
+
+        <!-- BreadcrumbList Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "Index", "item": "https://mefamex.com/index.html" },
+                    { "@type": "ListItem", "position": 3, "name": "CV", "item": "https://mefamex.com/cv/" },
+                    { "@type": "ListItem", "position": 4, "name": "Hakkımda", "item": "https://mefamex.com/about/" },
+                    { "@type": "ListItem", "position": 5, "name": "Blog", "item": "https://mefamex.com/blog/" },
+                    { "@type": "ListItem", "position": 6, "name": "İletişim", "item": "https://mefamex.com/contact/" },
+                    { "@type": "ListItem", "position": 7, "name": "Projeler", "item": "https://mefamex.com/projects/" },
+                    { "@type": "ListItem", "position": 8, "name": "Dizin Listeleme", "item": "https://mefamex.com/projects/dizin_listeleme" },
+                    { "@type": "ListItem", "position": 9, "name": "Kali Linux", "item": "https://mefamex.com/projects/kali_linux" },
+                    { "@type": "ListItem", "position": 10, "name": "HTML & CSS Book", "item": "https://mefamex.com/projects/html_css_book" },
+                    { "@type": "ListItem", "position": 11, "name": "Python to EXE", "item": "https://mefamex.com/projects/python_to_exe" }
+                ]
+            }
+        </script>
+
+        <!-- Security Headers -->
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self';">-->
