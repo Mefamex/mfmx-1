@@ -1,13 +1,13 @@
+# General Rules
 User-agent: *
 Allow: /
 Disallow: /src
 Disallow: /py
 Disallow: /archive
 Disallow: /*?*
-
-# Crawl-delay to prevent overwhelming the server
 Crawl-delay: 10
 
+# Googlebot Specific Rules
 User-agent: Googlebot
 Allow: /
 Allow: /cv/
@@ -16,7 +16,7 @@ Allow: /about/
 Allow: /projects/
 Allow: /blog/
 
-# Security and AI Bot Restrictions
+# AI Bot Restrictions
 User-agent: GPTBot
 Allow: /
 
@@ -26,7 +26,7 @@ Allow: /
 User-agent: Anthropic
 Allow: /
 
-# Search Engine Specific Rules
+# Bingbot Specific Rules
 User-agent: Bingbot
 Allow: /
 Allow: /blog/
@@ -34,6 +34,7 @@ Allow: /projects/
 Allow: /cv/
 Allow: /about/
 
+# YandexBot Specific Rules
 User-agent: YandexBot
 Allow: /
 
@@ -52,8 +53,6 @@ Crawl-delay: 15
 User-agent: SemrushBot
 Allow: /
 Crawl-delay: 15
-
-
 
 # Sitemaps for easier indexing
 Sitemap: https://mefamex.com/sitemap.xml
