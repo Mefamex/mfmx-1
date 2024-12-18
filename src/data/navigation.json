@@ -1,87 +1,168 @@
 {
-  "menu": [
-    {
-      "title": "Home",
-      "href": "/",
-      "active": true,
-      "isVisible": true,
-      "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png",
-      "icons": {
-        "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
-        "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
-        "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
-      }
+    "metadata": {
+        "version": "1.0.0",
+        "lastUpdated": "2024-12-18",
+        "siteTitle": "MEFAMEX"
     },
-    {
-      "title": "Pages",
-      "active": false,
-      "isVisible": true,
-      "submenu": [
+    "menu": [
         {
-          "title": "About",
-          "href": "/about/",
-          "active": false,
-          "isVisible": true,
-          "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
-        },
-        {
-          "title": "Contact",
-          "href": "/contact/",
-          "active": false,
-          "isVisible": true,
-          "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png"
-        },
-        {
-          "title": "Blog",
-          "href": "/blog/",
-          "active": false,
-          "isVisible": true
-        },
-        {
-          "title": "CV",
-          "href": "/cv/",
-          "active": false,
-          "isVisible": true
-        },
-        {
-          "title": "Projects",
-          "href": "/projects/",
-          "active": false,
-          "isVisible": true,
-          "submenu": [
-            {
-              "title": "Dizin Listeleme",
-              "href": "/projects/dizin_listeleme/",
-              "active": false,
-              "isVisible": true
+            "id": "home",
+            "title": "Home",
+            "href": "/",
+            "type": "primary",
+            "status": {
+                "active": true,
+                "visible": true,
+                "external": false
             },
-            {
-              "title": "Kali Linux",
-              "href": "/projects/kali_linux/",
-              "active": false,
-              "isVisible": true
+            "icons": {
+                "default": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png",
+                "sizes": {
+                    "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
+                    "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
+                    "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
+                }
             },
-            {
-              "title": "Html-Css Kitaplığı",
-              "href": "/projects/html_css_book/",
-              "active": false,
-              "isVisible": true
-            },
-            {
-              "title": "Python To Exe",
-              "href": "/projects/python_to_exe/",
-              "active": false,
-              "isVisible": true
+            "seo": {
+                "description": "MEFAMEX Ana Sayfa",
+                "keywords": ["home", "homepage", "mefamex"]
             }
-          ]
         },
         {
-          "title": "Software",
-          "href": "/software/",
-          "active": false,
-          "isVisible": true
+            "id": "pages",
+            "title": "Pages",
+            "type": "dropdown",
+            "status": {
+                "visible": true
+            },
+            "submenu": [
+                {
+                    "id": "about",
+                    "title": "About",
+                    "href": "/about/",
+                    "type": "page",
+                    "status": {
+                        "visible": true
+                    },
+                    "icons": {
+                        "default": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
+                    },
+                    "seo": {
+                        "description": "Mehmet Akif Akkoç Hakkında",
+                        "keywords": ["about", "profile", "biography"]
+                    }
+                },
+                {
+                    "id": "contact",
+                    "title": "Contact",
+                    "href": "/contact/",
+                    "type": "page",
+                    "status": {
+                        "visible": true
+                    },
+                    "icons": {
+                        "default": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png"
+                    },
+                    "contact": {
+                        "preferredMethod": "email",
+                        "socialLinks": ["twitter", "linkedin", "github"]
+                    }
+                },
+                {
+                    "id": "blog",
+                    "title": "Blog",
+                    "href": "/blog/",
+                    "type": "page",
+                    "status": {
+                        "visible": true
+                    },
+                    "seo": {
+                        "description": "MEFAMEX Teknoloji ve Yazılım Blogu",
+                        "keywords": ["blog", "technology", "software"]
+                    }
+                },
+                {
+                    "id": "cv",
+                    "title": "CV",
+                    "href": "/cv/",
+                    "type": "page",
+                    "status": {
+                        "visible": true
+                    },
+                    "seo": {
+                        "description": "Mehmet Akif Akkoç Özgeçmişi",
+                        "keywords": ["resume", "cv", "portfolio"]
+                    }
+                },
+                {
+                    "id": "projects",
+                    "title": "Projects",
+                    "href": "/projects/",
+                    "type": "dropdown",
+                    "status": {
+                        "visible": true
+                    },
+                    "submenu": [
+                        {
+                            "id": "dizin_listeleme",
+                            "title": "Dizin Listeleme",
+                            "href": "/projects/dizin_listeleme/",
+                            "type": "subproject",
+                            "status": {
+                                "visible": true
+                            },
+                            "tags": ["utility", "file management"]
+                        },
+                        {
+                            "id": "kali_linux",
+                            "title": "Kali Linux",
+                            "href": "/projects/kali_linux/",
+                            "type": "subproject",
+                            "status": {
+                                "visible": true
+                            },
+                            "tags": ["cybersecurity", "linux"]
+                        },
+                        {
+                            "id": "html_css_book",
+                            "title": "HTML-CSS Kitaplığı",
+                            "href": "/projects/html_css_book/",
+                            "type": "subproject",
+                            "status": {
+                                "visible": true
+                            },
+                            "tags": ["web development", "tutorial"]
+                        },
+                        {
+                            "id": "python_to_exe",
+                            "title": "Python To Exe",
+                            "href": "/projects/python_to_exe/",
+                            "type": "subproject",
+                            "status": {
+                                "visible": true
+                            },
+                            "tags": ["python", "compilation", "pytoexe"]
+                        }
+                    ]
+                },
+                {
+                    "id": "software",
+                    "title": "Software",
+                    "href": "/software/",
+                    "type": "page",
+                    "status": {
+                        "visible": true
+                    },
+                    "seo": {
+                        "description": "MEFAMEX Yazılım Çözümleri",
+                        "keywords": ["software", "development", "tools"]
+                    }
+                }
+            ]
         }
-      ]
+    ],
+    "permissions": {
+        "accessControl": "public",
+        "loginRequired": false
     }
-  ]
 }
