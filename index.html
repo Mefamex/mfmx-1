@@ -44,26 +44,12 @@
     <link rel="preload" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" as="image">
 
     <link rel="stylesheet" type="text/css" href="./src/styles/home.css" media="print" onload="this.media='all'" />
-    <script type="text/javascript">
-        (function () {
-            // Bu script, belirtilen alt dizinlerde (about, archive, blog, vb.)
-            // olduğunda indexlenirse, kullanıcıyı bir üst dizine yönlendirir.
-            // çünkü index.html o dizinde yoksa bu html yüklenicektir.
-            // Eğer kullanıcı kök dizinde değilse ve index.html sayfasında
-            // değilse, ana sayfaya yönlendirilir.
+    <script type="text/javascript">(function () {
             const currentPath = window.location.pathname;
-            if (["about", "archive", "blog", "contact", "cv", "projects"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) {
-                window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
-            } else if (currentPath !== "/" && currentPath !== "/index.html") {
-                if (window.location.href.includes("mefamex") && window.location.href.includes("http")) {
-                    console.log("dizinde olmayan sayfa'dan ötürü ana sayfaya yönlendiriliyorsunuz...\n", window.location.href);
-                    setTimeout(() => {
-                        window.location.href = "/";
-                    }, 1000);
-                }
-            }
-        })();
-    </script>
+            if (["about", "archive", "blog", "contact", "cv", "projects"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) { window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/")); }
+            else if (currentPath !== "/" && currentPath !== "/index.html") { if (window.location.href.includes("mefamex") && window.location.href.includes("http")) { console.log("dizinde olmayan sayfa'dan ötürü ana sayfaya yönlendiriliyorsunuz...\n", window.location.href); setTimeout(() => { window.location.href = "/"; }, 1000); } }
+        })();</script>
+        
     <!-- WebSite Schema -->
     <script type="application/ld+json">
             {
