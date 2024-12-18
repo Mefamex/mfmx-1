@@ -3,7 +3,59 @@ Allow: /
 Disallow: /src
 Disallow: /py
 Disallow: /archive
+Disallow: /*?*
 
+# Crawl-delay to prevent overwhelming the server
 Crawl-delay: 10
 
+User-agent: Googlebot
+Allow: /
+Allow: /cv/
+Allow: /contact/
+Allow: /about/
+Allow: /projects/
+Allow: /blog/
+
+# Security and AI Bot Restrictions
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Anthropic
+Allow: /
+
+# Search Engine Specific Rules
+User-agent: Bingbot
+Allow: /
+Allow: /blog/
+Allow: /projects/
+Allow: /cv/
+Allow: /about/
+
+User-agent: YandexBot
+Allow: /
+
+# Social Media Bots
+User-agent: Twitterbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Performance and Bandwidth Preservation
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 15
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 15
+
+
+
+# Sitemaps for easier indexing
 Sitemap: https://mefamex.com/sitemap.xml
+Sitemap: https://mefamex.com/sitemap-projects.xml
+Sitemap: https://mefamex.com/sitemap-blog.xml
