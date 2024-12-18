@@ -90,12 +90,12 @@
             <section>
                 <h2>2) PyInstaller Kurulumu</h2>
                 <p>Herhangi bir özel bir durumu yok. Pip ile kolay şekilde kurulumunu yapabiliriz.</p>
-                <p><code>pip install pyinstaller</code></p>
+                <p><code>pip install PyInstaller</code></p>
             </section>
             <section id="adimlar">
                 <h2>3) Python Scriptini Exe Formatına Dönüştürme</h2>
                 <p>
-                    Örnek olarak elimizdeki projenin dosyası proje.py olsun. <code>pyinstaller --onefile proje.py</code>
+                    Örnek olarak elimizdeki projenin dosyası proje.py olsun. <code>PyInstaller --onefile proje.py</code>
                     Bu komut projemizi tek bir dosya olarak exe formatına çevirir.
                 </p>
                 <ul>
@@ -156,14 +156,14 @@
                 </ul>
                 <h2>Örnek: Özelleştirilmiş EXE Oluşturma</h2>
                 <p>Bu komutla daha kapsamlı bir .exe dosyası oluşturabiliriz:</p>
-                <code>pyinstaller --onefile --noconsole --icon=ikon.ico --name=BenimProgramim proje.py </code>
+                <code>PyInstaller --onefile --noconsole --icon=ikon.ico --name=BenimProgramim proje.py </code>
             </section>
             <section>
                 <h2>6) Ek Dosyaları Dahil Etme</h2>
                 <p>Eğer projen resim, metin dosyaları veya başka bağımlı dosyalar kullanıyorsa, onları da dahil
                     etmelisin:</p>
                 <p><b>Örnek:</b>Bir resim dosyasını projeye dahil etmek için:
-                    <code>pyinstaller --onefile --add-data "resim.png;." proje.py </code>
+                    <code>PyInstaller --onefile --add-data "resim.png;." proje.py </code>
                 </p>
                 <p>
                     <b>Açıklama:</b><br />
@@ -177,7 +177,7 @@
                 <p>Bazı kütüphaneler, PyInstaller tarafından otomatik algılanmayabilir (örneğin pandas, tkinter vb.).
                 </p>
                 <p>Bu durumda --hidden-import seçeneğini kullanmalısın:
-                    <br /><code>pyinstaller --onefile --hidden-import=pandas proje.py</code>
+                    <br /><code>PyInstaller --onefile --hidden-import=pandas proje.py</code>
                 </p>
             </section>
             <section id="section-8">
@@ -198,7 +198,7 @@ a = Analysis(['proje.py'],
     cipher=None,
     noarchive=False)</pre></code>
                 <p>PyInstaller'ı .spec dosyasını kullanarak çalıştırmak için:</p>
-                <code>pyinstaller proje.spec</code>
+                <code>PyInstaller proje.spec</code>
             </section>
         </main>
         <aside id="aside" name="aside"></aside>
