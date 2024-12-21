@@ -4,8 +4,9 @@ Disallow: /src
 Disallow: /py
 Disallow: /archive
 
-Crawl-delay: 10
-
 Sitemap: https://mefamex.com/sitemap.xml
 Sitemap: https://mefamex.com/sitemap-projects.xml
 Sitemap: https://mefamex.com/sitemap-blog.xml
+Sitemap: http://mefamex.com/sitemap.xml
+Sitemap: http://mefamex.com/sitemap-projects.xml
+Sitemap: http://mefamex.com/sitemap-blog.xml

@@ -66,6 +66,11 @@
                     ]
                 },
                 {
+                    "title": "The Mefamex Project",
+                    "href": "/the_mefamex_project/",
+                    "isVisible": true
+                },
+                {
                     "title": "Software",
                     "href": "/software/",
                     "isVisible": true
