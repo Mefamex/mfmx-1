@@ -210,6 +210,9 @@ main {
     margin-top: 0;
     margin-bottom: 0;
 }
+.card p a {
+    color: rgb(200, 225, 255);
+}
 .card .last_card_updated {
     margin-left: auto;
     width: fit-content;
