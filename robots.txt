@@ -1,12 +1,34 @@
+# MEFAMEX Website Robots.txt Configuration
+# Updated: 2024-12-21
+# Website: https://mefamex.com
+
+# Global Rules
 User-agent: *
 Allow: /
-Disallow: /src
-Disallow: /py
-Disallow: /archive
+Allow: /sitemap.xml
+Allow: /blog/
+Allow: /projects/
+Allow: /about/
+Allow: /contact/
+Allow: /cv/
 
+# Disallow Directories
+Disallow: /src/
+Disallow: /py/
+Disallow: /archive/
+Disallow: /assets/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /*?*
+
+# Crawl Settings
+Crawl-delay: 10
+
+# Clean Parameters
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content
+
+# Sitemaps (HTTPS Only)
 Sitemap: https://mefamex.com/sitemap.xml
 Sitemap: https://mefamex.com/sitemap-projects.xml
 Sitemap: https://mefamex.com/sitemap-blog.xml
-Sitemap: http://mefamex.com/sitemap.xml
-Sitemap: http://mefamex.com/sitemap-projects.xml
-Sitemap: http://mefamex.com/sitemap-blog.xml
