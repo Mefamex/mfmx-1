@@ -1,7 +1,36 @@
 {
     "name": "mefamex",
     "version": "1.0.0",
-    "description": "Personal website and portfolio",
-    "author": "Mefamex, Mehmet Akif AKKOÇ",
-    "homepage": "https://mefamex.com/"
+    "description": "MEFAMEX - Kişisel Web Sitesi | Blog, Projeler, CV, İletişim",
+    "author": {
+        "name": "Mehmet Akif AKKOÇ",
+        "email": "info@mefamex.com",
+        "url": "https://mefamex.com"
+    },
+    "homepage": "https://mefamex.com",
+    "private": false,
+    "license": "MIT",
+    "keywords": [
+        "mefamex",
+        "portfolio",
+        "personal-website",
+        "blog",
+        "projects",
+        "cv",
+        "contact",
+        "about",
+        "software",
+        "technology",
+        "science",
+        "programming",
+        "development",
+        "artificial-intelligence",
+        "machine-learning",
+        "deep-learning",
+        "data-science",
+        "cyber-security",
+        "scripts",
+        "mehmet-akif-akkoc",
+        "mehmet-akif-akkoç"
+    ]
 }

@@ -106,6 +106,11 @@
                     <h3>İçerik Yükleme Hızlandırması</h3>
                     <p>Bir medya kaynağına hızlı bir bağlantı kurulması için kullanılan bir etiket olup, sayfa yüklenmeden önce DNS çözümlemesi ve TLS el sıkışması yapılmasını sağlar. Bu, sayfa yüklenirken medya kaynaklarına bağlantı kurmanın hızını artırabilir.</p>
                     <code>&lt;link rel="preload" as="image" type="image/png" href="./images/picture.png" /&gt;</code>
+                    <pre><code>&lt;picture id="background_img"&gt;
+    &lt;source srcset="./image/picture.webp" type="image/webp"/&gt;
+    &lt;img src="./image/picture.png" alt="xxx" loading="lazy" decoding="async"/&gt;
+&lt;/picture&gt;
+                    </code></pre>
                 </section>
                 <section>
                     <h2>BASE</h2>

@@ -41,3 +41,116 @@ bir şey varsa vardır, yokluğu vardır. yokluğu da yoktur
 
         <!-- Security Headers -->
         <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self';">-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+    "menu": [
+        {
+            "title": "ANASAYFA",
+            "href": "https://mefamex.com/",
+            "active": true,
+            "isVisible": true,
+            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+            "description": "MEFAMEX - Kişisel Web Sitesi"
+        },
+        {
+            "title": "Ana Sayfalar",
+            "isVisible": true,
+            "submenu": [
+                {
+                    "title": "HAKKINDA",
+                    "href": "https://mefamex.com/about/",
+                    "isVisible": true,
+                    "description": "Website Hakkında"
+                },
+                {
+                    "title": "İLETİŞİM",
+                    "href": "https://mefamex.com/contact/",
+                    "isVisible": true,
+                    "description": "İletişim ve Sosyal Medya" 
+                },
+                {
+                    "title": "CV",
+                    "href": "https://mefamex.com/cv/",
+                    "isVisible": true,
+                    "description": "Özgeçmiş"
+                }
+            ]
+        },
+        {
+            "title": "İçerik",
+            "isVisible": true,
+            "submenu": [
+                {
+                    "title": "BLOG",
+                    "href": "https://mefamex.com/blog/",
+                    "isVisible": true,
+                    "description": "Teknoloji ve Yazılım Blogu"
+                },
+                {
+                    "title": "PROJELER",
+                    "href": "https://mefamex.com/projects/",
+                    "isVisible": true,
+                    "description": "Kişisel Projeler",
+                    "submenu": [
+                        {
+                            "title": "Dizin Listeleme",
+                            "href": "https://mefamex.com/projects/dizin_listeleme/",
+                            "isVisible": true,
+                            "description": "Python Dizin Listeleme Aracı"
+                        },
+                        {
+                            "title": "Kali Linux",
+                            "href": "https://mefamex.com/projects/kali_linux/",
+                            "isVisible": true,
+                            "description": "Kali Linux Notları"
+                        },
+                        {
+                            "title": "HTML/CSS Kitaplığı", 
+                            "href": "https://mefamex.com/projects/html_css_book/",
+                            "isVisible": true,
+                            "description": "Web Geliştirme Referansı"
+                        },
+                        {
+                            "title": "Python To Exe",
+                            "href": "https://mefamex.com/projects/python_to_exe/",
+                            "isVisible": true,
+                            "description": "Python EXE Dönüştürücü"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Özel Projeler",
+            "isVisible": true,
+            "submenu": [
+                {
+                    "title": "The Mefamex Project",
+                    "href": "https://mefamex.com/the_mefamex_project/",
+                    "isVisible": true,
+                    "description": "Yapay Zeka Projesi",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
+                },
+                {
+                    "title": "Yazılım Kılavuzu",
+                    "href": "https://mefamex.com/software/",
+                    "isVisible": true,
+                    "description": "Yazılım Dilleri ve Araçları"
+                }
+            ]
+        }
+    ]
+}
