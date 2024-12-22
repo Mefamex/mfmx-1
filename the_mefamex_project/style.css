@@ -142,25 +142,21 @@ main #wellcome {
     }
 }
 
-main #talimatlar {
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
+main #talimatlar ul , main #talimatlar ul li{
+    list-style: none;
+    padding-left: 0;
 }
-main #yetenekler {
-    ol {
-        list-style: none;
-        padding-left: 0;
-        h3 {
-            margin-block: 2rem 0;
-            font-size: 2rem;
-        }
-    }
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
+main #yetenekler ol, main #yetenekler ol li {
+    list-style: none;
+    padding-left: 0;
+}
+main #yetenekler ol h3 {
+    margin-block: 2rem 0;
+    font-size: 2rem;
+}
+main #yetenekler ul , main #yetenekler ul li{
+    list-style: none;
+    padding-left: 0;
 }
 #page_label {
     display: flex;
