@@ -1,32 +1,73 @@
-# MEFAMEX Website Robots.txt Configuration
-# Updated: 2024-12-21
-# Website: https://mefamex.com
+# MEFAMEX Website Robots.txt Configuration 
+# Updated: 2024-12-21 
+# Website: https://mefamex.com 
+# Author: MEFAMEX 
+# Contact: info@mefamex.com 
 
 # Global Rules
 User-agent: *
 Allow: /
-Allow: /sitemap.xml
-Allow: /blog/
-Allow: /projects/
 Allow: /about/
+Allow: /blog/
 Allow: /contact/
 Allow: /cv/
+Allow: /games/
+Allow: /projects/
+Allow: /software/
+Allow: /the_mefamex_project/
+Allow: /sitemap.xml
 
-# Disallow Directories
+# Security Restrictions
 Disallow: /src/
 Disallow: /py/
 Disallow: /archive/
 Disallow: /assets/
 Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /temp/
 Disallow: /*.json$
 Disallow: /*.txt$
+Disallow: /*.xml$
 Disallow: /*?*
+Disallow: /*&
+Disallow: /*.php$
+Disallow: /*.asp$
+Disallow: /*.aspx$
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /tag/
+Disallow: /*?s=*
 
-# Crawl Settings
+# Media Files
+Allow: /*.html$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.webp$
+
+
+# Specific Bot Rules
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+# Bing Bot Rules
+User-agent: Bingbot
+Crawl-delay: 10
+
+# Yandex Bot Rules
+User-agent: Yandex
+Crawl-delay: 10
+
+# Other Bots
+User-agent: *
 Crawl-delay: 10
 
 # Clean Parameters
-Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gclid
 
 # Sitemaps (HTTPS Only)
 Sitemap: https://mefamex.com/sitemap.xml
