@@ -33,7 +33,7 @@
 
 # ROBOTS
 `<meta name="robots" content="all" /> kullanma` 
-`<meta name="robots" content="index, follow" />`
+`<meta name="robots" content="index, follow, max-image-preview:large" />`
 
 # KEYWORDS
 `<meta name="keywords" content="MEFAMEX, mfmc-58, Mehmet Akif Akkoç, yazılım geliştirme, özgeçmiş, sosyal medya, teknoloji" />`
