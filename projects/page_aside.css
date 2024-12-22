@@ -79,7 +79,7 @@ body {
 }
 #main_container #nav {
     flex-grow: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 15rem;
     height: auto;
@@ -237,13 +237,24 @@ p {
         }
     }
 }
+pre {
+    width: fit-content;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 0.3rem;
+    margin: 0;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
 code {
-    width: auto;
+    width: fit-content;
     height: auto;
     display: inline-block;
     font-size: 0.9em;
     line-height: 1.4;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Consolas', monospace;
     color: inherit;
     overflow: auto;
     white-space: pre-wrap;
