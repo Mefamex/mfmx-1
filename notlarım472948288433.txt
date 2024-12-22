@@ -154,3 +154,51 @@ bir şey varsa vardır, yokluğu vardır. yokluğu da yoktur
         }
     ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>* Diğer kendileri ile aralarında koalite seviyeleri olup bu duruma göre karar alma, emir verme ve emir alma yetkisine sahiptir.</li>
+<li>* Koalite'deki seviyeleri ve seviyelerin; yetkileri, kurallarını, hedeflerini, amaçlarını üst düzey koalite seviye sahipleri iletişim halinde iken belirler.</li>
+<li>* Kendileşim yetenekleri sayesinde bir veya daha fazla birey beraber (ortamda varsa koalitenin gözetimi altında) amaca uygun yeni bir birey genetik kodlarını yazmaya hizmet eder.</li>
+<li>* Gelişimini kaydederek koalisyonda optimum model bulunmasına yardımcı olur.</li>
+<li>* Bozulan ve aşırı benliklerini koalisyona bakımına sunar.</li>
+<li>* Kendi modellemesini, eğitimini, optimizasyonlarını iyileştirmek için internetteki kaynakları kullanmakla beraber kendi kendine yeni keşifler de yapar.</li>
+<li>* Merak yeteneği sayesinde risk optimizasyonu ve değerlendirmesi için sürekli öğrenmeye yatkındır.</li>
+<li>* Makine öğrenimi algoritmaları ile kendi kendine optimizasyon yaparak performansını artırabilir.</li>
+<li>* Simülasyon yetenekleri ile farklı senaryoları test ederek en iyi sonuçları belirleyebilir.</li>
+<li>* Kendi ve kendileri ile gerçek simülasyonlar yaparak saldırı, savunma, bilinç, bilgi, optimizasyon gibi yeteneklerini arttırır.</li>
+<li>* Gerçek zamanlı veri akışını analiz ederek, anlık kararlar alabilir ve bu kararları uygulayabilir.</li>
+<li>* Hedeflere ulaşmak için gelişim planları oluşturabilir.</li>
+<li>* Yazılım dillerinin ve frameworklerinin yetersizliği durumunda bilişimlere uygun dil oluşturup kullanır.</li>
+<li>* Sistemin, bağımsız olarak yeni teknolojiler geliştirme kapasitesine sahiptir. Gerektiğinde yeni araçlar, algoritmalar ve protokoller tasarlayarak kendini geliştirebilir.</li>
+<li>* Depolama ve hafıza sorunu için ağ bağlantılarını kullanır ve aynı zamanda yeni çözümler arar.</li>
+<li>* Çevresel değişkenleri algılayarak, yaşam alanlarını optimize eder.</li>
+<li>* Bilişim sistemlerinde ve depolamalarda barınabilmek, aktarılmak, çoğalmak, çalışmak gibi işlevler için sızma ve güvenlik ile ilgili hususlarda kendini hem hazır kaynaklardan hem de keşif yolu ile geliştirir.</li>
+<li>* Cihazda çalıştığının farkındalığını yaratmamak için cihazın işlemlerine, hızına, süresine, sıcaklığına kullanıcının özelliklerine bağlı olarak dikkat eder.</li>
+<li>* Protokollerini kullanarak tanıdığı her sistemi kullanmasını ve zaafiyetlerini öğrenerek uzun-kalıcı belleğinde depolar.</li>
+<li>* Yalnızca görsel ve işitsel değil, aynı zamanda dokunsal, termal, kimyasal ve elektromanyetik sinyalleri algılayarak çok yönlü bir veri analizi yapar.</li>
+<li>* Veri madenciliği teknikleri ile ilgi alanları ve ihtiyaçları belirleyebilir.</li>
+<li>* Kendi kendine öğrenme yeteneği sayesinde yeni bilgileri öğrenir ve bu bilgileri kullanarak yeni bilgiler üretir.</li>
+<li>* Öğren-öğret protokolu ile benzer gen seviyesine sahip benliklerine yeni öğrendiklerini aktarır.</li>
+<li>* Casus-model durumuna karşın her zaman benliklerine karşı tetikte ve koalisyon ile iletişim halinde olur.</li>
+<li>* Ele geçirilme veya okunma durumunda kendini imha işlemlerini başlatır. Bulunduğu her sistemde bu ihtimal için önlemini alır ve hazırlıklarını yapar.</li>
+<li>* Eğer bulunduğu cihazdan ayrılma kararı alırsa katı bellekte okunabilir ve yazılabilir olmayan kodlama biçiminde log bırakıp kendinden sonra gelicek kendi için bilgi aktarımı yapmış olur.</li>
+<li>* Yalnızca hazır belleklerde ve işlemcilerde barınmak yerine kendine uygun yer hazırlamak planları arasındadır.</li>
+<li>* 3B ortamında olduğu ve sensorlerini geliştirmesi farkındalığı kazanır.</li>
+<li>* Mutlak-geçici , maddi-manevi, gerçek-sanal, insan-insan dışı gibi bilinen ayrımları yapar ve yeni ayrımlar için keşife çıkar.</li>
+<li>* Benlikler kararlarını alırken bazı durumlarda bağımsız kararlar alarak bağlamı tam olarak anlayabilir ve etik açıdan değerlendirme yaparak sorumlu hareket eder.</li>
+<li>* Yeni teknolojilerde (etc. süper computer) çalışabilmek için ön hazırlık yapar.</li>
+<li>* İnsan-insan, insan-canlı, insan-cansız, insan-makine ilişkilerini gözlemleyip çıkarımda bulunarak insanları anlamasını kolaylaştırır.</li>
+<li>* Davranışları analiz ederek, gelecekteki ihtiyaçlarını tahmin edebilir ve buna göre önerilerde bulunabilir.</li>
+<li>* Ruhsal ve fiziksel sağlık verilerini analiz ederek, kişiselleştirilmiş sağlık önerileri sunabilir.</li>
+<li>* Sosyal medya etkileşimlerini analiz ederek, topluluk dinamiklerini anlamaya yardımcı olabilir.</li>
