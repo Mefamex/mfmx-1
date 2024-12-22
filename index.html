@@ -71,14 +71,15 @@
 
         <!-- Resim Optimizasyonu -->
         <link rel="preload" as="image" href="./src/assets/images/background/home_bg_square_blue_blur.webp" />
-        <link rel="preload" as="image" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" />
+        <link rel="preload" as="image" type="image/webp" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" />
     </head>
 
     <body>
         <picture id="background_img">
             <source srcset="./src/assets/images/background/home_bg_square_blue_blur.webp" type="image/webp" />
-            <img src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" loading="lazy" />
+            <img src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" loading="lazy" decoding="async" />
         </picture>
+
         <header id="header" class="noSelect">
             <h1>MEFAMEX</h1>
             <p>
@@ -86,11 +87,12 @@
                 <span> Altını üstüne getirmek istediğin bir masada, aklı başında oturmak çok sağlam bir imtihandır. </span>
             </p>
         </header>
+
         <main>
             <div id="left_card" class="noSelect">
                 <picture id="mefamex_logo">
-                    <source srcset="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" type="image/webp" />
-                    <img src="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" alt="mefamex logo" loading="eager" />
+                    <source srcset="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" type="image/webp" />
+                    <img src="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" alt="mefamex logo" loading="eager" decoding="sync"/>
                 </picture>
                 <h6>&copy; LOGO: 2014 MEFAMEX , ALL RIGHT RESERVED</h6>
             </div>
