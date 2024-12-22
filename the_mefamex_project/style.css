@@ -84,7 +84,7 @@ main {
                 border-radius: 0.5rem 1rem 1rem 0.5rem;
                 &:hover {
                     text-shadow: 0 0 0.02em rgb(0, 200, 250);
-                    background-color: rgba(0, 0, 0, 0.03);
+                    background-color: rgba(0, 0, 0, 0.05);
                 }
                 b {
                     font-size: 1.1em;
@@ -148,11 +148,25 @@ main #talimatlar {
         padding-left: 0;
     }
 }
+main #yetenekler {
+    ol {
+        list-style: none;
+        padding-left: 0;
+        h3 {
+            margin-block: 2rem 0;
+            font-size: 2rem;
+        }
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
 #page_label {
     display: flex;
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     color: white;
     font-size: 0.1rem;
     background-color: black;
@@ -182,7 +196,7 @@ main #talimatlar {
         margin-inline: 0;
     }
     #page_label {
-        left: 5vw;
+        right: 5vw;
         font-size: 1.5vw;
     }
 }
