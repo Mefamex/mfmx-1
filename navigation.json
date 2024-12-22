@@ -2,78 +2,95 @@
     "menu": [
         {
             "title": "Home",
-            "href": "/",
+            "href": "https://mefamex.com/",
             "active": true,
             "isVisible": true,
-            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png",
-            "icons": {
-                "small": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
-                "medium": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
-                "large": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
-            }
+            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+            "description": "MEFAMEX - Kişisel Web Sitesi"
         },
         {
             "title": "Pages",
             "isVisible": true,
+            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
             "submenu": [
                 {
-                    "title": "About",
-                    "href": "/about/",
+                    "title": "HAKKINDA",
+                    "href": "https://mefamex.com/about/",
                     "isVisible": true,
-                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png"
+                    "description": "Website Hakkında",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 },
                 {
-                    "title": "Contact",
-                    "href": "/contact/",
+                    "title": "İLETİŞİM",
+                    "href": "https://mefamex.com/contact/",
                     "isVisible": true,
-                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png"
+                    "description": "İletişim ve Sosyal Medya",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 },
                 {
                     "title": "Blog",
-                    "href": "/blog/",
-                    "isVisible": true
+                    "href": "https://mefamex.com/blog/",
+                    "isVisible": true,
+                    "description": "Teknoloji, Bilim, Yazılım Bloğu",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 },
                 {
                     "title": "CV",
-                    "href": "/cv/",
-                    "isVisible": true
+                    "href": "https://mefamex.com/cv/",
+                    "isVisible": true,
+                    "description": "Özgeçmiş",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 },
                 {
                     "title": "Projects",
-                    "href": "/projects/",
+                    "href": "https://mefamex.com/projects/",
                     "isVisible": true,
+                    "description": "Kişisel Projeler",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "submenu": [
                         {
                             "title": "Dizin Listeleme",
-                            "href": "/projects/dizin_listeleme/",
-                            "isVisible": true
+                            "href": "https://mefamex.com/projects/dizin_listeleme/",
+                            "isVisible": true,
+                            "description": "Python Dizin Listeleme Aracı",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                         },
                         {
                             "title": "Kali Linux",
-                            "href": "/projects/kali_linux/",
-                            "isVisible": true
+                            "href": "https://mefamex.com/projects/kali_linux/",
+                            "isVisible": true,
+                            "description": "Kali Linux Notları",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                         },
                         {
-                            "title": "Html-Css Kitaplığı",
-                            "href": "/projects/html_css_book/",
-                            "isVisible": true
+                            "title": "HTML/CSS Kitaplığı",
+                            "href": "https://mefamex.com/projects/html_css_book/",
+                            "isVisible": true,
+                            "description": "Web Geliştirme Referansı, SEO, HTML, CSS",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                         },
                         {
                             "title": "Python To Exe",
-                            "href": "/projects/python_to_exe/",
-                            "isVisible": true
+                            "href": "https://mefamex.com/projects/python_to_exe/",
+                            "isVisible": true,
+                            "description": "Python EXE Dönüştürücü",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                         }
                     ]
                 },
                 {
                     "title": "The Mefamex Project",
-                    "href": "/the_mefamex_project/",
-                    "isVisible": true
+                    "href": "https://mefamex.com/the_mefamex_project/",
+                    "isVisible": true,
+                    "description": "MEFAMEX Yapay Zeka Projesi",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 },
                 {
                     "title": "Software",
-                    "href": "/software/",
-                    "isVisible": true
+                    "href": "https://mefamex.com/software/",
+                    "isVisible": true,
+                    "description": "Yazılım Dilleri ve Araçları",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 }
             ]
         }
