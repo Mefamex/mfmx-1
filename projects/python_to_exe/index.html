@@ -182,9 +182,7 @@
                 <section id="section-8">
                     <h2>8) PyInstaller’ın spec Dosyasını Kullanma</h2>
                     <p>İlk çalıştırmada .spec adında bir dosya oluşturulur. Bu dosyayı düzenleyerek daha gelişmiş ayarlar ekleyebilirsin.</p>
-                    <code>
-                        <pre>
-a = Analysis(['proje.py'],
+                    <pre><code>a = Analysis(['proje.py'],
     pathex=[],
     binaries=[],
     datas=[('resim.png', '.')],  # Ek dosya ekleme
@@ -195,9 +193,7 @@ a = Analysis(['proje.py'],
     win_no_prefer_redirects=False,
     win_private_assemblies=False,
     cipher=None,
-    noarchive=False)</pre
-                        >
-                    </code>
+    noarchive=False)</code></pre>
                     <p>PyInstaller'ı .spec dosyasını kullanarak çalıştırmak için:</p>
                     <code>PyInstaller proje.spec</code>
                 </section>
