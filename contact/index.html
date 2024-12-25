@@ -58,6 +58,12 @@
         <meta name="twitter:type" content="website" />
         <meta name="twitter:date" content="2024-12-14T02:00:00Z" />
 
+        <!-- Security headers -->
+        <meta name="csrf-token" content="{{ csrf_token }}">
+        <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
         <!-- Schema.org Social Media Links -->
         <script type="application/ld+json">
             {
@@ -92,7 +98,7 @@
             </fieldset>
             <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0" marginwidth="0" data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
         </main>
-        <script src="../src/components/importHeaderFooter.js" type="module" defer></script>
+        <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
         <script type="module">
             document.addEventListener("DOMContentLoaded", () => {
                 const observer = new IntersectionObserver((entries) => {
