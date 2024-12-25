@@ -8,8 +8,8 @@
         <!-- SEO Meta Etiketleri -->
         <title>CONTACT - MEFAMEX</title>
         <meta name="author" content="mefamex" />
-        <meta name="description" content="Sosyal media - iletişim Formu | Bana buralardan ulaşabilirsiniz." />
-        <meta name="keywords" content="" />
+        <meta name="description" content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
+        <meta name="keywords" content="mefamex, iletişim, contact, sosyal medya, github mefamex, linkedin mefamex, instagram mefamex, twitter mefamex, youtube mefamex, iletişim formu, mail, mehmet akif akkoç, software developer, yazılım geliştirici, web developer, web tasarım" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
 
         <!-- Preconnect ve DNS Prefetch -->
@@ -22,6 +22,10 @@
         <!-- Stil Optimizasyonu -->
         <link rel="stylesheet" type="text/css" href="style.css" />
 
+        <!-- Performans için preload -->
+        <link rel="preload" href="style.css" as="style" />
+        <link rel="preload" href="../src/components/importHeaderFooter.js" as="script" />
+
         <!-- favicon set -->
         <link rel="icon" sizes="16x16" href="https://mefamex.com/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
         <link rel="icon" sizes="32x32" href="https://mefamex.com/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -33,7 +37,7 @@
 
         <!-- Open Graph Meta Etiketleri -->
         <meta property="og:title" content="Mefamex - CONTACT" />
-        <meta property="og:description" content="Sosyal media - iletişim Formu | Bana buralardan ulaşabilirsiniz." />
+        <meta property="og:description" content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
         <meta property="og:creator" content="@mefamex" />
         <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
         <meta property="og:url" content="https://mefamex.com/contact/" />
@@ -48,7 +52,7 @@
         <meta name="twitter:site" content="Mefamex" />
         <meta name="twitter:creator" content="@mefamex" />
         <meta name="twitter:title" content="Mefamex - CONTACT" />
-        <meta name="twitter:description" content="Sosyal media - iletişim Formu | Bana buralardan ulaşabilirsiniz." />
+        <meta name="twitter:description" content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
         <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
         <meta name="twitter:url" content="https://mefamex.com/contact/" />
         <meta name="twitter:type" content="website" />
@@ -67,7 +71,8 @@
     </head>
 
     <body>
-        <main>
+        <main id="main-content">
+            <h1>İletişim | Mefamex</h1>
             <fieldset>
                 <legend>MAIL</legend>
                 <a href="mailto:info@mefamex.com" type="mailto">info@mefamex.com</a>
@@ -86,20 +91,32 @@
                 </ul>
             </fieldset>
             <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0" marginwidth="0" data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
-            <script>
-                function resizeIframe(ifframe) {
-                    ifframe.style.height = ifframe.contentWindow.document.body.scrollHeight + "px";
-                }
-                document.addEventListener("DOMContentLoaded", () => {
-                    setTimeout(() => {
-                        const iframe = document.getElementById("ContactForm");
-                        iframe.src = iframe.getAttribute("data-src");
-                        resizeIframe(iframe);
-                    }, 1000);
-                });
-            </script>
         </main>
-
-        <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+        <script src="../src/components/importHeaderFooter.js" type="module" defer></script>
+        <script type="module">
+            document.addEventListener("DOMContentLoaded", () => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const iframe = entry.target;
+                            iframe.src = iframe.dataset.src;
+                            observer.unobserve(iframe);
+                        }
+                    });
+                });
+                const iframe = document.getElementById("ContactForm");
+                observer.observe(iframe);
+            });
+            /*function resizeIframe(ifframe) {
+                ifframe.style.height = ifframe.contentWindow.document.body.scrollHeight + "px";
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+                setTimeout(() => {
+                    const iframe = document.getElementById("ContactForm");
+                    iframe.src = iframe.getAttribute("data-src");
+                    resizeIframe(iframe);
+                }, 1000);
+            });*/
+        </script>
     </body>
 </html>
