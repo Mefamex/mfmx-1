@@ -82,7 +82,7 @@ main {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    height: fit-content;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 0;

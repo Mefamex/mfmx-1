@@ -263,6 +263,9 @@
         &lt;!-- Canonical Link --&gt;
         &lt;link rel="canonical" href="https://example.com/" /&gt;
         
+        &lt;!-- Site Haritası --&gt;
+        &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;
+
         &lt;!-- Stil Optimizasyonu --&gt;
         &lt;link rel="stylesheet" href="./src/styles/home.css"/&gt;
         
@@ -385,6 +388,10 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                 <section id="sitemap_xml_example">
                     <h2>BASİT BİR SİTE /sitemap.xml örneği</h2>
                     <p>Anadizindeki <code>/sitemap.xml</code> dosyası, arama motorlarının sitenizin hangi sayfalarını dizine ekleyebileceğini belirler. Bu dosya, sitenizin SEO'sunu iyileştirmek ve arama motorlarının sitenizi daha iyi anlamasına yardımcı olmak için önemlidir.</p>
+                    <p>
+                        Html sayfanızın <code>head</code> tagına aşağıdaki kodu ekleyin. <br />
+                        <code>&lt;!-- Site Haritası --&gt; &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;</code>
+                    </p>
                     <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

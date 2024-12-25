@@ -25,7 +25,6 @@ bir şey varsa vardır, yokluğu vardır. yokluğu da yoktur
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com/" },
-                    { "@type": "ListItem", "position": 2, "name": "Index", "item": "https://mefamex.com/index.html" },
                     { "@type": "ListItem", "position": 3, "name": "CV", "item": "https://mefamex.com/cv/" },
                     { "@type": "ListItem", "position": 4, "name": "Hakkımda", "item": "https://mefamex.com/about/" },
                     { "@type": "ListItem", "position": 5, "name": "Blog", "item": "https://mefamex.com/blog/" },
