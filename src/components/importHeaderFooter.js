@@ -15,11 +15,9 @@ function CreateFooter() {
     document.head.appendChild(link);
 
     // Build the footer
-    footer.id = "footer"; footer.innerHTML = "";
-
-    const footerText = document.createElement("h1"); footer.appendChild(footerText);
-    footerText.id = "footerText";
-    footerText.innerHTML = "&copy; 2024 MEFAMEX , ALL RIGHT RESERVED";
+    footer.id = "footer"; footer.innerHTML = `
+    <h1 id="footerText">&copy; 2024 MEFAMEX , ALL RIGHT RESERVED</h1>
+    `;
 
     /*const style = document.createElement('style');style.innerHTML = ``;footer.appendChild(style); */
 }
@@ -86,11 +84,11 @@ function CreateHeader() {
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBarHidden.appendChild(temp_item);
         temp_item.textContent = item.text; temp_item.href = item.link;
-        
+
     })
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 
-    
+
     /*const style = document.createElement('style');style.innerHTML = ``;header.appendChild(style);*/
 
 }
