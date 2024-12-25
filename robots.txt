@@ -6,6 +6,7 @@
 
 # Global Rules
 User-agent: *
+Crawl-delay: 10
 Allow: /
 Allow: /about/
 Allow: /blog/
@@ -60,10 +61,6 @@ Crawl-delay: 10
 
 # Yandex Bot Rules
 User-agent: Yandex
-Crawl-delay: 10
-
-# Other Bots
-User-agent: *
 Crawl-delay: 10
 
 # Clean Parameters
