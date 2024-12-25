@@ -1,0 +1,42 @@
+<!-- Stil dosyaları -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Favicon ve İkonlar -->
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+<!-- Alternatif Sayfalar -->
+<link rel="alternate" href="mobile.html" media="only screen and (max-width: 640px)">
+<link rel="alternate" hreflang="tr" href="https://site.com/tr/">
+<link rel="canonical" href="https://site.com/sayfa/">
+
+<!-- Önyükleme ve Performans -->
+<link rel="preload" href="font.woff2" as="font" crossorigin>
+<link rel="prefetch" href="next-page.html">
+<link rel="preconnect" href="https://example.com">
+<link rel="dns-prefetch" href="https://example.com">
+
+
+<!-- Navigasyon -->
+<link rel="next" href="sayfa2.html">
+<link rel="prev" href="sayfa1.html">
+<link rel="start" href="index.html">
+<link rel="first" href="ilk-sayfa.html">
+<link rel="last" href="son-sayfa.html">
+
+<!-- Yazar ve Lisans -->
+<link rel="author" href="yazar.html">
+<link rel="license" href="lisans.html">
+<link rel="copyright" href="telif.html">
+
+<!-- RSS ve Manifest -->
+<link rel="feed" href="rss.xml" type="application/rss+xml">
+<link rel="manifest" href="manifest.json">
+
+<!-- Arama ve OpenSearch -->
+<link rel="search" href="arama.xml" type="application/opensearchdescription+xml">
+
+<!-- Web Uygulaması -->
+<link rel="modulepreload" href="app.js">
+<link rel="shortcut icon" href="favicon.ico">
