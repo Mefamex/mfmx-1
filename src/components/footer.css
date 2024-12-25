@@ -1,25 +1,25 @@
-html {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(15, 15, 15);
-    color: white;
+html{
+    display: flex ;
+    flex-direction: column ;
+    width: 100% ;
+    min-height: 100vh ;
+    box-sizing: border-box ;
+    overflow-x: hidden ;
+    overflow-y: auto ;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: rgb(15, 15, 15) ;
+    color: white ;
 }
 body {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(15, 15, 15);
+    width: 100% ;
+    min-height: 100vh ;
+    display: flex ;
+    flex-direction: column ;
+    box-sizing: border-box ;
+    margin: 0 ;
+    padding: 0 ;
+    background-color: rgb(15, 15, 15) ;
 }
 footer {
     display: flex;
@@ -27,13 +27,13 @@ footer {
     bottom: 0px;
     width: 100%;
     height: 5dvh;
-    background-color: #0e1013;
+    background-color:  #0e1013;
     align-content: center;
     justify-content: center;
     border-top: 0.1dvh solid white;
     margin-top: 1dvh;
 }
-#footerText {
+#footerText{
     color: white;
     font-size: 1.8vh;
 }
