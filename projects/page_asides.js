@@ -38,7 +38,7 @@ function CreateAside() {
     aside.innerHTML = `
     <h2>SON DEĞİŞENLER</h2>
                 <ul>
-                <li ><a href="https://mefamex.com/projects/html_css_book/" > Project: Html-Css Kitaplığı </a> <p class="p_tooltip noSelect">22.12.2024</p></li>
+                <li ><a href="https://mefamex.com/projects/html_css_book/" > Project: Html-Css Kitaplığı </a> <p class="p_tooltip noSelect">25.12.2024</p></li>
                     <li ><a href="https://mefamex.com/projects/python_to_exe/" > Project: Python To Exe </a> <p class="p_tooltip noSelect">18.12.2024</p></li>
                     <li ><a href="https://mefamex.com/projects/kali_linux/" > Project: Kali Linux </a> <p class="p_tooltip noSelect">10.12.2024</p></li>
                     <li ><a href="https://mefamex.com/projects/dizin_listeleme/" > Project: Dizin Listeme </a> <p class="p_tooltip noSelect">09.12.2024</p></li>
