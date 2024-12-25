@@ -2,8 +2,6 @@ CreateFooter();
 CreateHeader();
 
 
-
-
 function CreateFooter() {
     // Select / Create the footer
     let footer = document.querySelector('body > footer') || document.createElement('footer');
@@ -41,7 +39,7 @@ function CreateHeader() {
 
     // Build the header
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
-    headerDivLeftSpace.style.display = "flex"; //for divleft to center
+    headerDivLeftSpace.id = "headerDivLeftSpace"; //for divleft to center
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
@@ -88,7 +86,7 @@ function CreateHeader() {
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBarHidden.appendChild(temp_item);
         temp_item.textContent = item.text; temp_item.href = item.link;
-        temp_item.style.display = "block"; temp_item.style.color = "white";
+        
     })
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 
