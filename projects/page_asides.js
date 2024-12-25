@@ -1,5 +1,21 @@
-CreateNavContainer();
-CreateAside();
+/**
+ * @fileoverview MEFAMEX pages-projects Script File
+ * @author Mefamex <info@mefamex.com>
+ * @copyright 2024 Mefamex
+ * @license MIT
+ * @version 1.0.0
+ * @see https://mefamex.com
+ * @since 02.12.2024
+ * @lastModified 10.12.2024
+ */
+
+
+(async () => {
+    await CreateNavContainer();
+    await CreateAside();
+})();
+
+
 
 /* NOT WORKING I WILL RETURN 
 importStylesheep();
@@ -11,7 +27,7 @@ function importStylesheep() {
     document.head.appendChild(link);
 }*/
 
-function CreateNavContainer() {
+async function CreateNavContainer() {
     const nav = document.getElementById("nav");
     //const nav = document.createElement('nav'); document.body.insertBefore(nav, document.getElementById("mainWellcome"));
 
@@ -31,7 +47,7 @@ function CreateNavContainer() {
 }
 
 
-function CreateAside() {
+async function CreateAside() {
     const aside = document.getElementById("aside");
     //const aside = document.createElement('aside'); document.body.appendChild(aside); 
 

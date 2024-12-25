@@ -85,6 +85,8 @@ header {
 }
 #headerDivLeftIcon {
     height: 80%;
+    width: auto;
+    object-fit: contain;
 }
 #headerDivLeftText {
     margin: 0px;
@@ -96,7 +98,7 @@ header {
 #headerDivLeft:hover #headerDivLeftText{
     text-decoration-color: rgb(255, 0, 0) !important;
 }
-.headerDivLeftHover {
+#headerDivLeft:hover {
     background-color: #0e1013 !important;
     border: 0.1rem solid white !important;
     scale:1.05;

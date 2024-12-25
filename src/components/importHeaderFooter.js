@@ -1,3 +1,15 @@
+/**
+ * @fileoverview MEFAMEX Header ve Footer Bileşenleri
+ * @author Mefamex <info@mefamex.com>
+ * @copyright 2024 Mefamex
+ * @license MIT
+ * @version 1.0.0
+ * @see https://mefamex.com
+ * @since 20.08.2024
+ * @lastModified 25.12.2024
+ */
+
+'use strict';
 (async () => {
     await CreateFooter();
     await CreateHeader();
@@ -42,20 +54,15 @@ async function CreateHeader() {
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
-    divLeft.addEventListener('click', () => { window.location.href = "https://mefamex.com" });
-    divLeft.onmouseover = () => { divLeft.classList.add("headerDivLeftHover") }
-    divLeft.onmouseout = function () { divLeft.classList.remove("headerDivLeftHover") };
 
     const divLeftIcon = document.createElement("img"); divLeft.appendChild(divLeftIcon);
     divLeftIcon.id = "headerDivLeftIcon"
 
     divLeftIcon.src = document.currentScript.src.replace('importHeaderFooter.js', '/mefamex_logo_bgb.png');
-    //divLeftIcon.src = "/src/assets/images/mfmx_icon/mefamex_logo_bgb.png";
     divLeftIcon.alt = "mefamex_logo";
 
     const divLeftText = document.createElement("h1"); divLeft.appendChild(divLeftText);
-    divLeftText.id = "headerDivLeftText";
-    divLeftText.textContent = "MEFAMEX.com";
+    divLeftText.id = "headerDivLeftText"; divLeftText.textContent = "MEFAMEX.com";
 
 
     const navBar = document.createElement("nav"); header.appendChild(navBar);
@@ -73,19 +80,16 @@ async function CreateHeader() {
         temp_item.textContent = item.text; temp_item.href = item.link;
     })
 
-
     const navBarHideButton = document.createElement("a"); header.appendChild(navBarHideButton);
     navBarHideButton.id = "navBarHideButton"; navBarHideButton.className = "unselected";
     navBarHideButton.title = "MENU";
     navBarHideButton.onclick = () => { navBarHideButton.className = navBarHideButton.className == 'unselected' ? 'selected' : 'unselected'; navBarHidden.className = navBarHideButton.className; }
-
 
     const navBarHidden = document.createElement("section"); header.appendChild(navBarHidden);
     navBarHidden.id = "navBarHidden"; navBarHidden.className = navBarHideButton.className;
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBarHidden.appendChild(temp_item);
         temp_item.textContent = item.text; temp_item.href = item.link;
-
     })
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 
