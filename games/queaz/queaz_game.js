@@ -1,3 +1,16 @@
+/**
+ * @fileoverview MEFAMEX Queaz Game Script File
+ * @author Mefamex <info@mefamex.com>
+ * @copyright 2024 Mefamex
+ * @license MIT
+ * @version 1.0.0
+ * @see https://mefamex.com
+ * @since 10.09.2024
+ * @lastModified 15.09.2024
+ */
+
+
+
 table_body = document.querySelector("#table-body"); console.log("cathced: queaz_gmae.js : table_body", table_body);
 
 
@@ -16,8 +29,8 @@ class queaz {
     change_active(element = NaN) {
         let id = element.id;
         console.log(element);
-        if (this.actives[element.sira]) {element.classList.remove("active");this.actives[element.sira]=false;}
-        else{element.classList.add("active");this.actives[element.sira]=true;}
+        if (this.actives[element.sira]) { element.classList.remove("active"); this.actives[element.sira] = false; }
+        else { element.classList.add("active"); this.actives[element.sira] = true; }
     }
 
     create_table() {
