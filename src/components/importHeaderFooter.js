@@ -8,14 +8,24 @@ function CreateFooter() {
     //const footer = document.querySelector("footer");
     let footer = document.querySelector('body > footer') || document.createElement('footer');
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
+    //footer.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/footer.css">`
+
+    
+    // CSS dosyasını yükle
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = document.currentScript.src.replace('importHeaderFooter.js', 'footer.css');
+    document.head.appendChild(link);
+
 
     footer.id = "footer"; footer.innerHTML = "";
-    //footer.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/footer.css">`
 
     const footerText = document.createElement("h1"); footer.appendChild(footerText);
     footerText.id = "footerText";
     footerText.innerHTML = "&copy; 2024 MEFAMEX , ALL RIGHT RESERVED";
 
+    /*
     //set style to footer
     const style = document.createElement('style');
     style.innerHTML = `
@@ -60,7 +70,7 @@ footer {
 }
 `;
     footer.appendChild(style);
-
+*/
 }
 
 
@@ -70,6 +80,7 @@ function CreateHeader() {
 
     header.id = "header"; header.innerHTML = "";
     //header.innerHTML = `<link rel="stylesheet" type="text/css" href="/src/components/header.css">`
+    
 
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
     headerDivLeftSpace.style.display = "flex"; //for divleft to center
