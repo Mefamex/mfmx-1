@@ -12,12 +12,12 @@
     --color-bg-main: rgb(15 15 15);
     --color-white: rgb(241, 241, 241);
     --color-white-2: rgb(170, 170, 170);
-    --scroll: 0px;
 }
 * {
     scroll-behavior: smooth;
     word-wrap: break-word;
     overflow-wrap: anywhere;
+    box-sizing: border-box;
     transition: all 0.1s ease;
 }
 

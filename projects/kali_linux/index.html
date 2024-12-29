@@ -20,6 +20,8 @@
         <link rel="canonical" href="https://mefamex.com/projects/kali_linux/" />
 
         <!-- Stil Optimizasyonu -->
+        <link rel="preload" href="style.css" as="style" />
+        <link rel="preload" href="../page_aside.css" as="style" />
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" type="text/css" href="../page_aside.css" />
 
@@ -42,10 +44,10 @@
         <meta property="og:site_name" content="MEFAMEX" />
         <meta property="og:date" content="2024-12-10T20:00:00Z" />
         <meta property="og:locale" content="tr_TR" />
-        <meta property="article:modified_time" content="2024-12-22T02:00:00Z" />
+        <meta property="article:modified_time" content="2024-12-29T02:00:00Z" />
 
         <!-- Twitter Meta Etiketleri -->
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:ca  rd" content="summary_large_image" />
         <meta name="twitter:site" content="Mefamex" />
         <meta name="twitter:creator" content="@mefamex" />
         <meta name="twitter:title" content="MEFAMEX - Kali Linux | MEFAMEX-PROJECTS" />
@@ -53,14 +55,14 @@
         <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
         <meta name="twitter:url" content="https://mefamex.com/projects/kali_linux/" />
         <meta name="twitter:type" content="website" />
-        <meta name="twitter:date" content="2024-12-10T20:00:00Z" />
+        <meta name="twitter:date" content="2024-12-10T29:00:00Z" />
     </head>
 
     <body>
         <div id="main_container">
-            <nav id="nav" name="nav"></nav>
+            <nav id="nav" name="nav" role="navigation" aria-label="Ana navigasyon"></nav>
 
-            <main>
+            <main role="main" id="main" name="main" aria-label="Ana içerik">
                 <fieldset id="page_navigation" name="page_navigation">
                     <legend>Sayfa Gezintisi</legend>
                     <ul>
@@ -75,50 +77,73 @@
                         Bu sayfada Kali Linux ile ilgili notlarımı, projelerimi ve hatırlatmalarımı paylaşacağım. Zaman içinde güncellenicek ve yeni içerikler eklenicektir.Kali Linux ile ilgili sorularınızı, önerilerinizi, eleştirilerinizi bana
                         <a href="https://mefamex.com/contact/">iletebilirsiniz</a>.
                     </p>
-                    <p>Açılış tarihi: 09.12.2024 || Son güncelleme tarihi: 10.12.2024</p>
+                    <p>Açılış tarihi: 09.12.2024 || Son güncelleme tarihi: 29.12.2024</p>
                 </section>
-                <section id="boot_menusunde_onyukleyici_secme">
-                    <h2>Kali Linux Boot Menüsünde Varsayılan Önyükleyiciyi Seçme</h2>
-                    <label>Kali Linux'ta varsayılan önyükleyiciyi (bootloader) değiştirmek için aşağıdaki adımları takip edebilirsiniz:</label>
-                    <ol>
-                        <li>
-                            GRUB Konfigürasyon Dosyasını Düzenleyin:
-                            <ul>
-                                <li><code>sudo su</code> komutunu çalıştırın ve parolanızı girin.</li>
-                                <li><code>nano /etc/default/grub</code> komutunu çalıştırın ve GRUB konfigürasyon dosyasını düzenleyin</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Varsayılan Önyükleyiciyi Belirleyin:
-                            <ul>
-                                <li>GRUB_DEFAULT değeri: Bu değer, önyükleme menüsünde varsayılan olarak seçilecek önyükleyiciyi belirler.</li>
-                                <li>ilk önyükleyici için <code>GRUB_DEFAULT=0</code> , üçüncü için <code>GRUB_DEFAULT=3</code> şeklinde ayarlayabilirsiniz.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Değişiklikleri Kaydetin ve Uygulayın:
-                            <ul>
-                                <li>Değişiklikleri kaydetin: <code>Ctrl+X</code> tuşlarına basın, ardından <code>'y' & 'enter'</code> tuşuna basarak kaydedin.</li>
-                            </ul>
-                        </li>
-                        <li>GRUB konfigürasyonunu güncelleyin: <code>update-grub</code> komutunu çalıştırın.</li>
-                    </ol>
-                    <p>Örnek: Eğer Windows'u varsayılan önyükleyici olarak seçmek istiyorsanız, GRUB_DEFAULT değerini Windows önyükleyicisinin menüdeki sırasına göre ayarlayabilirsiniz. Örneğin, Windows ikinci seçenekse: <code>GRUB_DEFAULT=1</code></p>
-                    <br />
-                    <p>Ek İpuçları:</p>
-                    <ul>
-                        <li>Önyükleme menüsünde bekleme süresi: <code>GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz. Örneğin, 10 saniye için: <code>GRUB_TIMEOUT=10</code></li>
+                <section>
+                    <h2>Kali Linux Önyükleyicisinin Yapılandırma</h2>
+                    <p>
+                        Kali Linux veya diğer Linux dağıtımlarında, /etc/default/grub dosyası, GRUB (GRand Unified Bootloader) önyükleyicisinin yapılandırma ayarlarını içeren bir dosyadır. GRUB, işletim sisteminin önyüklenmesi sırasında kullanılan bir bootloader'dır ve birden fazla işletim sistemi
+                        veya çekirdek arasında seçim yapma imkanı sunar.
+                    </p>
+                    <details id="grubConfig">
+                        <summary><h3>GRUB Yapılandırma Ayarları ve Parametreleri</h3></summary>
+                        <p><code>/etc/default/grub</code> dosyasının içeriği, GRUB'un nasıl davranacağını belirleyen çeşitli ayarları içerir. Bu dosyada genellikle aşağıdaki gibi ayarlar bulunur:</p>
+                        <ul>
+                            <li><code> GRUB_DEFAULT=2 </code> Bu ayar, GRUB menüsünde varsayılan olarak hangi işletim sisteminin seçileceğini belirtir. Burada 2 değeri, menüdeki üçüncü seçeneği (0'dan başladığı için) ifade eder.</li>
+                            <li><code> GRUB_TIMEOUT=5 </code> GRUB menüsünün ne kadar süreyle gösterileceğini belirler. Bu durumda, 5 saniye boyunca menü gösterilecektir.</li>
+                            <li><code> GRUB_DISTRIBUTOR </code> Bu ayar, işletim sisteminin adını belirler. /etc/os-release dosyasından okunarak ayarlanır. Eğer bu dosya yoksa, varsayılan olarak "Kali" değeri kullanılır.</li>
+                            <li><code> GRUB_CMDLINE_LINUX_DEFAULT="quiet" </code> Linux çekirdeği için varsayılan komut satırı parametrelerini ayarlar. "quiet" parametresi, önyükleme sırasında daha az bilgi gösterilmesini sağlar.</li>
+                            <li><code> GRUB_DISABLE_OS_PROBER=false </code> Bu ayar, GRUB'un diğer işletim sistemlerini tespit etmesini sağlar. Eğer birden fazla işletim sistemi yüklüyse, bu ayar true olarak değiştirilirse, diğer işletim sistemleri tespit edilmez.</li>
+                            <li><code> GRUB_BADRAM </code> Bellek hatalarını filtrelemek için kullanılabilir. Bu ayar, belirli bellek adreslerini belirtmek için kullanılır.</li>
+                            <li><code> GRUB_TERMINAL=console </code> Grafik terminali devre dışı bırakmak için kullanılabilir. Eğer bu satır yorumdan çıkarılırsa, GRUB yalnızca metin tabanlı bir terminalde çalışır.</li>
+                            <li><code> GRUB_GFXMODE </code> Grafik terminalde kullanılacak çözünürlüğü ayarlar. Yalnızca grafik kartının desteklediği modlar kullanılabilir.</li>
+                            <li><code> GRUB_DISABLE_LINUX_UUID </code> Linux'e <b>"root=UUID=xxx"</b> parametresinin geçilmesini devre dışı bırakmak için kullanılabilir.</li>
+                            <li><code> GRUB_DISABLE_RECOVERY </code> Kurtarma modu menü girişlerinin oluşturulmasını devre dışı bırakmak için kullanılabilir.</li>
+                            <li><code> GRUB_INIT_TUNE </code> GRUB başlangıcında bir bip sesi almak için kullanılabilir.</li>
+                        </ul>
+                    </details>
+                    <details id="boot_menusunde_onyukleyici_secme">
+                        <summary><h3>Kali Linux Boot Menüsünde Varsayılan Önyükleyiciyi Seçme</h3></summary>
+                        <p>Kali Linux'ta varsayılan önyükleyiciyi (bootloader) değiştirmek için aşağıdaki adımları takip edebilirsiniz:</p>
+                        <ol>
+                            <li>
+                                GRUB Konfigürasyon Dosyasını Düzenleyin:
+                                <ul>
+                                    <li><code>sudo su</code> komutunu çalıştırın ve parolanızı girin.</li>
+                                    <li><code>nano /etc/default/grub</code> komutunu çalıştırın ve GRUB konfigürasyon dosyasını düzenleyin</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Varsayılan Önyükleyiciyi Belirleyin:
+                                <ul>
+                                    <li>GRUB_DEFAULT değeri: Bu değer, önyükleme menüsünde varsayılan olarak seçilecek önyükleyiciyi belirler.</li>
+                                    <li>ilk önyükleyici için <code>GRUB_DEFAULT=0</code> , üçüncü için <code>GRUB_DEFAULT=3</code> şeklinde ayarlayabilirsiniz.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Değişiklikleri Kaydetin ve Uygulayın:
+                                <ul>
+                                    <li>Değişiklikleri kaydetin: <code>Ctrl+X</code> tuşlarına basın, ardından <code>'y' & 'enter'</code> tuşuna basarak kaydedin.</li>
+                                </ul>
+                            </li>
+                            <li>GRUB konfigürasyonunu güncelleyin: <code>update-grub</code> komutunu çalıştırın.</li>
+                        </ol>
+                        <p>Örnek: Eğer Windows'u varsayılan önyükleyici olarak seçmek istiyorsanız, GRUB_DEFAULT değerini Windows önyükleyicisinin menüdeki sırasına göre ayarlayabilirsiniz. Örneğin, Windows ikinci seçenekse: <code>GRUB_DEFAULT=1</code></p>
+                        <br />
+                        <p>Ek İpuçları:</p>
+                        <ul>
+                            <li>Önyükleme menüsünde bekleme süresi: <code>GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz. Örneğin, 10 saniye için: <code>GRUB_TIMEOUT=10</code></li>
 
-                        <li>
-                            Önyükleme menüsünü gizleme: <code>GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5 saniye için:
-                            <code>GRUB_HIDDEN_TIMEOUT=5</code>
-                        </li>
-                    </ul>
-                    <br />
-                    <p>Bu adımları takip ederek, Kali Linux'ta varsayılan önyükleyiciyi istediğiniz şekilde ayarlayabilirsiniz.</p>
-                    <br />
-                    <p>FULL CODE:</p>
-                    <pre><code>sudo su 
+                            <li>
+                                Önyükleme menüsünü gizleme: <code>GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5 saniye için:
+                                <code>GRUB_HIDDEN_TIMEOUT=5</code>
+                            </li>
+                        </ul>
+                        <br />
+                        <p>Bu adımları takip ederek, Kali Linux'ta varsayılan önyükleyiciyi istediğiniz şekilde ayarlayabilirsiniz.</p>
+                        <br />
+                        <p>FULL CODE:</p>
+                        <pre><code>sudo su 
 nano /etc/default/grub 
 GRUB_DEFAULT=0 
 GRUB_TIMEOUT=10 
@@ -128,9 +153,10 @@ GRUB_HIDDEN_TIMEOUT_QUIET=true
 (exit with 'ctrl-x & y & enter') 
 
 update-grub</code></pre>
+                    </details>
                 </section>
             </main>
-            <aside id="aside" name="aside"></aside>
+            <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
         </div>
         <script src="../../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
         <script src="../page_asides.js" type="text/javascript" defer></script>
