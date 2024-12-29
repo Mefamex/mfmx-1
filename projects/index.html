@@ -20,8 +20,11 @@
         <link rel="canonical" href="https://mefamex.com/projects/" />
 
         <!-- Stil Optimizasyonu -->
-        <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" type="text/css" href="page_aside.css" />
+
+        <!-- Performans için preload -->
+        <link rel="preload" href="style.css" as="style" />
+        <link rel="preload" href="../src/components/importHeaderFooter.js" as="script" />
 
         <link rel="icon" sizes="16x16" href="../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
         <link rel="icon" sizes="32x32" href="../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -57,7 +60,7 @@
 
     <body>
         <div id="main_container">
-            <nav id="nav" name="nav"></nav>
+            <nav id="nav" name="nav" role="navigation" aria-label="Ana navigasyon"></nav>
 
             <main>
                 <section id="mainWellcome">
@@ -118,7 +121,7 @@
                 </section>
             </main>
 
-            <aside id="aside" name="aside"></aside>
+            <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
         </div>
         <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
         <script src="page_asides.js" type="text/javascript" defer></script>
