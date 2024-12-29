@@ -72,10 +72,6 @@
     }
 }
 @media only screen and (max-width: 600px) {
-    #main_container {
-        flex-direction: column;
-    }
-
     #main_container main section {
         min-height: 10rem;
     }
