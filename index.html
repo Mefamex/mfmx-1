@@ -28,7 +28,7 @@
 
         <!-- Performans için preload -->
         <link rel="preload" href="./src/styles/home.css" as="style" />
-        <link rel="preload" as="image" href="./src/assets/images/background/home_bg_square_blue_blur.webp" />
+        <link rel="preload" as="image" type="image/webp" href="./src/assets/images/background/home_bg_square_blue_blur.webp" />
         <link rel="preload" as="image" type="image/webp" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" />
 
         <!-- Favicon Set -->
@@ -81,7 +81,7 @@
     <body>
         <picture id="background_img">
             <source srcset="./src/assets/images/background/home_bg_square_blue_blur.webp" type="image/webp" />
-            <img src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" loading="lazy" decoding="async" />
+            <img loading="eager" decoding="sync"  src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" />
         </picture>
 
         <header id="header" class="noSelect">
