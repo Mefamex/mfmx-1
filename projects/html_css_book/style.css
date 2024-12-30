@@ -56,6 +56,21 @@
             }
         }
     }
+    .compacts {
+        flex-basis: 80%; /* %100 */
+        flex-flow: row wrap;
+        gap: 3em 1.5em;
+        margin-block: 3em;
+        div {
+            flex: 1 1 30em;
+            display: flex;
+            flex-direction: column;
+            /*border*/
+            border: 0.1rem solid rgba(255, 255, 255, 0.3); 
+            border-radius: 2em; 
+            padding: 0.5em;
+        }
+    }
 }
 p {
     margin: 0;
