@@ -44,6 +44,7 @@ body {
     overflow: hidden;
     z-index: -99;
     will-change: transform;
+    content-visibility: auto;
 }
 #background_img img {
     width: 100%;
