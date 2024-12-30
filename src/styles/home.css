@@ -414,7 +414,6 @@ main {
         font-size: 2vw;
     }
     #main_cards {
-        flex-direction: column;
         width: 90%;
         padding-inline: 0;
         gap: 10vw;
