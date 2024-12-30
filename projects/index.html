@@ -24,9 +24,9 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
 
         <!-- Performans için preload -->
-        <link rel="preload" href="style.css" as="style" />
-        <link rel="preload" href="../src/components/header.css" as="style" />
-        <link rel="preload" href="../src/components/footer.css" as="style" />
+        <link rel="preload" as="style" importance="high" href="style.css" />
+        <link rel="preload" as="style" importance="high" href="../src/components/header.css" />
+        <link rel="preload" as="style" importance="high" href="../src/components/footer.css" />
 
         <link rel="icon" sizes="16x16" href="../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
         <link rel="icon" sizes="32x32" href="../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -129,7 +129,6 @@
         <script src="page_asides.js" type="text/javascript" defer></script>
     </body>
 </html>
-
 
 <!-- reminder
 &#10; = \n
