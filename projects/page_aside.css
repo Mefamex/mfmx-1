@@ -128,7 +128,7 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    width: 15rem;
+    width: 13em;
     height: auto;
     box-sizing: border-box;
     padding: 1rem 0.3rem 0 0.3rem;
@@ -162,6 +162,7 @@ body {
     h2 {
         text-align: center;
         margin-block: 0.5em;
+        padding-inline: 0.3em;
     }
 }
 @keyframes width-up-10-20 {
@@ -239,7 +240,6 @@ p {
 pre {
     width: fit-content;
     background: #1e1e1e;
-    color: #d4d4d4;
     padding: 0.3rem;
     margin: 0;
     border-radius: 0.5rem;

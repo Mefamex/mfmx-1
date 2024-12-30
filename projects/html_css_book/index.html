@@ -72,7 +72,7 @@
                     </ul>
                 </fieldset>
 
-                <section id="mainWellcome" name="main">
+                <section id="mainWellcome">
                     <h1>Html-Css Kitaplığı | MEFAMEX</h1>
                     <p>
                         Bu sayfada Html-Css, SEO optimizasyonu ile ilgili notlarımı, projelerimi ve hatırlatmalarımı paylaşacağım. Zaman içinde güncellenicek ve yeni içerikler eklenicektir. Html-Css, SEO ayarlamaları ile ilgili sorularınızı ve önerilerinizi bana
@@ -89,10 +89,10 @@
                     </p>
                     <p>Açılış tarihi: 12.12.2024 || Son güncelleme tarihi: 25.12.2024</p>
                 </section>
-<!--toplu olduğunu gösteren bir class ismi vericem-->
-                <section class="compacts" id="html_head_tags">
+
+                <section id="html_head_tags" class="compacts">
                     <div>
-                        <h2>HEAD TAG</h2>
+                        <h2>İLK HEAD TAGLARI</h2>
                         <code>&lt;meta charset="UTF-8" /&gt;&#10;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;&#10;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;</code>
                     </div>
                     <div>
@@ -133,29 +133,33 @@
                         <p>Alternate etiketi, bir sayfanın farklı dil sürümlerini belirtir. Bu, arama motorlarının farklı dil sürümlerini dizine eklemesine ve kullanıcılara doğru dil sürümünü sunmasına yardımcı olur.</p>
                     </div>
                 </section>
-                
-                <section class="compacts" id="html_favicon_og">
+
+                <section id="html_favicon_og" class="compacts">
                     <div>
                         <h2>FAVICON</h2>
-                        <p>
-                            <b>Favicon Nedir?</b> Favicon, bir web sitesini veya uygulamayı temsil eden küçük bir simgedir. Tarayıcı sekmelerinde, yer imlerinde, mobil cihazlarda ve arama sonuçlarında görüntülenir. Kullanıcılara görsel bir kimlik kazandırmanın yanı sıra, marka bilinirliğini
-                            artırmaya ve kullanıcı deneyimini iyileştirmeye yardımcı olur.
-                        </p>
-                        <code> rel="icon" / "shortcut icon" / "apple-touch-icon"</code>
-                        <br />
-                        <code> type="image/svg+xml" / "image/x-icon" / "image/vnd.microsoft.icon" / "image/gif" / "image/jpeg" / "image/png" / "image/bmp"</code>
-                        <br />
-                        <code> sizes="16x16" / "32x32" / "48x48" / "64x64" / "128x128" / "256x256" / "512x512"</code>
-                        <p>
-                            Genel olarak cihazların ve tarayıcıların favicon boyutları şu şekildedir: <br />
-                            &rarr; <b>standart :</b> [ico/png] 16 32 48 <br />
-                            &rarr; <b>(safari) apple-touch-icon: </b> [png] 180(önerilen), 167(ipad pro), 152(ipad) 120(iphone) <br />
-                            &rarr; <b>(android)icon: </b> [png] 512 256 192 <br />
-                            &rarr; <b>(Windows) msapplication-icon :</b> [png] 144 <br />
-                            &rarr; <b>Yandex :</b> [svg] 120(önerilen) 32 16 <br />
-                        </p>
-                        <h3>Modern Favicon Örneği</h3>
-                        <pre><code># Standart favicon
+                        <details>
+                            <summary>
+                                <p>
+                                    <b>Favicon Nedir?</b> Favicon, bir web sitesini veya uygulamayı temsil eden küçük bir simgedir. Tarayıcı sekmelerinde, yer imlerinde, mobil cihazlarda ve arama sonuçlarında görüntülenir. Kullanıcılara görsel bir kimlik kazandırmanın yanı sıra, marka bilinirliğini
+                                    artırmaya ve kullanıcı deneyimini iyileştirmeye yardımcı olur.
+                                </p>
+                            </summary>
+
+                            <code> rel="icon" / "shortcut icon" / "apple-touch-icon"</code>
+                            <br />
+                            <code> type="image/svg+xml" / "image/x-icon" / "image/vnd.microsoft.icon" / "image/gif" / "image/jpeg" / "image/png" / "image/bmp"</code>
+                            <br />
+                            <code> sizes="16x16" / "32x32" / "48x48" / "64x64" / "128x128" / "256x256" / "512x512"</code>
+                            <p>
+                                Genel olarak cihazların ve tarayıcıların favicon boyutları şu şekildedir: <br />
+                                &rarr; <b>standart :</b> [ico/png] 16 32 48 <br />
+                                &rarr; <b>(safari) apple-touch-icon: </b> [png] 180(önerilen), 167(ipad pro), 152(ipad) 120(iphone) <br />
+                                &rarr; <b>(android)icon: </b> [png] 512 256 192 <br />
+                                &rarr; <b>(Windows) msapplication-icon :</b> [png] 144 <br />
+                                &rarr; <b>Yandex :</b> [svg] 120(önerilen) 32 16 <br />
+                            </p>
+                            <h3>Modern Favicon Örneği</h3>
+                            <pre><code># Standart favicon
 &lt;link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico"&gt;
 &lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;
 
@@ -172,11 +176,13 @@
 
 # Web App Manifest
 &lt;link rel="manifest" href="/site.webmanifest"&gt;</code></pre>
+                        </details>
                     </div>
                     <div>
-                        <h2>OG</h2>
-                        <p>Open Graph (OG) metaları, sosyal medya platformlarında paylaşılan içeriklerin nasıl görüneceğini belirlemek için kullanılır. Bu metalar, paylaşılan içeriğin başlığını, açıklamasını, resmini ve diğer özelliklerini belirler.</p>
-                        <pre><code># Open Graph Meta Etiketleri
+                        <h2>OPEN GRAPH (OG)</h2>
+                        <details>
+                            <summary><p>Open Graph (OG) metaları, sosyal medya platformlarında paylaşılan içeriklerin nasıl görüneceğini belirlemek için kullanılır. Bu metalar, paylaşılan içeriğin başlığını, açıklamasını, resmini ve diğer özelliklerini belirler.</p></summary>
+                            <pre><code># Open Graph Meta Etiketleri
 &lt;meta property="og:title" content="Sayfa Başlığı" /&gt;
 &lt;meta property="og:description" content="Sayfa Açıklaması" /&gt;
 &lt;meta property="og:creator" content="@oluşturucu" /&gt;
@@ -198,128 +204,124 @@
 &lt;meta name="twitter:url" content="https://example.com/" /&gt;
 &lt;meta name="twitter:type" content="website" /&gt;
 &lt;meta name="twitter:date" content="2024-12-22T02:00:00Z" /&gt;</code></pre>
+                        </details>
                     </div>
                 </section>
 
-                <section >
-                    <br />
-                    <h3>İçerik Yükleme Hızlandırması</h3>
-                    <p>Bir medya kaynağına hızlı bir bağlantı kurulması için kullanılan bir etiket olup, sayfa yüklenmeden önce DNS çözümlemesi ve TLS el sıkışması yapılmasını sağlar. Bu, sayfa yüklenirken medya kaynaklarına bağlantı kurmanın hızını artırabilir.</p>
-                    <code>&lt;link rel="preload" as="image" type="image/png" href="./images/picture.png" /&gt;</code>
-                    <pre><code>&lt;picture id="background_img"&gt;
-    &lt;source srcset="./image/picture.webp" type="image/webp"/&gt;
-    &lt;img src="./image/picture.png" alt="xxx" loading="lazy" decoding="async"/&gt;
-&lt;/picture&gt;
-                    </code></pre>
+                <section id="html_stylesheets_scripts" class="compacts">
+                    <div>
+                        <h2>STYLESHEET</h2>
+                        <code>&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;</code>
+                        <p>
+                            <b>type :</b> CSS dosyasının türünü belirtir. Bu genellikle "text/css" olacaktır. <br />
+                            <b>href :</b> CSS dosyasının adresini belirtir. <br />
+                            <b>media :</b> CSS dosyasının hangi ortamlarda kullanılacağını belirtir. Örneğin, "screen" (ekran) veya "print" (yazdırma) olabilir. <br />
+                            <b>title :</b> CSS dosyasının başlığını belirtir. Bu, sayfada birden fazla CSS dosyası varsa kullanışlı olabilir.
+                        </p>
+                        <br />
+                        <code>&lt;link rel="preload" href="style.css" importance="high" as="style" /&gt;</code>
+                        <p>bu kod satırının eklenmesi sayesinde tarayıcı, CSS dosyasını önceden yükleyebilir ve sayfanın render edilmesini hızlandırabilir. Bu, özellikle büyük CSS dosyaları veya yavaş bağlantılar için yararlı olabilir.</p>
+                    </div>
+                    <div>
+                        <h2>SCRIPT</h2>
+                        <code>&lt;script src="/src/js/script.js" type="text/javascript" defer&gt;</code>
+                        <p><b>defer :</b>JavaScript dosyalarının yüklenmesini ve çalıştırılmasını kontrol etmek için kullanılan önemli bir araçtır. Bu atribut, tarayıcının JavaScript dosyasını HTML'in geri kalanıyla birlikte indirerek sayfanın render edilmesini engellemesini önler.</p>
+                        <code>&lt;script src="/src/js/script.js" type="text/javascript" async&gt;</code>
+                        <p>
+                            <b>async :</b> Tarayıcının JavaScript dosyasını HTML'in geri kalanıyla birlikte indirerek sayfanın render edilmesinin engellemesini önler. HTML ayrıştırması devam eder. Script paralel olarak yüklenir. Script hazır olduğunda hemen çalıştırılır. Sıralı çalışma garantisi
+                            yok. DOMContentLoaded'ı beklemez
+                        </p>
+                    </div>
                 </section>
 
-                <section id="html_stylesheets">
-                    <h2>STYLESHEET</h2>
-                    <code>&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;</code>
-                    <p>
-                        <b>type :</b> CSS dosyasının türünü belirtir. Bu genellikle "text/css" olacaktır. <br />
-                        <b>href :</b> CSS dosyasının adresini belirtir. <br />
-                        <b>media :</b> CSS dosyasının hangi ortamlarda kullanılacağını belirtir. Örneğin, "screen" (ekran) veya "print" (yazdırma) olabilir. <br />
-                        <b>title :</b> CSS dosyasının başlığını belirtir. Bu, sayfada birden fazla CSS dosyası varsa kullanışlı olabilir.
-                    </p>
-                </section>
-
-                <section id="html_scripts">
-                    <h2>SCRIPT</h2>
-                    <code>&lt;script src="/src/js/script.js" type="text/javascript" defer&gt;</code>
-                    <p><b>defer :</b>JavaScript dosyalarının yüklenmesini ve çalıştırılmasını kontrol etmek için kullanılan önemli bir araçtır. Bu atribut, tarayıcının JavaScript dosyasını HTML'in geri kalanıyla birlikte indirerek sayfanın render edilmesini engellemesini önler.</p>
-                    <code>&lt;script src="/src/js/script.js" type="text/javascript" async&gt;</code>
-                    <p>
-                        <b>async :</b> Tarayıcının JavaScript dosyasını HTML'in geri kalanıyla birlikte indirerek sayfanın render edilmesinin engellemesini önler. HTML ayrıştırması devam eder. Script paralel olarak yüklenir. Script hazır olduğunda hemen çalıştırılır. Sıralı çalışma garantisi yok.
-                        DOMContentLoaded'ı beklemez
-                    </p>
-                </section>
-
-                <section id="html_head_tags_example">
-                    <h2>HEAD TAGI ÖRNEĞİ</h2>
-                    <pre><code>&lt;!DOCTYPE html&gt;
+                <section id="examples" class="compacts">
+                    <div id="html_head_tags_example">
+                        <details>
+                            <summary><h2>HEAD TAGI Örneği</h2></summary>
+                            <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
-        
-        &lt;!-- SEO Meta Etiketleri --&gt;
-        &lt;title&gt;Page title&lt;/title&gt;
-        &lt;meta name="author" content="Yazar adı" /&gt;
-        &lt;meta name="description" content="description" /&gt;
-        &lt;meta name="keywords" content="keywords" /&gt;
-        &lt;meta name="robots" content="index, follow, max-image-preview:large" /&gt;
-        
-        &lt;!-- Preconnect ve DNS Prefetch --&gt;
-        &lt;link rel="preconnect" href="https://example.com" /&gt;
-        &lt;link rel="dns-prefetch" href="https://example.com" /&gt;
-        
-        &lt;!-- Canonical Link --&gt;
-        &lt;link rel="canonical" href="https://example.com/" /&gt;
-        
-        &lt;!-- Site Haritası --&gt;
-        &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    
+    &lt;!-- SEO Meta Etiketleri --&gt;
+    &lt;title&gt;Page title&lt;/title&gt;
+    &lt;meta name="author" content="Yazar adı" /&gt;
+    &lt;meta name="description" content="description" /&gt;
+    &lt;meta name="keywords" content="keywords" /&gt;
+    &lt;meta name="robots" content="index, follow, max-image-preview:large" /&gt;
+    
+    &lt;!-- Preconnect ve DNS Prefetch --&gt;
+    &lt;link rel="preconnect" href="https://example.com" /&gt;
+    &lt;link rel="dns-prefetch" href="https://example.com" /&gt;
+    
+    &lt;!-- Canonical Link --&gt;
+    &lt;link rel="canonical" href="https://example.com/" /&gt;
+    
+    &lt;!-- Site Haritası --&gt;
+    &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;
 
-        &lt;!-- Stil Optimizasyonu --&gt;
-        &lt;link rel="stylesheet" href="./src/styles/home.css"/&gt;
-        
-        &lt;!-- favicon set --&gt;
-        &lt;link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico"&gt;
-        &lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;
-        &lt;link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png"&gt;
-        &lt;link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"&gt;
-        &lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;
-        &lt;meta name="msapplication-TileImage" content="mstile-144x144.png"&gt;
-        &lt;meta name="msapplication-TileColor" content="#ffffff"&gt;
-                                    
-        &lt;!-- Web App Manifest  --&gt;
-        &lt;link rel="manifest" href="/site.webmanifest"&gt;
+    &lt;!-- Stil Optimizasyonu --&gt;
+    &lt;link rel="stylesheet" href="./src/styles/home.css"/&gt;
+    
+    &lt;!-- favicon set --&gt;
+    &lt;link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico"&gt;
+    &lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;
+    &lt;link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png"&gt;
+    &lt;link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"&gt;
+    &lt;link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"&gt;
+    &lt;meta name="msapplication-TileImage" content="mstile-144x144.png"&gt;
+    &lt;meta name="msapplication-TileColor" content="#ffffff"&gt;
+                                
+    &lt;!-- Web App Manifest  --&gt;
+    &lt;link rel="manifest" href="/site.webmanifest"&gt;
 
-        &lt;!-- Open Graph Meta Etiketleri --&gt;
-        &lt;meta property="og:title" content="Sayfa Başlığı" /&gt;
-        &lt;meta property="og:description" content="Sayfa Açıklaması" /&gt;
-        &lt;meta property="og:creator" content="@oluşturucu" /&gt;
-        &lt;meta property="og:image" content="https://example.com/image/favicon-144x144.png" /&gt;
-        &lt;meta property="og:url" content="https://example.com/" /&gt;
-        &lt;meta property="og:type" content="website" /&gt;
-        &lt;meta property="og:site_name" content="başlık" /&gt;
-        &lt;meta property="og:date" content="2024-12-22T02:00:00Z" /&gt;
-        &lt;meta property="og:locale" content="tr_TR" /&gt;
-        &lt;meta property="article:modified_time" content="2024-12-22T02:00:00Z" /&gt;
+    &lt;!-- Open Graph Meta Etiketleri --&gt;
+    &lt;meta property="og:title" content="Sayfa Başlığı" /&gt;
+    &lt;meta property="og:description" content="Sayfa Açıklaması" /&gt;
+    &lt;meta property="og:creator" content="@oluşturucu" /&gt;
+    &lt;meta property="og:image" content="https://example.com/image/favicon-144x144.png" /&gt;
+    &lt;meta property="og:url" content="https://example.com/" /&gt;
+    &lt;meta property="og:type" content="website" /&gt;
+    &lt;meta property="og:site_name" content="başlık" /&gt;
+    &lt;meta property="og:date" content="2024-12-22T02:00:00Z" /&gt;
+    &lt;meta property="og:locale" content="tr_TR" /&gt;
+    &lt;meta property="article:modified_time" content="2024-12-22T02:00:00Z" /&gt;
 
-        &lt;!-- Twitter Meta Etiketleri --&gt;
-        &lt;meta name="twitter:card" content="summary_large_image" /&gt;
-        &lt;meta name="twitter:site" content="başlık" /&gt;
-        &lt;meta name="twitter:creator" content="@yazar" /&gt;
-        &lt;meta name="twitter:title" content="sayfa başlığı" /&gt;
-        &lt;meta name="twitter:description" content="açıklama" /&gt;
-        &lt;meta name="twitter:image" content="https://example.com/image/picture-144x144.png" /&gt;
-        &lt;meta name="twitter:url" content="https://example.com/" /&gt;
-        &lt;meta name="twitter:type" content="website" /&gt;
-        &lt;meta name="twitter:date" content="2024-12-22T02:00:00Z" /&gt;
+    &lt;!-- Twitter Meta Etiketleri --&gt;
+    &lt;meta name="twitter:card" content="summary_large_image" /&gt;
+    &lt;meta name="twitter:site" content="başlık" /&gt;
+    &lt;meta name="twitter:creator" content="@yazar" /&gt;
+    &lt;meta name="twitter:title" content="sayfa başlığı" /&gt;
+    &lt;meta name="twitter:description" content="açıklama" /&gt;
+    &lt;meta name="twitter:image" content="https://example.com/image/picture-144x144.png" /&gt;
+    &lt;meta name="twitter:url" content="https://example.com/" /&gt;
+    &lt;meta name="twitter:type" content="website" /&gt;
+    &lt;meta name="twitter:date" content="2024-12-22T02:00:00Z" /&gt;
 
-        &lt;!-- Resim Optimizasyonu --&gt;
-        &lt;link rel="preload" as="image" type="image/png" href="./image/picture.png" /&gt;
-    &lt;/head&gt;
+    &lt;!-- Resim Optimizasyonu --&gt;
+    &lt;link rel="preload" as="image" type="image/png" href="./image/picture.png" /&gt;
+&lt;/head&gt;
 
-    &lt;body&gt;
-        &lt;header&gt;&lt;/header&gt;
-        &lt;nav&gt;&lt;/nav&gt;
-        &lt;main&gt;&lt;/main&gt;
-        &lt;aside&gt;&lt;/aside&gt;
-        &lt;footer&gt;&lt;/footer&gt;
-    &lt;/body&gt;
+&lt;body&gt;
+    &lt;header&gt;&lt;/header&gt;
+    &lt;nav&gt;&lt;/nav&gt;
+    &lt;main&gt;&lt;/main&gt;
+    &lt;aside&gt;&lt;/aside&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+&lt;/body&gt;
 &lt;/html&gt;</code></pre>
-                </section>
-
-                <section id="robots_txt_example">
-                    <h2>/robots.txt örneği</h2>
-                    <p>
-                        Anadizindeki <code>/robots.txt</code> dosyasının örneği verilmiştir. Bu dosya, arama motorlarının sitenin hangi bölümlerini dizine ekleyebileceğini ve hangi bölümleri dizine eklememesi gerektiğini belirler. Bu, sitenin SEO'sunu iyileştirmek ve arama motorlarının sitenizi daha
-                        iyi anlamasına yardımcı olmak için önemlidir.
-                    </p>
-                    <pre><code># example Website Robots.txt Configuration 
+                        </details>
+                    </div>
+                    <div id="robots_txt_example">
+                        <details>
+                            <summary><h2>/robots.txt Örneği</h2></summary>
+                            <p>
+                                Anadizindeki <code>/robots.txt</code> dosyasının örneği verilmiştir. Bu dosya, arama motorlarının sitenin hangi bölümlerini dizine ekleyebileceğini ve hangi bölümleri dizine eklememesi gerektiğini belirler. Bu, sitenin SEO'sunu iyileştirmek ve arama motorlarının
+                                sitenizi daha iyi anlamasına yardımcı olmak için önemlidir.
+                            </p>
+                            <pre><code># example Website Robots.txt Configuration 
 # Updated: 2024-12-25 
 # Website: https:// example .com 
 # Author: someone 
@@ -380,16 +382,17 @@ Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&fbclid&gcli
 # Sitemaps (HTTPS Only)
 Sitemap: https:// example .com/ sitemap.xml
 Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
-                </section>
-
-                <section id="sitemap_xml_example">
-                    <h2>/sitemap.xml örneği</h2>
-                    <p>Anadizindeki <code>/sitemap.xml</code> dosyası, arama motorlarının sitenizin hangi sayfalarını dizine ekleyebileceğini belirler. Bu dosya, sitenizin SEO'sunu iyileştirmek ve arama motorlarının sitenizi daha iyi anlamasına yardımcı olmak için önemlidir.</p>
-                    <p>
-                        Html sayfanızın <code>head</code> tagına aşağıdaki kodu ekleyin. <br />
-                        <code>&lt;!-- Site Haritası --&gt; &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;</code>
-                    </p>
-                    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                        </details>
+                    </div>
+                    <div id="sitemap_xml_example">
+                        <details>
+                            <summary><h2>/sitemap.xml Örneği</h2></summary>
+                            <p>Anadizindeki <code>/sitemap.xml</code> dosyası, arama motorlarının sitenizin hangi sayfalarını dizine ekleyebileceğini belirler. Bu dosya, sitenizin SEO'sunu iyileştirmek ve arama motorlarının sitenizi daha iyi anlamasına yardımcı olmak için önemlidir.</p>
+                            <p>
+                                Html sayfanızın <code>head</code> tagına aşağıdaki kodu ekleyin. <br />
+                                <code>&lt;!-- Site Haritası --&gt; &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;</code>
+                            </p>
+                            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
@@ -405,15 +408,16 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
     &lt;priority&gt;1.0&lt;/priority&gt; &lt;!-- Öncelik: 0.0 - 1.0  --&gt;
     &lt;/url&gt;
 &lt;/urlset&gt;</code></pre>
-                </section>
-
-                <section id="navigation_json_example">
-                    <h2>/navigation.json örneği</h2>
-                    <p>
-                        Anadizindeki <code>/navigation.json</code> dosyası, sitenizin gezinme yapısını belirler. Bu dosya, sitenizin kullanıcı deneyimini iyileştirmek ve arama motorlarının sitenizi daha iyi anlamasına yardımcı olmak için önemlidir. Bu dosya, sitenizin menüsünü, alt menülerini ve
-                        diğer gezinme öğelerini belirler.
-                    </p>
-                    <pre><code>{
+                        </details>
+                    </div>
+                    <div id="navigation_json_example">
+                        <details>
+                            <summary><h2>/navigation.json Örneği</h2></summary>
+                            <p>
+                                Anadizindeki <code>/navigation.json</code> dosyası, sitenizin gezinme yapısını belirler. Bu dosya, sitenizin kullanıcı deneyimini iyileştirmek ve arama motorlarının sitenizi daha iyi anlamasına yardımcı olmak için önemlidir. Bu dosya, sitenizin menüsünü, alt
+                                menülerini ve diğer gezinme öğelerini belirler.
+                            </p>
+                            <pre><code>{
     "menu": [
         {
             "title": "Home",
@@ -439,6 +443,21 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
         }
     ]
 }</code></pre>
+                        </details>
+                    </div>
+                </section>
+
+                <section id="image_boost">
+                    <h2>IMG HIZLANDIRMA</h2>
+                    <p>Bir resmin yüklenme süresini hızlandırmak için kullanılan birkaç etiket vardır. Bu etiketler, resmin ön yüklenmesini sağlar ve sayfanın render edilmesini hızlandırabilir. Bu, özellikle büyük resimler veya yavaş bağlantılar için yararlı olabilir.</p>
+                    <p>
+                        <code>&lt;link rel="preload" as="image" type="image/webp" importance="high" href="image.webp" /&gt;</code><br />
+                        <b>.png</b> veya <b>.jpg / .jepg</b> formatındaki resimleri <b>webp</b> formatında önce yüklemek için kullanılır. <b>head</b> tagına eklenir
+                    </p>
+                    <pre><code>&lt;picture&gt;
+    &lt;source type="image/webp" srcset="image.webp" /&gt;
+    &lt;img loading="eager" decoding="sync" importance="low" src="image.png" alt="somethingg" /&gt;
+&lt;/picture&gt;</code></pre>
                 </section>
             </main>
             <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>

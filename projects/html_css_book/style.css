@@ -10,8 +10,6 @@
 
 #main_container main {
     color: white;
-    flex-basis: 30%;
-    flex-grow: 1000;
     display: flex;
     flex-flow: row wrap;
     height: fit-content;
