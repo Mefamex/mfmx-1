@@ -25,6 +25,15 @@
     -ms-user-select: none;
     user-select: none;
 }
+.noDrag{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+.noPointer{
+    pointer-events: none;
+}
 body {
     display: grid;
     width: 100%;
@@ -100,11 +109,10 @@ main {
     top: 0;
     position: sticky;
     display: flex;
-    margin: 0 0 0 5vw;
     flex-direction: column;
+    margin: 0 0 0 5vw;
     height: auto;
     width: 20vw;
-    max-height: 10%;
     align-self: flex-start;
     justify-self: center;
     align-items: center;
@@ -412,7 +420,6 @@ main {
         width: 80vw;
         margin-block: 0;
         margin-inline: auto;
-        max-height: none;
         padding: 35vw 0 0 0;
         animation: entranceUp 0.5s normal 0.5s both;
     }
