@@ -52,8 +52,7 @@ Allow: /*.webp$
 
 # Specific Bot Rules
 User-agent: Googlebot
-Allow: /*.js$
-Allow: /*.css$
+Allow: /
 
 # Bing Bot Rules
 User-agent: Bingbot
