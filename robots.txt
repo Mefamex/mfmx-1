@@ -19,7 +19,7 @@ Allow: /the_mefamex_project/
 Allow: /sitemap.xml
 
 # Security Restrictions
-Disallow: /src/
+Disallow: /public/
 Disallow: /py/
 Disallow: /archive/
 Disallow: /assets/
