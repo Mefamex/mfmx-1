@@ -6,7 +6,7 @@
   xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
                       http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
-  <!-- Main Sitemap -->
+  <!-- Sitemap -->
   <url>
     <loc>https://mefamex.com/sitemap.xml</loc>
     <lastmod>2024-12-30T02:00:00+00:00</lastmod>
@@ -14,7 +14,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Separate Sitemaps for Projects and Blog -->
   <url>
     <loc>https://mefamex.com/sitemap-projects.xml</loc>
     <lastmod>2024-12-30T02:00:00+00:00</lastmod>
@@ -29,7 +28,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Home and Core Pages -->
+  <!-- Home Page -->
   <url>
     <loc>https://mefamex.com/</loc>
     <lastmod>2024-12-30T02:00:00+00:00</lastmod>
@@ -37,7 +36,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- About and Contact Pages (less frequent updates) -->
+  <!-- About and Contact Pages  -->
   <url>
     <loc>https://mefamex.com/about/</loc>
     <lastmod>2024-12-25T02:00:00+00:00</lastmod>
