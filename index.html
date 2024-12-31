@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="./src/styles/home.css" />
 
         <!-- Performans için preload -->
-        <link rel="preload" as="style"  type="text/css" importance="high" href="./src/styles/home.css" />
+        <link rel="preload" as="style" type="text/css" importance="high" href="./src/styles/home.css" />
         <link rel="preload" as="image" type="image/webp" importance="high" href="./src/assets/images/background/home_bg_square_blue_blur.webp" />
         <link rel="preload" as="image" type="image/webp" importance="high" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" />
 
@@ -80,8 +80,8 @@
 
     <body>
         <picture id="background_img" class="noSelect noDrag noPointer">
-            <source type="image/webp" srcset="./src/assets/images/background/home_bg_square_blue_blur.webp"  />
-            <img    loading="eager" decoding="sync" importance="low" src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" />
+            <source type="image/webp" srcset="./src/assets/images/background/home_bg_square_blue_blur.webp" />
+            <img loading="eager" decoding="sync" importance="low" src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" />
         </picture>
 
         <header id="header" class="noSelect noDrag noPointer">
@@ -98,7 +98,6 @@
                     <source srcset="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" type="image/webp" />
                     <img src="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" alt="mefamex logo" loading="eager" decoding="sync" />
                 </picture>
-                <h6>&copy; LOGO: 2014 MEFAMEX , ALL RIGHT RESERVED</h6>
             </div>
             <div id="main_cards">
                 <div id="card_about_website" class="card" title="WEBSITE HAKKINDA" aria-label="Website hakkında" tabindex="1">
@@ -142,7 +141,7 @@
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll("#main_cards .card").forEach((card, index) => {
-                    card.style.animationDelay = 0.7 + index * 0.1 + "s";
+                    card.style.animationDelay = 0.5 + index * 0.4 + "s";
                     card.style.opacity = 0;
                     card.style.cursor = "pointer";
                     setTimeout(() => (card.style.opacity = 1), 690);
