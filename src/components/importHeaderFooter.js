@@ -53,7 +53,7 @@ async function CreateHeader() {
     headerDivLeftSpace.id = "headerDivLeftSpace"; //for divleft to center
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
-    divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
+    divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com/"
 
     const divLeftIcon = document.createElement("img"); divLeft.appendChild(divLeftIcon);
     divLeftIcon.id = "headerDivLeftIcon"
