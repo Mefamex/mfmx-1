@@ -43,7 +43,6 @@ ol {
 body {
     align-items: center;
     background-color: var(--color-bg-main);
-    font-size: 1.2rem;
 }
 main {
     display: flex;
@@ -123,6 +122,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     gap: 3em 2em;
+    line-height:1.2;
     legend {
         text-align: center;
         margin-left: 0;
@@ -153,6 +153,7 @@ main {
             text-align: center;
             padding: 1em 0.3em;
             margin: 1em 0em;
+            font-size: 1.2em
             background-color: rgba(255, 255, 255, 0.05);
             border-radius: 1em;
         }
