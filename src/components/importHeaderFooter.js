@@ -72,12 +72,16 @@ async function CreateHeader() {
         { text: "ANASAYFA", link: "https://mefamex.com/" },
         { text: "HAKKIMDA", link: "https://mefamex.com/about/" },
         { text: "İLETİŞİM", link: "https://mefamex.com/contact/" },
+        { text: "PROJELER", link: "https://mefamex.com/projects/" },
         { text: "BLOG", link: "https://mefamex.com/blog/" },
-        { text: "PROJELER", link: "https://mefamex.com/projects/" }
+        { text: "ÖZGEÇMİŞ", link: "https://mefamex.com/cv/" },
+        { text: "GALERİ", link: "https://mefamex.com/galery/" }
     ]
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
         temp_item.textContent = item.text; temp_item.href = item.link;
+        console.log("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop());
+        if (window.location.pathname.includes("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
     })
 
     const navBarHideButton = document.createElement("a"); header.appendChild(navBarHideButton);

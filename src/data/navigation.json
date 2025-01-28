@@ -35,6 +35,13 @@
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 },
                 {
+                    "title": "Galeri",
+                    "href": "https://mefamex.com/galery/",
+                    "isVisible": true,
+                    "description": "Fotoğraf ve Video Galerisi",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
+                },
+                {
                     "title": "CV",
                     "href": "https://mefamex.com/cv/",
                     "isVisible": true,

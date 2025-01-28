@@ -5,7 +5,7 @@ def txtToJson():
     data = {}
     cc1, cc2 = 0, 0
 
-    with open("C:/Users/Mefamex/Desktop/mfmx-1/public/software/Yazilim_Ayrintili.txt", "r") as f:
+    with open("C:/Users/Mefamex/Desktop/mfmx-1/software/Yazilim_Ayrintili.txt", "r") as f:
         for line in f:
             line = line.strip()
             if line in ["", " ", "  ", "\n", " \n", " \n "]:
@@ -26,7 +26,7 @@ def txtToJson():
     # Sözlüğü JSON formatına dönüştür
     json_data = json.dumps(data, indent=4)
 
-    with open("C:/Users/Mefamex/Desktop/mfmx-1/public/software/output.json", "w") as f:
+    with open("C:/Users/Mefamex/Desktop/mfmx-1/software/output.json", "w") as f:
         json.dump(data, f, indent=4)
 
 
@@ -35,7 +35,7 @@ def txtToJson():
 
 
 def jsonToList():
-    with open("./public/software_lang/output.json", "r") as f:
+    with open("./software_lang/output.json", "r") as f:
         data = json.load(f)
 
     categories = []
@@ -54,7 +54,7 @@ def jsonToList():
 
 
 def jsonToJson():
-    with open("C:/Users/Mefamex/Desktop/mfmx-1/public/software/output.json", "r") as f:
+    with open("C:/Users/Mefamex/Desktop/mfmx-1/software/output.json", "r") as f:
         data = json.load(f)
 
     print(json.dumps(data, indent=4))
