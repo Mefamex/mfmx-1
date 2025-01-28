@@ -111,6 +111,7 @@ header {
     flex-direction: row;
     list-style: none;
     background-color: rgba(0, 0, 0, 0.356);
+    border: 0.1em solid rgba(255, 255, 255, 0.2);
     height: 80%;
     align-self: center;
     align-items: center;
@@ -133,6 +134,12 @@ header {
 #headerNavBar > a:hover {
     background-color: whitesmoke;
     color: black;
+}
+#headerNavBar .current_page{
+    background-color: rgba(245, 245, 245, 0.2);
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 255, 255);
+    border: 0.1em solid rgba(255, 0, 0, 0.2);
 }
 
 #navBarHideButton {
@@ -176,7 +183,7 @@ header {
     color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 60rem) {
     header {
         height: 3rem;
         position: fixed;

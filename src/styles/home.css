@@ -17,7 +17,6 @@
     box-sizing: border-box;
 }
 .noSelect {
-    /* calmayin :D yazmışlardı ama çaldım (NNB)*/
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;

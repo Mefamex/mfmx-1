@@ -50,7 +50,7 @@ sidebarShowButton.addEventListener('click', () => { if (sidebarShowButton.style.
 /*
 let jsonData = {};
 const tableBody = document.getElementById('table-body');
-fetch('/public/software/output.json')
+fetch('/software/output.json')
   .then(response => response.json()).then(data => { jsonData = data; console.log("data fetched with keys:", Object.keys(jsonData).length); createTable(jsonData, tableBody); })
   .catch(error => console.error('Error:', error));
 
