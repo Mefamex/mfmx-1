@@ -6,7 +6,7 @@ Allow: /contact
 Allow: /cv
 Allow: /games
 Allow: /projects
-Allow: /galery
+Allow: /gallery
 Allow: /software
 Allow: /the_mefamex_project
 Allow: /sitemap.xml
