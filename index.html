@@ -151,7 +151,7 @@
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll("#main_cards .card").forEach((card, index) => {
-                    card.style.animationDelay = 0.5 + index * 0.4 + "s";
+                    card.style.animationDelay = 0.5 + index * 0.15 + "s";
                     card.style.opacity = 0;
                     card.style.cursor = "pointer";
                     setTimeout(() => (card.style.opacity = 1), 690);
