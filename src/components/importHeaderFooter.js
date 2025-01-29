@@ -71,11 +71,11 @@ async function CreateHeader() {
     const navBarList = [
         { text: "ANASAYFA", link: "https://mefamex.com/" },
         { text: "HAKKIMDA", link: "https://mefamex.com/about/" },
-        { text: "İLETİŞİM", link: "https://mefamex.com/contact/" },
         { text: "PROJELER", link: "https://mefamex.com/projects/" },
         { text: "BLOG", link: "https://mefamex.com/blog/" },
+        { text: "GALERİ", link: "https://mefamex.com/gallery/" },
         { text: "ÖZGEÇMİŞ", link: "https://mefamex.com/cv/" },
-        { text: "GALERİ", link: "https://mefamex.com/galery/" }
+        { text: "İLETİŞİM", link: "https://mefamex.com/contact/" }
     ]
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
