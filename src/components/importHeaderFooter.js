@@ -80,7 +80,6 @@ async function CreateHeader() {
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
         temp_item.textContent = item.text; temp_item.href = item.link;
-        console.log("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop());
         if (window.location.pathname.includes("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
     })
 
