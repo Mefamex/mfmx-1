@@ -31,16 +31,19 @@
         &:hover {
             border-color: rgba(255, 255, 255, 0.7);
             box-shadow: 0 -0.2rem 0.1rem rgba(255, 255, 255, 0.8), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.8), 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-            background-color: rgba(50, 100, 255, 0.03);
+            background-color: rgba(10, 10, 10);
         }
         ul {
+            list-style: none;
+            padding: 0;
             li {
                 transition: all 0.2s normal;
-                padding-block: 0.3rem;
+                padding: 0.3rem 0.5rem;
                 border-radius: 2rem;
-                a {
-                    display: flex;
-                    width: 100%;
+                height: min-content;
+                &::before {
+                    content: " ■ "; 
+                    color: rgb(123, 255, 255);
                 }
             }
             li:hover {
@@ -63,7 +66,7 @@
         }
         p {
             line-height: 1.4;
-            margin-block: 0.2em;
+            margin-block: 0.4em;
             &::before {
                 content: " ■ ";
                 color: rgb(123, 255, 255);
