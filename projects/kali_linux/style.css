@@ -56,7 +56,7 @@
         }
     }
     #grubConfig,
-    #boot_menusunde_onyukleyici_secme {
+    #default-bootloader {
         h2 {
             text-align: center;
         }
