@@ -12,14 +12,17 @@
     flex-flow: row wrap;
     height: fit-content;
     margin: 0;
+    align-self: center;
+    justify-content: center;
     color: white;
     section {
         flex: 1 1 20rem;
+        max-width: 35rem;
         display: flex;
         flex-direction: column;
         justify-content: start;
         height: auto;
-        min-height: 20rem;
+        min-height: 15rem;
         width: 20rem;
         background-color: rgb(5, 5, 5);
         margin: 1rem;
@@ -56,6 +59,7 @@
     }
     #mainWellcome {
         flex-basis: 100%;
+        max-width: none;
         min-height: 15rem;
         margin-bottom: 2rem;
         margin-inline: 5%;
