@@ -94,6 +94,7 @@ main {
         align-items: center;
         border: 0.3rem solid rgba(255, 255, 255, 0.05);
         border-radius: 1em;
+        background-color: rgba(0, 0, 0, 0.3);
 
         #page-title {
             text-align: center;
