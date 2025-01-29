@@ -122,7 +122,10 @@
                     <h1 class="card_title">
                         <a href="https://mefamex.com/blog/" title="BLOG SAYFASI" aria-label="Yazılım ve teknoloji blogum" target="_self" tabindex="-1">BLOG </a>
                     </h1>
-                    <p>Yakında açılacak olan bu sayfada özellikle yazılım dünyasındaki yolculuğumda olmak üzere bir çok alandaki deneyimleri, öğrendiklerimi, görüş ve fikirlerimi ayrıca sektördeki güncel gelişmeleri paylaşacağım. <br> Yakında...</p>
+                    <p>
+                        Yakında açılacak olan bu sayfada özellikle yazılım dünyasındaki yolculuğumda olmak üzere bir çok alandaki deneyimleri, öğrendiklerimi, görüş ve fikirlerimi ayrıca sektördeki güncel gelişmeleri paylaşacağım. <br />
+                        Yakında...
+                    </p>
                     <p class="last_card_updated noSelect">son güncelleme: 11.11.2024</p>
                 </div>
 
@@ -130,7 +133,7 @@
                     <h1 class="card_title">
                         <a href="https://mefamex.com/gallery/" title="GALERİ SAYFASI" aria-label="Fotoğraf arşivi" target="_self" tabindex="-1">GALERİ </a>
                     </h1>
-                    <p> Çeşitli etkinliklerinden, projelerinden, tasarımlardan, yapımlardan elde edilen ve geçmişten hatırlanmak üzere görsellerin arşivlendiği özel bir alt sayfadır. </p>
+                    <p>Çeşitli etkinliklerinden, projelerinden, tasarımlardan, yapımlardan elde edilen ve geçmişten hatırlanmak üzere görsellerin arşivlendiği özel bir alt sayfadır.</p>
                     <p class="last_card_updated noSelect">son güncelleme: 29.01.2025</p>
                 </div>
 
@@ -151,14 +154,11 @@
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll("#main_cards .card").forEach((card, index) => {
-                    card.style.animationDelay = 0.5 + index * 0.15 + "s";
+                    card.style.animationDelay = 0.5 + index * 0.2 + "s";
                     card.style.opacity = 0;
                     card.style.cursor = "pointer";
                     setTimeout(() => (card.style.opacity = 1), 400);
-                    card.addEventListener("click", () => {
-                        const link = card.querySelector("h1 a").href;
-                        window.location.href = link;
-                    });
+                    card.addEventListener("click", () => (window.location.href = card.querySelector("h1 a").href));
                 });
             });
         </script>

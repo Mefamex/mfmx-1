@@ -227,7 +227,7 @@ main #left_card #mefamex_logo img {
     align-self: flex-end;
     text-align: right;
     font-size: 0.7em;
-    margin: 0 1em 0 0;
+    margin: 0 calc(0.5vw + 0.5vh) 0 0;
     padding: 0;
     opacity: 0.3;
     line-height: 0.7;
