@@ -157,16 +157,16 @@ main #left_card #mefamex_logo img {
     width: fit-content;
     height: fit-content;
     justify-content: space-between;
-    padding: 0.4rem 1.3rem ;
+    padding: 0.4rem 1.3rem;
     font-size: 1.2rem;
     border: 0.2rem solid rgba(255, 255, 255, 0.39);
-    border-radius:  calc(2vw + 2vh) calc(1vw + 1vh) ;
+    border-radius: calc(2vw + 2vh) calc(1vw + 1vh);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     box-shadow: 0 0 0.5vw rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease, outline 0.1s ease;
     -webkit-animation: opacity-0-1 2s normal 1s both;
-    animation: opacity-0-1 1s cubic-bezier(0,.5,1,0.2) 1s both;
+    animation: opacity-0-1 1s cubic-bezier(0.2, 1, 1, -0.4) 1s both;
     opacity: 0;
 }
 .card:hover {
@@ -226,9 +226,8 @@ main #left_card #mefamex_logo img {
     width: fit-content;
     align-self: flex-end;
     text-align: right;
-    margin-right: 1em !important;
     font-size: 0.7em;
-    margin: 0;
+    margin: 0 1em 0 0;
     padding: 0;
     opacity: 0.3;
     line-height: 0.7;
