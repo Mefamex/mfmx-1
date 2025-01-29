@@ -78,60 +78,80 @@
                     <p>Açılış tarihi: 08.12.2024 || Son güncelleme tarihi: 29.01.2025</p>
                 </section>
 
+                <section id="projects-search">
+                    <h2>Proje Ara</h2>
+                    <form id="search-form">
+                        <label for="search">Ara:</label>
+                        <input type="text" id="search" name="search" placeholder="Proje adı veya dil" />
+                        <fieldset>
+                            <legend>Dil Seçin:</legend>
+                            <label> <input type="checkbox" name="language" value="none" /> Belirsiz </label>
+                            <label> <input type="checkbox" name="language" value="bash" /> Bash </label>
+                            <label> <input type="checkbox" name="language" value="java" /> Java </label>
+                            <label> <input type="checkbox" name="language" value="cs" /> HTML </label>
+                            <label> <input type="checkbox" name="language" value="py" /> Python </label>
+                            <label> <input type="checkbox" name="language" value="html" /> HTML </label>
+                            <label> <input type="checkbox" name="language" value="css" /> CSS </label>
+                            <label> <input type="checkbox" name="language" value="js" /> JavaScript </label>
+                            <label> <input type="checkbox" name="language" value="jsx" /> jsx (JavaScript XML) </label>
+                            <label> <input type="checkbox" name="language" value="uv" /> uv (Python project manager) </label>
+                        </fieldset>
+                    </form>
+                </section>
+
                 <section id="yapay_zeka" class="card">
                     <h2>Yapay Zeka ve Makine Öğrenimi</h2>
                     <ul>
-                        <li><a href="https://mefamex.com/the_mefamex_project/">The Mefamex Project</a></li>
-                        <li>Stokastik AI algoritması</li>
-                        <li>Yapay Zeka hakkında: NLP-DL-RL</li>
-                        <li>LLM - Fine Tunning</li>
-                        <li>Sparse yapılar veya Dropout teknikleri</li>
+                        <li data-language="none" data-date="2024-12-22"><a href="https://mefamex.com/the_mefamex_project/">The Mefamex Project</a></li>
+                        <li data-language="none" data-date="2024-12-08">Stokastik AI algoritması</li>
+                        <li data-language="none" data-date="2024-12-08">Yapay Zeka hakkında: NLP-DL-RL</li>
+                        <li data-language="none" data-date="2024-12-08">LLM - Fine Tunning</li>
+                        <li data-language="none" data-date="2024-12-08">Sparse yapılar veya Dropout teknikleri</li>
                     </ul>
                 </section>
 
                 <section id="ag_ve_guvenlik" class="card">
                     <h2>Ağ ve Güvenlik</h2>
                     <ul>
-                        <li>Aygıtları ping-traceroute ile bulma</li>
-                        <li>Port İşleyici</li>
-                        <li>C/PY/JS ile Tersine Mühendislik</li>
-                        <li>Şifreleme ve Kriptografi</li>
-                        <li>Maltego</li>
-                        <li>SS7</li>
+                        <li data-language="none" data-date="2024-12-08">Aygıtları ping-traceroute ile bulma</li>
+                        <li data-language="none" data-date="2024-12-08">Port İşleyici</li>
+                        <li data-language="none" data-date="2024-12-08">C/PY/JS ile Tersine Mühendislik</li>
+                        <li data-language="none" data-date="2024-12-08">Şifreleme ve Kriptografi</li>
+                        <li data-language="none" data-date="2024-12-08">Maltego</li>
+                        <li data-language="none" data-date="2024-12-08">SS7</li>
                     </ul>
                 </section>
 
                 <section id="web_gelistirme" class="card">
                     <h2>Web Geliştirme ve API'ler</h2>
                     <ul>
-                        <li><a href="https://mefamex.com/projects/html_css_book/">Html-Css kitaplığı</a></li>
-                        <li>Projeleri JS/X ile görselleştirme</li>
-                        <li>Güvenli Kanal ile Sohbet Uygulaması</li>
-                        <li>C# / PY kullanarak RestFul API</li>
+                        <li data-language="html, css, js" data-date="2024-12-30"><a href="https://mefamex.com/projects/html_css_book/">Html-Css kitaplığı</a></li>
+                        <li data-language="html, css, js, jsx" data-date="2024-12-08">Projeleri JS/X ile görselleştirme</li>
+                        <li data-language="html, css, js" data-date="2024-12-08">Güvenli Kanal ile Sohbet Uygulaması</li>
+                        <li data-language="html, css, js, cs, py" data-date="2024-12-08">C# / PY kullanarak RestFul API</li>
                     </ul>
                 </section>
 
                 <section id="kali_linux" class="card">
                     <h2><a href="https://mefamex.com/projects/kali_linux/">Kali Linux</a></h2>
                     <ul>
-                        <li>Varsayılan Önyükleyici Değiştirme</li>
-                        <li>Coming soon!</li>
+                        <li data-language="bash, sh" data-date="2024-12-29"><a href="https://mefamex.com/projects/kali_linux/#default-bootloader">Varsayılan Önyükleyici Değiştirme</a></li>
                     </ul>
                 </section>
 
                 <section id="python" class="card">
                     <h2>Python</h2>
                     <ul>
-                        <li><a href="https://mefamex.com/projects/dizin_listeleme/">Dizin Listeleme </a></li>
-                        <li><a href="https://mefamex.com/projects/python_to_exe/">Python To Exe </a></li>
-                        <li><a href="https://docs.astral.sh/uv/" title="Python-uv" aria-label="Python-uv" target="_blank" rel="noopener noreferrer" >Python-uv ®</a> : Python package and project manager & virtual environment</li>
+                        <li data-language="py" data-date="2024-12-22"><a href="https://mefamex.com/projects/dizin_listeleme/">Dizin Listeleme </a></li>
+                        <li data-language="py" data-date="2024-12-22"><a href="https://mefamex.com/projects/python_to_exe/">Python To Exe </a></li>
+                        <li data-language="py, uv" data-date="2025-01-29"><a href="https://docs.astral.sh/uv/" title="Python-uv" aria-label="Python-uv" target="_blank" rel="noopener noreferrer">Python-uv ®</a> : Python package and project manager & virtual environment</li>
                     </ul>
                 </section>
 
                 <section id="diger" class="card">
                     <h2>Diğer Projeler</h2>
                     <ul>
-                        <li>Project Based Learning Github</li>
+                        <li data-language="none" data-date="2024-12-08">Project Based Learning Github</li>
                     </ul>
                 </section>
             </main>
@@ -140,6 +160,7 @@
         </div>
         <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
         <script src="page_asides.js" type="text/javascript" defer></script>
+        <script src="script.js" type="text/javascript" defer></script>
     </body>
 </html>
 
