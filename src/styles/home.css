@@ -154,13 +154,13 @@ main #left_card #mefamex_logo img {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     display: flex;
-    justify-content: space-between;
     width: fit-content;
     height: fit-content;
-    padding: 0 1.3rem 0.2rem 1.3rem;
+    justify-content: space-between;
+    padding: 0.4rem 1.3rem ;
     font-size: 1.2rem;
     border: 0.2rem solid rgba(255, 255, 255, 0.39);
-    border-radius: calc(2vw + 2vh);
+    border-radius:  calc(2vw + 2vh) calc(1vw + 1vh) ;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     box-shadow: 0 0 0.5vw rgba(255, 255, 255, 0.5);
@@ -170,15 +170,14 @@ main #left_card #mefamex_logo img {
     opacity: 0;
 }
 .card:hover {
-    transition: all 0.4s ease;
-    transform: scale(1.02);
-    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7), 0 0 1cqh rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 79, 79, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7), 0 0 0.3rem rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 75, 75, 0.3);
     h1 {
         text-decoration-color: rgb(255, 0, 0);
-        a {
-            transform: scale(1.1);
-        }
+    }
+    a {
+        transform: scale(1.1);
     }
 }
 .card:focus-visible {
@@ -211,8 +210,8 @@ main #left_card #mefamex_logo img {
     padding: 0;
 }
 .card p {
-    margin: 0;
-    align-self: center;
+    margin: 0.2rem 0;
+    align-self: flex-start;
     text-align: start;
     font-size: 0.9em;
     line-height: 1.5;
@@ -231,8 +230,9 @@ main #left_card #mefamex_logo img {
     font-size: 0.7em;
     margin: 0;
     padding: 0;
-    opacity: 0.2;
-    line-height: 0.8;
+    opacity: 0.3;
+    line-height: 0.7;
+    text-decoration: overline;
 }
 /**/
 /**/
