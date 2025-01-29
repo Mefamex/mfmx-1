@@ -45,7 +45,7 @@
                 border-radius: 2rem;
                 height: min-content;
                 &::before {
-                    content: " ■ "; 
+                    content: " ■ ";
                     color: rgb(123, 255, 255);
                 }
             }
@@ -77,14 +77,77 @@
             }
         }
     }
-    #projects-search{
+    #projects-search {
         flex-basis: 100%;
         max-width: none;
         min-height: 5rem;
         margin-bottom: 2rem;
         margin-inline: 1%;
+        #search-form {
+            display: flex;
+            flex-flow: row wrap;
+            column-gap: 1rem;
+            align-items: center;
+            #search {
+                width: 20em;
+                flex-grow: 1;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 0.5rem;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: white;
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+            fieldset {
+                display: flex;
+                flex-flow: row wrap;
+                padding: 0 1rem;
+                margin: 0;
+                width: auto;
+                flex-grow: 10;
+                justify-content:  space-between;
+                legend {
+                    color: rgb(123, 255, 255);
+                    margin-bottom: 0.5rem;
+                }
+                label {
+                    -moz-user-select: -moz-none;
+                    -khtml-user-select: none;
+                    -webkit-user-select: none;
+                    -o-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0.5em;
+                    padding: 0.2em 1em;
+                    max-width: 10em;
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    justify-content: center;
+                    border-radius: 0.5em;
+                    cursor: pointer;
+                    color: white;
+                    border: 0.1rem solid rgba(255, 0, 0, 0.5);
+                    &:hover {
+                        border-color: rgba(255, 255, 255, 0.7); /* Üzerine gelindiğinde kenar rengi */
+                    }
+                }
+                .label-secildi{
+                    background-color: rgb(255, 255, 255);
+                    color: black;
+                    font-weight: bold;
+                    border-color: blue;
+                }
+            }
+        }
     }
 }
+
 @media only screen and (max-width: 600px) {
     #main_container main section {
         min-height: 10rem;
