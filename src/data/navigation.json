@@ -98,6 +98,13 @@
                     "isVisible": true,
                     "description": "Yazılım Dilleri ve Araçları",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
+                },
+                {
+                    "title": "sweetmonstermia",
+                    "href": "https://mefamex.com/sweetmonstermia/",
+                    "isVisible": true,
+                    "description": "Tatlış bir prenses peri",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                 }
             ]
         }
