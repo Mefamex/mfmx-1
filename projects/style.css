@@ -12,10 +12,11 @@
     flex-flow: row wrap;
     height: fit-content;
     margin: 0;
-    min-height: 75rem;
+    min-height: 75vh;
     align-self: center;
     justify-content: center;
     color: white;
+    align-content: flex-start;
     section {
         flex: 1 1 20rem;
         max-width: 35rem;
@@ -23,7 +24,7 @@
         flex-direction: column;
         justify-content: start;
         height: auto;
-        min-height: 15rem;
+        min-height: 10rem;
         width: 20rem;
         background-color: rgb(5, 5, 5);
         margin: 1rem;
