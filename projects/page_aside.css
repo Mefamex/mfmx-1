@@ -28,8 +28,7 @@ body {
     max-width: 100%;
     min-height: 100vh;
     display: flex; 
-    flex-direction: column;
-    color: white; */
+    flex-direction: column;*/
     background-color: rgb(20, 20, 20);
     color: white;
 }
