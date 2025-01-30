@@ -51,6 +51,9 @@ body {
     flex-grow: 1000 !important;
     width: auto !important;
     margin-bottom: 5rem !important;
+    section{
+        max-width: 95vw;
+    }
 }
 #main_container main #page_navigation {
     flex-grow: 10;
