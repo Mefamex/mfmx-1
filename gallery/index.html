@@ -133,6 +133,7 @@
                     aTag.ariaDescribedby = pictureElement.id;
                     aTag.ariaLabelledby = pictureElement.id;
                     aTag.ariaHidden = "false";
+                    aTag.style.alignSelf = "center";
                     pictureElement.parentNode.insertBefore(aTag, pictureElement);
                     aTag.appendChild(pictureElement);
                 });
