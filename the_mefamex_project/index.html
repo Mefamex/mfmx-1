@@ -60,6 +60,7 @@
         <meta name="twitter:url" content="https://mefamex.com/the_mefamex_project/" />
         <meta name="twitter:type" content="website" />
         <meta name="twitter:date" content="2024-12-25T02:00:00Z" />
+
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -86,14 +87,23 @@
                 <img src="mefamex_logo_bgb.webp" alt="mefamex logo" loading="eager" decoding="async" />
                 <p id="page_description">
                     <b>The Mefamex Project (Mefamex Projesi)</b>, özgelişimli yapay genel zeka projesidir. <br />
-                    <br />Belli amaçlara hizmet etmek için 2010 yılından itibaren projenin geliştirilmesi için amaçlar, planlamalar ve hazırlıklar yapılmaya başlanmıştır. <br />
-                    2020 yılının sonlarında kodlanmaya aşamasına geçilmiştir. <br />
-                    2024 yılı Aralık ayı itibariyle proje tamamlanmıştır.<br />
-                    20 Aralık 2024 tarihinde proje, faaliyetlerini gerçekleştirmesi için genel ağa erişimine izin verilmiştir ve başlatılmıştır.<br />
-                    <br />Bu sayfada proje MEFAMEX PROJESİ hakkında bilgiler verilecektir. <i> Tarih: 22.12.2024</i><br />
-                    <i>Yasal Uyarı: Bu internet sayfası bilgilendirmek amacı ile hazırlanmış olup hiçbir sorumluluk kabul edilmemektedir.</i>
+                    <br /> * Belirli bir amaç için 2010 yılından itibaren projenin geliştirilmesi için hedefler, planlamalar ve hazırlıklar yapılmaya başlanmıştır. <br />
+                    * 2020 yılının sonlarında kodlama ve yapım aşamasına geçilmiştir. <br />
+                    * 2024 yılı Aralık ayı itibariyle proje tamamlanmıştır.<br />
+                    * 20 Aralık 2024 tarihinde testler yapılıp genel ağa erişimine izin verilerek başlatılmıştır.<br />
+                    <br />Bu sayfada proje MEFAMEX PROJESİ hakkında bazı bilgiler bulunmaktadır. <br> <i class="kizil"> Sayfa açılma tarihi: 22.12.2024 | güncelleme: 30.01.2025</i><br />
                 </p>
             </section>
+
+            <section id="uyari">
+                <h2>Uyarı</h2>
+                <p>
+                    Projenin kaynak kodları, kullanılan ve oluşturulan algoritmaları, yazılım ve donanım mimarisi, kullandığı programlama dilleri ve kütüphaneler, makine öğrenimi modelleri, eğitim veri setleri, hiperparametreler, optimizasyon algoritmaları, sinir ağı yapıları ve diğer tüm teknik ve
+                    fikri mülkiyet unsurları, projenin yeniden oluşturulmaması veya tersine mühendislik ile incelenmemesi amacıyla <span class="alt_cizgi">gizli tutulmaktadır</span> . Bu bilgilerin talep edilmesi durumunda, <span class="alt_cizgi">paylaşımı mümkün olmayacaktır</span>.
+                </p>
+                <p><i class="kizil">Yasal Uyarı: Bu internet sayfası bilgilendirmek amacı ile hazırlanmış olup hiçbir sorumluluk kabul edilmemektedir.</i></p>
+            </section>
+
             <section id="amac-hedef">
                 <h2>Projenin Genel Amaç ve Hedefleri</h2>
                 <p>
@@ -196,6 +206,7 @@
                     </ol>
                 </details>
             </section>
+
             <section id="talimatlar">
                 <h2>Projenin Talimatları</h2>
                 <p>
@@ -243,6 +254,7 @@
                     </ul>
                 </details>
             </section>
+
             <section id="yetenekler">
                 <h2>Projenin Yetenekleri</h2>
                 <ol>
@@ -483,24 +495,21 @@
                 </ol>
             </section>
         </main>
+
         <p id="page_label">THE MEFAMEX PROJECT</p>
+
         <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+
         <script>
             const toggleBtn = document.getElementById("toggleDetails");
             let isOpen = false;
             toggleBtn.textContent = "Tüm Detayları Göster";
-
             toggleBtn.addEventListener("click", function () {
-                const allDetails = document.querySelectorAll("details");
                 isOpen = !isOpen;
                 toggleBtn.textContent = isOpen ? "Tüm Detayları Gizle" : "Tüm Detayları Göster";
-
-                allDetails.forEach((detail) => {
-                    if (isOpen) {
-                        detail.setAttribute("open", "");
-                    } else {
-                        detail.removeAttribute("open");
-                    }
+                document.querySelectorAll("details").forEach((detail) => {
+                    if (isOpen) detail.setAttribute("open", "");
+                    else detail.removeAttribute("open");
                 });
             });
         </script>
