@@ -111,7 +111,7 @@ header {
     flex-direction: row;
     list-style: none;
     background-color: rgba(0, 0, 0, 0.356);
-    border: 0.1em solid rgba(255, 255, 255, 0.2);
+    border: 0.15em solid rgba(255, 255, 255, 0.2);
     height: 80%;
     align-self: center;
     align-items: center;
@@ -129,7 +129,8 @@ header {
     color: #f0f0ff;
     font-size: 1rem;
     border-radius: 1rem;
-    transition: all 0.3s ease-in-out;
+    border:0.1em solid rgba(255, 255, 255, 0.4);
+    transition: all 0.2s cubic-bezier(.17,0,.15,.99);
 }
 #headerNavBar > a:hover {
     background-color: whitesmoke;
