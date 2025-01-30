@@ -1,12 +1,4 @@
 
-            project içindeki page navigationu modüleştir
-
-
-
-
-
-
-
 <!-- WebSite Schema -->
         <script type="application/ld+json">
             {

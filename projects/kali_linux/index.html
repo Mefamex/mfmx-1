@@ -20,9 +20,7 @@
         <link rel="canonical" href="https://mefamex.com/projects/kali_linux/" />
 
         <!-- Stil Optimizasyonu -->
-        <link rel="preload" href="style.css" as="style" />
         <link rel="preload" href="../page_aside.css" as="style" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" type="text/css" href="../page_aside.css" />
 
         <!-- favicon set -->
@@ -56,6 +54,32 @@
         <meta name="twitter:url" content="https://mefamex.com/projects/kali_linux/" />
         <meta name="twitter:type" content="website" />
         <meta name="twitter:date" content="2024-12-10T29:00:00Z" />
+
+        <style>
+            #main_container main {
+                section {
+                    flex: 1 1 20rem;
+                    min-height: 10rem;
+                    width: 20rem;
+                }
+                #grubConfig,
+                #default-bootloader {
+                    h2 {
+                        text-align: center;
+                    }
+                    ol {
+                        & > li {
+                            margin-block: 0.7em;
+                        }
+                    }
+                    ul {
+                        & > li {
+                            margin-block: 0.3em;
+                        }
+                    }
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -79,7 +103,7 @@
                     </p>
                     <p>Açılış tarihi: 09.12.2024 || Son güncelleme tarihi: 29.12.2024</p>
                 </section>
-                <section >
+                <section>
                     <h2>Kali Linux Önyükleyicisinin Yapılandırma</h2>
                     <p>
                         Kali Linux veya diğer Linux dağıtımlarında, /etc/default/grub dosyası, GRUB (GRand Unified Bootloader) önyükleyicisinin yapılandırma ayarlarını içeren bir dosyadır. GRUB, işletim sisteminin önyüklenmesi sırasında kullanılan bir bootloader'dır ve birden fazla işletim sistemi
