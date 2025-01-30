@@ -41,7 +41,6 @@ async function CreateNavContainer() {
                     </ul>
                 </div>
     `
-
 }
 
 
