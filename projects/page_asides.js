@@ -10,7 +10,7 @@
  */
 
 
-(async () => {  await CreateAside(); })();
+(async () => { await CreateAside(); })();
 /*await CreateNavContainer();*/
 
 
@@ -29,17 +29,17 @@ async function CreateNavContainer() {
     const nav = document.getElementById("nav");
     //const nav = document.createElement('nav'); document.body.insertBefore(nav, document.getElementById("mainWellcome"));
 
-    nav.innerHTML = `
-                <div id="navContainer">
-                    <h2>MENU</h2>
+    nav.innerHTML = ` 
+                <div id="navContainer"> 
+                    <h2>MENU</h2> 
                     <ul>
-                        <li><a href="#yapay_zeka">Yapay Zeka ve Makine Öğrenimi</a></li>
-                        <li><a href="#ag_ve_guvenlik">Ağ ve Güvenlik</a></li>
-                        <li><a href="#web_gelistirme">Web Geliştirme ve API'ler</a></li>
-                        <li><a href="#kali_linux">Kali Linux</a></li>
-                        <li><a href="#diger">Diğer Projeler</a></li>
-                    </ul>
-                </div>
+                        <li><a href="#yapay_zeka">      Yapay Zeka ve Makine Öğrenimi   </a></li> 
+                        <li><a href="#ag_ve_guvenlik">  Ağ ve Güvenlik                  </a></li> 
+                        <li><a href="#web_gelistirme">  Web Geliştirme ve API'ler       </a></li> 
+                        <li><a href="#kali_linux">      Kali Linux                      </a></li> 
+                        <li><a href="#diger">           Diğer Projeler                  </a></li> 
+                    </ul> 
+                </div> 
     `
 }
 
