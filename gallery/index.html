@@ -129,7 +129,7 @@
                     const aTag = document.createElement("a");
                     aTag.href = pictureElement.querySelector("img").src;
                     aTag.target = "_blank";
-                    aTag.rel = "noopener,noreferrer";
+                    aTag.rel = "noopener";
                     aTag.title = pictureElement.querySelector("img").alt;
                     aTag.ariaLabel = pictureElement.querySelector("img").alt;
                     aTag.ariaDescribedby = pictureElement.id;
@@ -142,7 +142,7 @@
             });
             /*
             const openImage = (event) => {
-                if (event.target.closest("img")) window.open(event.target.closest("img").src, "_blank", "noopener,noreferrer");
+                if (event.target.closest("img")) window.open(event.target.closest("img").src, "_blank", "noopener");
             };
             document.addEventListener("click", (event) => openImage(event));
             document.addEventListener("touchstart", (event) => openImage(event));*/

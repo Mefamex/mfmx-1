@@ -10,11 +10,8 @@
  */
 
 
-(async () => {
-    await CreateNavContainer();
-    await CreateAside();
-})();
-
+(async () => {  await CreateAside(); })();
+/*await CreateNavContainer();*/
 
 
 /* NOT WORKING I WILL RETURN 
