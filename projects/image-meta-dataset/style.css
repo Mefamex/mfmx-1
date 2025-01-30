@@ -17,13 +17,13 @@
     width: auto;
     margin: 0;
     section {
-        flex: 1 1 20rem;
         display: flex;
         flex-direction: column;
         justify-content: start;
+        flex: 1 1 20rem;
+        width: 20rem;
         height: auto;
         min-height: 10rem;
-        width: 20rem;
         background-color: rgb(5, 5, 5);
         margin: 1rem;
         padding: 1rem;
@@ -54,5 +54,9 @@
                 color: rgb(123, 255, 255);
             }
         }
+    }
+    .x2width{
+        flex-basis: 40rem;
+        width: 40rem;
     }
 }

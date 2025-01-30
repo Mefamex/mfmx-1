@@ -1,7 +1,21 @@
+/**
+ * @fileoverview MEFAMEX pages-projects Script File
+ * @author Mefamex <info@mefamex.com>
+ * @copyright 2024 Mefamex
+ * @license MIT
+ * @version 1.0.0
+ * @see https://mefamex.com
+ * @since 08.12.2024
+ * @lastModified 30.01.2025
+ */
+
 document.addEventListener('DOMContentLoaded', organize_checkbox);
 
 let searchInput = document.getElementById('search') ?? "";
 let checkboxes = "";
+
+
+
 
 function organize_checkbox() {
     searchInput = document.getElementById('search');
@@ -43,46 +57,47 @@ function organize_checkbox() {
         checkbox.addEventListener('change', () => changed_checkbox(checkbox));
         checkbox.style.display = 'none';
     });
-}
 
-function handleSearchInput() {
-    if (this.value.length > 20) this.value = this.value.slice(0, 20);
-    updateSearchResults(document.querySelectorAll('ul li'), document.querySelectorAll('input[name="language"]'), this); // parametreleri verimli kullan
-}
 
-// Checkbox değiştiğinde çalışan fonksiyon
-function changed_checkbox(checkbox) {
-    checkbox.parentElement.classList.toggle('label-secildi', checkbox.checked);
-    updateSearchResults();
-}
+    function handleSearchInput() {
+        if (this.value.length > 20) this.value = this.value.slice(0, 20);
+        updateSearchResults(document.querySelectorAll('ul li'), document.querySelectorAll('input[name="language"]'), this); // parametreleri verimli kullan
+    }
 
-// Arama sonuçlarını güncelleyen fonksiyon
-function updateSearchResults() {
+    // Checkbox değiştiğinde çalışan fonksiyon
+    function changed_checkbox(checkbox) {
+        checkbox.parentElement.classList.toggle('label-secildi', checkbox.checked);
+        updateSearchResults();
+    }
 
-    const searchTerm = sanitizeInput(searchInput.value).toLowerCase().trim();
-    const selectedLanguages = new Set(Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value));
+    // Arama sonuçlarını güncelleyen fonksiyon
+    function updateSearchResults() {
 
-    const projectSections = document.querySelectorAll('section.card');
+        const searchTerm = sanitizeInput(searchInput.value).toLowerCase().trim();
+        const selectedLanguages = new Set(Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value));
 
-    projectSections.forEach(section => {
-        const projectItems = section.querySelectorAll('.card ul li');
-        let hasVisibleItems = false;
+        const projectSections = document.querySelectorAll('section.card');
 
-        projectItems.forEach(item => {
-            const combinedText = (item.textContent + ' ' + Array.from(item.attributes).map(attr => attr.value).join(' ')).toLowerCase();
-            const projectLanguages = (item.getAttribute('data-language') || '').toLowerCase().split(',').map(lang => lang.trim());
-            const languageMatch = selectedLanguages.size === 0 || projectLanguages.some(lang => selectedLanguages.has(lang));
-            item.style.display = (combinedText.includes(searchTerm) && languageMatch) ? '' : 'none';
-            if (item.style.display === '') hasVisibleItems = true;
+        projectSections.forEach(section => {
+            const projectItems = section.querySelectorAll('.card ul li');
+            let hasVisibleItems = false;
+
+            projectItems.forEach(item => {
+                const combinedText = (item.textContent + ' ' + Array.from(item.attributes).map(attr => attr.value).join(' ')).toLowerCase();
+                const projectLanguages = (item.getAttribute('data-language') || '').toLowerCase().split(',').map(lang => lang.trim());
+                const languageMatch = selectedLanguages.size === 0 || projectLanguages.some(lang => selectedLanguages.has(lang));
+                item.style.display = (combinedText.includes(searchTerm) && languageMatch) ? '' : 'none';
+                if (item.style.display === '') hasVisibleItems = true;
+            });
+
+            // Eğer tüm maddeler gizlenmişse, section'ı gizle
+            section.style.display = hasVisibleItems ? 'flex' : 'none';
         });
-
-        // Eğer tüm maddeler gizlenmişse, section'ı gizle
-        section.style.display = hasVisibleItems ? 'flex' : 'none';
-    });
-}
-// Kullanıcıdan alınan girişi temizleyen fonksiyon
-function sanitizeInput(input) {
-    const tempDiv = document.createElement('div');
-    tempDiv.textContent = input;
-    return tempDiv.innerHTML;
+    }
+    // Kullanıcıdan alınan girişi temizleyen fonksiyon
+    function sanitizeInput(input) {
+        const tempDiv = document.createElement('div');
+        tempDiv.textContent = input;
+        return tempDiv.innerHTML;
+    }
 }

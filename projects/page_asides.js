@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com
  * @since 02.12.2024
- * @lastModified 10.12.2024
+ * @lastModified 30.01.2025
  */
 
 
@@ -54,10 +54,11 @@ async function CreateAside() {
     aside.innerHTML = `
     <h2>SON DEĞİŞENLER</h2>
                 <ul>
-                <li ><a href="https://mefamex.com/projects/html_css_book/" > Project: Html-Css Kitaplığı </a> <p class="p_tooltip noSelect">25.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/python_to_exe/" > Project: Python To Exe </a> <p class="p_tooltip noSelect">18.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/kali_linux/" > Project: Kali Linux </a> <p class="p_tooltip noSelect">10.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/dizin_listeleme/" > Project: Dizin Listeme </a> <p class="p_tooltip noSelect">09.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
+                    <li ><a href="https://mefamex.com/projects/html_css_book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/python_to_exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/kali_linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/dizin_listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
                     <li>Tasarıma başlandı <p class="p_tooltip noSelect">07.12.2024</p></li>
                     <li>Sayfa tasarımı <p class="p_tooltip noSelect">05.12.2024</p></li>
                     <li>Talepler toplandı <p class="p_tooltip noSelect">18.11.2024</p></li>

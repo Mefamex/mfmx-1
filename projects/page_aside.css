@@ -142,7 +142,7 @@ body {
             margin-top: 0.5rem;
             padding-block: 1rem 0.1rem;
             padding-left: 0.5rem;
-            border-width: 0 0 0.1em 0;
+            border-width: 0 0 0.2em 0.05em;
             border-style: solid;
             border-color: rgba(240, 248, 255, 0.2);
             border-radius: 1rem 0 0 1rem;
@@ -196,7 +196,6 @@ body {
 *
 */
 .noSelect {
-    /* calmayin :D yazmışlardı ama çaldım (NNB)*/
     /* ana dizin css dosyasından alındı */
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
