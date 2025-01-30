@@ -24,6 +24,7 @@ function importStylesheep() {
     document.head.appendChild(link);
 }*/
 
+/* abonded */
 async function CreateNavContainer() {
     const nav = document.getElementById("nav");
     //const nav = document.createElement('nav'); document.body.insertBefore(nav, document.getElementById("mainWellcome"));
