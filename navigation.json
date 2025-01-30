@@ -82,6 +82,13 @@
                             "isVisible": true,
                             "description": "Python EXE Dönüştürücü",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
+                        },
+                        {
+                            "title": "Image Meta Dataset",
+                            "href": "https://mefamex.com/projects/image-meta-dataset/",
+                            "isVisible": true,
+                            "description": "Görsel metaverilerini değiştirme",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                         }
                     ]
                 },
