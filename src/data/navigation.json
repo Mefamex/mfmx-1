@@ -52,7 +52,7 @@
                     "title": "Projects",
                     "href": "https://mefamex.com/projects/",
                     "isVisible": true,
-                    "description": "Kişisel Projeler",
+                    "description": "Mefamex Projeler",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "submenu": [
                         {
@@ -81,6 +81,13 @@
                             "href": "https://mefamex.com/projects/python_to_exe/",
                             "isVisible": true,
                             "description": "Python EXE Dönüştürücü",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
+                        },
+                        {
+                            "title": "Image Meta Dataset",
+                            "href": "https://mefamex.com/projects/image-meta-dataset/",
+                            "isVisible": true,
+                            "description": "Görsel metaverilerini değiştirme",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
                         }
                     ]
