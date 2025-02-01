@@ -52,7 +52,7 @@
                     "title": "Projects",
                     "href": "https://mefamex.com/projects/",
                     "isVisible": true,
-                    "description": "Kişisel Projeler",
+                    "description": "Mefamex Projeler",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "submenu": [
                         {
