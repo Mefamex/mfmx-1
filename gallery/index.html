@@ -73,45 +73,69 @@
                     <p>Açılış tarihi: 29.01.2025 || Son güncelleme tarihi: 29.01.2025</p>
                 </div>
             </section>
-
+            <section id="page-navigator">
+                <h2>SEÇİCİLER</h2>
+                <br />
+                <fieldset id="gorsel_boyutu">
+                    <legend>Resim Boyutu:</legend>
+                    <label><input id="0" type="radio" name="sizee" /> X1 </label>
+                    <label><input id="1" type="radio" name="sizee" checked /> X2 </label>
+                    <label><input id="2" type="radio" name="sizee" /> X3 </label>
+                    <label><input id="3" type="radio" name="sizee" /> X4 </label>
+                    <label><input id="4" type="radio" name="sizee" /> X5 </label>
+                    <label><input id="5" type="radio" name="sizee" /> MAX </label>
+                </fieldset>
+                <fieldset id="search_form">
+                    <legend>Seç (deneme aşamasında)</legend>
+                    <label> <input type="checkbox" name="choosee" value="none" /> Hiçbiri </label>
+                    <label> <input type="checkbox" name="choosee" value="every" /> Hepsi </label>
+                </fieldset>
+            </section>
             <section id="images">
                 <div class="card">
-                    <picture id="SweetMonsterMia" name="SweetMonsterMia"> <img loading="lazy" decoding="sync" importance="low" src="a.jpg" alt="SweetMonsterMia" /> </picture>
+                    <picture id="SweetMonsterMia" name="SweetMonsterMia"> <img loading="lazy" decoding="sync" importance="low" src="pictures/Mefamex-picture-1.jpg" alt="SweetMonsterMia" /> </picture>
                     <div class="card-content">
                         <h3 class="card-title">SweetMonsterMia</h3>
                         <p class="card-description">birilerinin güççüklüğü</p>
                     </div>
                 </div>
                 <div class="card">
-                    <picture id="image-0001" name="image-0001"> <img loading="lazy" decoding="sync" importance="low" src="../src/assets/images/background/home_bg_square_blue_blur.png" alt="A blue blurred background" /> </picture>
+                    <picture id="image-0002" name="image-0002"> <img loading="lazy" decoding="sync" importance="low" src="pictures/Mefamex-picture-2.jpg" alt="A blue blurred background" /> </picture>
                     <div class="card-content">
                         <h3 class="card-title">Card Title</h3>
                         <p class="card-description">This is a description for the card content.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <picture id="image-0001" name="image-0001"> <img loading="lazy" decoding="sync" importance="low" src="../src/assets/images/background/home_bg_square_blue_blur.png" alt="A blue blurred background" /> </picture>
+                    <picture id="image-0003" name="image-0003"> <img loading="lazy" decoding="sync" importance="low" src="pictures/Mefamex-picture-3.webp" alt="A blue blurred background" /> </picture>
                     <div class="card-content">
                         <h3 class="card-title">Card Title</h3>
                         <p class="card-description">This is a description for the card content.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <picture id="image-0001" name="image-0001"> <img loading="lazy" decoding="sync" importance="low" src="../src/assets/images/background/home_bg_square_blue_blur.png" alt="A blue blurred background" /> </picture>
+                    <picture id="image-0004" name="image-0004"> <img loading="lazy" decoding="sync" importance="low" src="pictures/Mefamex-picture-4.webp" alt="A blue blurred background" /> </picture>
                     <div class="card-content">
                         <h3 class="card-title">Card Title</h3>
                         <p class="card-description">This is a description for the card content.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <picture id="image-0001" name="image-0001"> <img loading="lazy" decoding="sync" importance="low" src="../src/assets/images/background/home_bg_square_blue_blur.png" alt="A blue blurred background" /> </picture>
+                    <picture id="image-0005" name="image-0005"> <img loading="lazy" decoding="sync" importance="low" src="pictures/Mefamex-picture-5.png" alt="A blue blurred background" /> </picture>
                     <div class="card-content">
                         <h3 class="card-title">Card Title</h3>
                         <p class="card-description">This is a description for the card content.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <picture id="image-0001" name="image-0001"> <img loading="lazy" decoding="sync" importance="low" src="../src/assets/images/background/home_bg_square_blue_blur.png" alt="A blue blurred background" /> </picture>
+                    <picture id="image-0006" name="image-0006"> <img loading="lazy" decoding="sync" importance="low" src="pictures/Mefamex-picture-6.jpg" alt="A blue blurred background" /> </picture>
+                    <div class="card-content">
+                        <h3 class="card-title">Card Title</h3>
+                        <p class="card-description">This is a description for the card content.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <picture id="image-0007" name="image-0007"> <img loading="lazy" decoding="sync" importance="low" src="pictures/Mefamex-picture-7.png" alt="A blue blurred background" /> </picture>
                     <div class="card-content">
                         <h3 class="card-title">Card Title</h3>
                         <p class="card-description">This is a description for the card content.</p>
@@ -119,15 +143,20 @@
                 </div>
             </section>
         </main>
+        <div id="big-image" class="display-none">
+            <button id="big-image-close"><b>X</b></button>
+            <picture> <img loading="eager" decoding="sync" importance="high" src="pictures/Mefamex-picture-1.jpg" alt="NaN" /> </picture>
+        </div>
 
         <div id="updated-on" name="updated-on , updated">- - - updated on 29.01.2025 - - -</div>
         <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", function () {
-                const pictureElements = document.querySelectorAll("picture");
+                const pictureElements = document.querySelectorAll(".card picture");
                 pictureElements.forEach((pictureElement) => {
                     const aTag = document.createElement("a");
-                    aTag.href = pictureElement.querySelector("img").src;
+                    /*aTag.href = pictureElement.querySelector("img").src;*/
+                    aTag.style.cursor = "pointer"
                     aTag.target = "_blank";
                     aTag.rel = "noopener";
                     aTag.title = pictureElement.querySelector("img").alt;
@@ -138,8 +167,49 @@
                     aTag.style.alignSelf = "center";
                     pictureElement.parentNode.insertBefore(aTag, pictureElement);
                     aTag.appendChild(pictureElement);
+                    aTag.addEventListener("click", () => {
+                        bigImage.classList.remove("display-none");
+                        console.log("163",bigImage.children[1].children[0]);
+                        console.log("164",bigImage.children[1].children[0].src);
+                        bigImage.children[1].children[0].src = pictureElement.querySelector("img").src;
+                        console.log("166",bigImage.children[1].children[0].src);
+                    });
+                });
+
+                checkboxes = document.querySelectorAll('input[name="sizee"]');
+                checkboxes.forEach((checkbox) => {
+                    checkbox.addEventListener("change", () => changed_size_selection(checkbox));
+                    checkbox.style.display = "none";
+                });
+                changed_size_selection(checkboxes[0]);
+
+                checkboxes = document.querySelectorAll('input[name="choosee"]');
+                checkboxes.forEach((checkbox) => {
+                    checkbox.addEventListener("change", () => changed_checkbox(checkbox));
+                    checkbox.style.display = "none";
                 });
             });
+
+            const widths = ["10em", "14em", "20em", "28em", "42em", "90vw"];
+            function changed_size_selection(checkbox) {
+                document.querySelectorAll('input[name="sizee"]').forEach((element) => {
+                    element.parentElement.classList.toggle("label-secildi", element.checked);
+                    if (element.checked) {
+                        document.documentElement.style.setProperty("--images-card-width", widths[element.id] || "Geçersiz id");
+                    }
+                });
+            }
+
+            function changed_checkbox(checkbox) {
+                checkbox.parentElement.classList.toggle("label-secildi", checkbox.checked);
+                updateSearchResults();
+            }
+
+            const bigImage = document.querySelector("#big-image");
+            document.querySelector("#big-image-close").addEventListener("click", () => {
+                bigImage.classList.add("display-none");
+            });
+
             /*
             const openImage = (event) => {
                 if (event.target.closest("img")) window.open(event.target.closest("img").src, "_blank", "noopener");
