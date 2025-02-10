@@ -67,10 +67,10 @@
 
         <script type="text/javascript">
             const currentPath = window.location.pathname;
+            if (currentPath.length > 1 && currentPath.endsWith("/")) currentPath = currentPath.slice(0, -1);
             if (["about", "archive", "blog", "contact", "cv", "gallery", "games", "projects", "software", "the_mefamex_project", "sweetmonstermia"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
             else if (currentPath !== "/") window.location.href = "/";
             console.log("current path: " + currentPath);
-            
         </script>
 
         <script type="application/ld+json">
