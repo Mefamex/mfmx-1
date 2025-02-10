@@ -9,21 +9,21 @@
   <!-- Sitemap -->
   <url>
     <loc>https://mefamex.com/sitemap.xml</loc>
-    <lastmod>2025-02-08T02:00:00+00:00</lastmod>
+    <lastmod>2025-02-11T02:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://mefamex.com/sitemap-projects.xml</loc>
-    <lastmod>2025-02-04T02:00:00+00:00</lastmod>
+    <lastmod>2025-02-11T02:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mefamex.com/sitemap-blog.xml</loc>
-    <lastmod>2025-02-02T02:00:00+00:00</lastmod>
+    <lastmod>2025-02-11T02:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -31,7 +31,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://mefamex.com/</loc>
-    <lastmod>2025-02-08T02:00:00+00:00</lastmod>
+    <lastmod>2025-02-11T02:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
