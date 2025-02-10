@@ -5,7 +5,7 @@
 * Created on : 29.08.2024 
 * Last update : 13.09.2024 
 * Copyright 2024 Mefamex 
-* Licensed under MIT (https://linkedin.com/in/Mefamex/) 
+* Licensed under MIT (https://github.com/Mefamex/) 
 */
 
 :root {
@@ -31,7 +31,7 @@ body {
     background-color: var(--color-bg-main);
     min-width: 500px;
 }
-#middle{
+#middle {
     display: flex;
     flex-direction: row;
 }
@@ -42,7 +42,7 @@ main {
     flex: 1;
     margin-inline: 2dvw;
 }
-#main > #title1{
+#main > #title1 {
     text-align: center;
     font-size: 2rem;
 }
@@ -55,7 +55,7 @@ main {
     margin-top: 8rem;
     margin-bottom: 0.5rem;
     color: rgb(0, 0, 0);
-    background-color:var(--color-white);
+    background-color: var(--color-white);
     font-size: 2.5rem;
     font-weight: 900;
     text-align: center;
@@ -104,7 +104,7 @@ main {
 .
 .
 .....SIDEBAR....*/
-.active{
+.active {
     text-decoration-color: red;
 }
 #sidebar {
@@ -233,12 +233,12 @@ main {
 .
 ......RESPOINSIVE DESIGN */
 @media screen and (max-width: 768px) {
-    #main > #title1{
+    #main > #title1 {
         font-size: 3vw;
     }
     #sidebarShowButton.active ~ #middle > #sidebar {
         display: flex;
-        background-color: #000000;;
+        background-color: #000000;
     }
     #sidebarShowButton {
         display: flex;
@@ -252,7 +252,7 @@ main {
         top: 3rem;
         padding-top: 0;
     }
-    .sidebar-tooltip-child{
+    .sidebar-tooltip-child {
         font-size: 0.7rem;
     }
     #table-body section h1 {

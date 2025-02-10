@@ -5,9 +5,8 @@
 * Created on : 20.08.2024 
 * Last update : 08.12.2024 
 * Copyright 2024 Mefamex 
-* Licensed under MIT (https://linkedin.com/in/Mefamex/) 
+* Licensed under MIT (https://github.com/Mefamex/) 
 */
-
 
 :root {
     --color-bg-main: rgb(15 15 15);
@@ -36,7 +35,8 @@ html {
     scroll-behavior: smooth;
 }
 
-body {/* this styles applied in headerFooterJs
+body {
+    /* this styles applied in headerFooterJs
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -181,17 +181,7 @@ main {
     border: rgba(255, 0, 0, 0.2) solid 0.1rem;
     box-shadow: 0 0.5rem 1rem rgba(54, 54, 54, 0.4), 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
     transition: all 0.15s ease-in-out;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(50, 0, 255, 0.2),
-        rgba(50, 0, 255, 0),
-        rgba(50, 0, 255, 0),
-        rgba(50, 0, 255, 0),
-        rgba(50, 0, 255, 0),
-        rgba(50, 0, 255, 0),
-        rgba(50, 0, 255, 0),
-        rgba(50, 0, 255, 0.0)
-    );
+    background-image: linear-gradient(to bottom, rgba(50, 0, 255, 0.2), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0));
 }
 #CV .container:hover {
     transform: translateY(-0.5rem);
