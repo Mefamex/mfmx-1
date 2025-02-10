@@ -153,7 +153,7 @@ main {
             text-align: center;
             padding: 1em 0.3em;
             margin: 1em 0em;
-            font-size: 1.2em
+            font-size: 1.2em ;
             background-color: rgba(255, 255, 255, 0.05);
             border-radius: 1em;
         }
