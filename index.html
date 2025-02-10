@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Language" content="tr" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
- 
+
         <!-- SEO Meta Etiketleri -->
         <title>Anasayfa - MEFAMEX</title>
         <meta name="author" content="Mefamex, Mehmet Akif AKKOC" />
@@ -66,17 +66,11 @@
         <meta name="twitter:date" content="2025-02-08T02:00:00Z" />
 
         <script type="text/javascript">
-            (function () {
-                const currentPath = window.location.pathname;
-                if (["about", "archive", "blog", "contact", "cv", "gallery", "games", "projects", "software", "the_mefamex_project", "sweetmonstermia"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) {
-                    window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
-                } else if (currentPath !== "/" && currentPath !== "/index.html") {
-                    if (window.location.href.includes("mefamex") && window.location.href.includes("http")) {
-                        window.location.href = "/";
-                        console.log("Redirected to home page.");
-                    }
-                }
-            })();
+            const currentPath = window.location.pathname;
+            if (["about", "archive", "blog", "contact", "cv", "gallery", "games", "projects", "software", "the_mefamex_project", "sweetmonstermia"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
+            else if (currentPath !== "/") window.location.href = "/";
+            console.log("current path: " + currentPath);
+            
         </script>
 
         <script type="application/ld+json">
