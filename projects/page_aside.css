@@ -5,7 +5,7 @@
 * Created on : 2024-12-08 
 * Last update : 2025-02-04 
 * Copyright 2024 Mefamex 
-* Licensed under MIT (https://linkedin.com/in/Mefamex/) 
+* Licensed under MIT (https://github.com/Mefamex/) 
 */
 
 :root {
@@ -59,7 +59,7 @@ body {
     height: fit-content;
     width: auto;
     margin: 0;
-    & > section{
+    & > section {
         max-width: 95vw;
         height: auto;
         background-color: rgb(5, 5, 5);
@@ -293,8 +293,8 @@ section.compacts {
         display: flex;
         flex-direction: column;
         /*border*/
-        border: 0.1rem solid rgba(255, 255, 255, 0.3); 
-        border-radius: 2em; 
+        border: 0.1rem solid rgba(255, 255, 255, 0.3);
+        border-radius: 2em;
         padding: 0.5em;
     }
 }

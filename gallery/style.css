@@ -6,7 +6,7 @@
 * Created on  : 2025-01-29 
 * Last update : 2025-02-08 
 * Copyright 2024 Mefamex 
-* Licensed under MIT (https://linkedin.com/in/Mefamex/) 
+* Licensed under MIT (https://github.com/Mefamex/) 
 */
 
 :root {
@@ -260,7 +260,7 @@ main {
                     border: calc(var(--images-card-width) * 0.01 + 0.1em) solid transparent;
                     border-block-width: calc(var(--images-card-width) * 0.01 + 0.3em);
                     border-inline-width: calc(var(--images-card-width) * 0.01 + 0.1em);
-                    border-image: linear-gradient(180deg, rgba(0, 217, 255, 0.4), rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.2),rgba(0, 217, 255, 0.2),rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.4)) 2;
+                    border-image: linear-gradient(180deg, rgba(0, 217, 255, 0.4), rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.4)) 2;
                 }
             }
             .card-content {
