@@ -38,7 +38,7 @@ async function CreateNavContainer() {
                         <li><a href="#web_gelistirme">  Web Geliştirme ve API'ler       </a></li> 
                         <li><a href="#kali_linux">      Kali Linux                      </a></li> 
                         <li><a href="#diger">           Diğer Projeler                  </a></li> 
-                    </ul> 
+                    </ul> ww
                 </div> 
     `
 }
