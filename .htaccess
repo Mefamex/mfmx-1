@@ -11,4 +11,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^.*$ / [L,R=301]
 
 Header set Strict-Transport-Security "max-age=31536000"
-Header set X-XSS-Protection "1; mode=block"
+Header set X-XSS-Protection "1; mode=block" 
