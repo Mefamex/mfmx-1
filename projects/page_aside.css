@@ -21,14 +21,6 @@
     transition: all 0.1s ease;
 }
 body {
-    /* this styles applied in headerFooterJs
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    min-height: 100vh;
-    display: flex; 
-    flex-direction: column;*/
     background-color: rgb(20, 20, 20);
     color: white;
 }
@@ -46,20 +38,21 @@ body {
     }
 }
 #main_container main {
+    display: flex;
+    flex-flow: row wrap;
     color: white;
     flex-basis: 75% !important;
     flex-grow: 1000 !important;
     width: auto !important;
     margin-bottom: 5rem !important;
     align-content: flex-start;
-    display: flex;
-    flex-flow: row wrap;
-    flex-basis: 30%;
-    flex-grow: 1000;
+    justify-content: center;
     height: fit-content;
     width: auto;
     margin: 0;
     & > section {
+        display: flex;
+        flex-direction: column;
         max-width: 95vw;
         height: auto;
         background-color: rgb(5, 5, 5);
@@ -71,7 +64,7 @@ body {
         transition: border-color 0.2s ease;
         box-shadow: -0.1rem -0.2rem 0.1rem rgba(255, 255, 255, 0.4), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.4), 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         &:hover {
-            border-color: rgba(255, 255, 255, 0.7);
+            border-color: rgba(255, 255, 255);
             box-shadow: 0 -0.2rem 0.1rem rgba(255, 255, 255, 0.8), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.8), 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
         }
     }
@@ -80,6 +73,7 @@ body {
         flex-direction: column;
         flex-basis: 100%;
         min-height: 15rem;
+        max-width: none;
         margin-bottom: 2rem;
         margin-inline: 5%;
         h1 {

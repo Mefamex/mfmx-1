@@ -18,7 +18,7 @@
 
 async function CreateFooter() {
     // Select / Create the footer
-    let footer = document.querySelector('body > footer') || document.createElement('footer');
+    let footer = document.querySelector('body footer') || document.createElement('footer');
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
 
     // Load the CSS-footer file
@@ -30,7 +30,7 @@ async function CreateFooter() {
 
     // Build the footer
     footer.id = "footer";
-    footer.innerHTML = `<h1 id="footerText">&copy; 2024 MEFAMEX , ALL RIGHT RESERVED</h1>`;
+    footer.innerHTML = `<h1 id="footerText"> 2024-2025 MEFAMEX &copy; ALL RIGHT RESERVED</h1>`;
 
     /*const style = document.createElement('style');style.innerHTML = ``;footer.appendChild(style); */
 }
@@ -38,7 +38,7 @@ async function CreateFooter() {
 
 async function CreateHeader() {
     // Select / Create the header
-    let header = document.querySelector('body > header') || document.createElement('header');
+    let header = document.querySelector('body header') || document.createElement('header');
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
 
     // Load the CSS-header file

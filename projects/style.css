@@ -9,36 +9,12 @@
 */
 
 #main_container main {
-    display: flex;
-    flex-flow: row wrap;
-    height: fit-content;
-    margin: 0;
     min-height: 75vh;
-    align-self: center;
-    justify-content: center;
-    color: white;
-    align-content: flex-start;
     & > section {
         flex: 1 1 20rem;
-        max-width: 35rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
         height: auto;
         min-height: 10rem;
         width: 20rem;
-        background-color: rgb(5, 5, 5);
-        margin: 1rem;
-        padding: 1rem;
-        border: 0.1rem solid rgba(255, 255, 255, 0.2);
-        border-radius: 1rem;
-        transition: border-color 0.2s ease;
-        box-shadow: -0.1rem -0.2rem 0.1rem rgba(255, 255, 255, 0.4), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.4), 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-        &:hover {
-            border-color: rgba(255, 255, 255, 0.7);
-            box-shadow: 0 -0.2rem 0.1rem rgba(255, 255, 255, 0.8), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.8), 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-            background-color: rgba(10, 10, 10);
-        }
         ul {
             list-style: none;
             padding: 0;
@@ -61,11 +37,7 @@
         }
     }
     #mainWellcome {
-        flex-basis: 90%;
-        max-width: none;
-        min-height: 15rem;
         margin-bottom: 0.5rem;
-        margin-inline: 5%;
         h1 {
             text-align: center;
             margin-block: 0.3rem;
@@ -146,7 +118,7 @@
                     border-radius: 0.5em;
                     cursor: pointer;
                     color: white;
-                    border: 0.1rem solid rgba(255, 0, 0, 0.5);
+                    border: 0.1rem solid rgba(0, 255, 251, 0.2);
                     &:hover {
                         border-color: rgba(255, 255, 255, 0.7); /* Üzerine gelindiğinde kenar rengi */
                     }
