@@ -44,9 +44,9 @@
         <meta property="og:url" content="https://mefamex.com/projects/python_to_exe/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Mefamex" />
-        <meta property="og:date" content="2024-12-22T02:00:00Z" />
+        <meta property="og:date" content="2025-02-13T02:00:00Z" />
         <meta property="og:locale" content="tr_TR" />
-        <meta property="article:modified_time" content="2024-12-22T02:00:00Z" />
+        <meta property="article:modified_time" content="2025-02-13T02:00:00Z" />
 
         <!-- Twitter Card Tags -->
         <meta name="twitter:card" content="summary_large_image" />
@@ -57,7 +57,7 @@
         <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
         <meta name="twitter:url" content="https://mefamex.com/projects/python_to_exe/" />
         <meta name="twitter:type" content="website" />
-        <meta name="twitter:date" content="2024-12-22T02:00:00Z" />
+        <meta name="twitter:date" content="2025-02-13T02:00:00Z" />
 
         <style>
             #main_container main {
@@ -65,12 +65,6 @@
                     flex: 1 1 30rem;
                     min-height: 10rem;
                     width: 30rem;
-                }
-                #section-5 {
-                    flex-basis: 50% !important;
-                }
-                #section-8 {
-                    flex-basis: 30rem !important;
                 }
             }
         </style>
@@ -97,27 +91,29 @@
                         bağımsız bir çalıştırılabilir dosyaya dönüştürerek bu sorunu nasıl çözebilirsiniz?
                     </p>
                     <p>Bu yazıda, PyInstaller kullanarak Python projelerinizi .exe dosyalarına nasıl dönüştüreceğinizi anlatacağım.</p>
-                    <p>Github'a kısa süre içerisinde eklerim linki de burada: <a href="https://github.com/Mefamex">github.com/Mefamex/</a></p>
-                    <p>Açılış tarihi: 22.12.2024 || Son güncelleme tarihi: 22.12.2024</p>
+                    <p>Github'a kısa süre içerisinde eklenir: <a href="https://github.com/Mefamex">github.com/Mefamex/</a></p>
+                    <p>Açılış tarihi: 22.12.2024 || Son güncelleme tarihi: 13.02.2025</p>
                 </section>
                 <section>
-                    <h2>1) PyInstaller Nedir?</h2>
+                    <h2>1) PyInstaller ?</h2>
                     <p>
-                        PyInstaller, Python scriptlerini bağımsız, çalıştırılabilir dosyalara (.exe) dönüştüren bir araçtır. Bu sayede: <br />
-                        - Python yüklü olmayan bilgisayarda projeni çalıştırabilirsin. <br />
-                        - Tüm bağımlılıklar (kütüphaneler vs) ve kod tek bir peket (veya klasör) haline gelir.
+                        <ul>
+                            <li>Python scriptlerini bağımsız, çalıştırılabilir olarak exe'ye dönüştüren bir araçtır. </li>
+                            <li>Python yüklü olmayan bilgisayarda projeni çalıştırabilirsin.</li>
+                            <li>Tüm bağımlılıklar (kütüphaneler vs) ve kod tek bir peket (veya klasör) haline gelir.</li>
+                        </ul>
                     </p>
                 </section>
                 <section>
                     <h2>2) PyInstaller Kurulumu</h2>
-                    <p>Herhangi bir özel bir durumu yok. Pip ile kolay şekilde kurulumunu yapabiliriz.</p>
+                    <p>Pip ile kolay şekilde kurulumunu yapabiliriz.</p>
                     <p><code>pip install PyInstaller</code></p>
-                    <p>* <b>pyinstaller</b> ile <b>PyInstaller</b> aynı kod değildir. Hata alabilirsiniz dikkatli olun.</p>
+                    <p>* <b>pyinstaller</b> ile <b>PyInstaller</b> aynı modül değildir.</p>
                 </section>
                 <section id="adimlar">
                     <h2>3) Python Scriptini Exe Formatına Dönüştürme</h2>
                     <p>
-                        Örnek olarak elimizdeki projenin dosyası proje.py olsun. <code>PyInstaller --onefile proje.py</code>
+                        <code>PyInstaller --onefile proje.py</code>
                         Bu komut projemizi tek bir dosya olarak exe formatına çevirir.
                     </p>
                     <ul>
@@ -134,16 +130,16 @@
                     <p>Dönüştürme işlemi tamamlandığında bizim için asıl gerekli olan <code>.dist/*exe</code> dosyasıdır. ayrıca aşağıdaki yapılar da oluşur:</p>
                     <ul>
                         <li>
-                            <p><b> dist/ Klasörü:</b> Çalıştırılabilir dosya (proje.exe) burada yer alır.</p>
+                            <p><b> dist/ :</b> Çalıştırılabilir dosya (proje.exe) burada yer alır.</p>
                         </li>
                         <li>
-                            <p><b> build/ Klasörü: </b> Geçici derleme dosyaları burada tutulur.</p>
+                            <p><b> build/ : </b> Geçici derleme dosyaları burada tutulur.</p>
                         </li>
                         <li>
-                            <p><b> proje.spec Dosyası: </b> PyInstaller’ın ayarlarını içeren dosya.</p>
+                            <p><b> proje.spec : </b> PyInstaller’ın ayarlarını içeren dosya.</p>
                         </li>
                         <li>
-                            <p><b> __pycache__/ Dizini</b> Önbellek dosyalarını içerir.</p>
+                            <p><b> __pycache__/ :</b> Önbellek dosyalarını içerir.</p>
                         </li>
                     </ul>
                 </section>
