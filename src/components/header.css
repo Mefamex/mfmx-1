@@ -62,7 +62,7 @@ header {
     box-shadow: 0 0.7rem 0.5rem 0.7rem rgba(0, 0, 0, 0.7), 0 1vh 0.5vh rgba(0, 0, 0, 0.4), 0 2vh 1vh rgba(0, 0, 0, 0.4);
     z-index: 1000;
     font-family: system-ui, -apple-system;
-    animation: opacity-0-1 1.2s ease-out ;
+    animation: opacity-0-1 1.5s ease-out ;
     transition: height 1s ease-out;
 }
 @keyframes opacity-0-1 {
@@ -71,7 +71,7 @@ header {
         transform: translateY(-5rem);
         scale: 1.1;
     }
-    10% {
+    30% {
         opacity: 0;
         transform: translateY(-5rem);
         scale: 1.1;
@@ -130,7 +130,7 @@ header {
     padding-left: 2rem;
     gap: 1rem;
     transform: translateX(0.25rem) translateY(0.25rem);
-    box-shadow: 0 8rem 10rem 30rem rgba(0, 0, 0, 0.9), 0 0 1rem rgba(0, 0, 0, 1), 0 0 2rem rgba(0, 0, 0, 1);
+    box-shadow: 0 -90rem 3rem 100rem rgba(0, 0, 0, 0.9), 0 0 1rem rgba(0, 0, 0, 1), 0 0 2rem rgba(0, 0, 0, 1);
     border-radius: 1rem;
 }
 
@@ -171,6 +171,7 @@ header {
     border: 0.1em solid rgba(255, 0, 0, 0.5);
     color: black;
 }
+
 
 #navBarHideButton {
     margin-right: 5vw;
@@ -235,8 +236,16 @@ header {
         background-color: black;
         text-decoration-color: red;
         transform: scale(1.1) translateY(-0.2rem);
+        color: white;
     }
     
+}
+#navBarHidden .current_page {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 0, 255);
+    border: 0.1em solid rgba(255, 0, 0, 0.5);
+    color: black;
 }
 
 
