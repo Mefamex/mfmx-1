@@ -7,12 +7,12 @@
 * Copyright 2024 Mefamex 
 * Licensed under MIT (https://github.com/Mefamex/) 
 */
-
+/*
 :root {
     --color-bg-main: rgb(4 5 31);
     --color-white: rgb(241 241 241);
     --color-white-2: rgb(213, 213, 213);
-}
+}*/
 * {
     box-sizing: border-box;
 }
@@ -390,7 +390,8 @@ main #left_card #mefamex_logo img {
         padding-bottom: 0.75rem;
         -webkit-backdrop-filter: blur(1rem);
         backdrop-filter: blur(1rem);
-        box-shadow: 0 0.5rem 2rem rgba(134, 134, 134, 0.5);
+        box-shadow: 0 0.2rem 1rem 1rem rgba(0, 0, 0, 1);
+        border-bottom: 0.2rem solid rgb(0 33 105);
     }
     header h1 {
         margin: 0.5rem 0 0 0;
@@ -405,7 +406,7 @@ main #left_card #mefamex_logo img {
         width: 100% !important;
         margin-block: 0;
         margin-inline: auto;
-        padding: 27vw 0 0 0;
+        padding: 30vw 0 0 0;
         animation: entranceUp 0.5s normal 0.5s both !important;
     }
     #mefamex_logo {
