@@ -238,7 +238,6 @@ header {
         transform: scale(1.1) translateY(-0.2rem);
         color: white;
     }
-    
 }
 #navBarHidden .current_page {
     background-color: rgba(255, 255, 255, 0.8);
