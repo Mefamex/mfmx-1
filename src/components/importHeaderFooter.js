@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com
  * @since 20.08.2024
- * @lastModified 30.01.2025
+ * @lastModified 13.02.2025
  */
 
 'use strict';
