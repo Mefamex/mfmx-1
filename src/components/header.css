@@ -18,7 +18,7 @@
 ::-webkit-scrollbar-thumb {
     background-color: #b8b8b8; /* dark gray thumb color */
     border-radius: 12px; /* rounded corners for the thumb */
-    border: 0.1vw solid #ff0000; /* dark gray border around the thumb */
+    border: 1px solid #ff0000; /* dark gray border around the thumb */
 }
 
 ::-webkit-scrollbar-track {
@@ -55,13 +55,15 @@ header {
     height: 5rem;
     margin: 0;
     z-index: 100;
-    background-color: rgb(30, 35, 40);
+    background-color: rgb(165, 180, 180);
+    background-image: linear-gradient(to top, black, transparent, transparent, transparent, transparent,white);
     justify-content: space-between;
     border-bottom: 0.1rem solid white;
-    box-shadow: 0 0.3vh 0.5vh rgba(255, 255, 255, 0.4), 0 1vh 0.5vh rgba(0, 0, 0, 0.4), 0 2vh 1vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.7rem 0.5rem 0.7rem rgba(0, 0, 0, 0.7), 0 1vh 0.5vh rgba(0, 0, 0, 0.4), 0 2vh 1vh rgba(0, 0, 0, 0.4);
     z-index: 1000;
     font-family: sans-serif;
-    animation: opacity-0-1 1.2s ease-out forwards;
+    animation: opacity-0-1 1.2s ease-out ;
+    transition: height 1s ease-out;
 }
 @keyframes opacity-0-1 {
     0% {
@@ -128,7 +130,7 @@ header {
     padding-left: 2rem;
     gap: 1rem;
     transform: translateX(0.25rem) translateY(0.25rem);
-    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 1), 0 0 1rem rgba(0, 0, 0, 1), 0 0 2rem rgba(0, 0, 0, 1);
+    box-shadow: 0 8rem 10rem 30rem rgba(0, 0, 0, 0.9), 0 0 1rem rgba(0, 0, 0, 1), 0 0 2rem rgba(0, 0, 0, 1);
     border-radius: 1rem;
 }
 
@@ -136,14 +138,14 @@ header {
     display: flex;
     flex-direction: row;
     list-style: none;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 0.15em solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.15em solid rgba(0, 0, 0, 0.3);
     height: 80%;
-    align-self: center;
     align-items: center;
-    gap: 2dvw;
+    top: 0;
+    gap: 2vw;
     border-radius: 1rem;
-    padding-inline: 0.5dvw;
+    padding-inline: 0.5em;
 }
 #headerNavBar > a {
     display: block;
@@ -171,15 +173,23 @@ header {
 }
 
 #navBarHideButton {
-    margin-right: 5dvw;
+    margin-right: 5vw;
     display: none;
     height: 70%;
+    aspect-ratio:1; 
     align-self: center;
     /*filter: drop-shadow(0 0 0.1rem white);*/
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
     opacity: 0.8;
+    border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 38%;
+    filter: invert(1);
+}
+#navBarHideButton:hover{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-color: rgb(0, 255, 255) !important;
 }
 #navBarHideButton.unselected {
     content: url("/src/assets/icons/=.ico");
@@ -187,7 +197,10 @@ header {
 #navBarHideButton.selected {
     content: url("/src/assets/icons/x.ico");
     opacity: 1;
-    filter: drop-shadow(0 0 0.1rem white);
+    filter: invert(1);
+    background-color: black;
+    scale: 1.2;
+    border-color: white;
 }
 
 #navBarHidden {
@@ -206,8 +219,8 @@ header {
     font-size: 1.1rem;
     border-radius: 0 0 0 3rem;
     counter-reset: i;
-    animation: entranceRight 0.3s ease-out forwards;
-    box-shadow: -35rem 39rem 5rem 40rem rgba(0, 0, 0, 0.8);
+    animation: entranceRight 0.3s ease-out;
+    box-shadow: -35rem 42rem 5rem 40rem rgba(0, 0, 0, 0.8);
 }
 #navBarHidden a {
     color: white;
@@ -230,14 +243,14 @@ header {
 
 @media screen and (max-width: 60rem) {
     header {
-        height: 3rem;
+        height: 3.2rem;
         position: fixed;
         top: 0;
         left: 0;
     }
     #headerDivLeft {
         position: relative;
-        height: 2.75rem;
+        height: 2.7rem;
     }
     #headerDivLeftText {
         font-size: 1rem;

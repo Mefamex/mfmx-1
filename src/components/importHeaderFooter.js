@@ -40,7 +40,7 @@ async function CreateHeader() {
     // Select / Create the header
     let header = document.querySelector('body header') || document.createElement('header');
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
-
+    
     // Load the CSS-header file
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -58,7 +58,7 @@ async function CreateHeader() {
     const divLeftIcon = document.createElement("img"); divLeft.appendChild(divLeftIcon);
     divLeftIcon.id = "headerDivLeftIcon"
 
-    divLeftIcon.src = document.currentScript.src.replace('importHeaderFooter.js', '/mefamex_logo_bgb.png');
+    divLeftIcon.src = document.currentScript.src.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png');
     divLeftIcon.alt = "mefamex_logo";
 
     const divLeftText = document.createElement("h1"); divLeft.appendChild(divLeftText);
@@ -74,8 +74,8 @@ async function CreateHeader() {
         { text: "PROJELER", link: "https://mefamex.com/projects/" },
         { text: "BLOG", link: "https://mefamex.com/blog/" },
         { text: "GALERİ", link: "https://mefamex.com/gallery/" },
-        { text: "ÖZGEÇMİŞ", link: "https://mefamex.com/cv/" },
-        { text: "İLETİŞİM", link: "https://mefamex.com/contact/" }
+        { text: "İLETİŞİM", link: "https://mefamex.com/contact/" },
+        { text: "ÖZGEÇMİŞ", link: "https://mefamex.com/cv/" }
     ]
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
