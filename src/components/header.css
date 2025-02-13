@@ -61,7 +61,7 @@ header {
     border-bottom: 0.1rem solid white;
     box-shadow: 0 0.7rem 0.5rem 0.7rem rgba(0, 0, 0, 0.7), 0 1vh 0.5vh rgba(0, 0, 0, 0.4), 0 2vh 1vh rgba(0, 0, 0, 0.4);
     z-index: 1000;
-    font-family: sans-serif;
+    font-family: system-ui, -apple-system;
     animation: opacity-0-1 1.2s ease-out ;
     transition: height 1s ease-out;
 }
@@ -228,7 +228,6 @@ header {
     border: 0.1rem solid rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
     padding: 1rem;
-    font-family: monospace;
     letter-spacing: 0.15rem;
     text-decoration-color: transparent;
     &:hover,        
