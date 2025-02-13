@@ -128,7 +128,7 @@ main #left_card #mefamex_logo {
     background-color: rgba(0, 0, 0, 0.2);
 }
 main #left_card #mefamex_logo img {
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: contain;
     /*filter: drop-shadow(0 0 0.3vw rgba(255, 255, 255, 0.8));*/
