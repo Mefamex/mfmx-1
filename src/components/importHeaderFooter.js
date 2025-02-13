@@ -93,6 +93,7 @@ async function CreateHeader() {
     navBarList.forEach((item) => {
         let temp_item = document.createElement("a"); navBarHidden.appendChild(temp_item);
         temp_item.textContent = item.text; temp_item.href = item.link;
+        if (window.location.pathname.includes("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
     })
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 
