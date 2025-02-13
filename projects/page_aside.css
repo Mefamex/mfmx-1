@@ -162,6 +162,7 @@ body {
 }
 #main_container aside {
     font-size: 0.9rem;
+    font-family: system-ui, -apple-system;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
