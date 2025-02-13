@@ -176,7 +176,7 @@ main #left_card #mefamex_logo img {
     box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7), 0 0 0.3rem rgba(255, 255, 255, 0.5);
     background-color: rgba(0, 75, 75, 0.3);
     h1 {
-        text-decoration-color: rgb(255, 0, 0);
+        text-decoration-color: rgb(0, 157, 255)
     }
     a {
         transform: scale(1.1);
@@ -203,7 +203,7 @@ main #left_card #mefamex_logo img {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: underline;
-    text-decoration-color: rgb(0, 106, 255);
+    text-decoration-color: rgba(255, 50, 50, 0.3);
     cursor: pointer;
     transition: all 0.2s normal;
 }
