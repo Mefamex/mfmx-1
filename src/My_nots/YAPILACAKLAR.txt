@@ -1,0 +1,318 @@
+bionluk ilanlar ekle
+işkur genç
+Github projeleri taşı
+w3s tüm dilleri bitir
+
+
+================ MEFAMEX - AI ================
+- c# bitir 
+- visualize
+- multi kernel
+
+
+
+
+
+
+================ SOFTWARE ================
+- React güçlendir
+- AI : Transfer Learning
+- TryHackMe
+
+
+
+================ WEBSITE ================
+--- modüler tasarım güçlendir
+- ABOUT: kvkk ilerlet
+- BLOG : sözler , bilgisayarda yapılacaklar
+- PROJ : renklendir
+- IMAGE: catogrized , rovşan behbutov
+- /software/index.html
+
+
+
+
+================ PROJELER ================
+- Proje Örnekleri Hesabı: https://github.com/protesq
+- py to exe : web hizmeti
+- SQL examples
+- python-uv
+- image to webp
+- profile_follower 
+- okuldaki son haberler
+- dirExVis iyileştir
+
+
+
+
+================ BİLİM ================
+- Pyramids
+
+
+
+
+
+
+================ DAİLY ================
+- mail    : akk.....2@gmail.com
+- mail    : info@mefamex.com
+- Google  : Search Console, G-Form
+- GitHub  : DM, commits
+- Sosyal medya LinkedIn, Insta, YouTube, Facebook, X, Reddit, Meta
+- Bionluk, fiver, upwork
+
+
+
+================  ================
+
+
+Bu rehberi kendime göre hazırlamış olup bir gencin günlük yaşamı göz önünde bulundurulmuştur. Ağırlıklı olarak öğrenme, üretme ve araştırma baz alınmıştır.
+
+
+================ GÜNLÜK ZAMAN AKIŞI PLANI  ================
+
+- Gün başlangıcı
+    - 0.25 : kişisel bakım, egzersiz, meditasyon(olumlama)
+    - 0.15 : konuşma dili tekrarı ve gün için mini not çıkarma 
+    - 0.20 : kahvaltı, zaman yönetimi (blokla)
+
+- Gün içinde 
+    - 6.00 : okul / akademik çalışmalar, biografiler
+    - 0.30 : bilgisayar kontrolleri (mail, bildirim)
+    - 0.30 : sosyal medya ve haberler
+    - 1.00 : fizksel ve mental aktiviteler
+    - 0.30 : dinlenme(uyku, gevşeme)
+    - 0.30 : Sanat ile ilgilenme (enstrüman, resim, elişi)
+    - 1.00 : Bilgi taramaları ve araştırmalar
+    - 0.15 : ekip denetimi
+    - 6.00 : teknoloji, bildirimler, proje, kod pratiği, açık kaynak
+
+- Gün sonu 
+    - 0.15 : konuşma dili tekrarı
+    - 0.15 : Günün değerlendirilmesi ve yarının planlanması
+    - 0.15 : yavaşlama meditasyonu
+- 6.00 : uyku
+
+* Gün içinde bloklar arası ve içi molalar (50 - 10dk)
+* Hafta sonunda akademik ve teknolojik aktivitelerin yerini değerlendirmeler ve dinlenme alır
+* haftalık uyku toplamını 40 saate dengelemek için extra uyku
+
+
+================ GÜNLÜK AKTİVİTELER ================
+* Gün, güneş imsakda başlar.
+* Günlük planını dış etmenlerden koru.
+
+- Zaman yönetimi
+    - Günün önceliklerini belirle
+    - Blokları alternatifle
+    - Günü optimize et
+    - Kırılmaları öngör ve tedbirle
+    - Enerji seviyesini göz önünde bulundur
+    - end: Mini geri bildirim
+
+- Teknoloji ve Yazılım
+    - Yazılım dili tekrarı : günlük   : bir sonraki dili tekrar et
+    - E-posta ve Bildirimler
+        - Günlük e-posta kontrolü (öncelikli mailler)
+        - Website bildirimleri (Search Console, G-Form)
+    - Kodlama ve Proje Yönetimi:
+        - Yazılım dili tekrarı: sonraki dil tam tekrar
+        - Kodlama pratikleri  : Hackathon, Leetcode, HackerRank, Codewars  
+        - Mevcut projelerin ilerletilmesi
+        - GitHub: Dm, commits, projelerin güncellenmesi
+        - Açık kaynak kodların keşfi
+        - Bilgi taraması
+    - Sosyal Medya ve Freelance Platformları
+        - DM, etkileşim, trend, flow : LinkedIn, Instagram, YouTube, Facebook, X, Reddit, Meta:
+        - Bionluk, Fiverr, Upwork: Günlük iş fırsatlarını kontrol et
+
+- Konuşma dili tekrarı : güne seçilen dilin kelime, deyim, gramer tekrarı
+- Sağlık : 
+    - Fiziksel Sağlık
+        - Günlük besin dengesi
+        - Günlük Spor
+    - Mental sağlık 
+        - Meditasyon
+        - Ortam ve zihin değişlenleri
+        - Sanat ile vakit geçirme
+
+- Akademik / bilimsel çalışmalar
+    - makale, teori, problem, deneyler, 
+    - Okuma, Araştırma
+    - Teori ve problem çözme
+    - Kaynak tarama
+    - Not alma / özet çıkarma
+
+- Ekip durum kontrolu
+
+
+
+================ HAFTALIK AKTİVİTELER ================
+* Hafta, ben istediğim zaman başlar ben istediğim zaman biter.
+* Haftalık dilimin, sosyolojik düzene mecbur kılınmasına izin verme.
+
+- Zaman Yönetimi:
+    - Geçmiş haftanın analizi 
+    - Kategoriler / ayrılar zaman değerlendirmesi 
+        - Sağlık (fiziksel, ruhsal, sanatsal...)
+        - Kişisel zaman 
+        - Kişisel gelişim
+        - Öğrenme / üretme
+        - Sosyal etkileşim
+        - Maddi yönetim
+    - Gelecek haftanın planı
+    - Zaman bloklarını optimize et
+    - Hayatı araştırılacak insanın güne planlanması
+- Topluluk incelemesi: Teknolojik, bilimsel, akademik 
+    - Mevcutların değerlendirilmesi
+    - Keşfin yapılması
+- Teknoloji ve Yazılım
+    - Geçmiş haftayı analiz et
+        - Hedeflere ulaşıldı mı?
+        - Kod kalitesi ve verimlilik değerlendiremesi
+        - Zaman yönetimi ve odaklanma
+    - Projeleri kontrol et
+        - Mevcut projelerin ilerleme durumu
+        - Karşılaşılan teknik problemler ve çözümleri
+    - Yeni projeler ve çalışmalar için gelecek haftayı planla
+        - Öncelik sıralaması
+        - Öğrenilecek yeni teknoloji ve araçların listesi
+        - Planlanmış güncellemeler ve yenilikleri
+    - Açık kaynak projelerin ve toplulukların değerlendirilmesi
+- Akademik / bilimsel çalışmalar
+    - Geçmiş haftanın analizi
+    - Genel listesi düzenlemesi
+        - Mevcut durum kontrolü 
+        - Keşfedilenlerin eklenmesi
+        - Tekrarların düzenlenmesi
+    - Gelecek hafta planlaması
+- Konferans, etkinlik, toplantıların: 
+    - Değerlendirilmesi
+    - Tekrarı
+    - Düzenlemesi 
+    - Keşfi
+
+
+================ AYLIK AKTİVİTELER ================
+* Ay, ben istediğim zaman başlar ben istediğim zaman biter.
+* Her ay aynı olmak zorunda değil. Aylar arası performans değişikliği olabilir.
+* Mevsimlerin etkisini göz önünde bulundur.
+
+* Aylık kontrolün amacı dengeyi sağlamaktır. Lütfen sessiz ortamda ve hazır ol
+
+- Zaman yönetimi: 
+    - Haftalık raporların kontrolü
+    - Performans / verimlilik optimizasyonu
+    - İyileştirmeler
+
+- Konuşma dili kontrolleri : 
+    - Günlere böl : türkçe, ingilizce, rusça, arapça, azerice, ibranice, almanca
+    - Mevcut dillerin ilerleme kontrolu ve yeni dil arayışı
+
+- Yazılım dili kontrolleri :
+    - Tüm dilleri, çerçeveleri, işletim sistemlerini gözden geçir.
+    - İlerleme durumunu kontrol et
+    - Gelecek ay için her birini bir güne ata. 
+    - Yeni trendleri ve güncellemeleri konrol et.
+    - Teknolojik gelişmeleri kontrol et
+
+- Akademik / bilimsel çalışmalar kontrolleri
+    - Aylık analiz
+    - Genel listesi düzenlemesi
+    - Yeni literatür ve gelişmelerin taranması
+    - Gelecek ayın planlaması
+    - Uzun vadeli planlama
+
+- Sağlık dengesi kontrolleri : 
+    - Fiziksel sağlık; kan değerleri, beslenme (vitamin ve takviyeler), spor, uyku, ortam memnuniyeti
+    - Mental sağlık; mental aktiviteler, zihinsel denge
+    - Duygusal sağlık; duygular, hisler, sanatsal faaliyetler
+    - Bilinç - Şuur 
+    - Bilinçaltı aktiviteleri, psikolojik kritik olay
+    - Beynin dengesi ; tercih/amaç , sağ/sol lob, 
+    - Motivasyon denetlemesi
+
+- Sosyal etkileşimleri kontrolleri
+    - Sosyalleşme durumu ve çevre ile etkileşim
+    - Tanıdıklarla iletişim 
+    - Çevre / zaman geçirme
+    - Aktiviteler
+    - Etkileşim arttırma 
+
+- Maddi akış kontrolleri:
+    - Giderleri kontrol et
+        - Tasarruf ve israfları incele
+    - Gelirleri kontrol et
+        - Mevcut gelirin değerini arttırma planları yap
+        - Yeni gelir kapılarını araştırmak için planla
+        - Hedefleri güncelle ve aylık olarak ilerlemeyi değerlendir
+    - Yatırımları kontrol et
+        - Güncel - gelecek kordinasyonunu sağla
+        - Yeni imkanların kontrolunu planla
+    - Uzun vadeli planlama
+
+- Ekiplerin kontrolu
+    - Raporlar
+    - İlerlemeler
+    - İlişkiler ve iletişim
+    - Sorun tespiti ve çözüm süreçleri 
+    - Yeniler 
+    - İyileştirmeler
+    - Görev dağıtımı
+    - Performs değerlendirmesi
+    - Hedef güncellemeleri
+    - Uzun vadeli planlama
+
+- CV (özgeçmiş) güncellemesi
+
+- Yabancı tecrübeler listesindekilerin araştırılması ve düzenlenmesi :
+    - İdollerin
+    - Araştırılacak
+    - Öğrenilenlerin tekrarı
+    - Yenilerin keşfi
+
+- Kaliteli yaşam arttırımı
+
+- Hayal - Hedef ilerleme durumu ve vizyon kontrolleri
+
+- Beynini ve bedenini dinlemek için yapılan aktivite raporunu incele
+
+- Dengelerin (alışverişin) kontrolü 
+    - insan etkileşimleri
+    - bilgi üretim / tüketim 
+    - Öğrenme / öğretme
+    - Zaman alma / verme
+    - Enerji 
+    - Beynimler olan iletişimim
+
+- GÜNLÜK HAFTALIK AYLIK listesinin kontrolü ve iyileştirimesi
+
+================  ================
+
+
+
+
+
+
+
+
+
+
+================  ================
+
+
+
+
+
+
+
+
+
+
+================  ================
+
+
+
+
+
+
