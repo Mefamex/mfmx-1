@@ -85,7 +85,7 @@ header {
 #headerDivLeftSpace {
     display: flex;
     height: 50%;
-    width: 5em;
+    width: 2em;
 }
 #headerDivLeft {
     display: flex;
@@ -140,11 +140,12 @@ header {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.3);
     border: 0.15em solid rgba(0, 0, 0, 0.3);
+    border-top-width: 0 !important;
     height: 80%;
     align-items: center;
     top: 0;
     gap: 2vw;
-    border-radius: 1rem;
+    border-radius: 0 0 0 1rem;
     padding-inline: 0.5em;
 }
 #headerNavBar > a {

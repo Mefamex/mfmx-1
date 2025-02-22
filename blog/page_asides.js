@@ -1,17 +1,29 @@
 /**
- * @fileoverview MEFAMEX pages-projects Script File
+ * @fileoverview MEFAMEX pages-blog Script File
  * @author Mefamex <info@mefamex.com>
  * @copyright 2024 Mefamex
  * @license MIT
  * @version 1.0.0
  * @see https://mefamex.com/
- * @since 02.12.2024
- * @lastModified 30.01.2025
+ * @since 2025-02-22
+ * @lastModified 2025-02-22
  */
 
 
-(async () => { await CreateAside(); })();
+(async () => { await Greeting(); })();
+/* await CreateAside(); */
 /*await CreateNavContainer();*/
+
+
+
+async function Greeting() {
+    console.log('%cWelcome to MEFAMEX Blog', '                            color: #fff; background-color: #333; padding: 1em;   border-radius: 0.5em; font-size: 2rem; font-weight: bold; text-shadow: 0.1rem 0.1rem 0.1rem #fff;');
+    console.log('%cI dont know what you want but you can text to me...', 'color: #333; background-color: #fff; padding: 0.5em; border-radius: 0.5em; font-size: 1rem; font-weight: bold; text-shadow: 0.05em 0.05em 0.05em #000;');
+    console.log('%cThis is a blog page.', '                               color: #333; background-color: #fff; padding: 0.5em; border-radius: 0.5em; font-size: 1rem; font-weight: bold; text-shadow: 0.05em 0.05em 0.05em #000;');
+    console.log('%cHave a good time ^^ ', '                               color: #333; background-color: #fff; padding: 0.5em; border-radius: 0.5em; font-size: 1rem; font-weight: bold; text-shadow: 0.05em 0.05em 0.05em #000;');
+}
+
+
 
 
 /* NOT WORKING I WILL RETURN 

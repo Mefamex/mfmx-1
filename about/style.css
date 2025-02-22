@@ -47,7 +47,7 @@ main p {
     font-size: 1.5rem;
     color: var(--color-white-2);
     line-height: 1.5;
-
+/*
     color: transparent;
     background: linear-gradient(
         to right,
@@ -61,7 +61,7 @@ main p {
     );
     background-clip: text;
     background-size: 300% 1.2em;
-    animation: 1s linear infinite alternate radialGradient;
+    animation: 1s linear infinite alternate radialGradient;*/
 }
 
 @keyframes radialGradient {
