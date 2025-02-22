@@ -1,36 +1,3 @@
-- İsim hakkı 
-
-
-================== WEBSITE ==================
-- Gallery düzenle
-- React npm vite
-
-
-
-================== LYRICS ==================
---- Bununla alakalı bir blog sayfası oluştur.
-- yaşarken hep kötü şeyler konnuşuyoruz onlarla ilgili. ama öldüklerine insanın aklına hep güzel anılar gelir.
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-
-
-
 
 
 <!-- WebSite Schema -->
