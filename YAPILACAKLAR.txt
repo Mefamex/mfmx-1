@@ -41,19 +41,20 @@ jvm (java virtual machine)
 - Modüleştir: İçindekiler ve son değişiklikler
 - Proje Örnekleri Hesabı: https://github.com/protesq 
 - py to exe : web hizmeti 
-- kali linux mysql
 - React npm vite 
 - SQL examples 
 - python-uv 
-- python to sh 
 - python web8 
 - image to webp 
 - profile_follower 
 - okuldaki son haberler 
 - dirExVis iyileştir 
-- hack: QR code 
 - Muhasebe programı 
 - https://github.com/muzafferkadir/snake-learn-to-play
+- hack: QR code 
+- kali linux mysql
+- python to sh 
+- amass (kali tool): subdomain keşfi 
 
 
 ================ BLOG ================
@@ -64,6 +65,7 @@ jvm (java virtual machine)
 - Her şey denge üzerine kuruludur. bir insan etrafındaki yabancı (aile dışı) insanlara ne kadar iyi davranırsa kötülük dengesi için ailesindeki bireylere kötü ahlak sergiler
 - Biyografiler
 - GITHUB'ın önemi - Öğrenme ve çalışma alanı sergileme
+- Gününü nasıl iyileştirirsin ? 20şer dakika temizlik ve düzen, konsantrasyon, birini dinleme, kenidni dinleme, gelir kaynakları, kitap okuma 
 
 
 ================ SÖZLER ================
@@ -85,11 +87,21 @@ jvm (java virtual machine)
 - Başarının 2 kuralı vardır. Birincisi; bildiğin her şeyi anlatma..
 - Ne kadar çok onun için bir şey yaparsan, o kendini daha çok sever ama ne kadar kendin için bir şey yaparsan o seni daha çok sever. Beynini ya da vücudunu şimartma, özüne odaklan.
 - İyiliğin fazlası kötülük, kötülüğün fazlası iyilik olarak döner.
+- Sizi rahatsız etmesi gerekiyordu. Yoksa asla değişmezdiniz.
+- İçeride ne varsa dışarıda da o vardır. 
+- I dont have time to hate someone while I'am busy building myself up 
+
 
 
 =============== SİTELER ===============
 Freelance: r10.net
 mekanik klavye sesi: https://github.com/hainguyents13/mechvibes/releases/
+AI search engine   : https://www.perplexity.ai/ 
+Search engine      : Ahmia , Shodan , Haystak 
+realtime image crte: https://www.krea.ai/
+check namess       : https://namechk.com/ 
+
+
 
 =============== AI ===============
 - Blackbox
@@ -101,13 +113,45 @@ mekanik klavye sesi: https://github.com/hainguyents13/mechvibes/releases/
 
 
 =============== KİTAPLAR ===============
+- Narsist İle Ateşkes : Wendy T. Benhaty
+- Etkili insanların 7 Alışkanlığı : Stephen R. Corvey
+- İktidar : Robert Greene Joost Elfers ?
+- Zengin Baba Yoksul Baba : Robert T Kiyosaki 
+- Martin Eden : Jack London 
 
 
-=============== MÜZİK ===============
+================= MÜZİK ================
 OMER BALIK - Melancholy Groove
 MELİS FİS - Ne Gelir Elimizden? - Akustik
 GİRAY ŞİPİT- kim beni alkışlar
 PUF - Bildiğin Gibi
+
+=============== YOUTUBE ===============
+- TEDX: itiraz et, hayal kur, ilerle | Selçuk R. Şirin
+- TEDX: Zenginliğin büyük sırrı | Emin Çapa
+- TEDX: Ben bir malım : Behçet Yalın
+- TEDX: Uyku sizin süper gücünüz : Matt Walker
+- TEDX: Kötü alışkanlıklardan kurtulmanın basit bir yolu
+- TEDX: Seçme sanatı : Sheena Lyengar 
+- TEDX: Toplantınız mı var ? yürüyüşe çıkın : Nilofer merchant 
+- TEDX: Uzayda kör olmaktan öğrendiklerim : Chris hadfield
+- TEDX: Aşırı sahiplenme : Jocko Wilink
+- TEDX: Okumak Neden Önemlidir : Rita Carter 
+- TEDX: Fitness'ın Gücü : Vincent lam 
+- TEDX: Kırılganlığın Gücü : Brene brown 
+- TEDX: Usta erteleyinin zihninde : Tim Urban 
+- TEDX: Vücut diliniz kim olduğunuzu şekillendirebilir : Amy Cuddy 
+- TEDX: Tutkunun ve azmin gücü  Angela lee duckworth 
+- TEDX: Daha iyi çalışmanın mutlu sırrı : shawn achor 
+- TEDX: Ele geçirilmez yaratıcı dehânız : elizabeth gilbert 
+- TEDX: İçine Döndüklerin Gücü : susan cain 
+- TEDX: Bir yalancı nasıl anlaşılır : Pamela Meyer 
+- How to Stop Wasting Your Life : by Leon Hendrix 
+- How to Become a Millionaire (Step by Step Guide) : by Teachingmensfashion
+- Winter Arc: How to Change Your Life in 90 Days” by Igor Rupieta
+- Easiest Way to Make $10,000+ Per Month (100% Passively) : by Emilie Reich
+
+
 
 =============== İNSANLAR ===============
 - Cem OZAN
@@ -146,8 +190,30 @@ avmigran
 
 
 ================ FİLM ================
-film: se7en
-dizi: wednesday 
+- dizi: wednesday 
+- se7en
+- Wall Street 
+- The Founder 
+- Tucker 
+- Blackberry 
+- Barbarions at the gate 
+- Steve Jobs 
+- next (Ajan Ferris)
+- Leadership (Coach Boone)
+- Negotiation (The Pursuit of Happyness) 
+- Creativity (The Social Network)
+- Financial Literacy (The Big Short) 
+- Strategic Thinking (Moneyball) 
+- Resilience (Rocky) 
+- Problem-Solving (The Martian) 
+- BİLLİONS 
+- MARGİN CALL 
+- THE PURSUİT OF HAPPYNESS 
+- PUNK PROPHET BİLLİONAİRE TRAITOR 
+- İNSİDEJOB 
+- köstebek günü 
+- matrix 
+- yüzüklerin efendisi : cralın dönüşü 
 
 ================ YOUTUBE ================
 - Nasıl zengin olunur: https://youtu.be/Vz1gIBcevVI?si=_6yBpMklNyN-y6Fw
@@ -262,7 +328,7 @@ Bu rehberi kendime göre hazırlamış olup bir gencin günlük yaşamı göz ö
 
 ================ HAFTALIK AKTİVİTELER ================
 * Hafta, ben istediğim zaman başlar ben istediğim zaman biter.
-* Haftalık dilimin, sosyolojik düzene mecbur kılınmasına izin verme.
+* Haftalık diliminin, sosyolojik düzene mecbur kılınmasına izin verme.
 
 - Zaman Yönetimi:
     - Geçmiş haftanın analizi 
