@@ -1,3 +1,5 @@
+# updated 2025-26-02T05:32+2
+
 - İsim hakkı 
 
 bionluk ilanlar ekle
@@ -39,6 +41,7 @@ jvm (java virtual machine)
 - Modüleştir: İçindekiler ve son değişiklikler
 - Proje Örnekleri Hesabı: https://github.com/protesq 
 - py to exe : web hizmeti 
+- kali linux mysql
 - React npm vite 
 - SQL examples 
 - python-uv 
