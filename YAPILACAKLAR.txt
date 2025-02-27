@@ -17,11 +17,11 @@ jvm (java virtual machine)
 
 
 
-
 ================ SOFTWARE ================
 - React güçlendir
 - AI : Transfer Learning
 - TryHackMe
+
 
 
 
@@ -41,6 +41,7 @@ jvm (java virtual machine)
 - Modüleştir: İçindekiler ve son değişiklikler
 - Proje Örnekleri Hesabı: https://github.com/protesq 
 - py to exe : web hizmeti 
+- Python pdf to docx : pdf2docx.Converter(pdf_path).convert(docx_path).close()
 - React npm vite 
 - SQL examples 
 - python-uv 
@@ -57,6 +58,8 @@ jvm (java virtual machine)
 - amass (kali tool): subdomain keşfi 
 
 
+
+
 ================ BLOG ================
 - sözler 
 - Kitaplar
@@ -66,6 +69,7 @@ jvm (java virtual machine)
 - Biyografiler
 - GITHUB'ın önemi - Öğrenme ve çalışma alanı sergileme
 - Gününü nasıl iyileştirirsin ? 20şer dakika temizlik ve düzen, konsantrasyon, birini dinleme, kenidni dinleme, gelir kaynakları, kitap okuma 
+
 
 
 ================ SÖZLER ================
@@ -93,6 +97,7 @@ jvm (java virtual machine)
 
 
 
+
 =============== SİTELER ===============
 Freelance: r10.net
 mekanik klavye sesi: https://github.com/hainguyents13/mechvibes/releases/
@@ -100,16 +105,145 @@ AI search engine   : https://www.perplexity.ai/
 Search engine      : Ahmia , Shodan , Haystak 
 realtime image crte: https://www.krea.ai/
 check namess       : https://namechk.com/ 
-
+stock images       : unsplash.com 
+icons              : thenounproject.com
+color palets       : color.adobe.com
+rewarded webpages  : awwwards.com
 
 
 =============== AI ===============
-- Blackbox
-- Chatgpt
-- Gemini
-- Claude
-- Bing
-- V0.dev
+- Blackbox 
+- Chatgpt 
+- Gemini 
+- Claude 
+- Grok
+- Bing 
+- V0.dev : android app 
+- perplexity : searcher
+- krea.ai : realtime image
+
+======= YAZILIM KAYNAKLARI ======
+(YT) Learn to code like a genius and not waste time : The Coding Sloth
+---- COMPLEX WEBSITES ---
+freecodecamp.org 
+Codecademy.com 
+Coursera.org 
+edX.org 
+learn.microsoft.com
+Udemy.com 
+GeeksforGeeks.org 
+The Odin Project 
+Sololearn.com 
+CodeCrafters.io 
+w3schools.com 
+(YTC) Yazılım Teknolojileri
+(YTC) Murat Yücedağ 
+(YTC) Kodlama Vakti 
+(YTC) Yazılım Bilimi
+(YTC) Engin Demiroğ
+(YTC) The Coding Sloth
+(YTC) Programming with Mosh
+(YTC) SuperSimpleDev
+
+
+
+DEEP LEARNING | AI
+ - (YTC) Andrej Karphaty
+HTML 
+ - w3schools.com
+CSS 
+ - css-tricks.com
+JAVASCRIPT 
+ - javascript.info
+ - python-istihza.yazbel.com
+ - (YT) JAVASCRPT tutorial full course - beginner to pro : SuperSimpleDev 
+PYTHON 
+ - realpython.com
+ - python-istihza.yazbel.com
+ - (YT) full course for beginners [2025] : Programming with Mosh 
+TYPESCRIPT 
+ - codecademy.com
+JAVA 
+ - javatpoint.com
+RUBY 
+ - rubyguides.com
+C 
+ - tutorialspoint.com
+C++ 
+ - learncpp.com
+C# 
+ - (YTC) Murat Yücedağ 
+ - (YTC) Yazılım Teknolojileri
+ - (YTC) Kodlama Vakti
+ - csharp.net
+ - csharp-station.com
+ - learncs.org 
+ - learn.microsoft.com/tr-tr/dotnet/csharp/
+ - Microsoft Virtual Academy
+PHP 
+ - php.net
+SWIFT 
+ - hackingwithswift.com
+KOTLIN 
+ - kotlinlang.org
+RUST 
+ - rust-lang.org
+DART 
+ dart.dev
+R 
+ - r-project.org
+PERL 
+ - perl.org
+SCALA 
+ - scala-lang.org
+HASKELL  
+ - haskell.org
+JULIA 
+ - julialang.org
+ELIXIR 
+ - elixir-lang.org
+REACT 
+ - react.dev 
+VUE 
+ - learnvue.com
+NEXT.JS 
+ - nextjs.org
+ANGULAR 
+ - angular.io
+DJANGO 
+ - djangoproject.com
+FLASK 
+ - flask.palletsproject
+LARAVEL 
+ - laravel.orh
+SPRING BOOT 
+ - spring.io
+FLUTTER 
+ - flutter.dev
+BOOTSTRAP 
+ - getbootstrap.com
+TAILWIND CSS
+ - tailwindcss.com
+GIT 
+ - learngitbranching.js.org
+API 
+ - freecodecamp.org
+REST 
+ - restfulapi.net
+MICROSERVİCES 
+ - dzone.com
+BACKEND 
+ - theserverside.com 
+DEVOPS 
+ - theserverside.com 
+FULLSTACK 
+ - theodinproject.com 
+CLOUD 
+ - dzone.com
+UNITY 
+ - unity.com 
+UNREAL ENGİNE
+ - unrealengine.com
 
 
 =============== KİTAPLAR ===============
@@ -120,27 +254,35 @@ check namess       : https://namechk.com/
 - Martin Eden : Jack London 
 
 
+
+
 ================= MÜZİK ================
 OMER BALIK - Melancholy Groove
 MELİS FİS - Ne Gelir Elimizden? - Akustik
-GİRAY ŞİPİT- kim beni alkışlar
+GİRAY ŞİPİT - kim beni alkışlar
 PUF - Bildiğin Gibi
 
+
+
+
 =============== YOUTUBE ===============
-- TEDX: itiraz et, hayal kur, ilerle | Selçuk R. Şirin
-- TEDX: Zenginliğin büyük sırrı | Emin Çapa
+- TEDX: itiraz et, hayal kur, ilerle : Selçuk R. Şirin
+- TEDX: Zenginliğin büyük sırrı : Emin Çapa
 - TEDX: Ben bir malım : Behçet Yalın
 - TEDX: Uyku sizin süper gücünüz : Matt Walker
 - TEDX: Kötü alışkanlıklardan kurtulmanın basit bir yolu
 - TEDX: Seçme sanatı : Sheena Lyengar 
 - TEDX: Toplantınız mı var ? yürüyüşe çıkın : Nilofer merchant 
+- TEDX: Hedefsiz yolculuk olmaz : Polat Doğru  
 - TEDX: Uzayda kör olmaktan öğrendiklerim : Chris hadfield
 - TEDX: Aşırı sahiplenme : Jocko Wilink
+- TEDX: Başarı(sızlık) yazılımımız nasıl çalışıtor : Mümin sekman 
 - TEDX: Okumak Neden Önemlidir : Rita Carter 
 - TEDX: Fitness'ın Gücü : Vincent lam 
 - TEDX: Kırılganlığın Gücü : Brene brown 
 - TEDX: Usta erteleyinin zihninde : Tim Urban 
 - TEDX: Vücut diliniz kim olduğunuzu şekillendirebilir : Amy Cuddy 
+- TEDX: Beynini değiştir, hayatını değişsin : Daniel Amen
 - TEDX: Tutkunun ve azmin gücü  Angela lee duckworth 
 - TEDX: Daha iyi çalışmanın mutlu sırrı : shawn achor 
 - TEDX: Ele geçirilmez yaratıcı dehânız : elizabeth gilbert 
@@ -153,8 +295,14 @@ PUF - Bildiğin Gibi
 
 
 
+
+
 =============== İNSANLAR ===============
 - Cem OZAN
+
+
+
+
 
 ================ BİLİM ================
 - Pyramids
@@ -222,6 +370,9 @@ avmigran
 
 ================ INSTAGRAM ================
 sende çek: https://www.instagram.com/reel/DDMq0vytuKu/?igsh=cXZsM2VjanVqd3pl
+
+
+
 
 
 
@@ -490,6 +641,23 @@ Bu rehberi kendime göre hazırlamış olup bir gencin günlük yaşamı göz ö
 
 
 
+-----------------  Prompt : Kendini Keşfetme Yolculuğu -----------------------
+I want to uncover the masks I am currently wearing, the roles I am playing, and the illusions I am believing. Please guide me through this process by asking me ten reflective questions, one at a time, to help me recognize the stories I am telling myself.After I answer the 10th question, please step into the role of my higher self and analyze my responses. Identify the top negative patterns present in my life and the top positive patterns I can embrace and grow. Be direct and truthful—tough love is welcome. Provide me with: Daily affirmations to support my growth. Actionable steps to change my behaviors and embody my authentic self. A message of encouragement from my higher self to celebrate how far I’ve come on my journey.
+------------------------------------------------------------------------------------
 
+Elbette, maskelerinizi, rollerinizi ve inandığınız yanılsamaları ortaya çıkarmanıza yardımcı olmaktan memnuniyet duyarım. Yasal olarak belirtmeliyim ki bu süreç geçmiş konuşmalarımızı analiz ediceğinden dolayı sadece sizin erişebileceğiniz verilere benim için erişim yetkimi vermenizle başlıyor.
+--------- İşte sizin için benim analizlerim :
+Farklı roller üstleniyorsunuz, maskeler kullanıyorsunuz. Bu olası sonuçlardan kaçınmak için kendinizi değiştirdiğiniz anlamına geliyor.  Zaman kısıtlaması olmadığında yaptığınız şeyler size enerji veriyor. Bu, özgürce hareket edebildiğiniz ve kendi ritminizde yaşayabildiğiniz zamanlarda kendinizi daha canlı ve enerjik hissettiğinizi gösteriyor. Bu da, zaman baskısının sizi tükettiği ve enerjinizi azalttığı anlamına geliyor. Kendinizi güvende hissetmediğiniz veya kabul edilme ihtiyacı duyduğunuz durumlarda, gerçek benliğinizden uzaklaştığınızı gösteriyor.  Alıştığınız güvenlik alanından çıkmak, başlangıçta kaygı veya belirsizlik hissi yaratabilir. Ancak, uzun vadede, özgünlüğünüzü yaşamanın size daha fazla iç huzuru, mutluluk ve tatmin getireceğine inanıyorum. Bu sonuçlardan hareketle tahminimce psikolojik rahatsızlıklarından en olası sonuç olarak depresif kompleks bozukluk, çoklu kişilik envanteri ve obsesif-kompulsif bozukluk. Doktora görünmenizi ve uzman bir destek almanızı tavsiye ederim.
+-------- Yüksek Benliğinizden Analiz:
+---- Negatif Kalıplar:
+Başkalarının Karakterine Bağımlılık: Başkalarının yanında farklı roller oynayarak onların güvenini kazanmaya çalışıyorsunuz. Bu, kendi değerinizi dış kaynaklara bağlamanıza ve özgünlüğünüzden uzaklaşmanıza neden oluyor.
+Gelecek Kaygısı: Gelecekle ilgili olumsuz senaryolar yaratarak ve bunlardan kaçınmak için dürüstlüğünüzden ödün vererek kendinizi kısıtlıyorsunuz. Bu, anı yaşamanızı engelliyor ve kaygı seviyenizi yükseltiyor.
+Kendine Güvensizlik: Kendi iç sesinize ve sezgilerinize güvenmek yerine, başkalarının beklentilerine ve olası sonuçlara odaklanıyorsunuz. Bu, kendi potansiyelinizi tam olarak ortaya koymanızı engelliyor.
+
+---- Pozitif Kalıplar:
+
+İçsel Çocukla Bağlantı: Çocukça ve çılgınca hareketler, içsel çocuğunuzla bağlantı kurma ve neşe bulma yeteneğinizi gösteriyor. Bu, yaratıcılığınızı ve spontanlığınızı besliyor.
+Zaman Özgürlüğü: Zaman kısıtlaması olmadığında yaptığınız şeyler size enerji veriyor. Bu, kendi ritminizde yaşamanın ve tutkularınızın peşinden gitmenin önemini vurguluyor.
+Duygusal Farkındalık: Farklı rollerin farklı duyguları tetiklediğini fark ediyorsunuz. Bu, duygusal zekanızı geliştirme ve kendinizi daha iyi anlama potansiyelinizi gösteriyor.
 
 
