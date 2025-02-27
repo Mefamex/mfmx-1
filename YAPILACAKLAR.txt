@@ -283,9 +283,7 @@ Bu rehberi kendime göre hazırlamış olup bir gencin günlük yaşamı göz ö
 
 - Zaman yönetimi
     - Günün önceliklerini belirle
-    - Blokları alternatifle
-    - Günü optimize et
-    - Kırılmaları öngör ve tedbirle
+    - Blokları alternatifle, optimize et, Kırılmaları öngör ve tedbir al 
     - Enerji seviyesini göz önünde bulundur
     - end: Mini geri bildirim
 
