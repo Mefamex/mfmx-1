@@ -1,312 +1,453 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="Content-Language" content="tr" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <!-- SEO Meta Etiketleri -->
-        <title>Gallery | MEFAMEX</title>
-        <meta name="author" content="Mefamex" />
-        <meta name="description" content="Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır." />
-        <meta name="keywords" content="MEFAMEX, Mefamex, Mefamex Gallery, Mefamex Fotoğraflar, Mefamex Resimler, Mefamex Görseller, Mefamex Etkinlikler, Mefamex Projeler, Mefamex Yapımlar, Mefamex Geçmiş, Mefamex Hatıra, Mefamex Anı" />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="googlebot" content="index, follow" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Language" content="tr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- SEO Meta Etiketleri -->
+    <title>Gallery | MEFAMEX</title>
+    <meta name="author" content="Mefamex" />
+    <meta name="description" content="Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır." />
+    <meta name="keywords"
+        content="MEFAMEX, Mefamex, Mefamex Gallery, Mefamex Fotoğraflar, Mefamex Resimler, Mefamex Görseller, Mefamex Etkinlikler, Mefamex Projeler, Mefamex Yapımlar, Mefamex Geçmiş, Mefamex Hatıra, Mefamex Anı" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <!-- Preconnect ve DNS Prefetch -->
+    <link rel="preconnect" href="https://mefamex.com/gallery/" />
+    <link rel="dns-prefetch" href="https://mefamex.com/gallery/" />
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://mefamex.com/gallery/" />
+    <!-- Stil Optimizasyonu -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Performans için preload -->
+    <link rel="preload" as="style" type="text/css" importance="high" href="style.css" />
+    <link rel="preload" as="style" type="text/css" importance="high" href="../src/components/header.css" />
+    <link rel="preload" as="style" type="text/css" importance="high" href="../src/components/footer.css" />
+    <!-- favicon set -->
+    <link rel="icon" sizes="16x16" href="../src/assets/images/mfmx/mfmx-16.png" />
+    <link rel="icon" sizes="32x32" href="../src/assets/images/mfmx/mfmx-32.png" />
+    <link rel="icon" sizes="64x64" href="../src/assets/images/mfmx/mfmx-64.png" />
+    <link rel="icon" sizes="144x144" href="../src/assets/images/mfmx/mfmx-144.png" />
+    <link rel="icon" sizes="256x256" href="../src/assets/images/mfmx/mfmx-256.png" />
+    <link rel="icon" sizes="512x512" href="../src/assets/images/mfmx/mfmx-512.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../src/assets/images/mfmx/mfmx-144.png" />
+    <!-- Open Graph Meta Etiketleri -->
+    <meta property="og:title" content="Gallery | MEFAMEX" />
+    <meta property="og:description" content="Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır." />
+    <meta property="og:creator" content="@mefamex" />
+    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:url" content="https://mefamex.com/gallery/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MEFAMEX" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:date" content="2025-02-27T02:00:00Z" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="article:modified_time" content="2025-02-27T02:00:00Z" />
+    <!-- Twitter Meta Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Mefamex" />
+    <meta name="twitter:creator" content="@mefamex" />
+    <meta name="twitter:title" content="Gallery | MEFAMEX" />
+    <meta name="twitter:description" content="Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır." />
+    <meta name="twitter:image" content="../src/assets/images/mfmx/mfmx-256.png" />
+    <meta name="twitter:url" content="https://mefamex.com/gallery/" />
+    <meta name="twitter:type" content="website" />
+    <meta name="twitter:date" content="2025-02-27T02:00:00Z" />
+</head>
 
-        <!-- Preconnect ve DNS Prefetch -->
-        <link rel="preconnect" href="https://mefamex.com/gallery/" />
-        <link rel="dns-prefetch" href="https://mefamex.com/gallery/" />
-
-        <!-- Canonical Link -->
-        <link rel="canonical" href="https://mefamex.com/gallery/" />
-
-        <!-- Stil Optimizasyonu -->
-        <link rel="stylesheet" type="text/css" href="style.css" />
-
-        <!-- Performans için preload -->
-        <link rel="preload" as="style" type="text/css" importance="high" href="style.css" />
-        <link rel="preload" as="style" type="text/css" importance="high" href="../src/components/header.css" />
-        <link rel="preload" as="style" type="text/css" importance="high" href="../src/components/footer.css" />
-
-        <!-- favicon set -->
-        <link rel="icon" sizes="16x16" href="../src/assets/images/mfmx/mfmx-16.png" />
-        <link rel="icon" sizes="32x32" href="../src/assets/images/mfmx/mfmx-32.png" />
-        <link rel="icon" sizes="64x64" href="../src/assets/images/mfmx/mfmx-64.png" />
-        <link rel="icon" sizes="144x144" href="../src/assets/images/mfmx/mfmx-144.png" />
-        <link rel="icon" sizes="256x256" href="../src/assets/images/mfmx/mfmx-256.png" />
-        <link rel="icon" sizes="512x512" href="../src/assets/images/mfmx/mfmx-512.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="../src/assets/images/mfmx/mfmx-144.png" />
-
-        <!-- Open Graph Meta Etiketleri -->
-        <meta property="og:title" content="Gallery | MEFAMEX" />
-        <meta property="og:description" content="Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır." />
-        <meta property="og:creator" content="@mefamex" />
-        <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-        <meta property="og:url" content="https://mefamex.com/gallery/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="MEFAMEX" />
-        <meta property="og:locale" content="tr_TR" />
-        <meta property="og:date" content="2025-02-26T02:00:00Z" />
-        <meta property="og:locale" content="tr_TR" />
-        <meta property="article:modified_time" content="2025-02-26T02:00:00Z" />
-
-        <!-- Twitter Meta Etiketleri -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="Mefamex" />
-        <meta name="twitter:creator" content="@mefamex" />
-        <meta name="twitter:title" content="Gallery | MEFAMEX" />
-        <meta name="twitter:description" content="Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır." />
-        <meta name="twitter:image" content="../src/assets/images/mfmx/mfmx-256.png" />
-        <meta name="twitter:url" content="https://mefamex.com/gallery/" />
-        <meta name="twitter:type" content="website" />
-        <meta name="twitter:date" content="2025-02-26T02:00:00Z" />
-    </head>
-
-    <body>
-        <main id="main" name="main">
-            <section id="mainWellcome">
-                <h1 id="page-title">GALLERY | MEFAMEX</h1>
-                <div id="page-paragraphs">
-                    <p id="page-description">Mefamex'in çeşitli etkinliklerinden, projelerinden, tasarımlardan, yapımlardan elde edilen ve geçmişten hatırlanmak üzere görsellerin arşivlendiği bir alt sayfadır.</p>
-                    <p id="legal_notice">Bu sayfada yer alan görsellerin tüm hakları Mefamex'e aittir. İzinsiz kullanımı yasaktır.</p>
-                    <p>Açılış tarihi: 29.01.2025 || Son güncelleme tarihi: 18.02.2025</p>
+<body>
+    <main id="main" name="main">
+        <!-- -->
+        <!-- -->
+        <!-- -->
+        <section id="mainWellcome">
+            <h1 id="page-title">GALLERY | MEFAMEX</h1>
+            <div id="page-paragraphs">
+                <p id="page-description"> Mefamex'in çeşitli etkinliklerinden, projelerinden, tasarımlardan, yapımlardan elde edilen ve geçmişten hatırlanmak üzere görsellerin arşivlendiği bir alt
+                    sayfadır. </p>
+                <p id="legal_notice">Bu sayfada yer alan görsellerin tüm hakları Mefamex'e aittir. İzinsiz kullanımı yasaktır.</p>
+                <p>Açılış tarihi: 29.01.2025 || Son güncelleme tarihi: 27.02.2025</p>
+            </div>
+        </section>
+        <!-- -->
+        <!-- -->
+        <!-- -->
+        <section id="page-navigator">
+            <h2>SEÇİCİLER</h2>
+            <fieldset id="gorsel_boyutu">
+                <legend>Resim Boyutu:</legend>
+                <label> <input id="0" type="radio" name="sizee" /> X1 </label>
+                <label> <input id="1" type="radio" name="sizee" checked /> X2 </label>
+                <label> <input id="2" type="radio" name="sizee" /> X3 </label>
+                <label> <input id="3" type="radio" name="sizee" /> X4 </label>
+                <label> <input id="4" type="radio" name="sizee" /> X5 </label>
+                <label> <input id="5" type="radio" name="sizee" /> MAX </label>
+            </fieldset>
+        </section>
+        <!-- -->
+        <!--  webp:  type="image/webp"   png:  type="image/png"   jpg:  type="image/jpeg"  —  -->
+        <!-- -->
+        <section class="images">
+            <div class="card">
+                <picture id="picture-001" name="picture-001">
+                    <source srcset="pictures/converted/picture-001.webp" type="image/webp" />
+                    <source srcset="pictures/picture-001.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-001.png" title="Young man in dark theme"
+                        alt="Young man in dark theme | 29.01.2025 | archive | AI-powered | Mefamex written in front of a young man in dark theme" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Young man in dark theme</h3>
+                    <p class="card-description">29.01.2025 | AI-powered</p>
                 </div>
-            </section>
-
-            <section id="page-navigator">
-                <h2>SEÇİCİLER</h2>
-                <fieldset id="gorsel_boyutu">
-                    <legend>Resim Boyutu:</legend>
-                    <label><input id="0" type="radio" name="sizee" /> X1 </label>
-                    <label><input id="1" type="radio" name="sizee" /> X2 </label>
-                    <label><input id="2" type="radio" name="sizee" checked /> X3 </label>
-                    <label><input id="3" type="radio" name="sizee" /> X4 </label>
-                    <label><input id="4" type="radio" name="sizee" /> X5 </label>
-                    <label><input id="5" type="radio" name="sizee" /> MAX </label>
-                </fieldset>
-            </section>
-
-            <!--  webp:  type="image/webp"   png:  type="image/png"   jpg:  type="image/jpeg"  —  -->
-            <section class="images">
-                <div class="card">
-                    <picture id="picture-001" name="picture-001">
-                        <source srcset="pictures/converted/picture-001.webp" type="image/webp" />
-                        <source srcset="pictures/picture-001.png" type="image/png" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-001.webp" title="Young man in dark theme" alt="Young man in dark theme | 29.01.2025 | archive | AI-powered | Mefamex written in front of a young man in dark theme" />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Young man in dark theme</h3>
-                        <p class="card-description">29.01.2025 | AI-powered</p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-003" name="picture-003">
+                    <source srcset="pictures/converted/picture-003.webp" type="image/webp" />
+                    <source srcset="pictures/picture-003.webp" type="image/webp" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-003.webp" title="Passenger"
+                        alt="Passenger - Mefamex| 29.01.2025 | archive | AI-powered" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Passenger</h3>
+                    <p class="card-description">29.01.2025 | AI-powered</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-003" name="picture-003">
-                        <source srcset="pictures/converted/picture-003.webp" type="image/webp" />
-                        <source srcset="pictures/picture-003.webp" type="image/webp" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-003.webp" title="Passenger" alt="Passenger - Mefamex| 29.01.2025 | archive | AI-powered" />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Passenger</h3>
-                        <p class="card-description">29.01.2025 | AI-powered</p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-006" name="picture-006">
+                    <source srcset="pictures/converted/picture-006.webp" type="image/webp" />
+                    <source srcset="pictures/picture-006.jpg" type="image/jpeg" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-006.jpg" title="Card Design Example"
+                        alt="Card Design Example - Mefamex| 27.10.2024 | archive | Designer: NNB" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Card Design Example</h3>
+                    <p class="card-description">27.10.2024 | archive | Designer: NNB</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-006" name="picture-006">
-                        <source srcset="pictures/converted/picture-006.webp" type="image/webp" />
-                        <source srcset="pictures/picture-006.jpg" type="image/jpeg" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-006.webp" title="Card Design Example" alt="Card Design Example - Mefamex| 27.10.2024 | archive | Designer: NNB" />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Card Design Example</h3>
-                        <p class="card-description">27.10.2024 | archive | Designer: NNB</p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-007" name="picture-007">
+                    <source srcset="pictures/converted/picture-007.webp" type="image/webp" />
+                    <source srcset="pictures/picture-007.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-007.png" title="Hayat Üniversitesi"
+                        alt="Hayat Üniversitesi - Mefamex| 22.01.2025 | feed | Screenshot" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Hayat Üniversitesi</h3>
+                    <p class="card-description">22.01.2025 | feed | Screenshot</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-007" name="picture-007">
-                        <source srcset="pictures/converted/picture-007.webp" type="image/webp" />
-                        <source srcset="pictures/picture-007.png" type="image/png" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-007.webp" title="Hayat Üniversitesi" alt="Hayat Üniversitesi - Mefamex| 22.01.2025 | feed | Screenshot" />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Hayat Üniversitesi</h3>
-                        <p class="card-description">22.01.2025 | feed | Screenshot</p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-008" name="picture-008">
+                    <source srcset="pictures/converted/picture-008.webp" type="image/webp" />
+                    <source srcset="pictures/picture-008.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-008.png" title=">Neural Network Classes"
+                        alt=">Neural Network Classes - Mefamex | " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Neural Network Classes</h3>
+                    <p class="card-description"> 08.02.2025 | AI | <span>— Bir sinir ağının ve kontrolcüsünün mimari yapısı.</span>
+                    </p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-008" name="picture-008">
-                        <source srcset="pictures/converted/picture-008.webp" type="image/webp" />
-                        <source srcset="pictures/picture-008.png" type="image/png" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-008.webp" title=">Neural Network Classes" alt=">Neural Network Classes - Mefamex | " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Neural Network Classes</h3>
-                        <p class="card-description">08.02.2025 | AI | <span> — Bir sinir ağının ve kontrolcüsünün mimari yapısı. </span></p>
-                    </div>
+            </div>
+        </section>
+        <!-- -->
+        <!-- -->
+        <!-- -->
+        <br />
+        <hr />
+        <h2 class="image-titles"> DESIGNS </h2>
+        <section class="images">
+            <div class="card">
+                <picture id="picture-020" name="picture-020">
+                    <source srcset="pictures/converted/picture-020.webp" type="image/webp" />
+                    <source srcset="pictures/picture-020.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-020.png" title="Mefamex 's Logo"
+                        alt="Mefamex 's Logo| 01.01.2014 | designer: Mefamex" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Mefamex 's Logo</h3>
+                    <p class="card-description">01.01.2014 | designer: Mefamex</p>
                 </div>
-            </section>
-
-            <br />
-            <hr />
-            <h2 class="image-titles">WALLPAPERS</h2>
-            <section class="images">
-                <div class="card">
-                    <picture id="picture-004" name="picture-004">
-                        <source srcset="pictures/converted/picture-004.webp" type="image/webp" />
-                        <source srcset="pictures/picture-004.png" type="image/png" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-004.webp" title="Mefamex 's Wallpaper" alt="Mefamex 's Wallpaper| 20.12.2021 | archive | designer: RR" />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Mefamex 's Wallpaper</h3>
-                        <p class="card-description">20.12.2021 | archive | designer: RR</p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-021" name="picture-021">
+                    <source srcset="pictures/converted/picture-021.webp" type="image/webp" />
+                    <source srcset="pictures/picture-021.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-021.png" title="Mefamex 's Logo"
+                        alt="Mefamex 's Logo| 01.01.2014 | designer: Mefamex" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Mefamex 's Logo</h3>
+                    <p class="card-description">01.01.2014 | designer: Mefamex</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-005" name="picture-005">
-                        <source srcset="pictures/converted/picture-005.webp" type="image/webp" />
-                        <source srcset="pictures/picture-005.jpg" type="image/jpeg" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-005.webp" title="Mefamex 's Wallpaper (linux)" alt="Mefamex 's Wallpaper (linux) | 15.08.2024 | archive | Mfmx-powered" />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Mefamex 's Wallpaper (linux)</h3>
-                        <p class="card-description">15.08.2024 | archive | Mfmx-powered</p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-004" name="picture-004">
+                    <source srcset="pictures/converted/picture-004.webp" type="image/webp" />
+                    <source srcset="pictures/picture-004.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-004.png" title="Mefamex 's Wallpaper"
+                        alt="Mefamex 's Wallpaper| 20.12.2021 | archive | designer: RR" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Mefamex 's Wallpaper</h3>
+                    <p class="card-description">20.12.2021 | archive | designer: RR</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-002" name="picture-002">
-                        <source srcset="pictures/converted/picture-002.webp" type="image/webp" />
-                        <source srcset="pictures/picture-002.webp" type="image/webp" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-002.webp" title="Universer" alt="Universer - Mefamex.com | 29.01.2025 | archive | AI-powered | Someone understood the universe and it was complete... " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title">Universer</h3>
-                        <p class="card-description">29.01.2025 | archive | AI-powered | <span> — someone understood the universe and it was complete... </span> <span> — GPT'ye 'Mefamex' kelimesini duyduklarında akıllarına ne geldiğini sorduğumda... </span></p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-005" name="picture-005">
+                    <source srcset="pictures/converted/picture-005.webp" type="image/webp" />
+                    <source srcset="pictures/picture-005.jpg" type="image/jpeg" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-005.jpg" title="Mefamex 's Wallpaper (linux)"
+                        alt="Mefamex 's Wallpaper (linux) | 15.08.2024 | archive | Mfmx-powered" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Mefamex 's Wallpaper (linux)</h3>
+                    <p class="card-description">15.08.2024 | archive | Mfmx-powered</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-009" name="picture-009">
-                        <source srcset="pictures/converted/picture-009.webp" type="image/webp" />
-                        <source srcset="pictures/picture-009.jpeg" type="image/jpeg" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-009.webp" title=" Wallpaper Natural and futuristich " alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title"> Wallpaper Sample 09 </h3>
-                        <p class="card-description">18.02.2025 | wallpaper | AI-powered | <span> — A natural and futuristic wallpaper with shades of blue, purple.  </span></p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-016" name="picture-016">
+                    <source srcset="pictures/converted/picture-016.webp" type="image/webp" />
+                    <source srcset="pictures/picture-016.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-016.png" title="SpaceShip-1"
+                        alt="SpaceShip-1 | 27.02.2025 | Mfmx-powered | AI-Flatten" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">SpaceShip-1</h3>
+                    <p class="card-description">27.02.2025 | Mfmx-powered | AI-Flatten</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-010" name="picture-010">
-                        <source srcset="pictures/converted/picture-010.webp" type="image/webp" />
-                        <source srcset="pictures/picture-010.jpeg" type="image/jpeg" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-010.webp" title=" Wallpaper Natural and futuristich " alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title"> Wallpaper Sample 10 </h3>
-                        <p class="card-description">18.02.2025 | wallpaper | AI-powered | <span> — A natural and futuristic wallpaper with shades of blue, purple.  </span></p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-018" name="picture-018">
+                    <source srcset="pictures/converted/picture-018.webp" type="image/webp" />
+                    <source srcset="pictures/picture-018.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-018.png" title="SpaceShip-2"
+                        alt="SpaceShip-2 | 27.02.2025 | Mfmx-powered | AI-Flatten" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">SpaceShip-2</h3>
+                    <p class="card-description">27.02.2025 | Mfmx-powered | AI-Flatten</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-011" name="picture-011">
-                        <source srcset="pictures/converted/picture-011.webp" type="image/webp" />
-                        <source srcset="pictures/picture-011.png" type="image/png" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-011.webp" title=" Wallpaper Natural and futuristich " alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title"> Wallpaper Sample 11 </h3>
-                        <p class="card-description">18.02.2025 | wallpaper | AI-powered | <span> — A natural and futuristic wallpaper with shades of blue, purple.  </span></p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-017" name="picture-017">
+                    <source srcset="pictures/converted/picture-017.webp" type="image/webp" />
+                    <source srcset="pictures/picture-017.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-017.png" title="SpaceShip-3"
+                        alt="SpaceShip-3 | 27.02.2025 | Mfmx-powered | AI-Flatten" />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">SpaceShip-3</h3>
+                    <p class="card-description">27.02.2025 | Mfmx-powered | AI-Flatten</p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-012" name="picture-012">
-                        <source srcset="pictures/converted/picture-012.webp" type="image/webp" />
-                        <source srcset="pictures/picture-012.png" type="image/png" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-012.webp" title=" Wallpaper Natural and futuristich " alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title"> Wallpaper Sample 12 </h3>
-                        <p class="card-description">18.02.2025 | wallpaper | AI-powered | <span> — A natural and futuristic wallpaper with shades of blue, purple.  </span></p>
-                    </div>
+            </div>
+        </section>
+        <!-- -->
+        <!-- -->
+        <!-- -->
+        <br />
+        <hr />
+        <h2 class="image-titles">WALLPAPERS</h2>
+        <section class="images">
+            <div class="card">
+                <picture id="picture-002" name="picture-002">
+                    <source srcset="pictures/converted/picture-002.webp" type="image/webp" />
+                    <source srcset="pictures/picture-002.webp" type="image/webp" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-002.webp" title="Universer"
+                        alt="Universer - Mefamex.com | 29.01.2025 | archive | AI-powered | Someone understood the universe and it was complete... " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Universer</h3>
+                    <p class="card-description"> 29.01.2025 | archive | AI-powered | <span>— someone understood the universe and it was complete...</span>
+                        <span>— GPT'nin Mefamex algısı</span>
+                    </p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-013" name="picture-013">
-                        <source srcset="pictures/converted/picture-013.webp" type="image/webp" />
-                        <source srcset="pictures/picture-013.png" type="image/png" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-013.webp" title=" Wallpaper Natural and futuristich " alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title"> Wallpaper Sample 13 </h3>
-                        <p class="card-description">18.02.2025 | wallpaper | AI-powered | <span> — A natural and futuristic wallpaper with shades of blue, purple.  </span></p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-019" name="picture-019">
+                    <source srcset="pictures/converted/picture-019.webp" type="image/webp" />
+                    <source srcset="pictures/picture-019.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-019.png" title="Angel" alt="Angel - Mefamex.com | 27.02.2025 | AI-powered " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Angel</h3>
+                    <p class="card-description"> 27.02.2025 | archive | AI-powered </p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-014" name="picture-014">
-                        <source srcset="pictures/converted/picture-014.webp" type="image/webp" />
-                        <source srcset="pictures/picture-014.webp" type="image/webp" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-014.webp" title=" Wallpaper Natural and futuristich " alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title"> Wallpaper Sample 14 </h3>
-                        <p class="card-description">18.02.2025 | wallpaper | AI-powered | <span> — A natural and futuristic wallpaper with shades of blue, purple.  </span></p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-022" name="picture-022">
+                    <source srcset="pictures/converted/picture-022.webp" type="image/webp" />
+                    <source srcset="pictures/picture-022.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-022.png" title="Angel" alt="Angel - Mefamex.com | 27.02.2025 | AI-powered " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Angel</h3>
+                    <p class="card-description"> 27.02.2025 | archive | AI-powered </p>
                 </div>
-
-                <div class="card">
-                    <picture id="picture-015" name="picture-015">
-                        <source srcset="pictures/converted/picture-015.webp" type="image/webp" />
-                        <source srcset="pictures/picture-015.webp" type="image/webp" />
-                        <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/converted/picture-015.webp" title=" Wallpaper Natural and futuristich " alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
-                    </picture>
-                    <div class="card-content">
-                        <h3 class="card-title"> Wallpaper Sample 15 </h3>
-                        <p class="card-description">18.02.2025 | wallpaper | AI-powered | <span> — A natural and futuristic wallpaper with shades of blue, purple.  </span></p>
-                    </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-009" name="picture-009">
+                    <source srcset="pictures/converted/picture-009.webp" type="image/webp" />
+                    <source srcset="pictures/picture-009.jpeg" type="image/jpeg" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-009.jpeg" title=" Wallpaper Natural and futuristich "
+                        alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Wallpaper Sample 09</h3>
+                    <p class="card-description"> 18.02.2025 | wallpaper | AI-powered | 
+                    </p>
                 </div>
-
-            </section>
-
-        </main>
-        <div id="big-image" class="display-none">
-            <button id="big-image-close"><b>X</b></button>
-            <picture> <img loading="eager" decoding="async" importance="high" role="img" src="pictures/converted/picture-001.webp" title="" alt="" /> </picture>
-        </div>
-        <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
-        <script type="text/javascript" defer>
-            document.addEventListener("DOMContentLoaded", () => {
-                const bigImage = document.querySelector("#big-image");
-                document.querySelectorAll('input[name="sizee"]').forEach((checkbox) => {
-                    checkbox.style.display = "none";
-                    checkbox.parentElement.classList.toggle("label-secildi", checkbox.checked);
-                    if (checkbox.checked) document.documentElement.style.setProperty("--images-card-width", ["10em", "14em", "20em", "28em", "42em", "100vw"][checkbox.id] || "30vw");
-                    checkbox.onchange = () => {
-                        requestAnimationFrame(() => {
-                            document.querySelectorAll('input[name="sizee"]').forEach((element) => {
-                                element.parentElement.classList.toggle("label-secildi", element.checked);
-                                if (element.checked) document.documentElement.style.setProperty("--images-card-width", ["10em", "14em", "20em", "28em", "42em", "100vw"][element.id] || "30vw");
-                            });
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-010" name="picture-010">
+                    <source srcset="pictures/converted/picture-010.webp" type="image/webp" />
+                    <source srcset="pictures/picture-010.jpeg" type="image/jpeg" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-010.jpeg" title=" Wallpaper Natural and futuristich "
+                        alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Wallpaper Sample 10</h3>
+                    <p class="card-description"> 18.02.2025 | wallpaper | AI-powered | 
+                    </p>
+                </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-011" name="picture-011">
+                    <source srcset="pictures/converted/picture-011.webp" type="image/webp" />
+                    <source srcset="pictures/picture-011.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-011.png" title=" Wallpaper Natural and futuristich "
+                        alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Wallpaper Sample 11</h3>
+                    <p class="card-description"> 18.02.2025 | wallpaper | AI-powered | 
+                    </p>
+                </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-012" name="picture-012">
+                    <source srcset="pictures/converted/picture-012.webp" type="image/webp" />
+                    <source srcset="pictures/picture-012.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-012.png" title=" Wallpaper Natural and futuristich "
+                        alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Wallpaper Sample 12</h3>
+                    <p class="card-description"> 18.02.2025 | wallpaper | AI-powered | 
+                    </p>
+                </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-013" name="picture-013">
+                    <source srcset="pictures/converted/picture-013.webp" type="image/webp" />
+                    <source srcset="pictures/picture-013.png" type="image/png" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-013.png" title=" Wallpaper Natural and futuristich "
+                        alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Wallpaper Sample 13</h3>
+                    <p class="card-description"> 18.02.2025 | wallpaper | AI-powered | 
+                    </p>
+                </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-014" name="picture-014">
+                    <source srcset="pictures/converted/picture-014.webp" type="image/webp" />
+                    <source srcset="pictures/picture-014.webp" type="image/webp" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-014.webp" title=" Wallpaper Natural and futuristich "
+                        alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Wallpaper Sample 14</h3>
+                    <p class="card-description"> 18.02.2025 | wallpaper | AI-powered | 
+                    </p>
+                </div>
+            </div>
+            <!-- -->
+            <div class="card">
+                <picture id="picture-015" name="picture-015">
+                    <source srcset="pictures/converted/picture-015.webp" type="image/webp" />
+                    <source srcset="pictures/picture-015.webp" type="image/webp" />
+                    <img loading="lazy" decoding="async" importance="low" role="img" src="pictures/picture-015.webp" title=" Wallpaper Natural and futuristich "
+                        alt="18.02.2025 | wallpaper | AI-powered | A natural and futuristic wallpaper with shades of blue, purple. " />
+                </picture>
+                <div class="card-content">
+                    <h3 class="card-title">Wallpaper Sample 15</h3>
+                    <p class="card-description"> 18.02.2025 | wallpaper | AI-powered | 
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <div id="big-image" class="display-none">
+        <button id="big-image-close"><b>X</b></button>
+        <picture>
+            <img loading="eager" decoding="async" importance="high" role="img" src="pictures/converted/picture-001.webp" title alt />
+        </picture>
+    </div>
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <!-- -->
+    <script type="text/javascript" defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            const bigImage = document.querySelector("#big-image");
+            document.querySelectorAll('input[name="sizee"]').forEach((checkbox) => {
+                checkbox.style.display = "none";
+                checkbox.parentElement.classList.toggle("label-secildi", checkbox.checked);
+                if (checkbox.checked)
+                    document.documentElement.style.setProperty(
+                        "--images-card-width",
+                        ["10em", "14em", "20em", "28em", "42em", "100vw"][checkbox.id] || "30vw"
+                    );
+                checkbox.onchange = () => {
+                    requestAnimationFrame(() => {
+                        document.querySelectorAll('input[name="sizee"]').forEach((element) => {
+                            element.parentElement.classList.toggle("label-secildi", element.checked);
+                            if (element.checked)
+                                document.documentElement.style.setProperty(
+                                    "--images-card-width",
+                                    ["10em", "14em", "20em", "28em", "42em", "100vw"][element.id] || "30vw"
+                                );
                         });
-                    };
-                });
-                document.querySelectorAll(".card picture").forEach((pictureElement) => {
-                    pictureElement.style.cursor = "pointer";
-                    pictureElement.onclick = () => {
-                        bigImage.classList.remove("display-none");
-                        bigImage.querySelector("img").src = pictureElement.querySelector("img").src;
-                    };
-                });
-                document.querySelector("#big-image-close").onclick = () => bigImage.classList.add("display-none");
+                    });
+                };
             });
-        </script>
-    </body>
+            document.querySelectorAll(".card picture").forEach((pictureElement) => {
+                pictureElement.style.cursor = "pointer";
+                pictureElement.onclick = () => {
+                    bigImage.classList.remove("display-none");
+                    bigImage.querySelector("img").src = pictureElement.querySelector("img").src;
+                };
+            });
+            document.querySelector("#big-image-close").onclick = () => bigImage.classList.add("display-none");
+        });
+    </script>
+    <!-- -->
+</body>
+
 </html>
