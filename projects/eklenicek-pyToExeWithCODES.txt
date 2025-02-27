@@ -1,3 +1,37 @@
+int main(){
+   const int num = 10; 
+   int *ptr = (int *)&num;
+   *ptr = 20;
+   return 0;
+}
+
+============================================================
+============================================================
+============================================================
+============================================================
+============================================================
+============================================================
+
+KALI on WINDOWS : powershell cmd : wsl --intall 
+
+============================================================
+============================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 === Merhaba bi python kodunu makine koduna çevirebilirmiyiz veya shell koduna
 
 === Python, yorumlanan bir dildir. Bu, kodun doğrudan işlemci tarafından çalıştırılan makine koduna değil, bir yorumlayıcı (interpreter) tarafından satır satır çevrilerek çalıştırıldığı anlamına gelir. Ancak bu, Python'ın makine koduna dönüştürülemediği anlamına gelmez.
