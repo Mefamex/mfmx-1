@@ -1,175 +1,164 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="Content-Language" content="tr" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <!-- SEO Meta Etiketleri -->
-        <title>Kali Linux | MEFAMEX-PROJECTS</title>
-        <meta name="author" content="Mefamex" />
-        <meta name="description" content="Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar." />
-        <meta name="keywords" content="project, proje, mefamex proje, file lister, dizin listeleme, kali linux, linux projects, linux, kali" />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="googlebot" content="index, follow" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Language" content="tr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- SEO Meta Etiketleri -->
+    <title>Kali Linux | MEFAMEX-PROJECTS</title>
+    <meta name="author" content="Mefamex" />
+    <meta name="description" content="Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar." />
+    <meta name="keywords" content="project, proje, mefamex proje, file lister, dizin listeleme, kali linux, linux projects, linux, kali" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <!-- Preconnect ve DNS Prefetch -->
+    <link rel="preconnect" href="https://mefamex.com/projects/kali_linux/" />
+    <link rel="dns-prefetch" href="https://mefamex.com/projects/kali_linux/" />
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://mefamex.com/projects/kali_linux/" />
+    <!-- Stil Optimizasyonu -->
+    <link rel="preload" href="../page_aside.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="../page_aside.css" />
+    <link rel="preload" as="style" type="text/css" importance="high" href="../../src/components/header.css" />
+    <link rel="preload" as="style" type="text/css" importance="high" href="../../src/components/footer.css" />
+    <!-- favicon set -->
+    <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
+    <link rel="icon" sizes="64x64" href="../../src/assets/images/mfmx/mfmx-64.png" type="image/png" />
+    <link rel="icon" sizes="144x144" href="../../src/assets/images/mfmx/mfmx-144.png" type="image/png" />
+    <link rel="icon" sizes="256x256" href="../../src/assets/images/mfmx/mfmx-256.png" type="image/png" />
+    <link rel="icon" sizes="512x512" href="../../src/assets/images/mfmx/mfmx-512.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../src/assets/images/mfmx/mfmx-144.png" />
+    <!-- Open Graph Meta Etiketleri -->
+    <meta property="og:title" content="MEFAMEX - Kali Linux | MEFAMEX-PROJECTS" />
+    <meta property="og:description" content="MEFAMEX-PROJECTS | Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar." />
+    <meta property="og:creator" content="@mefamex" />
+    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:url" content="https://mefamex.com/projects/dizin-listeleme/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MEFAMEX" />
+    <meta property="og:date" content="2025-02-13T20:00:00Z" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="article:modified_time" content="2025-02-13T02:00:00Z" />
+    <!-- Twitter Meta Etiketleri -->
+    <meta name="twitter:ca  rd" content="summary_large_image" />
+    <meta name="twitter:site" content="Mefamex" />
+    <meta name="twitter:creator" content="@mefamex" />
+    <meta name="twitter:title" content="MEFAMEX - Kali Linux | MEFAMEX-PROJECTS" />
+    <meta name="twitter:description" content="MEFAMEX-PROJECTS | Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar." />
+    <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
+    <meta name="twitter:url" content="https://mefamex.com/projects/kali_linux/" />
+    <meta name="twitter:type" content="website" />
+    <meta name="twitter:date" content="2025-02-13T02:00:00Z" />
+    <style>
+        #main_container main {
+            section {
+                flex: 1 1 20rem;
+                min-height: 10rem;
+                width: 20rem;
+            }
 
-        <!-- Preconnect ve DNS Prefetch -->
-        <link rel="preconnect" href="https://mefamex.com/projects/kali_linux/" />
-        <link rel="dns-prefetch" href="https://mefamex.com/projects/kali_linux/" />
+            #grubConfig,
+            #default-bootloader {
+                padding-inline: 1em;
 
-        <!-- Canonical Link -->
-        <link rel="canonical" href="https://mefamex.com/projects/kali_linux/" />
-
-        <!-- Stil Optimizasyonu -->
-        <link rel="preload" href="../page_aside.css" as="style" />
-        <link rel="stylesheet" type="text/css" href="../page_aside.css" />
-        <link rel="preload" as="style" type="text/css" importance="high" href="../../src/components/header.css" />
-        <link rel="preload" as="style" type="text/css" importance="high" href="../../src/components/footer.css" />
-
-        <!-- favicon set -->
-        <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
-        <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
-        <link rel="icon" sizes="64x64" href="../../src/assets/images/mfmx/mfmx-64.png" type="image/png" />
-        <link rel="icon" sizes="144x144" href="../../src/assets/images/mfmx/mfmx-144.png" type="image/png" />
-        <link rel="icon" sizes="256x256" href="../../src/assets/images/mfmx/mfmx-256.png" type="image/png" />
-        <link rel="icon" sizes="512x512" href="../../src/assets/images/mfmx/mfmx-512.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="../../src/assets/images/mfmx/mfmx-144.png" />
-
-        <!-- Open Graph Meta Etiketleri -->
-        <meta property="og:title" content="MEFAMEX - Kali Linux | MEFAMEX-PROJECTS" />
-        <meta property="og:description" content="MEFAMEX-PROJECTS | Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar." />
-        <meta property="og:creator" content="@mefamex" />
-        <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-        <meta property="og:url" content="https://mefamex.com/projects/dizin-listeleme/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="MEFAMEX" />
-        <meta property="og:date" content="2025-02-13T20:00:00Z" />
-        <meta property="og:locale" content="tr_TR" />
-        <meta property="article:modified_time" content="2025-02-13T02:00:00Z" />
-
-        <!-- Twitter Meta Etiketleri -->
-        <meta name="twitter:ca  rd" content="summary_large_image" />
-        <meta name="twitter:site" content="Mefamex" />
-        <meta name="twitter:creator" content="@mefamex" />
-        <meta name="twitter:title" content="MEFAMEX - Kali Linux | MEFAMEX-PROJECTS" />
-        <meta name="twitter:description" content="MEFAMEX-PROJECTS | Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar." />
-        <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
-        <meta name="twitter:url" content="https://mefamex.com/projects/kali_linux/" />
-        <meta name="twitter:type" content="website" />
-        <meta name="twitter:date" content="2025-02-13T02:00:00Z" />
-
-        <style>
-            #main_container main {
-                section {
-                    flex: 1 1 20rem;
-                    min-height: 10rem;
-                    width: 20rem;
+                h2 {
+                    text-align: center;
                 }
-                #grubConfig,
-                #default-bootloader {
-                    padding-inline: 1em;
-                    h2 {
-                        text-align: center;
+
+                ol {
+                    &>li {
+                        margin-block: 0.7em;
                     }
-                    ol {
-                        & > li {
-                            margin-block: 0.7em;
-                        }
-                    }
-                    ul {
-                        & > li {
-                            margin-block: 0.3em;
-                        }
+                }
+
+                ul {
+                    &>li {
+                        margin-block: 0.3em;
                     }
                 }
             }
-        </style>
-    </head>
+        }
+    </style>
+</head>
 
-    <body>
-        <div id="main_container">
-
-            <main role="main" id="main" name="main" aria-label="Ana içerik">
-                <fieldset id="page_navigation" name="page_navigation">
-                    <legend>Sayfa Gezintisi</legend>
+<body>
+    <div id="main_container">
+        <main role="main" id="main" name="main" aria-label="Ana içerik">
+            <section id="mainWellcome" name="main">
+                <h1>KALI LINUX | MEFAMEX</h1>
+                <p>Bu sayfada Kali Linux ile ilgili notlarımı, projelerimi ve hatırlatmalarımı paylaşacağım. Zaman içinde güncellenicek ve yeni içerikler eklenicektir.</p>
+                <p>Sorularınızı ve önerilerinizi bana <a href="https://mefamex.com/contact/"> iletebilirsiniz </a> .</p>
+                <p>Açılış tarihi: 09.12.2024 || Son güncelleme tarihi: 29.12.2024</p>
+            </section>
+            <section>
+                <h2>Kali Linux Önyükleyicisinin Yapılandırma</h2>
+                <p> Kali Linux veya diğer Linux dağıtımlarında, /etc/default/grub dosyası, GRUB (GRand Unified Bootloader) önyükleyicisinin yapılandırma ayarlarını içeren bir dosyadır. GRUB, işletim
+                    sisteminin önyüklenmesi sırasında kullanılan bir bootloader'dır ve birden fazla işletim sistemi veya çekirdek arasında seçim yapma imkanı sunar. </p>
+                <details id="grubConfig">
+                    <summary>
+                        <h3>GRUB Yapılandırma Ayarları ve Parametreleri</h3>
+                    </summary>
+                    <p><code>/etc/default/grub</code> dosyasının içeriği, GRUB'un nasıl davranacağını belirleyen çeşitli ayarları içerir. Bu dosyada genellikle aşağıdaki gibi ayarlar bulunur:</p>
                     <ul>
-                        <li><a href="https://mefamex.com/">mefamex.com</a>/</li>
-                        <li><a href="https://mefamex.com/projects/">projects</a>/</li>
-                        <li><a href="https://mefamex.com/projects/kali_linux">kali_linux</a>/</li>
+                        <li><code> GRUB_DEFAULT=2 </code> Bu ayar, GRUB menüsünde varsayılan olarak hangi işletim sisteminin seçileceğini belirtir. Burada 2 değeri, menüdeki üçüncü seçeneği (0'dan
+                            başladığı için) ifade eder.</li>
+                        <li><code> GRUB_TIMEOUT=5 </code> GRUB menüsünün ne kadar süreyle gösterileceğini belirler. Bu durumda, 5 saniye boyunca menü gösterilecektir.</li>
+                        <li><code> GRUB_DISTRIBUTOR </code> Bu ayar, işletim sisteminin adını belirler. /etc/os-release dosyasından okunarak ayarlanır. Eğer bu dosya yoksa, varsayılan olarak "Kali"
+                            değeri kullanılır.</li>
+                        <li><code> GRUB_CMDLINE_LINUX_DEFAULT="quiet" </code> Linux çekirdeği için varsayılan komut satırı parametrelerini ayarlar. "quiet" parametresi, önyükleme sırasında daha az
+                            bilgi gösterilmesini sağlar.</li>
+                        <li><code> GRUB_DISABLE_OS_PROBER=false </code> Bu ayar, GRUB'un diğer işletim sistemlerini tespit etmesini sağlar. Eğer birden fazla işletim sistemi yüklüyse, bu ayar true
+                            olarak değiştirilirse, diğer işletim sistemleri tespit edilmez.</li>
+                        <li><code> GRUB_BADRAM </code> Bellek hatalarını filtrelemek için kullanılabilir. Bu ayar, belirli bellek adreslerini belirtmek için kullanılır.</li>
+                        <li><code> GRUB_TERMINAL=console </code> Grafik terminali devre dışı bırakmak için kullanılabilir. Eğer bu satır yorumdan çıkarılırsa, GRUB yalnızca metin tabanlı bir
+                            terminalde çalışır.</li>
+                        <li><code> GRUB_GFXMODE </code> Grafik terminalde kullanılacak çözünürlüğü ayarlar. Yalnızca grafik kartının desteklediği modlar kullanılabilir.</li>
+                        <li><code> GRUB_DISABLE_LINUX_UUID </code> Linux'e <b>"root=UUID=xxx"</b> parametresinin geçilmesini devre dışı bırakmak için kullanılabilir.</li>
+                        <li><code> GRUB_DISABLE_RECOVERY </code> Kurtarma modu menü girişlerinin oluşturulmasını devre dışı bırakmak için kullanılabilir.</li>
+                        <li><code> GRUB_INIT_TUNE </code> GRUB başlangıcında bir bip sesi almak için kullanılabilir.</li>
                     </ul>
-                </fieldset>
-                <section id="mainWellcome" name="main">
-                    <h1>KALI LINUX | MEFAMEX</h1>
-                    <p>Bu sayfada Kali Linux ile ilgili notlarımı, projelerimi ve hatırlatmalarımı paylaşacağım. Zaman içinde güncellenicek ve yeni içerikler eklenicektir.</p>
-                    <p>Sorularınızı ve önerilerinizi bana <a href="https://mefamex.com/contact/"> iletebilirsiniz </a> .</p>
-                    <p>Açılış tarihi: 09.12.2024 || Son güncelleme tarihi: 29.12.2024</p>
-                </section>
-                <section>
-                    <h2>Kali Linux Önyükleyicisinin Yapılandırma</h2>
-                    <p>
-                        Kali Linux veya diğer Linux dağıtımlarında, /etc/default/grub dosyası, GRUB (GRand Unified Bootloader) önyükleyicisinin yapılandırma ayarlarını içeren bir dosyadır. GRUB, işletim sisteminin önyüklenmesi sırasında kullanılan bir bootloader'dır ve birden fazla işletim sistemi
-                        veya çekirdek arasında seçim yapma imkanı sunar.
-                    </p>
-                    <details id="grubConfig">
-                        <summary><h3>GRUB Yapılandırma Ayarları ve Parametreleri</h3></summary>
-                        <p><code>/etc/default/grub</code> dosyasının içeriği, GRUB'un nasıl davranacağını belirleyen çeşitli ayarları içerir. Bu dosyada genellikle aşağıdaki gibi ayarlar bulunur:</p>
-                        <ul>
-                            <li><code> GRUB_DEFAULT=2 </code> Bu ayar, GRUB menüsünde varsayılan olarak hangi işletim sisteminin seçileceğini belirtir. Burada 2 değeri, menüdeki üçüncü seçeneği (0'dan başladığı için) ifade eder.</li>
-                            <li><code> GRUB_TIMEOUT=5 </code> GRUB menüsünün ne kadar süreyle gösterileceğini belirler. Bu durumda, 5 saniye boyunca menü gösterilecektir.</li>
-                            <li><code> GRUB_DISTRIBUTOR </code> Bu ayar, işletim sisteminin adını belirler. /etc/os-release dosyasından okunarak ayarlanır. Eğer bu dosya yoksa, varsayılan olarak "Kali" değeri kullanılır.</li>
-                            <li><code> GRUB_CMDLINE_LINUX_DEFAULT="quiet" </code> Linux çekirdeği için varsayılan komut satırı parametrelerini ayarlar. "quiet" parametresi, önyükleme sırasında daha az bilgi gösterilmesini sağlar.</li>
-                            <li><code> GRUB_DISABLE_OS_PROBER=false </code> Bu ayar, GRUB'un diğer işletim sistemlerini tespit etmesini sağlar. Eğer birden fazla işletim sistemi yüklüyse, bu ayar true olarak değiştirilirse, diğer işletim sistemleri tespit edilmez.</li>
-                            <li><code> GRUB_BADRAM </code> Bellek hatalarını filtrelemek için kullanılabilir. Bu ayar, belirli bellek adreslerini belirtmek için kullanılır.</li>
-                            <li><code> GRUB_TERMINAL=console </code> Grafik terminali devre dışı bırakmak için kullanılabilir. Eğer bu satır yorumdan çıkarılırsa, GRUB yalnızca metin tabanlı bir terminalde çalışır.</li>
-                            <li><code> GRUB_GFXMODE </code> Grafik terminalde kullanılacak çözünürlüğü ayarlar. Yalnızca grafik kartının desteklediği modlar kullanılabilir.</li>
-                            <li><code> GRUB_DISABLE_LINUX_UUID </code> Linux'e <b>"root=UUID=xxx"</b> parametresinin geçilmesini devre dışı bırakmak için kullanılabilir.</li>
-                            <li><code> GRUB_DISABLE_RECOVERY </code> Kurtarma modu menü girişlerinin oluşturulmasını devre dışı bırakmak için kullanılabilir.</li>
-                            <li><code> GRUB_INIT_TUNE </code> GRUB başlangıcında bir bip sesi almak için kullanılabilir.</li>
-                        </ul>
-                    </details>
-                    <details id="default-bootloader">
-                        <summary><h3>Kali Linux Boot Menüsünde Varsayılan Önyükleyiciyi Seçme</h3></summary>
-                        <p>Kali Linux'ta varsayılan önyükleyiciyi (bootloader) değiştirmek için aşağıdaki adımları takip edebilirsiniz:</p>
-                        <ol>
-                            <li>
-                                GRUB Konfigürasyon Dosyasını Düzenleyin:
-                                <ul>
-                                    <li><code>sudo su</code> komutunu çalıştırın ve parolanızı girin.</li>
-                                    <li><code>nano /etc/default/grub</code> komutunu çalıştırın ve GRUB konfigürasyon dosyasını düzenleyin</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Varsayılan Önyükleyiciyi Belirleyin:
-                                <ul>
-                                    <li>GRUB_DEFAULT değeri: Bu değer, önyükleme menüsünde varsayılan olarak seçilecek önyükleyiciyi belirler.</li>
-                                    <li>ilk önyükleyici için <code>GRUB_DEFAULT=0</code> , üçüncü için <code>GRUB_DEFAULT=3</code> şeklinde ayarlayabilirsiniz.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Değişiklikleri Kaydetin ve Uygulayın:
-                                <ul>
-                                    <li>Değişiklikleri kaydetin: <code>Ctrl+X</code> tuşlarına basın, ardından <code>'y' & 'enter'</code> tuşuna basarak kaydedin.</li>
-                                </ul>
-                            </li>
-                            <li>GRUB konfigürasyonunu güncelleyin: <code>update-grub</code> komutunu çalıştırın.</li>
-                        </ol>
-                        <p>Örnek: Eğer Windows'u varsayılan önyükleyici olarak seçmek istiyorsanız, GRUB_DEFAULT değerini Windows önyükleyicisinin menüdeki sırasına göre ayarlayabilirsiniz. Örneğin, Windows ikinci seçenekse: <code>GRUB_DEFAULT=1</code></p>
-                        <br />
-                        <p>Ek İpuçları:</p>
-                        <ul>
-                            <li>Önyükleme menüsünde bekleme süresi: <code>GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz. Örneğin, 10 saniye için: <code>GRUB_TIMEOUT=10</code></li>
-
-                            <li>
-                                Önyükleme menüsünü gizleme: <code>GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5 saniye için:
-                                <code>GRUB_HIDDEN_TIMEOUT=5</code>
-                            </li>
-                        </ul>
-                        <br />
-                        <p>Bu adımları takip ederek, Kali Linux'ta varsayılan önyükleyiciyi istediğiniz şekilde ayarlayabilirsiniz.</p>
-                        <br />
-                        <p>FULL CODE:</p>
-                        <pre><code>sudo su 
+                </details>
+                <details id="default-bootloader">
+                    <summary>
+                        <h3>Kali Linux Boot Menüsünde Varsayılan Önyükleyiciyi Seçme</h3>
+                    </summary>
+                    <p>Kali Linux'ta varsayılan önyükleyiciyi (bootloader) değiştirmek için aşağıdaki adımları takip edebilirsiniz:</p>
+                    <ol>
+                        <li> GRUB Konfigürasyon Dosyasını Düzenleyin: <ul>
+                                <li><code>sudo su</code> komutunu çalıştırın ve parolanızı girin.</li>
+                                <li><code>nano /etc/default/grub</code> komutunu çalıştırın ve GRUB konfigürasyon dosyasını düzenleyin</li>
+                            </ul>
+                        </li>
+                        <li> Varsayılan Önyükleyiciyi Belirleyin: <ul>
+                                <li>GRUB_DEFAULT değeri: Bu değer, önyükleme menüsünde varsayılan olarak seçilecek önyükleyiciyi belirler.</li>
+                                <li>ilk önyükleyici için <code>GRUB_DEFAULT=0</code> , üçüncü için <code>GRUB_DEFAULT=3</code> şeklinde ayarlayabilirsiniz.</li>
+                            </ul>
+                        </li>
+                        <li> Değişiklikleri Kaydetin ve Uygulayın: <ul>
+                                <li>Değişiklikleri kaydetin: <code>Ctrl+X</code> tuşlarına basın, ardından <code>'y' & 'enter'</code> tuşuna basarak kaydedin.</li>
+                            </ul>
+                        </li>
+                        <li>GRUB konfigürasyonunu güncelleyin: <code>update-grub</code> komutunu çalıştırın.</li>
+                    </ol>
+                    <p>Örnek: Eğer Windows'u varsayılan önyükleyici olarak seçmek istiyorsanız, GRUB_DEFAULT değerini Windows önyükleyicisinin menüdeki sırasına göre ayarlayabilirsiniz. Örneğin,
+                        Windows ikinci seçenekse: <code>GRUB_DEFAULT=1</code></p>
+                    <br />
+                    <p>Ek İpuçları:</p>
+                    <ul>
+                        <li>Önyükleme menüsünde bekleme süresi: <code>GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz. Örneğin, 10 saniye
+                            için: <code>GRUB_TIMEOUT=10</code></li>
+                        <li> Önyükleme menüsünü gizleme: <code>GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5 saniye için:
+                            <code>GRUB_HIDDEN_TIMEOUT=5</code>
+                        </li>
+                    </ul>
+                    <br />
+                    <p>Bu adımları takip ederek, Kali Linux'ta varsayılan önyükleyiciyi istediğiniz şekilde ayarlayabilirsiniz.</p>
+                    <br />
+                    <p>FULL CODE:</p>
+                    <pre><code>sudo su 
 nano /etc/default/grub 
 GRUB_DEFAULT=0 
 GRUB_TIMEOUT=10 
@@ -179,12 +168,13 @@ GRUB_HIDDEN_TIMEOUT_QUIET=true
 (exit with 'ctrl-x & y & enter') 
 
 update-grub</code></pre>
-                    </details>
-                </section>
-            </main>
-            <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
-        </div>
-        <script src="../../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
-        <script src="../page_asides.js" type="text/javascript" defer></script>
-    </body>
+                </details>
+            </section>
+        </main>
+        <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
+    </div>
+    <script src="../../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script src="../page_asides.js" type="text/javascript" defer></script>
+</body>
+
 </html>
