@@ -89,30 +89,6 @@ body {
         }
     }
 }
-#main_container main #page_navigation {
-    flex-grow: 10;
-    flex-basis: 70%;
-    width: 100%;
-    margin-inline: 2rem;
-    margin-block: 0.7rem 0;
-    height: auto;
-    opacity: 0.5;
-    box-shadow: 0 0 1rem rgba(255, 255, 255, 0);
-    transition: all 0.2s ease;
-    &:hover {
-        font-size: 1.1em;
-        opacity: 1;
-        box-shadow: 0 0 0.4em white;
-        margin-bottom: 1rem;
-    }
-    ul {
-        padding: 0;
-        margin: 0;
-    }
-    li {
-        display: inline;
-    }
-}
 #main_container #nav {
     flex-grow: 1;
     display: none;
