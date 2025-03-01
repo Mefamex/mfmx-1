@@ -8,7 +8,7 @@ Allow: /games
 Allow: /projects
 Allow: /gallery
 Allow: /software
-Allow: /the_mefamex_project
+Allow: / the-mefamex-project
 Allow: /sitemap.xml
 Allow: *.html
 Allow: *.jpg
