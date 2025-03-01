@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="../src/components/footer.css" />
     <!-- Performans için preload -->
     <link rel="preload" as="style" type="text/css" importance="high" href="../src/components/header.css" />
-    <link rel="preload" as="style" type="text/css" importance="high" href="../src/components/footer.css" />
+    <link rel="preload" as="style" type="text/css" href="../src/components/footer.css" />
     <link rel="preload" as="script" type="text/javascript" importance="high" href="../src/components/importHeaderFooter.js" />
     <!-- favicon set -->
     <link rel="icon" sizes="16x16" href="https://mefamex.com/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
@@ -59,22 +59,34 @@
 
 <body>
     <main>
-        <h1>WEBSİTESİ HAKKINDA</h1>
+        <!---->
+        <!---->
+        <h1>WEBSİTE HAKKINDA</h1>
+        <!---->
+        <!---->
         <div class="about-container">
+            <!---->
+            <!---->
             <section class="about-intro">
                 <h2>Hoş Geldiniz</h2>
-                <p> Bu internet sayfası (<strong>mefamex.com</strong>), profesyonel yazılım geliştirme yolculuğumu ve teknoloji tutkumu yansıtan kişisel portfolyo platformudur. </p>
+                <p> Bu internet sayfası (<strong>mefamex.com</strong>), yazılım geliştirme yolculuğumu yansıtan kişisel paylaşımlar platformudur. </p>
             </section>
+            <!---->
+            <!---->
             <section class="about-sections">
                 <h2>Sitede Neler Var?</h2>
                 <ul>
-                    <li><strong>Hakkımda:</strong> Profesyonel geçmişim ve yeteneklerim</li>
-                    <li><strong>Projeler:</strong> Geliştirdiğim yazılım projeleri ve çalışmalar</li>
-                    <li><strong>Blog:</strong> Teknoloji, yazılım ve güncel konularda paylaşımlar</li>
-                    <li><strong>Yazılım & Mefamex:</strong> Teknik içerikler ve çözümler</li>
-                    <li><strong>İletişim:</strong> Benimle iletişime geçebileceğiniz kanallar</li>
+                    <li><strong><a href="https://mefamex.com/">Anasayfa:</a></strong> Siteye genel bakış ve öne çıkan içerikler</li>
+                    <li><strong><a href="https://mefamex.com/about/">Website Hakkında:</a></strong> Site içeriği ve kullanım bilgileri</li>
+                    <li><strong><a href="https://mefamex.com/projects/">Projeler:</a></strong> Geliştirdiğim yazılım projeleri ve çalışmalar</li>
+                    <li><strong><a href="https://mefamex.com/blog/">Blog:</a></strong> Teknoloji, yazılım ve güncel konularda paylaşımlar</li>
+                    <li><strong><a href="https://mefamex.com/gallery/">Galeri:</a></strong> Görsel içerikler ve medya paylaşımları</li>
+                    <li><strong><a href="https://mefamex.com/contact/">İletişim:</a></strong> Benimle iletişime geçebileceğiniz kanallar</li>
+                    <li><strong><a href="https://mefamex.com/cv/">Özgeçmiş:</a></strong> Profesyonel geçmişim ve yeteneklerim</li>
                 </ul>
             </section>
+            <!---->
+            <!---->
             <section class="about-disclaimer">
                 <h2>Yasal Bilgilendirme</h2>
                 <div class="disclaimer-content">
@@ -86,9 +98,19 @@
                     <p class="privacy-notice"> Bu siteyi kullanarak <a href="">Gizlilik Politikamızı</a> ve <a href="">Kullanım Koşullarımızı</a> kabul etmiş sayılırsınız. </p>
                 </div>
             </section>
+            <!---->
+            <!---->
         </div>
+        <!---->
+        <!---->
     </main>
+    <!---->
+    <!---->
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         main {
             margin: 0;
             padding: 0;
@@ -99,28 +121,6 @@
             h1 {
                 text-align: center;
                 color: rgb(241, 241, 241);
-            }
-
-            p {
-                width: 90%;
-                max-width: fit-content;
-                margin-inline: auto;
-                margin-top: 1rem;
-                text-align: left;
-                font-size: 1.5rem;
-                color: rgb(170, 170, 170);
-                line-height: 1.5;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            main h1 {
-                font-size: 1.5rem;
-            }
-
-            main p {
-                width: 90%;
-                font-size: 0.8rem;
             }
         }
 
@@ -148,71 +148,77 @@
                 li {
                     color: rgb(170, 170, 170);
                     margin: 1rem 0;
-                    font-size: 1.2rem;
+                    font-size: 1.2em;
                     line-height: 1.6;
                 }
             }
-        }
 
-        .about-disclaimer {
-            background-color: rgba(30, 30, 30, 0.5);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-top: 2rem;
-
-            .disclaimer-content {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-
-                p {
-                    font-size: 1.1rem;
-                    line-height: 1.6;
-                    color: rgb(180, 180, 180);
-                    margin: 0.5rem 0;
-                }
-
+            .about-sections {
                 a {
-                    color: #4a9eff;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-
-                    &:hover {
-                        color: #ff7474;
-                        text-decoration: underline;
-                    }
-                }
-
-                .copyright-notice {
-                    font-weight: bold;
-                    color: rgb(200, 200, 200) !important;
-                }
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            .about-container {
-                padding: 1rem;
-
-                h2 {
-                    font-size: 1.4rem;
-                }
-
-                ul li {
-                    font-size: 0.9rem;
+                    color: rgb(180, 180, 190);
+                    text-decoration-color: rgba(255, 50, 50, 0.7);
                 }
             }
 
             .about-disclaimer {
-                padding: 1rem;
+                background-color: rgba(110, 110, 110, 0.5);
+                border-radius: 1rem;
+                padding: 2rem;
+                margin-top: 2rem;
 
-                .disclaimer-content p {
-                    font-size: 0.9rem;
+                .disclaimer-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    p {
+                        font-size: 1.1em;
+                        line-height: 1.6;
+                        color: rgb(180, 180, 180);
+                        margin: 0.5rem 0;
+                    }
+
+                    a {
+                        color: #4a9eff;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: #ff7474;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .copyright-notice {
+                        font-weight: bold;
+                        color: rgb(200, 200, 200) !important;
+                    }
                 }
             }
         }
+
+        @media only screen and (max-width: 60rem) {
+            .about-container {
+                padding: 0.5rem;
+                font-size: 0.8rem;
+
+                .about-disclaimer {
+                    padding: 1rem;
+                }
+            }
+
+            .about-sections {
+                font-size: 0.9em;
+            }
+        }
     </style>
+    <!---->
+    <!---->
+    <!---->
     <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <!---->
+    <!---->
+    <!---->
 </body>
 
 </html>
