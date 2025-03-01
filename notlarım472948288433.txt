@@ -26,10 +26,10 @@
                     { "@type": "ListItem", "position": 5, "name": "Blog", "item": "https://mefamex.com/blog/" },
                     { "@type": "ListItem", "position": 6, "name": "İletişim", "item": "https://mefamex.com/contact/" },
                     { "@type": "ListItem", "position": 7, "name": "Projeler", "item": "https://mefamex.com/projects/" },
-                    { "@type": "ListItem", "position": 8, "name": "Dizin Listeleme", "item": "https://mefamex.com/projects/dizin_listeleme" },
-                    { "@type": "ListItem", "position": 9, "name": "Kali Linux", "item": "https://mefamex.com/projects/kali_linux" },
-                    { "@type": "ListItem", "position": 10, "name": "HTML & CSS Book", "item": "https://mefamex.com/projects/html_css_book" },
-                    { "@type": "ListItem", "position": 11, "name": "Python to EXE", "item": "https://mefamex.com/projects/python_to_exe" }
+                    { "@type": "ListItem", "position": 8, "name": "Dizin Listeleme", "item": "https://mefamex.com/projects/dizin-listeleme" },
+                    { "@type": "ListItem", "position": 9, "name": "Kali Linux", "item": "https://mefamex.com/projects/kali-linux" },
+                    { "@type": "ListItem", "position": 10, "name": "HTML & CSS Book", "item": "https://mefamex.com/projects/html-css-book" },
+                    { "@type": "ListItem", "position": 11, "name": "Python to EXE", "item": "https://mefamex.com/projects/python-to-exe" }
                 ]
             }
         </script>
@@ -102,25 +102,25 @@
                     "submenu": [
                         {
                             "title": "Dizin Listeleme",
-                            "href": "https://mefamex.com/projects/dizin_listeleme/",
+                            "href": "https://mefamex.com/projects/dizin-listeleme/",
                             "isVisible": true,
                             "description": "Python Dizin Listeleme Aracı"
                         },
                         {
                             "title": "Kali Linux",
-                            "href": "https://mefamex.com/projects/kali_linux/",
+                            "href": "https://mefamex.com/projects/kali-linux/",
                             "isVisible": true,
                             "description": "Kali Linux Notları"
                         },
                         {
                             "title": "HTML/CSS Kitaplığı", 
-                            "href": "https://mefamex.com/projects/html_css_book/",
+                            "href": "https://mefamex.com/projects/html-css-book/",
                             "isVisible": true,
                             "description": "Web Geliştirme Referansı"
                         },
                         {
                             "title": "Python To Exe",
-                            "href": "https://mefamex.com/projects/python_to_exe/",
+                            "href": "https://mefamex.com/projects/python-to-exe/",
                             "isVisible": true,
                             "description": "Python EXE Dönüştürücü"
                         }

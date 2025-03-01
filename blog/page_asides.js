@@ -48,7 +48,7 @@ async function CreateNavContainer() {
                         <li><a href="#yapay_zeka">      Yapay Zeka ve Makine Öğrenimi   </a></li> 
                         <li><a href="#ag_ve_guvenlik">  Ağ ve Güvenlik                  </a></li> 
                         <li><a href="#web_gelistirme">  Web Geliştirme ve API'ler       </a></li> 
-                        <li><a href="#kali_linux">      Kali Linux                      </a></li> 
+                        <li><a href="#kali-linux">      Kali Linux                      </a></li> 
                         <li><a href="#diger">           Diğer Projeler                  </a></li> 
                     </ul> ww
                 </div> 
@@ -64,10 +64,10 @@ async function CreateAside() {
     <h2>SON DEĞİŞENLER</h2>
                 <ul>
                     <li ><a href="https://mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
-                    <li ><a href="https://mefamex.com/projects/html_css_book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/python_to_exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/kali_linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/dizin_listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/html-css-book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/kali-linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
+                    <li ><a href="https://mefamex.com/projects/dizin-listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
                     <li>Tasarıma başlandı <p class="p_tooltip noSelect">07.12.2024</p></li>
                     <li>Sayfa tasarımı <p class="p_tooltip noSelect">05.12.2024</p></li>
                     <li>Talepler toplandı <p class="p_tooltip noSelect">18.11.2024</p></li>

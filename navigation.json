@@ -83,7 +83,7 @@
                     "submenu": [
                         {
                             "title": "Dizin Listeleme",
-                            "href": "https://mefamex.com/projects/dizin_listeleme/",
+                            "href": "https://mefamex.com/projects/dizin-listeleme/",
                             "isVisible": true,
                             "description": "Python Dizin Listeleme Aracı",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -91,7 +91,7 @@
                         },
                         {
                             "title": "Kali Linux",
-                            "href": "https://mefamex.com/projects/kali_linux/",
+                            "href": "https://mefamex.com/projects/kali-linux/",
                             "isVisible": true,
                             "description": "Kali Linux Notları",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -99,7 +99,7 @@
                         },
                         {
                             "title": "HTML/CSS Kitaplığı",
-                            "href": "https://mefamex.com/projects/html_css_book/",
+                            "href": "https://mefamex.com/projects/html-css-book/",
                             "isVisible": true,
                             "description": "Web Geliştirme Referansı, SEO, HTML, CSS",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -107,7 +107,7 @@
                         },
                         {
                             "title": "Python To Exe",
-                            "href": "https://mefamex.com/projects/python_to_exe/",
+                            "href": "https://mefamex.com/projects/python-to-exe/",
                             "isVisible": true,
                             "description": "Python EXE Dönüştürücü",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",

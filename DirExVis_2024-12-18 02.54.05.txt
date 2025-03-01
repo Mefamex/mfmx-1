@@ -23,16 +23,16 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      queaz_game.js
 |      |      |      style.css
 |      projects
-|      |      dizin_listeleme
+|      |      dizin-listeleme
 |      |      |      index.html
 |      |      |      style.css
-|      |      html_css_book
+|      |      html-css-book
 |      |      |      index.html
 |      |      |      style.css
-|      |      kali_linux
+|      |      kali-linux
 |      |      |      index.html
 |      |      |      style.css
-|      |      python_to_exe
+|      |      python-to-exe
 |      |      |      index.html
 |      |      |      style.css
 |      |      index.html
@@ -193,7 +193,7 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      DirExVis_2024-11-15 15.47.59.txt
 |      index.html
 |      navigation.json
-|      notlarým472948288433.txt
+|      notlarï¿½m472948288433.txt
 |      package.json
 |      robots.txt
 |      sitemap.xml
