@@ -1,78 +1,69 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="Content-Language" content="tr" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <!-- SEO Meta Etiketleri -->
-        <title>Anasayfa - MEFAMEX</title>
-        <meta name="author" content="Mefamex, Mehmet Akif AKKOC" />
-        <meta name="description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog | Görseller | Mehmet Akif Akkoç" />
-        <meta name="keywords" content="mefamex, mehmet akif akkoç, mehmet akif akkoc, kişisel web sitesi, yazılım, projeler, blog, iletişim, yapay zeka, web geliştirme, özgeçmiş, sosyal medya, teknoloji" />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="mfmx-AI-verification" content="20250122060312-2001:0db8:85a3:0000:0000:8a2e:0370:7334-005616-auth=xK7d2da2ad-endflow" />
-
-        <!-- Preconnect ve DNS Prefetch -->
-        <link rel="preconnect" href="https://mefamex.com/" />
-        <link rel="dns-prefetch" href="https://mefamex.com/" />
-
-        <!-- Canonical Link -->
-        <link rel="canonical" href="https://mefamex.com/" />
-
-        <!-- Site Haritası -->
-        <link rel="sitemap" type="application/xml" href="sitemap.xml" />
-
-        <!-- Stil Optimizasyonu -->
-        <link rel="stylesheet" href="./src/styles/home.css" />
-
-        <!-- Performans için preload -->
-        <link rel="preload" as="style" type="text/css" importance="high" href="./src/styles/home.css" />
-        <link rel="preload" as="image" type="image/webp" importance="high" href="./src/assets/images/background/home_bg_square_blue_blur.webp" />
-        <link rel="preload" as="image" type="image/webp" importance="high" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" />
-
-        <!-- Favicon Set -->
-        <link rel="icon" sizes="16x16" href="./src/assets/images/mfmx/mfmx-16.png" type="image/png" />
-        <link rel="icon" sizes="32x32" href="./src/assets/images/mfmx/mfmx-32.png" type="image/png" />
-        <link rel="icon" sizes="64x64" href="./src/assets/images/mfmx/mfmx-64.png" type="image/png" />
-        <link rel="icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png" type="image/png" />
-        <link rel="icon" sizes="256x256" href="./src/assets/images/mfmx/mfmx-256.png" type="image/png" />
-        <link rel="icon" sizes="512x512" href="./src/assets/images/mfmx/mfmx-512.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png" />
-
-        <!-- Open Graph Meta Etiketleri -->
-        <meta property="og:title" content="Mefamex - WEBSITE" />
-        <meta property="og:description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
-        <meta property="og:creator" content="@mefamex" />
-        <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-        <meta property="og:url" content="https://mefamex.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="MEFAMEX" />
-        <meta property="og:date" content="2025-02-18T02:00:00Z" />
-        <meta property="og:locale" content="tr_TR" />
-        <meta property="article:modified_time" content="2025-02-18T02:00:00Z" />
-
-        <!-- Twitter Meta Etiketleri -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="Mefamex" />
-        <meta name="twitter:creator" content="@mefamex" />
-        <meta name="twitter:title" content="Mefamex - WEBSITE" />
-        <meta name="twitter:description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
-        <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-        <meta name="twitter:url" content="https://mefamex.com/" />
-        <meta name="twitter:type" content="website" />
-        <meta name="twitter:date" content="2025-02-18T02:00:00Z" />
-
-        <script type="text/javascript">
-            const currentPath = window.location.pathname;
-            if (currentPath.length > 1 && currentPath.endsWith("/")) currentPath = currentPath.slice(0, -1);
-            if (["about", "archive", "blog", "contact", "cv", "gallery", "games", "projects", "software", "the_mefamex_project", "sweetmonstermia"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
-            else if (currentPath !== "/") window.location.href = "/";
-        </script>
-
-        <script type="application/ld+json">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Language" content="tr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- SEO Meta Etiketleri -->
+    <title>Anasayfa - MEFAMEX</title>
+    <meta name="author" content="Mefamex, Mehmet Akif AKKOC" />
+    <meta name="description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog | Görseller | Mehmet Akif Akkoç" />
+    <meta name="keywords"
+        content="mefamex, mehmet akif akkoç, mehmet akif akkoc, kişisel web sitesi, yazılım, projeler, blog, iletişim, yapay zeka, web geliştirme, özgeçmiş, sosyal medya, teknoloji" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="mfmx-AI-verification" content="20250122060312-2001:0db8:85a3:0000:0000:8a2e:0370:7334-005616-auth=xK7d2da2ad-endflow" />
+    <!-- Preconnect ve DNS Prefetch -->
+    <link rel="preconnect" href="https://mefamex.com/" />
+    <link rel="dns-prefetch" href="https://mefamex.com/" />
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://mefamex.com/" />
+    <!-- Site Haritası -->
+    <link rel="sitemap" type="application/xml" href="sitemap.xml" />
+    <!-- Stil Optimizasyonu -->
+    <link rel="stylesheet" href="./src/styles/home.css" />
+    <!-- Performans için preload -->
+    <link rel="preload" as="style" href="./src/styles/home.css" />
+    <link rel="preload" as="image" type="image/webp" importance="high" href="./src/assets/images/background/home_bg_square_blue_blur.webp" />
+    <link rel="preload" as="image" type="image/webp" importance="high" href="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" />
+    <!-- Favicon Set -->
+    <link rel="icon" sizes="16x16" href="./src/assets/images/mfmx/mfmx-16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="./src/assets/images/mfmx/mfmx-32.png" type="image/png" />
+    <link rel="icon" sizes="64x64" href="./src/assets/images/mfmx/mfmx-64.png" type="image/png" />
+    <link rel="icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png" type="image/png" />
+    <link rel="icon" sizes="256x256" href="./src/assets/images/mfmx/mfmx-256.png" type="image/png" />
+    <link rel="icon" sizes="512x512" href="./src/assets/images/mfmx/mfmx-512.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./src/assets/images/mfmx/mfmx-144.png" />
+    <!-- Open Graph Meta Etiketleri -->
+    <meta property="og:title" content="Mefamex - WEBSITE" />
+    <meta property="og:description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
+    <meta property="og:creator" content="@mefamex" />
+    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:url" content="https://mefamex.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MEFAMEX" />
+    <meta property="og:date" content="2025-02-18T02:00:00Z" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="article:modified_time" content="2025-02-18T02:00:00Z" />
+    <!-- Twitter Meta Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Mefamex" />
+    <meta name="twitter:creator" content="@mefamex" />
+    <meta name="twitter:title" content="Mefamex - WEBSITE" />
+    <meta name="twitter:description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
+    <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta name="twitter:url" content="https://mefamex.com/" />
+    <meta name="twitter:type" content="website" />
+    <meta name="twitter:date" content="2025-02-18T02:00:00Z" />
+    <script type="text/javascript">
+        const currentPath = window.location.pathname;
+        if (currentPath.length > 1 && currentPath.endsWith("/")) currentPath = currentPath.slice(0, -1);
+        if (["about", "archive", "blog", "contact", "cv", "gallery", "games", "projects", "software", "the_mefamex_project", "sweetmonstermia"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
+        else if (currentPath !== "/") window.location.href = "/";
+    </script>
+    <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
                 "@type": "Person",
@@ -89,85 +80,76 @@
                 "description": "Mehmet Akif Akkoç, 10 yılı aşkın deneyimiyle Python, Java ve C dillerinde uzmanlaşmış bir Yazılım Mühendisi olup, derin öğrenme ve yapay genel zeka alanlarına özel ilgi duymaktadır."
             }
         </script>
-    </head>
+</head>
 
-    <body>
-        <picture id="background_img" class="noSelect noDrag noPointer">
-            <source type="image/webp" srcset="./src/assets/images/background/home_bg_square_blue_blur.webp" />
-            <img loading="eager" decoding="sync" importance="low" src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" />
-        </picture>
-
-        <header id="header" class="noSelect noDrag noPointer">
-            <h1>MEFAMEX</h1>
-        </header>
-
-        <main>
-            <div id="left_card" class="noSelect noDrag noPointer">
-                <picture id="mefamex_logo">
-                    <source srcset="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" type="image/webp" />
-                    <img src="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" alt="mefamex logo" loading="eager" decoding="sync" />
-                </picture>
+<body>
+    <picture id="background_img" class="noSelect noDrag noPointer">
+        <source type="image/webp" srcset="./src/assets/images/background/home_bg_square_blue_blur.webp" />
+        <img loading="eager" decoding="sync" importance="low" src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" />
+    </picture>
+    <header id="header" class="noSelect noDrag noPointer">
+        <h1>MEFAMEX</h1>
+    </header>
+    <main>
+        <div id="left_card" class="noSelect noDrag noPointer">
+            <picture id="mefamex_logo">
+                <source srcset="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" type="image/webp" />
+                <img src="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" alt="mefamex logo" loading="eager" decoding="sync" />
+            </picture>
+        </div>
+        <div id="main_cards">
+            <div id="card_about_website" class="card" title="WEBSITE HAKKINDA" aria-label="Website hakkında" tabindex="0">
+                <h1 class="card_title">
+                    <a href="https://mefamex.com/about/" title="WEBSITE HAKKINDA" aria-label="Website hakkında" target="_self" tabindex="-1">WEBSITE HAKKINDA</a>
+                </h1>
+                <p>Bu web sitesi, MEFAMEX’in projelerini, kişisel çalışmalarını ve notlarını paylaşmak için oluşturulmuştur.</p>
+                <p>Burada yazılım, yapay zeka ve sistem geliştirme alanlarında içerikler bulabilirsiniz.</p>
             </div>
-            <div id="main_cards">
-                <div id="card_about_website" class="card" title="WEBSITE HAKKINDA" aria-label="Website hakkında" tabindex="0">
-                    <h1 class="card_title">
-                        <a href="https://mefamex.com/about/" title="WEBSITE HAKKINDA" aria-label="Website hakkında" target="_self" tabindex="-1">WEBSITE HAKKINDA</a>
-                    </h1>
-                    <p>Bu web sitesi, MEFAMEX’in projelerini, kişisel çalışmalarını ve notlarını paylaşmak için oluşturulmuştur.</p>
-                    <p>Burada yazılım, yapay zeka ve sistem geliştirme alanlarında içerikler bulabilirsiniz.</p>
-                </div>
-
-                <div id="card_project" class="card" title="PROJELER" aria-label="Projeler" tabindex="0">
-                    <h1 class="card_title"><a href="https://mefamex.com/projects/" title="PROJELER" aria-label="Projeler" target="_self" tabindex="-1"> PROJELER </a></h1>
-                    <p>Bu sayfada, tamamladığım ve üzerinde çalıştığım projeleri sergiliyorum.</p>
-                    <p>
-                        <a href="https://mefamex.com/the_mefamex_project/" title="The Mefamex Project" aria-label="The Mefamex Project" target="_self" tabindex="0">The Mefamex Project</a>, yapay zeka modelleme, sinir ağları, sistem ve web uygulamaları, penetrasyon testleri ve daha fazlası burada yer
-                        alıyor.
-                    </p>
-                </div>
-
-                <div id="card_blog" class="card" title="BLOG" aria-label="Teknoloji ve yazılım dünyasından içerikler" tabindex="0">
-                    <h1 class="card_title">
-                        <a href="https://mefamex.com/blog/" title="BLOG SAYFASI" aria-label="Yazılım ve teknoloji blogum" target="_self" tabindex="-1">BLOG </a>
-                    </h1>
-                    <p>Bu sayfada, yazılım dünyasındaki yolculuğumdan edindiğim deneyimleri, öğrendiklerimi ve fikirlerimi paylaşacağım.</p>
-                    <p>
-                        Ayrıca sektördeki ve gündemdeki güncel gelişmelere dair bazı yazılar da burada yer alacak. <br />
-                        Yakında..
-                    </p>
-                </div>
-
-                <div id="card_gallery" class="card" title="GALERİ" aria-label="Fotoğraf arşivi" tabindex="0">
-                    <h1 class="card_title">
-                        <a href="https://mefamex.com/gallery/" title="GALERİ SAYFASI" aria-label="Fotoğraf arşivi" target="_self" tabindex="-1">GALERİ </a>
-                    </h1>
-                    <p>Projelerimden, etkinliklerden ve tasarımlardan elde edilen görsellerin arşivlendiği özel bir bölümdür.</p>
-                    <p>Burada geçmişten kalan kareleri, oluşturulmuş görselleri ve bazı arşivleri bulabilirsiniz.</p>
-                </div>
-
-                <div id="card_cv" class="card" title="ÖZGEÇMİŞ" aria-label="Özgeçmiş" tabindex="0">
-                    <h1 class="card_title"><a href="https://mefamex.com/cv/" title="ÖZGEÇMİŞ" aria-label="Özgeçmiş" target="_self" tabindex="-1"> CV </a></h1>
-                    <p>Eğitimim, iş deneyimlerim ve becerilerim hakkında detaylı bilgileri bu sayfada bulabilirsiniz.</p>
-                    <p>Kariyer yolculuğum ve yetkinliklerim hakkında daha fazla bilgi almak için iletişime geçebilirsiniz.</p>
-                </div>
-
-                <div id="card_contact" class="card" title="İLETİŞİM" aria-label="İletişim" tabindex="0">
-                    <h1 class="card_title"><a href="https://mefamex.com/contact/" title="İLETİŞİM" aria-label="İletişim" target="_self" tabindex="-1"> İLETİŞİM </a></h1>
-                    <p>E-posta adresim ve sosyal medya hesaplarım aracılığıyla bana ulaşabilirsiniz.</p>
-                    <p>Sorularınız, önerileriniz, işbirlikleri, projeler veya sektöre dair sohbetler için benimle iletişime geçmekten çekinmeyin.</p>
-                </div>
+            <div id="card_project" class="card" title="PROJELER" aria-label="Projeler" tabindex="0">
+                <h1 class="card_title"><a href="https://mefamex.com/projects/" title="PROJELER" aria-label="Projeler" target="_self" tabindex="-1"> PROJELER </a></h1>
+                <p>Bu sayfada, tamamladığım ve üzerinde çalıştığım projeleri sergiliyorum.</p>
+                <p>
+                    <a href="https://mefamex.com/the_mefamex_project/" title="The Mefamex Project" aria-label="The Mefamex Project" target="_self" tabindex="0">The Mefamex Project</a>, yapay zeka
+                    modelleme, sinir ağları, sistem ve web uygulamaları, penetrasyon testleri ve daha fazlası burada yer alıyor.
+                </p>
             </div>
-        </main>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", () => {
-                document.querySelectorAll("#main_cards .card").forEach((card, index) => {
-                    card.style.animationDelay = 0.5 + index * 0.2 + "s";
-                    card.style.opacity = 0;
-                    card.style.cursor = "pointer";
-                    setTimeout(() => (card.style.opacity = 1), 400);
-                    card.addEventListener("click", () => (window.location.href = card.querySelector("h1 a").href));
-                });
+            <div id="card_blog" class="card" title="BLOG" aria-label="Teknoloji ve yazılım dünyasından içerikler" tabindex="0">
+                <h1 class="card_title">
+                    <a href="https://mefamex.com/blog/" title="BLOG SAYFASI" aria-label="Yazılım ve teknoloji blogum" target="_self" tabindex="-1">BLOG </a>
+                </h1>
+                <p>Bu sayfada, yazılım dünyasındaki yolculuğumdan edindiğim deneyimleri, öğrendiklerimi ve fikirlerimi paylaşacağım.</p>
+                <p> Ayrıca sektördeki ve gündemdeki güncel gelişmelere dair bazı yazılar da burada yer alacak. <br /> Yakında.. </p>
+            </div>
+            <div id="card_gallery" class="card" title="GALERİ" aria-label="Fotoğraf arşivi" tabindex="0">
+                <h1 class="card_title">
+                    <a href="https://mefamex.com/gallery/" title="GALERİ SAYFASI" aria-label="Fotoğraf arşivi" target="_self" tabindex="-1">GALERİ </a>
+                </h1>
+                <p>Projelerimden, etkinliklerden ve tasarımlardan elde edilen görsellerin arşivlendiği özel bir bölümdür.</p>
+                <p>Burada geçmişten kalan kareleri, oluşturulmuş görselleri ve bazı arşivleri bulabilirsiniz.</p>
+            </div>
+            <div id="card_cv" class="card" title="ÖZGEÇMİŞ" aria-label="Özgeçmiş" tabindex="0">
+                <h1 class="card_title"><a href="https://mefamex.com/cv/" title="ÖZGEÇMİŞ" aria-label="Özgeçmiş" target="_self" tabindex="-1"> CV </a></h1>
+                <p>Eğitimim, iş deneyimlerim ve becerilerim hakkında detaylı bilgileri bu sayfada bulabilirsiniz.</p>
+                <p>Kariyer yolculuğum ve yetkinliklerim hakkında daha fazla bilgi almak için iletişime geçebilirsiniz.</p>
+            </div>
+            <div id="card_contact" class="card" title="İLETİŞİM" aria-label="İletişim" tabindex="0">
+                <h1 class="card_title"><a href="https://mefamex.com/contact/" title="İLETİŞİM" aria-label="İletişim" target="_self" tabindex="-1"> İLETİŞİM </a></h1>
+                <p>E-posta adresim ve sosyal medya hesaplarım aracılığıyla bana ulaşabilirsiniz.</p>
+                <p>Sorularınız, önerileriniz, işbirlikleri, projeler veya sektöre dair sohbetler için benimle iletişime geçmekten çekinmeyin.</p>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("#main_cards .card").forEach((card, index) => {
+                card.style.animationDelay = 0.5 + index * 0.2 + "s";
+                card.style.opacity = 0;
+                card.style.cursor = "pointer";
+                setTimeout(() => (card.style.opacity = 1), 400);
+                card.addEventListener("click", () => (window.location.href = card.querySelector("h1 a").href));
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
+
 </html>
