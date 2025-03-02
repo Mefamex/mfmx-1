@@ -21,8 +21,7 @@
     <!-- Stil Optimizasyonu -->
     <link rel="preload" href="../page_aside.css" as="style" />
     <link rel="stylesheet" href="../page_aside.css" />
-    <link rel="preload" as="style" href="../../src/components/header.css" />
-    <link rel="preload" as="style" href="../../src/components/footer.css" />
+    <link rel="preload" as="style" href="../../src/components/headerFooter.css" />
     <!-- favicon set -->
     <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
     <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -61,6 +60,15 @@
             }
         }
     </style>
+    <!---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js" defer>  </script>
 </head>
 
 <body>
@@ -81,11 +89,13 @@
             <section id="html_head_tags" class="compacts">
                 <div>
                     <h2>İLK HEAD TAGLARI</h2>
-                    <code>&lt;meta charset="UTF-8" /&gt;&#10;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;&#10;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;</code>
+                    <pre class="line-numbers"><code class="language-html">&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;</code></pre>
                 </div>
                 <div>
                     <h2>SEO META ETİKETLERİ</h2>
-                    <pre><code>&lt;title&gt; Page title here! browser tab and search tittle &lt;/title&gt;
+                    <pre class="line-numbers"><code class="language-html">&lt;title&gt; Page title here! browser tab and search tittle &lt;/title&gt;
 &lt;meta name="author" content="Yazar adı" /&gt;
 &lt;meta name="description" content="Sayfa açıklaması1 /&gt;
 &lt;meta name="keywords" content="anahtar, kelimeler" /&gt;
@@ -93,7 +103,7 @@
                 </div>
                 <div>
                     <h2>BASE</h2>
-                    <code>&lt;base href="/"&gt; (or https://example.com)</code>
+                    <code class="language-html">&lt;base href="/"&gt; (or https://example.com)</code>
                     <p>Base etiketi, bir sayfadaki tüm URL'lerin başına eklenen bir URL'yi belirtir. Bu, sayfadaki tüm URL'lerin aynı kök URL'yi paylaşmasını sağlar. Bu, özellikle çoklu alt dizinlerde
                         çalışırken yararlıdır.</p>
                 </div>
@@ -101,23 +111,23 @@
                     <h2>BAGLANTI HIZLANDIRMALARI</h2>
                     <p> Bir dış kaynağa (örneğin, bir CDN ya da üçüncü taraf sunucu) hızlı bir bağlantı kurulması için kullanılan bir etiket olup, sayfa yüklenmeden önce DNS çözümlemesi, TLS el
                         sıkışması ve TCP bağlantısı yapılmasını sağlar. Bu, sayfa yüklenirken dış sunuculara bağlantı kurmanın hızını artırabilir. </p>
-                    <code>&lt;link rel="preconnect" href="https://example.com" /&gt;</code>
-                    <code>&lt;link rel="dns-prefetch" href="https://example.com" /&gt;</code>
+                    <code class="language-html">&lt;link rel="preconnect" href="https://example.com" /&gt;</code>
+                    <code class="language-html">&lt;link rel="dns-prefetch" href="https://example.com" /&gt;</code>
                 </div>
                 <div>
                     <h2>CANONICAL</h2>
-                    <code>&lt;link rel="canonical" href="https://www.example.com"&gt;</code>
+                    <code class="language-html">&lt;link rel="canonical" href="https://www.example.com"&gt;</code>
                     <p>Canonical etiketi, bir sayfanın tek ve doğru sürümünü belirtir. Bu, aynı içeriğe sahip birden fazla sayfa varsa, arama motorlarının hangi sayfanın dizine eklenmesi gerektiğini
                         belirtmek için kullanılır.</p>
                 </div>
                 <div>
                     <h2>MANIFEST</h2>
-                    <code>&lt;link rel="manifest" href="/site.webmanifest"&gt;</code>
+                    <code class="language-html">&lt;link rel="manifest" href="/site.webmanifest"&gt;</code>
                     <p>Manifest etiketi, bir sayfanın web uygulaması manifestini belirtir. Bu, web uygulamasının adını, simgesini, otomatik başlatma davranışını ve diğer özelliklerini belirler.</p>
                 </div>
                 <div>
                     <h2>ALTERNATE</h2>
-                    <code>&lt;link rel="alternate" hreflang="tr" href="https://www.example.com/tr"&gt;</code>
+                    <code class="language-html">&lt;link rel="alternate" hreflang="tr" href="https://www.example.com/tr"&gt;</code>
                     <p>Alternate etiketi, bir sayfanın farklı dil sürümlerini belirtir. Bu, arama motorlarının farklı dil sürümlerini dizine eklemesine ve kullanıcılara doğru dil sürümünü sunmasına
                         yardımcı olur.</p>
                 </div>
@@ -132,17 +142,17 @@
                                 sonuçlarında görüntülenir. Kullanıcılara görsel bir kimlik kazandırmanın yanı sıra, marka bilinirliğini artırmaya ve kullanıcı deneyimini iyileştirmeye yardımcı olur.
                             </p>
                         </summary>
-                        <code> rel="icon" / "shortcut icon" / "apple-touch-icon"</code>
+                        <code class="language-html"> rel="icon" / "shortcut icon" / "apple-touch-icon"</code>
                         <br />
-                        <code> type="image/svg+xml" / "image/x-icon" / "image/vnd.microsoft.icon" / "image/gif" / "image/jpeg" / "image/png" / "image/bmp"</code>
+                        <code class="language-html"> type="image/svg+xml" / "image/x-icon" / "image/vnd.microsoft.icon" / "image/gif" / "image/jpeg" / "image/png" / "image/bmp"</code>
                         <br />
-                        <code> sizes="16x16" / "32x32" / "48x48" / "64x64" / "128x128" / "256x256" / "512x512"</code>
+                        <code class="language-html"> sizes="16x16" / "32x32" / "48x48" / "64x64" / "128x128" / "256x256" / "512x512"</code>
                         <p> Genel olarak cihazların ve tarayıcıların favicon boyutları şu şekildedir: <br /> &rarr; <b>standart :</b> [ico/png] 16 32 48 <br /> &rarr; <b>(safari) apple-touch-icon:
                             </b> [png] 180(önerilen), 167(ipad pro), 152(ipad) 120(iphone) <br /> &rarr; <b>(android)icon: </b> [png] 512 256 192 <br /> &rarr; <b>(Windows) msapplication-icon :</b>
                             [png] 144 <br /> &rarr; <b>Yandex :</b> [svg] 120(önerilen) 32 16 <br />
                         </p>
                         <h3>Modern Favicon Örneği</h3>
-                        <pre><code># Standart favicon
+                        <pre class="line-numbers"><code class="language-html"># Standart favicon
 &lt;link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico"&gt;
 &lt;link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"&gt;
 
@@ -168,7 +178,7 @@
                             <p>Open Graph (OG) metaları, sosyal medya platformlarında paylaşılan içeriklerin nasıl görüneceğini belirlemek için kullanılır. Bu metalar, paylaşılan içeriğin başlığını,
                                 açıklamasını, resmini ve diğer özelliklerini belirler.</p>
                         </summary>
-                        <pre><code># Open Graph Meta Etiketleri
+                        <pre class="line-numbers"><code class="language-html"># Open Graph Meta Etiketleri
 &lt;meta property="og:title" content="Sayfa Başlığı" /&gt;
 &lt;meta property="og:description" content="Sayfa Açıklaması" /&gt;
 &lt;meta property="og:creator" content="@oluşturucu" /&gt;
@@ -196,7 +206,7 @@
             <section id="html_stylesheets_scripts" class="compacts">
                 <div>
                     <h2>STYLESHEET</h2>
-                    <code>&lt;link rel="stylesheet"   href="style.css" /&gt;</code>
+                    <code class="language-html">&lt;link rel="stylesheet"   href="style.css" /&gt;</code>
                     <p>
                         <b>type :</b> CSS dosyasının türünü belirtir. Bu genellikle "text/css" olacaktır. <br />
                         <b>href :</b> CSS dosyasının adresini belirtir. <br />
@@ -204,16 +214,16 @@
                         <b>title :</b> CSS dosyasının başlığını belirtir. Bu, sayfada birden fazla CSS dosyası varsa kullanışlı olabilir.
                     </p>
                     <br />
-                    <code>&lt;link rel="preload" href="style.css" importance="high" as="style" /&gt;</code>
+                    <code class="language-html">&lt;link rel="preload" href="style.css" importance="high" as="style" /&gt;</code>
                     <p>bu kod satırının eklenmesi sayesinde tarayıcı, CSS dosyasını önceden yükleyebilir ve sayfanın render edilmesini hızlandırabilir. Bu, özellikle büyük CSS dosyaları veya yavaş
                         bağlantılar için yararlı olabilir.</p>
                 </div>
                 <div>
                     <h2>SCRIPT</h2>
-                    <code>&lt;script src="/src/js/script.js" type="text/javascript" defer&gt;</code>
+                    <code class="language-html">&lt;script src="/src/js/script.js" type="text/javascript" defer&gt;</code>
                     <p><b>defer :</b>JavaScript dosyalarının yüklenmesini ve çalıştırılmasını kontrol etmek için kullanılan önemli bir araçtır. Bu atribut, tarayıcının JavaScript dosyasını HTML'in
                         geri kalanıyla birlikte indirerek sayfanın render edilmesini engellemesini önler.</p>
-                    <code>&lt;script src="/src/js/script.js" type="text/javascript" async&gt;</code>
+                    <code class="language-html">&lt;script src="/src/js/script.js" type="text/javascript" async&gt;</code>
                     <p>
                         <b>async :</b> Tarayıcının JavaScript dosyasını HTML'in geri kalanıyla birlikte indirerek sayfanın render edilmesinin engellemesini önler. HTML ayrıştırması devam eder. Script
                         paralel olarak yüklenir. Script hazır olduğunda hemen çalıştırılır. Sıralı çalışma garantisi yok. DOMContentLoaded'ı beklemez
@@ -226,7 +236,7 @@
                         <summary>
                             <h2>HEAD TAGI Örneği</h2>
                         </summary>
-                        <pre><code>&lt;!DOCTYPE html&gt;
+                        <pre class="line-numbers"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8" /&gt;
@@ -309,7 +319,7 @@
                         </summary>
                         <p> Anadizindeki <code>/robots.txt</code> dosyasının örneği verilmiştir. Bu dosya, arama motorlarının sitenin hangi bölümlerini dizine ekleyebileceğini ve hangi bölümleri
                             dizine eklememesi gerektiğini belirler. Bu, sitenin SEO'sunu iyileştirmek ve arama motorlarının sitenizi daha iyi anlamasına yardımcı olmak için önemlidir. </p>
-                        <pre><code># example Website Robots.txt Configuration 
+                        <pre class="line-numbers"><code># example Website Robots.txt Configuration 
 # Updated: 2024-12-25 
 # Website: https:// example .com 
 # Author: someone 
@@ -380,9 +390,9 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                         <p>Anadizindeki <code>/sitemap.xml</code> dosyası, arama motorlarının sitenizin hangi sayfalarını dizine ekleyebileceğini belirler. Bu dosya, sitenizin SEO'sunu iyileştirmek ve
                             arama motorlarının sitenizi daha iyi anlamasına yardımcı olmak için önemlidir.</p>
                         <p> Html sayfanızın <code>head</code> tagına aşağıdaki kodu ekleyin. <br />
-                            <code>&lt;!-- Site Haritası --&gt; &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;</code>
+                            <code class="language-html">&lt;!-- Site Haritası --&gt; &lt;link rel="sitemap" type="application/xml" href="sitemap.xml"&gt;</code>
                         </p>
-                        <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                        <pre class="line-numbers"><code  class="language-json">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
@@ -407,7 +417,7 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                         </summary>
                         <p> Anadizindeki <code>/navigation.json</code> dosyası, sitenizin gezinme yapısını belirler. Bu dosya, sitenizin kullanıcı deneyimini iyileştirmek ve arama motorlarının
                             sitenizi daha iyi anlamasına yardımcı olmak için önemlidir. Bu dosya, sitenizin menüsünü, alt menülerini ve diğer gezinme öğelerini belirler. </p>
-                        <pre><code>{
+                        <pre class="line-numbers"><code class="language-json">{
     "menu": [
         {
             "title": "Home",
@@ -441,10 +451,10 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                 <p>Bir resmin yüklenme süresini hızlandırmak için kullanılan birkaç etiket vardır. Bu etiketler, resmin ön yüklenmesini sağlar ve sayfanın render edilmesini hızlandırabilir. Bu,
                     özellikle büyük resimler veya yavaş bağlantılar için yararlı olabilir.</p>
                 <p>
-                    <code>&lt;link rel="preload" as="image" type="image/webp" importance="high" href="image.webp" /&gt;</code><br />
+                    <code class="language-html">&lt;link rel="preload" as="image" type="image/webp" importance="high" href="image.webp" /&gt;</code><br />
                     <b>.png</b> veya <b>.jpg / .jepg</b> formatındaki resimleri <b>webp</b> formatında önce yüklemek için kullanılır. <b>head</b> tagına eklenir
                 </p>
-                <pre><code>&lt;picture&gt;
+                <pre class="line-numbers"><code  class="language-html">&lt;picture&gt;
     &lt;source type="image/webp" srcset="image.webp" /&gt;
     &lt;img loading="eager" decoding="sync" importance="low" src="image.png" alt="somethingg" /&gt;
 &lt;/picture&gt;</code></pre>

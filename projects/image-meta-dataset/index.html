@@ -22,8 +22,7 @@
     <!-- Stil Optimizasyonu -->
     <link rel="preload" href="../page_aside.css" as="style" />
     <link rel="stylesheet" href="../page_aside.css" />
-    <link rel="preload" as="style" href="../../src/components/header.css" />
-    <link rel="preload" as="style" href="../../src/components/footer.css" />
+    <link rel="preload" as="style" href="../../src/components/headerFooter.css" />
     <!-- favicon set -->
     <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
     <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -67,6 +66,15 @@
             }
         }
     </style>
+    <!---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" defer>  </script>
 </head>
 
 <body>
@@ -107,8 +115,8 @@
                     <li>
                         <p>
                             <b>Projeyi Klonlama: </b> <br />
-                            <code>git clone https://github.com/Mefamex/image-meta-dataset.git </code> <br />
-                            <code>cd image-meta-dataset</code>
+                        <pre class="line-numbers"><code class="language-bash">git clone https://github.com/Mefamex/image-meta-dataset.git 
+cd  image-meta-dataset</code></pre>
                         </p>
                     </li>
                 </ol>
@@ -120,34 +128,30 @@
                     <li>
                         <p>
                             <b>Meta Veri Görüntüleme:</b> <br />
-                            <code>from metadata_manager import display_metadata</code> <br />
-                            <code>display_metadata("path/to/your/image.jpg")</code>
+                        <pre class="line-numbers"><code class="language-python">from metadata_manager import display_metadata
+display_metadata("path/to/your/image.jpg")</code></pre>
                         </p>
                     </li>
                     <li>
                         <p>
                             <b>Meta Veri Silme:</b> <br />
-                            <code>from metadata_manager import delete_image_metadata</code> <br />
-                            <code>delete_image_metadata("path/to/your/image.jpg", "path/to/output/image.jpg")</code>
+                        <pre class="line-numbers"><code class="language-python">from metadata_manager import delete_image_metadata
+delete_image_metadata("path/to/your/image.jpg", "path/to/output/image.jpg")</code></pre>
                         </p>
                     </li>
                 </ol>
             </section>
             <section class="x2width">
                 <h2>5) Örnek Kullanım</h2>
-                <code>image_path = "a.jpg" output_path = "aa.jpg" display_metadata(image_path) delete_image_metadata(image_path, output_path) display_metadata(output_path)</code>
-            </section>
-            <section>
-                <h2>6) Lisans</h2>
-                <p>Bu proje <a href="https://github.com/Mefamex/image-meta-dataset/blob/main/LICENSE" target="_blank" rel="license noopener">MIT Lisansı</a> altında lisanslanmıştır.</p>
-            </section>
-            <section>
-                <h2>7) İletişim</h2>
-                <p>Proje ile ilgili herhangi bir sorunuz veya öneriniz varsa, lütfen benimle <a href="https://mefamex.com/contact/">iletişime geçin </a> .</p>
+                <pre class="line-numbers"><code class="language-python">image_path  = "a.jpg" 
+output_path = "aa.jpg" 
+display_metadata(image_path) 
+delete_image_metadata(image_path, output_path) 
+display_metadata(output_path)</code></pre>
             </section>
             <section class="section_code_full">
-                <h2>8) Kod</h2>
-                <pre><code># -*- coding: utf-8 -*-
+                <h2>6) Kod</h2>
+                <pre class="line-numbers"><code class="language-python"># -*- coding: utf-8 -*-
 # Created on Friday, July 19 15:30:00 2024
 # @author: mefamex
 

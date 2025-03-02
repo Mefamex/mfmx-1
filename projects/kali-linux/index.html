@@ -21,8 +21,7 @@
     <!-- Stil Optimizasyonu -->
     <link rel="preload" href="../page_aside.css" as="style" />
     <link rel="stylesheet" href="../page_aside.css" />
-    <link rel="preload" as="style" href="../../src/components/header.css" />
-    <link rel="preload" as="style" href="../../src/components/footer.css" />
+    <link rel="preload" as="style" href="../../src/components/headerFooter.css" />
     <!-- favicon set -->
     <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
     <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -82,6 +81,15 @@
             }
         }
     </style>
+    <!---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" defer>  </script>
 </head>
 
 <body>
@@ -101,24 +109,24 @@
                     <summary>
                         <h3>GRUB Yapılandırma Ayarları ve Parametreleri</h3>
                     </summary>
-                    <p><code>/etc/default/grub</code> dosyasının içeriği, GRUB'un nasıl davranacağını belirleyen çeşitli ayarları içerir. Bu dosyada genellikle aşağıdaki gibi ayarlar bulunur:</p>
+                    <p><code class="language-sh">/etc/default/grub</code> dosyasının içeriği, GRUB'un nasıl davranacağını belirleyen çeşitli ayarları içerir. Bu dosyada genellikle aşağıdaki gibi ayarlar bulunur:</p>
                     <ul>
-                        <li><code> GRUB_DEFAULT=2 </code> Bu ayar, GRUB menüsünde varsayılan olarak hangi işletim sisteminin seçileceğini belirtir. Burada 2 değeri, menüdeki üçüncü seçeneği (0'dan
+                        <li><code class="language-sh"> GRUB_DEFAULT=2 </code> Bu ayar, GRUB menüsünde varsayılan olarak hangi işletim sisteminin seçileceğini belirtir. Burada 2 değeri, menüdeki üçüncü seçeneği (0'dan
                             başladığı için) ifade eder.</li>
-                        <li><code> GRUB_TIMEOUT=5 </code> GRUB menüsünün ne kadar süreyle gösterileceğini belirler. Bu durumda, 5 saniye boyunca menü gösterilecektir.</li>
-                        <li><code> GRUB_DISTRIBUTOR </code> Bu ayar, işletim sisteminin adını belirler. /etc/os-release dosyasından okunarak ayarlanır. Eğer bu dosya yoksa, varsayılan olarak "Kali"
+                        <li><code class="language-sh"> GRUB_TIMEOUT=5 </code> GRUB menüsünün ne kadar süreyle gösterileceğini belirler. Bu durumda, 5 saniye boyunca menü gösterilecektir.</li>
+                        <li><code class="language-sh"> GRUB_DISTRIBUTOR </code> Bu ayar, işletim sisteminin adını belirler. /etc/os-release dosyasından okunarak ayarlanır. Eğer bu dosya yoksa, varsayılan olarak "Kali"
                             değeri kullanılır.</li>
-                        <li><code> GRUB_CMDLINE_LINUX_DEFAULT="quiet" </code> Linux çekirdeği için varsayılan komut satırı parametrelerini ayarlar. "quiet" parametresi, önyükleme sırasında daha az
+                        <li><code class="language-sh"> GRUB_CMDLINE_LINUX_DEFAULT="quiet" </code> Linux çekirdeği için varsayılan komut satırı parametrelerini ayarlar. "quiet" parametresi, önyükleme sırasında daha az
                             bilgi gösterilmesini sağlar.</li>
-                        <li><code> GRUB_DISABLE_OS_PROBER=false </code> Bu ayar, GRUB'un diğer işletim sistemlerini tespit etmesini sağlar. Eğer birden fazla işletim sistemi yüklüyse, bu ayar true
+                        <li><code class="language-sh"> GRUB_DISABLE_OS_PROBER=false </code> Bu ayar, GRUB'un diğer işletim sistemlerini tespit etmesini sağlar. Eğer birden fazla işletim sistemi yüklüyse, bu ayar true
                             olarak değiştirilirse, diğer işletim sistemleri tespit edilmez.</li>
-                        <li><code> GRUB_BADRAM </code> Bellek hatalarını filtrelemek için kullanılabilir. Bu ayar, belirli bellek adreslerini belirtmek için kullanılır.</li>
-                        <li><code> GRUB_TERMINAL=console </code> Grafik terminali devre dışı bırakmak için kullanılabilir. Eğer bu satır yorumdan çıkarılırsa, GRUB yalnızca metin tabanlı bir
+                        <li><code class="language-sh"> GRUB_BADRAM </code> Bellek hatalarını filtrelemek için kullanılabilir. Bu ayar, belirli bellek adreslerini belirtmek için kullanılır.</li>
+                        <li><code class="language-sh"> GRUB_TERMINAL=console </code> Grafik terminali devre dışı bırakmak için kullanılabilir. Eğer bu satır yorumdan çıkarılırsa, GRUB yalnızca metin tabanlı bir
                             terminalde çalışır.</li>
-                        <li><code> GRUB_GFXMODE </code> Grafik terminalde kullanılacak çözünürlüğü ayarlar. Yalnızca grafik kartının desteklediği modlar kullanılabilir.</li>
-                        <li><code> GRUB_DISABLE_LINUX_UUID </code> Linux'e <b>"root=UUID=xxx"</b> parametresinin geçilmesini devre dışı bırakmak için kullanılabilir.</li>
-                        <li><code> GRUB_DISABLE_RECOVERY </code> Kurtarma modu menü girişlerinin oluşturulmasını devre dışı bırakmak için kullanılabilir.</li>
-                        <li><code> GRUB_INIT_TUNE </code> GRUB başlangıcında bir bip sesi almak için kullanılabilir.</li>
+                        <li><code class="language-sh"> GRUB_GFXMODE </code> Grafik terminalde kullanılacak çözünürlüğü ayarlar. Yalnızca grafik kartının desteklediği modlar kullanılabilir.</li>
+                        <li><code class="language-sh"> GRUB_DISABLE_LINUX_UUID </code> Linux'e <b>"root=UUID=xxx"</b> parametresinin geçilmesini devre dışı bırakmak için kullanılabilir.</li>
+                        <li><code class="language-sh"> GRUB_DISABLE_RECOVERY </code> Kurtarma modu menü girişlerinin oluşturulmasını devre dışı bırakmak için kullanılabilir.</li>
+                        <li><code class="language-sh"> GRUB_INIT_TUNE </code> GRUB başlangıcında bir bip sesi almak için kullanılabilir.</li>
                     </ul>
                 </details>
                 <details id="default-bootloader">
@@ -128,37 +136,37 @@
                     <p>Kali Linux'ta varsayılan önyükleyiciyi (bootloader) değiştirmek için aşağıdaki adımları takip edebilirsiniz:</p>
                     <ol>
                         <li> GRUB Konfigürasyon Dosyasını Düzenleyin: <ul>
-                                <li><code>sudo su</code> komutunu çalıştırın ve parolanızı girin.</li>
-                                <li><code>nano /etc/default/grub</code> komutunu çalıştırın ve GRUB konfigürasyon dosyasını düzenleyin</li>
+                                <li><code class="language-sh">sudo su</code> komutunu çalıştırın ve parolanızı girin.</li>
+                                <li><code class="language-sh">nano /etc/default/grub</code> komutunu çalıştırın ve GRUB konfigürasyon dosyasını düzenleyin</li>
                             </ul>
                         </li>
                         <li> Varsayılan Önyükleyiciyi Belirleyin: <ul>
                                 <li>GRUB_DEFAULT değeri: Bu değer, önyükleme menüsünde varsayılan olarak seçilecek önyükleyiciyi belirler.</li>
-                                <li>ilk önyükleyici için <code>GRUB_DEFAULT=0</code> , üçüncü için <code>GRUB_DEFAULT=3</code> şeklinde ayarlayabilirsiniz.</li>
+                                <li>ilk önyükleyici için <code class="language-sh">GRUB_DEFAULT=0</code> , üçüncü için <code class="language-sh">GRUB_DEFAULT=3</code> şeklinde ayarlayabilirsiniz.</li>
                             </ul>
                         </li>
                         <li> Değişiklikleri Kaydetin ve Uygulayın: <ul>
-                                <li>Değişiklikleri kaydetin: <code>Ctrl+X</code> tuşlarına basın, ardından <code>'y' & 'enter'</code> tuşuna basarak kaydedin.</li>
+                                <li>Değişiklikleri kaydetin: <code class="language-sh">Ctrl+X</code> tuşlarına basın, ardından <code class="language-sh">'y' & 'enter'</code> tuşuna basarak kaydedin.</li>
                             </ul>
                         </li>
-                        <li>GRUB konfigürasyonunu güncelleyin: <code>update-grub</code> komutunu çalıştırın.</li>
+                        <li>GRUB konfigürasyonunu güncelleyin: <code class="language-sh">update-grub</code> komutunu çalıştırın.</li>
                     </ol>
                     <p>Örnek: Eğer Windows'u varsayılan önyükleyici olarak seçmek istiyorsanız, GRUB_DEFAULT değerini Windows önyükleyicisinin menüdeki sırasına göre ayarlayabilirsiniz. Örneğin,
-                        Windows ikinci seçenekse: <code>GRUB_DEFAULT=1</code></p>
+                        Windows ikinci seçenekse: <code class="language-sh">GRUB_DEFAULT=1</code></p>
                     <br />
                     <p>Ek İpuçları:</p>
                     <ul>
-                        <li>Önyükleme menüsünde bekleme süresi: <code>GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz. Örneğin, 10 saniye
-                            için: <code>GRUB_TIMEOUT=10</code></li>
-                        <li> Önyükleme menüsünü gizleme: <code>GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5 saniye için:
-                            <code>GRUB_HIDDEN_TIMEOUT=5</code>
+                        <li>Önyükleme menüsünde bekleme süresi: <code class="language-sh">GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz. Örneğin, 10 saniye
+                            için: <code class="language-sh">GRUB_TIMEOUT=10</code></li>
+                        <li> Önyükleme menüsünü gizleme: <code class="language-sh">GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5 saniye için:
+                            <code class="language-sh">GRUB_HIDDEN_TIMEOUT=5</code>
                         </li>
                     </ul>
                     <br />
                     <p>Bu adımları takip ederek, Kali Linux'ta varsayılan önyükleyiciyi istediğiniz şekilde ayarlayabilirsiniz.</p>
                     <br />
                     <p>FULL CODE:</p>
-                    <pre><code>sudo su 
+                    <pre class="line-numbers"><code class="language-bash">sudo su 
 nano /etc/default/grub 
 GRUB_DEFAULT=0 
 GRUB_TIMEOUT=10 
