@@ -11,8 +11,13 @@
 
 'use strict';
 (async () => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = document.currentScript.src.replace('importHeaderFooter.js', 'headerFooter.css');
+    document.head.appendChild(link);
     await CreateFooter();
     await CreateHeader();
+
 })();
 
 
@@ -20,12 +25,6 @@ async function CreateFooter() {
     // Select / Create the footer
     let footer = document.querySelector('body footer') || document.createElement('footer');
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
-
-    // Load the CSS-footer file
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = document.currentScript.src.replace('importHeaderFooter.js', 'footer.css');
-    document.head.appendChild(link);
 
     // Build the footer
     footer.id = "footer";
@@ -39,12 +38,6 @@ async function CreateHeader() {
     // Select / Create the header
     let header = document.querySelector('body header') || document.createElement('header');
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
-    
-    // Load the CSS-header file
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = document.currentScript.src.replace('importHeaderFooter.js', 'header.css');
-    document.head.appendChild(link);
 
     // Build the header
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
