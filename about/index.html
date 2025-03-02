@@ -19,9 +19,9 @@
     <link rel="dns-prefetch" href="https://mefamex.com" />
     <!-- Canonical Link -->
     <link rel="canonical" href="https://mefamex.com/about/" />
-    <!-- Stil Optimizasyonu -->
+    <!-- Stil Optimizasyonu 
     <link rel="stylesheet" href="../src/components/header.css" />
-    <link rel="stylesheet" href="../src/components/footer.css" />
+    <link rel="stylesheet" href="../src/components/footer.css" />-->
     <!-- Performans için preload -->
     <link rel="preload" as="style" href="https://mefamex.com/src/components/header.css" />
     <link rel="preload" as="style" href="https://mefamex.com/src/components/footer.css" />
@@ -94,12 +94,18 @@
                     <p class="content-rights"> Bu web sitesinde yer alan tüm içerikler, yazılımlar, grafikler, logolar ve kod yapısı MEFAMEX'in telif hakları kapsamında korunmaktadır. İçeriklerin
                         izinsiz kopyalanması, değiştirilmesi veya dağıtılması kesinlikle yasaktır. </p>
                     <p class="disclaimer-notice"> Sitede sunulan bilgiler sadece bilgilendirme amaçlıdır. Paylaşılan içerikler kişisel deneyim ve araştırmalara dayanmakta olup, profesyonel tavsiye
-                        niteliği taşımamaktadır. Verilen bilgilerin kullanımından doğabilecek sonuçlardan MEFAMEX sorumlu tutulamaz. </p>
+                        niteliği taşımamaktadır. Verilen bilgilerin kullanımından doğabilecek sonuçlardan kullanıcılar sorumludur. </p>
                     <p class="privacy-notice"> Bu siteyi kullanarak <a href="">Gizlilik Politikamızı</a> ve <a href="">Kullanım Koşullarımızı</a> kabul etmiş sayılırsınız. </p>
                 </div>
             </section>
             <!---->
             <!---->
+            <section class="about-update">
+                <h2>Güncelleme Bilgisi</h2>
+                <p>
+                    <i>Son güncelleme: 03.03.2025</i>
+                </p>
+            </section>
         </div>
         <!---->
         <!---->
@@ -121,6 +127,13 @@
             h1 {
                 text-align: center;
                 color: rgb(241, 241, 241);
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                color: rgb(200, 200, 200);
+                margin-bottom: 1rem;
+                font-size: 1.8rem;
             }
         }
 
@@ -133,12 +146,6 @@
             section {
                 margin-bottom: 5rem;
                 border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
-            }
-
-            h2 {
-                color: rgb(200, 200, 200);
-                margin-bottom: 1rem;
-                font-size: 1.8rem;
             }
 
             ul {
@@ -193,6 +200,14 @@
                         font-weight: bold;
                         color: rgb(200, 200, 200) !important;
                     }
+                }
+            }
+
+            .about-update {
+                opacity: 0.5;
+
+                h2 {
+                    font-size: 1.5rem;
                 }
             }
         }
