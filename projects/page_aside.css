@@ -250,6 +250,22 @@ body {
     user-select: none;
 }
 
+pre[class*=language-].line-numbers {
+    padding-left: 2.8em !important;
+}
+
+pre[class*=language-] {
+    margin: 0 !important;
+    font-size: 0.85em !important;
+    width: fit-content;
+}
+
+code[class*=language-], pre[class*=language-] {
+    line-height: 1.25 !important;
+    font-size: 0.9em !important;
+}
+
+
 a {
     color: inherit;
     text-decoration-color: rgba(255, 50, 50, 0.7);
@@ -302,7 +318,7 @@ section.compacts {
     gap: 3em 1.5em;
     margin-block: 3em !important;
 
-    div {
+    & > div {
         flex: 1 1 30em;
         display: flex;
         flex-direction: column;
