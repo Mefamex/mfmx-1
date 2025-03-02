@@ -5,19 +5,15 @@
  * @license MIT
  * @version 1.0.0
  * @see https://mefamex.com
- * @since 08.12.2024
- * @lastModified 30.01.2025
+ * @since 2024-12-08
+ * @lastModified 2025-03-02
  */
 
 document.addEventListener('DOMContentLoaded', organize_checkbox);
 
-let searchInput = document.getElementById('search') ?? "";
-let checkboxes = "";
-
-
-
-
 function organize_checkbox() {
+    let searchInput = document.getElementById('search') ?? "";
+    let checkboxes = "";
     searchInput = document.getElementById('search');
     searchInput.addEventListener('input', handleSearchInput);
     document.getElementById('search-form').addEventListener('submit', (event) => event.preventDefault());
@@ -38,8 +34,7 @@ function organize_checkbox() {
 
     // checkbox'ları oluşturur
     languages.forEach(lang => {
-        // projectItems'ı diziye dönüştür
-        const projectItemsArray = Array.from(projectItems); // Veya [...projectItems] ile spread operatörü kullanın
+        const projectItemsArray = Array.from(projectItems); // Veya [...projectItems] ile spread operatörü kullan
 
         const projectCount = projectItemsArray.filter(item => {
             const langs = item.getAttribute('data-language')?.toLowerCase().split(',').map(l => l.trim()) || [];
@@ -85,7 +80,7 @@ function organize_checkbox() {
             projectItems.forEach(item => {
                 const combinedText = (item.textContent + ' ' + Array.from(item.attributes).map(attr => attr.value).join(' ')).toLowerCase();
                 const projectLanguages = (item.getAttribute('data-language') || '').toLowerCase().split(',').map(lang => lang.trim());
-                const languageMatch = selectedLanguages.size === 0 || projectLanguages.some(lang => selectedLanguages.has(lang));
+                const languageMatch = selectedLanguages.size === 0 || Array.from(selectedLanguages).every(selectedLang => projectLanguages.includes(selectedLang));
                 item.style.display = (combinedText.includes(searchTerm) && languageMatch) ? '' : 'none';
                 if (item.style.display === '') hasVisibleItems = true;
             });

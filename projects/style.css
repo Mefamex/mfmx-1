@@ -10,55 +10,71 @@
 
 #main_container main {
     min-height: 75vh;
-    & > section {
-        flex: 1 1 20rem;
+
+    .card{
+        max-width: 30rem;
+    }
+
+    &>section {
+        flex: 1 1 auto;
         height: auto;
         min-height: 10rem;
         width: 20rem;
+
         ul {
             list-style: none;
             padding: 0;
+
             li {
                 transition: all 0.2s normal;
                 padding: 0.3rem 0.5rem;
                 border-radius: 2rem;
                 height: min-content;
+
                 &::before {
                     content: " ■ ";
                     color: rgb(123, 255, 255);
                 }
             }
+
             li:hover {
                 background-color: rgba(255, 255, 255, 0.07);
+
                 a {
                     font-weight: 600;
                 }
             }
         }
     }
+
     #mainWellcome {
         margin-bottom: 0.5rem;
+
         h1 {
             text-align: center;
             margin-block: 0.3rem;
             font-size: 2.3em;
         }
+
         p {
             line-height: 1.4;
             margin-block: 0.4em;
+
             &::before {
                 content: " ■ ";
                 color: rgb(123, 255, 255);
             }
         }
     }
+
     #projects-search {
         flex-basis: 100%;
         max-width: 95%;
         min-height: 5rem;
         margin-bottom: 3rem;
         margin-inline: 1%;
-        h2{
+
+        h2 {
             margin-inline: auto;
             justify-self: center;
             width: 80%;
@@ -66,39 +82,39 @@
             border: 0.01em solid rgba(255, 255, 255, 0.3);
             color: rgb(255, 255, 255);
         }
+
         #search-form {
             display: flex;
             flex-flow: row wrap;
             gap: 1rem;
             align-items: center;
+
             #search {
                 width: 18rem;
                 flex-grow: 1;
                 padding: 0.5rem;
-                margin:auto;
+                margin: auto;
                 border: 1px solid rgba(255, 255, 255, 0.5);
                 border-radius: 0.5rem;
                 background-color: rgba(255, 255, 255, 0.1);
                 color: white;
+
                 &::placeholder {
                     color: rgba(255, 255, 255, 0.7);
                 }
             }
+
             fieldset {
                 display: flex;
                 flex-flow: row wrap;
                 padding: 0 1rem;
                 margin: 0;
-                width: 28rem ;
+                width: 28rem;
                 flex-grow: 10;
-                justify-content:  space-evenly;
+                justify-content: space-evenly;
                 border-radius: 1em;
                 border-color: rgba(255, 255, 255, 0.4);
-                legend {
-                    color: rgb(123, 255, 255);
-                    margin-bottom: 0.5rem;
-                    font-size: 1.2em;
-                }
+
                 label {
                     -moz-user-select: -moz-none;
                     -khtml-user-select: none;
@@ -119,11 +135,14 @@
                     cursor: pointer;
                     color: white;
                     border: 0.1rem solid rgba(0, 255, 251, 0.2);
+
                     &:hover {
-                        border-color: rgba(255, 255, 255, 0.7); /* Üzerine gelindiğinde kenar rengi */
+                        border-color: rgba(255, 255, 255, 0.7);
+                        /* Üzerine gelindiğinde kenar rengi */
                     }
                 }
-                .label-secildi{
+
+                .label-secildi {
                     background-color: rgb(255, 255, 255);
                     color: black;
                     font-weight: bold;

@@ -14,16 +14,6 @@
 /*await CreateNavContainer();*/
 
 
-/* NOT WORKING I WILL RETURN 
-importStylesheep();
-function importStylesheep() {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'page_aside.css';
-    document.head.appendChild(link);
-}*/
-
 /* abonded */
 async function CreateNavContainer() {
     const nav = document.getElementById("nav");
