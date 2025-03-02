@@ -24,7 +24,6 @@ async function CreateFooter() {
     // Load the CSS-footer file
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.type = 'text/css';
     link.href = document.currentScript.src.replace('importHeaderFooter.js', 'footer.css');
     document.head.appendChild(link);
 
@@ -44,7 +43,6 @@ async function CreateHeader() {
     // Load the CSS-header file
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.type = 'text/css';
     link.href = document.currentScript.src.replace('importHeaderFooter.js', 'header.css');
     document.head.appendChild(link);
 

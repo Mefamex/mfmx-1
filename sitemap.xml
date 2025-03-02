@@ -82,12 +82,12 @@
 
   <!-- Specific Project Pages -->
   <url>
-    <loc>https://mefamex.com/ the-mefamex-project/</loc>
+    <loc>https://mefamex.com/the-mefamex-project/</loc>
     <lastmod>2025-03-02T02:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mefamex.com/ the-mefamex-project/mefamex_logo_bgb.webp</image:loc>
+      <image:loc>https://mefamex.com/the-mefamex-project/mefamex_logo_bgb.webp</image:loc>
       <image:title>The Mefamex Project</image:title>
     </image:image>
   </url>

@@ -60,7 +60,7 @@
     <script type="text/javascript">
         let currentPath = window.location.pathname;
         if (currentPath.length > 1 && currentPath.endsWith("/")) currentPath = currentPath.slice(0, -1);
-        if (["about", "archive", "blog", "contact", "cv", "gallery", "games", "projects", "software", " the-mefamex-project", "sweetmonstermia"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
+        if (["about", "archive", "blog", "contact", "cv", "gallery", "games", "projects", "software", "the-mefamex-project", "sweetmonstermia"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
         else if (currentPath !== "/") window.location.href = "/";
     </script>
     <script type="application/ld+json">
@@ -109,7 +109,7 @@
                 <h1 class="card_title"><a href="https://mefamex.com/projects/" title="PROJELER" aria-label="Projeler" target="_self" tabindex="-1"> PROJELER </a></h1>
                 <p>Bu sayfada, tamamladığım ve üzerinde çalıştığım projeleri sergiliyorum.</p>
                 <p>
-                    <a href="https://mefamex.com/ the-mefamex-project/" title="The Mefamex Project" aria-label="The Mefamex Project" target="_self" tabindex="0">The Mefamex Project</a>, yapay zeka
+                    <a href="https://mefamex.com/the-mefamex-project/" title="The Mefamex Project" aria-label="The Mefamex Project" target="_self" tabindex="0">The Mefamex Project</a>, yapay zeka
                     modelleme, sinir ağları, sistem ve web uygulamaları, penetrasyon testleri ve daha fazlası burada yer alıyor.
                 </p>
             </div>

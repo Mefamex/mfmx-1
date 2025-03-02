@@ -134,7 +134,7 @@
             "submenu": [
                 {
                     "title": "The Mefamex Project",
-                    "href": "https://mefamex.com/ the-mefamex-project/",
+                    "href": "https://mefamex.com/the-mefamex-project/",
                     "isVisible": true,
                     "description": "Yapay Zeka Projesi",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
