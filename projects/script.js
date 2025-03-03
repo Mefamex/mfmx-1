@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com
  * @since 2024-12-08
- * @lastModified 2025-03-02
+ * @lastModified 2025-03-03
  */
 
 document.addEventListener('DOMContentLoaded', organize_checkbox);
@@ -34,12 +34,7 @@ function organize_checkbox() {
 
     // checkbox'ları oluşturur
     languages.forEach(lang => {
-        const projectItemsArray = Array.from(projectItems); // Veya [...projectItems] ile spread operatörü kullan
-
-        const projectCount = projectItemsArray.filter(item => {
-            const langs = item.getAttribute('data-language')?.toLowerCase().split(',').map(l => l.trim()) || [];
-            return langs.includes(lang);
-        }).length;
+        const projectCount = Array.from(projectItems).filter(item => { return (item.getAttribute('data-language')?.toLowerCase().split(',').map(l => l.trim()) || []).includes(lang); }).length;
 
         const label = document.createElement('label');
         label.innerHTML = `<input type='checkbox' name='language' value='${lang}' id='${lang}'> (${projectCount}) ${lang.toUpperCase()} `;
@@ -60,24 +55,23 @@ function organize_checkbox() {
     }
 
     // Checkbox değiştiğinde çalışan fonksiyon
-    function changed_checkbox(checkbox) {
-        checkbox.parentElement.classList.toggle('label-secildi', checkbox.checked);
+    function changed_checkbox(cb) {
+        let scrollPos = window.scrollY || document.documentElement.scrollTop;
+        cb.parentElement.classList.toggle('label-secildi', cb.checked);
         updateSearchResults();
+        window.scrollTo(0, scrollPos);
     }
 
     // Arama sonuçlarını güncelleyen fonksiyon
     function updateSearchResults() {
-
-        const searchTerm = sanitizeInput(searchInput.value).toLowerCase().trim();
+        const searchTerm = (document.createElement('div').textContent = searchInput.value).toLowerCase().trim();
         const selectedLanguages = new Set(Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value));
 
-        const projectSections = document.querySelectorAll('section.card');
 
-        projectSections.forEach(section => {
-            const projectItems = section.querySelectorAll('.card ul li');
+        document.querySelectorAll('section.card').forEach(section => {
             let hasVisibleItems = false;
 
-            projectItems.forEach(item => {
+            section.querySelectorAll('.card ul li').forEach(item => {
                 const combinedText = (item.textContent + ' ' + Array.from(item.attributes).map(attr => attr.value).join(' ')).toLowerCase();
                 const projectLanguages = (item.getAttribute('data-language') || '').toLowerCase().split(',').map(lang => lang.trim());
                 const languageMatch = selectedLanguages.size === 0 || Array.from(selectedLanguages).every(selectedLang => projectLanguages.includes(selectedLang));
@@ -88,11 +82,5 @@ function organize_checkbox() {
             // Eğer tüm maddeler gizlenmişse, section'ı gizle
             section.style.display = hasVisibleItems ? 'flex' : 'none';
         });
-    }
-    // Kullanıcıdan alınan girişi temizleyen fonksiyon
-    function sanitizeInput(input) {
-        const tempDiv = document.createElement('div');
-        tempDiv.textContent = input;
-        return tempDiv.innerHTML;
     }
 }
