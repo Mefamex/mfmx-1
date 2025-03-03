@@ -3,7 +3,7 @@ RewriteEngine On
 AddType application/json .json
 AddType application/javascript .js 
 AddType text/css .css
-
+ 
 ErrorDocument 404 ../index.html
 
 RewriteCond %{REQUEST_FILENAME} !-f
