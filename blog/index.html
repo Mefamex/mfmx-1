@@ -196,6 +196,39 @@
         </fieldset>
     </main>
     <script src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script>
+        // alternatif kaynaklar: { name: [ last_used_index, altertatives... ] }
+        const kaynaklar = {
+            'importHeaderFooter.js': [0, "/src/components/importHeaderFooter.js"]
+        }
+        // Alternatif kaynaklara domain ekleyerek kontrol et
+        Object.keys(alternatifKaynaklar).forEach(name => { alternatifKaynaklar[name].push(...alternatifKaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
+
+        // her script'in alternatif kaynaklarını belirle
+        document.querySelectorAll("script").forEach(element => {
+            const scriptName = script.src.split("/").pop();
+            if (!scriptName) return;
+            if (kaynaklar[scriptName]) {
+                console.log(`Script için alternatif kaynaklar belirlendi: (${scriptName})`);
+                element.onerror = () => loadFallbackScript(scriptName);
+            } else console.log(`Script için alternatif kaynak bulunamadı: '${scriptName}'`);
+        });
+
+        // alternatif kaynaklardan yükleme fonksiyonu
+        function loadFallbackScript(scriptName) {
+            const scriptIndex = ++kaynaklar[scriptName][0];
+            if (scriptIndex >= alternatifKaynaklar[scriptName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${scriptName}`); return; }
+
+            console.log('Script için alternatif kaynak yükleniyor (' + scriptName + ',  alternatif-' + scriptIndex + ')\n ---> \'' + kaynaklar[scriptName][scriptIndex] + '\'');
+            const fallbackScript = document.createElement('script');
+            fallbackScript.type = 'text/javascript';
+            fallbackScript.src = kaynaklar[scriptName][scriptIndex];
+            fallbackScript.defer = true;
+            fallbackScript.onerror = () => loadFallbackScript(scriptName);
+            document.body.appendChild(fallbackScript);
+
+        }
+    </script>
     <!-- <script src="/blog/script.js" type="text/javascript"></script> -->
 </body>
 
