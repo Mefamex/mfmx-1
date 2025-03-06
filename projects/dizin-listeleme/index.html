@@ -413,7 +413,7 @@ if __name__ == "__main__":
                 const fallbackScript = document.createElement('script');
                 fallbackScript.src = kaynaklar[fileName][fileIndex];
                 fallbackScript.defer = true;
-                fallbackScript.type = 'text/javascript';
+                fallbackScript.type = 'application/javascript';
                 fallbackScript.onerror = () => loadFallbackScript(fileName);
                 document.head.appendChild(fallbackScript);
             }
