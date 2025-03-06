@@ -391,7 +391,7 @@ if __name__ == "__main__":
 
         // her script'in alternatif kaynaklarını belirle
         document.querySelectorAll("script").forEach(element => {
-            const scriptName = script.src.split("/").pop();
+            const scriptName = element.src.split("/").pop();
             if (!scriptName) return;
             if (kaynaklar[scriptName]) {
                 console.log(`Script için alternatif kaynaklar belirlendi: (${scriptName})`);
