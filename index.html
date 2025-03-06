@@ -165,7 +165,7 @@
     <script>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
-        const kaynaklar = { 'style.css': [0, "./style.css", "/src/styles/home.css"] }
+        const kaynaklar = { 'home.css': [0, "./src/styles/home.css", "/src/styles/home.css"] }
         // Alternatif kaynaklara domain ekleyerek kontrol et
         Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
 
