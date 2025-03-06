@@ -413,6 +413,7 @@ if __name__ == "__main__":
                 const fallbackScript = document.createElement('script');
                 fallbackScript.src = kaynaklar[fileName][fileIndex];
                 fallbackScript.defer = true;
+                fallbackScript.type = 'text/javascript';
                 fallbackScript.onerror = () => loadFallbackScript(fileName);
                 document.head.appendChild(fallbackScript);
             }
@@ -420,6 +421,7 @@ if __name__ == "__main__":
                 if (isStylesheetLoadedByHref(fileName)) return;
                 const fallbackLink = document.createElement('link');
                 fallbackLink.rel = 'stylesheet';
+                fallbackLink.type = 'text/css';
                 fallbackLink.href = kaynaklar[fileName][fileIndex];
                 setTimeout(() => { if (!isStylesheetLoadedByHref(fileName)) loadFallbackScript(fileName) }, 1000);
                 document.head.appendChild(fallbackLink);
