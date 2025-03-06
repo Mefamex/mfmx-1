@@ -385,7 +385,7 @@ if __name__ == "__main__":
             'importHeaderFooter.js': [0, "./../src/components/importHeaderFooter.js", "/src/components/importHeaderFooter.js"],
             'headerFooter.css': [0, "../../src/components/headerFooter.css", "/src/components/headerFooter.css"],
             'page_asides.js': [0, "../page_asides.js", "/projects/page_asides.js"],
-            'page_aside.css': [0, "../page_aside.css", "/projects/page_aside.css"],
+            'page_aside.css': [0, "./page_aside.css", "/projects/page_aside.css"],
         }
         // Alternatif kaynaklara domain ekleyerek kontrol et
         Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
