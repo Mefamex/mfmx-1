@@ -199,7 +199,7 @@
     <script>
         // alternatif kaynaklar: { name: [ last_used_index, altertatives... ] }
         const kaynaklar = {
-            'importHeaderFooter.js': [0, "/src/components/importHeaderFooter.js"]
+            'importHeaderFooter.js': [0, "../src/components/importHeaderFooter.js", "/src/components/importHeaderFooter.js"]
         }
         // Alternatif kaynaklara domain ekleyerek kontrol et
         Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
