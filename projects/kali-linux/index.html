@@ -20,8 +20,8 @@
     <link rel="canonical" href="https://mefamex.com/projects/kali-linux/" />
     <!-- Stil Optimizasyonu -->
     <link rel="preload" href="../page_aside.css" as="style" />
-    <link rel="stylesheet" href="../page_aside.css" />
-    <link rel="preload" as="style" href="../../src/components/headerFooter.css" />
+    <link rel="stylesheet" href="../page_aside.css" class="alternatively"  />
+    <link rel="preload" as="style" href="../../src/components/headerFooter.css" class="alternatively"  />
     <!-- favicon set -->
     <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
     <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -184,40 +184,79 @@ update-grub
         </main>
         <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
     </div>
-    <script src="../../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
-    <script src="../page_asides.js" type="text/javascript" defer></script>
+    <script  class="alternatively" src="../../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script  class="alternatively" src="../page_asides.js" type="text/javascript" defer></script>
     <script>
-        // alternatif kaynaklar: { name: [ last_used_index, altertatives... ] }
+        //  class="alternatively" 
+        // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
         const kaynaklar = {
-            'importHeaderFooter.js': [1, "../../src/components/importHeaderFooter.js", "/src/components/importHeaderFooter.js"],
-            'page_asides.js': [1, "../page_asides.js", "/projects/page_asides.js"]
+            'importHeaderFooter.js': [0, "../../src/components/importHeaderFooter.js", "/src/components/importHeaderFooter.js"],
+            'headerFooter.css': [0, "../../src/components/headerFooter.css", "/src/components/headerFooter.css"],
+            'page_asides.js': [0, "../page_asides.js", "/projects/page_asides.js"],
+            'page_aside.css': [0, "../page_aside.css", "/projects/page_aside.css"],
         }
         // Alternatif kaynaklara domain ekleyerek kontrol et
         Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
 
-        // her script'in alternatif kaynaklarını belirle
-        document.querySelectorAll("script").forEach(element => {
-            const scriptName = element.src.split("/").pop();
-            if (!scriptName) return;
-            if (kaynaklar[scriptName]) {
-                console.log(`Script için alternatif kaynaklar belirlendi: (${scriptName})`);
-                element.onerror = () => loadFallbackScript(scriptName);
-            } else console.log(`Script için alternatif kaynak bulunamadı: '${scriptName}'`);
+        // her dosya'in alternatif kaynaklarını belirle
+        document.querySelectorAll(".alternatively").forEach(element => {
+            const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
+            if (!fileName) return;
+            if (kaynaklar[fileName]) {
+                console.log(`✅ Dosya için alternatif kaynaklar belirlendi: (${fileName})`);
+                if (fileName.endsWith(".js")) element.onerror = () => loadFallbackScript(fileName);
+                else if (fileName.endsWith(".css")) { setTimeout(() => { if (!isStylesheetLoadedByHref(fileName)) loadFallbackScript(fileName) }, 500); }
+                else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`);
+                element.onerror = () => loadFallbackScript(fileName);
+            } else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`);
         });
 
         // alternatif kaynaklardan yükleme fonksiyonu
-        function loadFallbackScript(scriptName) {
-            const scriptIndex = ++kaynaklar[scriptName][0];
-            if (scriptIndex >= kaynaklar[scriptName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${scriptName}`); return; }
+        function loadFallbackScript(fileName) {
+            const fileIndex = ++kaynaklar[fileName][0];
+            if (fileIndex >= kaynaklar[fileName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${fileName}`); return; }
 
-            console.log('Script için alternatif kaynak yükleniyor (' + scriptName + ',  alternatif-' + scriptIndex + ')\n ---> \'' + kaynaklar[scriptName][scriptIndex] + '\'');
-            const fallbackScript = document.createElement('script');
-            fallbackScript.type = 'text/javascript';
-            fallbackScript.src = kaynaklar[scriptName][scriptIndex];
-            fallbackScript.defer = true;
-            fallbackScript.onerror = () => loadFallbackScript(scriptName);
-            document.body.appendChild(fallbackScript);
+            console.log('🔄 Dosya için alternatif kaynak yükleniyor (' + fileName + ',  alternatif-' + fileIndex + ')\n ---> \'' + kaynaklar[fileName][fileIndex] + '\'');
+            if (fileName.endsWith(".js")) {
+                const fallbackScript = document.createElement('script');
+                fallbackScript.src = kaynaklar[fileName][fileIndex];
+                fallbackScript.defer = true;
+                fallbackScript.onload = () => checkScriptLoaded(fallbackScript, fileName);
+                fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName);
+                document.head.appendChild(fallbackScript);
+            }
+            else if (fileName.endsWith(".css")) {
+                if (isStylesheetLoadedByHref(fileName)) return;
+                const fallbackLink = document.createElement('link');
+                fallbackLink.rel = 'stylesheet';
+                fallbackLink.type = 'text/css';
+                fallbackLink.href = kaynaklar[fileName][fileIndex];
+                setTimeout(() => { if (!isStylesheetLoadedByHref(fileName)) loadFallbackScript(fileName) }, 500);
+                document.head.appendChild(fallbackLink);
+            }
+            else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
+        }
 
+        function isStylesheetLoadedByHref(href) { return Array.from(document.styleSheets).some(sheet => { if (sheet.href && sheet.href.includes(href)) { try { return sheet.cssRules.length > 0; } catch (e) { return false; /*CORS hatası perhebs*/ } } return false; }); }
+
+        function checkScriptLoaded(element, fileName) {
+            // Tarayıcı hata verdiyse otomatik fallback yükle
+            if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
+            // Yüklenen script içeriğini doğrulamak için bir test yap
+            setTimeout(() => {
+                // Eğer tarayıcı "başarıyla yükledi" diyorsa ama aslında içeriği yanlışsa
+                fetch(element.src, { method: "HEAD" })
+                    .then(response => {
+                        const contentType = response.headers.get("Content-Type") || "";
+                        console.log(`📂 İçerik türü: ${contentType}`);
+                        if (!contentType.includes("javascript")) {
+                            console.log(`❌ Hata: ${fileName} yanlış MIME türü ile yüklendi (${contentType}). Alternatif kaynak yükleniyor...`); element.dataset.failed = "true"; // Tekrar çalışmasını önlemek için flag koy
+                            loadFallbackScript(fileName);
+                        } else console.log(`✅ ${fileName} başarıyla yüklendi.`);
+
+                    })
+                    .catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
+            }, 500);
         }
     </script>
 </body>
