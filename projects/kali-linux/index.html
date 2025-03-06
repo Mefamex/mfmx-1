@@ -109,20 +109,21 @@
                     <summary>
                         <h3>GRUB Yapılandırma Ayarları ve Parametreleri</h3>
                     </summary>
-                    <p><code class="language-sh">/etc/default/grub</code> dosyasının içeriği, GRUB'un nasıl davranacağını belirleyen çeşitli ayarları içerir. Bu dosyada genellikle aşağıdaki gibi ayarlar bulunur:</p>
+                    <p><code class="language-sh">/etc/default/grub</code> dosyasının içeriği, GRUB'un nasıl davranacağını belirleyen çeşitli ayarları içerir. Bu dosyada genellikle aşağıdaki gibi
+                        ayarlar bulunur:</p>
                     <ul>
-                        <li><code class="language-sh"> GRUB_DEFAULT=2 </code> Bu ayar, GRUB menüsünde varsayılan olarak hangi işletim sisteminin seçileceğini belirtir. Burada 2 değeri, menüdeki üçüncü seçeneği (0'dan
-                            başladığı için) ifade eder.</li>
+                        <li><code class="language-sh"> GRUB_DEFAULT=2 </code> Bu ayar, GRUB menüsünde varsayılan olarak hangi işletim sisteminin seçileceğini belirtir. Burada 2 değeri, menüdeki üçüncü
+                            seçeneği (0'dan başladığı için) ifade eder.</li>
                         <li><code class="language-sh"> GRUB_TIMEOUT=5 </code> GRUB menüsünün ne kadar süreyle gösterileceğini belirler. Bu durumda, 5 saniye boyunca menü gösterilecektir.</li>
-                        <li><code class="language-sh"> GRUB_DISTRIBUTOR </code> Bu ayar, işletim sisteminin adını belirler. /etc/os-release dosyasından okunarak ayarlanır. Eğer bu dosya yoksa, varsayılan olarak "Kali"
-                            değeri kullanılır.</li>
-                        <li><code class="language-sh"> GRUB_CMDLINE_LINUX_DEFAULT="quiet" </code> Linux çekirdeği için varsayılan komut satırı parametrelerini ayarlar. "quiet" parametresi, önyükleme sırasında daha az
-                            bilgi gösterilmesini sağlar.</li>
-                        <li><code class="language-sh"> GRUB_DISABLE_OS_PROBER=false </code> Bu ayar, GRUB'un diğer işletim sistemlerini tespit etmesini sağlar. Eğer birden fazla işletim sistemi yüklüyse, bu ayar true
-                            olarak değiştirilirse, diğer işletim sistemleri tespit edilmez.</li>
+                        <li><code class="language-sh"> GRUB_DISTRIBUTOR </code> Bu ayar, işletim sisteminin adını belirler. /etc/os-release dosyasından okunarak ayarlanır. Eğer bu dosya yoksa,
+                            varsayılan olarak "Kali" değeri kullanılır.</li>
+                        <li><code class="language-sh"> GRUB_CMDLINE_LINUX_DEFAULT="quiet" </code> Linux çekirdeği için varsayılan komut satırı parametrelerini ayarlar. "quiet" parametresi, önyükleme
+                            sırasında daha az bilgi gösterilmesini sağlar.</li>
+                        <li><code class="language-sh"> GRUB_DISABLE_OS_PROBER=false </code> Bu ayar, GRUB'un diğer işletim sistemlerini tespit etmesini sağlar. Eğer birden fazla işletim sistemi
+                            yüklüyse, bu ayar true olarak değiştirilirse, diğer işletim sistemleri tespit edilmez.</li>
                         <li><code class="language-sh"> GRUB_BADRAM </code> Bellek hatalarını filtrelemek için kullanılabilir. Bu ayar, belirli bellek adreslerini belirtmek için kullanılır.</li>
-                        <li><code class="language-sh"> GRUB_TERMINAL=console </code> Grafik terminali devre dışı bırakmak için kullanılabilir. Eğer bu satır yorumdan çıkarılırsa, GRUB yalnızca metin tabanlı bir
-                            terminalde çalışır.</li>
+                        <li><code class="language-sh"> GRUB_TERMINAL=console </code> Grafik terminali devre dışı bırakmak için kullanılabilir. Eğer bu satır yorumdan çıkarılırsa, GRUB yalnızca metin
+                            tabanlı bir terminalde çalışır.</li>
                         <li><code class="language-sh"> GRUB_GFXMODE </code> Grafik terminalde kullanılacak çözünürlüğü ayarlar. Yalnızca grafik kartının desteklediği modlar kullanılabilir.</li>
                         <li><code class="language-sh"> GRUB_DISABLE_LINUX_UUID </code> Linux'e <b>"root=UUID=xxx"</b> parametresinin geçilmesini devre dışı bırakmak için kullanılabilir.</li>
                         <li><code class="language-sh"> GRUB_DISABLE_RECOVERY </code> Kurtarma modu menü girişlerinin oluşturulmasını devre dışı bırakmak için kullanılabilir.</li>
@@ -146,7 +147,8 @@
                             </ul>
                         </li>
                         <li> Değişiklikleri Kaydetin ve Uygulayın: <ul>
-                                <li>Değişiklikleri kaydetin: <code class="language-sh">Ctrl+X</code> tuşlarına basın, ardından <code class="language-sh">'y' & 'enter'</code> tuşuna basarak kaydedin.</li>
+                                <li>Değişiklikleri kaydetin: <code class="language-sh">Ctrl+X</code> tuşlarına basın, ardından <code class="language-sh">'y' & 'enter'</code> tuşuna basarak kaydedin.
+                                </li>
                             </ul>
                         </li>
                         <li>GRUB konfigürasyonunu güncelleyin: <code class="language-sh">update-grub</code> komutunu çalıştırın.</li>
@@ -156,10 +158,10 @@
                     <br />
                     <p>Ek İpuçları:</p>
                     <ul>
-                        <li>Önyükleme menüsünde bekleme süresi: <code class="language-sh">GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz. Örneğin, 10 saniye
-                            için: <code class="language-sh">GRUB_TIMEOUT=10</code></li>
-                        <li> Önyükleme menüsünü gizleme: <code class="language-sh">GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5 saniye için:
-                            <code class="language-sh">GRUB_HIDDEN_TIMEOUT=5</code>
+                        <li>Önyükleme menüsünde bekleme süresi: <code class="language-sh">GRUB_TIMEOUT</code>değerini değiştirerek önyükleme menüsünün ne kadar süre açık kalacağını ayarlayabilirsiniz.
+                            Örneğin, 10 saniye için: <code class="language-sh">GRUB_TIMEOUT=10</code></li>
+                        <li> Önyükleme menüsünü gizleme: <code class="language-sh">GRUB_HIDDEN_TIMEOUT</code> değerini kullanarak önyükleme menüsünü belirli bir süre gizleyebilirsiniz. Örneğin, 5
+                            saniye için: <code class="language-sh">GRUB_HIDDEN_TIMEOUT=5</code>
                         </li>
                     </ul>
                     <br />
@@ -191,7 +193,7 @@ update-grub
             'page_asides.js': [0, "/projects/page_asides.js"]
         }
         // Alternatif kaynaklara domain ekleyerek kontrol et
-        Object.keys(alternatifKaynaklar).forEach(name => { alternatifKaynaklar[name].push(...alternatifKaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
+        Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
 
         // her script'in alternatif kaynaklarını belirle
         document.querySelectorAll("script").forEach(element => {
@@ -206,7 +208,7 @@ update-grub
         // alternatif kaynaklardan yükleme fonksiyonu
         function loadFallbackScript(scriptName) {
             const scriptIndex = ++kaynaklar[scriptName][0];
-            if (scriptIndex >= alternatifKaynaklar[scriptName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${scriptName}`); return; }
+            if (scriptIndex >= kaynaklar[scriptName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${scriptName}`); return; }
 
             console.log('Script için alternatif kaynak yükleniyor (' + scriptName + ',  alternatif-' + scriptIndex + ')\n ---> \'' + kaynaklar[scriptName][scriptIndex] + '\'');
             const fallbackScript = document.createElement('script');

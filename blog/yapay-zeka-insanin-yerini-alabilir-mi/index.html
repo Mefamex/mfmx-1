@@ -143,7 +143,7 @@
             'page_asides.js': [0, "/blog/page_asides.js"]
         }
         // Alternatif kaynaklara domain ekleyerek kontrol et
-        Object.keys(alternatifKaynaklar).forEach(name => { alternatifKaynaklar[name].push(...alternatifKaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
+        Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
 
         // her script'in alternatif kaynaklarını belirle
         document.querySelectorAll("script").forEach(element => {
@@ -158,7 +158,7 @@
         // alternatif kaynaklardan yükleme fonksiyonu
         function loadFallbackScript(scriptName) {
             const scriptIndex = ++kaynaklar[scriptName][0];
-            if (scriptIndex >= alternatifKaynaklar[scriptName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${scriptName}`); return; }
+            if (scriptIndex >= kaynaklar[scriptName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${scriptName}`); return; }
 
             console.log('Script için alternatif kaynak yükleniyor (' + scriptName + ',  alternatif-' + scriptIndex + ')\n ---> \'' + kaynaklar[scriptName][scriptIndex] + '\'');
             const fallbackScript = document.createElement('script');
