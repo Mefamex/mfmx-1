@@ -30,8 +30,8 @@
     <link rel="preload" as="script" type="text/javascript" href="../src/components/importHeaderFooter.js" />
     <!---->
     <!-- Stil Optimizasyonu -->
-    <link rel="stylesheet" href="style.css"  class="alternatively" />
-    <link rel="stylesheet" href="../src/components/headerFooter.css"  class="alternatively" />
+    <link rel="stylesheet" href="style.css" class="alternatively" />
+    <link rel="stylesheet" href="../src/components/headerFooter.css" class="alternatively" />
     <!---->
     <!-- Google Forms preconnect and DNS prefetch for faster form loading -->
     <link rel="preconnect" href="https://docs.google.com" crossorigin="anonymous" />
@@ -72,8 +72,20 @@
     <meta name="twitter:date" content="2025-02-26T02:00:00Z" />
     <!---->
     <!-- Güvenlik Meta Etiketleri -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://docs.google.com ; style-src 'self'; img-src 'self' https://mefamex.com https://*.google.com data:; frame-src https://docs.google.com; connect-src 'self'; font-src 'self'; media-src 'self'; object-src 'none'; manifest-src 'self'; form-action 'self' https://docs.google.com; base-uri 'self'; upgrade-insecure-requests;" />
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://docs.google.com https://mefamex.com https://*.mefamex.com; 
+    style-src 'self' 'unsafe-inline' https://mefamex.com https://*.mefamex.com; ; 
+    img-src 'self' https://mefamex.com https://*.mefamex.com  https://*.google.com data:; 
+    frame-src https://docs.google.com; 
+    connect-src 'self' https://mefamex.com https://*.mefamex.com; ; 
+    font-src 'self'; 
+    media-src 'self'; 
+    object-src 'none'; 
+    manifest-src 'self'; 
+    form-action 'self' https://docs.google.com; 
+    base-uri 'self'; 
+    upgrade-insecure-requests;" />
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="Permissions-Policy" content="interest-cohort=(),  microphone=(),  camera=(),  geolocation=(),  gyroscope=(),  magnetometer=(),  accelerometer=(),  autoplay=()" />
     <!--<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" /> rebuilt else -->
@@ -151,8 +163,8 @@
         <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0" marginwidth="0"
             data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
     </main>
-    <script  class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
-    <script  class="alternatively" src="script.js" type="text/javascript" defer></script>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script class="alternatively" src="script.js" type="text/javascript" defer></script>
     <script>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
