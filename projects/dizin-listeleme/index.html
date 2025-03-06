@@ -411,7 +411,6 @@ if __name__ == "__main__":
             console.log('Dosya için alternatif kaynak yükleniyor (' + fileName + ',  alternatif-' + fileIndex + ')\n ---> \'' + kaynaklar[fileName][fileIndex] + '\'');
             if (fileName.endsWith(".js")) {
                 const fallbackScript = document.createElement('script');
-                fallbackScript.type = 'text/javascript';
                 fallbackScript.src = kaynaklar[fileName][fileIndex];
                 fallbackScript.defer = true;
                 fallbackScript.onerror = () => loadFallbackScript(fileName);
