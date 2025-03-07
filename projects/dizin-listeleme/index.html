@@ -97,7 +97,7 @@
                     <li>datetime</li>
                 </ul>
             </section>
-            <section class="section_code_full">
+            <section class="section_full">
                 <h2>Script (python)</h2>
                 <!--code tag with pre attribute bot not with pre tag-->
                 <pre class="line-numbers"><code  class="language-python"># -*- coding: utf-8 -*-
@@ -431,10 +431,10 @@ if __name__ == "__main__":
         }
 
         function isStylesheetLoadedByHref(href) { return Array.from(document.styleSheets).some(sheet => { if (sheet.href && sheet.href.includes(href)) { try { return sheet.cssRules.length > 0; } catch (e) { return false; /*CORS hatası perhebs*/ } } return false; }); }
-        
+
         function checkScriptLoaded(element, fileName) {
             // Tarayıcı hata verdiyse otomatik fallback yükle
-            if (element.dataset.failed) {console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
+            if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
             // Yüklenen script içeriğini doğrulamak için bir test yap
             setTimeout(() => {
                 // Eğer tarayıcı "başarıyla yükledi" diyorsa ama aslında içeriği yanlışsa
@@ -448,7 +448,7 @@ if __name__ == "__main__":
                         } else console.log(`✅ ${fileName} başarıyla yüklendi.`);
 
                     })
-                    .catch(() => {console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
+                    .catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
             }, 500);
         }
     </script>

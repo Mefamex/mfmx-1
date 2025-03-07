@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Language" content="tr" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- SEO Meta Etiketleri -->
+    <title> Kali Linux Bootloader Arkaplan Değiştirme | MEFAMEX-PROJECTS </title>
+    <meta name="author" content="Mefamex" />
+    <meta name="description" content="Kali Linux | Boot Menusu Arkaplan Görseli Değiştirme | Default Bootloader Değiştirme | GRUB Config Ayarları ve Parametreleri | Linux" />
+    <meta name="keywords"
+        content=" MEFAMEX, MEFAMEX projects, MEFAMEX projeleri, kali linux bootloader, bootloader background Kali Linux, GRUB bootloader, boot background, GRUB config, GRUB tema, Linux boot menu, bootloader customization, GRUB background image, system boot, Linux customization" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <!-- Preconnect ve DNS Prefetch -->
+    <link rel="preconnect" href="https://mefamex.com" />
+    <link rel="dns-prefetch" href="https://mefamex.com" />
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://mefamex.com/projects/kali-change-boot-background/" />
+    <!-- Stil Optimizasyonu -->
+    <link rel="preload" href="../page_aside.css" as="style" />
+    <link rel="stylesheet" href="../page_aside.css" class="alternatively" />
+    <link rel="preload" as="style" href="../../src/components/headerFooter.css" class="alternatively" />
+    <!-- favicon set -->
+    <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
+    <link rel="icon" sizes="64x64" href="../../src/assets/images/mfmx/mfmx-64.png" type="image/png" />
+    <link rel="icon" sizes="144x144" href="../../src/assets/images/mfmx/mfmx-144.png" type="image/png" />
+    <link rel="icon" sizes="256x256" href="../../src/assets/images/mfmx/mfmx-256.png" type="image/png" />
+    <link rel="icon" sizes="512x512" href="../../src/assets/images/mfmx/mfmx-512.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../src/assets/images/mfmx/mfmx-144.png" />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content=" Kali Linux Bootloader Arkaplan Değiştirme | MEFAMEX-PROJECTS " />
+    <meta property="og:description" content="Kali Linux | Boot Menusu Arkaplan Görseli Değiştirme | Default Bootloader Değiştirme | GRUB Config Ayarları ve Parametreleri | Linux" />
+    <meta property="og:creator" content="@mefamex" />
+    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:url" content="https://mefamex.com/projects/kali-change-boot-background/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mefamex" />
+    <meta property="og:date" content="2025-03-07T02:00:00Z" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="article:modified_time" content="2025-03-07T02:00:00Z" />
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Mefamex" />
+    <meta name="twitter:creator" content="@mefamex" />
+    <meta name="twitter:title" content=" Kali Linux Bootloader Arkaplan Değiştirme | MEFAMEX-PROJECTS " />
+    <meta name="twitter:description" content="Kali Linux | Boot Menusu Arkaplan Görseli Değiştirme | Default Bootloader Değiştirme | GRUB Config Ayarları ve Parametreleri | Linux" />
+    <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
+    <meta name="twitter:url" content="https://mefamex.com/projects/kali-change-boot-background/" />
+    <meta name="twitter:type" content="website" />
+    <meta name="twitter:date" content="2025-03-07T02:00:00Z" />
+    <style>
+        #main_container main {
+            section {
+                flex: 1 1 35rem;
+                width: 35rem;
+            }
+
+            img {
+                width: min(100%, 45em);
+                max-width: min(100%, 95vw);
+                height: auto;
+                margin-top: 1em;
+                border-width: 0.1em;
+                border-style: solid;
+                border-color: sandybrown;
+                border-radius: 1em;
+            }
+
+            section {
+                height: fit-content !important
+            }
+
+            ;
+        }
+    </style>
+    <!---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" defer>  </script>
+</head>
+
+<body>
+    <div id="main_container">
+        <!---->
+        <!---->
+        <main role="main" id="main" name="main" aria-label="Ana içerik">
+            <!---->
+            <!---->
+            <section id="mainWellcome" name="main">
+                <h1>Kali Linux Bootloader Arkaplan Değiştirme</h1>
+                <hr>
+                <h2>Giriş</h2>
+                <p>Kali Linux | Boot Menusu Arkaplan Görseli Değiştirme | Default Bootloader Değiştirme | GRUB Config Ayarları ve Parametreleri | Linux</p>
+                <p>GRUB (GRand Unified Bootloader), Linux işletim sistemlerinde kullanılan bir bootloader'dır. GRUB, bilgisayarınızı başlatırken hangi işletim sistemini yükleyeceğinizi seçmenize
+                    olanak tanır. Ayrıca, GRUB'un başlangıç ekranında kullanılan arkaplan görselini değiştirebilirsiniz. Bu, bilgisayarınızı başlatırken daha kişisel bir deneyim sağlayabilir ve sistem
+                    önyükleme işlemi sırasında hoş bir görünüm sunabilir. </p>
+                <p>Yayınlanma tarihi: 07.03.2025 || Son güncelleme tarihi: 07.03.2025</p>
+            </section>
+            <!---->
+            <!---->
+            <section class="section_full">
+                <h2>Dikkat Edilmesi Gerekenler</h2>
+                <ul>
+                    <li><b> Görsel Formatı : </b> GRUB (bootloader) genellikle PNG veya JPEG formatındaki resimleri destekler. PNG, daha iyi sıkıştırma ve şeffaflık desteği sunduğu için genellikle
+                        tercih edilir. </li>
+                    <li><b> Boyut: </b> Genellikle 16x9 kullanılır. Resminizin çözünürlüğü, ekranınızın çözünürlüğüne uygun olmalıdır. Aksi takdirde, resim bozulabilir veya düzgün görüntülenmeyebilir.
+                        Yaygın olarak kullanılan çözünürlükler arasında 1920x1080, 1366x768 ve 1280x720 bulunur. </li>
+                    <li><b> Dosya Boyutu: </b> Resmin dosya boyutu çok büyük olmamalıdır. Büyük boyutlu resimler, bootloader'ın yavaşlamasına veya yüklenememesine neden olabilir. </li>
+                    <li><b> Uyumluluk : </b> Bazı eski bilgisayarlar veya BIOS'lar, yüksek çözünürlüklü resimleri veya belirli resim formatlarını desteklemeyebilir. Bu nedenle, kullanmak istediğiniz
+                        resmin sisteminizle uyumlu olduğundan emin olun. </li>
+                    <li><b> GRUB yapılandırma : </b> Bu dosyayı düzenlerken dikkatli olun, çünkü yanlış değişiklikler sisteminizin başlatılamamasına neden olabilir. </li>
+                    <li> </li>
+                    <li><b> Ek İpuçları : </b> GRUB Customizer gibi araçlar, GRUB yapılandırmasını grafiksel bir arayüz üzerinden düzenlemenize olanak tanır. Bu araçlar, yeni başlayanlar için daha
+                        kolay bir seçenek olabilir. </li>
+                </ul>
+            </section>
+            <!---->
+            <!---->
+            <section>
+                <h2>1) Arkaplan Görselini hazırlama</h2>
+                <pre class="line-numbers"><code class="language-bash">sudo install -m 644 -o root -g root new-image.png background.png</code></pre>
+                <ul>
+                    <li> Bu komut, <code class="language-bash">new-image.png</code> adlı görsel dosyasını, gerekli izinlerle birlikte <code class="language-bash">background.jpg</code> adıyla kopyalar.
+                    </li>
+                    <li> <code class="language-bash">sudo</code> ile yönetici yetkileriyle çalıştırılır, böylece dosya sahibi ve grup ayarları root olarak belirlenir.</li>
+                    <li> Bu işlem, bootloader başlangıç ekranında kullanılacak yeni arkaplan görselini ayarlamak için ilk adımdır.</li>
+                </ul>
+                <img src="image/1.webp" alt="Yeni dosyanın kontrolü">
+            </section>
+            <!---->
+            <!---->
+            <section>
+                <h2>2) Görseli Taşıma</h2>
+                <pre class="line-numbers"><code class="language-bash">sudo mv background.png /boot/grub/themes/kali</code></pre>
+                <ul>
+                    <li> Bu komut, <code class="language-bash">background.png</code> adlı dosyayı <code class="language-bash">/boot/grub/themes/kali</code> dizinine taşır. </li>
+                    <li> <code class="language-bash">sudo</code> ile yönetici yetkileriyle çalıştırıldığı için, dosyanın taşınması için gerekli izinler sağlanır. </li>
+                    <li> Bu adım, arkaplan görselinin GRUB tema dizinine yerleştirilmesini ve bootloader başlangıç ekranında kullanılabilmesini sağlar. </li>
+                </ul>
+                <img src="image/2.webp" alt="Yeni dosyanın taşınmasının kontrolü">
+            </section>
+            <!---->
+            <!---->
+            <section>
+                <h2>3) Bootloader Tema Dizini Kontrolü</h2>
+                <pre class="line-numbers"><code class="language-bash">cd /boot/grub/themes/kali 
+ls -l
+# -rw-r--r-- 1 root root 1471047 Mar 7 06:46 background.png</code></pre>
+                <ul>
+                    <li> Bu komutlar, Kali Linux bootloader tema dizinine geçiş yaparak mevcut dosyaları listelemek için kullanılır. </li>
+                    <li> <code class="language-bash">ls -l</code> : mevcut dizindeki dosyaları ve dizinleri uzun formatta listeleyerek, her bir dosyanın izinlerini, sahipliğini ve boyutunu gösterir.
+                    </li>
+                    <li> Bu sayede, arkaplan görselinizin <code class="language-bash">background.jpg</code> doğru bir şekilde taşınıp taşınmadığını ve gerekli izinlerin ayarlanıp ayarlanmadığını
+                        kontrol edebilirsiniz. </li>
+                </ul>
+                <img src="image/3.webp" alt="Bootloader tema klasrünün kontrolü">
+            </section>
+            <!---->
+            <!---->
+            <section>
+                <h2>4) GRUB Tema Dosyasını Güncelleme</h2>
+                <pre class="line-numbers"><code class="language-bash">sudo nano theme.txt
+# old: desktop-image: "grub-16x9.png"
+# new: desktop-image: "background.png"
+
+# ctrl-s , ctrl-x</code></pre>
+                <ul>
+                    <li> Bu komutlar, GRUB tema dosyasını düzenleyerek arkaplan görselini değiştirmek için kullanılır. </li>
+                    <li> <code class="language-bash">sudo nano theme.txt</code> : metin düzenleyicisi ile açar. sudo ile yönetici yetkileriyle çalıştırıldığı için dosyada değişiklik yapma iznine sahip
+                        olursunuz. </li>
+                    <li> <code class="language-bash">desktop-image: "grub-16x9.png"</code> : bu satırdaki görseli yeni görsel (<code class="language-bash">"background.png"</code>) ile değiştirerek
+                        başlangıç ekranında kullanılacak yeni arkaplanı ayarlarız. </li>
+                    <li> <code class="language-bash"># ctrl-s , ctrl-x</code> : metin düzenleyicisinde değişiklikleri kaydetme ve çıkma. </li>
+                </ul>
+                <img src="image/4.webp" alt="Yeni dosyanın kontrolü">
+            </section>
+            <!---->
+            <!---->
+            <section>
+                <h2>5) Tema Dosyasının İlk Satırlarını Görüntüleme</h2>
+                <pre class="line-numbers"><code class="language-bash">head theme.txt 
+# check the "desktop-image" 
+# desktop-image: "background.png" </code></pre>
+                <ul>
+                    <li> <code class="language-bash">theme.txt</code> dosyasının ilk 10 satırını gösterir. Bu şekilde dosyanın doğru bir şekilde güncellenip güncellenmediğinin kontrolünü sağlarız.
+                    </li>
+                    <li> <code class="language-bash">desktop-image: "background.png"</code> : Bu satır, GRUB'un başlangıç ekranında kullanılacak arkaplan görselinin adını belirtir. </li>
+                </ul>
+                <img src="image/5.webp" alt="GRUB theme dosyasının kontrolü">
+            </section>
+            <!---->
+            <!---->
+            <section>
+                <h2>6) GRUB Arkaplan Görselini Ayarlama</h2>
+                <pre class="line-numbers"><code class="language-bash">sudo nano /etc/default/grub 
+# add this line : GRUB_BACKGROUND=/boot/grub/themes/kali/background.png
+#   over the GRUP_DEFAULT line
+# save and exit: ctrl-s , ctrl-x
+
+head /etc/default/grub </code></pre>
+                <ul>
+                    <li> <code class="language-bash">sudo nano /etc/default/grub</code> GRUB yapılandırma dosyasını nano metin düzenleyicisinde açar. </li>
+                    <li> <code class="language-bash">GRUB_BACKGROUND=/boot/grub/themes/kali/background.png</code> Bu satırı dosyaya ekleyin veya mevcutsa düzenleyin. Bu ifade, GRUB'un başlangıç
+                        ekranında kullanacağı arkaplan görselinin yolunu belirtir. </li>
+                    <li> <code class="language-bash"># ctrl-s , ctrl-x </code> : metin düzenleyicisinde değişiklikleri kaydetme ve çıkma. </li>
+                    <li> <code class="language-bash">head /etc/default/grub</code> : GRUB yapılandırma dosyasının ilk 10 satırını gösterir. Bu şekilde dosyanın doğru bir şekilde güncellenip
+                        güncellenmediğinin kontrolünü sağlarız. </li>
+                </ul>
+                <img src="image/6.webp" alt=" GRUB arkaplan görselini ayarlama ">
+            </section>
+            <!---->
+            <!---->
+            <section>
+                <h2>7) GRUB Yapılandırmasını Güncelleme</h2>
+                <pre class="line-numbers"><code class="language-bash">sudo update-grub 
+# in 3th line printed :
+#     Found background image: /boot/grub/themes/kali/background.png
+
+sudo reboot </code></pre>
+                <ul>
+                    <li> <code class="language-bash">sudo update-grub </code> : Son adım olarak, GRUB yapılandırma dosyasında yaptığınız değişikliklerin uygulanabilmesi için bu komutu çalıştırılır.
+                    </li>
+                    <li> Komut çalıştırıldığında, terminalde mevcut işletim sistemlerini ve yapılandırma dosyasındaki değişiklikleri kontrol eden bir çıktı göreceksiniz. Eğer her şey doğru bir şekilde
+                        ayarlandıysa, yeni arkaplan görselinizin başlangıç ekranında kullanılmak üzere hazır olduğunu belirten bir mesaj alacaksınız. </li>
+                    <li> <code class="language-bash">#   Found background image: /boot/grub/themes/kali/background.png </code> : Bu satır, GRUB'un başlangıç ekranında kullanılacak arkaplan görselinin
+                        bulunduğunu belirtir. </li>
+                    <li> <code class="language-bash">sudo reboot </code> : Yeni arkaplan görselinin başlangıç ekranında görüntülenmesini sağlamak için sistemi yeniden başlatın. </li>
+                </ul>
+                <img src="image/6.webp" alt=" GRUB arkaplan görselinin yapılandırmasını Güncelleme ">
+            </section>
+            <!---->
+            <!---->
+            <section class="section_full">
+                <h2>8) TAM KOD</h2>
+                <pre class="line-numbers"><code class="language-bash"># KALI LINUX CHANGE BOOT BACKGROUND IMAGE  
+# 2025-03-07
+
+// new image have to be 16x9 
+
+
+sudo install -m 644 -o root -g root mfmx_ft_kali.png background.png
+sudo mv background.png /boot/grub/themes/kali
+
+
+cd /boot/grub/themes/kali
+
+
+ls -l 
+    # --->  -rw-r--r-- 1 root root 1471047 Mar 7 06:46 background.png
+
+
+xdg-open . 
+    # ---> check the image is there
+
+
+sudo nano theme.txt
+
+
+desktop-image: "grub-16x9.png" -> desktop-image: "background.png"
+
+
+ctrl-s , ctrl-x 
+
+
+head theme.txt 
+    # -----> check the "desktop-image"
+
+
+sudo nano /etc/default/grub
+
+GRUB_BACKGROUND=/boot/grub/themes/kali/background.png
+    # ------> write this line over the GRUB_DEFAULT
+    # ------> the line: 5
+
+
+ctrl-s , ctrl-x 
+
+
+head /etc/default/grub
+
+
+sudo update-grub
+    # -----> in 3th line printed 
+    # ---------> Found background image: /boot/grub/themes/kali/background.png
+
+
+reboot</code></pre>
+            </section>
+            <!---->
+            <!---->
+        </main>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <script class="alternatively" src="../../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script class="alternatively" src="../page_asides.js" type="text/javascript" defer></script>
+    <script>
+        //  class="alternatively" 
+        // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
+        const kaynaklar = {
+            'importHeaderFooter.js': [0, "../../src/components/importHeaderFooter.js", "/src/components/importHeaderFooter.js"],
+            'headerFooter.css': [0, "../../src/components/headerFooter.css", "/src/components/headerFooter.css"],
+            'page_asides.js': [0, "../page_asides.js", "/projects/page_asides.js"],
+            'page_aside.css': [0, "../page_aside.css", "/projects/page_aside.css"],
+        }
+        // Alternatif kaynaklara domain ekleyerek kontrol et
+        Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
+
+        // her dosya'in alternatif kaynaklarını belirle
+        document.querySelectorAll(".alternatively").forEach(element => {
+            const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
+            if (!fileName) return;
+            if (kaynaklar[fileName]) {
+                console.log(`✅ Dosya için alternatif kaynaklar belirlendi: (${fileName})`);
+                if (fileName.endsWith(".js")) element.onerror = () => loadFallbackScript(fileName);
+                else if (fileName.endsWith(".css")) { setTimeout(() => { if (!isStylesheetLoadedByHref(fileName)) loadFallbackScript(fileName) }, 500); }
+                else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`);
+                element.onerror = () => loadFallbackScript(fileName);
+            } else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`);
+        });
+
+        // alternatif kaynaklardan yükleme fonksiyonu
+        function loadFallbackScript(fileName) {
+            const fileIndex = ++kaynaklar[fileName][0];
+            if (fileIndex >= kaynaklar[fileName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${fileName}`); return; }
+
+            console.log('🔄 Dosya için alternatif kaynak yükleniyor (' + fileName + ',  alternatif-' + fileIndex + ')\n ---> \'' + kaynaklar[fileName][fileIndex] + '\'');
+            if (fileName.endsWith(".js")) {
+                const fallbackScript = document.createElement('script');
+                fallbackScript.src = kaynaklar[fileName][fileIndex];
+                fallbackScript.defer = true;
+                fallbackScript.onload = () => checkScriptLoaded(fallbackScript, fileName);
+                fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName);
+                document.head.appendChild(fallbackScript);
+            }
+            else if (fileName.endsWith(".css")) {
+                if (isStylesheetLoadedByHref(fileName)) return;
+                const fallbackLink = document.createElement('link');
+                fallbackLink.rel = 'stylesheet';
+                fallbackLink.type = 'text/css';
+                fallbackLink.href = kaynaklar[fileName][fileIndex];
+                setTimeout(() => { if (!isStylesheetLoadedByHref(fileName)) loadFallbackScript(fileName) }, 500);
+                document.head.appendChild(fallbackLink);
+            }
+            else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
+        }
+
+        function isStylesheetLoadedByHref(href) { return Array.from(document.styleSheets).some(sheet => { if (sheet.href && sheet.href.includes(href)) { try { return sheet.cssRules.length > 0; } catch (e) { return false; /*CORS hatası perhebs*/ } } return false; }); }
+
+        function checkScriptLoaded(element, fileName) {
+            // Tarayıcı hata verdiyse otomatik fallback yükle
+            if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
+            // Yüklenen script içeriğini doğrulamak için bir test yap
+            setTimeout(() => {
+                // Eğer tarayıcı "başarıyla yükledi" diyorsa ama aslında içeriği yanlışsa
+                fetch(element.src, { method: "HEAD" })
+                    .then(response => {
+                        const contentType = response.headers.get("Content-Type") || "";
+                        console.log(`📂 İçerik türü: ${contentType}`);
+                        if (!contentType.includes("javascript")) {
+                            console.log(`❌ Hata: ${fileName} yanlış MIME türü ile yüklendi (${contentType}). Alternatif kaynak yükleniyor...`); element.dataset.failed = "true"; // Tekrar çalışmasını önlemek için flag koy
+                            loadFallbackScript(fileName);
+                        } else console.log(`✅ ${fileName} başarıyla yüklendi.`);
+
+                    })
+                    .catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
+            }, 500);
+        }
+    </script>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+</body>
+
+</html>

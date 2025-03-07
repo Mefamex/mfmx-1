@@ -98,12 +98,20 @@
                             "order": 2
                         },
                         {
+                            "title": "Kali Linux Bootloader Arkaplan Değiştirme",
+                            "href": "https://mefamex.com/projects/kali-change-boot-background/",
+                            "isVisible": true,
+                            "description": "Kali Linux Bootloader Arkaplan Değiştirme",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+                            "order": 3
+                        },
+                        {
                             "title": "HTML/CSS Kitaplığı",
                             "href": "https://mefamex.com/projects/html-css-book/",
                             "isVisible": true,
                             "description": "Web Geliştirme Referansı, SEO, HTML, CSS",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                            "order": 3
+                            "order": 4
                         },
                         {
                             "title": "Python To Exe",
@@ -111,7 +119,7 @@
                             "isVisible": true,
                             "description": "Python EXE Dönüştürücü",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                            "order": 4
+                            "order": 5
                         },
                         {
                             "title": "Image Meta Dataset",
@@ -119,7 +127,7 @@
                             "isVisible": true,
                             "description": "Görsel metaverilerini değiştirme",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                            "order": 5
+                            "order": 6
                         }
                     ]
                 },
@@ -162,6 +170,6 @@
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
         "baseUrl": "https://mefamex.com",
         "languageCode": "tr",
-        "lastUpdated": "2025-03-01"
+        "lastUpdated": "2025-03-07"
     }
 }
