@@ -5,8 +5,8 @@
  * @license MIT
  * @version 1.0.0
  * @see https://mefamex.com/
- * @since 02.12.2024
- * @lastModified 30.01.2025
+ * @since 2024-12-02 
+ * @lastModified 2025-03-07
  */
 
 
@@ -41,6 +41,7 @@ async function CreateAside() {
     aside.innerHTML = `
     <h2>SON DEĞİŞENLER</h2>
                 <ul>
+                    <li ><a href="https://mefamex.com/projects/kali-change-boot-background/" > Kali Bootloader Background </a> <p class="p_tooltip noSelect">07.03.2025</p></li>
                     <li ><a href="https://mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
                     <li ><a href="https://mefamex.com/projects/html-css-book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
                     <li ><a href="https://mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
