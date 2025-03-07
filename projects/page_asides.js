@@ -10,8 +10,25 @@
  */
 
 
+
 (async () => { await CreateAside(); })();
 /*await CreateNavContainer();*/
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('#main_container main > section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Bir kez görününce gözlemlemeyi bırak
+            }
+        });
+    }, { threshold: 0.1 });
+    sections.forEach(section => { observer.observe(section); section.style.opacity = 0; });
+});
+
+
 
 
 /* abonded */
