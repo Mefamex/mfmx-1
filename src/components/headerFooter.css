@@ -61,32 +61,33 @@ footer {
 
 
 ::-webkit-scrollbar {
-    width: 0.8vw;
-    /*calc(0.5vw + 6px); width of the scrollbar */
-    height: 12px;
-    /* height of the scrollbar */
-    background-color: #00000067;
-    /* dark gray background color */
-    border-radius: 10px;
-    /* rounded corners for the scrollbar */
+    /* for vertical scrollbars :*/
+    width: calc(0.4rem + 0.4vw);
+    /* for horizontal scrollbars : */
+    height: calc(0.4rem + 0.4vh);
+    background-color: inherit;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #b8b8b8;
-    /* dark gray thumb color */
+    height: 10em;
     border-radius: 12px;
-    /* rounded corners for the thumb */
-    border: 1px solid #ff0000;
-    /* dark gray border around the thumb */
+    cursor: grab;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid rgba(0, 200, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #ffffff;
+    cursor: grabbing;
+    border-width: 2px;
+    border-color: red;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #1d1d1d;
-    /* dark gray track color */
-    border-radius: 1px;
-    /* rounded corners for the track */
-    box-shadow: inset 0 0 0.3rem rgba(255, 255, 255, 0.9);
-    /* subtle shadow effect */
+    background-color: #00000015;
+    box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 ::-webkit-scrollbar-button {

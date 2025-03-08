@@ -37,7 +37,7 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      style.css
 |      |      index.html
 |      |      page_aside.css
-|      |      page_asides.js
+|      |      page_aside.js
 |      |      style.css
 |      py
 |      |      FileLister.js

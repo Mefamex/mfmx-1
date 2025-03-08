@@ -53,21 +53,39 @@ async function CreateNavContainer() {
 
 async function CreateAside() {
     const aside = document.getElementById("aside");
+    aside.style.display = 'flex'; // aside.style.display = 'none' in css;
     //const aside = document.createElement('aside'); document.body.appendChild(aside); 
+
 
     aside.innerHTML = `
     <h2>SON DEĞİŞENLER</h2>
-                <ul>
-                    <li ><a href="https://mefamex.com/projects/kali-change-boot-background/" > Kali Bootloader Background </a> <p class="p_tooltip noSelect">07.03.2025</p></li>
-                    <li ><a href="https://mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
-                    <li ><a href="https://mefamex.com/projects/html-css-book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/kali-linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/dizin-listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
-                    <li>Tasarıma başlandı <p class="p_tooltip noSelect">07.12.2024</p></li>
-                    <li>Sayfa tasarımı <p class="p_tooltip noSelect">05.12.2024</p></li>
-                    <li>Talepler toplandı <p class="p_tooltip noSelect">18.11.2024</p></li>
-                </ul>
+    <ul>
+    <li ><a href="https://mefamex.com/projects/kali-change-boot-background/" > Kali Bootloader Background </a> <p class="p_tooltip noSelect">07.03.2025</p></li>
+    <li ><a href="https://mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
+    <li ><a href="https://mefamex.com/projects/html-css-book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
+    <li ><a href="https://mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
+    <li ><a href="https://mefamex.com/projects/kali-linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
+    <li ><a href="https://mefamex.com/projects/dizin-listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
+    <li>Tasarıma başlandı <p class="p_tooltip noSelect">07.12.2024</p></li>
+    <li>Sayfa tasarımı <p class="p_tooltip noSelect">05.12.2024</p></li>
+    <li>Talepler toplandı <p class="p_tooltip noSelect">18.11.2024</p></li>
+    </ul>
     `
+
+    
+    const aside_button = document.createElement('button');
+    aside_button.textContent = '🔄';
+    aside_button.id = 'aside-show-button';
+    aside_button.addEventListener('click', () => aside_change_visiblety());
+    document.body.appendChild(aside_button);
+
+
+    aside.querySelector('h2').addEventListener('click', () => aside_change_visiblety());
+    function aside_change_visiblety() {
+        if (aside.getBoundingClientRect().top > 6 * parseFloat(getComputedStyle(document.documentElement).fontSize)) aside.classList.remove('closed-aside'); 
+        else aside.classList.toggle('closed-aside');
+        aside_button.classList = aside.classList;
+    }
+    setTimeout(aside_change_visiblety,2000);
 }
 
