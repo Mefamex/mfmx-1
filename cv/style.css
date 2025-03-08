@@ -8,16 +8,6 @@
 * Licensed under MIT (https://github.com/Mefamex/) 
 */
 
-:root {
-    --color-bg-main: rgb(15 15 15);
-    --color-white: rgb(241, 241, 241);
-    --color-white-2: rgb(170, 170, 170);
-    --wh: calc(1vw + 1vh);
-    --wh-01: calc(0.1vw + 0.1vh);
-    --wh-02: calc(0.2vw + 0.2vh);
-    --wh-03: calc(0.3vw + 0.3vh);
-    --wh-05: calc(0.5vw + 0.5vh);
-}
 
 .cizgi {
     display: block;
@@ -47,8 +37,8 @@ body {
     flex-direction: column;
     position: absolute;*/
     align-items: center;
-    background-color: var(--color-bg-main);
-    color: var(--color-white);
+    background-color: rgb(15 15 15);
+    color: rgb(241, 241, 241);
 }
 
 main {

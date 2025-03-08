@@ -7,12 +7,6 @@
 * Copyright 2024 Mefamex 
 * Licensed under MIT (https://github.com/Mefamex/) 
 */
-
-:root {
-    --color-bg-main: rgb(15 15 15);
-    --color-white: rgb(241, 241, 241);
-    --color-white-2: rgb(170, 170, 170);
-}
 * {
     scroll-behavior: smooth;
     word-wrap: break-word;

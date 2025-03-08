@@ -10,18 +10,18 @@
 * Title : page_aside.css
 */
 
-:root {
-    --color-bg-main: rgb(15 15 15);
-    --color-white: rgb(241, 241, 241);
-    --color-white-2: rgb(170, 170, 170);
-}
-
 * {
     scroll-behavior: smooth;
     word-wrap: break-word;
     overflow-wrap: anywhere;
     box-sizing: border-box;
     transition: all 0.1s ease;
+}
+
+@font-face {
+    font-family: system;
+    font-display: swap;
+    src: local(".SFNS-Regular"), local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
 }
 
 body {
@@ -36,6 +36,14 @@ body {
     min-height: 85vh;
     width: 100%;
     color: white;
+    /* Kompozit katmanlar için */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    /* Paint containment */
+    contain: content;
+    /* Layer promotion */
+    will-change: transform, opacity;
 
     &>* {
         flex-grow: 1;
@@ -44,21 +52,40 @@ body {
 }
 
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(-5rem);
-        scale: 0.8;
+        transform: translate3d(0, 2rem, 0) scale(0.98);
     }
 
-    to {
+    100% {
         opacity: 1;
-        transform: translateY(0);
-        scale: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 2rem, 0) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
     }
 }
 
 #main_container main>section.visible {
-    animation: fadeInUp 0.2s ease-out forwards;
+    -webkit-animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: fadeInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Tarayıcı uyumlulukları için */
+@supports not (animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1)) {
+    #main_container main>section.visible {
+        -webkit-animation: fadeInUp 0.4s ease-out forwards;
+        animation: fadeInUp 0.4s ease-out forwards;
+    }
 }
 
 #main_container main {
@@ -77,8 +104,6 @@ body {
 
     &>section {
         opacity: 1;
-        /***************/
-
         display: flex;
         flex-direction: column;
         max-width: min(95vw, 100%);
@@ -94,7 +119,12 @@ body {
 
         /* Performans optimizasyonları */
         will-change: border-color, box-shadow, transform, opacity, background-color;
-        contain: paint layout;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        contain: layout paint style;
+        transform: translate3d(0, 0, 0);
+        perspective: 1000px;
 
         &:hover {
             border-color: rgba(255, 255, 255, 0.5);
@@ -381,6 +411,14 @@ body {
         font-size: 0.75rem;
     }
 }
+
+@supports (container-type: inline-size) {
+    #main_container {
+        container-type: inline-size;
+        container-name: main;
+    }
+}
+
 
 /*
 *
