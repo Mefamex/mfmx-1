@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com/
  * @since 2024-12-02 
- * @lastModified 2025-03-07
+ * @lastModified 2025-03-08
  */
 
 
@@ -16,6 +16,7 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
     const sections = document.querySelectorAll('#main_container main > section');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target); // Bir kez görününce gözlemlemeyi bırak
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.2, rootMargin: '0px' });
     sections.forEach(section => { observer.observe(section); section.style.opacity = 0; });
 });
 
@@ -72,7 +73,7 @@ async function CreateAside() {
     </ul>
     `
 
-    
+
     const aside_button = document.createElement('button');
     aside_button.textContent = '🔄';
     aside_button.id = 'aside-show-button';
@@ -82,10 +83,10 @@ async function CreateAside() {
 
     aside.querySelector('h2').addEventListener('click', () => aside_change_visiblety());
     function aside_change_visiblety() {
-        if (aside.getBoundingClientRect().top > 6 * parseFloat(getComputedStyle(document.documentElement).fontSize)) aside.classList.remove('closed-aside'); 
+        if (aside.getBoundingClientRect().top > 6 * parseFloat(getComputedStyle(document.documentElement).fontSize)) aside.classList.remove('closed-aside');
         else aside.classList.toggle('closed-aside');
         aside_button.classList = aside.classList;
     }
-    setTimeout(aside_change_visiblety,2000);
+    setTimeout(aside_change_visiblety, 2000);
 }
 
