@@ -97,7 +97,7 @@
     <!-- Schema.org Social Media Links -->
     <script type="application/ld+json">
             { "@context": "https://schema.org", "@type": "Person", "name": "Mehmet Akif Akkoç", "url": "https://mefamex.com/", "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://www.instagram.com/mefamex"] }
-        </script>
+    </script>
 </head>
 
 <body>
@@ -159,12 +159,55 @@
                 </tr>
             </table>
         </fieldset>
+        <!---->
+        <!---->
         <p><br />İletilerin son yanıtlandığı tarih: 06.03.2025</p>
+        <!---->
+        <!---->
         <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0" marginwidth="0"
             data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
+        <!---->
+        <!---->
     </main>
+    <!---->
+    <!---->
+    <!---->
     <script class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
-    <script class="alternatively" src="script.js" type="text/javascript" defer></script>
+    <script type="text/javascript" defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            const iframee = document.getElementById("ContactForm");
+            let retryCount = 0;
+            const maxRetries = 3;
+            function handleFormError() {
+                retryCount++;
+                console.log(`❌ Form yüklenemedi (Deneme ${retryCount}/${maxRetries})`);
+                if (retryCount >= maxRetries) iframee.style.display = 'none';
+                else setTimeout(() => { iframee.src = iframee.dataset.src; }, 1000 * retryCount);
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        iframee.src = iframee.dataset.src;
+                        observer.unobserve(iframee);
+                        // 10 saniye içinde yüklenmezse hata ver
+                        let loadTimeout = setTimeout(() => handleFormError(), 10000);
+                        iframee.onload = () => {
+                            clearTimeout(loadTimeout);
+                            try { if (iframee.contentWindow) console.log('✅ Form yüklendi'); }
+                            catch (error) {
+                                console.log('⚠️ Form kontrol edilemedi:', error);
+                                if (error.name === 'SecurityError') console.log('✅ Form muhtemelen yüklendi (CORS kısıtlaması)');
+                                else handleFormError();
+                            }
+                        }; iframee.onerror = () => { clearTimeout(loadTimeout); handleFormError(); };
+                    }
+                });
+            }); observer.observe(iframee);
+        });
+    </script>
+    <!---->
+    <!---->
+    <!---->
     <script>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
@@ -238,6 +281,9 @@
             }, 500);
         }
     </script>
+    <!---->
+    <!---->
+    <!---->
 </body>
 
 </html>

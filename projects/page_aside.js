@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com/
  * @since 2024-12-02 
- * @lastModified 2025-03-08
+ * @lastModified 2025-03-09
  */
 
 
@@ -31,27 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-/* abonded */
-async function CreateNavContainer() {
-    const nav = document.getElementById("nav");
-    //const nav = document.createElement('nav'); document.body.insertBefore(nav, document.getElementById("mainWellcome"));
-
-    nav.innerHTML = ` 
-                <div id="navContainer"> 
-                    <h2>MENU</h2> 
-                    <ul>
-                        <li><a href="#yapay_zeka">      Yapay Zeka ve Makine Öğrenimi   </a></li> 
-                        <li><a href="#ag_ve_guvenlik">  Ağ ve Güvenlik                  </a></li> 
-                        <li><a href="#web_gelistirme">  Web Geliştirme ve API'ler       </a></li> 
-                        <li><a href="#kali-linux">      Kali Linux                      </a></li> 
-                        <li><a href="#diger">           Diğer Projeler                  </a></li> 
-                    </ul> ww
-                </div> 
-    `
-}
-
-
 async function CreateAside() {
     const aside = document.getElementById("aside");
     aside.style.display = 'flex'; // aside.style.display = 'none' in css;
@@ -67,9 +46,7 @@ async function CreateAside() {
     <li ><a href="https://mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
     <li ><a href="https://mefamex.com/projects/kali-linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
     <li ><a href="https://mefamex.com/projects/dizin-listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
-    <li>Tasarıma başlandı <p class="p_tooltip noSelect">07.12.2024</p></li>
-    <li>Sayfa tasarımı <p class="p_tooltip noSelect">05.12.2024</p></li>
-    <li>Talepler toplandı <p class="p_tooltip noSelect">18.11.2024</p></li>
+    <li>PROJECTS sayfası açıldı <p class="p_tooltip noSelect">08.12.2024</p></li>
     </ul>
     `
 
@@ -90,3 +67,25 @@ async function CreateAside() {
     setTimeout(aside_change_visiblety, 2000);
 }
 
+
+
+
+/* abonded *//*
+async function CreateNavContainer() {
+    const nav = document.getElementById("nav");
+    //const nav = document.createElement('nav'); document.body.insertBefore(nav, document.getElementById("mainWellcome"));
+
+    nav.innerHTML = ` 
+                <div id="navContainer"> 
+                    <h2>MENU</h2> 
+                    <ul>
+                        <li><a href="#yapay_zeka">      Yapay Zeka ve Makine Öğrenimi   </a></li> 
+                        <li><a href="#ag_ve_guvenlik">  Ağ ve Güvenlik                  </a></li> 
+                        <li><a href="#web_gelistirme">  Web Geliştirme ve API'ler       </a></li> 
+                        <li><a href="#kali-linux">      Kali Linux                      </a></li> 
+                        <li><a href="#diger">           Diğer Projeler                  </a></li> 
+                    </ul>
+                </div> 
+    `
+}
+*/
