@@ -23,12 +23,10 @@
     <link rel="canonical" href="https://mefamex.com/cv/" />
     <!---->
     <!-- Performans için preload -->
-    <link rel="preload" as="style" href="style.css" class="alternatively"  />
-    <link rel="preload" as="style" href="../src/components/headerFooter.css"  class="alternatively" />
+    <link rel="preload" as="style" href="../src/components/headerFooter.css" class="alternatively" />
     <link rel="preload" as="script" type="text/javascript" href="../src/components/importHeaderFooter.js" />
     <!---->
     <!-- Stil Optimizasyonu -->
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../src/components/headerFooter.css" />
     <!---->
     <!-- favicon set -->
@@ -49,9 +47,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MEFAMEX" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="og:date" content="2025-03-01T02:00:00Z" />
+    <meta property="og:date" content="2025-03-10T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-03-01T02:00:00Z" />
+    <meta property="article:modified_time" content="2025-03-10T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -62,7 +60,9 @@
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
     <meta name="twitter:url" content="https://mefamex.com/cv/" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-03-01T02:00:00Z" />
+    <meta name="twitter:date" content="2025-03-10T02:00:00Z" />
+    <!---->
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -101,14 +101,333 @@
                 "description": "Mehmet Akif Akkoç, 10 yılı aşkın deneyimiyle Python, Java ve C dillerinde uzmanlaşmış bir Yazılım Mühendisi olup, derin öğrenme ve yapay genel zeka alanlarına özel ilgi duymaktadır."
             }
         </script>
+    <!---->
+    <!-- styleSheets -->
+    <style>
+        .cizgi {
+            display: block;
+            background-color: rgba(170, 170, 170, 0.568);
+            width: 100vw;
+            overflow: hidden;
+            height: 0.3vw;
+            align-self: center;
+            margin-block: 1vw;
+        }
+
+        .non-block {
+            display: inline;
+        }
+
+        body {
+            align-items: center;
+            color: rgb(241, 241, 241);
+        }
+
+        main {
+            background-image: linear-gradient(to bottom,
+                    rgba(75, 0, 0, 0.5),
+                    rgba(50, 5, 5, 0.2),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(35, 35, 35),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(35, 35, 35),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(35, 35, 35),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(35, 35, 35),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(35, 35, 35),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15),
+                    rgb(15, 15, 15));
+            background-repeat: no-repeat;
+            width: 100%;
+            height: auto;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem 0 10vh 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-wrap: anywhere;
+            line-height: 1.5;
+            max-width: 100%;
+        }
+
+        #page-title {
+            text-align: center;
+            margin: 0px;
+            font-size: 3em;
+            margin-bottom: 1rem;
+        }
+
+        #page-description {
+            margin: 0;
+            padding: 0;
+            width: 90%;
+            font-size: 0.9em;
+            text-align: center;
+            padding-top: 0px;
+        }
+
+        #CV {
+            display: flex;
+            flex-flow: row wrap;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            padding-inline: 2rem;
+            gap: 5rem 3rem;
+        }
+
+        #personal-information-content,
+        #personal-information-content2 {
+            height: min-content;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+
+        #CV h2 {
+            font-size: 2.5em;
+            margin-block-start: 0.2em;
+            margin-block-end: 0.5em;
+        }
+
+        #CV h3 {
+            width: fit-content;
+            font-size: 1.5em;
+            text-decoration: underline;
+            margin-block-start: 0;
+            margin-block-end: 0.3rem;
+            transition: all 0.15s ease-in-out;
+            background-color: rgba(0, 100, 255, 0.1);
+            border-radius: 1rem;
+            padding: 0.2rem 1rem;
+            border: 0.1rem solid rgba(0, 255, 255, 0.1);
+        }
+
+        #CV h4 {
+            margin: 0;
+            font-size: 1.2em;
+            text-decoration: underline;
+            text-decoration-color: rgba(251, 65, 65, 0.5);
+        }
+
+        #CV ul {
+            margin: 0;
+            padding-left: 1rem;
+        }
+
+        #CV li {
+            margin-block-end: 0.2rem;
+            width: fit-content;
+            line-height: 1.1;
+            margin-block: 0.5em;
+        }
+
+        #CV p {
+            padding: 0;
+            margin: 0;
+        }
+
+        #CV a {
+            color: inherit;
+            text-decoration-color: aqua;
+        }
+
+        #CV span {
+            display: block;
+            width: 100%;
+            height: 0.1rem;
+            background-color: white;
+            margin-block: 1rem 2rem;
+        }
+
+        #CV .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 30rem;
+            background-color: rgba(50, 0, 255, 0.08);
+            padding: 1.5rem;
+            padding-bottom: 0.5rem !important;
+            border-radius: 1rem;
+            border: rgba(255, 0, 0, 0.2) solid 0.1rem;
+            box-shadow: 0 0.5rem 1rem rgba(54, 54, 54, 0.4), 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+            transition: all 0.15s ease-in-out;
+            background-image: linear-gradient(to bottom, rgba(50, 0, 255, 0.2), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0));
+        }
+
+        #CV .container:hover {
+            border: rgba(255, 0, 0, 0.3) solid 0.1rem;
+            box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.6), 0 1.2rem 3rem rgba(0, 0, 0, 0.3);
+        }
+
+        #CV .container:hover h3 {
+            
+            border-color: rgba(0, 255, 255, 0.3);
+            text-shadow: 0 0 0.1rem rgba(0, 255, 255, 0.5), 0 0 0.2rem rgba(0, 255, 255, 0.2), 0 0 0.3rem rgba(0, 255, 255, 0.1);
+        }
+
+        #CV .container:nth-child(1) {
+            flex-basis: 100%;
+        }
+
+        #CV .container:nth-child(5) {
+            flex-basis: 100%;
+        }
+
+        /*
+        *
+        *
+        *
+        */
+        #software {
+            font-size: 2em;
+            margin-block: 4rem 0.5rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            text-align: center;
+            border-bottom: 0.2rem solid #0062ff;
+            box-shadow: 0 0.5rem 1rem rgba(255, 0, 0, 0.1);
+            background-color: #0022ff70;
+        }
+
+        #history {
+            display: flex;
+            flex-flow: row wrap;
+            height: fit-content;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 1rem;
+            column-gap: 2rem;
+            row-gap: 4rem;
+
+            img {
+                display: inline;
+                width: 6vw;
+                height: auto;
+                margin: 0;
+                align-self: self-start;
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+            }
+
+            p {
+                font-size: 1.1em;
+                margin: 0;
+                text-align: left;
+            }
+
+            h333 {
+                display: inline;
+                padding: 0.3rem 1rem 0 1rem;
+                margin: 0;
+                font-size: 1.5em;
+                text-align: left;
+                background-color: rgb(0, 134, 134);
+            }
+        }
+
+        #history .history-section {
+            display: flex;
+            flex: 1 1 max(35%, 30rem);
+            width: 100%;
+            height: auto;
+            flex-wrap: nowrap;
+            justify-items: center;
+            gap: 0.3rem;
+            padding: 2rem;
+            background-color: rgba(50, 0, 0, 0.1);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: rgba(255, 177, 177, 0.2) solid 0.1rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(185, 185, 185, 0.4), 0 0.25rem 1rem rgba(116, 116, 116, 0.2);
+        }
+
+        #history .card {
+            width: 100%;
+            height: fit-content;
+            padding: 0;
+        }
+
+        #updated-on {
+            color: rgb(123, 123, 123);
+            font-size: 0.9vw;
+            text-align: left;
+            margin-right: auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+            main {
+                width: 100%;
+                font-size: 0.75rem;
+            }
+
+            #CV {
+                padding: 2vw;
+                font-size: 0.7rem;
+                gap: 1rem;
+
+                ul {
+                    padding-left: 0.5rem;
+                }
+
+                h3 {
+                    font-size: 1.8em;
+                }
+
+                #personal-information-content {
+                    margin-right: 0;
+                    height: min-content;
+                    width: fit-content;
+                    -moz-column-count: 1;
+                    column-count: 1;
+                }
+
+                #software {
+                    font-size: 4.5vw !important;
+                }
+
+                #history {
+                    font-size: 1.15rem;
+                    padding: 0.5rem !important;
+                    gap: 1rem !important;
+
+                    img {
+                        width: 10vw !important;
+                    }
+                }
+            }
+
+            #CV .container {
+                padding: 1rem;
+                height: fit-content;
+                flex-grow: 100%;
+            }
+
+            .history-section {
+                padding: 1rem 0.3rem !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <main id="main" name="main">
         <h1 id="page-title">ÖZGEÇMİŞ | CV</h1>
-        <p id="page-description"> Bu sayfa, yazılım mühendisliği alanındaki eğitimim ve deneyimlerimle ilgili kapsamlı bir özgeçmiş sunmak amacıyla hazırlandı. Amacım, yazılım geliştirme becerilerimi
-            ve eğitim geçmişimi paylaşarak potansiyel işverenler, işbirlikçiler, öğrenciler ve teknoloji meraklıları için kapsamlı bir bilgi sunmaktır. Bu sayfa, benimle aynı alanda ilgi duyanların
-            bilgi edinmesine yardımcı olmayı hedefliyorum. </p>
+        <p id="page-description"> Bu sayfa, yazılım mühendisliği alanındaki eğitimim ve deneyimlerimle ilgili kapsamlı bir özgeçmiş sunmak amacıyla hazırlandı. <br> Amacım, yazılım geliştirme becerilerimi
+            ve eğitim geçmişimi paylaşarak potansiyel işverenler, işbirlikçiler, öğrenciler ve teknoloji meraklıları için kapsamlı bir bilgi sunmaktır. </p>
         <div class="cizgi"></div>
         <div id="CV">
             <div class="container">
@@ -403,14 +722,13 @@
         </div>
     </main>
     <div id="updated-on" name="updated-on , updated">- - - updated on 08.12.2024 - - -</div>
-    <script  class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
     <script>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
         const kaynaklar = {
             'importHeaderFooter.js': [0, "../src/components/importHeaderFooter.js", "/src/components/importHeaderFooter.js"],
-            'headerFooter.css': [0, "../../src/components/headerFooter.css", "/src/components/headerFooter.css"],
-            'style.css': [0, "./style.css", "/cv/style.css"]
+            'headerFooter.css': [0, "../../src/components/headerFooter.css", "/src/components/headerFooter.css"]
         }
         // Alternatif kaynaklara domain ekleyerek kontrol et
         Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
@@ -474,8 +792,7 @@
                     })
                     .catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
             }, 500);
-        }
-    </script>
+        }</script>
 </body>
 
 </html>
