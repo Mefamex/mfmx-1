@@ -56,7 +56,7 @@ Altın oran, yaklaşık olarak 1.61803398875
 - Muhasebe programı 
 - https://github.com/muzafferkadir/snake-learn-to-play
 - hack: QR code 
-- kali linux mysql
+- kali linux mysql 
 - python to sh 
 - amass (kali tool): subdomain keşfi 
 
@@ -248,7 +248,7 @@ avmigran
 - yüzüklerin efendisi : cralın dönüşü 
 
 ================ YOUTUBE ================
-- Nasıl zengin olunur: https://youtu.be/Vz1gIBcevVI?si=_6yBpMklNyN-y6Fw
+- Nasıl zengin olunur: https://youtu.be/Vz1gIBcevVI?si=_6yBpMklNyN-y6Fw 
 
 
 
