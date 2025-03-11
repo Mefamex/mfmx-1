@@ -50,6 +50,8 @@ Altın oran, yaklaşık olarak 1.61803398875
 - image to webp 
 - profile_follower 
 - okuldaki son haberler 
+- nmap gui
+- adb (android) gui
 - dirExVis iyileştir 
 - Muhasebe programı 
 - https://github.com/muzafferkadir/snake-learn-to-play
@@ -70,7 +72,8 @@ Altın oran, yaklaşık olarak 1.61803398875
 - Biyografiler
 - GITHUB'ın önemi - Öğrenme ve çalışma alanı sergileme
 - Gününü nasıl iyileştirirsin ? 20şer dakika temizlik ve düzen, konsantrasyon, birini dinleme, kenidni dinleme, gelir kaynakları, kitap okuma 
-
+- Yapay zeka araçları nasıl kullanılır? promtlar? siteler?
+- Özelleştirilmiş yapay zeka ve insana yardımcı olur
 
 
 ================ SÖZLER ================
@@ -124,128 +127,7 @@ rewarded webpages  : awwwards.com
 - perplexity : searcher
 - krea.ai : realtime image
 
-======= YAZILIM KAYNAKLARI ======
-(YT) Learn to code like a genius and not waste time : The Coding Sloth
----- COMPLEX WEBSITES ---
-freecodecamp.org 
-Codecademy.com 
-Coursera.org 
-edX.org 
-learn.microsoft.com
-Udemy.com 
-GeeksforGeeks.org 
-The Odin Project 
-Sololearn.com 
-CodeCrafters.io 
-w3schools.com 
-(YTC) Yazılım Teknolojileri
-(YTC) Murat Yücedağ 
-(YTC) Kodlama Vakti 
-(YTC) Yazılım Bilimi
-(YTC) Engin Demiroğ
-(YTC) The Coding Sloth
-(YTC) Programming with Mosh
-(YTC) SuperSimpleDev
 
-
-
-DEEP LEARNING | AI
- - (YTC) Andrej Karphaty
-HTML 
- - w3schools.com
-CSS 
- - css-tricks.com
-JAVASCRIPT 
- - javascript.info
- - python-istihza.yazbel.com
- - (YT) JAVASCRPT tutorial full course - beginner to pro : SuperSimpleDev 
-PYTHON 
- - realpython.com
- - python-istihza.yazbel.com
- - (YT) full course for beginners [2025] : Programming with Mosh 
-TYPESCRIPT 
- - codecademy.com
-JAVA 
- - javatpoint.com
-RUBY 
- - rubyguides.com
-C 
- - tutorialspoint.com
-C++ 
- - learncpp.com
-C# 
- - (YTC) Murat Yücedağ 
- - (YTC) Yazılım Teknolojileri
- - (YTC) Kodlama Vakti
- - csharp.net
- - csharp-station.com
- - learncs.org 
- - learn.microsoft.com/tr-tr/dotnet/csharp/
- - Microsoft Virtual Academy
-PHP 
- - php.net
-SWIFT 
- - hackingwithswift.com
-KOTLIN 
- - kotlinlang.org
-RUST 
- - rust-lang.org
-DART 
- dart.dev
-R 
- - r-project.org
-PERL 
- - perl.org
-SCALA 
- - scala-lang.org
-HASKELL  
- - haskell.org
-JULIA 
- - julialang.org
-ELIXIR 
- - elixir-lang.org
-REACT 
- - react.dev 
-VUE 
- - learnvue.com
-NEXT.JS 
- - nextjs.org
-ANGULAR 
- - angular.io
-DJANGO 
- - djangoproject.com
-FLASK 
- - flask.palletsproject
-LARAVEL 
- - laravel.orh
-SPRING BOOT 
- - spring.io
-FLUTTER 
- - flutter.dev
-BOOTSTRAP 
- - getbootstrap.com
-TAILWIND CSS
- - tailwindcss.com
-GIT 
- - learngitbranching.js.org
-API 
- - freecodecamp.org
-REST 
- - restfulapi.net
-MICROSERVİCES 
- - dzone.com
-BACKEND 
- - theserverside.com 
-DEVOPS 
- - theserverside.com 
-FULLSTACK 
- - theodinproject.com 
-CLOUD 
- - dzone.com
-UNITY 
- - unity.com 
-UNREAL ENGİNE
- - unrealengine.com
 
 
 =============== KİTAPLAR ===============
@@ -321,7 +203,7 @@ PUF - Bildiğin Gibi
 - james clerk maxwell
 - michael faraday
 - max planck 
-- Nikola tesla 
+- Nikola Tesla 
 - schrodinger 
 - Wener heisenberg
 - Niels Bohr
@@ -329,7 +211,7 @@ PUF - Bildiğin Gibi
 - Altuğ Güneş
 - Alper Emrah Gümüş 
 - Erkan köz
-- redtuğ Sun 
+- Redtuğ Sun 
 
 
 
@@ -663,3 +545,26 @@ Zaman Özgürlüğü: Zaman kısıtlaması olmadığında yaptığınız şeyler
 Duygusal Farkındalık: Farklı rollerin farklı duyguları tetiklediğini fark ediyorsunuz. Bu, duygusal zekanızı geliştirme ve kendinizi daha iyi anlama potansiyelinizi gösteriyor.
 
 
+
+
+
+
+
+
+
+
+
+Projeler (mefamex.com/projects/)
+Yazılımın sınırlarını zorladığım modüller, otomasyon scriptleri ve açık kaynak uygulamalar. Her proje, belirli bir ihtiyaca odaklanarak geliştirildi ve detaylı dokümantasyonla desteklendi.
+
+Blog (mefamex.com/blog/)
+Teknoloji trendlerinden kişisel analizlere, bilimsel meraktan numerolojiye uzanan bir yelpaze. Burada hem kod yazıyor hem de evrenin gizemlerini sorguluyorum.
+
+Galeri (mefamex.com/gallery/)
+İlham verici görseller, tasarım şablonları ve gelecek projelerim için bir görsel arşiv. Dijital dünyanın estetiğini keşfedin.
+
+Özgeçmiş (mefamex.com/cv/)
+Yazılım dillerindeki yetkinliklerim, sertifikalarım ve profesyonel yolculuğum. Detaylı bir teknik profil için buradayım.
+
+İletişim (mefamex.com/contact/)
+Sosyal medya hesaplarım, e-posta adresim ve anlık mesajlaşma formu. İş birlikleri veya sorularınız için bekliyorum.

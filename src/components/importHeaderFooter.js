@@ -5,8 +5,8 @@
  * @license MIT
  * @version 1.0.0
  * @see https://mefamex.com
- * @since 20.08.2024
- * @lastModified 13.02.2025
+ * @since 2024-08-20 
+ * @lastModified 2025-03-11 
  */
 
 'use strict';
@@ -17,7 +17,6 @@
     document.head.appendChild(link);
     await CreateFooter();
     await CreateHeader();
-
 })();
 
 
@@ -28,7 +27,7 @@ async function CreateFooter() {
 
     // Build the footer
     footer.id = "footer";
-    footer.innerHTML = `<h1 id="footerText"> 2024-2025 MEFAMEX &copy; ALL RIGHT RESERVED</h1>`;
+    footer.innerHTML = `<h1 id="footerText"> 2014-&infin; &copy; MEFAMEX. ALL RIGHT RESERVED</h1>`;
 
     /*const style = document.createElement('style');style.innerHTML = ``;footer.appendChild(style); */
 }
