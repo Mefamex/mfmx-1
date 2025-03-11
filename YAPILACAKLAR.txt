@@ -548,23 +548,3 @@ Duygusal Farkındalık: Farklı rollerin farklı duyguları tetiklediğini fark 
 
 
 
-
-
-
-
-
-
-Projeler (mefamex.com/projects/)
-Yazılımın sınırlarını zorladığım modüller, otomasyon scriptleri ve açık kaynak uygulamalar. Her proje, belirli bir ihtiyaca odaklanarak geliştirildi ve detaylı dokümantasyonla desteklendi.
-
-Blog (mefamex.com/blog/)
-Teknoloji trendlerinden kişisel analizlere, bilimsel meraktan numerolojiye uzanan bir yelpaze. Burada hem kod yazıyor hem de evrenin gizemlerini sorguluyorum.
-
-Galeri (mefamex.com/gallery/)
-İlham verici görseller, tasarım şablonları ve gelecek projelerim için bir görsel arşiv. Dijital dünyanın estetiğini keşfedin.
-
-Özgeçmiş (mefamex.com/cv/)
-Yazılım dillerindeki yetkinliklerim, sertifikalarım ve profesyonel yolculuğum. Detaylı bir teknik profil için buradayım.
-
-İletişim (mefamex.com/contact/)
-Sosyal medya hesaplarım, e-posta adresim ve anlık mesajlaşma formu. İş birlikleri veya sorularınız için bekliyorum.

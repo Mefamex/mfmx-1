@@ -68,6 +68,7 @@
     }
 
     #projects-search {
+        display: none; /* when js is enabled, it will be flex */
         flex-basis: 100%;
         max-width: 95%;
         min-height: 5rem;
