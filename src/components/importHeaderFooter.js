@@ -8,13 +8,20 @@
  * @since 2024-08-20 
  * @lastModified 2025-03-12 
  */
+const scriptPath = document.currentScript?.src || import.meta.url || '';
 
 'use strict';
 (async () => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = document.currentScript.src.replace('importHeaderFooter.js', 'headerFooter.css');
+    if (!scriptPath) throw new Error('Script path bulunamadı');
+    console.log(scriptPath);
+    link.href = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
     document.head.appendChild(link);
+    /*await new Promise((resolve, reject) => {
+        link.onload = resolve;
+        link.onerror = () => reject(new Error('CSS yüklenemedi'));
+    });*/
     await CreateFooter();
     await CreateHeader();
 })();
@@ -48,7 +55,7 @@ async function CreateHeader() {
     const divLeftIcon = document.createElement("img"); divLeft.appendChild(divLeftIcon);
     divLeftIcon.id = "headerDivLeftIcon"
 
-    divLeftIcon.src = document.currentScript.src.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png');
+    divLeftIcon.src = scriptPath.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png');
     divLeftIcon.alt = "mefamex_logo";
 
     const divLeftText = document.createElement("h1"); divLeft.appendChild(divLeftText);
