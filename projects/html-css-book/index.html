@@ -483,9 +483,9 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
             const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
             if (!fileName) return;
             if (kaynaklar[fileName]) {
-                console.log(`🔄 Dosya için alternatif kaynaklar belirlendi ${fileName}: (${kaynaklar[fileName].length - 2})`);
+                console.log(`🔄 Dosya için alternatif kaynaklar belirlendi (${kaynaklar[fileName].length - 2}): ${fileName}`);
                 if (fileName.endsWith(".js")) { element.onerror = () => checkScriptLoaded(element, fileName); element.onload = () => checkScriptLoaded(element, fileName); }
-                else if (fileName.endsWith(".css")) { checkStyleLoaded(element, fileName); }
+                else if (fileName.endsWith(".css")) { (async () => checkStyleLoaded(element, fileName))(); }
                 else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`);
             } else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`);
         }
@@ -506,17 +506,16 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                 if (isStylesheetLoadedByHref(fileName)) return;
                 const fallbackLink = document.createElement('link');
                 fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
-                checkStyleLoaded(fallbackLink, fileName);
                 document.head.appendChild(fallbackLink);
+                (async () => checkStyleLoaded(fallbackLink, fileName))();
             } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
         }
-        function checkStyleLoaded(element, fileName) {
+        async function checkStyleLoaded(element, fileName) {
             let maxAttempts = 5, isLoaded = false;
             element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); loadFallbackScript(fileName); };
             element.onload = () => { isLoaded = true; if (checkInterval) clearInterval(checkInterval); };
             const checkInterval = setInterval(async () => {
                 if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); } return; }
-
                 try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); } }
                 catch (error) { console.error('CSS kontrol hatası:', error); }
             }, 300);
