@@ -26,7 +26,7 @@
     <!-- Performans için preload -->
     <link rel="preload" as="style" href="style.css" />
     <link rel="preload" as="style" href="../src/components/headerFooter.css" />
-    <link rel="preload" as="script" type="text/javascript" href="../src/components/importHeaderFooter.js" />
+    <link rel="preload" as="script" href="../src/components/importHeaderFooter.js" />
     <!---->
     <!-- Stil Optimizasyonu -->
     <link rel="stylesheet" href="style.css" class="alternatively" />
@@ -406,9 +406,9 @@
     <!-- -->
     <!-- -->
     <!-- -->
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
     <!-- -->
-    <script type="text/javascript" defer>
+    <script defer>
         const bigImage = document.querySelector("#big-image");
         document.querySelectorAll('input[name="sizee"]').forEach((checkbox) => {
             checkbox.style.display = "none";
@@ -440,7 +440,7 @@
         });
         document.querySelector("#big-image-close").onclick = () => bigImage.classList.add("display-none");
     </script>
-    <script>
+    <script defer>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
         const kaynaklar = {

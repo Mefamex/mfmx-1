@@ -25,7 +25,7 @@
     <!-- Performans için preload -->
     <link rel="preload" as="style" href="style.css" />
     <link rel="preload" as="style" href="../src/components/headerFooter.css" />
-    <link rel="preload" as="script" type="text/javascript" href="../src/components/importHeaderFooter.js" />
+    <link rel="preload" as="script" href="../src/components/importHeaderFooter.js" />
     <!---->
     <!-- Stil Optimizasyonu -->
     <link rel="stylesheet" href="style.css" class="alternatively" />
@@ -536,7 +536,7 @@
         </section>
     </main>
     <p id="page_label">THE MEFAMEX PROJECT</p>
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
     <script>
         const toggleBtn = document.getElementById("toggleDetails");
         let isOpen = false;
@@ -550,7 +550,7 @@
             });
         });
     </script>
-    <script>
+    <script defer>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
         const kaynaklar = {
