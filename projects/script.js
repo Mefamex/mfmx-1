@@ -104,7 +104,7 @@ function updateSearchResults() {
     checkboxes.forEach(checkbox => {
         const count = visibleProjects.filter(item => (item.getAttribute('data-language') || '').toLowerCase().split(',').map(l => l.trim()).includes(checkbox.value)).length;
         checkbox.parentElement.querySelector('.count').textContent = `(${count})`;
-        checkbox.parentElement.style.opacity = count ? '1' : '0.3';
+        checkbox.parentElement.style.opacity = count ? '' : '0.3';
         checkbox.checked = checkbox.checked;
     });
 }
