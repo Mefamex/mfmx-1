@@ -464,20 +464,27 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
     </div>
     <script class="alternatively" src="../../src/components/importHeaderFooter.js" type="module" defer></script>
     <script class="alternatively" src="../page_aside.js" defer></script>
-    <script defer> 
+    <script defer>
         /*  class="alternatively"  */
         /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */
         const kaynaklar = {};
         const urlObj = new URL(location.href);
         const { host, origin } = urlObj;
+        const targetElements = document.querySelectorAll(".alternatively");
         const firstSegment = urlObj.pathname.replace(/^\//, '').split('/')[0] || null;
-        document.querySelectorAll(".alternatively").forEach(element => {
+        targetElements.forEach(element => {
             const path = (element.getAttribute('src') || element.getAttribute('href')); if (!path) return;
             const fileName = path.split('/').pop(); if (!fileName) return;
             const cleanPath = path.replace(/\.\.\//g, '').replace(/\.\//g, '').replace(/\/+/g, '/');
             kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
+
+            if (host != 'mefamex.com') {
+                kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`);
+            }
+
+
         });
-        async function initializeAlternatives() { await Promise.all(Array.from(document.querySelectorAll(".alternatively")).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
+        async function initializeAlternatives() { await Promise.all(Array.from(targetElements).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
         (async () => { await initializeAlternatives(); })();
         async function initializeResource(element) {
             const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
