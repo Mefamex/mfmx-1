@@ -10,6 +10,7 @@
  */
 const scriptPath = document.currentScript?.src || import.meta.url || '';
 
+
 'use strict';
 (async () => {
     const link = document.createElement('link');
@@ -17,7 +18,6 @@ const scriptPath = document.currentScript?.src || import.meta.url || '';
     if (!scriptPath) throw new Error('Script path bulunamadı');
     console.log(scriptPath);
     link.href = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
-    document.head.appendChild(link);
     /*await new Promise((resolve, reject) => {
         link.onload = resolve;
         link.onerror = () => reject(new Error('CSS yüklenemedi'));
