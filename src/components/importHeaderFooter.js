@@ -31,7 +31,7 @@ const scriptPath = getScriptPath();
         link.onerror = () => reject(new Error('CSS yüklenemedi'));
     });*/
     document.head.appendChild(link);
-    
+
     const createFooterTask = (async () => { try { await CreateFooter(); } catch (error) { console.error('❌ Footer oluşturulurken hata:', error); } })();
     const createHeaderTask = (async () => { try { await CreateHeader(); } catch (error) { console.error('❌ Header oluşturulurken hata:', error); } })();
     Promise.all([createFooterTask, createHeaderTask]);
@@ -103,8 +103,8 @@ async function CreateHeader() {
     })
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 
-
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
+    setTimeout(() => { if (window.scrollY < '150') window.scrollTo({ top: 0, behavior: 'smooth' }) }, 150);;
     /*const style = document.createElement('style');style.innerHTML = ``;header.appendChild(style);*/
 
 }
