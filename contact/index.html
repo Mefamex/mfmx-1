@@ -27,7 +27,7 @@
     <!-- Performans için preload -->
     <link rel="preload" as="style" href="style.css" />
     <link rel="preload" as="style" href="../src/components/headerFooter.css" />
-    <link rel="preload" as="script" type="text/javascript" href="../src/components/importHeaderFooter.js" />
+    <link rel="preload" as="script" href="../src/components/importHeaderFooter.js" />
     <!---->
     <!-- Stil Optimizasyonu -->
     <link rel="stylesheet" href="style.css" class="alternatively" />
@@ -55,9 +55,9 @@
     <meta property="og:url" content="https://mefamex.com/contact/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mefamex" />
-    <meta property="og:date" content="2025-02-26T02:00:00Z" />
+    <meta property="og:date" content="2025-03-12T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-02-26T02:00:00Z" />
+    <meta property="article:modified_time" content="2025-03-12T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -69,7 +69,7 @@
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
     <meta name="twitter:url" content="https://mefamex.com/contact/" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-02-26T02:00:00Z" />
+    <meta name="twitter:date" content="2025-03-12T02:00:00Z" />
     <!---->
     <!-- Güvenlik Meta Etiketleri -->
     <meta http-equiv="Content-Security-Policy" content="
@@ -161,7 +161,7 @@
         </fieldset>
         <!---->
         <!---->
-        <p><br />İletilerin son yanıtlandığı tarih: 06.03.2025</p>
+        <p><br />İletilerin son yanıtlandığı tarih: 12.03.2025</p>
         <!---->
         <!---->
         <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0" marginwidth="0"
@@ -172,43 +172,44 @@
     <!---->
     <!---->
     <!---->
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
-    <script type="text/javascript" defer>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
+    <script defer>
         document.addEventListener("DOMContentLoaded", () => {
-            const iframee = document.getElementById("ContactForm");
+            const formElement = document.getElementById("ContactForm");
+            formElement.style.height = '0';
             let retryCount = 0;
             const maxRetries = 3;
             function handleFormError() {
                 retryCount++;
                 console.log(`❌ Form yüklenemedi (Deneme ${retryCount}/${maxRetries})`);
-                if (retryCount >= maxRetries) iframee.style.display = 'none';
-                else setTimeout(() => { iframee.src = iframee.dataset.src; }, 1000 * retryCount);
+                if (retryCount >= maxRetries) formElement.style.display = 'none';
+                else setTimeout(() => { formElement.src = formElement.dataset.src; }, 1000 * retryCount);
             }
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        iframee.src = iframee.dataset.src;
-                        observer.unobserve(iframee);
+                        formElement.src = formElement.dataset.src;
+                        observer.unobserve(formElement);
                         // 10 saniye içinde yüklenmezse hata ver
                         let loadTimeout = setTimeout(() => handleFormError(), 10000);
-                        iframee.onload = () => {
+                        formElement.onload = () => {
                             clearTimeout(loadTimeout);
-                            try { if (iframee.contentWindow) console.log('✅ Form yüklendi'); }
+                            try { if (formElement.contentWindow) {console.log('✅ Form yüklendi'); formElement.style.height = ''} }
                             catch (error) {
                                 console.log('⚠️ Form kontrol edilemedi:', error);
                                 if (error.name === 'SecurityError') console.log('✅ Form muhtemelen yüklendi (CORS kısıtlaması)');
                                 else handleFormError();
                             }
-                        }; iframee.onerror = () => { clearTimeout(loadTimeout); handleFormError(); };
+                        }; formElement.onerror = () => { clearTimeout(loadTimeout); handleFormError(); };
                     }
                 });
-            }); observer.observe(iframee);
+            }); observer.observe(formElement);
         });
     </script>
     <!---->
     <!---->
     <!---->
-    <script>
+    <script defer>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
         const kaynaklar = {

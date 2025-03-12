@@ -220,10 +220,10 @@
                 </div>
                 <div>
                     <h2>SCRIPT</h2>
-                    <code class="language-html">&lt;script src="/src/js/script.js" type="text/javascript" defer&gt;</code>
+                    <code class="language-html">&lt;script src="/src/js/script.js"  defer&gt;</code>
                     <p><b>defer :</b>JavaScript dosyalarının yüklenmesini ve çalıştırılmasını kontrol etmek için kullanılan önemli bir araçtır. Bu atribut, tarayıcının JavaScript dosyasını HTML'in
                         geri kalanıyla birlikte indirerek sayfanın render edilmesini engellemesini önler.</p>
-                    <code class="language-html">&lt;script src="/src/js/script.js" type="text/javascript" async&gt;</code>
+                    <code class="language-html">&lt;script src="/src/js/script.js"  async&gt;</code>
                     <p>
                         <b>async :</b> Tarayıcının JavaScript dosyasını HTML'in geri kalanıyla birlikte indirerek sayfanın render edilmesinin engellemesini önler. HTML ayrıştırması devam eder. Script
                         paralel olarak yüklenir. Script hazır olduğunda hemen çalıştırılır. Sıralı çalışma garantisi yok. DOMContentLoaded'ı beklemez
@@ -461,9 +461,9 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
         </main>
         <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
     </div>
-    <script class="alternatively" src="../../src/components/importHeaderFooter.js" type="text/javascript" defer></script>
-    <script class="alternatively" src="../page_aside.js" type="text/javascript" defer></script>
-    <script>
+    <script class="alternatively" src="../../src/components/importHeaderFooter.js" defer></script>
+    <script class="alternatively" src="../page_aside.js" defer></script>
+    <script defer>
         //  class="alternatively" 
         // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
         const kaynaklar = {
