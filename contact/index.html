@@ -233,17 +233,16 @@
             } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
         }
         function checkStyleLoaded(element, fileName) {
-            let maxAttempts = 10; let isLoaded = false;
+            let maxAttempts = 5;
+            let isLoaded = false;
+            const checkStylesheet = () => { return new Promise(resolve => { requestAnimationFrame(() => { const isLoaded = isStylesheetLoadedByHref(fileName); resolve(isLoaded); }); }); };
             element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); loadFallbackScript(fileName); };
             element.onload = () => { isLoaded = true; clearInterval(checkInterval); };
-            const checkInterval = setInterval(() => {
-                if (--maxAttempts <= 0) {
-                    clearInterval(checkInterval);
-                    if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); }
-                    return;
-                }
-                if (isStylesheetLoadedByHref(fileName)) { isLoaded = true; clearInterval(checkInterval); }
-            }, 200);
+            const checkInterval = setInterval(async () => {
+                if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); } return; }
+                const loaded = await checkStylesheet();
+                if (loaded) { isLoaded = true; clearInterval(checkInterval); }
+            }, 250);
         }
         function isStylesheetLoadedByHref(href) {
             return Array.from(document.styleSheets).some(sheet => {
