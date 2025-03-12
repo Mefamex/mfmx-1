@@ -551,6 +551,7 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
         }
         function checkScriptLoaded(element, fileName) {
             if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
+            console.log(fileName + ' yükleniyor...');
             setTimeout(async () => {
                 try {
                     fetch(element.src, { method: "HEAD" }).then(response => {
