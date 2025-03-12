@@ -1,3 +1,51 @@
+Durum/Status Emojileri
+
+'✅' // Başarılı, tamamlandı, OK
+'❌' // Hata, başarısız, iptal
+'⚠️' // Uyarı, dikkat
+'🔄' // Yükleniyor, işlem devam ediyor, yenileniyor
+'ℹ️' // Bilgi
+'🚫' // Yasak, erişim yok
+'⭕' // Boş, null
+'❗' // Önemli uyarı
+'❓' // Soru, bilinmeyen durum
+
+
+Log Seviyeleri
+
+'🐛' // Debug
+'📝' // Log
+'💡' // Info
+'⚡' // Trace
+'🔍' // Verbose
+'🔔' // Notification
+'📢' // Announcement
+
+
+Dosya/Network İşlemleri
+
+'📁' // Dosya/Klasör
+'💾' // Kaydetme
+'🔒' // Şifreli, güvenli
+'🔓' // Şifresiz, açık
+'🌐' // Network, internet
+'📡' // API, bağlantı
+'📥' // İndirme, import
+'📤' // Yükleme, export
+
+
+İşlem Durumları
+
+'⏳' // Beklemede, işlem sürüyor
+'⌛' // Zaman aşımı
+'💫' // İşleniyor
+'🎯' // Hedef, amaç
+'🔧' // Yapılandırma, ayar
+'⚙️' // Sistem, settings
+'🔨' // Geliştirme, build
+'🛠️' // Bakım, onarım
+
+
 
 
 <!-- WebSite Schema -->

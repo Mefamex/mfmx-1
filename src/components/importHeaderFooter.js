@@ -8,7 +8,16 @@
  * @since 2024-08-20 
  * @lastModified 2025-03-12 
  */
-const scriptPath = document.currentScript?.src || import.meta.url || '';
+
+const getScriptPath = () => {
+    if (document.currentScript?.src) return document.currentScript.src;
+    const currentScript = Array.from(document.getElementsByTagName('script')).find(script => script.src && script.src.includes('importHeaderFooter.js'));
+    if (currentScript?.src) return currentScript.src;
+    console.log('HeaderFooter Script yolu bulunamadı! Varsayılan konum kullanılacak.');
+    return window.location.origin + '/src/components/';
+};
+
+const scriptPath = getScriptPath();
 
 
 'use strict';
@@ -16,7 +25,6 @@ const scriptPath = document.currentScript?.src || import.meta.url || '';
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     if (!scriptPath) throw new Error('Script path bulunamadı');
-    console.log(scriptPath);
     link.href = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
     /*await new Promise((resolve, reject) => {
         link.onload = resolve;

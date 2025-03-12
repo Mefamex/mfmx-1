@@ -89,7 +89,7 @@
             <section id="projects-search">
                 <h2>Proje Ara</h2>
                 <form id="search-form">
-                    <input type="text" id="search" name="search" autocomplete="off" placeholder="Proje adı, dil, etiketler veya içeren kelimeler" />
+                    <input type="text" id="search" name="search" autocomplete="off" minlength="2" maxlength="50" placeholder="Proje adı, dil, etiketler veya içeren kelimeler" />
                     <fieldset>
                         <label> <input type="checkbox" name="language" value="none" /> Belirsiz </label>
                         <label> <input type="checkbox" name="language" value="bash" /> Bash </label>
@@ -205,76 +205,70 @@
     <script class="alternatively" src="script.js" defer></script>
     <script defer>
         //  class="alternatively" 
-        // alternatif kaynaklar: { name: ["link"/"script",  last_used_index, altertatives... ] }
-        const kaynaklar = {
-            'importHeaderFooter.js': [0, "../src/components/importHeaderFooter.js", "/src/components/importHeaderFooter.js"],
-            'headerFooter.css': [0, "../../src/components/headerFooter.css", "/src/components/headerFooter.css"],
-            'page_aside.css': [0, "./page_aside.css", "/projects/page_aside.css"],
-            'page_aside.js': [0, "./page_aside.js", "/projects/page_aside.js"],
-            'style.css': [0, "./style.css", "/projects/style.css"],
-            'script.js': [0, "./script.js", "/projects/script.js"]
-        }
-        // Alternatif kaynaklara domain ekleyerek kontrol et
-        Object.keys(kaynaklar).forEach(name => { kaynaklar[name].push(...kaynaklar[name].slice(1).map(path => `${window.location.host}/${path}`.replace(/\/{2,}/g, '/'))); });
-
-        // her dosya'in alternatif kaynaklarını belirle
+        // alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] }
+        const kaynaklar = {};
+        const urlObj = new URL(location.href);
+        const { host, origin } = urlObj;
+        const firstSegment = urlObj.pathname.replace(/^\//, '').split('/')[0] || null;
         document.querySelectorAll(".alternatively").forEach(element => {
+            const path = (element.getAttribute('src') || element.getAttribute('href')); if (!path) return;
+            const fileName = path.split('/').pop(); if (!fileName) return;
+            const cleanPath = path.replace(/^\.\.\/|^\.\//g, '');
+            kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
+        });
+        async function initializeAlternatives() { await Promise.all(Array.from(document.querySelectorAll(".alternatively")).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
+        initializeAlternatives();
+        async function initializeResource(element) {
             const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
             if (!fileName) return;
             if (kaynaklar[fileName]) {
-                console.log(`✅ Dosya için alternatif kaynaklar belirlendi: (${fileName})`);
-                if (fileName.endsWith(".js")) element.onerror = () => loadFallbackScript(fileName);
-                else if (fileName.endsWith(".css")) { setTimeout(() => { if (!isStylesheetLoadedByHref(fileName)) loadFallbackScript(fileName) }, 500); }
+                console.log(`🔄 Dosya için alternatif kaynaklar belirlendi ${fileName}: (${kaynaklar[fileName].length - 2})`);
+                if (fileName.endsWith(".js")) { element.onerror = () => checkScriptLoaded(element, fileName); element.onload = () => checkScriptLoaded(element, fileName); }
+                else if (fileName.endsWith(".css")) { let maxAttempts = 10; const checkInterval = setInterval(() => { if (isStylesheetLoadedByHref(fileName) || --maxAttempts <= 0) { clearInterval(checkInterval); if (!isStylesheetLoadedByHref(fileName)) { loadFallbackScript(fileName); } } }, 100); }
                 else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`);
-                element.onerror = () => loadFallbackScript(fileName);
             } else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`);
-        });
-
-        // alternatif kaynaklardan yükleme fonksiyonu
+        }
         function loadFallbackScript(fileName) {
-            const fileIndex = ++kaynaklar[fileName][0];
+            const subelement = kaynaklar[fileName][0];
+            const fileIndex = ++kaynaklar[fileName][1];
             if (fileIndex >= kaynaklar[fileName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${fileName}`); return; }
-
-            console.log('🔄 Dosya için alternatif kaynak yükleniyor (' + fileName + ',  alternatif-' + fileIndex + ')\n ---> \'' + kaynaklar[fileName][fileIndex] + '\'');
+            console.log('⏳ Dosya için alternatif kaynak yükleniyor : ' + fileName + ' (' + fileIndex + ')\n -------> \'' + kaynaklar[fileName][fileIndex] + '\'');
             if (fileName.endsWith(".js")) {
                 const fallbackScript = document.createElement('script');
                 fallbackScript.src = kaynaklar[fileName][fileIndex];
-                fallbackScript.defer = true;
-                fallbackScript.onload = () => checkScriptLoaded(fallbackScript, fileName);
-                fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName);
+                /* Tüm özellikleri kopyala (src, onerror, onload ve alternatively sınıfı hariç) */
+                Array.from(subelement.attributes).forEach(attr => { if (!['src', 'onerror', 'onload', 'class'].includes(attr.name)) fallbackScript.setAttribute(attr.name, attr.value); });
+                if (subelement.hasAttribute('class')) { const classes = subelement.getAttribute('class').split(' ').filter(c => c !== 'alternatively').join(' '); if (classes) fallbackScript.setAttribute('class', classes); }
+                fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName); fallbackScript.onload = () => checkScriptLoaded(fallbackScript, fileName);
                 document.head.appendChild(fallbackScript);
-            }
-            else if (fileName.endsWith(".css")) {
+            } else if (fileName.endsWith(".css")) {
                 if (isStylesheetLoadedByHref(fileName)) return;
                 const fallbackLink = document.createElement('link');
-                fallbackLink.rel = 'stylesheet';
-                fallbackLink.type = 'text/css';
-                fallbackLink.href = kaynaklar[fileName][fileIndex];
-                setTimeout(() => { if (!isStylesheetLoadedByHref(fileName)) loadFallbackScript(fileName) }, 500);
+                fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
+                let maxAttempts = 10;
+                const checkInterval = setInterval(() => { if (isStylesheetLoadedByHref(fileName) || --maxAttempts <= 0) { clearInterval(checkInterval); if (!isStylesheetLoadedByHref(fileName)) { loadFallbackScript(fileName); } } }, 100);
                 document.head.appendChild(fallbackLink);
-            }
-            else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
+            } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
         }
-
-        function isStylesheetLoadedByHref(href) { return Array.from(document.styleSheets).some(sheet => { if (sheet.href && sheet.href.includes(href)) { try { return sheet.cssRules.length > 0; } catch (e) { return false; /*CORS hatası perhebs*/ } } return false; }); }
-
+        function isStylesheetLoadedByHref(href) {
+            return Array.from(document.styleSheets).some(sheet => {
+                if (sheet.href && sheet.href.includes(href)) {
+                    try {
+                        if (sheet.cssRules.length > 0) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; }
+                        else if (sheet.cssRules.length === 0) { console.warn(`⚠️ ${href} yüklendi, ancak içeriği boş.`); return false; }
+                    }
+                    catch (e) { return false; /*CORS hatası perhebs*/ }
+                } return false;
+            });
+        }
         function checkScriptLoaded(element, fileName) {
-            // Tarayıcı hata verdiyse otomatik fallback yükle
             if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
-            // Yüklenen script içeriğini doğrulamak için bir test yap
             setTimeout(() => {
-                // Eğer tarayıcı "başarıyla yükledi" diyorsa ama aslında içeriği yanlışsa
-                fetch(element.src, { method: "HEAD" })
-                    .then(response => {
-                        const contentType = response.headers.get("Content-Type") || "";
-                        console.log(`📂 İçerik türü: ${contentType}`);
-                        if (!contentType.includes("javascript")) {
-                            console.log(`❌ Hata: ${fileName} yanlış MIME türü ile yüklendi (${contentType}). Alternatif kaynak yükleniyor...`); element.dataset.failed = "true"; // Tekrar çalışmasını önlemek için flag koy
-                            loadFallbackScript(fileName);
-                        } else console.log(`✅ ${fileName} başarıyla yüklendi.`);
-
-                    })
-                    .catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
+                fetch(element.src, { method: "HEAD" }).then(response => {
+                    const contentType = response.headers.get("Content-Type") || "";
+                    if (!contentType.includes("javascript")) { console.log(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} -> yanlış MIME türü ile yüklendi \n------------ (${contentType}). \n------------ Alternatif kaynak yükleniyor...`); element.remove(); loadFallbackScript(fileName); }
+                    else console.log(`✅ ${fileName} başarıyla yüklendi.`);
+                }).catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
             }, 500);
         }
     </script>
