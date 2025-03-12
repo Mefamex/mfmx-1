@@ -503,41 +503,51 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                 fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName); fallbackScript.onload = () => checkScriptLoaded(fallbackScript, fileName);
                 document.head.appendChild(fallbackScript);
             } else if (fileName.endsWith(".css")) {
-                if (isStylesheetLoadedByHref(fileName)) return;
-                const fallbackLink = document.createElement('link');
-                fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
-                document.head.appendChild(fallbackLink);
-                (async () => checkStyleLoaded(fallbackLink, fileName))();
+                const fragment = document.createDocumentFragment();
+                const fallbackLink = document.createElement('link'); fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
+                fragment.appendChild(fallbackLink);
+                requestAnimationFrame(() => { document.head.appendChild(fragment); checkStyleLoaded(fallbackLink, fileName); });
             } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
         }
         async function checkStyleLoaded(element, fileName) {
-            let maxAttempts = 5, isLoaded = false;
-            element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); loadFallbackScript(fileName); };
-            element.onload = () => { isLoaded = true; if (checkInterval) clearInterval(checkInterval); };
-            const checkInterval = setInterval(async () => {
-                if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); } return; }
-                try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); } }
-                catch (error) { console.error('CSS kontrol hatası:', error); }
-            }, 300);
+            let maxAttempts = 10; // Arttırıldı
+            let isLoaded = false;
+            return new Promise((resolve, reject) => {
+                element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); reject(new Error('CSS yükleme hatası')); };
+                element.onload = () => { isLoaded = true; clearInterval(checkInterval); resolve(true); };
+                const checkInterval = setInterval(async () => {
+                    if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); reject(new Error('CSS yükleme zaman aşımı')); } return; }
+                    try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) { console.error('CSS kontrol hatası:', error); }
+                }, 500);
+            });
         }
         function isStylesheetLoadedByHref(href) {
             const sheets = Array.from(document.styleSheets); let loaded = false;
             return new Promise(resolve => {
                 requestAnimationFrame(() => {
-                    loaded = sheets.some(sheet => { if (sheet.href?.includes(href)) { try { const hasRules = sheet.cssRules.length > 0; if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; } console.warn(`⚠️ ${href} yüklendi, ancak içeriği boş.`); } catch (e) { /* CORS hatası perhebs */ } } return false; });
-                    resolve(loaded);
+                    if (loaded) return resolve(true);
+                    loaded = sheets.some(sheet => {
+                        if (sheet.href?.includes(href)) { try { const hasRules = sheet.cssRules.length > 0; if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; } } catch (e) { /* CORS hatası buyuk ihtimalle geeçç */ return false; } }
+                        return false;
+                    }); resolve(loaded);
                 });
             });
         }
         function checkScriptLoaded(element, fileName) {
             if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
-            setTimeout(() => {
-                fetch(element.src, { method: "HEAD" }).then(response => {
-                    const contentType = response.headers.get("Content-Type") || "";
-                    if (!contentType.includes("javascript")) { console.log(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} -> yanlış MIME türü ile yüklendi \n------------ (${contentType}). \n------------ Alternatif kaynak yükleniyor...`); element.remove(); loadFallbackScript(fileName); }
-                    else console.log(`✅ ${fileName} başarıyla yüklendi.`);
-                }).catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); });
+            setTimeout(async () => {
+                try {
+                    fetch(element.src, { method: "HEAD" }).then(response => {
+                        const contentType = response.headers.get("Content-Type") || "";
+                        if (!contentType.includes("javascript")) { failedToLoad(`İçerik türü: ${contentType}`); return; }
+                        else { approvedLoad(); return };
+                    }).catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); loadFallbackScript(fileName); });
+                } catch (error) {
+                    if ((element.textContent || '') && scriptContent.length > 0) { approvedLoad('içerik kontrolü'); return; } else { failedToLoad(text = "Doğrulanamadı"); return; }
+                }
             }, 500);
+            function failedToLoad(text = "") { element.dataset.failed = true; element.onerror = null; element.onload = null; console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}. Alternatif kaynak yükleniyor...`); element.remove(); loadFallbackScript(fileName); }
+            function approvedLoad(text = "") { console.log(`✅ ${fileName} başarıyla yüklendi ${text ? '(' + text + ')' : ""}.`); }
         }
     </script>
 </body>
