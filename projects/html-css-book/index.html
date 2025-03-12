@@ -39,9 +39,9 @@
     <meta property="og:url" content="https://mefamex.com/projects/html-css-book/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mefamex" />
-    <meta property="og:date" content="2025-03-02T02:00:00Z" />
+    <meta property="og:date" content="2025-03-13T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-03-02T02:00:00Z" />
+    <meta property="article:modified_time" content="2025-03-13T02:00:00Z" />
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="Mefamex" />
@@ -51,7 +51,7 @@
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
     <meta name="twitter:url" content="https://mefamex.com/projects/html-css-book/" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-03-02T02:00:00Z" />
+    <meta name="twitter:date" content="2025-03-13T02:00:00Z" />
     <style>
         #main_container main {
             section {
@@ -477,9 +477,7 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
             const fileName = path.split('/').pop(); if (!fileName) return;
             const cleanPath = path.replace(/\.\.\//g, '').replace(/\.\//g, '').replace(/\/+/g, '/');
             kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
-            if (host != 'mefamex.com') {
-                kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`);
-            }
+            if (host != 'mefamex.com') { kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`); }
         });
         async function initializeAlternatives() { await Promise.all(Array.from(targetElements).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
         (async () => { await initializeAlternatives(); })();
@@ -532,32 +530,17 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                 loaded = sheets.some(sheet => {
                     if (!sheet.href) { return false; }
                     if (sheet.href.includes(href)) {
-                        try {
-                            const hasRules = sheet.cssRules.length > 0;
-                            if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; }
-                        } catch (e) { return false;/* CORS hatası veya diğer hatalar */ }
+                        try { const hasRules = sheet.cssRules.length > 0; if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; } } catch (e) { return false;/* CORS hatası veya diğer hatalar */ }
                     } return false;
                 }); resolve(loaded);
             });
-            /*return new Promise(resolve => {
-                const check = () => {
-                    const loaded = Array.from(document.styleSheets).some(sheet => sheet.href && sheet.href.includes(href));
-                    if (loaded) resolve(true); else requestAnimationFrame(check);
-                };requestAnimationFrame(check);
-            });*/
+            /*return new Promise(resolve => { const check = () => { const loaded = Array.from(document.styleSheets).some(sheet => sheet.href && sheet.href.includes(href));  if (loaded) resolve(true); else requestAnimationFrame(check); };requestAnimationFrame(check); });*/
         }
         function checkScriptLoaded(element, fileName) {
             if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
             setTimeout(async () => {
-                try {
-                    fetch(element.src, { method: "HEAD" }).then(response => {
-                        const contentType = response.headers.get("Content-Type") || "";
-                        if (!contentType.includes("javascript")) { failedToLoad(`İçerik türü: ${contentType}`); return; }
-                        else { approvedLoad(); return };
-                    }).catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); loadFallbackScript(fileName); });
-                } catch (error) {
-                    if ((element.textContent || '') && scriptContent.length > 0) { approvedLoad('içerik kontrolü'); return; } else { failedToLoad(text = "Doğrulanamadı"); return; }
-                }
+                try { fetch(element.src, { method: "HEAD" }).then(response => { const contentType = response.headers.get("Content-Type") || ""; if (!contentType.includes("javascript")) { failedToLoad(`İçerik türü: ${contentType}`); return; } else { approvedLoad(); return }; }).catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); loadFallbackScript(fileName); }); }
+                catch (error) { if ((element.textContent || '') && scriptContent.length > 0) { approvedLoad('içerik kontrolü'); return; } else { failedToLoad(text = "Doğrulanamadı"); return; } }
             }, 500);
             function failedToLoad(text = "") { element.dataset.failed = true; element.onerror = null; element.onload = null; console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}. Alternatif kaynak yükleniyor...`); element.remove(); loadFallbackScript(fileName); }
             function approvedLoad(text = "") { console.log(`✅ ${fileName} başarıyla yüklendi ${text ? '(' + text + ')' : ""}.`); }
