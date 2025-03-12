@@ -31,18 +31,21 @@ const scriptPath = getScriptPath();
         link.onerror = () => reject(new Error('CSS yüklenemedi'));
     });*/
     document.head.appendChild(link);
-    (async () => { await CreateFooter(); await CreateHeader(); })();
+    
+    const createFooterTask = (async () => { try { await CreateFooter(); } catch (error) { console.error('❌ Footer oluşturulurken hata:', error); } })();
+    const createHeaderTask = (async () => { try { await CreateHeader(); } catch (error) { console.error('❌ Header oluşturulurken hata:', error); } })();
+    Promise.all([createFooterTask, createHeaderTask]);
 })();
 
 async function CreateFooter() {
     // Select / Create the footer
     let footer = document.querySelector('body footer') || document.createElement('footer');
-    if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
 
     // Build the footer
     footer.id = "footer";
     footer.innerHTML = `<h1 id="footerText"> 2014-&infin; &copy; MEFAMEX. ALL RIGHT RESERVED</h1>`;
 
+    if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
     /*const style = document.createElement('style');style.innerHTML = ``;footer.appendChild(style); */
 }
 
@@ -50,7 +53,6 @@ async function CreateFooter() {
 async function CreateHeader() {
     // Select / Create the header
     let header = document.querySelector('body header') || document.createElement('header');
-    if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
 
     // Build the header
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
@@ -102,6 +104,7 @@ async function CreateHeader() {
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 
 
+    if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
     /*const style = document.createElement('style');style.innerHTML = ``;header.appendChild(style);*/
 
 }
