@@ -522,15 +522,20 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
             });
         }
         function isStylesheetLoadedByHref(href) {
-            const sheets = Array.from(document.styleSheets); let loaded = false;
+            const sheets = Array.from(document.styleSheets);
+            let loaded = false;
+
             return new Promise(resolve => {
-                requestAnimationFrame(() => {
-                    if (loaded) return resolve(true);
-                    loaded = sheets.some(sheet => {
-                        if (sheet.href?.includes(href)) { try { const hasRules = sheet.cssRules.length > 0; if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; } } catch (e) { /* CORS hatası buyuk ihtimalle geeçç */ return false; } }
-                        return false;
-                    }); resolve(loaded);
+                loaded = sheets.some(sheet => {
+                    if (!sheet.href) { return false; }
+                    if (sheet.href.includes(href)) {
+                        try {
+                            const hasRules = sheet.cssRules.length > 0;
+                            if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; }
+                        } catch (e) { return false;/* CORS hatası veya diğer hatalar */ }
+                    } return false;
                 });
+                resolve(loaded);
             });
         }
         function checkScriptLoaded(element, fileName) {
