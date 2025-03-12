@@ -207,7 +207,7 @@
             if (kaynaklar[fileName]) {
                 console.log(`🔄 Dosya için alternatif kaynaklar belirlendi ${fileName}: (${kaynaklar[fileName].length - 2})`);
                 if (fileName.endsWith(".js")) { element.onerror = () => checkScriptLoaded(element, fileName); element.onload = () => checkScriptLoaded(element, fileName); }
-                else if (fileName.endsWith(".css")) { let maxAttempts = 10; const checkInterval = setInterval(() => { if (isStylesheetLoadedByHref(fileName) || --maxAttempts <= 0) { clearInterval(checkInterval); if (!isStylesheetLoadedByHref(fileName)) { loadFallbackScript(fileName); } } }, 100); }
+                else if (fileName.endsWith(".css")) { checkStyleLoaded(element, fileName); }
                 else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`);
             } else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`);
         }
