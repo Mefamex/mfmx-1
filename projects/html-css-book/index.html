@@ -513,7 +513,7 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                 const fragment = document.createDocumentFragment();
                 const fallbackLink = document.createElement('link'); fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
                 fragment.appendChild(fallbackLink);
-                requestAnimationFrame(() => { document.head.appendChild(fragment); checkStyleLoaded(fallbackLink, fileName); });
+                document.head.appendChild(fragment); checkStyleLoaded(fallbackLink, fileName);
             } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
         }
         async function checkStyleLoaded(element, fileName) {
@@ -542,6 +542,12 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                     } return false;
                 }); resolve(loaded);
             });
+            /*return new Promise(resolve => {
+                const check = () => {
+                    const loaded = Array.from(document.styleSheets).some(sheet => sheet.href && sheet.href.includes(href));
+                    if (loaded) resolve(true); else requestAnimationFrame(check);
+                };requestAnimationFrame(check);
+            });*/
         }
         function checkScriptLoaded(element, fileName) {
             if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
