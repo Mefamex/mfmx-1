@@ -511,26 +511,23 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
             } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
         }
         function checkStyleLoaded(element, fileName) {
-            let maxAttempts = 5;
-            let isLoaded = false;
-            const checkStylesheet = () => { return new Promise(resolve => { requestAnimationFrame(() => { const isLoaded = isStylesheetLoadedByHref(fileName); resolve(isLoaded); }); }); };
+            let maxAttempts = 5, isLoaded = false;
             element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); loadFallbackScript(fileName); };
-            element.onload = () => { isLoaded = true; clearInterval(checkInterval); };
+            element.onload = () => { isLoaded = true; if (checkInterval) clearInterval(checkInterval); };
             const checkInterval = setInterval(async () => {
                 if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); } return; }
-                const loaded = await checkStylesheet();
-                if (loaded) { isLoaded = true; clearInterval(checkInterval); }
-            }, 250);
+
+                try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); } }
+                catch (error) { console.error('CSS kontrol hatası:', error); }
+            }, 300);
         }
         function isStylesheetLoadedByHref(href) {
-            return Array.from(document.styleSheets).some(sheet => {
-                if (sheet.href && sheet.href.includes(href)) {
-                    try {
-                        if (sheet.cssRules.length > 0) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; }
-                        else if (sheet.cssRules.length === 0) { console.warn(`⚠️ ${href} yüklendi, ancak içeriği boş.`); return false; }
-                    }
-                    catch (e) { return false; /*CORS hatası perhebs*/ }
-                } return false;
+            const sheets = Array.from(document.styleSheets); let loaded = false;
+            return new Promise(resolve => {
+                requestAnimationFrame(() => {
+                    loaded = sheets.some(sheet => { if (sheet.href?.includes(href)) { try { const hasRules = sheet.cssRules.length > 0; if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; } console.warn(`⚠️ ${href} yüklendi, ancak içeriği boş.`); } catch (e) { /* CORS hatası perhebs */ } } return false; });
+                    resolve(loaded);
+                });
             });
         }
         function checkScriptLoaded(element, fileName) {
