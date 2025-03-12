@@ -464,7 +464,7 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
     </div>
     <script class="alternatively" src="../../src/components/importHeaderFooter.js" type="module" defer></script>
     <script class="alternatively" src="../page_aside.js" defer></script>
-    <script defer>
+    <script defer> 
         /*  class="alternatively"  */
         /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */
         const kaynaklar = {};
@@ -478,7 +478,7 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
             kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
         });
         async function initializeAlternatives() { await Promise.all(Array.from(document.querySelectorAll(".alternatively")).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
-        initializeAlternatives();
+        (async () => { await initializeAlternatives(); })();
         async function initializeResource(element) {
             const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
             if (!fileName) return;
@@ -524,7 +524,6 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
         function isStylesheetLoadedByHref(href) {
             const sheets = Array.from(document.styleSheets);
             let loaded = false;
-
             return new Promise(resolve => {
                 loaded = sheets.some(sheet => {
                     if (!sheet.href) { return false; }
@@ -534,8 +533,7 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
                             if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; }
                         } catch (e) { return false;/* CORS hatası veya diğer hatalar */ }
                     } return false;
-                });
-                resolve(loaded);
+                }); resolve(loaded);
             });
         }
         function checkScriptLoaded(element, fileName) {
