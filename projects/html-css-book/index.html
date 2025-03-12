@@ -477,12 +477,9 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
             const fileName = path.split('/').pop(); if (!fileName) return;
             const cleanPath = path.replace(/\.\.\//g, '').replace(/\.\//g, '').replace(/\/+/g, '/');
             kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
-
             if (host != 'mefamex.com') {
                 kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`);
             }
-
-
         });
         async function initializeAlternatives() { await Promise.all(Array.from(targetElements).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
         (async () => { await initializeAlternatives(); })();
@@ -551,7 +548,6 @@ Sitemap: https:// example .com/ sitemap-2.xml</code></pre>
         }
         function checkScriptLoaded(element, fileName) {
             if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
-            console.log(fileName + ' yükleniyor...');
             setTimeout(async () => {
                 try {
                     fetch(element.src, { method: "HEAD" }).then(response => {
