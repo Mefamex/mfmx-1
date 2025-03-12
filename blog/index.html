@@ -197,8 +197,8 @@
     </main>
     <script class="alternatively" src="../src/components/importHeaderFooter.js" type="module" defer></script>
     <script defer>
-        //  class="alternatively" 
-        // alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] }
+        /*  class="alternatively"  */
+        /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */
         const kaynaklar = {};
         const urlObj = new URL(location.href);
         const { host, origin } = urlObj;
@@ -238,10 +238,22 @@
                 if (isStylesheetLoadedByHref(fileName)) return;
                 const fallbackLink = document.createElement('link');
                 fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
-                let maxAttempts = 10;
-                const checkInterval = setInterval(() => { if (isStylesheetLoadedByHref(fileName) || --maxAttempts <= 0) { clearInterval(checkInterval); if (!isStylesheetLoadedByHref(fileName)) { loadFallbackScript(fileName); } } }, 100);
+                checkStyleLoaded(fallbackLink, fileName);
                 document.head.appendChild(fallbackLink);
             } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
+        }
+        function checkStyleLoaded(element, fileName) {
+            let maxAttempts = 10; let isLoaded = false;
+            element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); loadFallbackScript(fileName); };
+            element.onload = () => { isLoaded = true; clearInterval(checkInterval); };
+            const checkInterval = setInterval(() => {
+                if (--maxAttempts <= 0) {
+                    clearInterval(checkInterval);
+                    if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); }
+                    return;
+                }
+                if (isStylesheetLoadedByHref(fileName)) { isLoaded = true; clearInterval(checkInterval); }
+            }, 200);
         }
         function isStylesheetLoadedByHref(href) {
             return Array.from(document.styleSheets).some(sheet => {

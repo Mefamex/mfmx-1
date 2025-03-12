@@ -14,11 +14,10 @@ const getScriptPath = () => {
     const currentScript = Array.from(document.getElementsByTagName('script')).find(script => script.src && script.src.includes('importHeaderFooter.js'));
     if (currentScript?.src) return currentScript.src;
     console.log('HeaderFooter Script yolu bulunamadı! Varsayılan konum kullanılacak.');
-    return window.location.origin + '/src/components/';
+    return window.location.origin + '/src/components/importHeaderFooter.js';
 };
 
 const scriptPath = getScriptPath();
-
 
 'use strict';
 (async () => {
@@ -26,14 +25,14 @@ const scriptPath = getScriptPath();
     link.rel = 'stylesheet';
     if (!scriptPath) throw new Error('Script path bulunamadı');
     link.href = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
+    link.dataset.deneme = 'deneme';
     /*await new Promise((resolve, reject) => {
         link.onload = resolve;
         link.onerror = () => reject(new Error('CSS yüklenemedi'));
     });*/
-    await CreateFooter();
-    await CreateHeader();
+    document.head.appendChild(link);
+    (async () => { await CreateFooter(); await CreateHeader(); })();
 })();
-
 
 async function CreateFooter() {
     // Select / Create the footer
