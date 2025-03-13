@@ -14,12 +14,6 @@
     transition: all 0.1s ease;
 }
 
-@font-face {
-    font-family: system;
-    font-display: swap;
-    src: local(".SFNS-Regular"), local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
-}
-
 body {
     background-color: rgb(20, 20, 20);
     color: white;
