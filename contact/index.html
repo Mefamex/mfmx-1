@@ -186,7 +186,7 @@
     <!---->
     <!---->
     <!---->
-    <script defer>
+    <script id="alternativelyJS" type="text/javascript" defer>
         /*  class="alternatively"  */
         /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */
         const kaynaklar = {};
@@ -260,11 +260,19 @@
         }
         function checkScriptLoaded(element, fileName) {
             if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
+            if (element.readyState === 'complete' || element.readyState === 'loaded') { approvedLoad(); return; }
             setTimeout(async () => {
-                try { fetch(element.src, { method: "HEAD" }).then(response => { const contentType = response.headers.get("Content-Type") || ""; if (!contentType.includes("javascript")) { failedToLoad(`İçerik türü: ${contentType}`); return; } else { approvedLoad(); return }; }).catch(() => { console.error(`⚠️ ${fileName} doğrulanamadı, ancak hata alınmadı.`); loadFallbackScript(fileName); }); }
-                catch (error) { if ((element.textContent || '') && scriptContent.length > 0) { approvedLoad('içerik kontrolü'); return; } else { failedToLoad(text = "Doğrulanamadı"); return; } }
+                try {
+                    fetch(element.src, { method: "HEAD" })
+                        .then(response => { const contentType = response.headers.get("Content-Type") || ""; if (!contentType.includes("javascript")) { failedToLoad(`İçerik türü: ${contentType}`); } else { approvedLoad(); } })
+                        .catch(() => { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { console.error(`⚠️ ${fileName} doğrulanamadı.`); loadFallbackScript(fileName); } });
+                } catch (error) { failedToLoad("Doğrulanamadı"); }
             }, 500);
-            function failedToLoad(text = "") { element.dataset.failed = true; element.onerror = null; element.onload = null; console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}. Alternatif kaynak yükleniyor...`); element.remove(); loadFallbackScript(fileName); }
+            function failedToLoad(text = "") {
+                element.dataset.failed = true; element.onerror = null; element.onload = null;
+                console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}. Alternatif kaynak yükleniyor...`);
+                element.remove(); loadFallbackScript(fileName);
+            }
             function approvedLoad(text = "") { console.log(`✅ ${fileName} başarıyla yüklendi ${text ? '(' + text + ')' : ""}.`); }
         }
     </script>
