@@ -198,8 +198,7 @@
             } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
         }
         async function checkStyleLoaded(element, fileName) {
-            let maxAttempts = 10; // Arttırıldı
-            let isLoaded = false;
+            let maxAttempts = 10; let isLoaded = false;
             return new Promise((resolve, reject) => {
                 element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); reject(new Error('CSS yükleme hatası')); };
                 element.onload = () => { isLoaded = true; clearInterval(checkInterval); resolve(true); };
