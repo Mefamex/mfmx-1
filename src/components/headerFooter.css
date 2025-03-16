@@ -86,15 +86,9 @@ footer {
 
 
 ::-webkit-scrollbar {
-    /* for vertical scrollbars :*/
     width: calc(0.4rem + 0.4vw);
-    /* for horizontal scrollbars : */
     height: calc(0.4rem + 0.4vh);
     background-color: inherit;
-
-    @supports (overflow-scrolling: touch) {
-        display: none;
-    }
 }
 
 ::-webkit-scrollbar-thumb {
@@ -372,9 +366,8 @@ header {
     counter-reset: i;
     animation: entranceRight 0.3s ease-out;
     box-shadow: -35rem 42rem 5rem 40rem rgba(0, 0, 0, 0.8);
-    contain: layout style paint size;
+    /*contain: layout style paint size;*/
     content-visibility: auto;
-    contain-intrinsic-size: 0 500px;
 }
 
 #navBarHidden a {
@@ -409,7 +402,7 @@ header {
         left: 0;
         transform: translate3d(0, 0, 0);
         will-change: transform;
-        contain: layout style paint;
+        /*contain: layout style paint;*/
     }
 
     #headerDivLeft {
@@ -446,22 +439,20 @@ header {
         scroll-behavior: auto !important;
     }
 }*/
-@media (prefers-reduced-motion: reduce) {
+/*@media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
         transition: none !important;
         scroll-behavior: auto !important;
     }
-}
+}*/
 
 /* GPU Hızlandırma için Kompozit Katmanlar */
-header, #headerNavBar, #headerDivLeft, #navBarHidden {
+/*header, #headerNavBar, #headerDivLeft, #navBarHidden {
     transform: translateZ(0);
     will-change: transform, opacity;
     contain: layout style paint;
-    /* GPU Composite Layer */
     transform: translate3d(0, 0, 0);
-    /* Gereksiz Repaint'leri Önle */
     backface-visibility: hidden;
     perspective: 1000px;
-}
+}*/
