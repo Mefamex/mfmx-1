@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-03-16 
+ * @lastModified 2025-03-16-18:20 
  */
 
 const getScriptPath = () => {
