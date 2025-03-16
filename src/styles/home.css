@@ -68,9 +68,9 @@ body {
     height: 100vh;
     overflow: hidden;
     z-index: -99;
-    will-change: transform;
+    /*will-change: transform;*/
     content-visibility: auto;
-    contain: paint;
+    /*contain: paint;*/
 }
 
 #background_img img {
@@ -101,9 +101,7 @@ header h1 {
     font-size: 10vw;
     line-height: 0.8;
     text-shadow: 0.1rem 0.05rem 0.1rem rgba(0, 255, 0, 0.9), -0.05rem -0.15rem 0.1rem rgba(255, 0, 0, 0.9);
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: 0.4vw;
+    text-decoration: 0.4vw solid underline;
 }
 
 main {
@@ -116,7 +114,6 @@ main {
     width: 100%;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
     /* performans hızlandırma */
     /* will-change: transform; */
     /* content-visibility: auto; */
@@ -137,9 +134,9 @@ main #left_card {
     top: 0;
     left: 0;
     /* performans hızlandırma */
-    will-change: transform;
+    /*will-change: transform;*/
     content-visibility: auto;
-    contain: content;
+    /*contain: content;*/
     transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -177,14 +174,15 @@ main #left_card #mefamex_logo img {
     min-height: calc(95vh - 12vw);
     margin: 1rem 0 0 0;
     padding-inline: clamp(1rem, 3vw, 3rem);
+    padding-block: 1rem;
     gap: 2rem 0;
     align-content: center;
     justify-content: space-evenly;
     align-items: center;
     align-content: space-evenly;
     /* performans hızlandırma */
-    will-change: transform;
-    contain: content;
+    /*will-change: transform;*/
+    /*contain: content;*/
     content-visibility: auto;
 }
 
@@ -199,11 +197,11 @@ main #left_card #mefamex_logo img {
     justify-content: space-between;
     padding: 0.5rem 1.3rem;
     font-size: 1.2rem;
-    border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    border: 0.2rem solid rgba(255, 255, 255, 0.4);
     border-radius: 3.5em 1.5em;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.5);
+    /*-webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);*/
+    background-color: rgba(0, 0, 0, 1);
     filter: drop-shadow(0 0 0.5vw rgba(255, 255, 255, 0.2));
     transition: all 0.3s ease, outline 0.1s ease;
     -webkit-animation: opacity-0-1 2s normal 1s both;
@@ -211,16 +209,16 @@ main #left_card #mefamex_logo img {
     opacity: 0;
 
     /* performans hızlandırma */
-    will-change: transform;
-    content-visibility: auto;
+    /*will-change: transform;*/
+    /*content-visibility: auto;
     contain: paint;
-    transform: translateZ(0);
+    transform: translateZ(0);*/
 }
 
 .card:hover {
     transition: all 0.3s ease;
     box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7), 0 0 0.3rem rgba(255, 255, 255, 0.5);
-    background-color: rgba(0, 75, 75, 0.3);
+    background-color: rgb(0, 19, 19);
 
     h1 {
         text-decoration-color: rgb(0, 157, 255)
@@ -279,15 +277,13 @@ main #left_card #mefamex_logo img {
 }
 
 /* GPU Hızlandırma */
-.card, #background_img, header, #left_card {
+/*.card, #background_img, header, #left_card {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
-    /* Daha spesifik will-change kullanımı */
     will-change: transform, opacity;
-    /* Gereksiz repaint'leri önle */
     contain: layout style paint;
-}
+}*/
 
 /**/
 /**/
@@ -301,31 +297,21 @@ main #left_card #mefamex_logo img {
 /**/
 ::-webkit-scrollbar {
     width: 12px;
-    /* width of the scrollbar */
     height: 12px;
-    /* height of the scrollbar */
     background-color: #2f2f2f67;
-    /* dark gray background color */
     border-radius: 10px;
-    /* rounded corners for the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #7e7e7e8e;
-    /* dark gray thumb color */
     border-radius: 10px;
-    /* rounded corners for the thumb */
     border: 2px solid #ff000075;
-    /* dark gray border around the thumb */
 }
 
 ::-webkit-scrollbar-track {
     background-color: #2f2f2f79;
-    /* dark gray track color */
     border-radius: 10px;
-    /* rounded corners for the track */
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.527);
-    /* subtle shadow effect */
 }
 
 ::-webkit-scrollbar-button {

@@ -54,6 +54,10 @@ main {
 
     a {
         color: rgb(123, 255, 255);
+        cursor: pointer;
+        &:hover{
+            text-decoration-color: red;
+        }
     }
 }
 
@@ -70,7 +74,7 @@ main {
 
     h1 {
         text-align: center;
-        margin-block: 0 0.3rem;
+        margin-block: 0 1rem;
         font-size: 2.5em;
     }
 
@@ -212,14 +216,11 @@ main>.post>.postImage {
 
 main .post .postButtons {
     /* tag : div */
-    /* like : 👍👏❤️💖 💙💚🤍🩷 */
-    /* commnet : 💬🗨️📝💭✍️ */
-    /* share : 🔄🔁🔗🚀 */
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     row-gap: 0.5em;
     width: fit-content;
+    max-width: 100%;
     height: fit-content;
     padding-top: 0.3rem;
     align-self: flex-end;
@@ -228,15 +229,16 @@ main .post .postButtons {
     transform: translateY(0.6rem);
     /* GPU hızlandırma */
     transform: translateZ(0);
-    will-change: transform width;
-    contain: content;
+    /*will-change: transform width;*/
+    /*contain: content;*/
     backface-visibility: hidden;
     perspective: 1000px;
 
     button {
         /* tag : button */
         width: fit-content;
-        min-width: 8em;
+        height: fit-content;
+        min-width: 5em;
         background: #282828;
         color: #fff;
         padding: 0.5rem 1rem;
@@ -248,8 +250,8 @@ main .post .postButtons {
         transition: all 0.2s ease;
         /* GPU hızlandırma */
         transform: translateZ(0);
-        will-change: transform, background-color, border-color;
-        contain: content;
+        /*will-change: transform, background-color, border-color;
+        contain: content;*/
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         perspective: 1000px;
