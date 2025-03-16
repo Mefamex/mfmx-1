@@ -118,8 +118,8 @@ main {
     padding: 0;
     scroll-behavior: smooth;
     /* performans hızlandırma */
-    will-change: transform;
-    content-visibility: auto;
+    /* will-change: transform; */
+    /* content-visibility: auto; */
     /* contain: paint; */
 }
 
@@ -135,15 +135,15 @@ main #left_card {
     justify-items: center;
     animation: entranceLeft 1s cubic-bezier(1, 0, 0, 0);
     top: 0;
-    left: 0; 
+    left: 0;
     /* performans hızlandırma */
     will-change: transform;
     content-visibility: auto;
     contain: content;
-    transform: translateZ(0);  
+    transform: translateZ(0);
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; 
-    perspective: 1000px; 
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 main #left_card #mefamex_logo {
