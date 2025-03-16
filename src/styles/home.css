@@ -120,7 +120,7 @@ main {
     /* performans hızlandırma */
     will-change: transform;
     content-visibility: auto;
-    contain: paint;
+    /* contain: paint; */
 }
 
 main #left_card {
@@ -134,10 +134,16 @@ main #left_card {
     align-items: center;
     justify-items: center;
     animation: entranceLeft 1s cubic-bezier(1, 0, 0, 0);
+    top: 0;
+    left: 0; 
     /* performans hızlandırma */
     will-change: transform;
     content-visibility: auto;
-    contain: paint;
+    contain: content;
+    transform: translateZ(0);  
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; 
+    perspective: 1000px; 
 }
 
 main #left_card #mefamex_logo {
@@ -494,7 +500,7 @@ main #left_card #mefamex_logo img {
     }
 
     #left_card {
-        position: fixed;
+        position: fixed !important;
         width: 100% !important;
         margin-block: 0;
         margin-inline: auto;
