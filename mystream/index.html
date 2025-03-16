@@ -267,7 +267,7 @@
                 element.onload = () => { isLoaded = true; clearInterval(checkInterval); resolve(true); };
                 const checkInterval = setInterval(async () => {
                     if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); reject(new Error('CSS yükleme zaman aşımı')); } return; }
-                    try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) {loadFallbackScript(fileName); console.error('CSS kontrol hatası:', error); }
+                    try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) { loadFallbackScript(fileName); console.error('CSS kontrol hatası:', error); }
                 }, 500);
             });
         }
