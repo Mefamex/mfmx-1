@@ -52,7 +52,7 @@ main {
         backface-visibility: hidden;
     }
 
-    a{
+    a {
         color: rgb(123, 255, 255);
     }
 }
@@ -78,6 +78,7 @@ main {
         line-height: 1.4;
         margin-block: 0.4rem;
         font-size: 0.9rem;
+
         &::before {
             content: " ■ ";
             color: rgb(123, 255, 255);
@@ -282,27 +283,104 @@ main .post .postButtons {
     pointer-events: none;
 }
 
+
+
+#big-image {
+    /*div*/
+    box-sizing: border-box;
+    display: flex;
+    z-index: 1001;
+    width: 98vw;
+    height: calc(98dvh - 2rem);
+    margin: 0;
+    padding: 0 1%;
+    top: calc(1em + 1vh);
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 0.1em solid rgba(255, 255, 255, 0.4);
+    border-radius: 2em;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 0 50vh 50vh rgba(0, 0, 0, 0.5), 0 0 50vw 50vw rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.3rem);
+
+    button {
+        /* #big-image-close */
+        position: absolute;
+        top: 0.3em;
+        right: 0.3em;
+        z-index: 102;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+        border: 0.1rem solid rgb(255, 0, 0);
+        text-shadow: 0 0 0.1em white, 0 0 0.1em white, 0 0 0.2em white, 0 0 0.5em white, 0 0 1em white;
+        padding: 0.7em 1em;
+        font-size: calc(1vh + 0.5vw + 0.5em);
+        cursor: pointer;
+        border-radius: 40%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: all 100ms normal;
+
+        &:hover {
+            transition: all 200ms ease-out;
+            background-color: #343434;
+            color: white;
+            border-color: rgb(255, 100, 0);
+        }
+    }
+
+    picture {
+        box-sizing: border-box;
+        width: 98%;
+        height: auto;
+        max-width: 97vw;
+        max-height: min( calc(98dvh - 2rem), 98%);
+        object-fit: contain;
+        /*border: 2px solid white;*/
+        /*border-radius: 1em;*/
+
+        img {
+            object-fit: contain;
+            max-width: min( 97vw , 100% );
+            max-height: calc(97dvh - 4rem);
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.display-none {
+    transition: all 500ms ease-in-out;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
 @media screen and (max-width: 50rem) {
     main>#sectionWellcome {
         width: 95%;
         padding-inline: 0.5rem;
         margin-top: 2rem;
-        p{
+
+        p {
             font-size: 0.9em;
         }
     }
 
     main>.post {
-        max-width: 95%;
+        max-width: 99%;
         padding-inline: 0.5rem;
     }
 
     main>.post>.postParagraph {
         margin-bottom: 0;
     }
+
     main>.post>.postButtons {
         width: 100%;
-        button{
+
+        button {
             margin-inline: 0.5rem;
             padding-inline: 0.5rem;
         }

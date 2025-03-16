@@ -49,9 +49,9 @@
     <meta property="og:url" content="https://mefamex.com/mystream/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mefamex" />
-    <meta property="og:date" content="2025-03-13T02:00:00Z" />
+    <meta property="og:date" content="2025-03-16T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-03-13T02:00:00Z" />
+    <meta property="article:modified_time" content="2025-03-16T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -62,7 +62,7 @@
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
     <meta name="twitter:url" content="https://mefamex.com/mystream/" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-03-13T02:00:00Z" />
+    <meta name="twitter:date" content="2025-03-16T02:00:00Z" />
     <!---->
 </head>
 
@@ -78,7 +78,7 @@
             <p> <strong> Yasal Uyarı :</strong> Buradaki paylaşımlar, yalnızca kişisel bakış açıma dayanmaktadır. Herhangi bir resmi tavsiye veya garantili bilgi içermez. Okuduklarınızı kendi
                 sorumluluğunuzda değerlendirmenizi ve eleştirel bir gözle yaklaşmanızı önemle rica ederim.</p>
             <p> Görüş ve önerileriniz için <a href="https://mefamex.com/contact/" title="contact-me" aria-label="contant-me" target="_blank" rel="noopener">iletişime geçebilirsiniz</a>. </p>
-            <p>Açılış tarihi: 13.03.2025 || Son güncelleme tarihi: 13.03.2025</p>
+            <p>Açılış tarihi: 13.03.2025 || Son güncelleme tarihi: 16.03.2025</p>
         </section>
         <!---->
         <!---->
@@ -113,6 +113,15 @@
         <!---->
         <!---->
     </main>
+    <!---->
+    <!---->
+    <!---->
+    <div id="big-image" class="display-none">
+        <button id="big-image-close"><b>X</b></button>
+        <picture>
+            <img loading="eager" decoding="async" importance="high" role="img" src="pictures/converted/picture-001.webp" title alt />
+        </picture>
+    </div>
     <!---->
     <!---->
     <!---->
@@ -189,12 +198,19 @@
                         }
                     }
                 });
-
                 console.log('✅✅✅ Picture elementlerinin kaynakları güncellendi');
-            } catch (error) {
-                console.error('❌❌❌ Picture kaynak güncellemesi başarısız:', error);
-            }
+            } catch (error) { console.error('❌❌❌ Picture kaynak güncellemesi başarısız:', error); }
         }
+
+        const bigImage = document.querySelector("#big-image");
+        document.querySelectorAll("main picture").forEach((pictureElement) => {
+            pictureElement.style.cursor = "pointer";
+            pictureElement.onclick = () => {
+                bigImage.classList.remove("display-none");
+                bigImage.querySelector("img").src = pictureElement.querySelector("img").src;
+            };
+        });
+        document.querySelector("#big-image-close").onclick = () => bigImage.classList.add("display-none");
     </script>
     <script class="alternatively" src="script.js" defer></script>
     <script id="alternativelyJS" type="text/javascript" defer>

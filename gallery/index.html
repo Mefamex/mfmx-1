@@ -409,7 +409,6 @@
     <script class="alternatively" src="../src/components/importHeaderFooter.js" type="module" defer></script>
     <!-- -->
     <script defer>
-        const bigImage = document.querySelector("#big-image");
         document.querySelectorAll('input[name="sizee"]').forEach((checkbox) => {
             checkbox.style.display = "none";
             checkbox.parentElement.classList.toggle("label-secildi", checkbox.checked);
@@ -431,6 +430,7 @@
                 });
             };
         });
+        const bigImage = document.querySelector("#big-image");
         document.querySelectorAll(".card picture").forEach((pictureElement) => {
             pictureElement.style.cursor = "pointer";
             pictureElement.onclick = () => {
@@ -497,7 +497,6 @@
                     try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) { console.error('CSS kontrol hatası:', error); }
                 }, 500);
             });
-        }
         }
         function isStylesheetLoadedByHref(href) {
             const sheets = Array.from(document.styleSheets);
