@@ -334,7 +334,11 @@
             setTimeout(async () => {
                 try {
                     fetch(element.src, { method: "HEAD" })
-                        .then(response => { const contentType = response.headers.get("Content-Type") || ""; if (!contentType.includes("javascript")) { failedToLoad(`İçerik türü: ${contentType}`); } else { approvedLoad(); } })
+                        .then(response => {
+                            const contentType = response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") || contentType.includes("text/js")) { approvedLoad(); } else {
+                                if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { failedToLoad(`Geçersiz içerik türü: ${contentType}`); }
+                            }
+                        })
                         .catch(() => { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { console.error(`⚠️ ${fileName} doğrulanamadı.`); loadFallbackScript(fileName); } });
                 } catch (error) { failedToLoad("Doğrulanamadı"); }
             }, 500);
