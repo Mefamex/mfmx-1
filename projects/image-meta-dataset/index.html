@@ -274,8 +274,8 @@ display_metadata(output_path)</code></pre>
                 element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); reject(new Error('CSS yükleme hatası')); };
                 element.onload = () => { isLoaded = true; clearInterval(checkInterval); resolve(true); };
                 const checkInterval = setInterval(async () => {
-                    if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); reject(new Error('CSS yükleme zaman aşımı')); } return; }
-                    try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) { console.error('CSS kontrol hatası:', error); }
+                    if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); reject(new Error('CSS yükleme zaman aşımı')); } return; }
+                    try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) { loadFallbackScript(fileName); console.error('CSS kontrol hatası:', error); }
                 }, 500);
             });
         }
