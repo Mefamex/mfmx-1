@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-03-12 
+ * @lastModified 2025-03-16 
  */
 
 const getScriptPath = () => {
@@ -104,7 +104,7 @@ async function CreateHeader() {
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
 
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
-    setTimeout(() => { if (window.scrollY < '150') window.scrollTo({ top: 0, behavior: 'smooth' }) }, 150);;
+    setTimeout(() => { if (window.scrollY < '150' && !window.location.hash) window.scrollTo({ top: 0, behavior: 'smooth' }) }, 100);
     /*const style = document.createElement('style');style.innerHTML = ``;header.appendChild(style);*/
 
 }

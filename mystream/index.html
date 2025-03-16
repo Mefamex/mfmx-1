@@ -84,48 +84,21 @@
         <!---->
         <!---->
         <!-- resimlerin source'una js ile mutlak url de ekle -->
-        <section class="post" data-postId="1" data-date="13.03.2025" data-title="Post Title" data-authot="@mefamex">
-            <div class="postHeader">
-                <picture class="postHeaderImage noSelect noDrag noPointer">
-                    <source srcset="pp.jpg" />
-                    <img class="noDrag" loading="lazy" decoding="async" importance="low" role="img" src="pp.png" title="titleHere" alt="comment" />
-                </picture>
-                <div class="postHeaderTitle">
-                    <h2 class="postTitle"> Post Title </h2>
-                    <span class="postTime">@mefamex ~ 13.03.2025</span>
-                </div>
-                <button class="noSelect noDrag">ⓘ</button>
-            </div>
+        <section id="post-1" class="post" data-postid="1" data-date="13.03.2025" data-title="Post Title" data-author="@mefamex">
             <p class="postParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet suscipit voluptate possimus, mollitia vel blanditiis ex cupiditate officiis saepe
                 repudiandae distinctio similique eligendi quaerat eos culpa numquam quae quo facere error dicta expedita, consequatur incidunt minima. Sint magni quis neque, placeat eum, pariatur
                 saepe aspernatur sit, natus recusandae beatae iure molestiae vero eius! Necessitatibus tempora impedit aperiam deleniti vitae eos voluptatum, reiciendis rerum dicta nobis, harum sequi
                 dolor cum odio minima neque sunt, repellendus quos illum minus sapiente enim? Molestias, porro ab voluptatibus ullam amet praesentium accusamus perspiciatis, a quam maxime, repudiandae
                 aliquam inventore excepturi! Excepturi voluptatum ab non.</p>
-            <picture class="postImage noDrag">
+            <picture class="postImage noSelect noDrag">
                 <source srcset="" />
                 <img class="noDrag" loading="lazy" decoding="async" importance="low" role="img" src="a.png" alt="comment" />
             </picture>
-            <div class="postButtons noSelect noDrag">
-                <button class="buttonLike noSelect noDrag" onclick="buttonLikeClicked">👍 Beğen </button>
-                <button class="buttonComment noSelect noDrag">🗨️ Yorum yapma </button>
-                <button class="buttonShare noSelect noDrag">🚀 Paylaş </button>
-            </div>
         </section>
         <!---->
         <!---->
         <!---->
-        <section class="post" data-postId="2" data-date="13.03.2025" data-title="Post Title">
-            <div class="postHeader">
-                <picture class="postHeaderImage noSelect noDrag noPointer">
-                    <source srcset="pp.jpg" />
-                    <img class="noDrag" loading="lazy" decoding="async" importance="low" role="img" src="pp.png" title="titleHere" alt="comment" />
-                </picture>
-                <div class="postHeaderTitle">
-                    <h2 class="postTitle"> Post Title </h2>
-                    <span class="postTime">@mefamex ~ 13.03.2025</span>
-                </div>
-                <button class="noSelect noDrag">ⓘ</button>
-            </div>
+        <section id="post-2" class="post" data-postid="2" data-date="13.03.2025" data-title="Post Title" data-author="@mefamex">
             <p class="postParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eveniet suscipit voluptate possimus, mollitia vel blanditiis ex cupiditate officiis saepe
                 repudiandae distinctio similique eligendi quaerat eos culpa numquam quae quo facere error dicta expedita, consequatur incidunt minima. Sint magni quis neque, placeat eum, pariatur
                 saepe aspernatur sit, natus recusandae beatae iure molestiae vero eius! Necessitatibus tempora impedit aperiam deleniti vitae eos voluptatum, reiciendis rerum dicta nobis, harum sequi
@@ -135,11 +108,6 @@
                 <source srcset="" />
                 <img class="noDrag" loading="lazy" decoding="async" importance="low" role="img" src="a.png" title="titleHere" alt="comment" />
             </picture>
-            <div class="postButtons noSelect noDrag">
-                <button class="buttonLike noSelect noDrag" onclick="buttonLikeClicked">👍 Beğen </button>
-                <button class="buttonComment noSelect noDrag">🗨️ Yorum yapma </button>
-                <button class="buttonShare noSelect noDrag">🚀 Paylaş </button>
-            </div>
         </section>
         <!---->
         <!---->
@@ -149,8 +117,87 @@
     <!---->
     <!---->
     <script class="alternatively" src="../src/components/importHeaderFooter.js" type="module" defer></script>
+    <script type="text/javascript">
+        buttonAllEmojisList = { 'options': ['ⓘ'], 'like': ['👍'], 'comment': ['💬'], 'share': ['🔄'] };
+        function buttonRandomEmoji(buttonType) { const emojis = buttonAllEmojisList[buttonType]; return emojis[Math.floor(Math.random() * emojis.length)] || " "; }
+        if (typeof buttonOptionsClicked !== 'function') { window.buttonOptionsClicked = function (event) { return ""; }; }
+        if (typeof buttonLikeClicked !== 'function') { window.buttonLikeClicked = function (event) { return ""; }; }
+        if (typeof buttonCommentClicked !== 'function') { window.buttonCommentClicked = function (event) { return ""; }; }
+        if (typeof buttonShareClicked !== 'function') { window.buttonShareClicked = function (event) { return ""; }; }
+
+        /* tüm postları yeniden düzenle */
+        try { document.querySelectorAll('.post').forEach(post => postReorganize(post)); }
+        catch (error) { console.error('Hata:', error); }
+
+        updateImageSources();
+
+        async function postReorganize(post) {
+            post.id = 'post-' + post.dataset.postid;
+            const postHeader = document.createElement('div');
+            postHeader.classList.add('postHeader');
+            postHeader.innerHTML = `
+                <picture class="postHeaderImage noSelect noDrag noPointer">
+                    <source srcset="pp.jpg" />
+                    <img class="noDrag" loading="lazy" decoding="async" importance="low" role="img" src="pp.png" title="pp" alt="comment" />
+                </picture>
+                <div class="postHeaderTitle">
+                    <h2 class="postTitle">${post.dataset.title || 'Post Title'}</h2>
+                    <span class="postTime">${post.dataset.author || '@mefamex'} ~ ${post.dataset.date || '13.03.2025'}</span>
+                </div> `;
+            post.prepend(postHeader);
+
+            /* optionsButton : last element of postHeader */
+            const optionsButton = document.createElement('button');
+            optionsButton.classList.add('buttonOptions', 'noSelect', 'noDrag');
+            optionsButton.onclick = buttonOptionsClicked;
+            optionsButton.innerHTML = `${buttonRandomEmoji('options')}`;
+            post.querySelector('.postHeader').appendChild(optionsButton);
+
+            /* postButtons */
+            const postButtons = document.createElement('div');
+            postButtons.classList.add('postButtons', 'noSelect', 'noDrag');
+            postButtons.innerHTML = `
+                <button class="buttonLike noSelect noDrag" onclick="buttonLikeClicked"> 👍 Beğen </button>
+                <button class="buttonComment noSelect noDrag" onclick="buttonCommentClicked">🗨️ Yorum yapma </button>
+                <button class="buttonShare noSelect noDrag" onclick="buttonShareClicked">🚀 Paylaş </button>
+            `;
+            post.appendChild(postButtons);
+        }
+
+        async function updateImageSources() {
+            try {
+                document.querySelector('main').querySelectorAll('picture').forEach(picture => {
+                    const baseUrl = new URL(window.location.href).origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1)
+                    const sources = picture.querySelectorAll('source');
+                    sources.forEach(source => {
+                        const sourceSrcset = source.getAttribute('srcset');
+                        if (sourceSrcset) {
+                            const absoluteSourceSrcset = new URL(sourceSrcset, baseUrl).href;
+                            const newSource = document.createElement('source');
+                            newSource.setAttribute('srcset', absoluteSourceSrcset);
+                            picture.prepend(newSource);
+                        }
+                    });
+                    const img = picture.querySelector('img');
+                    if (img) {
+                        const imgSrc = img.getAttribute('src');
+                        if (imgSrc) {
+                            const absoluteImgSrc = new URL(imgSrc, baseUrl).href;
+                            const newSource = document.createElement('source');
+                            newSource.setAttribute('srcset', absoluteImgSrc);
+                            picture.prepend(newSource);
+                        }
+                    }
+                });
+
+                console.log('✅✅✅ Picture elementlerinin kaynakları güncellendi');
+            } catch (error) {
+                console.error('❌❌❌ Picture kaynak güncellemesi başarısız:', error);
+            }
+        }
+    </script>
     <script class="alternatively" src="script.js" defer></script>
-    <script id="alternativelyJS" type="text/javascript" defer >
+    <script id="alternativelyJS" type="text/javascript" defer>
         /*  class="alternatively"  */
         /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */
         const kaynaklar = {};
