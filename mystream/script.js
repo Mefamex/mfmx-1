@@ -9,7 +9,7 @@
  * @lastModified 2025-03-16
  */
 
-buttonAllEmojisList = { 'options': ['ⓘ'], 'like': ['👍', '👏', '❤️', '💖', '💙', '💚', '🤍', '🩷'], 'comment': ['💬', '🗨️', '📝', '💭', '✍️'], 'share': ['🔄', '🔁', '🔗', '🚀'] };
+buttonAllEmojisList = { 'options': ['ⓘ','⚙️'], 'like': ['👍', '👏', '❤️', '💖', '💙', '💚', '🤍', '🩷'], 'comment': ['💬', '🗨️', '📝', '💭', '✍️'], 'share': ['🔄', '🔁', '🔗', '🚀'] };
 function buttonRandomEmoji(buttonType) { const emojis = buttonAllEmojisList[buttonType]; return emojis[Math.floor(Math.random() * emojis.length)] || " "; }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -122,7 +122,6 @@ function buttonShareClicked(event) {
     const post = button.closest('.post'); if (!post) return;
     const sharedCount = (parseInt(button.dataset.sharedCount) || 0) + 1;
     button.dataset.sharedCount = sharedCount; button.dataset.lastClicked = Date.now();
-    buttonShareDefText(button);
     setTimeout(() => { buttonShareClickedAfterDelay(button) }, 3000);
 
     const shareUrl = `${window.location.origin}${window.location.pathname}#${post.id}`;
