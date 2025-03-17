@@ -33,7 +33,6 @@ body {
     /* Paint containment */
     contain: content;
     /* Layer promotion */
-    will-change: transform, opacity;
 
     &>* {
         flex-grow: 1;
@@ -93,16 +92,18 @@ body {
     margin: 0;
     gap: 3rem 1rem;
     transform: translateZ(0);
-    /*will-change: transform;*/
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
     &>section {
         opacity: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
-        flex-grow: 1;
-        flex-flow: 1;
         max-width: min(95vw, 100%);
         height: auto;
         background-color: rgb(5, 5, 5);
@@ -115,7 +116,6 @@ body {
         box-shadow: -0.1rem -0.2rem 0.1rem rgba(255, 255, 255, 0.4), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.4), 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 
         /* Performans optimizasyonları */
-        /*will-change: border-color, box-shadow, transform, opacity, background-color;*/
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         transform: translateZ(0);
@@ -183,7 +183,6 @@ body {
     border-color: rosybrown;
     border-left: 0.15em ridge #00965a;
     border-right-color: white;
-    will-change: transform, opacity, background-color;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
@@ -223,7 +222,6 @@ body {
     width: 13em;
     height: auto;
     box-sizing: border-box;
-    will-change: width, display;
     padding: 1rem 0.3rem 0 0.3rem;
     border: 0.1rem solid rgba(255, 255, 255, 0.2);
     background-image: linear-gradient(to right, rgba(0, 255, 255, 0.1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 255, 255, 0.1));
@@ -231,7 +229,6 @@ body {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    will-change: width, opacity, visibility;
 
     &.closed-aside {
         -webkit-animation: width-down-13-0 0.2s ease-out forwards;
@@ -278,7 +275,6 @@ body {
             border-style: solid;
             border-color: rgba(240, 248, 255, 0.2);
             border-radius: 1rem 0 0 1rem;
-            will-change: background-color, border-color;
 
             .p_tooltip {
                 margin-left: auto;
