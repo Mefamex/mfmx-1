@@ -9,6 +9,7 @@ Allow: /projects
 Allow: /gallery
 Allow: /software
 Allow: /the-mefamex-project
+Allow: /mystream
 Allow: /sitemap.xml
 Allow: *.html
 Allow: *.jpg
