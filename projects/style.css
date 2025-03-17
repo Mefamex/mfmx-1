@@ -13,7 +13,6 @@
 #main_container main {
     /* GPU hızlandırma */
     transform: translateZ(0);
-    will-change: transform;
 
     .card {
         max-width: 30rem;
@@ -61,99 +60,132 @@
         margin-bottom: 0.5rem;
 
     }
+}
 
-    #projects-search {
-        display: none;
-        /* when js is enabled, it will be flex */
-        flex-basis: 100%;
-        max-width: 95%;
-        min-height: 5rem;
-        margin-block: -2rem 3rem;
-        margin-inline: 1%;
+#projects-search {
+    display: none;
+    /* when js is enabled, it will be flex */
+    flex-basis: 100% !important;
+    max-width: 95% !important;
+    min-height: 5rem !important;
+    margin-block: -2rem 3rem !important;
+    margin-inline: 1% !important;
 
-        h2 {
-            margin-inline: auto;
-            justify-self: center;
-            width: 80%;
-            background-color: rgb(32, 32, 32);
-            border: 0.01em solid rgba(255, 255, 255, 0.3);
-            color: rgb(255, 255, 255);
+    h2 {
+        margin-inline: auto;
+        justify-self: center;
+        width: 80%;
+        background-color: rgb(32, 32, 32);
+        border: 0.01em solid rgba(255, 255, 255, 0.3);
+        color: rgb(255, 255, 255);
+    }
+}
+
+#search-form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    align-items: center;
+
+    #search {
+        width: 18rem;
+        flex-grow: 1;
+        padding: 0.5rem;
+        margin: auto;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.7);
         }
+    }
+}
 
-        #search-form {
-            display: flex;
-            flex-flow: row wrap;
-            gap: 1rem;
-            align-items: center;
+#search-form fieldset {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 1rem;
+    margin: 0;
+    width: 28rem;
+    flex-grow: 10;
+    justify-content: space-evenly;
+    border-radius: 1em;
+    border-color: rgba(255, 255, 255, 0.4);
 
-            #search {
-                width: 18rem;
-                flex-grow: 1;
-                padding: 0.5rem;
-                margin: auto;
-                border: 1px solid rgba(255, 255, 255, 0.5);
-                border-radius: 0.5rem;
-                background-color: rgba(255, 255, 255, 0.1);
-                color: white;
+    & label {
+        /* Seçim engelleme için cross-browser desteği */
+        -webkit-user-select: none;
+        -moz-user-select: -moz-none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        /* Flex yapısı için cross-browser desteği */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        /* Boyutlandırma ve büyüme */
+        flex-shrink: 1;
+        flex-grow: 1;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        -ms-flex-negative: 1;
+        padding: 1.5vh 0.5em;
+        max-width: 10em;
+        margin: 0.5em;
+        /* Hizalama */
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        /* Görünüm */
+        border-radius: 0.5em;
+        cursor: pointer;
+        color: white;
+        border: 0.1rem solid rgba(0, 255, 251, 0.2);
+        /* Geçiş efektleri */
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        /* GPU hızlandırma */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 
-                &::placeholder {
-                    color: rgba(255, 255, 255, 0.7);
-                }
-            }
-
-            fieldset {
-                display: flex;
-                flex-flow: row wrap;
-                padding: 0 1rem;
-                margin: 0;
-                width: 28rem;
-                flex-grow: 10;
-                justify-content: space-evenly;
-                border-radius: 1em;
-                border-color: rgba(255, 255, 255, 0.4);
-
-                label {
-                    -moz-user-select: -moz-none;
-                    -khtml-user-select: none;
-                    -webkit-user-select: none;
-                    -o-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-
-                    display: flex;
-                    flex-direction: row;
-                    margin: 0.5em;
-                    padding: 1.5vh 0.5em;
-                    max-width: 10em;
-                    flex-grow: 1;
-                    flex-shrink: 1;
-                    justify-content: center;
-                    border-radius: 0.5em;
-                    cursor: pointer;
-                    color: white;
-                    border: 0.1rem solid rgba(0, 255, 251, 0.2);
-
-                    &:hover {
-                        border-color: rgba(255, 255, 255, 0.7);
-                        /* Üzerine gelindiğinde kenar rengi */
-                    }
-                }
-
-                .label-secildi {
-                    background-color: rgb(255, 255, 255);
-                    color: black;
-                    font-weight: bold;
-                    border-color: blue;
-                }
-
-                .count {
-                    margin: 0 0.3rem;
-                    color: #888;
-                    font-size: 0.8em;
-                    align-content: center;
-                }
-            }
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.7);
+            /* Üzerine gelindiğinde kenar rengi */
         }
+    }
+
+    .label-secildi {
+        background-color: rgb(255, 255, 255);
+        color: black;
+        font-weight: bold;
+        border-color: blue;
+    }
+
+    .count {
+        margin: 0 0.3rem;
+        color: #888;
+        font-size: 0.8em;
+        align-content: center;
+    }
+}
+
+@supports not (display: flex) {
+    #search-form fieldset label {
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        min-width: 8em;
     }
 }
 

@@ -16,9 +16,19 @@
     word-wrap: break-word;
     overflow-wrap: anywhere;
     box-sizing: border-box;
-    text-rendering: optimizeSpeed;
+    /* Font düzgünleştirme için cross-browser desteği */
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    @supports not (font-smooth: always) {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
 }
 
 html {
