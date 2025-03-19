@@ -100,12 +100,17 @@ async function CreateAside() {
 
 
     aside.querySelector('h2').addEventListener('click', () => aside_change_visiblety());
-    function aside_change_visiblety() {
+    function aside_change_visiblety(forceClose = false) {
         if (aside.getBoundingClientRect().top > 6 * parseFloat(getComputedStyle(document.documentElement).fontSize)) aside.classList.remove('closed-aside');
-        else aside.classList.toggle('closed-aside');
+        else {
+            if (forceClose) aside.classList.add('closed-aside');
+            else aside.classList.toggle('closed-aside');
+        }
+
+
         aside_button.classList = aside.classList;
     }
-    setTimeout(aside_change_visiblety, 2000);
+    setTimeout(() => aside_change_visiblety(forceClose = true), 2000);
 }
 
 

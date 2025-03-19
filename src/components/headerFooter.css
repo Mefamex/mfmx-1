@@ -301,10 +301,15 @@ header>* {
     padding-inline: 0.5em;
 }
 
-#headerNavBar>a {
-    display: block;
+#headerNavBar a {
+    /* Flex container yapısı */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-content: center;
+
     text-decoration: none;
+    line-height: normal;
     padding-inline: 1dvw;
     height: 80%;
     background-color: rgba(0, 0, 0, 0.81);
@@ -313,10 +318,12 @@ header>* {
     border-radius: 1rem;
     border: 0.1em solid rgba(255, 255, 255, 0.4);
     transition: all 0.2s cubic-bezier(0.17, 0, 0.15, 0.99);
+    /* Animasyon ve GPU hızlandırma */
     transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 }
 
-#headerNavBar>a:hover {
+#headerNavBar a:hover {
     background-color: whitesmoke;
     color: black;
 }
