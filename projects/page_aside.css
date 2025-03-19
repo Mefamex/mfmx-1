@@ -219,7 +219,7 @@ body {
     transform: translateZ(0);
 }
 
-#main_container aside #main_container aside.closed-aside {
+#main_container aside.closed-aside {
     -webkit-animation: width-down-13-0 0.2s ease-out forwards;
     animation: width-down-13-0 0.2s ease-out forwards;
 }
