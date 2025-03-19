@@ -159,11 +159,11 @@ header {
     box-shadow: 0 0.7rem 0.5rem 0.7rem rgba(0, 0, 0, 0.7), 0 1vh 0.5vh rgba(0, 0, 0, 0.4), 0 2vh 1vh rgba(0, 0, 0, 0.4);
     z-index: 1000;
     transition: height 1s ease-out;
+}
 
-    &>* {
-        -webkit-animation: opacity-0-1 1.5s ease-in-out;
-        animation: opacity-0-1 1.5s ease-in-out;
-    }
+header>* {
+    -webkit-animation: opacity-0-1 1.5s ease-in-out;
+    animation: opacity-0-1 1.5s ease-in-out;
 }
 
 @-webkit-keyframes opacity-0-1 {
@@ -241,14 +241,18 @@ header {
     border-radius: 1.5rem;
     -webkit-backdrop-filter: blur(0.1rem);
     backdrop-filter: blur(0.1rem);
+}
 
-    @supports (backdrop-filter: blur(0)) {
-        backdrop-filter: blur(0.1rem);
+@supports (backdrop-filter: blur(0)) {
+    #headerDivLeft {
         -webkit-backdrop-filter: blur(0.1rem);
+        backdrop-filter: blur(0.1rem);
         background-color: rgba(14, 16, 19, 0.8);
     }
+}
 
-    @supports not (backdrop-filter: blur(0)) {
+@supports not (backdrop-filter: blur(0)) {
+    #headerDivLeft {
         background-color: rgba(14, 16, 19, 0.95);
     }
 }
@@ -388,13 +392,20 @@ header {
     padding: 1rem;
     letter-spacing: 0.15rem;
     text-decoration: none;
+    /* Geçiş efekti için */
+    transition: all 0.2s ease;
+    /* GPU hızlandırma */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
 
-    &:hover,
-    &:focus {
-        background-color: black;
-        transform: scale(1.1) translateY(-0.2rem);
-        color: white;
-    }
+#navBarHidden a:hover,
+#navBarHidden a:focus {
+    background-color: black;
+    transform: translateX(-0.5rem);
+    color: white;
+    border-color: rgb(0, 191, 255);
+    outline: none;
 }
 
 #navBarHidden .current_page {
@@ -412,7 +423,6 @@ header {
         left: 0;
         transform: translate3d(0, 0, 0);
         will-change: transform;
-        /*contain: layout style paint;*/
     }
 
     #headerDivLeft {
