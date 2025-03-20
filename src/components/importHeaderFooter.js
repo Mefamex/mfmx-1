@@ -8,24 +8,25 @@
  * @since 2024-08-20 
  * @lastModified 2025-03-16-18:20 
  */
+'use strict';
 
-const getScriptPath = () => {
-    if (document.currentScript?.src) return document.currentScript.src;
-    const currentScript = Array.from(document.getElementsByTagName('script')).find(script => script.src && script.src.includes('importHeaderFooter.js'));
-    if (currentScript?.src) return currentScript.src;
-    console.log('HeaderFooter Script yolu bulunamadı! Varsayılan konum kullanılacak.');
-    return window.location.origin + '/src/components/importHeaderFooter.js';
+function getScriptPath(){
+    if (document.currentScript?.src) return new URL(document.currentScript.src).toString();
+    const currentScript = Array.from(document.getElementsByTagName('script')).find(script => script.src?.includes('importHeaderFooter.js'));
+    if (currentScript?.src) return new URL(currentScript.src).toString();
+    const fallbackPath = new URL('/src/components/importHeaderFooter.js', window.location.origin).toString();
+    console.log('⚠️ HeaderFooter Script yolu bulunamadı! Varsayılan konum kullanılıyor:', fallbackPath);
+    return fallbackPath;
 };
 
-const scriptPath = getScriptPath();
 
-'use strict';
+let scriptPath = getScriptPath();
+
 (async () => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     if (!scriptPath) throw new Error('Script path bulunamadı');
     link.href = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
-    link.dataset.deneme = 'deneme';
     /*await new Promise((resolve, reject) => {
         link.onload = resolve;
         link.onerror = () => reject(new Error('CSS yüklenemedi'));
@@ -39,10 +40,9 @@ const scriptPath = getScriptPath();
 
 async function CreateFooter() {
     // Select / Create the footer
-    let footer = document.querySelector('body footer') || document.createElement('footer');
-
+    let footer = document.querySelector('body > footer') || document.createElement('footer');
+    footer.id = "footer"; footer.innerHTML = '';
     // Build the footer
-    footer.id = "footer";
     footer.innerHTML = `<h1 id="footerText"> 2014-&infin; &copy; MEFAMEX. ALL RIGHT RESERVED</h1>`;
 
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
@@ -52,8 +52,8 @@ async function CreateFooter() {
 
 async function CreateHeader() {
     // Select / Create the header
-    let header = document.querySelector('body header') || document.createElement('header');
-
+    let header = document.querySelector('body > header') || document.createElement('header');
+    header.id = "header"; header.innerHTML = '';
     // Build the header
     const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
     headerDivLeftSpace.id = "headerDivLeftSpace"; //for divleft to center

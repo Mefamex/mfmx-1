@@ -23,7 +23,7 @@
     <link rel="preload" href="../page_aside.css" as="style" />
     <link rel="stylesheet" href="../page_aside.css" class="alternatively" />
     <link rel="preload" as="style" href="../../src/components/headerFooter.css" class="alternatively" />
-    <link rel="preload" as="script" href="../../src/components/importHeaderFooter.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="../../src/components/importHeaderFooter.js" />
     <!-- favicon set -->
     <link rel="icon" sizes="16x16" href="../../src/assets/images/mfmx/mfmx-16.png" type="image/png" />
     <link rel="icon" sizes="32x32" href="../../src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -63,11 +63,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" crossorigin="anonymous"  defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" crossorigin="anonymous"  defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" crossorigin="anonymous"  defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" crossorigin="anonymous"  defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" crossorigin="anonymous"  defer>  </script>
 </head>
 
 <body>
@@ -203,7 +203,7 @@
         </main>
         <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"> </aside>
     </div>
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" type="module" defer></script>
+    <script class="alternatively" src="../../src/components/importHeaderFooter.js" defer></script>
     <script class="alternatively" src="../page_aside.js" defer>  </script>
     <script id="alternativelyJS" type="text/javascript" defer>
         /*  class="alternatively"  */
@@ -217,8 +217,8 @@
             const path = (element.getAttribute('src') || element.getAttribute('href')); if (!path) return;
             const fileName = path.split('/').pop(); if (!fileName) return;
             const cleanPath = path.replace(/\.\.\//g, '').replace(/\.\//g, '').replace(/\/+/g, '/');
-            kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
-            if (host != 'mefamex.com') { kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`); }
+            kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `../${path}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `http://${host}/${cleanPath}`, `http://${host}/${firstSegment}/${cleanPath}`];
+            if (host != 'mefamex.com') { kaynaklar[fileName].push(`http://mefamex.com/${cleanPath}`, `http://mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`); }
         });
         async function initializeAlternatives() { await Promise.all(Array.from(targetElements).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
         (async () => { await initializeAlternatives(); })();
@@ -277,15 +277,14 @@
             /*return new Promise(resolve => { const check = () => { const loaded = Array.from(document.styleSheets).some(sheet => sheet.href && sheet.href.includes(href));  if (loaded) resolve(true); else requestAnimationFrame(check); };requestAnimationFrame(check); });*/
         }
         function checkScriptLoaded(element, fileName) {
-            if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
+            if (element.dataset.failed) { failedToLoad(); return; }
             if (element.readyState === 'complete' || element.readyState === 'loaded') { approvedLoad(); return; }
             setTimeout(async () => {
                 try {
                     fetch(element.src, { method: "HEAD" })
                         .then(response => {
-                            const contentType = response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") || contentType.includes("text/js")) { approvedLoad(); } else {
-                                if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { failedToLoad(`Geçersiz içerik türü: ${contentType}`); }
-                            }
+                            const contentType = response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") || contentType.includes("text/js") ) { approvedLoad(); }
+                            else { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { failedToLoad(`Geçersiz içerik türü: ${contentType}`); } }
                         })
                         .catch(() => { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { console.error(`⚠️ ${fileName} doğrulanamadı.`); loadFallbackScript(fileName); } });
                 } catch (error) { failedToLoad("Doğrulanamadı"); }
