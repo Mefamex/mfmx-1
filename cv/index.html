@@ -24,7 +24,7 @@
     <!---->
     <!-- Performans için preload -->
     <link rel="preload" as="style" href="../src/components/headerFooter.css" class="alternatively" />
-    <link rel="preload" as="script" href="../src/components/importHeaderFooter.js" crossorigin="anonymous" />
+    <link rel="preload" as="script" href="../src/components/importHeaderFooter.js" />
     <!---->
     <!-- Stil Optimizasyonu -->
     <link rel="stylesheet" href="../src/components/headerFooter.css" />
@@ -197,8 +197,8 @@
         #personal-information-content,
         #personal-information-content2 {
             height: min-content;
-            -moz-column-count: 2;
             column-count: 2;
+            columns: 2;
         }
 
         h2,
@@ -398,8 +398,8 @@
                     margin-right: 0;
                     height: min-content;
                     width: fit-content;
-                    -moz-column-count: 1;
                     column-count: 1;
+                    columns: 1;
                 }
 
                 #software {
@@ -420,7 +420,7 @@
             #CV .container {
                 padding: 1rem;
                 height: fit-content;
-                flex-grow: 100%;
+                flex-basis: 100%;
             }
 
             .history-section {
@@ -729,7 +729,7 @@
         </div>
     </main>
     <div id="updated-on" name="updated-on , updated">- - - updated on 08.12.2024 - - -</div>
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" type="module" defer></script>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
     <script id="alternativelyJS" type="text/javascript" defer>
         /*  class="alternatively"  */
         /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */

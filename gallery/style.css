@@ -95,10 +95,11 @@ main {
 
 main #mainWellcome {
     /* section */
-    width: 90% auto;
+    width: fit-content;
+max-width: 100%;
     height: min-content;
     margin-block: 1em;
-    margin-inline: 1em;
+    margin-inline: auto;
     padding: 0 1em 2em 1em;
     align-items: center;
     border: 0.3rem solid rgba(255, 255, 255, 0.2);
