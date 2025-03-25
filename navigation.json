@@ -70,6 +70,14 @@
                             "description": " Zaman Yönetimi ve Planlama",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 3
+                        },
+                        {
+                            "title": "Zaman Yönetimi",
+                            "href": "https://mefamex.com/projects/ozlu-sozler/",
+                            "isVisible": true,
+                            "description": " Özlü Sözler ",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+                            "order": 4
                         }
                     ]
                 },
@@ -170,6 +178,6 @@
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
         "baseUrl": "https://mefamex.com",
         "languageCode": "tr",
-        "lastUpdated": "2025-03-12"
+        "lastUpdated": "2025-03-25"
     }
 }
