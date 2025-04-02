@@ -33,6 +33,7 @@ Altın oran, yaklaşık olarak 1.61803398875
 - BLOG : Kur
 - PROJ : renklendir
 - GALRY: catogrized , rovşan behbutov
+- CV   : dil için Yetkinlikler
 - /software/index.html
 - Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
 
