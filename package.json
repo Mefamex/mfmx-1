@@ -1,5 +1,5 @@
 {
-    "name": "mefamex",
+    "name": "mefamex-personal-website",
     "version": "1.0.0",
     "description": "MEFAMEX - Kişisel Web Sitesi | Blog, Projeler, CV, İletişim",
     "author": {
@@ -12,6 +12,7 @@
     "license": "MIT",
     "keywords": [
         "mefamex", 
+        "mehmet-akif-akkoc",
         "portfolio",
         "personal-website",
         "blog",
@@ -30,7 +31,6 @@
         "data-science",
         "cyber-security",
         "scripts",
-        "mehmet-akif-akkoc",
         "mehmet-akif-akkoç"
     ]
 }
