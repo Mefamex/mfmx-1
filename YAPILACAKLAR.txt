@@ -31,9 +31,9 @@ Altın oran, yaklaşık olarak 1.61803398875
 --- modüler tasarım güçlendir
 - ABOUT: kvkk ilerlet, https://slither.io/privacyapp/ 
 - BLOG : Kur
-- PROJ : renklendir
+- PROJ : renklendir, modüleştir, arttır, Her projeye sayfa ekle
 - GALRY: catogrized , rovşan behbutov
-- CV   : dil için Yetkinlikler
+- CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir
 - /software/index.html
 - Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
 
@@ -70,14 +70,17 @@ Altın oran, yaklaşık olarak 1.61803398875
 ================ BLOG ================
 - sözler 
 - Kitaplar
-- bilgisayarda yapılacaklar
+- bilgisayarda yapılacaklar 
 - Günlük/aylık program
-- Her şey denge üzerine kuruludur. bir insan etrafındaki yabancı (aile dışı) insanlara ne kadar iyi davranırsa kötülük dengesi için ailesindeki bireylere kötü ahlak sergiler
 - Biyografiler
-- GITHUB'ın önemi - Öğrenme ve çalışma alanı sergileme
-- Gününü nasıl iyileştirirsin ? 20şer dakika temizlik ve düzen, konsantrasyon, birini dinleme, kenidni dinleme, gelir kaynakları, kitap okuma 
-- Yapay zeka araçları nasıl kullanılır? promtlar? siteler?
-- Özelleştirilmiş yapay zeka ve insana yardımcı olur
+- NEW: 
+- NEW: Her şey denge üzerine kuruludur. bir insan etrafındaki yabancı (aile dışı) insanlara ne kadar iyi davranırsa kötülük dengesi için ailesindeki bireylere kötü ahlak sergiler
+- NEW: GITHUB'ın önemi - Öğrenme ve çalışma alanı sergileme
+- NEW: Gününü nasıl iyileştirirsin ? 20şer dakika temizlik ve düzen, konsantrasyon, birini dinleme, kenidni dinleme, gelir kaynakları, kitap okuma 
+- NEW: Yapay zeka araçları nasıl kullanılır? promtlar? siteler?
+- NEW: Özelleştirilmiş yapay zeka ve insana yardımcı olur
+- NEW: ip v4 v6
+- NEW: Tek dünya düzeni
 
 
 ================ SÖZLER ================
