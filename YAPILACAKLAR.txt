@@ -48,6 +48,8 @@ Altın oran, yaklaşık olarak 1.61803398875
 - React npm vite 
 - SQL examples 
 - python-uv 
+- Bookmarklet Kullanımı: yerimleri komutu
+- chrome eklenti yazma 
 - otomasyon : Playwright
 - node.js : (otomasyon) Puppeteer
 - python web8 
