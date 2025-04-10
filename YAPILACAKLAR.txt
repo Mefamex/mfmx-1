@@ -36,7 +36,7 @@ Altın oran, yaklaşık olarak 1.61803398875
 - CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir
 - /software/index.html
 - Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
-
+- her klasore file.html oluştur
 
 
 
@@ -289,7 +289,7 @@ sende çek: https://www.instagram.com/reel/DDMq0vytuKu/?igsh=cXZsM2VjanVqd3pl
 - Google  : Search Console, G-Form
 - GitHub  : DM, commits
 - Sosyal medya LinkedIn, Insta, YouTube, Facebook, X, Reddit, Meta
-- Bionluk, fiver, upwork
+- Bionluk, fiver, upwork, freelancer
 
 
 ================  ================
