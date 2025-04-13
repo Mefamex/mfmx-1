@@ -81,8 +81,11 @@ Altın oran, yaklaşık olarak 1.61803398875
 - NEW: Gününü nasıl iyileştirirsin ? 20şer dakika temizlik ve düzen, konsantrasyon, birini dinleme, kenidni dinleme, gelir kaynakları, kitap okuma 
 - NEW: Yapay zeka araçları nasıl kullanılır? promtlar? siteler?
 - NEW: Özelleştirilmiş yapay zeka ve insana yardımcı olur
-- NEW: ip v4 v6
+- NEW: ip v4 v6 
+- NEW: http 1-2-3
 - NEW: Tek dünya düzeni
+
+
 
 
 ================ SÖZLER ================
@@ -116,6 +119,8 @@ Altın oran, yaklaşık olarak 1.61803398875
 
 
 
+
+
 =============== SİTELER ===============
 Freelance: r10.net
 mekanik klavye sesi: https://github.com/hainguyents13/mechvibes/releases/
@@ -127,6 +132,8 @@ stock images       : unsplash.com
 icons              : thenounproject.com
 color palets       : color.adobe.com
 rewarded webpages  : awwwards.com
+
+
 
 
 =============== AI ===============
@@ -150,6 +157,7 @@ rewarded webpages  : awwwards.com
 - İktidar : Robert Greene Joost Elfers ?
 - Zengin Baba Yoksul Baba : Robert T Kiyosaki 
 - Martin Eden : Jack London 
+- İmam Gazali : Dil belası 
 
 
 
