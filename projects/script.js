@@ -6,7 +6,7 @@
  * @version 1.0.0
  * @see https://mefamex.com
  * @since 2024-12-08
- * @lastModified 2025-03-12
+ * @lastModified 2025-04-14
  */
 
 document.addEventListener('DOMContentLoaded', domLoaded);
@@ -104,6 +104,9 @@ function updateSearchResults() {
     checkboxes.forEach(checkbox => {
         const count = visibleProjects.filter(item => (item.getAttribute('data-language') || '').toLowerCase().split(',').map(l => l.trim()).includes(checkbox.value)).length;
         checkbox.parentElement.querySelector('.count').textContent = `(${count})`;
+        checkbox.disabled = count === 0;
+        /* cursor normal*/
+        checkbox.parentElement.style.cursor = count ? '' : 'default';
         checkbox.parentElement.style.opacity = count ? '' : '0.3';
         checkbox.checked = checkbox.checked;
     });

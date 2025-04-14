@@ -29,14 +29,15 @@ Altın oran, yaklaşık olarak 1.61803398875
 
 ================ WEBSITE - MEFAMEX ================
 --- modüler tasarım güçlendir
+- header-mininize ev simgesi görünsün
 - ABOUT: kvkk ilerlet, https://slither.io/privacyapp/ 
 - BLOG : Kur
-- PROJ : renklendir, modüleştir, arttır, Her projeye sayfa ekle
-- GALRY: catogrized , rovşan behbutov
-- CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir
+- PROJ : renklendir, modüleştir, arttır, Her projeye sayfa ekle, butonlar tıklanmasın
+- GALRY: catogrized , rovşan behbutov, büyütme ekle 
 - /software/index.html
 - Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
 - her klasore file.html oluştur
+- CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir hedefe odaklan, giriş kısmını fotoğraflar ile zenginleştir.
 
 
 
