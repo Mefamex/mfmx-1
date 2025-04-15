@@ -8,7 +8,7 @@ işkur genç
 Github projeleri taşı
 w3s tüm dilleri bitir
 jvm (java virtual machine)
-Altın oran, yaklaşık olarak 1.61803398875 
+Altın oran, yaklaşık olarak 1.61803398875  
 
 ================ MEFAMEX - AI ================
 - c# bitir 
