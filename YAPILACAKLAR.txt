@@ -2,6 +2,9 @@
 
 - İsim hakkı 
 - Beyiz sedir tütsüsü ve ametist
+gökhan güven - usman hoca 
+
+teknofeadilzm 
 
 bionluk ilanlar ekle
 işkur genç
@@ -34,10 +37,10 @@ Altın oran, yaklaşık olarak 1.61803398875
 - BLOG : Kur
 - PROJ : renklendir, modüleştir, arttır, Her projeye sayfa ekle, butonlar tıklanmasın
 - GALRY: catogrized , rovşan behbutov, büyütme ekle 
-- /software/index.html
-- Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
-- her klasore file.html oluştur
+- software : index.html
 - CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir hedefe odaklan, giriş kısmını fotoğraflar ile zenginleştir.
+- NEW PAGE: file.html display page
+- Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
 
 
 
@@ -85,6 +88,7 @@ Altın oran, yaklaşık olarak 1.61803398875
 - NEW: ip v4 v6 
 - NEW: http 1-2-3
 - NEW: Tek dünya düzeni
+- NEW: psikozlar (hastalık ve rahatsızlıklar)
 
 
 
@@ -270,6 +274,8 @@ avmigran
 - matrix 
 - yüzüklerin efendisi : cralın dönüşü 
 - anime : Solo Leveling
+- usman -> fight clup
+- usman -> zindan adası
 
 ================ YOUTUBE ================
 - Nasıl zengin olunur: https://youtu.be/Vz1gIBcevVI?si=_6yBpMklNyN-y6Fw 
