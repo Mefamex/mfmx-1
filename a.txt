@@ -39,7 +39,6 @@ SELECT 	orders.id,
 
 
 
-        
 
 
 /* INNER JOIN, GROUP BY, HAVING, MAX, CONCAT
