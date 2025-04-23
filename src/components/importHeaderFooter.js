@@ -6,11 +6,11 @@
  * @version 1.0.0
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-03-16-18:20 
+ * @lastModified 2025-04-23-UTC10:47 
  */
 'use strict';
 
-function getScriptPath(){
+function getScriptPath() {
     if (document.currentScript?.src) return new URL(document.currentScript.src).toString();
     const currentScript = Array.from(document.getElementsByTagName('script')).find(script => script.src?.includes('importHeaderFooter.js'));
     if (currentScript?.src) return new URL(currentScript.src).toString();
@@ -20,7 +20,12 @@ function getScriptPath(){
 };
 
 
+
+
+
 let scriptPath = getScriptPath();
+
+
 
 (async () => {
     const link = document.createElement('link');
@@ -38,6 +43,12 @@ let scriptPath = getScriptPath();
     Promise.all([createFooterTask, createHeaderTask]);
 })();
 
+
+
+
+
+
+
 async function CreateFooter() {
     // Select / Create the footer
     let footer = document.querySelector('body > footer') || document.createElement('footer');
@@ -48,6 +59,11 @@ async function CreateFooter() {
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
     /*const style = document.createElement('style');style.innerHTML = ``;footer.appendChild(style); */
 }
+
+
+
+
+
 
 
 async function CreateHeader() {
@@ -68,7 +84,7 @@ async function CreateHeader() {
     divLeftIcon.alt = "mefamex_logo";
 
     const divLeftText = document.createElement("h1"); divLeft.appendChild(divLeftText);
-    divLeftText.id = "headerDivLeftText"; divLeftText.textContent = "MEFAMEX.com";
+    divLeftText.id = "headerDivLeftText"; divLeftText.textContent = "MEFAMEX";
 
 
     const navBar = document.createElement("nav"); header.appendChild(navBar);
@@ -102,6 +118,7 @@ async function CreateHeader() {
         if (window.location.pathname.includes("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
     })
     window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
+    window.addEventListener('click', function (event) { if (!navBarHideButton.contains(event.target) && !navBarHidden.contains(event.target)) navBarHideButton.className = 'unselected'; });
 
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
     setTimeout(() => { if (window.scrollY < '150' && !window.location.hash) window.scrollTo({ top: 0, behavior: 'smooth' }) }, 100);
