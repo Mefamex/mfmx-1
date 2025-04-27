@@ -17,7 +17,7 @@ Altın oran, yaklaşık olarak 1.61803398875
 - c# bitir 
 - visualize
 - multi kernel
-
+ 
 
 
 
