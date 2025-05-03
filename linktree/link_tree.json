@@ -1,0 +1,374 @@
+{
+    "name": "https://mefamex.com/",
+    "url": ".",
+    "date": "2025-05-03",
+    "relative_path": ".",
+    "full_url": "https://mefamex.com/.",
+    "children": [
+        {
+            "name": "about",
+            "url": "about",
+            "date": "2025-03-22",
+            "relative_path": "about",
+            "full_url": "https://mefamex.com/about",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "about",
+                    "date": "2025-03-22",
+                    "relative_path": "about\\index.html",
+                    "full_url": "https://mefamex.com/about"
+                }
+            ]
+        },
+        {
+            "name": "blog",
+            "url": "blog",
+            "date": "2025-04-08",
+            "relative_path": "blog",
+            "full_url": "https://mefamex.com/blog",
+            "children": [
+                {
+                    "name": "ozlu-sozler",
+                    "url": "blog/ozlu-sozler",
+                    "date": "2025-04-08",
+                    "relative_path": "blog\\ozlu-sozler",
+                    "full_url": "https://mefamex.com/blog/ozlu-sozler",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "blog/ozlu-sozler",
+                            "date": "2025-04-08",
+                            "relative_path": "blog\\ozlu-sozler\\index.html",
+                            "full_url": "https://mefamex.com/blog/ozlu-sozler"
+                        }
+                    ]
+                },
+                {
+                    "name": "yapay-zeka-insanin-yerini-alabilir-mi",
+                    "url": "blog/yapay-zeka-insanin-yerini-alabilir-mi",
+                    "date": "2025-03-25",
+                    "relative_path": "blog\\yapay-zeka-insanin-yerini-alabilir-mi",
+                    "full_url": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "blog/yapay-zeka-insanin-yerini-alabilir-mi",
+                            "date": "2025-03-25",
+                            "relative_path": "blog\\yapay-zeka-insanin-yerini-alabilir-mi\\index.html",
+                            "full_url": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi"
+                        }
+                    ]
+                },
+                {
+                    "name": "yazilim-gelistirme-kaynaklari",
+                    "url": "blog/yazilim-gelistirme-kaynaklari",
+                    "date": "2025-03-25",
+                    "relative_path": "blog\\yazilim-gelistirme-kaynaklari",
+                    "full_url": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "blog/yazilim-gelistirme-kaynaklari",
+                            "date": "2025-03-25",
+                            "relative_path": "blog\\yazilim-gelistirme-kaynaklari\\index.html",
+                            "full_url": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari"
+                        }
+                    ]
+                },
+                {
+                    "name": "zaman-yonetimi",
+                    "url": "blog/zaman-yonetimi",
+                    "date": "2025-03-25",
+                    "relative_path": "blog\\zaman-yonetimi",
+                    "full_url": "https://mefamex.com/blog/zaman-yonetimi",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "blog/zaman-yonetimi",
+                            "date": "2025-03-25",
+                            "relative_path": "blog\\zaman-yonetimi\\index.html",
+                            "full_url": "https://mefamex.com/blog/zaman-yonetimi"
+                        }
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "blog",
+                    "date": "2025-03-25",
+                    "relative_path": "blog\\index.html",
+                    "full_url": "https://mefamex.com/blog"
+                }
+            ]
+        },
+        {
+            "name": "contact",
+            "url": "contact",
+            "date": "2025-04-27",
+            "relative_path": "contact",
+            "full_url": "https://mefamex.com/contact",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "contact",
+                    "date": "2025-04-27",
+                    "relative_path": "contact\\index.html",
+                    "full_url": "https://mefamex.com/contact"
+                }
+            ]
+        },
+        {
+            "name": "cv",
+            "url": "cv",
+            "date": "2025-04-14",
+            "relative_path": "cv",
+            "full_url": "https://mefamex.com/cv",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "cv",
+                    "date": "2025-04-14",
+                    "relative_path": "cv\\index.html",
+                    "full_url": "https://mefamex.com/cv"
+                }
+            ]
+        },
+        {
+            "name": "gallery",
+            "url": "gallery",
+            "date": "2025-04-23",
+            "relative_path": "gallery",
+            "full_url": "https://mefamex.com/gallery",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "gallery",
+                    "date": "2025-04-23",
+                    "relative_path": "gallery\\index.html",
+                    "full_url": "https://mefamex.com/gallery"
+                }
+            ]
+        },
+        {
+            "name": "linktree",
+            "url": "linktree",
+            "date": "2025-05-03",
+            "relative_path": "linktree",
+            "full_url": "https://mefamex.com/linktree",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "linktree",
+                    "date": "2025-05-03",
+                    "relative_path": "linktree\\index.html",
+                    "full_url": "https://mefamex.com/linktree"
+                }
+            ]
+        },
+        {
+            "name": "mystream",
+            "url": "mystream",
+            "date": "2025-04-23",
+            "relative_path": "mystream",
+            "full_url": "https://mefamex.com/mystream",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "mystream",
+                    "date": "2025-04-23",
+                    "relative_path": "mystream\\index.html",
+                    "full_url": "https://mefamex.com/mystream"
+                },
+                {
+                    "name": "soloshare.html",
+                    "url": "mystream/index.html",
+                    "date": "2025-03-13",
+                    "relative_path": "mystream\\soloshare.html",
+                    "full_url": "https://mefamex.com/mystream/index.html"
+                }
+            ]
+        },
+        {
+            "name": "projects",
+            "url": "projects",
+            "date": "2025-04-11",
+            "relative_path": "projects",
+            "full_url": "https://mefamex.com/projects",
+            "children": [
+                {
+                    "name": "dizin-listeleme",
+                    "url": "projects/dizin-listeleme",
+                    "date": "2025-03-22",
+                    "relative_path": "projects\\dizin-listeleme",
+                    "full_url": "https://mefamex.com/projects/dizin-listeleme",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "projects/dizin-listeleme",
+                            "date": "2025-03-22",
+                            "relative_path": "projects\\dizin-listeleme\\index.html",
+                            "full_url": "https://mefamex.com/projects/dizin-listeleme"
+                        }
+                    ]
+                },
+                {
+                    "name": "html-css-book",
+                    "url": "projects/html-css-book",
+                    "date": "2025-03-28",
+                    "relative_path": "projects\\html-css-book",
+                    "full_url": "https://mefamex.com/projects/html-css-book",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "projects/html-css-book",
+                            "date": "2025-03-28",
+                            "relative_path": "projects\\html-css-book\\index.html",
+                            "full_url": "https://mefamex.com/projects/html-css-book"
+                        }
+                    ]
+                },
+                {
+                    "name": "image-meta-dataset",
+                    "url": "projects/image-meta-dataset",
+                    "date": "2025-03-22",
+                    "relative_path": "projects\\image-meta-dataset",
+                    "full_url": "https://mefamex.com/projects/image-meta-dataset",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "projects/image-meta-dataset",
+                            "date": "2025-03-22",
+                            "relative_path": "projects\\image-meta-dataset\\index.html",
+                            "full_url": "https://mefamex.com/projects/image-meta-dataset"
+                        }
+                    ]
+                },
+                {
+                    "name": "kali-change-boot-background",
+                    "url": "projects/kali-change-boot-background",
+                    "date": "2025-03-22",
+                    "relative_path": "projects\\kali-change-boot-background",
+                    "full_url": "https://mefamex.com/projects/kali-change-boot-background",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "projects/kali-change-boot-background",
+                            "date": "2025-03-22",
+                            "relative_path": "projects\\kali-change-boot-background\\index.html",
+                            "full_url": "https://mefamex.com/projects/kali-change-boot-background"
+                        }
+                    ]
+                },
+                {
+                    "name": "kali-linux",
+                    "url": "projects/kali-linux",
+                    "date": "2025-03-22",
+                    "relative_path": "projects\\kali-linux",
+                    "full_url": "https://mefamex.com/projects/kali-linux",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "projects/kali-linux",
+                            "date": "2025-03-22",
+                            "relative_path": "projects\\kali-linux\\index.html",
+                            "full_url": "https://mefamex.com/projects/kali-linux"
+                        }
+                    ]
+                },
+                {
+                    "name": "lisans-puan-hesaplama",
+                    "url": "projects/lisans-puan-hesaplama",
+                    "date": "2025-03-22",
+                    "relative_path": "projects\\lisans-puan-hesaplama",
+                    "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "projects/lisans-puan-hesaplama",
+                            "date": "2025-03-22",
+                            "relative_path": "projects\\lisans-puan-hesaplama\\index.html",
+                            "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama"
+                        }
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "projects",
+                    "date": "2025-04-08",
+                    "relative_path": "projects\\index.html",
+                    "full_url": "https://mefamex.com/projects"
+                }
+            ]
+        },
+        {
+            "name": "software",
+            "url": "software",
+            "date": "2025-03-22",
+            "relative_path": "software",
+            "full_url": "https://mefamex.com/software",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "software",
+                    "date": "2025-03-22",
+                    "relative_path": "software\\index.html",
+                    "full_url": "https://mefamex.com/software"
+                }
+            ]
+        },
+        {
+            "name": "the-mefamex-project",
+            "url": "the-mefamex-project",
+            "date": "2025-03-22",
+            "relative_path": "the-mefamex-project",
+            "full_url": "https://mefamex.com/the-mefamex-project",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "the-mefamex-project",
+                    "date": "2025-03-22",
+                    "relative_path": "the-mefamex-project\\index.html",
+                    "full_url": "https://mefamex.com/the-mefamex-project"
+                }
+            ]
+        }
+    ],
+    "files": [
+        {
+            "name": "index.html",
+            "url": ".",
+            "date": "2025-05-03",
+            "relative_path": "index.html",
+            "full_url": "https://mefamex.com/."
+        },
+        {
+            "name": "yandex_2180e408af580940.html",
+            "url": "index.html",
+            "date": "2024-12-06",
+            "relative_path": "yandex_2180e408af580940.html",
+            "full_url": "https://mefamex.com/index.html"
+        }
+    ]
+}

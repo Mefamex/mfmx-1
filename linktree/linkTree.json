@@ -1,0 +1,17 @@
+{
+    "name": "MEFAMEX",
+    "description": "MEFAMEX Site Haritası",
+    "url": "https://mefamex.com",
+    "pages": [
+        {
+            "title": "Ana Sayfa",
+            "url": "https://mefamex.com",
+            "description": "MEFAMEX ana sayfası"
+        },
+        {
+            "title": "İletişim",
+            "url": "https://mefamex.com/contact",
+            "description": "İletişim sayfası"
+        }
+    ]
+}
