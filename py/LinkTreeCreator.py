@@ -172,7 +172,7 @@ class LinkTreeCreator:
         relative_path = os.path.relpath(root, self.base_dir)
         
         # Skip directories based on various conditions
-        if (any(dir in str(root) for dir in self.passDirs) or not os.path.isdir(root) or os.path.islink(root) or any(part.startswith(".") for part in Path(root).parts) or not any(file.endswith(".html") for file in files)): 
+        if (any(dir in str(root) for dir in self.passDirs) or not os.path.isdir(root) or os.path.islink(root) or any(part.startswith(".") for part in Path(root).parts) or not any(file.endswith(".html") for file in files)) or any(dir in str(root) for dir in self.passDirs): 
             print(f"Skipped directory: {root}") 
             return
         
@@ -253,7 +253,7 @@ class LinkTreeCreator:
 if __name__ == "__main__":
     base_dir = os.getcwd()
     passDirs = ["games", "py", "src", "sweetmonstermia" ]
-    passFiles = ["yandex...", ]
+    passFiles = ["yandex_" ]
     output_dir= os.path.join(base_dir, "linktree")
     output_file= "link_tree.json"
     LinkTreeCreator(base_dir=base_dir, output_dir=output_dir, output_file=output_file, passDirs=passDirs, passFiles=passFiles)
