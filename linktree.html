@@ -211,6 +211,7 @@
         }
 
         main #mainContent li span.lastDate {
+            display: inline-block;
             margin-left: 0.5em;
             font-size: 0.7em;
             color: rgb(115, 105, 94);
@@ -289,7 +290,7 @@
                         Newa.className = "linkDir";
                         Newa.textContent = child.name;
                         Newli.appendChild(Newa);
-                        Newli.innerHTML += `<span class="lastDate">(${child.date})</span>`;
+                        Newli.innerHTML += ` <span class="lastDate">(${child.date})</span>`;
                         parentUl.appendChild(Newli);
                         const Newul = document.createElement('ul');
                         Newli.appendChild(Newul);

@@ -159,9 +159,17 @@
                     "title": "Site Haritası",
                     "href": "https://mefamex.com/linktree.html",
                     "isVisible": true,
-                    "description": "mefamexc.com site haritaası",
+                    "description": "mefamex.com site haritaası",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 8
+                },
+                {
+                    "title": "Dosya Haritası",
+                    "href": "https://mefamex.com/filetree.html",
+                    "isVisible": true,
+                    "description": "mefamex.com dosya haritaası",
+                    "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+                    "order": 9
                 },
                 {
                     "title": "Software",
@@ -169,7 +177,7 @@
                     "isVisible": true,
                     "description": "Yazılım Dilleri ve Araçları",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                    "order": 9
+                    "order": 10
                 },
                 {
                     "title": "sweetmonstermia",
@@ -177,7 +185,7 @@
                     "isVisible": true,
                     "description": "Tatlış bir prenses peri",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                    "order": 10
+                    "order": 11
                 }
             ]
         }
@@ -186,6 +194,6 @@
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
         "baseUrl": "https://mefamex.com",
         "languageCode": "tr",
-        "lastUpdated": "2025-05-04"
+        "lastUpdated": "2025-05-05"
     }
 }
