@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- 
 
 __project_name__ = "FileTreeCreator For Website"
-__project_version__ = "1.0.0"
+__project_version__ = "1.0.1"
 __author__ = "mefamex"
 __email__ = "info@mefamex.com"
 __url__ = "https://mefamex.com/projects/filetreecreator"
@@ -68,7 +68,7 @@ mefamex (info@mefamex.com) (https://mefamex.com)
 
 Tarihce:
 - 1.0.0 (2025-05-04): Ilk surum
-- ...
+- 1.0.1 (2025-05-03): dosya yolu -relative_path- ile oluşan hata giderildi. 
 
 Iletisim:
     - E-mail: info@mefamex.com
@@ -198,9 +198,9 @@ class FileTreeCreator:
                 continue
             name = file
             path = os.path.join(root, file)
+            relative_path = os.path.relpath(path, self.base_dir)
             url = f"{relative_path.replace(os.sep, '/')}"
             if date > walker_path.date or walker_path.date is None: walker_path.date = date
-            relative_path = os.path.relpath(path, self.base_dir)
             walker_path.files.append(Walker_file(name, path, url,  relative_path))
             walker_path.size += os.path.getsize(path) if os.path.isfile(path) else 0
         

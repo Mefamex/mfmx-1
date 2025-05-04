@@ -13,6 +13,7 @@ html {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
@@ -25,7 +26,6 @@ body {
     width: 100%;
     max-width: 100vw;
     min-height: 99vh;
-    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
