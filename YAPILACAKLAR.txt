@@ -89,6 +89,7 @@ Altın oran, yaklaşık olarak 1.61803398875
 - NEW: http 1-2-3
 - NEW: Tek dünya düzeni
 - NEW: psikozlar (hastalık ve rahatsızlıklar)
+- NEW: Enerji - iletişimin esas kanalı
 
 
 

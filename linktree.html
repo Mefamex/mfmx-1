@@ -21,16 +21,14 @@
     <link rel="dns-prefetch" href="https://mefamex.com" />
     <!---->
     <!-- Canonical Link -->
-    <link rel="canonical" href="https://mefamex.com/linktree/" />
+    <link rel="canonical" href="https://mefamex.com/linktree.html" />
     <!---->
     <!-- Performans için preload -->
-    <link rel="preload" as="style" href="style.css" />
-    <link rel="preload" as="style" href="../src/components/headerFooter.css" />
-    <link rel="preload" as="script" href="../src/components/importHeaderFooter.js" />
+    <link rel="preload" as="style" href="./src/components/headerFooter.css" />
+    <link rel="preload" as="script" href="./src/components/importHeaderFooter.js" />
     <!---->
     <!-- Stil Optimizasyonu -->
-    <link rel="stylesheet" href="style.css" class="alternatively" />
-    <link rel="stylesheet" href="../src/components/headerFooter.css" class="alternatively" />
+    <link rel="stylesheet" href="./src/components/headerFooter.css" class="alternatively" />
     <!---->
     <!-- favicon set -->
     <link rel="icon" sizes="16x16" href="https://mefamex.com/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
@@ -46,12 +44,12 @@
     <meta property="og:description" content="mefamex.com için site haritası" />
     <meta property="og:creator" content="@mefamex" />
     <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-    <meta property="og:url" content="https://mefamex.com/linktree/" />
+    <meta property="og:url" content="https://mefamex.com/linktree.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mefamex" />
-    <meta property="og:date" content="2025-05-03T02:00:00Z" />
+    <meta property="og:date" content="2025-05-04T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-05-03T02:00:00Z" />
+    <meta property="article:modified_time" content="2025-05-04T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -60,12 +58,163 @@
     <meta name="twitter:title" content="Site Haritası - MEFAMEX" />
     <meta name="twitter:description" content="mefamex.com için site haritası" />
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
-    <meta name="twitter:url" content="https://mefamex.com/linktree/" />
+    <meta name="twitter:url" content="https://mefamex.com/linktree.html" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-05-03T02:00:00Z" />
+    <meta name="twitter:date" content="2025-05-04T02:00:00Z" />
     <!---->
     <!---->
     <!---->
+    <style>
+        body {
+            background-color: rgb(20, 20, 20);
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            text-decoration-color: red;
+            color: rgb(177, 249, 249);
+            transition: all 0.2s normal;
+            padding-inline: 0.25rem 0;
+            transition: all 0.1s ease;
+        }
+
+        a:hover {
+            transition: all 0.2s normal;
+            background-color: rgb(255, 228, 228);
+            border-radius: 0.7em;
+            padding: 0.1em 0.5em;
+            color: rgb(0, 15, 152);
+            text-decoration: underline;
+            text-decoration-color: rgb(0, 30, 255);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            width: 100%;
+            max-width: 100vw;
+            height: fit-content;
+            min-height: calc(100vh - 13rem);
+            margin: 0;
+            gap: 3rem;
+            /* Performans optimizasyonları */
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        main>section {
+            opacity: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            max-width: min(95vw, 100%);
+            height: auto;
+            background-color: rgb(5, 5, 5);
+            margin: 1rem;
+            padding: 1rem;
+            justify-content: start;
+            border: 0.1rem solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            transition: border-color 0.2s ease;
+            box-shadow: -0.1rem -0.2rem 0.1rem rgba(255, 255, 255, 0.4), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.4), 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            /* Performans optimizasyonları */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: translateZ(0), translate3d(0, 0, 0);
+            perspective: 1000px;
+        }
+
+        main>section:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 -0.2rem 0.1rem rgba(255, 255, 255, 0.5), 0 0.5rem 0.5rem rgba(54, 54, 54, 0.5), 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        }
+
+        main #mainWellcome {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            min-height: 15rem;
+            margin-bottom: 2rem;
+            margin-inline: 5%;
+        }
+
+        main #mainWellcome h1 {
+            text-align: center;
+            margin-block: 0.3rem;
+            font-size: 2.3em;
+        }
+
+        main #mainWellcome p {
+            line-height: 1.4;
+            margin-block: 0.5em;
+        }
+
+        main #mainWellcome p::before {
+            content: " ■ ";
+            color: rgb(123, 255, 255);
+        }
+
+        main #mainContent {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            max-width: 100%;
+            min-width: min(95vw, 40em);
+            font-size: 1.2em;
+        }
+
+        main #mainContent h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        main #mainContent>ul {
+            padding-left: 0 !important;
+        }
+
+        main #mainContent ul {
+            margin-block: 0.5em 1.5em;
+            padding-left: 3vw;
+        }
+
+        main #mainContent li {
+            margin-block: 0.7em;
+            list-style: none;
+        }
+
+        main #mainContent li a {
+            padding-right: 0.5em;
+        }
+
+        main #mainContent li a.linkFile {
+            border: 0.1em ridge rgb(39, 39, 39);
+            border-left: 0.3em solid rgb(72, 114, 253);
+            padding-left: 0.5em;
+        }
+
+        main #mainContent li a.linkDir {
+            border: 0.1em ridge rgb(108, 108, 108);
+            border-left: 0.1em dotted red;
+            padding-left: 0.75em;
+        }
+
+        main #mainContent li span.lastDate {
+            margin-left: 0.5em;
+            font-size: 0.7em;
+            color: rgb(115, 105, 94);
+            vertical-align: text-top;
+        }
+    </style>
 </head>
 
 <body>
@@ -75,18 +224,94 @@
             <p> Bu sayfada, <a href="https://mefamex.com/" title="mefamex.com" aria-label="mefamex"><b>mefamex.com</b></a> için bir site haritası olarak oluşturulmuştur.</p>
             <p> Site içerisindeki tüm web sayfalarını otomatik olarak kontrol ederek son güncellenmeleriyle beraber ulaşımı kolaylaştırır</p>
             <p> Görüş ve önerileriniz için <a href="https://mefamex.com/contact/" title="contact-me" aria-label="contant-me" target="_blank" rel="noopener"><b>iletişime geçebilirsiniz</b></a> . </p>
-            <p> Açılış tarihi: 03.05.2024 || Son güncelleme tarihi: 03.05.2025</p>
+            <p> Sayfa açılış tarihi: 03.05.2024 | son güncelleme: 04.05.2025</p>
         </section>
-
         <section id="mainContent">
-            <h2>Mefamex.com</h2>
+            <h2> Mefamex.com </h2>
+            <ul id="mainUl">
+                <li>Yükleniyor...</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+                <li>.</li>
+            </ul>
         </section>
     </main>
     <!---->
     <!---->
     <!---->
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
-    <script class="alternatively" src="./script.js" type="module" defer></script>
+    <script class="alternatively" src="./src/components/importHeaderFooter.js" defer></script>
+    <!---->
+    <!---->
+    <!---->
+    <script type="text/javascript" defer>
+        let json_data = null;
+        document.addEventListener('DOMContentLoaded', domLoaded);
+        async function domLoaded() {
+            try {
+                for (let i = 0; i < 20; i++) {
+                    try {
+                        await new Promise(resolve => setTimeout(resolve, 500));
+                        const success = await catch_linktree_file();
+                        if (!(success && json_data)) { console.log(`❌ Deneme ${i + 1}/20 başarısız, tekrar deneniyor...`); await new Promise(resolve => setTimeout(resolve, 500)); continue; }
+                        break;
+                    } catch (error) { console.error('Deneme sırasında hata:', error); }
+                } if (!json_data) { console.log('❌ Deneme 20/20 başarısız, lütfen daha sonra tekrar deneyin.'); return; }
+                const mainContent = document.getElementById('mainContent');
+                const mainUl = document.getElementById('mainUl');
+                mainUl.innerHTML = "";
+                json_to_list(json_data, mainUl);
+                function json_to_list(json, parentUl) {
+                    json.files.forEach(file => {
+                        if (file.name == "index.html") { if (json.files.length == 1 && json.children.length == 0) parentUl.remove(); }
+                        else {
+                            const li = document.createElement('li');
+                            const a = document.createElement('a');
+                            a.href = file.full_url;
+                            a.className = "linkFile";
+                            a.textContent = file.name;
+                            li.appendChild(a);
+                            parentUl.appendChild(li);
+                        }
+                    });
+                    json.children.forEach(child => {
+                        const Newli = document.createElement('li');
+                        const Newa = document.createElement('a');
+                        Newa.href = child.full_url;
+                        Newa.className = "linkDir";
+                        Newa.textContent = child.name;
+                        Newli.appendChild(Newa);
+                        Newli.innerHTML += `<span class="lastDate">(${child.date})</span>`;
+                        parentUl.appendChild(Newli);
+                        const Newul = document.createElement('ul');
+                        Newli.appendChild(Newul);
+                        json_to_list(child, Newul);
+                    });
+                }
+            }
+            catch (error) { console.log('\n❌ Linktree Error: please contact to @mefamex with screenshots'); console.error(error); setTimeout(domLoaded, 1000); }
+        }
+        async function catch_linktree_file() {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest(); xhr.open('GET', "./py/Linktree/link_tree.json", true); xhr.responseType = 'json';
+                xhr.onload = function () {
+                    if (xhr.status === 200) { json_data = xhr.response; console.log('✅ Linktree data loaded successfully'); resolve(true); }
+                    else { console.error('❌ Error loading linktree data:', xhr.statusText); resolve(false); }
+                };
+                xhr.onerror = function () { console.error('❌ Error loading linktree data:', xhr.statusText); resolve(false); };
+                xhr.send();
+            });
+        }
+    </script>
+    <!---->
+    <!---->
+    <!---->
     <script id="alternativelyJS" type="text/javascript" defer>
         /*  class="alternatively"  */
         /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */

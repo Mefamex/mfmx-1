@@ -254,7 +254,7 @@ if __name__ == "__main__":
     base_dir = os.getcwd()
     passDirs = ["games", "py", "src", "sweetmonstermia" ]
     passFiles = ["yandex_" ]
-    output_dir= os.path.join(base_dir, "linktree")
+    output_dir= os.path.join(base_dir, "py", "Linktree")
     output_file= "link_tree.json"
     LinkTreeCreator(base_dir=base_dir, output_dir=output_dir, output_file=output_file, passDirs=passDirs, passFiles=passFiles)
     
