@@ -272,5 +272,5 @@ class DirExVis:
 
 
 if __name__ == "__main__":
-    #os.chdir("..")
+    os.chdir("..")
     DirExVis(os.getcwd())  # you can add here full path
