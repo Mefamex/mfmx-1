@@ -147,13 +147,15 @@ main {
 }
 
 #icerik div:hover {
+    transition: all 300ms ease-in-out forwards;
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 0.7em rgba(255, 255, 255, 0.5);
-    transform: translateY(-0.2em);
+    transform: translateY(-0.2em) scale(1.01);
 }
 
+
 #icerik div:hover a {
-    transition: all 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
     text-decoration-color: rgb(255, 0, 0);
     text-decoration-thickness: 0.2em;
     border-color: rgba(255, 255, 255, 0.7);
@@ -161,7 +163,6 @@ main {
 }
 
 #icerik div:hover p {
-    transition: all 300ms ease-in-out;
     opacity: 1;
 }
 
