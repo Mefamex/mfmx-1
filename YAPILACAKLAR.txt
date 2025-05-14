@@ -98,14 +98,6 @@ tutkunu AI ile bul
 
 
 ================ SÖZLER ================
-- Her şey ol ama seçenek olma
-- İyi bir eş yatırımdır. Olgunlaşmamış bir ergen faturadır.
-- Eşinin ve senin zihniyetin çocuklarını yetiştirecek. Bedeniniz veya görünüşünüz değil.
-- Sahibi olduğunu öğrenene kadar, ulaşamıyacakmış gibi davran. 
-- Yeni şeyler öğrenmekten kaçınma, yolda kalırsan çekici bile karşılık bekler.
-- Yetersiz olmak oyunun bir aşamasıdır. Ama yetersiz kalmak senin sorumluluğundadır.
-- Başkalarının kalıplarına uymaya çalışırken kaybettiğin zaman geri gelmeyecek...
-
 
 - yaşarken hep kötü şeyler konnuşuyoruz onlarla ilgili. ama öldüklerine insanın aklına hep güzel anılar gelir.
 - Bazen kontrolu kaybedersiniz ve biraz strese maruz kalırsınız. Çünkü başarısız olmaktan korkuyorsun. Zamanın, emeğinin yetmeyeceğini düşünüyorsun. Tek yapman gereken biraz rahatlamak.
@@ -115,7 +107,7 @@ tutkunu AI ile bul
 - Sürahi yer değiştirmez, bardaklar sıraya girer.
 - Yokken isteyip varlığında değerini bilmememiz acizliğimizden mi şükürsüzlüğümüzden midir?
 - Yalnızlık kendini geliştirmeye başladığında ödediğin bedeldir.
-- Birini sevmek istiyorsan önce kendini sevmen lazım.
+- Birini sevmek istiyorsan önce kendini sev.
 - Gülümsemek bozuk bir düzende küfürdür.
 - Bir şey varsa vardır, yokluğu vardır. yokluğu da yoktur
 - Taklit edilemeyen tek şey cesarettir.
@@ -133,6 +125,13 @@ tutkunu AI ile bul
 - hayattan çok memnuniyet bekleme. Dünya hâli... bazen iner bazen çıkar.
 - Kurtla beraber öldürüyorlar, çobanla beraber yiyorlar, sahibiyle beraber ağlıyorlar.
 - Neden ben güvenmemeyi öğrenip ruhumu kirletiyim? Onlar güvenilir olmayı öğrensinler...
+- Her şey ol ama seçenek olma
+- İyi bir eş yatırımdır. Olgunlaşmamış bir ergen faturadır.
+- Eşinin ve senin zihniyetin çocuklarını yetiştirecek. Bedeniniz veya görünüşünüz değil.
+- Sahibi olduğunu öğrenene kadar, ulaşamıyacakmış gibi davran. 
+- Öğrenmeye devam et; durursan, hayat senden faturasını keser.
+- Eksik olmak oyunun bir aşamasıdır. Ama eksik kalmak senin seçimin..
+- Başkalarının kalıplarına uymaya çalışırken kaybettiğin zaman geri gelmeyecek...
 
 
 
