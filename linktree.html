@@ -181,12 +181,24 @@
         }
 
         main #mainContent>ul {
-            padding-left: 0 !important;
+            padding-left: 0em !important;
         }
 
         main #mainContent ul {
-            margin-block: 0.5em 1.5em;
-            padding-left: 3vw;
+            padding-left: calc(1.5em + 2vw);
+        }
+
+        main #mainContent>ul>li>ul {
+            margin-block: 0.5rem 2.5rem;
+        }
+
+        main #mainContent>ul>li {
+            list-style-type: disclosure-closed !important;
+            list-style-position: inside !important;
+        }
+
+        main #mainContent>ul>li>a {
+            font-size: 1.1em;
         }
 
         main #mainContent li {
@@ -212,10 +224,21 @@
 
         main #mainContent li span.lastDate {
             display: inline-block;
-            margin-left: 0.5em;
+            margin-left: 0.2em;
             font-size: 0.7em;
             color: rgb(115, 105, 94);
             vertical-align: text-top;
+        }
+
+        main #mainContent #lastupdate {
+            font-size: 0.8em;
+            line-height: 1.8em;
+            color: rgb(115, 105, 94);
+            margin-block-start: 3em;
+            width: fit-content;
+            margin-inline: auto;
+            align-self: center; 
+            place-self: center;
         }
     </style>
 </head>
@@ -244,6 +267,7 @@
                 <li>.</li>
                 <li>.</li>
             </ul>
+            <p id="lastupdate">* Tarihlerine göre sıralanmıştır</p>
         </section>
     </main>
     <!---->
@@ -270,6 +294,8 @@
                 const mainUl = document.getElementById('mainUl');
                 mainUl.innerHTML = "";
                 json_to_list(json_data, mainUl);
+                /* lasp p element in "main #mainContent" add last update -> json.files.linktree.lastDate */
+
                 function json_to_list(json, parentUl) {
                     json.files.forEach(file => {
                         if (file.name == "index.html") { if (json.files.length == 1 && json.children.length == 0) parentUl.remove(); }
@@ -280,9 +306,16 @@
                             a.className = "linkFile";
                             a.textContent = file.name;
                             li.appendChild(a);
+                            li.innerHTML += ` <span class="lastDate">(${file.date})</span>`;
                             parentUl.appendChild(li);
+                            if (file.name == "linktree.html") document.getElementById("lastupdate").innerHTML += `<br>* Liste güncellendi: ${file.date}`;
+
+
                         }
                     });
+                    /* sort with json.children as lastdate */
+                    json.children.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    json.children.sort((a, b) => new Date(b.date) - new Date(a.date));
                     json.children.forEach(child => {
                         const Newli = document.createElement('li');
                         const Newa = document.createElement('a');
