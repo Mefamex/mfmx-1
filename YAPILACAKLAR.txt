@@ -12,6 +12,7 @@ Github projeleri taşı
 w3s tüm dilleri bitir
 jvm (java virtual machine)
 Altın oran, yaklaşık olarak 1.61803398875  
+tutkunu AI ile bul
 
 ================ MEFAMEX - AI ================
 - c# bitir 
@@ -26,6 +27,8 @@ Altın oran, yaklaşık olarak 1.61803398875
 - React güçlendir
 - AI : Transfer Learning
 - TryHackMe
+- Kaggle
+- Raplit 
 
 
 
@@ -101,7 +104,8 @@ Altın oran, yaklaşık olarak 1.61803398875
 - Sahibi olduğunu öğrenene kadar, ulaşamıyacakmış gibi davran. 
 - Yeni şeyler öğrenmekten kaçınma, yolda kalırsan çekici bile karşılık bekler.
 - Yetersiz olmak oyunun bir aşamasıdır. Ama yetersiz kalmak senin sorumluluğundadır.
-- 
+- Başkalarının kalıplarına uymaya çalışırken kaybettiğin zaman geri gelmeyecek...
+
 
 - yaşarken hep kötü şeyler konnuşuyoruz onlarla ilgili. ama öldüklerine insanın aklına hep güzel anılar gelir.
 - Bazen kontrolu kaybedersiniz ve biraz strese maruz kalırsınız. Çünkü başarısız olmaktan korkuyorsun. Zamanın, emeğinin yetmeyeceğini düşünüyorsun. Tek yapman gereken biraz rahatlamak.
