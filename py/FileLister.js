@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+
 class DirExVis {
     /**
      * Bu sınıf, bir dizin yapısını gezerek, dosya ve dizinler hakkında bilgi toplar ve biçimlendirilmiş bir şekilde sunar.
