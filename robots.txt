@@ -21,8 +21,6 @@ Allow: *.js
 Allow: *.css
 
 # Security Restrictions
-Disallow: /py
-Disallow: /archive
 Disallow: *?q=
 Disallow: /*?*
 Disallow: /*?s=*
