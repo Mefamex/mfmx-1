@@ -9,10 +9,13 @@ teknofeadilzm
 bionluk ilanlar ekle
 işkur genç
 Github projeleri taşı
-w3s tüm dilleri bitir
+w3s tüm dilleri denetle
 jvm (java virtual machine)
 Altın oran, yaklaşık olarak 1.61803398875  
 tutkunu AI ile bul
+TingerCard.com -> arduino simulation
+Incredibuild güncelleştirme notları
+
 
 ================ MEFAMEX - AI ================
 - c# bitir 
@@ -37,7 +40,8 @@ tutkunu AI ile bul
 --- modüler tasarım güçlendir
 - header-mininize ev simgesi görünsün
 - ABOUT: kvkk ilerlet, https://slither.io/privacyapp/ 
-- BLOG : Kur
+- ILETI: tüm hesapları ekle, görseller ile güçlendir, animasyonları arttır
+- BLOG : Yazarlar, denetmenler, geliştiriciler bul
 - PROJ : renklendir, modüleştir, arttır, Her projeye sayfa ekle, butonlar tıklanmasın
 - GALRY: catogrized , rovşan behbutov, büyütme ekle 
 - software : index.html
@@ -49,6 +53,7 @@ tutkunu AI ile bul
 
 ================ PROJELER ================
 - Modüleştir: İçindekiler ve son değişiklikler
+- Desktop Asistan: AI
 - Proje Örnekleri Hesabı: https://github.com/protesq 
 - py to exe : web hizmeti 
 - Python pdf to docx : pdf2docx.Converter(pdf_path).convert(docx_path).close()
@@ -92,13 +97,13 @@ tutkunu AI ile bul
 - NEW: http 1-2-3
 - NEW: Tek dünya düzeni
 - NEW: psikozlar (hastalık ve rahatsızlıklar)
-- NEW: Enerji - iletişimin esas kanalı
+- NEW: Enerji - iletişimin esas kanalı 
 
 
 
 
 ================ SÖZLER ================
-
+- TODO: grupla
 - yaşarken hep kötü şeyler konnuşuyoruz onlarla ilgili. ama öldüklerine insanın aklına hep güzel anılar gelir.
 - Bazen kontrolu kaybedersiniz ve biraz strese maruz kalırsınız. Çünkü başarısız olmaktan korkuyorsun. Zamanın, emeğinin yetmeyeceğini düşünüyorsun. Tek yapman gereken biraz rahatlamak.
 - Sahip olduğun paranın bir kısmıyla başkasını zengin edecek kadar zengin ol.
