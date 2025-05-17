@@ -1,4 +1,4 @@
-# updated 2025-05-17UTC01:02
+# updated 2025-05-18UTC05:35
 
 - İsim hakkı 
 - Beyiz sedir tütsüsü ve ametist
@@ -13,6 +13,10 @@ Altın oran, yaklaşık olarak 1.61803398875
 tutkunu AI ile bul
 TingerCard.com -> arduino simulation
 Incredibuild güncelleştirme notları
+Sir Arthur Canon Doyle
+
+
+
 
 
 ================ MEFAMEX - AI ================
@@ -24,12 +28,18 @@ Incredibuild güncelleştirme notları
 
 
 
+
+
+
 ================ SOFTWARE ================
 - React güçlendir
 - AI : Transfer Learning
 - TryHackMe
 - Kaggle
 - Raplit 
+
+
+
 
 
 
@@ -46,6 +56,11 @@ Incredibuild güncelleştirme notları
 - CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir hedefe odaklan, giriş kısmını fotoğraflar ile zenginleştir.
 - NEW PAGE: file.html display page
 - Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
+
+
+
+
+
 
 
 
@@ -79,6 +94,10 @@ Incredibuild güncelleştirme notları
 
 
 
+
+
+
+
 ================ BLOG ================
 - sözler 
 - Kitaplar
@@ -97,6 +116,12 @@ Incredibuild güncelleştirme notları
 - NEW: psikozlar (hastalık ve rahatsızlıklar)
 - NEW: Enerji - iletişimin esas kanalı 
 - NEW: bir linke tıklamayla başımıza neler gelebilir ki..
+- NEW: Bilmeceler
+
+
+
+
+
 
 
 
@@ -142,6 +167,9 @@ Incredibuild güncelleştirme notları
 
 
 
+
+
+
 =============== SİTELER ===============
 Freelance: r10.net
 mekanik klavye sesi: https://github.com/hainguyents13/mechvibes/releases/
@@ -153,6 +181,8 @@ stock images       : unsplash.com
 icons              : thenounproject.com
 color palets       : color.adobe.com
 rewarded webpages  : awwwards.com
+
+
 
 
 
@@ -172,6 +202,8 @@ rewarded webpages  : awwwards.com
 
 
 
+
+
 =============== KİTAPLAR ===============
 - Narsist İle Ateşkes : Wendy T. Benhaty
 - Etkili insanların 7 Alışkanlığı : Stephen R. Corvey
@@ -183,11 +215,15 @@ rewarded webpages  : awwwards.com
 
 
 
+
+
 ================= MÜZİK ================
 OMER BALIK - Melancholy Groove
 MELİS FİS - Ne Gelir Elimizden? - Akustik
 GİRAY ŞİPİT - kim beni alkışlar
 PUF - Bildiğin Gibi
+
+
 
 
 
@@ -294,8 +330,13 @@ avmigran
 - usman -> fight clup
 - usman -> zindan adası
 
+
+
+
 ================ YOUTUBE ================
 - Nasıl zengin olunur: https://youtu.be/Vz1gIBcevVI?si=_6yBpMklNyN-y6Fw 
+
+
 
 
 
@@ -305,10 +346,16 @@ sende çek: https://www.instagram.com/reel/DDMq0vytuKu/?igsh=cXZsM2VjanVqd3pl
 
 
 
-.
 
 
 
+
+================ BİLMECELER ================
+- 3 bilge . 2 siyah, 3 beyaz. hepsi beyaz
+- 1 yalancı 1 doğrucu 1 belirsiz. her birine 2şer soru
+- ÇAPA , komşu - okul - ev, anne ve çocuk
+- 2 kapı 2 bekçi
+- 100 mahkum 1 lambalı tuvelet
 
 
 
