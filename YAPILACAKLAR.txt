@@ -96,6 +96,7 @@ Incredibuild güncelleştirme notları
 - NEW: Tek dünya düzeni
 - NEW: psikozlar (hastalık ve rahatsızlıklar)
 - NEW: Enerji - iletişimin esas kanalı 
+- NEW: bir linke tıklamayla başımıza neler gelebilir ki..
 
 
 
