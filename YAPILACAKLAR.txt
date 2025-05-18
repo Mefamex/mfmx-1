@@ -2,18 +2,18 @@
 
 - İsim hakkı 
 - Beyiz sedir tütsüsü ve ametist
-gökhan güven - usman hoca 
-teknofeadilzm 
-bionluk ilanlar ekle
-işkur genç
-Github projeleri taşı
-w3s tüm dilleri denetle
-jvm (java virtual machine)
-Altın oran, yaklaşık olarak 1.61803398875  
-tutkunu AI ile bul
-TingerCard.com -> arduino simulation
-Incredibuild güncelleştirme notları
-Sir Arthur Canon Doyle
+- gökhan güven - usman hoca 
+- teknofeadilzm 
+- bionluk ilanlar ekle
+- işkur genç
+- Github projeleri taşı
+- w3s tüm dilleri denetle
+- jvm (java virtual machine)
+- Altın oran, yaklaşık olarak 1.61803398875  
+- tutkunu AI ile bul
+- TingerCard.com -> arduino simulation
+- Incredibuild güncelleştirme notları
+- Sir Arthur Canon Doyle
 
 
 
@@ -56,7 +56,7 @@ Sir Arthur Canon Doyle
 - CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir hedefe odaklan, giriş kısmını fotoğraflar ile zenginleştir.
 - NEW PAGE: file.html display page
 - Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
-
+- Anasayfa tasarımını ilk bölüm üzerine alta doğru kaydırmalı olacak şekilde görsellerle destekleyerek ekle 
 
 
 
@@ -359,7 +359,6 @@ sende çek: https://www.instagram.com/reel/DDMq0vytuKu/?igsh=cXZsM2VjanVqd3pl
 
 
 
-
 ================ BİLMECELER ================
 - 3 bilge . 2 siyah, 3 beyaz. hepsi beyaz
 - 1 yalancı 1 doğrucu 1 belirsiz. her birine 2şer soru
@@ -367,6 +366,10 @@ sende çek: https://www.instagram.com/reel/DDMq0vytuKu/?igsh=cXZsM2VjanVqd3pl
 - 2 kapı 2 bekçi
 - 100 silivrideki mahkum 1 lambalı tuvelet
 - 100 mahkum, siyah veya beyaz şapka, arka arkaya dizilir arkadan başlar. en az 99 hayatta kalıcak
+
+
+
+
 
 
 
