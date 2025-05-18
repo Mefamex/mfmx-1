@@ -54,7 +54,7 @@ Dosya/Network İşlemleri
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "MEFAMEX",
-                "url": "https://mefamex.com/",
+                "url": "https://mefamex.com",
                 "description": "Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog",
                 "publisher": { "@type": "Person", "name": "Mehmet Akif Akkoç" },
                 "creator": { "@type": "Organization", "name": "MEFAMEX" },
@@ -68,7 +68,7 @@ Dosya/Network İşlemleri
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com/" },
+                    { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com" },
                     { "@type": "ListItem", "position": 3, "name": "CV", "item": "https://mefamex.com/cv/" },
                     { "@type": "ListItem", "position": 4, "name": "Hakkımda", "item": "https://mefamex.com/about/" },
                     { "@type": "ListItem", "position": 5, "name": "Blog", "item": "https://mefamex.com/blog/" },

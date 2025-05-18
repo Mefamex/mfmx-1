@@ -5,7 +5,7 @@ os.chdir("..")
 directory_path = os.getcwd()
 
 # Set the base URL for your website
-base_url = "https://mefamex.com/"
+base_url = "https://mefamex.com"
 
 # Set the changefreq and priority values
 changefreq = "daily"

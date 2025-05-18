@@ -86,7 +86,7 @@ from pathlib import Path
 
 time.sleep(1) 
 
-BASE_URL = "https://mefamex.com/"
+BASE_URL = "https://mefamex.com"
 
 class Walker_file:
     def __init__(self, name: str, path: str, url: str, relative_path : str):

@@ -2,7 +2,7 @@
     "menu": [
         {
             "title": "Anasayfa - MEFAMEX ( Mehmet Akif AKKOÇ )",
-            "href": "https://mefamex.com/",
+            "href": "https://mefamex.com",
             "active": true,
             "isVisible": true,
             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -194,6 +194,6 @@
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
         "baseUrl": "https://mefamex.com",
         "languageCode": "tr",
-        "lastUpdated": "2025-05-14"
+        "lastUpdated": "2025-05-18"
     }
 }
