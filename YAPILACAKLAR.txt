@@ -99,6 +99,7 @@ Sir Arthur Canon Doyle
 
 
 ================ BLOG ================
+- TODO: grupla
 - sözler 
 - Kitaplar
 - bilgisayarda yapılacaklar 
@@ -111,14 +112,15 @@ Sir Arthur Canon Doyle
 - NEW: Yapay zeka araçları nasıl kullanılır? promtlar? siteler?
 - NEW: Özelleştirilmiş yapay zeka ve insana yardımcı olur
 - NEW: Ip v4 v6 v10
+- NEW: En güçlü ülkeler bile, yasal yazılım yöntemleri kullanılarak nasıl etkisiz hale getirilebilir? 
 - NEW: http 1-2-3
 - NEW: Tek dünya düzeni
 - NEW: Psikozlar (hastalık ve rahatsızlıklar)
 - NEW: Enerji - iletişimin esas kanalı 
 - NEW: Bir linke tıklamayla başımıza neler gelebilir ki?..
 - NEW: Bilmeceler
-- NEW: En güçlü ülkeler bile, yasal yazılım yöntemleri kullanılarak nasıl etkisiz hale getirilebilir? 
 - NEW: Küresel ölçekte, hiçbir ülkenin izinsiz hareket edemeyeceği bir konuma gelmek için nasıl bir yazılım ve strateji geliştirilmelidir?
+- NEW: Yapay zeka ile robotlar görevlilerin yerini alıcak ama insanlığın / insani davranışların, duyguların, hissiyatların yerini alabilecek mi?
 
 
 
