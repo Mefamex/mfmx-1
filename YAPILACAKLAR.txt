@@ -110,13 +110,15 @@ Sir Arthur Canon Doyle
 - NEW: Gününü nasıl iyileştirirsin ? 20şer dakika temizlik ve düzen, konsantrasyon, birini dinleme, kenidni dinleme, gelir kaynakları, kitap okuma 
 - NEW: Yapay zeka araçları nasıl kullanılır? promtlar? siteler?
 - NEW: Özelleştirilmiş yapay zeka ve insana yardımcı olur
-- NEW: ip v4 v6 
+- NEW: Ip v4 v6 v10
 - NEW: http 1-2-3
 - NEW: Tek dünya düzeni
-- NEW: psikozlar (hastalık ve rahatsızlıklar)
+- NEW: Psikozlar (hastalık ve rahatsızlıklar)
 - NEW: Enerji - iletişimin esas kanalı 
-- NEW: bir linke tıklamayla başımıza neler gelebilir ki..
+- NEW: Bir linke tıklamayla başımıza neler gelebilir ki?..
 - NEW: Bilmeceler
+- NEW: En güçlü ülkeleri bile nasıl yasal yolla yazılımlar ile çökertilebilir? 
+- NEW: Sen nasıl öyle bir yazılımcı olabilirsin ki hiçbir ülke senden izinsiz hareket edemesin?
 
 
 
@@ -294,10 +296,16 @@ PUF - Bildiğin Gibi
 
 
 
+
+
+
 ================ İLAÇLAR ================
 wellcare sitrat malat migresitnat 300
 cerepre max 
 avmigran
+
+
+
 
 
 ================ FİLM ================
