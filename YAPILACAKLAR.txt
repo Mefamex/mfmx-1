@@ -117,8 +117,8 @@ Sir Arthur Canon Doyle
 - NEW: Enerji - iletişimin esas kanalı 
 - NEW: Bir linke tıklamayla başımıza neler gelebilir ki?..
 - NEW: Bilmeceler
-- NEW: En güçlü ülkeleri bile nasıl yasal yolla yazılımlar ile çökertilebilir? 
-- NEW: Sen nasıl öyle bir yazılımcı olabilirsin ki hiçbir ülke senden izinsiz hareket edemesin?
+- NEW: En güçlü ülkeler bile, yasal yazılım yöntemleri kullanılarak nasıl etkisiz hale getirilebilir? 
+- NEW: Küresel ölçekte, hiçbir ülkenin izinsiz hareket edemeyeceği bir konuma gelmek için nasıl bir yazılım ve strateji geliştirilmelidir?
 
 
 
