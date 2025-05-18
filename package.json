@@ -5,13 +5,13 @@
     "author": {
         "name": "Mehmet Akif AKKOÇ",
         "email": "info@mefamex.com",
-        "url": "https://mefamex.com/"
+        "url": "https://mefamex.com"
     },
-    "homepage": "https://mefamex.com/",
+    "homepage": "https://mefamex.com",
     "private": false,
     "license": "MIT",
     "keywords": [
-        "mefamex", 
+        "mefamex",
         "mehmet-akif-akkoc",
         "portfolio",
         "personal-website",

@@ -87,7 +87,7 @@ from pathlib import Path
 
 time.sleep(1) 
 
-BASE_URL = "https://mefamex.com/" # base url for the links
+BASE_URL = "https://mefamex.com" # base url for the links
 
 class Walker_link:
     def __init__(self, name: str, path: str, url: str, date: str, relative_path : str):
