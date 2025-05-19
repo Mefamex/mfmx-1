@@ -178,7 +178,6 @@
 =============== SİTELER ===============
 Freelance: r10.net
 mekanik klavye sesi: https://github.com/hainguyents13/mechvibes/releases/
-AI search engine   : https://www.perplexity.ai/ 
 Search engine      : Ahmia , Shodan , Haystak 
 realtime image crte: https://www.krea.ai/
 check namess       : https://namechk.com/ 
