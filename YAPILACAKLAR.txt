@@ -122,7 +122,7 @@
 - NEW: Küresel ölçekte, hiçbir ülkenin izinsiz hareket edemeyeceği bir konuma gelmek için nasıl bir yazılım ve strateji geliştirilmelidir?
 - NEW: Yapay zeka ile robotlar görevlilerin yerini alıcak ama insanlığın / insani davranışların, duyguların, hissiyatların yerini alabilecek mi?
 - NEW: Risk
-
+- NEW: 
 
 
 
