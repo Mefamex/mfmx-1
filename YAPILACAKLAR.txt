@@ -61,7 +61,7 @@
 
 
 
-
+https://www.perplexity.ai/search/benim-dogum-gunum-bugun-25-05-pYbkr_4rQqqbBMI05g91eg
 
 
 ================ PROJELER ================
@@ -81,6 +81,7 @@
 - image to webp 
 - profile_follower 
 - okuldaki son haberler 
+- youte channel explorer
 - nmap gui
 - adb (android) gui
 - dirExVis iyileştir 
