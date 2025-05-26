@@ -23,6 +23,7 @@
 - c# bitir 
 - visualize
 - multi kernel
+- target: boston dynamicss
 
 
 
@@ -123,7 +124,7 @@ https://www.perplexity.ai/search/benim-dogum-gunum-bugun-25-05-pYbkr_4rQqqbBMI05
 - NEW: Küresel ölçekte, hiçbir ülkenin izinsiz hareket edemeyeceği bir konuma gelmek için nasıl bir yazılım ve strateji geliştirilmelidir?
 - NEW: Yapay zeka ile robotlar görevlilerin yerini alıcak ama insanlığın / insani davranışların, duyguların, hissiyatların yerini alabilecek mi?
 - NEW: Risk
-- NEW: 
+- NEW: project astra, https://www.youtube.com/watch?v=RtfUtBsZyxU
 
 
 
