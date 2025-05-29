@@ -24,6 +24,8 @@
 - visualize
 - multi kernel
 - target: boston dynamicss
+- yakındı -> https://www.linkedin.com/in/kaan-can-yilmaz-a10a84282/
+- CV https://www.linkedin.com/in/enginozbey/
 
 
 
