@@ -77,8 +77,9 @@ https://www.perplexity.ai/search/benim-dogum-gunum-bugun-25-05-pYbkr_4rQqqbBMI05
 - SQL examples 
 - python-uv 
 - Bookmarklet Kullanımı: yerimleri komutu
-- chrome eklenti yazma 
+- eklentiler  
 - otomasyon : Playwright
+- otomasyon : fallower find
 - node.js : (otomasyon) Puppeteer
 - python web8 
 - image to webp 
@@ -92,8 +93,8 @@ https://www.perplexity.ai/search/benim-dogum-gunum-bugun-25-05-pYbkr_4rQqqbBMI05
 - https://github.com/muzafferkadir/snake-learn-to-play
 - hack: QR code 
 - kali linux mysql 
-- python to sh 
-- amass (kali tool): subdomain keşfi 
+- py to sh 
+- amass (kali tool): subdomain kaşif  
 
 
 
@@ -275,7 +276,7 @@ PUF - Bildiğin Gibi
 
 =============== İNSANLAR ===============
 - Cem OZAN
-
+- Uzm. Dr. Ömer Faruk ŞAHİN Göz Hastalıkları Uzmanı
 
 
 
@@ -312,7 +313,11 @@ PUF - Bildiğin Gibi
 
 ================ İLAÇLAR ================
 wellcare sitrat malat migresitnat 300
-cerepre max 
+Cerebramax Citicoline 250mg softgel Capsules  
+Marincap 500mg Omega-3 balık yağı konsantresi
+Ocean Daily One multi-Vitamin-mineral,
+Coraspin 100mg
+Redepra 15mg
 avmigran
 
 
