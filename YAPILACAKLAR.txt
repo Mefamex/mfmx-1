@@ -26,6 +26,7 @@
 - target: boston dynamicss
 - yakındı -> https://www.linkedin.com/in/kaan-can-yilmaz-a10a84282/
 - CV https://www.linkedin.com/in/enginozbey/
+- https://www.reddit.com/r/TurkDev/comments/1l4ceh5/yapay_zeka_tabanl%C4%B1_web_uygulamalar%C4%B1_geli%C5%9Ftirmek/
 
 
 
