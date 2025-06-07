@@ -1,4 +1,9 @@
-# updated 2025-05-18UTC05:35
+# updated 2025-06-07UTC02:26
+
+==========================================================================
+                     Uzmanlaş ve deneyim edin :
+====== arka uç ağırlıklı tam yığın geliştiricilik ve sistem mimarisi =====
+==========================================================================
 
 - İsim hakkı 
 - Beyiz sedir tütsüsü ve ametist
@@ -42,6 +47,7 @@
 - Kaggle
 - Raplit 
 - Öğren -> C# explicit event accessor (açık olay erişimcisi)
+- Docker ve Kubernetes, AWS, Azure
 
 
 
@@ -131,6 +137,7 @@
 - NEW: Yapay zeka ile robotlar görevlilerin yerini alıcak ama insanlığın / insani davranışların, duyguların, hissiyatların yerini alabilecek mi?
 - NEW: Risk
 - NEW: project astra, https://www.youtube.com/watch?v=RtfUtBsZyxU
+- NEW: Yazılımcılar için yapay zekalar tuzak mı, destek mi?
 
 
 
