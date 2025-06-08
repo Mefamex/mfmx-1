@@ -1,9 +1,10 @@
-# updated 2025-06-07UTC02:26
+# updated 2025-06-08UTC23:43
 
-==========================================================================
-                     Uzmanlaş ve deneyim edin :
-====== arka uç ağırlıklı tam yığın geliştiricilik ve sistem mimarisi =====
-==========================================================================
+=========================================================================
+                           CAREER UP TO :
+======= Back-End Focused Full-Stack Developer and System Architect ======
+======== Arka Uç Ağırlıklı Tam Yığın Geliştirici ve Sistem Mimarı =======
+=========================================================================
 
 - İsim hakkı 
 - Beyiz sedir tütsüsü ve ametist
@@ -12,7 +13,7 @@
 - bionluk ilanlar ekle
 - işkur genç
 - Github projeleri taşı
-- w3s tüm dilleri denetle
+- w3s All lang
 - jvm (java virtual machine)
 - Altın oran, yaklaşık olarak 1.61803398875  
 - tutkunu AI ile bul
