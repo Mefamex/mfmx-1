@@ -17,12 +17,12 @@
 - İsim hakkı 
 - Beyiz sedir tütsüsü ve ametist
 - gökhan güven - usman hoca 
-- teknofeadilzm 
 - bionluk ilanlar ekle
 - işkur genç
 - Github projeleri taşı
 - w3s All lang
 - jvm (java virtual machine)
+- teknofeadilzm 
 - Altın oran, yaklaşık olarak 1.61803398875  
 - tutkunu AI ile bul
 - TingerCard.com -> arduino simulation
