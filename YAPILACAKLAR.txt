@@ -1,4 +1,12 @@
-# updated 2025-06-08UTC23:43
+# updated 2025-06-10UTC02:12
+
+=========================================================================
+"PERSON"   : "Mehmet Akif AKKOÇ"
+"USERNAME" : "mefamex"
+"WEBSITE"  : "https://mefamex.com"
+"INSTAGRAM": "@mefamex"
+"GITHUB"   : "@mefamex" 
+=========================================================================
 
 =========================================================================
                            CAREER UP TO :
@@ -140,6 +148,7 @@
 - NEW: Risk
 - NEW: project astra, https://www.youtube.com/watch?v=RtfUtBsZyxU
 - NEW: Yazılımcılar için yapay zekalar tuzak mı, destek mi?
+- NEW: Yazılım alanları 
 
 
 
