@@ -69,6 +69,7 @@ mefamex (info@mefamex.com) (https://mefamex.com)
 Tarihce:
 - 1.0.0 (2025-05-04): Ilk surum
 - 1.0.1 (2025-05-03): dosya yolu -relative_path- ile oluşan hata giderildi. 
+- 1.0.2 (2025-06-09): dosya yolu -relative_path- ile oluşan hata giderildi. 
 
 Iletisim:
     - E-mail: info@mefamex.com
@@ -96,7 +97,7 @@ class Walker_file:
         self.size : int = os.path.getsize(path) if os.path.isfile(path) else 0
         self.date : str = datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime("%Y-%m-%d") if os.path.isfile(path) else None
         self.relative_path : str = relative_path 
-        self.full_url : str = BASE_URL + self.url
+        self.full_url : str = BASE_URL + "/" + self.url 
         
     def to_dict(self):
         result = {
@@ -118,7 +119,7 @@ class Walker_path:
             self.size : int = 0
             self.date : str = date # format = YYYY-MM-DD 
             self.relative_path  : str = relative_path 
-            self.full_url       : str = BASE_URL + self.url 
+            self.full_url       : str = BASE_URL + "/" + self.url 
             self.folder         : list[Walker_path] = [] 
             self.files          : list[Walker_file] = []
             
