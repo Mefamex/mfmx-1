@@ -14,6 +14,7 @@
 ======== Arka Uç Ağırlıklı Tam Yığın Geliştirici ve Sistem Mimarı =======
 =========================================================================
 
+
 - İsim hakkı 
 - Beyiz sedir tütsüsü ve ametist
 - gökhan güven - usman hoca 
