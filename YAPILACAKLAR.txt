@@ -59,7 +59,7 @@
 - Raplit 
 - Öğren -> C# explicit event accessor (açık olay erişimcisi)
 - Docker ve Kubernetes, AWS, Azure
-
+- Sysinternals
 
 
 
