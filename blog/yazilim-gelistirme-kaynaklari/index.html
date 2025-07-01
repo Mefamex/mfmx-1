@@ -60,6 +60,30 @@
         main li {
             margin-block: 0 !important;
         }
+
+        main .Content {
+            margin-top: 5em !important;
+        }
+
+        main .Content h2 {
+            z-index: 1;
+        }
+
+        main .Content h3 {
+            background-color: #ffe8c9;
+            width: fit-content;
+            padding-inline: 0.5em 1em;
+            border: 0.01em solid #b0b0b0;
+            border-radius: 0 1em 1em 0;
+            border-left: 0.08em solid rgb(0, 179, 255);
+            transform: translateX(-0.2em);
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+                border-color: black;
+                border-left-width: 0.15em;
+            }
+        }
     </style>
 </head>
 
@@ -138,18 +162,14 @@
             <!---->
             <!---->
             <section class="Content">
-                <h2> PROGRAMMING LANGUAGES </h2>
+                <h2> LANGUAGES </h2>
                 <p> &rtri; YouTube, yazılım öğrenmek için harika bir platform. Aşağıdaki kanallar, hem başlangıç seviyesi hem de ileri düzey konularda kaliteli içerikler sunuyor. </p>
+                <!---->
                 <h3>DEEP LEARNING & AI</h3>
                 <ul>
                     <li><strong translate="no">Andrej Karpathy:</strong> YouTube kanalında derin öğrenme ve yapay zeka dersleri</li>
                 </ul> <br>
-                <h3>JAVASCRIPT</h3>
-                <ul>
-                    <li><a href="https://javascript.info" target="_blank" rel="noopener"><strong translate="no">JavaScript.info:</strong></a> Modern JavaScript eğitimi</li>
-                    <li><a href="https://supersimple.dev/" target="_blank" rel="noopener"><strong translate="no">supersimple.dev:</strong></a> YouTube'da JavaScript Başlangıçtan İleri Seviyeye Tam
-                        Kurs </li>
-                </ul> <br>
+                <!---->
                 <h3>PYTHON</h3>
                 <ul>
                     <li><a href="https://python-istihza.yazbel.com" target="_blank" rel="noopener"><strong translate="no">yazbel.com:</strong></a> Türkçe Python kaynağı. (benim 2016'daki ilk
@@ -157,6 +177,20 @@
                     <li><a href="https://realpython.com" target="_blank" rel="noopener"><strong translate="no">realpython.com:</strong></a> Kapsamlı Python eğitim platformu</li>
                     <li><strong translate="no">Programming with Mosh:</strong> 2025 Başlangıç Seviyesi Python Kursu</li>
                 </ul> <br>
+                <!---->
+                <h3>JAVASCRIPT</h3>
+                <ul>
+                    <li><a href="https://javascript.info" target="_blank" rel="noopener"><strong translate="no">JavaScript.info:</strong></a> Modern JavaScript eğitimi</li>
+                    <li><a href="https://supersimple.dev/" target="_blank" rel="noopener"><strong translate="no">supersimple.dev:</strong></a> YouTube'da JavaScript Başlangıçtan İleri Seviyeye Tam
+                        Kurs </li>
+                </ul> <br>
+                <!---->
+                <h3>JAVA</h3>
+                <ul>
+                    <li><a href="https://www.javatpoint.com" target="_blank" rel="noopener"><strong translate="no">javatpoint.com:</strong></a> Java programlama dilini baştan sona öğrenebileceğiniz
+                        temel kaynak</li>
+                </ul> <br>
+                <!---->
                 <h3>C#</h3>
                 <ul>
                     <li><strong translate="no">Murat Yücedağ:</strong> Temel ve ileri C# dersleri</li>
@@ -168,73 +202,102 @@
                     <li><a href="https://learn.microsoft.com/tr-tr/dotnet/csharp/" target="_blank" rel="noopener"><strong translate="no">microsoft.com:</strong></a> Resmi C# dokümantasyonu</li>
                     <li><strong translate="no">Microsoft Virtual Academy:</strong> Microsoft tarafından hazırlanan eğitimler</li>
                 </ul> <br>
-                <h3>C</h3>
-                <ul>
-                    <li><a href="https://www.tutorialspoint.com" target="_blank" rel="noopener"><strong translate="no">tutorialspoint.com:</strong></a> C dilinin temellerini örneklerle öğreten kaynak
-                    </li>
-                </ul> <br>
+                <!---->
                 <h3>C++</h3>
                 <ul>
                     <li><a href="https://www.learncpp.com" target="_blank" rel="noopener"><strong translate="no">learncpp.com:</strong></a> C++ programlama dilini temel seviyeden ileri düzeye adım
                         adım öğreten kaynak</li>
                 </ul> <br>
-                <h3>JAVA</h3>
+                <!---->
+                <h3>C</h3>
                 <ul>
-                    <li><a href="https://www.javatpoint.com" target="_blank" rel="noopener"><strong translate="no">javatpoint.com:</strong></a> Java programlama dilini baştan sona öğrenebileceğiniz
-                        temel kaynak</li>
+                    <li><a href="https://www.tutorialspoint.com" target="_blank" rel="noopener"><strong translate="no">tutorialspoint.com:</strong></a> C dilinin temellerini örneklerle öğreten kaynak
+                    </li>
                 </ul> <br>
+                <!---->
+                <h3>Go (Golang)</h3> 
+                <ul>
+                    <li><a href="https://go.dev/" target="_blank" rel="noopener"><strong translate="no">go.dev:</strong></a> Resmi web sitesi </li>
+                </ul> <br>
+                <!---->
+                <h3>PHP</h3>
+                <ul>
+                    <li>.</li>
+                </ul> <br>
+                <!---->
+                <h3>RUBY</h3>
+                <ul>
+                    <li><a href="https://www.rubyguides.com" target="_blank" rel="noopener"><strong translate="no">rubyguides.com:</strong></a> Temel ve ileri düzey öğretici kaynaklar</li>
+                </ul> <br>
+                <!---->
+                <h3>Swift</h3>
+                <ul>
+                    <li>.</li>
+                </ul> <br>
+                <!---->
+                <h3>R</h3>
+                <ul>
+                    <li>.</li>
+                </ul> <br>
+                <!---->
                 <h3>HTML</h3>
                 <ul>
                     <li><a href="https://www.w3schools.com" target="_blank" rel="noopener"><strong translate="no">W3Schools:</strong></a> HTML'i örneklerle öğreten temel eğitim platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>CSS</h3>
                 <ul>
                     <li><a href="https://css-tricks.com" target="_blank" rel="noopener"><strong translate="no">CSS-Tricks:</strong></a> CSS özellikleri ve sayfa düzeni teknikleri için pratik örnekler
                     </li>
                 </ul> <br>
+                <!---->
                 <h3>TYPESCRIPT</h3>
                 <ul>
                     <li><a href="https://www.codecademy.com" target="_blank" rel="noopener"><strong translate="no">codecademy.com:</strong></a> İnteraktif TypeScript eğitimi</li>
                 </ul> <br>
+                <!---->
                 <h3>RUST</h3>
                 <ul>
                     <li><a href="https://www.rust-lang.org" target="_blank" rel="noopener"><strong translate="no">rust-lang.org:</strong></a> Performanslı ve güvenli sistem programlama için temel
                         kaynak</li>
                 </ul> <br>
-                <h3>RUBY</h3>
-                <ul>
-                    <li><a href="https://www.rubyguides.com" target="_blank" rel="noopener"><strong translate="no">rubyguides.com:</strong></a> Temel ve ileri düzey öğretici kaynaklar</li>
-                </ul> <br>
-                <h3>DART</h3>
-                <ul>
-                    <li><a href="https://www.dart.dev" target="_blank" rel="noopener"><strong translate="no">dart.dev:</strong></a> Flutter için optimize edilmiş, tip güvenli ve hızlı geliştirmeye
-                        olanak sağlayan modern programlama dili</li>
-                </ul> <br>
+                <!---->
                 <h3>R</h3>
                 <ul>
                     <li><a href="https://r-project.org" target="_blank" rel="noopener"><strong translate="no">r-project.org:</strong></a> Veri bilimi ve istatistik analizleri için ücretsiz, açık
                         kaynaklı yazılım. Hazır istatistik kütüphaneleri ve görselleştirme araçları sunar.</li>
                 </ul> <br>
+                <!---->
+                <h3>DART</h3>
+                <ul>
+                    <li><a href="https://www.dart.dev" target="_blank" rel="noopener"><strong translate="no">dart.dev:</strong></a> Flutter için optimize edilmiş, tip güvenli ve hızlı geliştirmeye
+                        olanak sağlayan modern programlama dili</li>
+                </ul> <br>
+                <!---->
                 <h3>PERL</h3>
                 <ul>
                     <li><a href="https://perl.org" target="_blank" rel="noopener"><strong translate="no">perl.org:</strong></a> Resmi belgelere sahip, geniş modül kütüphanesi sunan ve aktif bir
                         topluluğu olan temel öğrenme platformu.</li>
                 </ul> <br>
+                <!---->
                 <h3>SCALA</h3>
                 <ul>
                     <li><a href="https://scala-lang.org" target="_blank" rel="noopener"><strong translate="no">scala-lang.org:</strong></a> Resmi dokümantasyon, online derleyici ve interaktif öğrenme
                         ortamı sunan kapsamlı eğitim platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>HASKELL</h3>
                 <ul>
                     <li><a href="https://haskell.org" target="_blank" rel="noopener"><strong translate="no">haskell.org:</strong></a> Resmi kaynak ve belgeler sunar. Pratik örnekler, interaktif
                         öğrenme ve canlı kodlama alanları içerir.</li>
                 </ul> <br>
+                <!---->
                 <h3>JULIA</h3>
                 <ul>
                     <li><a href="https://julialang.org" target="_blank" rel="noopener"><strong translate="no">julialang.org:</strong></a> Resmi belgeler, örnekler ve geniş kaynak kütüphanesi sunan
                         öğrenme platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>ELIXIR</h3>
                 <ul>
                     <li><a href="https://elixir-lang.org" target="_blank" rel="noopener"><strong translate="no">elixir-lang.org:</strong></a> Resmi dokümantasyon ile adım adım öğrenme, canlı kodlama
@@ -249,56 +312,67 @@
                 <p>&rtri; Framework'ler modern proje geliştirmenin temel yapı taşlarıdır. React, Vue ve Angular gibi popüler frontend framework'leri yanında Django, Flask ve Laravel gibi backend
                     framework'leri de bu bölümde incelenmiştir.</p>
                 <p>&rtri; Her framework için resmi dokümantasyonlar ve öğrenim kaynakları listelenmiştir. Bu kaynaklar başlangıç seviyesinden ileri düzeye kadar kapsamlı eğitim materyalleri sunar.</p>
+                <!---->
                 <h3>REACT</h3>
                 <ul>
                     <li><a href="https://react.dev/learn" target="_blank" rel="noopener"><strong translate="no">react.dev/learn :</strong></a> Resmi React dokümanları, adım adım öğretici içerik, örnek
                         kodlar ve canlı pratik yapma imkanı sunar.</li>
                 </ul> <br>
+                <!---->
                 <h3>VUE</h3>
                 <ul>
                     <li><a href="https://learnvue.com" target="_blank" rel="noopener"><strong translate="no">learnvue.com :</strong></a> Güncel örnekler ve videolarla adım adım Vue.js eğitimi sunan,
                         başlangıç seviyesinden ileri düzeye kapsamlı platform</li>
                 </ul> <br>
+                <!---->
                 <h3>NEXT.JS</h3>
                 <ul>
                     <li><a href="https://nextjs.org" target="_blank" rel="noopener"><strong translate="no">nextjs.org :</strong></a> React tabanlı uygulama geliştirmek için resmi dokümantasyon, örnek
                         uygulamalar ve hazır şablonlar sunar</li>
                 </ul> <br>
+                <!---->
                 <h3>ANGULAR</h3>
                 <ul>
                     <li><a href="https://angular.io" target="_blank" rel="noopener"><strong translate="no">angular.io :</strong></a> Resmi dokümantasyon ve öğretici içeriğiyle kapsamlı bir öğrenme
                         platformu. Örnek uygulamalar ve pratik ödevler sunar.</li>
                 </ul> <br>
+                <!---->
                 <h3>DJANGO</h3>
                 <ul>
                     <li><a href="https://djangoproject.com" target="_blank" rel="noopener"><strong translate="no">djangoproject.com :</strong></a> Kapsamlı öğreticiler, detaylı dokümantasyon ve güncel
                         projeler sunan Python web framework eğitim platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>FLASK</h3>
                 <ul>
                     <li><a href="https://flask.palletsproject.com" target="_blank" rel="noopener"><strong translate="no">flask.palletsproject.com :</strong></a> Basit ve anlaşılır öğreticiler, temel
                         örnekler ve ayrıntılı API belgeleri sunan Python web framework dokümantasyonu</li>
                 </ul> <br>
+                <!---->
                 <h3>LARAVEL</h3>
                 <ul>
                     <li><a href="https://laravel.com" target="_blank" rel="noopener"><strong translate="no">laravel.com :</strong></a> PHP web framework öğrenimi için resmi dokümantasyon, ayrıntılı
                         öğreticiler ve örnek projeler sunan ana platform</li>
                 </ul> <br>
+                <!---->
                 <h3>SPRING BOOT</h3>
                 <ul>
                     <li><a href="https://spring.io" target="_blank" rel="noopener"><strong translate="no">spring.io :</strong></a> Java tabanlı web uygulamaları için resmi eğitim platformu. Detaylı
                         dökümantasyon ve pratik örnekler sunar.</li>
                 </ul> <br>
+                <!---->
                 <h3>FLUTTER</h3>
                 <ul>
                     <li><a href="https://flutter.dev" target="_blank" rel="noopener"><strong translate="no">flutter.dev :</strong></a> Resmi eğitim merkezi ile her seviye için kod örnekleri, eğitim
                         videoları ve aktif topluluk desteği sunan platform</li>
                 </ul> <br>
+                <!---->
                 <h3>BOOTSTRAP</h3>
                 <ul>
                     <li><a href="https://getbootstrap.com" target="_blank" rel="noopener"><strong translate="no">getbootstrap.com :</strong></a> Hazır bileşenler ve özelleştirilebilir şablonlar sunan,
                         mobil uyumlu CSS framework eğitim platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>TAILWIND CSS</h3>
                 <ul>
                     <li><a href="https://tailwindcss.com" target="_blank" rel="noopener"><strong translate="no">tailwindcss.com :</strong></a> Kullanıma hazır stilleri doğrudan HTML içinde
@@ -317,31 +391,37 @@
                     <li><a href="https://learngitbranching.js.org" target="_blank" rel="noopener"><strong translate="no">learngitbranching.js.org:</strong></a> Git komutlarını görsel olarak görme ve
                         deneme imkanı sunan, etkileşimli bir öğrenme platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>API DEVELOPMENT</h3>
                 <ul>
                     <li><a href="https://freecodecamp.org" target="_blank" rel="noopener"><strong translate="no">freecodecamp.org:</strong></a> API geliştirme için ücretsiz eğitimler, projeler ve
                         sertifikalar sunan interaktif öğrenme platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>RESTFUL API</h3>
                 <ul>
                     <li><a href="https://restfulapi.net" target="_blank" rel="noopener"><strong translate="no">restfulapi.net:</strong></a> REST API tasarımı için örnekler, en iyi uygulamalar ve
                         kapsamlı rehberler sunan açık kaynak platform</li>
                 </ul> <br>
+                <!---->
                 <h3>MICROSERVICES & CLOUD</h3>
                 <ul>
                     <li><a href="https://dzone.com" target="_blank" rel="noopener"><strong translate="no">dzone.com:</strong></a> Mikroservisler ve bulut bilişim konusunda güncel makaleler ve uzman
                         görüşleri sunan platform</li>
                 </ul> <br>
+                <!---->
                 <h3>BACKEND</h3>
                 <ul>
                     <li><a href="https://theserverside.com" target="_blank" rel="noopener"><strong translate="no">theserverside.com:</strong></a> Java ve Spring odaklı backend geliştirme öğretimleri,
                         örnek kodlar ve projeler sunan platform</li>
                 </ul> <br>
+                <!---->
                 <h3> DEVOPS</h3>
                 <ul>
                     <li><a href="https://theserverside.com" target="_blank" rel="noopener"><strong translate="no">theserverside.com:</strong></a> DevOps araçları, CI/CD süreçleri ve konteyner
                         teknolojileri hakkında detaylı rehberler ve örnek uygulamalar sunar</li>
                 </ul> <br>
+                <!---->
                 <h3>FULLSTACK DEVELOPMENT</h3>
                 <ul>
                     <li><a href="https://theodinproject.com" target="_blank" rel="noopener"><strong translate="no">theodinproject.com:</strong></a> Ücretsiz fullstack eğitimi, gerçek dünya projeleri
@@ -362,6 +442,7 @@
                     <li><a href="https://docs.unity.com" target="_blank" rel="noopener"><strong translate="no">docs.unity.com:</strong></a> Kapsamlı API referansları, detaylı kod örnekleri ve konuya
                         özel arama özelliği sunan belgelendirme platformu</li>
                 </ul> <br>
+                <!---->
                 <h3>UNREAL ENGINE</h3>
                 <ul>
                     <li><a href="https://unrealengine.com" target="_blank" rel="noopener"><strong translate="no">unrealengine.com:</strong></a> Ücretsiz örnek projeler, hazır varlıklar ve modeller
@@ -369,11 +450,13 @@
                     <li><a href="https://dev.epicgames.com/community/learning" target="_blank" rel="noopener"><strong translate="no">epicgames.com:</strong></a> Ücretsiz eğitim materyalleri, örnek
                         projeler ve topluluk desteği sunan öğrenme merkezi </li>
                 </ul> <br>
+                <!---->
                 <h3>GODOT</h3>
                 <ul>
                     <li><a href="https://docs.godotengine.org" target="_blank" rel="noopener"><strong translate="no">docs.godotengine.org:</strong></a> Açık kaynaklı oyun motoru için detaylı
                         dokümantasyon, örnekler ve adım adım eğitimler sunan resmi platform</li>
                 </ul> <br>
+                <!---->
                 <h3>GAME DESIGN</h3>
                 <ul>
                     <li><a href="https://www.gamasutra.com" target="_blank" rel="noopener"><strong translate="no">gamasutra.com:</strong></a> Oyun geliştirme endüstrisindeki uzmanlardan makaleler,
