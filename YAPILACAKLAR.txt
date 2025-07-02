@@ -64,6 +64,7 @@
 - Sysinternals
 - Garbage Collection
 - tailOs 128gb perMonth
+- Go için takipte ol -> https://www.youtube.com/@anthonygg_
 
 
 
@@ -147,6 +148,7 @@
 - NEW: Psikozlar (hastalık ve rahatsızlıklar)
 - NEW: Enerji - iletişimin esas kanalı 
 - NEW: Bir linke tıklamayla başımıza neler gelebilir ki?..
+- NEW: Sosyal Mühendislik
 - NEW: Bilmeceler
 - NEW: Küresel ölçekte, hiçbir ülkenin izinsiz hareket edemeyeceği bir konuma gelmek için nasıl bir yazılım ve strateji geliştirilmelidir?
 - NEW: Yapay zeka ile robotlar görevlilerin yerini alıcak ama insanlığın / insani davranışların, duyguların, hissiyatların yerini alabilecek mi?
@@ -308,6 +310,7 @@ PUF - Bildiğin Gibi
 =============== İNSANLAR ===============
 - Cem OZAN
 - Uzm. Dr. Ömer Faruk ŞAHİN Göz Hastalıkları Uzmanı
+- Go's : Ken Thomas , Rob Pike, Robert Griesemer
 
 
 
