@@ -142,6 +142,7 @@
 - NEW: Yapay zeka araçları nasıl kullanılır? promtlar? siteler?
 - NEW: Özelleştirilmiş yapay zeka ve insana yardımcı olur
 - NEW: Ip v4 v6 v10
+- NEW: Veri tipleri niçin oluşturuldu? Avantajları ve amaçlari nelerdir?
 - NEW: En güçlü ülkeler bile, yasal yazılım yöntemleri kullanılarak nasıl etkisiz hale getirilebilir? 
 - NEW: http 1-2-3
 - NEW: Tek dünya düzeni
