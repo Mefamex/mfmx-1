@@ -43,6 +43,7 @@
 - yakındı -> https://www.linkedin.com/in/kaan-can-yilmaz-a10a84282/
 - CV https://www.linkedin.com/in/enginozbey/
 - https://www.reddit.com/r/TurkDev/comments/1l4ceh5/yapay_zeka_tabanl%C4%B1_web_uygulamalar%C4%B1_geli%C5%9Ftirmek/
+- memory-json
 
 
 
@@ -95,6 +96,9 @@
 ================ PROJELER ================
 - Modüleştir: İçindekiler ve son değişiklikler
 - Desktop Asistan: AI
+- Googla 5, filter content, auto summarize, save file
+- yapay zekalar ve personal memory json (bkz projeler, mfmxAI )
+- sohbet içerik filtreleyici for every AI (py or go) 
 - Proje Örnekleri Hesabı: https://github.com/protesq 
 - py to exe : web hizmeti 
 - Python pdf to docx : pdf2docx.Converter(pdf_path).convert(docx_path).close()
@@ -102,7 +106,7 @@
 - SQL examples 
 - python-uv 
 - Bookmarklet Kullanımı: yerimleri komutu
-- eklentiler  
+- eklentiler 
 - otomasyon : Playwright
 - otomasyon : fallower find
 - node.js : (otomasyon) Puppeteer
@@ -130,11 +134,12 @@
 
 ================ BLOG ================
 - TODO: grupla
-- sözler 
+- sözler -> günün sözü, rasgele ver
 - Kitaplar
 - bilgisayarda yapılacaklar 
 - Günlük/aylık program
 - Biyografiler
+- yazılımcı mı olsam ne?
 - NEW: Yapay zeka toolları
 - NEW: Her şey denge üzerine kuruludur. bir insan etrafındaki yabancı (aile dışı) insanlara ne kadar iyi davranırsa kötülük dengesi için ailesindeki bireylere kötü ahlak sergiler
 - NEW: GITHUB'ın önemi - Öğrenme ve çalışma alanı sergileme
@@ -394,7 +399,7 @@ avmigran
 
 ================ YOUTUBE ================
 - Nasıl zengin olunur: https://youtu.be/Vz1gIBcevVI?si=_6yBpMklNyN-y6Fw 
-
+- Nasıl Tasarım yapılmaz : https://www.youtube.com/@ademkaraaslan
 
 
 
