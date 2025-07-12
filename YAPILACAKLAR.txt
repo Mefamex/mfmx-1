@@ -29,6 +29,7 @@
 - TingerCard.com -> arduino simulation
 - Incredibuild güncelleştirme notları
 - Sir Arthur Canon Doyle
+- !!! Algoritmalar 
 
 
 
@@ -66,6 +67,8 @@
 - Garbage Collection
 - tailOs 128gb perMonth
 - Go için takipte ol -> https://www.youtube.com/@anthonygg_
+- Atalay Karahan - JunDev
+
 
 
 
