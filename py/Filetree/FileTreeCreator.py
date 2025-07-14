@@ -166,7 +166,7 @@ class FileTreeCreator:
         self.file_tree : dict = {}
         
         self.walker(base_dir)
-        self.print_file_tree()
+        # self.print_file_tree()
         self.save_file_tree()
         
     def walker(self, root : Path) -> Optional[Walker_path] :

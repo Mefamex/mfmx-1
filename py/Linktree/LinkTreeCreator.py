@@ -162,7 +162,7 @@ class LinkTreeCreator:
         self.link_tree : dict = {}
         
         self.walker(base_dir)
-        self.print_link_tree()
+        # self.print_link_tree()
         self.save_link_tree()
         
 
