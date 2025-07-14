@@ -1,8 +1,8 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "size": 90415492,
-    "date": "2025-07-04",
+    "size": 90567679,
+    "date": "2025-07-11",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "folder": [
@@ -19,26 +19,77 @@
                     "name": "index.html",
                     "url": "about/index.html",
                     "size": 20800,
-                    "date": "2025-07-04",
+                    "date": "2025-07-14",
                     "full_url": "https://mefamex.com/about/index.html",
-                    "relative_path": "about/index.html"
+                    "relative_path": "about\\index.html"
                 }
             ]
         },
         {
             "name": "blog",
             "url": "blog",
-            "size": 161021,
-            "date": "2025-07-04",
+            "size": 313269,
+            "date": "2025-07-11",
             "relative_path": "blog",
             "full_url": "https://mefamex.com/blog",
             "folder": [
+                {
+                    "name": "go-(golang)-nedir",
+                    "url": "blog/go-(golang)-nedir",
+                    "size": 57910,
+                    "date": "2025-07-11",
+                    "relative_path": "blog\\go-(golang)-nedir",
+                    "full_url": "https://mefamex.com/blog/go-(golang)-nedir",
+                    "folder": [],
+                    "files": [
+                        {
+                            "name": "golang-0.md",
+                            "url": "blog/go-(golang)-nedir/golang-0.md",
+                            "size": 6387,
+                            "date": "2025-07-11",
+                            "full_url": "https://mefamex.com/blog/go-(golang)-nedir/golang-0.md",
+                            "relative_path": "blog\\go-(golang)-nedir\\golang-0.md"
+                        },
+                        {
+                            "name": "golang-1.md",
+                            "url": "blog/go-(golang)-nedir/golang-1.md",
+                            "size": 12634,
+                            "date": "2025-07-11",
+                            "full_url": "https://mefamex.com/blog/go-(golang)-nedir/golang-1.md",
+                            "relative_path": "blog\\go-(golang)-nedir\\golang-1.md"
+                        },
+                        {
+                            "name": "golang-2.0.md",
+                            "url": "blog/go-(golang)-nedir/golang-2.0.md",
+                            "size": 16657,
+                            "date": "2025-07-11",
+                            "full_url": "https://mefamex.com/blog/go-(golang)-nedir/golang-2.0.md",
+                            "relative_path": "blog\\go-(golang)-nedir\\golang-2.0.md"
+                        },
+                        {
+                            "name": "golang-2.1.md",
+                            "url": "blog/go-(golang)-nedir/golang-2.1.md",
+                            "size": 17676,
+                            "date": "2025-07-11",
+                            "full_url": "https://mefamex.com/blog/go-(golang)-nedir/golang-2.1.md",
+                            "relative_path": "blog\\go-(golang)-nedir\\golang-2.1.md"
+                        },
+                        {
+                            "name": "golang-3-local.md",
+                            "url": "blog/go-(golang)-nedir/golang-3-local.md",
+                            "size": 4556,
+                            "date": "2025-07-11",
+                            "full_url": "https://mefamex.com/blog/go-(golang)-nedir/golang-3-local.md",
+                            "relative_path": "blog\\go-(golang)-nedir\\golang-3-local.md"
+                        }
+                    ]
+                },
                 {
                     "name": "ozlu-sozler",
                     "url": "blog/ozlu-sozler",
                     "size": 30198,
                     "date": "2025-07-04",
-                    "relative_path": "blog/ozlu-sozler",
+                    "relative_path": "blog\\ozlu-sozler",
                     "full_url": "https://mefamex.com/blog/ozlu-sozler",
                     "folder": [],
                     "files": [
@@ -48,7 +99,42 @@
                             "size": 30198,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/blog/ozlu-sozler/index.html",
-                            "relative_path": "blog/ozlu-sozler/index.html"
+                            "relative_path": "blog\\ozlu-sozler\\index.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "set-active-brain",
+                    "url": "blog/set-active-brain",
+                    "size": 50336,
+                    "date": "2025-07-11",
+                    "relative_path": "blog\\set-active-brain",
+                    "full_url": "https://mefamex.com/blog/set-active-brain",
+                    "folder": [],
+                    "files": [
+                        {
+                            "name": "ben insanın düşünce yoluyla yani zihniyle bir çok.md",
+                            "url": "blog/set-active-brain/ben insanın düşünce yoluyla yani zihniyle bir çok.md",
+                            "size": 34044,
+                            "date": "2025-07-08",
+                            "full_url": "https://mefamex.com/blog/set-active-brain/ben insanın düşünce yoluyla yani zihniyle bir çok.md",
+                            "relative_path": "blog\\set-active-brain\\ben insanın düşünce yoluyla yani zihniyle bir çok.md"
+                        },
+                        {
+                            "name": "celebre max ilacı ne işe yarıyor. _celebre max_.md",
+                            "url": "blog/set-active-brain/celebre max ilacı ne işe yarıyor. _celebre max_.md",
+                            "size": 5969,
+                            "date": "2025-07-08",
+                            "full_url": "https://mefamex.com/blog/set-active-brain/celebre max ilacı ne işe yarıyor. _celebre max_.md",
+                            "relative_path": "blog\\set-active-brain\\celebre max ilacı ne işe yarıyor. _celebre max_.md"
+                        },
+                        {
+                            "name": "cerebramax.md",
+                            "url": "blog/set-active-brain/cerebramax.md",
+                            "size": 10323,
+                            "date": "2025-07-08",
+                            "full_url": "https://mefamex.com/blog/set-active-brain/cerebramax.md",
+                            "relative_path": "blog\\set-active-brain\\cerebramax.md"
                         }
                     ]
                 },
@@ -57,7 +143,7 @@
                     "url": "blog/yapay-zeka-insanin-yerini-alabilir-mi",
                     "size": 20315,
                     "date": "2025-07-04",
-                    "relative_path": "blog/yapay-zeka-insanin-yerini-alabilir-mi",
+                    "relative_path": "blog\\yapay-zeka-insanin-yerini-alabilir-mi",
                     "full_url": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi",
                     "folder": [],
                     "files": [
@@ -67,7 +153,26 @@
                             "size": 20315,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/index.html",
-                            "relative_path": "blog/yapay-zeka-insanin-yerini-alabilir-mi/index.html"
+                            "relative_path": "blog\\yapay-zeka-insanin-yerini-alabilir-mi\\index.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "yapilacaklarin-notlari",
+                    "url": "blog/yapilacaklarin-notlari",
+                    "size": 3990,
+                    "date": "2025-07-10",
+                    "relative_path": "blog\\yapilacaklarin-notlari",
+                    "full_url": "https://mefamex.com/blog/yapilacaklarin-notlari",
+                    "folder": [],
+                    "files": [
+                        {
+                            "name": "history-of-a-conv.md",
+                            "url": "blog/yapilacaklarin-notlari/history-of-a-conv.md",
+                            "size": 3990,
+                            "date": "2025-07-10",
+                            "full_url": "https://mefamex.com/blog/yapilacaklarin-notlari/history-of-a-conv.md",
+                            "relative_path": "blog\\yapilacaklarin-notlari\\history-of-a-conv.md"
                         }
                     ]
                 },
@@ -76,7 +181,7 @@
                     "url": "blog/yazilim-gelistirme-kaynaklari",
                     "size": 42729,
                     "date": "2025-07-04",
-                    "relative_path": "blog/yazilim-gelistirme-kaynaklari",
+                    "relative_path": "blog\\yazilim-gelistirme-kaynaklari",
                     "full_url": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari",
                     "folder": [],
                     "files": [
@@ -86,7 +191,50 @@
                             "size": 42729,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/index.html",
-                            "relative_path": "blog/yazilim-gelistirme-kaynaklari/index.html"
+                            "relative_path": "blog\\yazilim-gelistirme-kaynaklari\\index.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "yazilimci-ve-beyni",
+                    "url": "blog/yazilimci-ve-beyni",
+                    "size": 41630,
+                    "date": "2025-07-11",
+                    "relative_path": "blog\\yazilimci-ve-beyni",
+                    "full_url": "https://mefamex.com/blog/yazilimci-ve-beyni",
+                    "folder": [],
+                    "files": [
+                        {
+                            "name": "beyin ihyaçları.md",
+                            "url": "blog/yazilimci-ve-beyni/beyin ihyaçları.md",
+                            "size": 8912,
+                            "date": "2025-07-08",
+                            "full_url": "https://mefamex.com/blog/yazilimci-ve-beyni/beyin ihyaçları.md",
+                            "relative_path": "blog\\yazilimci-ve-beyni\\beyin ihyaçları.md"
+                        },
+                        {
+                            "name": "beyinde kullanılan fonksiyonlar ve ihtiyaçları.md",
+                            "url": "blog/yazilimci-ve-beyni/beyinde kullanılan fonksiyonlar ve ihtiyaçları.md",
+                            "size": 8000,
+                            "date": "2025-07-08",
+                            "full_url": "https://mefamex.com/blog/yazilimci-ve-beyni/beyinde kullanılan fonksiyonlar ve ihtiyaçları.md",
+                            "relative_path": "blog\\yazilimci-ve-beyni\\beyinde kullanılan fonksiyonlar ve ihtiyaçları.md"
+                        },
+                        {
+                            "name": "last.md",
+                            "url": "blog/yazilimci-ve-beyni/last.md",
+                            "size": 17032,
+                            "date": "2025-07-08",
+                            "full_url": "https://mefamex.com/blog/yazilimci-ve-beyni/last.md",
+                            "relative_path": "blog\\yazilimci-ve-beyni\\last.md"
+                        },
+                        {
+                            "name": "Yazılım Mühendisliğinde Beyin Fonksiyonlarının Kul.md",
+                            "url": "blog/yazilimci-ve-beyni/Yazılım Mühendisliğinde Beyin Fonksiyonlarının Kul.md",
+                            "size": 7686,
+                            "date": "2025-07-08",
+                            "full_url": "https://mefamex.com/blog/yazilimci-ve-beyni/Yazılım Mühendisliğinde Beyin Fonksiyonlarının Kul.md",
+                            "relative_path": "blog\\yazilimci-ve-beyni\\Yazılım Mühendisliğinde Beyin Fonksiyonlarının Kul.md"
                         }
                     ]
                 },
@@ -95,7 +243,7 @@
                     "url": "blog/zaman-yonetimi",
                     "size": 30047,
                     "date": "2025-07-04",
-                    "relative_path": "blog/zaman-yonetimi",
+                    "relative_path": "blog\\zaman-yonetimi",
                     "full_url": "https://mefamex.com/blog/zaman-yonetimi",
                     "folder": [],
                     "files": [
@@ -105,7 +253,7 @@
                             "size": 30047,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/blog/zaman-yonetimi/index.html",
-                            "relative_path": "blog/zaman-yonetimi/index.html"
+                            "relative_path": "blog\\zaman-yonetimi\\index.html"
                         }
                     ]
                 }
@@ -117,7 +265,7 @@
                     "size": 23309,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/blog/index.html",
-                    "relative_path": "blog/index.html"
+                    "relative_path": "blog\\index.html"
                 },
                 {
                     "name": "not123712638727.txt",
@@ -125,15 +273,15 @@
                     "size": 611,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/blog/not123712638727.txt",
-                    "relative_path": "blog/not123712638727.txt"
+                    "relative_path": "blog\\not123712638727.txt"
                 },
                 {
                     "name": "page_aside.css",
                     "url": "blog/page_aside.css",
-                    "size": 6700,
-                    "date": "2025-07-04",
+                    "size": 5082,
+                    "date": "2025-07-13",
                     "full_url": "https://mefamex.com/blog/page_aside.css",
-                    "relative_path": "blog/page_aside.css"
+                    "relative_path": "blog\\page_aside.css"
                 },
                 {
                     "name": "page_aside.js",
@@ -141,7 +289,7 @@
                     "size": 3817,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/blog/page_aside.js",
-                    "relative_path": "blog/page_aside.js"
+                    "relative_path": "blog\\page_aside.js"
                 },
                 {
                     "name": "style.css",
@@ -149,7 +297,7 @@
                     "size": 3295,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/blog/style.css",
-                    "relative_path": "blog/style.css"
+                    "relative_path": "blog\\style.css"
                 }
             ]
         },
@@ -166,9 +314,9 @@
                     "name": "index.html",
                     "url": "contact/index.html",
                     "size": 19150,
-                    "date": "2025-07-04",
+                    "date": "2025-07-14",
                     "full_url": "https://mefamex.com/contact/index.html",
-                    "relative_path": "contact/index.html"
+                    "relative_path": "contact\\index.html"
                 },
                 {
                     "name": "style.css",
@@ -176,7 +324,7 @@
                     "size": 3997,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/contact/style.css",
-                    "relative_path": "contact/style.css"
+                    "relative_path": "contact\\style.css"
                 }
             ]
         },
@@ -195,7 +343,7 @@
                     "size": 46920,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/cv/index.html",
-                    "relative_path": "cv/index.html"
+                    "relative_path": "cv\\index.html"
                 }
             ]
         },
@@ -212,7 +360,7 @@
                     "url": "gallery/pictures",
                     "size": 66863625,
                     "date": "2025-07-04",
-                    "relative_path": "gallery/pictures",
+                    "relative_path": "gallery\\pictures",
                     "full_url": "https://mefamex.com/gallery/pictures",
                     "folder": [
                         {
@@ -220,7 +368,7 @@
                             "url": "gallery/pictures/converted",
                             "size": 3750696,
                             "date": "2025-02-27",
-                            "relative_path": "gallery/pictures/converted",
+                            "relative_path": "gallery\\pictures\\converted",
                             "full_url": "https://mefamex.com/gallery/pictures/converted",
                             "folder": [],
                             "files": [
@@ -230,7 +378,7 @@
                                     "size": 35736,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-001.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-001.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-001.webp"
                                 },
                                 {
                                     "name": "picture-002.webp",
@@ -238,7 +386,7 @@
                                     "size": 302810,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-002.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-002.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-002.webp"
                                 },
                                 {
                                     "name": "picture-003.webp",
@@ -246,7 +394,7 @@
                                     "size": 125142,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-003.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-003.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-003.webp"
                                 },
                                 {
                                     "name": "picture-004.webp",
@@ -254,7 +402,7 @@
                                     "size": 293954,
                                     "date": "2025-02-26",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-004.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-004.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-004.webp"
                                 },
                                 {
                                     "name": "picture-005.webp",
@@ -262,7 +410,7 @@
                                     "size": 251996,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-005.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-005.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-005.webp"
                                 },
                                 {
                                     "name": "picture-006.webp",
@@ -270,7 +418,7 @@
                                     "size": 41710,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-006.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-006.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-006.webp"
                                 },
                                 {
                                     "name": "picture-007.webp",
@@ -278,7 +426,7 @@
                                     "size": 63430,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-007.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-007.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-007.webp"
                                 },
                                 {
                                     "name": "picture-008.webp",
@@ -286,7 +434,7 @@
                                     "size": 396634,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-008.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-008.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-008.webp"
                                 },
                                 {
                                     "name": "picture-009.webp",
@@ -294,7 +442,7 @@
                                     "size": 147412,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-009.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-009.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-009.webp"
                                 },
                                 {
                                     "name": "picture-010.webp",
@@ -302,7 +450,7 @@
                                     "size": 188764,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-010.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-010.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-010.webp"
                                 },
                                 {
                                     "name": "picture-011.webp",
@@ -310,7 +458,7 @@
                                     "size": 127404,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-011.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-011.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-011.webp"
                                 },
                                 {
                                     "name": "picture-012.webp",
@@ -318,7 +466,7 @@
                                     "size": 159770,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-012.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-012.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-012.webp"
                                 },
                                 {
                                     "name": "picture-013.webp",
@@ -326,7 +474,7 @@
                                     "size": 121180,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-013.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-013.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-013.webp"
                                 },
                                 {
                                     "name": "picture-014.webp",
@@ -334,7 +482,7 @@
                                     "size": 345722,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-014.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-014.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-014.webp"
                                 },
                                 {
                                     "name": "picture-015.webp",
@@ -342,7 +490,7 @@
                                     "size": 201958,
                                     "date": "2025-02-18",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-015.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-015.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-015.webp"
                                 },
                                 {
                                     "name": "picture-016.webp",
@@ -350,7 +498,7 @@
                                     "size": 96568,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-016.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-016.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-016.webp"
                                 },
                                 {
                                     "name": "picture-017.webp",
@@ -358,7 +506,7 @@
                                     "size": 88388,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-017.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-017.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-017.webp"
                                 },
                                 {
                                     "name": "picture-018.webp",
@@ -366,7 +514,7 @@
                                     "size": 79114,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-018.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-018.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-018.webp"
                                 },
                                 {
                                     "name": "picture-019.webp",
@@ -374,7 +522,7 @@
                                     "size": 272020,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-019.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-019.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-019.webp"
                                 },
                                 {
                                     "name": "picture-020.webp",
@@ -382,7 +530,7 @@
                                     "size": 127084,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-020.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-020.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-020.webp"
                                 },
                                 {
                                     "name": "picture-021.webp",
@@ -390,7 +538,7 @@
                                     "size": 127946,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-021.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-021.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-021.webp"
                                 },
                                 {
                                     "name": "picture-022.webp",
@@ -398,7 +546,7 @@
                                     "size": 155954,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted/picture-022.webp",
-                                    "relative_path": "gallery/pictures/converted/picture-022.webp"
+                                    "relative_path": "gallery\\pictures\\converted\\picture-022.webp"
                                 }
                             ]
                         },
@@ -407,7 +555,7 @@
                             "url": "gallery/pictures/converted-100",
                             "size": 7161756,
                             "date": "2025-02-27",
-                            "relative_path": "gallery/pictures/converted-100",
+                            "relative_path": "gallery\\pictures\\converted-100",
                             "full_url": "https://mefamex.com/gallery/pictures/converted-100",
                             "folder": [],
                             "files": [
@@ -417,7 +565,7 @@
                                     "size": 170356,
                                     "date": "2025-02-09",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-001.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-001.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-001.webp"
                                 },
                                 {
                                     "name": "picture-002.webp",
@@ -425,7 +573,7 @@
                                     "size": 751860,
                                     "date": "2025-02-09",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-002.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-002.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-002.webp"
                                 },
                                 {
                                     "name": "picture-003.webp",
@@ -433,7 +581,7 @@
                                     "size": 325048,
                                     "date": "2025-02-09",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-003.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-003.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-003.webp"
                                 },
                                 {
                                     "name": "picture-004.webp",
@@ -441,7 +589,7 @@
                                     "size": 1003636,
                                     "date": "2025-02-26",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-004.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-004.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-004.webp"
                                 },
                                 {
                                     "name": "picture-005.webp",
@@ -449,7 +597,7 @@
                                     "size": 809644,
                                     "date": "2025-02-09",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-005.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-005.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-005.webp"
                                 },
                                 {
                                     "name": "picture-006.webp",
@@ -457,7 +605,7 @@
                                     "size": 129480,
                                     "date": "2025-02-09",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-006.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-006.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-006.webp"
                                 },
                                 {
                                     "name": "picture-007.webp",
@@ -465,7 +613,7 @@
                                     "size": 142540,
                                     "date": "2025-02-09",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-007.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-007.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-007.webp"
                                 },
                                 {
                                     "name": "picture-008.webp",
@@ -473,7 +621,7 @@
                                     "size": 859368,
                                     "date": "2025-02-09",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-008.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-008.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-008.webp"
                                 },
                                 {
                                     "name": "picture-016.webp",
@@ -481,7 +629,7 @@
                                     "size": 360418,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-016.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-016.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-016.webp"
                                 },
                                 {
                                     "name": "picture-017.webp",
@@ -489,7 +637,7 @@
                                     "size": 361076,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-017.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-017.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-017.webp"
                                 },
                                 {
                                     "name": "picture-018.webp",
@@ -497,7 +645,7 @@
                                     "size": 314686,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-018.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-018.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-018.webp"
                                 },
                                 {
                                     "name": "picture-019.webp",
@@ -505,7 +653,7 @@
                                     "size": 1070462,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-019.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-019.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-019.webp"
                                 },
                                 {
                                     "name": "picture-020.webp",
@@ -513,7 +661,7 @@
                                     "size": 126106,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-020.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-020.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-020.webp"
                                 },
                                 {
                                     "name": "picture-021.webp",
@@ -521,7 +669,7 @@
                                     "size": 127180,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-021.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-021.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-021.webp"
                                 },
                                 {
                                     "name": "picture-022.webp",
@@ -529,7 +677,7 @@
                                     "size": 609896,
                                     "date": "2025-02-27",
                                     "full_url": "https://mefamex.com/gallery/pictures/converted-100/picture-022.webp",
-                                    "relative_path": "gallery/pictures/converted-100/picture-022.webp"
+                                    "relative_path": "gallery\\pictures\\converted-100\\picture-022.webp"
                                 }
                             ]
                         }
@@ -541,7 +689,7 @@
                             "size": 24816187,
                             "date": "2025-02-09",
                             "full_url": "https://mefamex.com/gallery/pictures/main.exe",
-                            "relative_path": "gallery/pictures/main.exe"
+                            "relative_path": "gallery\\pictures\\main.exe"
                         },
                         {
                             "name": "main.py",
@@ -549,7 +697,7 @@
                             "size": 4650,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/gallery/pictures/main.py",
-                            "relative_path": "gallery/pictures/main.py"
+                            "relative_path": "gallery\\pictures\\main.py"
                         },
                         {
                             "name": "picture-001.png",
@@ -557,7 +705,7 @@
                             "size": 875646,
                             "date": "2024-11-08",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-001.png",
-                            "relative_path": "gallery/pictures/picture-001.png"
+                            "relative_path": "gallery\\pictures\\picture-001.png"
                         },
                         {
                             "name": "picture-002.webp",
@@ -565,7 +713,7 @@
                             "size": 588858,
                             "date": "2025-01-27",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-002.webp",
-                            "relative_path": "gallery/pictures/picture-002.webp"
+                            "relative_path": "gallery\\pictures\\picture-002.webp"
                         },
                         {
                             "name": "picture-003.webp",
@@ -573,7 +721,7 @@
                             "size": 333916,
                             "date": "2025-01-27",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-003.webp",
-                            "relative_path": "gallery/pictures/picture-003.webp"
+                            "relative_path": "gallery\\pictures\\picture-003.webp"
                         },
                         {
                             "name": "picture-004.png",
@@ -581,7 +729,7 @@
                             "size": 3974606,
                             "date": "2024-11-08",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-004.png",
-                            "relative_path": "gallery/pictures/picture-004.png"
+                            "relative_path": "gallery\\pictures\\picture-004.png"
                         },
                         {
                             "name": "picture-005.jpg",
@@ -589,7 +737,7 @@
                             "size": 1471047,
                             "date": "2024-11-08",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-005.jpg",
-                            "relative_path": "gallery/pictures/picture-005.jpg"
+                            "relative_path": "gallery\\pictures\\picture-005.jpg"
                         },
                         {
                             "name": "picture-006.jpg",
@@ -597,7 +745,7 @@
                             "size": 114605,
                             "date": "2024-11-11",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-006.jpg",
-                            "relative_path": "gallery/pictures/picture-006.jpg"
+                            "relative_path": "gallery\\pictures\\picture-006.jpg"
                         },
                         {
                             "name": "picture-007.png",
@@ -605,7 +753,7 @@
                             "size": 294286,
                             "date": "2025-02-08",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-007.png",
-                            "relative_path": "gallery/pictures/picture-007.png"
+                            "relative_path": "gallery\\pictures\\picture-007.png"
                         },
                         {
                             "name": "picture-008.png",
@@ -613,7 +761,7 @@
                             "size": 2366968,
                             "date": "2025-02-08",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-008.png",
-                            "relative_path": "gallery/pictures/picture-008.png"
+                            "relative_path": "gallery\\pictures\\picture-008.png"
                         },
                         {
                             "name": "picture-009.jpeg",
@@ -621,7 +769,7 @@
                             "size": 195760,
                             "date": "2025-02-18",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-009.jpeg",
-                            "relative_path": "gallery/pictures/picture-009.jpeg"
+                            "relative_path": "gallery\\pictures\\picture-009.jpeg"
                         },
                         {
                             "name": "picture-010.jpeg",
@@ -629,7 +777,7 @@
                             "size": 232483,
                             "date": "2025-02-18",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-010.jpeg",
-                            "relative_path": "gallery/pictures/picture-010.jpeg"
+                            "relative_path": "gallery\\pictures\\picture-010.jpeg"
                         },
                         {
                             "name": "picture-011.png",
@@ -637,7 +785,7 @@
                             "size": 175129,
                             "date": "2025-02-18",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-011.png",
-                            "relative_path": "gallery/pictures/picture-011.png"
+                            "relative_path": "gallery\\pictures\\picture-011.png"
                         },
                         {
                             "name": "picture-012.png",
@@ -645,7 +793,7 @@
                             "size": 204334,
                             "date": "2025-02-18",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-012.png",
-                            "relative_path": "gallery/pictures/picture-012.png"
+                            "relative_path": "gallery\\pictures\\picture-012.png"
                         },
                         {
                             "name": "picture-013.png",
@@ -653,7 +801,7 @@
                             "size": 173354,
                             "date": "2025-02-18",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-013.png",
-                            "relative_path": "gallery/pictures/picture-013.png"
+                            "relative_path": "gallery\\pictures\\picture-013.png"
                         },
                         {
                             "name": "picture-014.webp",
@@ -661,7 +809,7 @@
                             "size": 660586,
                             "date": "2025-02-18",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-014.webp",
-                            "relative_path": "gallery/pictures/picture-014.webp"
+                            "relative_path": "gallery\\pictures\\picture-014.webp"
                         },
                         {
                             "name": "picture-015.webp",
@@ -669,7 +817,7 @@
                             "size": 459642,
                             "date": "2025-02-18",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-015.webp",
-                            "relative_path": "gallery/pictures/picture-015.webp"
+                            "relative_path": "gallery\\pictures\\picture-015.webp"
                         },
                         {
                             "name": "picture-016.png",
@@ -677,7 +825,7 @@
                             "size": 2980845,
                             "date": "2025-02-26",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-016.png",
-                            "relative_path": "gallery/pictures/picture-016.png"
+                            "relative_path": "gallery\\pictures\\picture-016.png"
                         },
                         {
                             "name": "picture-017.png",
@@ -685,7 +833,7 @@
                             "size": 3058690,
                             "date": "2025-02-26",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-017.png",
-                            "relative_path": "gallery/pictures/picture-017.png"
+                            "relative_path": "gallery\\pictures\\picture-017.png"
                         },
                         {
                             "name": "picture-018.png",
@@ -693,7 +841,7 @@
                             "size": 2572101,
                             "date": "2025-02-26",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-018.png",
-                            "relative_path": "gallery/pictures/picture-018.png"
+                            "relative_path": "gallery\\pictures\\picture-018.png"
                         },
                         {
                             "name": "picture-019.png",
@@ -701,7 +849,7 @@
                             "size": 5610187,
                             "date": "2025-02-26",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-019.png",
-                            "relative_path": "gallery/pictures/picture-019.png"
+                            "relative_path": "gallery\\pictures\\picture-019.png"
                         },
                         {
                             "name": "picture-020.png",
@@ -709,7 +857,7 @@
                             "size": 288386,
                             "date": "2024-11-08",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-020.png",
-                            "relative_path": "gallery/pictures/picture-020.png"
+                            "relative_path": "gallery\\pictures\\picture-020.png"
                         },
                         {
                             "name": "picture-021.png",
@@ -717,7 +865,7 @@
                             "size": 283353,
                             "date": "2024-11-08",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-021.png",
-                            "relative_path": "gallery/pictures/picture-021.png"
+                            "relative_path": "gallery\\pictures\\picture-021.png"
                         },
                         {
                             "name": "picture-022.png",
@@ -725,7 +873,7 @@
                             "size": 4215554,
                             "date": "2025-02-27",
                             "full_url": "https://mefamex.com/gallery/pictures/picture-022.png",
-                            "relative_path": "gallery/pictures/picture-022.png"
+                            "relative_path": "gallery\\pictures\\picture-022.png"
                         }
                     ]
                 }
@@ -737,7 +885,7 @@
                     "size": 36058,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/gallery/index.html",
-                    "relative_path": "gallery/index.html"
+                    "relative_path": "gallery\\index.html"
                 },
                 {
                     "name": "style.css",
@@ -745,7 +893,7 @@
                     "size": 9530,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/gallery/style.css",
-                    "relative_path": "gallery/style.css"
+                    "relative_path": "gallery\\style.css"
                 }
             ]
         },
@@ -762,7 +910,7 @@
                     "url": "games/queaz",
                     "size": 4315,
                     "date": "2025-07-04",
-                    "relative_path": "games/queaz",
+                    "relative_path": "games\\queaz",
                     "full_url": "https://mefamex.com/games/queaz",
                     "folder": [],
                     "files": [
@@ -772,7 +920,7 @@
                             "size": 1514,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/games/queaz/index.html",
-                            "relative_path": "games/queaz/index.html"
+                            "relative_path": "games\\queaz\\index.html"
                         },
                         {
                             "name": "queaz_game.js",
@@ -780,7 +928,7 @@
                             "size": 1765,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/games/queaz/queaz_game.js",
-                            "relative_path": "games/queaz/queaz_game.js"
+                            "relative_path": "games\\queaz\\queaz_game.js"
                         },
                         {
                             "name": "style.css",
@@ -788,7 +936,7 @@
                             "size": 1036,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/games/queaz/style.css",
-                            "relative_path": "games/queaz/style.css"
+                            "relative_path": "games\\queaz\\style.css"
                         }
                     ]
                 }
@@ -810,7 +958,7 @@
                     "size": 22503,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/mystream/index.html",
-                    "relative_path": "mystream/index.html"
+                    "relative_path": "mystream\\index.html"
                 },
                 {
                     "name": "a.png",
@@ -818,7 +966,7 @@
                     "size": 520488,
                     "date": "2025-03-13",
                     "full_url": "https://mefamex.com/mystream/a.png",
-                    "relative_path": "mystream/a.png"
+                    "relative_path": "mystream\\a.png"
                 },
                 {
                     "name": "pp.jpg",
@@ -826,7 +974,7 @@
                     "size": 6892,
                     "date": "2025-03-13",
                     "full_url": "https://mefamex.com/mystream/pp.jpg",
-                    "relative_path": "mystream/pp.jpg"
+                    "relative_path": "mystream\\pp.jpg"
                 },
                 {
                     "name": "pp.png",
@@ -834,7 +982,7 @@
                     "size": 18803,
                     "date": "2025-03-13",
                     "full_url": "https://mefamex.com/mystream/pp.png",
-                    "relative_path": "mystream/pp.png"
+                    "relative_path": "mystream\\pp.png"
                 },
                 {
                     "name": "script.js",
@@ -842,7 +990,7 @@
                     "size": 9623,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/mystream/script.js",
-                    "relative_path": "mystream/script.js"
+                    "relative_path": "mystream\\script.js"
                 },
                 {
                     "name": "soloshare.html",
@@ -850,7 +998,7 @@
                     "size": 0,
                     "date": "2025-03-13",
                     "full_url": "https://mefamex.com/mystream/soloshare.html",
-                    "relative_path": "mystream/soloshare.html"
+                    "relative_path": "mystream\\soloshare.html"
                 },
                 {
                     "name": "style.css",
@@ -858,7 +1006,7 @@
                     "size": 9301,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/mystream/style.css",
-                    "relative_path": "mystream/style.css"
+                    "relative_path": "mystream\\style.css"
                 }
             ]
         },
@@ -875,7 +1023,7 @@
                     "url": "projects/dizin-listeleme",
                     "size": 27095,
                     "date": "2025-07-04",
-                    "relative_path": "projects/dizin-listeleme",
+                    "relative_path": "projects\\dizin-listeleme",
                     "full_url": "https://mefamex.com/projects/dizin-listeleme",
                     "folder": [],
                     "files": [
@@ -885,7 +1033,7 @@
                             "size": 27095,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/dizin-listeleme/index.html",
-                            "relative_path": "projects/dizin-listeleme/index.html"
+                            "relative_path": "projects\\dizin-listeleme\\index.html"
                         }
                     ]
                 },
@@ -894,7 +1042,7 @@
                     "url": "projects/html-css-book",
                     "size": 35867,
                     "date": "2025-07-04",
-                    "relative_path": "projects/html-css-book",
+                    "relative_path": "projects\\html-css-book",
                     "full_url": "https://mefamex.com/projects/html-css-book",
                     "folder": [],
                     "files": [
@@ -904,7 +1052,7 @@
                             "size": 35867,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/html-css-book/index.html",
-                            "relative_path": "projects/html-css-book/index.html"
+                            "relative_path": "projects\\html-css-book\\index.html"
                         }
                     ]
                 },
@@ -913,7 +1061,7 @@
                     "url": "projects/image-meta-dataset",
                     "size": 20382,
                     "date": "2025-07-04",
-                    "relative_path": "projects/image-meta-dataset",
+                    "relative_path": "projects\\image-meta-dataset",
                     "full_url": "https://mefamex.com/projects/image-meta-dataset",
                     "folder": [],
                     "files": [
@@ -923,7 +1071,7 @@
                             "size": 20382,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/image-meta-dataset/index.html",
-                            "relative_path": "projects/image-meta-dataset/index.html"
+                            "relative_path": "projects\\image-meta-dataset\\index.html"
                         }
                     ]
                 },
@@ -932,7 +1080,7 @@
                     "url": "projects/kali-change-boot-background",
                     "size": 209381,
                     "date": "2025-07-04",
-                    "relative_path": "projects/kali-change-boot-background",
+                    "relative_path": "projects\\kali-change-boot-background",
                     "full_url": "https://mefamex.com/projects/kali-change-boot-background",
                     "folder": [
                         {
@@ -940,7 +1088,7 @@
                             "url": "projects/kali-change-boot-background/image",
                             "size": 182992,
                             "date": "2025-03-07",
-                            "relative_path": "projects/kali-change-boot-background/image",
+                            "relative_path": "projects\\kali-change-boot-background\\image",
                             "full_url": "https://mefamex.com/projects/kali-change-boot-background/image",
                             "folder": [],
                             "files": [
@@ -950,7 +1098,7 @@
                                     "size": 9946,
                                     "date": "2025-03-07",
                                     "full_url": "https://mefamex.com/projects/kali-change-boot-background/image/1.webp",
-                                    "relative_path": "projects/kali-change-boot-background/image/1.webp"
+                                    "relative_path": "projects\\kali-change-boot-background\\image\\1.webp"
                                 },
                                 {
                                     "name": "2.webp",
@@ -958,7 +1106,7 @@
                                     "size": 48294,
                                     "date": "2025-03-07",
                                     "full_url": "https://mefamex.com/projects/kali-change-boot-background/image/2.webp",
-                                    "relative_path": "projects/kali-change-boot-background/image/2.webp"
+                                    "relative_path": "projects\\kali-change-boot-background\\image\\2.webp"
                                 },
                                 {
                                     "name": "3.webp",
@@ -966,7 +1114,7 @@
                                     "size": 13016,
                                     "date": "2025-03-07",
                                     "full_url": "https://mefamex.com/projects/kali-change-boot-background/image/3.webp",
-                                    "relative_path": "projects/kali-change-boot-background/image/3.webp"
+                                    "relative_path": "projects\\kali-change-boot-background\\image\\3.webp"
                                 },
                                 {
                                     "name": "4.webp",
@@ -974,7 +1122,7 @@
                                     "size": 21534,
                                     "date": "2025-03-07",
                                     "full_url": "https://mefamex.com/projects/kali-change-boot-background/image/4.webp",
-                                    "relative_path": "projects/kali-change-boot-background/image/4.webp"
+                                    "relative_path": "projects\\kali-change-boot-background\\image\\4.webp"
                                 },
                                 {
                                     "name": "5.webp",
@@ -982,7 +1130,7 @@
                                     "size": 19430,
                                     "date": "2025-03-07",
                                     "full_url": "https://mefamex.com/projects/kali-change-boot-background/image/5.webp",
-                                    "relative_path": "projects/kali-change-boot-background/image/5.webp"
+                                    "relative_path": "projects\\kali-change-boot-background\\image\\5.webp"
                                 },
                                 {
                                     "name": "6.webp",
@@ -990,7 +1138,7 @@
                                     "size": 37942,
                                     "date": "2025-03-07",
                                     "full_url": "https://mefamex.com/projects/kali-change-boot-background/image/6.webp",
-                                    "relative_path": "projects/kali-change-boot-background/image/6.webp"
+                                    "relative_path": "projects\\kali-change-boot-background\\image\\6.webp"
                                 },
                                 {
                                     "name": "7.webp",
@@ -998,7 +1146,7 @@
                                     "size": 32830,
                                     "date": "2025-03-07",
                                     "full_url": "https://mefamex.com/projects/kali-change-boot-background/image/7.webp",
-                                    "relative_path": "projects/kali-change-boot-background/image/7.webp"
+                                    "relative_path": "projects\\kali-change-boot-background\\image\\7.webp"
                                 }
                             ]
                         }
@@ -1010,7 +1158,7 @@
                             "size": 26389,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/kali-change-boot-background/index.html",
-                            "relative_path": "projects/kali-change-boot-background/index.html"
+                            "relative_path": "projects\\kali-change-boot-background\\index.html"
                         }
                     ]
                 },
@@ -1019,7 +1167,7 @@
                     "url": "projects/kali-linux",
                     "size": 21893,
                     "date": "2025-07-04",
-                    "relative_path": "projects/kali-linux",
+                    "relative_path": "projects\\kali-linux",
                     "full_url": "https://mefamex.com/projects/kali-linux",
                     "folder": [],
                     "files": [
@@ -1029,7 +1177,7 @@
                             "size": 21893,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/kali-linux/index.html",
-                            "relative_path": "projects/kali-linux/index.html"
+                            "relative_path": "projects\\kali-linux\\index.html"
                         }
                     ]
                 },
@@ -1038,7 +1186,7 @@
                     "url": "projects/lisans-puan-hesaplama",
                     "size": 21838,
                     "date": "2025-07-04",
-                    "relative_path": "projects/lisans-puan-hesaplama",
+                    "relative_path": "projects\\lisans-puan-hesaplama",
                     "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama",
                     "folder": [],
                     "files": [
@@ -1048,7 +1196,7 @@
                             "size": 13795,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama/index.html",
-                            "relative_path": "projects/lisans-puan-hesaplama/index.html"
+                            "relative_path": "projects\\lisans-puan-hesaplama\\index.html"
                         },
                         {
                             "name": "script.js",
@@ -1056,7 +1204,7 @@
                             "size": 6373,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama/script.js",
-                            "relative_path": "projects/lisans-puan-hesaplama/script.js"
+                            "relative_path": "projects\\lisans-puan-hesaplama\\script.js"
                         },
                         {
                             "name": "style.css",
@@ -1064,7 +1212,7 @@
                             "size": 1670,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama/style.css",
-                            "relative_path": "projects/lisans-puan-hesaplama/style.css"
+                            "relative_path": "projects\\lisans-puan-hesaplama\\style.css"
                         }
                     ]
                 },
@@ -1073,7 +1221,7 @@
                     "url": "projects/python-to-exe",
                     "size": 21439,
                     "date": "2025-07-04",
-                    "relative_path": "projects/python-to-exe",
+                    "relative_path": "projects\\python-to-exe",
                     "full_url": "https://mefamex.com/projects/python-to-exe",
                     "folder": [],
                     "files": [
@@ -1083,7 +1231,7 @@
                             "size": 21439,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/projects/python-to-exe/index.html",
-                            "relative_path": "projects/python-to-exe/index.html"
+                            "relative_path": "projects\\python-to-exe\\index.html"
                         }
                     ]
                 },
@@ -1092,7 +1240,7 @@
                     "url": "projects/yedekleme",
                     "size": 910392,
                     "date": "2025-07-04",
-                    "relative_path": "projects/yedekleme",
+                    "relative_path": "projects\\yedekleme",
                     "full_url": "https://mefamex.com/projects/yedekleme",
                     "folder": [
                         {
@@ -1100,7 +1248,7 @@
                             "url": "projects/yedekleme/_freelance",
                             "size": 36590,
                             "date": "2025-07-04",
-                            "relative_path": "projects/yedekleme/_freelance",
+                            "relative_path": "projects\\yedekleme\\_freelance",
                             "full_url": "https://mefamex.com/projects/yedekleme/_freelance",
                             "folder": [],
                             "files": [
@@ -1110,7 +1258,7 @@
                                     "size": 36590,
                                     "date": "2025-07-04",
                                     "full_url": "https://mefamex.com/projects/yedekleme/_freelance/Uyap_ihale_bot.js",
-                                    "relative_path": "projects/yedekleme/_freelance/Uyap_ihale_bot.js"
+                                    "relative_path": "projects\\yedekleme\\_freelance\\Uyap_ihale_bot.js"
                                 }
                             ]
                         }
@@ -1122,7 +1270,7 @@
                             "size": 873802,
                             "date": "2025-04-11",
                             "full_url": "https://mefamex.com/projects/yedekleme/.NET 8, 9 ve 10 Arasındaki Farklar ve Detaylı İnceleme.rar",
-                            "relative_path": "projects/yedekleme/.NET 8, 9 ve 10 Arasındaki Farklar ve Detaylı İnceleme.rar"
+                            "relative_path": "projects\\yedekleme\\.NET 8, 9 ve 10 Arasındaki Farklar ve Detaylı İnceleme.rar"
                         }
                     ]
                 }
@@ -1134,7 +1282,7 @@
                     "size": 21335,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/projects/index.html",
-                    "relative_path": "projects/index.html"
+                    "relative_path": "projects\\index.html"
                 },
                 {
                     "name": "eklenicek-pyToExeWithCODES.txt",
@@ -1142,7 +1290,7 @@
                     "size": 6683,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/projects/eklenicek-pyToExeWithCODES.txt",
-                    "relative_path": "projects/eklenicek-pyToExeWithCODES.txt"
+                    "relative_path": "projects\\eklenicek-pyToExeWithCODES.txt"
                 },
                 {
                     "name": "page_aside.css",
@@ -1150,7 +1298,7 @@
                     "size": 11625,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/projects/page_aside.css",
-                    "relative_path": "projects/page_aside.css"
+                    "relative_path": "projects\\page_aside.css"
                 },
                 {
                     "name": "page_aside.js",
@@ -1158,7 +1306,7 @@
                     "size": 5443,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/projects/page_aside.js",
-                    "relative_path": "projects/page_aside.js"
+                    "relative_path": "projects\\page_aside.js"
                 },
                 {
                     "name": "script.js",
@@ -1166,7 +1314,7 @@
                     "size": 5659,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/projects/script.js",
-                    "relative_path": "projects/script.js"
+                    "relative_path": "projects\\script.js"
                 },
                 {
                     "name": "style.css",
@@ -1174,14 +1322,14 @@
                     "size": 4543,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/projects/style.css",
-                    "relative_path": "projects/style.css"
+                    "relative_path": "projects\\style.css"
                 }
             ]
         },
         {
             "name": "py",
             "url": "py",
-            "size": 213157,
+            "size": 212728,
             "date": "2025-07-04",
             "relative_path": "py",
             "full_url": "https://mefamex.com/py",
@@ -1189,9 +1337,9 @@
                 {
                     "name": "Filetree",
                     "url": "py/Filetree",
-                    "size": 169055,
+                    "size": 168263,
                     "date": "2025-07-04",
-                    "relative_path": "py/Filetree",
+                    "relative_path": "py\\Filetree",
                     "full_url": "https://mefamex.com/py/Filetree",
                     "folder": [],
                     "files": [
@@ -1201,24 +1349,24 @@
                             "size": 10473,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/py/Filetree/FileTreeCreator.py",
-                            "relative_path": "py/Filetree/FileTreeCreator.py"
+                            "relative_path": "py\\Filetree\\FileTreeCreator.py"
                         },
                         {
                             "name": "file_tree.json",
                             "url": "py/Filetree/file_tree.json",
-                            "size": 158582,
+                            "size": 157790,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/py/Filetree/file_tree.json",
-                            "relative_path": "py/Filetree/file_tree.json"
+                            "relative_path": "py\\Filetree\\file_tree.json"
                         }
                     ]
                 },
                 {
                     "name": "Linktree",
                     "url": "py/Linktree",
-                    "size": 25227,
+                    "size": 25590,
                     "date": "2025-07-04",
-                    "relative_path": "py/Linktree",
+                    "relative_path": "py\\Linktree",
                     "full_url": "https://mefamex.com/py/Linktree",
                     "folder": [],
                     "files": [
@@ -1228,15 +1376,15 @@
                             "size": 10327,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/py/Linktree/LinkTreeCreator.py",
-                            "relative_path": "py/Linktree/LinkTreeCreator.py"
+                            "relative_path": "py\\Linktree\\LinkTreeCreator.py"
                         },
                         {
                             "name": "link_tree.json",
                             "url": "py/Linktree/link_tree.json",
-                            "size": 14900,
-                            "date": "2025-07-04",
+                            "size": 15263,
+                            "date": "2025-07-14",
                             "full_url": "https://mefamex.com/py/Linktree/link_tree.json",
-                            "relative_path": "py/Linktree/link_tree.json"
+                            "relative_path": "py\\Linktree\\link_tree.json"
                         }
                     ]
                 }
@@ -1248,7 +1396,7 @@
                     "size": 4193,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/py/FileLister.js",
-                    "relative_path": "py/FileLister.js"
+                    "relative_path": "py\\FileLister.js"
                 },
                 {
                     "name": "FileLister.py",
@@ -1256,7 +1404,7 @@
                     "size": 12022,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/py/FileLister.py",
-                    "relative_path": "py/FileLister.py"
+                    "relative_path": "py\\FileLister.py"
                 },
                 {
                     "name": "gnpToWebp.py",
@@ -1264,7 +1412,7 @@
                     "size": 952,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/py/gnpToWebp.py",
-                    "relative_path": "py/gnpToWebp.py"
+                    "relative_path": "py\\gnpToWebp.py"
                 },
                 {
                     "name": "sitemapCreator.py",
@@ -1272,7 +1420,7 @@
                     "size": 1708,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/py/sitemapCreator.py",
-                    "relative_path": "py/sitemapCreator.py"
+                    "relative_path": "py\\sitemapCreator.py"
                 }
             ]
         },
@@ -1291,7 +1439,7 @@
                     "size": 127606,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/index.html",
-                    "relative_path": "software/index.html"
+                    "relative_path": "software\\index.html"
                 },
                 {
                     "name": "cevir.py",
@@ -1299,7 +1447,7 @@
                     "size": 1476,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/cevir.py",
-                    "relative_path": "software/cevir.py"
+                    "relative_path": "software\\cevir.py"
                 },
                 {
                     "name": "input.txt",
@@ -1307,7 +1455,7 @@
                     "size": 6720,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/input.txt",
-                    "relative_path": "software/input.txt"
+                    "relative_path": "software\\input.txt"
                 },
                 {
                     "name": "output.json",
@@ -1315,7 +1463,7 @@
                     "size": 69317,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/output.json",
-                    "relative_path": "software/output.json"
+                    "relative_path": "software\\output.json"
                 },
                 {
                     "name": "script.js",
@@ -1323,7 +1471,7 @@
                     "size": 4114,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/script.js",
-                    "relative_path": "software/script.js"
+                    "relative_path": "software\\script.js"
                 },
                 {
                     "name": "style.css",
@@ -1331,7 +1479,7 @@
                     "size": 5398,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/style.css",
-                    "relative_path": "software/style.css"
+                    "relative_path": "software\\style.css"
                 },
                 {
                     "name": "tempCodeRunnerFile.py",
@@ -1339,7 +1487,7 @@
                     "size": 722,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/tempCodeRunnerFile.py",
-                    "relative_path": "software/tempCodeRunnerFile.py"
+                    "relative_path": "software\\tempCodeRunnerFile.py"
                 },
                 {
                     "name": "Yazilim_Ayrintili.txt",
@@ -1347,7 +1495,7 @@
                     "size": 42228,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/software/Yazilim_Ayrintili.txt",
-                    "relative_path": "software/Yazilim_Ayrintili.txt"
+                    "relative_path": "software\\Yazilim_Ayrintili.txt"
                 }
             ]
         },
@@ -1364,7 +1512,7 @@
                     "url": "src/assets",
                     "size": 20379387,
                     "date": "2025-07-04",
-                    "relative_path": "src/assets",
+                    "relative_path": "src\\assets",
                     "full_url": "https://mefamex.com/src/assets",
                     "folder": [
                         {
@@ -1372,7 +1520,7 @@
                             "url": "src/assets/fontss",
                             "size": 4418120,
                             "date": "2024-12-03",
-                            "relative_path": "src/assets/fontss",
+                            "relative_path": "src\\assets\\fontss",
                             "full_url": "https://mefamex.com/src/assets/fontss",
                             "folder": [],
                             "files": [
@@ -1382,7 +1530,7 @@
                                     "size": 197264,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Pw-8qzz.otf",
-                                    "relative_path": "src/assets/fontss/Pw-8qzz.otf"
+                                    "relative_path": "src\\assets\\fontss\\Pw-8qzz.otf"
                                 },
                                 {
                                     "name": "Pw-Bold-YBgv.otf",
@@ -1390,7 +1538,7 @@
                                     "size": 216192,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Pw-Bold-YBgv.otf",
-                                    "relative_path": "src/assets/fontss/Pw-Bold-YBgv.otf"
+                                    "relative_path": "src\\assets\\fontss\\Pw-Bold-YBgv.otf"
                                 },
                                 {
                                     "name": "Pw-BoldItalic-reYA.otf",
@@ -1398,7 +1546,7 @@
                                     "size": 214716,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Pw-BoldItalic-reYA.otf",
-                                    "relative_path": "src/assets/fontss/Pw-BoldItalic-reYA.otf"
+                                    "relative_path": "src\\assets\\fontss\\Pw-BoldItalic-reYA.otf"
                                 },
                                 {
                                     "name": "Pw-BoldSuperitalic-Mwyr.otf",
@@ -1406,7 +1554,7 @@
                                     "size": 214332,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Pw-BoldSuperitalic-Mwyr.otf",
-                                    "relative_path": "src/assets/fontss/Pw-BoldSuperitalic-Mwyr.otf"
+                                    "relative_path": "src\\assets\\fontss\\Pw-BoldSuperitalic-Mwyr.otf"
                                 },
                                 {
                                     "name": "Pw-Italic-K2yp.otf",
@@ -1414,7 +1562,7 @@
                                     "size": 193344,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Pw-Italic-K2yp.otf",
-                                    "relative_path": "src/assets/fontss/Pw-Italic-K2yp.otf"
+                                    "relative_path": "src\\assets\\fontss\\Pw-Italic-K2yp.otf"
                                 },
                                 {
                                     "name": "Pw-Light-2qrK.otf",
@@ -1422,7 +1570,7 @@
                                     "size": 210548,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Pw-Light-2qrK.otf",
-                                    "relative_path": "src/assets/fontss/Pw-Light-2qrK.otf"
+                                    "relative_path": "src\\assets\\fontss\\Pw-Light-2qrK.otf"
                                 },
                                 {
                                     "name": "Pw-LightItalic-ve2O.otf",
@@ -1430,7 +1578,7 @@
                                     "size": 207388,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Pw-LightItalic-ve2O.otf",
-                                    "relative_path": "src/assets/fontss/Pw-LightItalic-ve2O.otf"
+                                    "relative_path": "src\\assets\\fontss\\Pw-LightItalic-ve2O.otf"
                                 },
                                 {
                                     "name": "Ubuntu-n1M0.ttf",
@@ -1438,7 +1586,7 @@
                                     "size": 353824,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/Ubuntu-n1M0.ttf",
-                                    "relative_path": "src/assets/fontss/Ubuntu-n1M0.ttf"
+                                    "relative_path": "src\\assets\\fontss\\Ubuntu-n1M0.ttf"
                                 },
                                 {
                                     "name": "UbuntuBold-1YyB.ttf",
@@ -1446,7 +1594,7 @@
                                     "size": 333616,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/UbuntuBold-1YyB.ttf",
-                                    "relative_path": "src/assets/fontss/UbuntuBold-1YyB.ttf"
+                                    "relative_path": "src\\assets\\fontss\\UbuntuBold-1YyB.ttf"
                                 },
                                 {
                                     "name": "UbuntuBoldItalic-Rg86.ttf",
@@ -1454,7 +1602,7 @@
                                     "size": 356980,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/UbuntuBoldItalic-Rg86.ttf",
-                                    "relative_path": "src/assets/fontss/UbuntuBoldItalic-Rg86.ttf"
+                                    "relative_path": "src\\assets\\fontss\\UbuntuBoldItalic-Rg86.ttf"
                                 },
                                 {
                                     "name": "UbuntuItalic-Bpm8.ttf",
@@ -1462,7 +1610,7 @@
                                     "size": 386440,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/UbuntuItalic-Bpm8.ttf",
-                                    "relative_path": "src/assets/fontss/UbuntuItalic-Bpm8.ttf"
+                                    "relative_path": "src\\assets\\fontss\\UbuntuItalic-Bpm8.ttf"
                                 },
                                 {
                                     "name": "UbuntuLight-8zBJ.ttf",
@@ -1470,7 +1618,7 @@
                                     "size": 415552,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/UbuntuLight-8zBJ.ttf",
-                                    "relative_path": "src/assets/fontss/UbuntuLight-8zBJ.ttf"
+                                    "relative_path": "src\\assets\\fontss\\UbuntuLight-8zBJ.ttf"
                                 },
                                 {
                                     "name": "UbuntuLightItalic-Ygw4.ttf",
@@ -1478,7 +1626,7 @@
                                     "size": 409608,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/UbuntuLightItalic-Ygw4.ttf",
-                                    "relative_path": "src/assets/fontss/UbuntuLightItalic-Ygw4.ttf"
+                                    "relative_path": "src\\assets\\fontss\\UbuntuLightItalic-Ygw4.ttf"
                                 },
                                 {
                                     "name": "UbuntuMedium-rYwL.ttf",
@@ -1486,7 +1634,7 @@
                                     "size": 341324,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/UbuntuMedium-rYwL.ttf",
-                                    "relative_path": "src/assets/fontss/UbuntuMedium-rYwL.ttf"
+                                    "relative_path": "src\\assets\\fontss\\UbuntuMedium-rYwL.ttf"
                                 },
                                 {
                                     "name": "UbuntuMediumItalic-Myln.ttf",
@@ -1494,7 +1642,7 @@
                                     "size": 366992,
                                     "date": "2024-12-03",
                                     "full_url": "https://mefamex.com/src/assets/fontss/UbuntuMediumItalic-Myln.ttf",
-                                    "relative_path": "src/assets/fontss/UbuntuMediumItalic-Myln.ttf"
+                                    "relative_path": "src\\assets\\fontss\\UbuntuMediumItalic-Myln.ttf"
                                 }
                             ]
                         },
@@ -1503,7 +1651,7 @@
                             "url": "src/assets/icons",
                             "size": 1543569,
                             "date": "2025-02-05",
-                            "relative_path": "src/assets/icons",
+                            "relative_path": "src\\assets\\icons",
                             "full_url": "https://mefamex.com/src/assets/icons",
                             "folder": [],
                             "files": [
@@ -1513,7 +1661,7 @@
                                     "size": 2031,
                                     "date": "2024-12-14",
                                     "full_url": "https://mefamex.com/src/assets/icons/=.ico",
-                                    "relative_path": "src/assets/icons/=.ico"
+                                    "relative_path": "src\\assets\\icons\\=.ico"
                                 },
                                 {
                                     "name": "cloudflare.png",
@@ -1521,7 +1669,7 @@
                                     "size": 16974,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/cloudflare.png",
-                                    "relative_path": "src/assets/icons/cloudflare.png"
+                                    "relative_path": "src\\assets\\icons\\cloudflare.png"
                                 },
                                 {
                                     "name": "facebook_icon.png",
@@ -1529,7 +1677,7 @@
                                     "size": 5766,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/facebook_icon.png",
-                                    "relative_path": "src/assets/icons/facebook_icon.png"
+                                    "relative_path": "src\\assets\\icons\\facebook_icon.png"
                                 },
                                 {
                                     "name": "github_icon.png",
@@ -1537,7 +1685,7 @@
                                     "size": 6070,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/github_icon.png",
-                                    "relative_path": "src/assets/icons/github_icon.png"
+                                    "relative_path": "src\\assets\\icons\\github_icon.png"
                                 },
                                 {
                                     "name": "instagram_icon.png",
@@ -1545,7 +1693,7 @@
                                     "size": 24064,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/instagram_icon.png",
-                                    "relative_path": "src/assets/icons/instagram_icon.png"
+                                    "relative_path": "src\\assets\\icons\\instagram_icon.png"
                                 },
                                 {
                                     "name": "linkedin_icon.png",
@@ -1553,7 +1701,7 @@
                                     "size": 4291,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/linkedin_icon.png",
-                                    "relative_path": "src/assets/icons/linkedin_icon.png"
+                                    "relative_path": "src\\assets\\icons\\linkedin_icon.png"
                                 },
                                 {
                                     "name": "mfmx_anonymous.png",
@@ -1561,7 +1709,7 @@
                                     "size": 489386,
                                     "date": "2025-02-05",
                                     "full_url": "https://mefamex.com/src/assets/icons/mfmx_anonymous.png",
-                                    "relative_path": "src/assets/icons/mfmx_anonymous.png"
+                                    "relative_path": "src\\assets\\icons\\mfmx_anonymous.png"
                                 },
                                 {
                                     "name": "mfmx_instagram.png",
@@ -1569,7 +1717,7 @@
                                     "size": 184823,
                                     "date": "2025-02-05",
                                     "full_url": "https://mefamex.com/src/assets/icons/mfmx_instagram.png",
-                                    "relative_path": "src/assets/icons/mfmx_instagram.png"
+                                    "relative_path": "src\\assets\\icons\\mfmx_instagram.png"
                                 },
                                 {
                                     "name": "mfmx_linkedin.png",
@@ -1577,7 +1725,7 @@
                                     "size": 628345,
                                     "date": "2025-02-05",
                                     "full_url": "https://mefamex.com/src/assets/icons/mfmx_linkedin.png",
-                                    "relative_path": "src/assets/icons/mfmx_linkedin.png"
+                                    "relative_path": "src\\assets\\icons\\mfmx_linkedin.png"
                                 },
                                 {
                                     "name": "mfmx_mail.png",
@@ -1585,7 +1733,7 @@
                                     "size": 155687,
                                     "date": "2025-02-05",
                                     "full_url": "https://mefamex.com/src/assets/icons/mfmx_mail.png",
-                                    "relative_path": "src/assets/icons/mfmx_mail.png"
+                                    "relative_path": "src\\assets\\icons\\mfmx_mail.png"
                                 },
                                 {
                                     "name": "ssl.png",
@@ -1593,7 +1741,7 @@
                                     "size": 10621,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/ssl.png",
-                                    "relative_path": "src/assets/icons/ssl.png"
+                                    "relative_path": "src\\assets\\icons\\ssl.png"
                                 },
                                 {
                                     "name": "x.ico",
@@ -1601,7 +1749,7 @@
                                     "size": 2823,
                                     "date": "2024-12-14",
                                     "full_url": "https://mefamex.com/src/assets/icons/x.ico",
-                                    "relative_path": "src/assets/icons/x.ico"
+                                    "relative_path": "src\\assets\\icons\\x.ico"
                                 },
                                 {
                                     "name": "x_twitter_icon.png",
@@ -1609,7 +1757,7 @@
                                     "size": 7387,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/x_twitter_icon.png",
-                                    "relative_path": "src/assets/icons/x_twitter_icon.png"
+                                    "relative_path": "src\\assets\\icons\\x_twitter_icon.png"
                                 },
                                 {
                                     "name": "youtube_icon.png",
@@ -1617,7 +1765,7 @@
                                     "size": 5301,
                                     "date": "2024-11-07",
                                     "full_url": "https://mefamex.com/src/assets/icons/youtube_icon.png",
-                                    "relative_path": "src/assets/icons/youtube_icon.png"
+                                    "relative_path": "src\\assets\\icons\\youtube_icon.png"
                                 }
                             ]
                         },
@@ -1626,7 +1774,7 @@
                             "url": "src/assets/images",
                             "size": 14417698,
                             "date": "2025-07-04",
-                            "relative_path": "src/assets/images",
+                            "relative_path": "src\\assets\\images",
                             "full_url": "https://mefamex.com/src/assets/images",
                             "folder": [
                                 {
@@ -1634,7 +1782,7 @@
                                     "url": "src/assets/images/background",
                                     "size": 8643058,
                                     "date": "2025-07-04",
-                                    "relative_path": "src/assets/images/background",
+                                    "relative_path": "src\\assets\\images\\background",
                                     "full_url": "https://mefamex.com/src/assets/images/background",
                                     "folder": [],
                                     "files": [
@@ -1644,7 +1792,7 @@
                                             "size": 989,
                                             "date": "2025-07-04",
                                             "full_url": "https://mefamex.com/src/assets/images/background/gnpToWebp.py",
-                                            "relative_path": "src/assets/images/background/gnpToWebp.py"
+                                            "relative_path": "src\\assets\\images\\background\\gnpToWebp.py"
                                         },
                                         {
                                             "name": "home_bg.psd",
@@ -1652,7 +1800,7 @@
                                             "size": 1009912,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg.psd",
-                                            "relative_path": "src/assets/images/background/home_bg.psd"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg.psd"
                                         },
                                         {
                                             "name": "home_bg_code.png",
@@ -1660,7 +1808,7 @@
                                             "size": 2648502,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_code.png",
-                                            "relative_path": "src/assets/images/background/home_bg_code.png"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_code.png"
                                         },
                                         {
                                             "name": "home_bg_code.webp",
@@ -1668,7 +1816,7 @@
                                             "size": 632552,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_code.webp",
-                                            "relative_path": "src/assets/images/background/home_bg_code.webp"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_code.webp"
                                         },
                                         {
                                             "name": "home_bg_code_blur.png",
@@ -1676,7 +1824,7 @@
                                             "size": 1231320,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_code_blur.png",
-                                            "relative_path": "src/assets/images/background/home_bg_code_blur.png"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_code_blur.png"
                                         },
                                         {
                                             "name": "home_bg_code_blur.webp",
@@ -1684,7 +1832,7 @@
                                             "size": 263940,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_code_blur.webp",
-                                            "relative_path": "src/assets/images/background/home_bg_code_blur.webp"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_code_blur.webp"
                                         },
                                         {
                                             "name": "home_bg_code_blur2.png",
@@ -1692,7 +1840,7 @@
                                             "size": 436112,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_code_blur2.png",
-                                            "relative_path": "src/assets/images/background/home_bg_code_blur2.png"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_code_blur2.png"
                                         },
                                         {
                                             "name": "home_bg_code_blur2.webp",
@@ -1700,7 +1848,7 @@
                                             "size": 65510,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_code_blur2.webp",
-                                            "relative_path": "src/assets/images/background/home_bg_code_blur2.webp"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_code_blur2.webp"
                                         },
                                         {
                                             "name": "home_bg_square_blue_blur.png",
@@ -1708,7 +1856,7 @@
                                             "size": 1114454,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_square_blue_blur.png",
-                                            "relative_path": "src/assets/images/background/home_bg_square_blue_blur.png"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_square_blue_blur.png"
                                         },
                                         {
                                             "name": "home_bg_square_blue_blur.webp",
@@ -1716,7 +1864,7 @@
                                             "size": 197544,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_square_blue_blur.webp",
-                                            "relative_path": "src/assets/images/background/home_bg_square_blue_blur.webp"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_square_blue_blur.webp"
                                         },
                                         {
                                             "name": "home_bg_square_blur.png",
@@ -1724,7 +1872,7 @@
                                             "size": 841445,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_square_blur.png",
-                                            "relative_path": "src/assets/images/background/home_bg_square_blur.png"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_square_blur.png"
                                         },
                                         {
                                             "name": "home_bg_square_blur.webp",
@@ -1732,7 +1880,7 @@
                                             "size": 200778,
                                             "date": "2024-12-03",
                                             "full_url": "https://mefamex.com/src/assets/images/background/home_bg_square_blur.webp",
-                                            "relative_path": "src/assets/images/background/home_bg_square_blur.webp"
+                                            "relative_path": "src\\assets\\images\\background\\home_bg_square_blur.webp"
                                         }
                                     ]
                                 },
@@ -1741,7 +1889,7 @@
                                     "url": "src/assets/images/language_img",
                                     "size": 2863041,
                                     "date": "2024-11-11",
-                                    "relative_path": "src/assets/images/language_img",
+                                    "relative_path": "src\\assets\\images\\language_img",
                                     "full_url": "https://mefamex.com/src/assets/images/language_img",
                                     "folder": [
                                         {
@@ -1749,7 +1897,7 @@
                                             "url": "src/assets/images/language_img/asil",
                                             "size": 1338626,
                                             "date": "2024-11-11",
-                                            "relative_path": "src/assets/images/language_img/asil",
+                                            "relative_path": "src\\assets\\images\\language_img\\asil",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/asil",
                                             "folder": [],
                                             "files": [
@@ -1759,7 +1907,7 @@
                                                     "size": 91784,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/angular.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/angular.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\angular.png"
                                                 },
                                                 {
                                                     "name": "arduino.png",
@@ -1767,7 +1915,7 @@
                                                     "size": 32908,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/arduino.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/arduino.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\arduino.png"
                                                 },
                                                 {
                                                     "name": "c.png",
@@ -1775,7 +1923,7 @@
                                                     "size": 392946,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/c.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/c.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\c.png"
                                                 },
                                                 {
                                                     "name": "cpp.jpg",
@@ -1783,7 +1931,7 @@
                                                     "size": 37105,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/cpp.jpg",
-                                                    "relative_path": "src/assets/images/language_img/asil/cpp.jpg"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\cpp.jpg"
                                                 },
                                                 {
                                                     "name": "csharp.png",
@@ -1791,7 +1939,7 @@
                                                     "size": 64138,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/csharp.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/csharp.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\csharp.png"
                                                 },
                                                 {
                                                     "name": "flutter.jpg",
@@ -1799,7 +1947,7 @@
                                                     "size": 28639,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/flutter.jpg",
-                                                    "relative_path": "src/assets/images/language_img/asil/flutter.jpg"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\flutter.jpg"
                                                 },
                                                 {
                                                     "name": "html.jpg",
@@ -1807,7 +1955,7 @@
                                                     "size": 85656,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/html.jpg",
-                                                    "relative_path": "src/assets/images/language_img/asil/html.jpg"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\html.jpg"
                                                 },
                                                 {
                                                     "name": "java.png",
@@ -1815,7 +1963,7 @@
                                                     "size": 32219,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/java.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/java.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\java.png"
                                                 },
                                                 {
                                                     "name": "linux.jpg",
@@ -1823,7 +1971,7 @@
                                                     "size": 327443,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/linux.jpg",
-                                                    "relative_path": "src/assets/images/language_img/asil/linux.jpg"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\linux.jpg"
                                                 },
                                                 {
                                                     "name": "node.png",
@@ -1831,7 +1979,7 @@
                                                     "size": 45874,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/node.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/node.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\node.png"
                                                 },
                                                 {
                                                     "name": "python.png",
@@ -1839,7 +1987,7 @@
                                                     "size": 2602,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/python.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/python.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\python.png"
                                                 },
                                                 {
                                                     "name": "raspberry.jpg",
@@ -1847,7 +1995,7 @@
                                                     "size": 15873,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/raspberry.jpg",
-                                                    "relative_path": "src/assets/images/language_img/asil/raspberry.jpg"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\raspberry.jpg"
                                                 },
                                                 {
                                                     "name": "react.png",
@@ -1855,7 +2003,7 @@
                                                     "size": 56812,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/react.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/react.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\react.png"
                                                 },
                                                 {
                                                     "name": "windows.png",
@@ -1863,7 +2011,7 @@
                                                     "size": 124627,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/asil/windows.png",
-                                                    "relative_path": "src/assets/images/language_img/asil/windows.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\asil\\windows.png"
                                                 }
                                             ]
                                         },
@@ -1872,7 +2020,7 @@
                                             "url": "src/assets/images/language_img/png",
                                             "size": 1165825,
                                             "date": "2024-11-11",
-                                            "relative_path": "src/assets/images/language_img/png",
+                                            "relative_path": "src\\assets\\images\\language_img\\png",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/png",
                                             "folder": [],
                                             "files": [
@@ -1882,7 +2030,7 @@
                                                     "size": 55469,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/angular.png",
-                                                    "relative_path": "src/assets/images/language_img/png/angular.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\angular.png"
                                                 },
                                                 {
                                                     "name": "arduino.png",
@@ -1890,7 +2038,7 @@
                                                     "size": 37634,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/arduino.png",
-                                                    "relative_path": "src/assets/images/language_img/png/arduino.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\arduino.png"
                                                 },
                                                 {
                                                     "name": "c.png",
@@ -1898,7 +2046,7 @@
                                                     "size": 106983,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/c.png",
-                                                    "relative_path": "src/assets/images/language_img/png/c.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\c.png"
                                                 },
                                                 {
                                                     "name": "cpp.png",
@@ -1906,7 +2054,7 @@
                                                     "size": 67272,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/cpp.png",
-                                                    "relative_path": "src/assets/images/language_img/png/cpp.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\cpp.png"
                                                 },
                                                 {
                                                     "name": "cs.png",
@@ -1914,7 +2062,7 @@
                                                     "size": 36683,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/cs.png",
-                                                    "relative_path": "src/assets/images/language_img/png/cs.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\cs.png"
                                                 },
                                                 {
                                                     "name": "flutter.png",
@@ -1922,7 +2070,7 @@
                                                     "size": 31455,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/flutter.png",
-                                                    "relative_path": "src/assets/images/language_img/png/flutter.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\flutter.png"
                                                 },
                                                 {
                                                     "name": "html.png",
@@ -1930,7 +2078,7 @@
                                                     "size": 250792,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/html.png",
-                                                    "relative_path": "src/assets/images/language_img/png/html.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\html.png"
                                                 },
                                                 {
                                                     "name": "java.png",
@@ -1938,7 +2086,7 @@
                                                     "size": 47657,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/java.png",
-                                                    "relative_path": "src/assets/images/language_img/png/java.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\java.png"
                                                 },
                                                 {
                                                     "name": "linux.png",
@@ -1946,7 +2094,7 @@
                                                     "size": 52027,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/linux.png",
-                                                    "relative_path": "src/assets/images/language_img/png/linux.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\linux.png"
                                                 },
                                                 {
                                                     "name": "node.png",
@@ -1954,7 +2102,7 @@
                                                     "size": 30737,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/node.png",
-                                                    "relative_path": "src/assets/images/language_img/png/node.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\node.png"
                                                 },
                                                 {
                                                     "name": "python.png",
@@ -1962,7 +2110,7 @@
                                                     "size": 43468,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/python.png",
-                                                    "relative_path": "src/assets/images/language_img/png/python.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\python.png"
                                                 },
                                                 {
                                                     "name": "raspberry.png",
@@ -1970,7 +2118,7 @@
                                                     "size": 147044,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/raspberry.png",
-                                                    "relative_path": "src/assets/images/language_img/png/raspberry.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\raspberry.png"
                                                 },
                                                 {
                                                     "name": "react.png",
@@ -1978,7 +2126,7 @@
                                                     "size": 65169,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/react.png",
-                                                    "relative_path": "src/assets/images/language_img/png/react.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\react.png"
                                                 },
                                                 {
                                                     "name": "windows.png",
@@ -1986,7 +2134,7 @@
                                                     "size": 193435,
                                                     "date": "2024-11-11",
                                                     "full_url": "https://mefamex.com/src/assets/images/language_img/png/windows.png",
-                                                    "relative_path": "src/assets/images/language_img/png/windows.png"
+                                                    "relative_path": "src\\assets\\images\\language_img\\png\\windows.png"
                                                 }
                                             ]
                                         }
@@ -1998,7 +2146,7 @@
                                             "size": 17872,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/angular.webp",
-                                            "relative_path": "src/assets/images/language_img/angular.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\angular.webp"
                                         },
                                         {
                                             "name": "arduino.webp",
@@ -2006,7 +2154,7 @@
                                             "size": 22024,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/arduino.webp",
-                                            "relative_path": "src/assets/images/language_img/arduino.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\arduino.webp"
                                         },
                                         {
                                             "name": "c.webp",
@@ -2014,7 +2162,7 @@
                                             "size": 21838,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/c.webp",
-                                            "relative_path": "src/assets/images/language_img/c.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\c.webp"
                                         },
                                         {
                                             "name": "cpp.webp",
@@ -2022,7 +2170,7 @@
                                             "size": 19108,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/cpp.webp",
-                                            "relative_path": "src/assets/images/language_img/cpp.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\cpp.webp"
                                         },
                                         {
                                             "name": "csharp.webp",
@@ -2030,7 +2178,7 @@
                                             "size": 23954,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/csharp.webp",
-                                            "relative_path": "src/assets/images/language_img/csharp.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\csharp.webp"
                                         },
                                         {
                                             "name": "flutter.webp",
@@ -2038,7 +2186,7 @@
                                             "size": 9886,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/flutter.webp",
-                                            "relative_path": "src/assets/images/language_img/flutter.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\flutter.webp"
                                         },
                                         {
                                             "name": "html.webp",
@@ -2046,7 +2194,7 @@
                                             "size": 69478,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/html.webp",
-                                            "relative_path": "src/assets/images/language_img/html.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\html.webp"
                                         },
                                         {
                                             "name": "java.webp",
@@ -2054,7 +2202,7 @@
                                             "size": 27334,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/java.webp",
-                                            "relative_path": "src/assets/images/language_img/java.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\java.webp"
                                         },
                                         {
                                             "name": "linux.webp",
@@ -2062,7 +2210,7 @@
                                             "size": 18202,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/linux.webp",
-                                            "relative_path": "src/assets/images/language_img/linux.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\linux.webp"
                                         },
                                         {
                                             "name": "node.webp",
@@ -2070,7 +2218,7 @@
                                             "size": 11562,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/node.webp",
-                                            "relative_path": "src/assets/images/language_img/node.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\node.webp"
                                         },
                                         {
                                             "name": "python.webp",
@@ -2078,7 +2226,7 @@
                                             "size": 13066,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/python.webp",
-                                            "relative_path": "src/assets/images/language_img/python.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\python.webp"
                                         },
                                         {
                                             "name": "raspberry.webp",
@@ -2086,7 +2234,7 @@
                                             "size": 36574,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/raspberry.webp",
-                                            "relative_path": "src/assets/images/language_img/raspberry.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\raspberry.webp"
                                         },
                                         {
                                             "name": "react.webp",
@@ -2094,7 +2242,7 @@
                                             "size": 29150,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/react.webp",
-                                            "relative_path": "src/assets/images/language_img/react.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\react.webp"
                                         },
                                         {
                                             "name": "windows.webp",
@@ -2102,7 +2250,7 @@
                                             "size": 38542,
                                             "date": "2024-11-11",
                                             "full_url": "https://mefamex.com/src/assets/images/language_img/windows.webp",
-                                            "relative_path": "src/assets/images/language_img/windows.webp"
+                                            "relative_path": "src\\assets\\images\\language_img\\windows.webp"
                                         }
                                     ]
                                 },
@@ -2111,7 +2259,7 @@
                                     "url": "src/assets/images/mfmx",
                                     "size": 938326,
                                     "date": "2024-11-08",
-                                    "relative_path": "src/assets/images/mfmx",
+                                    "relative_path": "src\\assets\\images\\mfmx",
                                     "full_url": "https://mefamex.com/src/assets/images/mfmx",
                                     "folder": [],
                                     "files": [
@@ -2121,7 +2269,7 @@
                                             "size": 63227,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-1000.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-1000.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-1000.png"
                                         },
                                         {
                                             "name": "mfmx-144.png",
@@ -2129,7 +2277,7 @@
                                             "size": 6712,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-144.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-144.png"
                                         },
                                         {
                                             "name": "mfmx-1500-2500.png",
@@ -2137,7 +2285,7 @@
                                             "size": 227786,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-1500-2500.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-1500-2500.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-1500-2500.png"
                                         },
                                         {
                                             "name": "mfmx-16.png",
@@ -2145,7 +2293,7 @@
                                             "size": 645,
                                             "date": "2024-11-08",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-16.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-16.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-16.png"
                                         },
                                         {
                                             "name": "mfmx-2500.png",
@@ -2153,7 +2301,7 @@
                                             "size": 250063,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-2500.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-2500.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-2500.png"
                                         },
                                         {
                                             "name": "mfmx-256.png",
@@ -2161,7 +2309,7 @@
                                             "size": 13313,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-256.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-256.png"
                                         },
                                         {
                                             "name": "mfmx-300-500.png",
@@ -2169,7 +2317,7 @@
                                             "size": 27026,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-300-500.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-300-500.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-300-500.png"
                                         },
                                         {
                                             "name": "mfmx-3000.png",
@@ -2177,7 +2325,7 @@
                                             "size": 269021,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-3000.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-3000.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-3000.png"
                                         },
                                         {
                                             "name": "mfmx-32.png",
@@ -2185,7 +2333,7 @@
                                             "size": 985,
                                             "date": "2024-11-08",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-32.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-32.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-32.png"
                                         },
                                         {
                                             "name": "mfmx-450-750.png",
@@ -2193,7 +2341,7 @@
                                             "size": 41120,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-450-750.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-450-750.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-450-750.png"
                                         },
                                         {
                                             "name": "mfmx-512.png",
@@ -2201,7 +2349,7 @@
                                             "size": 29705,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-512.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-512.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-512.png"
                                         },
                                         {
                                             "name": "mfmx-64.png",
@@ -2209,7 +2357,7 @@
                                             "size": 2520,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-64.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-64.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-64.png"
                                         },
                                         {
                                             "name": "mfmx-90-150.png",
@@ -2217,7 +2365,7 @@
                                             "size": 6203,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx/mfmx-90-150.png",
-                                            "relative_path": "src/assets/images/mfmx/mfmx-90-150.png"
+                                            "relative_path": "src\\assets\\images\\mfmx\\mfmx-90-150.png"
                                         }
                                     ]
                                 },
@@ -2226,7 +2374,7 @@
                                     "url": "src/assets/images/mfmx_icon",
                                     "size": 48630,
                                     "date": "2025-02-05",
-                                    "relative_path": "src/assets/images/mfmx_icon",
+                                    "relative_path": "src\\assets\\images\\mfmx_icon",
                                     "full_url": "https://mefamex.com/src/assets/images/mfmx_icon",
                                     "folder": [],
                                     "files": [
@@ -2236,7 +2384,7 @@
                                             "size": 10253,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_icon/mefamex_logo.png",
-                                            "relative_path": "src/assets/images/mfmx_icon/mefamex_logo.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_icon\\mefamex_logo.png"
                                         },
                                         {
                                             "name": "mefamex_logo_bg.png",
@@ -2244,7 +2392,7 @@
                                             "size": 7948,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_icon/mefamex_logo_bg.png",
-                                            "relative_path": "src/assets/images/mfmx_icon/mefamex_logo_bg.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_icon\\mefamex_logo_bg.png"
                                         },
                                         {
                                             "name": "mefamex_logo_bgb.png",
@@ -2252,7 +2400,7 @@
                                             "size": 9575,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_icon/mefamex_logo_bgb.png",
-                                            "relative_path": "src/assets/images/mfmx_icon/mefamex_logo_bgb.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_icon\\mefamex_logo_bgb.png"
                                         },
                                         {
                                             "name": "mefamex_logo_sb.png",
@@ -2260,7 +2408,7 @@
                                             "size": 10995,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_icon/mefamex_logo_sb.png",
-                                            "relative_path": "src/assets/images/mfmx_icon/mefamex_logo_sb.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_icon\\mefamex_logo_sb.png"
                                         },
                                         {
                                             "name": "mfmx_logo_elips.png",
@@ -2268,7 +2416,7 @@
                                             "size": 9859,
                                             "date": "2025-02-05",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_icon/mfmx_logo_elips.png",
-                                            "relative_path": "src/assets/images/mfmx_icon/mfmx_logo_elips.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_icon\\mfmx_logo_elips.png"
                                         }
                                     ]
                                 },
@@ -2277,7 +2425,7 @@
                                     "url": "src/assets/images/mfmx_symbol",
                                     "size": 1555149,
                                     "date": "2025-05-19",
-                                    "relative_path": "src/assets/images/mfmx_symbol",
+                                    "relative_path": "src\\assets\\images\\mfmx_symbol",
                                     "full_url": "https://mefamex.com/src/assets/images/mfmx_symbol",
                                     "folder": [],
                                     "files": [
@@ -2287,7 +2435,7 @@
                                             "size": 473316,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_symbol/mefamex_logo.png",
-                                            "relative_path": "src/assets/images/mfmx_symbol/mefamex_logo.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_symbol\\mefamex_logo.png"
                                         },
                                         {
                                             "name": "mefamex_logo_bg.png",
@@ -2295,7 +2443,7 @@
                                             "size": 288386,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_symbol/mefamex_logo_bg.png",
-                                            "relative_path": "src/assets/images/mfmx_symbol/mefamex_logo_bg.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_symbol\\mefamex_logo_bg.png"
                                         },
                                         {
                                             "name": "mefamex_logo_bgb(2).png",
@@ -2303,7 +2451,7 @@
                                             "size": 236408,
                                             "date": "2025-02-04",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_symbol/mefamex_logo_bgb(2).png",
-                                            "relative_path": "src/assets/images/mfmx_symbol/mefamex_logo_bgb(2).png"
+                                            "relative_path": "src\\assets\\images\\mfmx_symbol\\mefamex_logo_bgb(2).png"
                                         },
                                         {
                                             "name": "mefamex_logo_bgb.png",
@@ -2311,7 +2459,7 @@
                                             "size": 62427,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_symbol/mefamex_logo_bgb.png",
-                                            "relative_path": "src/assets/images/mfmx_symbol/mefamex_logo_bgb.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_symbol\\mefamex_logo_bgb.png"
                                         },
                                         {
                                             "name": "mefamex_logo_bgb.webp",
@@ -2319,7 +2467,7 @@
                                             "size": 23776,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp",
-                                            "relative_path": "src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp"
+                                            "relative_path": "src\\assets\\images\\mfmx_symbol\\mefamex_logo_bgb.webp"
                                         },
                                         {
                                             "name": "mefamex_logo_sb.png",
@@ -2327,7 +2475,7 @@
                                             "size": 470836,
                                             "date": "2024-11-07",
                                             "full_url": "https://mefamex.com/src/assets/images/mfmx_symbol/mefamex_logo_sb.png",
-                                            "relative_path": "src/assets/images/mfmx_symbol/mefamex_logo_sb.png"
+                                            "relative_path": "src\\assets\\images\\mfmx_symbol\\mefamex_logo_sb.png"
                                         }
                                     ]
                                 }
@@ -2339,7 +2487,7 @@
                                     "size": 369494,
                                     "date": "2024-11-11",
                                     "full_url": "https://mefamex.com/src/assets/images/4_6041858661402282267.jpg",
-                                    "relative_path": "src/assets/images/4_6041858661402282267.jpg"
+                                    "relative_path": "src\\assets\\images\\4_6041858661402282267.jpg"
                                 }
                             ]
                         }
@@ -2351,7 +2499,7 @@
                     "url": "src/components",
                     "size": 40458,
                     "date": "2025-07-04",
-                    "relative_path": "src/components",
+                    "relative_path": "src\\components",
                     "full_url": "https://mefamex.com/src/components",
                     "folder": [],
                     "files": [
@@ -2361,7 +2509,7 @@
                             "size": 2031,
                             "date": "2024-12-14",
                             "full_url": "https://mefamex.com/src/components/=.ico",
-                            "relative_path": "src/components/=.ico"
+                            "relative_path": "src\\components\\=.ico"
                         },
                         {
                             "name": "footer.css",
@@ -2369,7 +2517,7 @@
                             "size": 1228,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/components/footer.css",
-                            "relative_path": "src/components/footer.css"
+                            "relative_path": "src\\components\\footer.css"
                         },
                         {
                             "name": "header.css",
@@ -2377,7 +2525,7 @@
                             "size": 6856,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/components/header.css",
-                            "relative_path": "src/components/header.css"
+                            "relative_path": "src\\components\\header.css"
                         },
                         {
                             "name": "headerFooter.css",
@@ -2385,7 +2533,7 @@
                             "size": 12164,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/components/headerFooter.css",
-                            "relative_path": "src/components/headerFooter.css"
+                            "relative_path": "src\\components\\headerFooter.css"
                         },
                         {
                             "name": "importHeaderFooter.js",
@@ -2393,7 +2541,7 @@
                             "size": 5781,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/components/importHeaderFooter.js",
-                            "relative_path": "src/components/importHeaderFooter.js"
+                            "relative_path": "src\\components\\importHeaderFooter.js"
                         },
                         {
                             "name": "mefamex_logo_bgb.png",
@@ -2401,7 +2549,7 @@
                             "size": 9575,
                             "date": "2024-11-07",
                             "full_url": "https://mefamex.com/src/components/mefamex_logo_bgb.png",
-                            "relative_path": "src/components/mefamex_logo_bgb.png"
+                            "relative_path": "src\\components\\mefamex_logo_bgb.png"
                         },
                         {
                             "name": "x.ico",
@@ -2409,7 +2557,7 @@
                             "size": 2823,
                             "date": "2024-12-14",
                             "full_url": "https://mefamex.com/src/components/x.ico",
-                            "relative_path": "src/components/x.ico"
+                            "relative_path": "src\\components\\x.ico"
                         }
                     ]
                 },
@@ -2418,7 +2566,7 @@
                     "url": "src/data",
                     "size": 9568,
                     "date": "2025-07-04",
-                    "relative_path": "src/data",
+                    "relative_path": "src\\data",
                     "full_url": "https://mefamex.com/src/data",
                     "folder": [],
                     "files": [
@@ -2428,7 +2576,7 @@
                             "size": 9568,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/data/navigation.json",
-                            "relative_path": "src/data/navigation.json"
+                            "relative_path": "src\\data\\navigation.json"
                         }
                     ]
                 },
@@ -2437,7 +2585,7 @@
                     "url": "src/My_nots",
                     "size": 33680,
                     "date": "2025-07-04",
-                    "relative_path": "src/My_nots",
+                    "relative_path": "src\\My_nots",
                     "full_url": "https://mefamex.com/src/My_nots",
                     "folder": [],
                     "files": [
@@ -2447,7 +2595,7 @@
                             "size": 12319,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/My_nots/Legal_terms.txt",
-                            "relative_path": "src/My_nots/Legal_terms.txt"
+                            "relative_path": "src\\My_nots\\Legal_terms.txt"
                         },
                         {
                             "name": "link_rel.txt",
@@ -2455,7 +2603,7 @@
                             "size": 1450,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/My_nots/link_rel.txt",
-                            "relative_path": "src/My_nots/link_rel.txt"
+                            "relative_path": "src\\My_nots\\link_rel.txt"
                         },
                         {
                             "name": "privacy-policy(2).txt",
@@ -2463,7 +2611,7 @@
                             "size": 9202,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/My_nots/privacy-policy(2).txt",
-                            "relative_path": "src/My_nots/privacy-policy(2).txt"
+                            "relative_path": "src\\My_nots\\privacy-policy(2).txt"
                         },
                         {
                             "name": "Privacy_Policy.txt",
@@ -2471,7 +2619,7 @@
                             "size": 1613,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/My_nots/Privacy_Policy.txt",
-                            "relative_path": "src/My_nots/Privacy_Policy.txt"
+                            "relative_path": "src\\My_nots\\Privacy_Policy.txt"
                         },
                         {
                             "name": "SSS.txt",
@@ -2479,7 +2627,7 @@
                             "size": 69,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/My_nots/SSS.txt",
-                            "relative_path": "src/My_nots/SSS.txt"
+                            "relative_path": "src\\My_nots\\SSS.txt"
                         },
                         {
                             "name": "YAPILACAKLAR.txt",
@@ -2487,7 +2635,7 @@
                             "size": 9027,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/My_nots/YAPILACAKLAR.txt",
-                            "relative_path": "src/My_nots/YAPILACAKLAR.txt"
+                            "relative_path": "src\\My_nots\\YAPILACAKLAR.txt"
                         }
                     ]
                 },
@@ -2496,7 +2644,7 @@
                     "url": "src/scripts",
                     "size": 10338,
                     "date": "2025-07-04",
-                    "relative_path": "src/scripts",
+                    "relative_path": "src\\scripts",
                     "full_url": "https://mefamex.com/src/scripts",
                     "folder": [],
                     "files": [
@@ -2506,7 +2654,7 @@
                             "size": 102,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/scripts/canvaSocMed.js",
-                            "relative_path": "src/scripts/canvaSocMed.js"
+                            "relative_path": "src\\scripts\\canvaSocMed.js"
                         },
                         {
                             "name": "circleMouse.js",
@@ -2514,7 +2662,7 @@
                             "size": 9050,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/scripts/circleMouse.js",
-                            "relative_path": "src/scripts/circleMouse.js"
+                            "relative_path": "src\\scripts\\circleMouse.js"
                         },
                         {
                             "name": "home.js",
@@ -2522,7 +2670,7 @@
                             "size": 0,
                             "date": "2024-12-08",
                             "full_url": "https://mefamex.com/src/scripts/home.js",
-                            "relative_path": "src/scripts/home.js"
+                            "relative_path": "src\\scripts\\home.js"
                         },
                         {
                             "name": "mouse_tail.js",
@@ -2530,7 +2678,7 @@
                             "size": 1186,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/scripts/mouse_tail.js",
-                            "relative_path": "src/scripts/mouse_tail.js"
+                            "relative_path": "src\\scripts\\mouse_tail.js"
                         }
                     ]
                 },
@@ -2539,7 +2687,7 @@
                     "url": "src/styles",
                     "size": 12563,
                     "date": "2025-07-04",
-                    "relative_path": "src/styles",
+                    "relative_path": "src\\styles",
                     "full_url": "https://mefamex.com/src/styles",
                     "folder": [],
                     "files": [
@@ -2549,7 +2697,7 @@
                             "size": 12563,
                             "date": "2025-07-04",
                             "full_url": "https://mefamex.com/src/styles/home.css",
-                            "relative_path": "src/styles/home.css"
+                            "relative_path": "src\\styles\\home.css"
                         }
                     ]
                 }
@@ -2571,7 +2719,7 @@
                     "size": 58312,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/the-mefamex-project/index.html",
-                    "relative_path": "the-mefamex-project/index.html"
+                    "relative_path": "the-mefamex-project\\index.html"
                 },
                 {
                     "name": "mefamex_logo_bgb.webp",
@@ -2579,7 +2727,7 @@
                     "size": 23776,
                     "date": "2024-11-07",
                     "full_url": "https://mefamex.com/the-mefamex-project/mefamex_logo_bgb.webp",
-                    "relative_path": "the-mefamex-project/mefamex_logo_bgb.webp"
+                    "relative_path": "the-mefamex-project\\mefamex_logo_bgb.webp"
                 },
                 {
                     "name": "style.css",
@@ -2587,7 +2735,7 @@
                     "size": 6000,
                     "date": "2025-07-04",
                     "full_url": "https://mefamex.com/the-mefamex-project/style.css",
-                    "relative_path": "the-mefamex-project/style.css"
+                    "relative_path": "the-mefamex-project\\style.css"
                 }
             ]
         }
@@ -2597,7 +2745,7 @@
             "name": "index.html",
             "url": "index.html",
             "size": 20988,
-            "date": "2025-07-04",
+            "date": "2025-07-14",
             "full_url": "https://mefamex.com/index.html",
             "relative_path": "index.html"
         },
@@ -2629,7 +2777,7 @@
             "name": "filetree.html",
             "url": "filetree.html",
             "size": 25167,
-            "date": "2025-07-04",
+            "date": "2025-07-14",
             "full_url": "https://mefamex.com/filetree.html",
             "relative_path": "filetree.html"
         },
@@ -2637,7 +2785,7 @@
             "name": "linktree.html",
             "url": "linktree.html",
             "size": 22656,
-            "date": "2025-07-04",
+            "date": "2025-07-14",
             "full_url": "https://mefamex.com/linktree.html",
             "relative_path": "linktree.html"
         },
@@ -2693,7 +2841,7 @@
             "name": "sitemap.xml",
             "url": "sitemap.xml",
             "size": 5123,
-            "date": "2025-07-04",
+            "date": "2025-07-14",
             "full_url": "https://mefamex.com/sitemap.xml",
             "relative_path": "sitemap.xml"
         },
@@ -2708,8 +2856,8 @@
         {
             "name": "YAPILACAKLAR.txt",
             "url": "YAPILACAKLAR.txt",
-            "size": 25731,
-            "date": "2025-07-04",
+            "size": 26099,
+            "date": "2025-07-11",
             "full_url": "https://mefamex.com/YAPILACAKLAR.txt",
             "relative_path": "YAPILACAKLAR.txt"
         }
