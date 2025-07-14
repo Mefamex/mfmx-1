@@ -116,7 +116,7 @@ class Walker_path:
             self.url  : str = url
             self.date : str = date # format = YYYY-MM-DD 
             self.relative_path : str = relative_path 
-            self.full_url : str = BASE_URL + self.url 
+            self.full_url : str = BASE_URL + "/" + self.url 
             self.children : list[Walker_path] = [] 
             self.files    : list[Walker_link] = []
             
@@ -231,6 +231,7 @@ class LinkTreeCreator:
             print("===="*deep+"===============================")
         
         print(json.dumps(self.link_tree.get(next(iter(self.link_tree.keys()))).to_dict(), indent=4, ensure_ascii=False))
+        return None
     
     def save_link_tree(self) -> None:
         
