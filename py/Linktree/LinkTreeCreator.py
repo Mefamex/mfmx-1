@@ -70,6 +70,7 @@ mefamex (info@mefamex.com) (https://mefamex.com)
 Tarihce:
 - 1.0.0 (2025-05-03): Ilk surum
 - 1.0.1 (2025-05-03): dosya yolu -relative_path- ile oluşan hata giderildi. 
+- 1.0.3 (2025-07-14): değişken türleri düzenlendi, Walker_path url ataması hatası düzeltildi.
 
 Iletisim:
     - E-mail: info@mefamex.com
@@ -84,6 +85,7 @@ print(___doc___+("-"*20+"\n")*2)
 
 import os, sys, json, datetime, time
 from pathlib import Path
+from typing import Optional
 
 time.sleep(1) 
 
@@ -136,7 +138,7 @@ class Walker_path:
 
 
 class LinkTreeCreator:
-    def __init__(self, base_dir: str = os.getcwd(), output_dir: str = os.getcwd(), output_file: str = "link_tree.json", passDirs: list= [], passFiles : list= []) -> None:
+    def __init__(self, base_dir: Path = Path(os.getcwd()), output_dir: Path = Path(os.getcwd()), output_file: Path = Path("link_tree.json"), passDirs: list= [], passFiles : list= []) -> None:
         # check base_dir 
         self.base_dir : Path = Path(base_dir)
         if not self.base_dir.exists(): raise FileNotFoundError(f"Base directory '{self.base_dir}' does not exist.")
@@ -163,7 +165,8 @@ class LinkTreeCreator:
         self.print_link_tree()
         self.save_link_tree()
         
-    def walker(self, root : Path) -> Walker_path :
+
+    def walker(self, root : Path) -> Optional[Walker_path]  :
         # get directories and files in the root directory
         with os.scandir(root) as entries: dirs = [entry.name for entry in entries if entry.is_dir()]
         with os.scandir(root) as entries: files = [entry.name for entry in entries if entry.is_file()]
@@ -174,8 +177,8 @@ class LinkTreeCreator:
         # Skip directories based on various conditions
         if (any(dir in str(root) for dir in self.passDirs) or not os.path.isdir(root) or os.path.islink(root) or any(part.startswith(".") for part in Path(root).parts) or not any(file.endswith(".html") for file in files)) or any(dir in str(root) for dir in self.passDirs): 
             print(f"Skipped directory: {root}") 
-            return
-        
+            return None
+
         # create a new Walker_path object for the current directory
         name = os.path.basename(root)
         path = os.path.abspath(root)
@@ -205,7 +208,7 @@ class LinkTreeCreator:
                 walker_path.files.append(walker_link)
         
         for dir in dirs:
-            dir_path = os.path.join(root, dir)
+            dir_path : Path = Path(os.path.join(root, dir))
             if os.path.isdir(dir_path):
                 child = self.walker(dir_path)
                 if child:
@@ -230,7 +233,9 @@ class LinkTreeCreator:
             print(f"{" |  "*deep}Children ({len(link.children)}): {[child.name for child in link.children]}")
             print("===="*deep+"===============================")
         
-        print(json.dumps(self.link_tree.get(next(iter(self.link_tree.keys()))).to_dict(), indent=4, ensure_ascii=False))
+        first_item = self.link_tree.get(next(iter(self.link_tree.keys())))
+        if first_item is not None:  print(json.dumps(first_item.to_dict(), indent=4, ensure_ascii=False))
+        else: print("No link tree data to display.")
         return None
     
     def save_link_tree(self) -> None:
@@ -244,18 +249,20 @@ class LinkTreeCreator:
             if hasattr(obj, 'children'):
                 for child in obj.children: delpath(child)
         delpath(first_level)
-        first_level.name = BASE_URL
-        json_data = first_level.to_dict()
-        with open(self.output_file, "w", encoding="utf-8") as f: json.dump(json_data, f, indent=4, ensure_ascii=False)
-        print(f"Link tree saved to {self.output_file}")
+        if first_level is not None:
+            first_level.name = BASE_URL
+            json_data = first_level.to_dict()
+            with open(self.output_file, "w", encoding="utf-8") as f: json.dump(json_data, f, indent=4, ensure_ascii=False)
+            print(f"Link tree saved to {self.output_file}")
+        else: print("No link tree data to save.")
 
 
 
 if __name__ == "__main__":
-    base_dir = os.getcwd()
+    base_dir : Path = Path(os.getcwd())
     passDirs = ["games", "py", "src", "sweetmonstermia" ]
     passFiles = ["yandex_" ]
-    output_dir= os.path.join(base_dir, "py", "Linktree")
-    output_file= "link_tree.json"
+    output_dir : Path = Path(os.path.join(base_dir, "py", "Linktree"))
+    output_file : Path = Path(output_dir / "link_tree.json")
     LinkTreeCreator(base_dir=base_dir, output_dir=output_dir, output_file=output_file, passDirs=passDirs, passFiles=passFiles)
     

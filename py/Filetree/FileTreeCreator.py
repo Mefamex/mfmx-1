@@ -70,6 +70,7 @@ Tarihce:
 - 1.0.0 (2025-05-04): Ilk surum
 - 1.0.1 (2025-05-03): dosya yolu -relative_path- ile oluşan hata giderildi. 
 - 1.0.2 (2025-06-09): dosya yolu -relative_path- ile oluşan hata giderildi. 
+- 1.0.3 (2025-07-14): değişken türleri düzenlendi.
 
 Iletisim:
     - E-mail: info@mefamex.com
@@ -84,6 +85,7 @@ print(___doc___+("-"*20+"\n")*2)
 
 import os, sys, json, datetime, time
 from pathlib import Path
+from typing import Optional
 
 time.sleep(1) 
 
@@ -95,7 +97,7 @@ class Walker_file:
         self.path : str = path
         self.url  : str = url
         self.size : int = os.path.getsize(path) if os.path.isfile(path) else 0
-        self.date : str = datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime("%Y-%m-%d") if os.path.isfile(path) else None
+        self.date : str = datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime("%Y-%m-%d") if os.path.isfile(path) else "2000-01-01"
         self.relative_path : str = relative_path 
         self.full_url : str = BASE_URL + "/" + self.url 
         
@@ -140,7 +142,7 @@ class Walker_path:
 
 
 class FileTreeCreator:
-    def __init__(self, base_dir: str = os.getcwd(), output_dir: str = os.getcwd(), output_file: str = "file_tree.json", passDirs: list= [], passFiles : list= []) -> None:
+    def __init__(self, base_dir: Path = Path.cwd(), output_dir: Path = Path.cwd(), output_file: Path = Path("file_tree.json"), passDirs: list= [], passFiles : list= []) -> None:
         # check base_dir 
         self.base_dir : Path = Path(base_dir)
         if not self.base_dir.exists(): raise FileNotFoundError(f"Base directory '{self.base_dir}' does not exist.")
@@ -167,7 +169,7 @@ class FileTreeCreator:
         self.print_file_tree()
         self.save_file_tree()
         
-    def walker(self, root : Path) -> Walker_path :
+    def walker(self, root : Path) -> Optional[Walker_path] :
         # get directories and files in the root directory
         with os.scandir(root) as entries: dirs = [entry.name for entry in entries if entry.is_dir()]
         with os.scandir(root) as entries: files = [entry.name for entry in entries if entry.is_file()]
@@ -178,7 +180,7 @@ class FileTreeCreator:
         # Skip directories based on various conditions
         if (any(dir in str(root) for dir in self.passDirs) or not os.path.isdir(root) or os.path.islink(root) or any(part.startswith(".") for part in Path(root).parts) ) or any(dir in str(root) for dir in self.passDirs): 
             print(f"Skipped directory: {root}") 
-            return
+            return None
         
         # create a new Walker_path object for the current directory
         name = os.path.basename(root)
@@ -206,7 +208,7 @@ class FileTreeCreator:
             walker_path.size += os.path.getsize(path) if os.path.isfile(path) else 0
         
         for dir in dirs:
-            dir_path = os.path.join(root, dir)
+            dir_path : Path = Path(os.path.join(root, dir))
             if os.path.isdir(dir_path):
                 child = self.walker(dir_path)
                 if child:
@@ -232,7 +234,9 @@ class FileTreeCreator:
             print(f"{" |  "*deep}folder ({len(file.folder)}): {[child.name for child in file.folder]}")
             print("===="*deep+"===============================")
         
-        print(json.dumps(self.file_tree.get(next(iter(self.file_tree.keys()))).to_dict(), indent=4, ensure_ascii=False))
+        first_item = self.file_tree.get(next(iter(self.file_tree.keys())))
+        if first_item is not None:  print(json.dumps(first_item.to_dict(), indent=4, ensure_ascii=False))
+        else: print("No file tree data available.")
     
     def save_file_tree(self) -> None:
         
@@ -245,18 +249,20 @@ class FileTreeCreator:
             if hasattr(obj, 'folder'):
                 for child in obj.folder: delpath(child)
         delpath(first_level)
-        first_level.name = BASE_URL
-        json_data = first_level.to_dict()
-        with open(self.output_file, "w", encoding="utf-8") as f: json.dump(json_data, f, indent=4, ensure_ascii=False)
-        print(f"File tree saved to {self.output_file}")
+        if first_level is not None:
+            first_level.name = BASE_URL
+            json_data = first_level.to_dict()
+            with open(self.output_file, "w", encoding="utf-8") as f: json.dump(json_data, f, indent=4, ensure_ascii=False)
+            print(f"File tree saved to {self.output_file}")
+        else: print("No file tree data available to save.")
 
 
 
 if __name__ == "__main__":
-    base_dir = os.getcwd()
-    passDirs = ["sweetmonstermia" ]
-    passFiles = ["yandex_" ]
-    output_dir= os.path.join(base_dir, "py", "Filetree")
-    output_file= "file_tree.json"
+    base_dir = Path(os.getcwd())
+    passDirs   = ["sweetmonstermia" ]
+    passFiles   =["yandex_" ]
+    output_dir = Path(os.path.join(base_dir, "py", "Filetree"))
+    output_file = Path("file_tree.json")
     FileTreeCreator(base_dir=base_dir, output_dir=output_dir, output_file=output_file, passDirs=passDirs, passFiles=passFiles)
     
