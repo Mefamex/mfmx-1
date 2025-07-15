@@ -1,8 +1,8 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "size": 90580692,
-    "date": "2025-07-11",
+    "size": 90620284,
+    "date": "2025-07-15",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "folder": [
@@ -1013,8 +1013,8 @@
         {
             "name": "projects",
             "url": "projects",
-            "size": 1323575,
-            "date": "2025-07-04",
+            "size": 1363134,
+            "date": "2025-07-15",
             "relative_path": "projects",
             "full_url": "https://mefamex.com/projects",
             "folder": [
@@ -1238,20 +1238,28 @@
                 {
                     "name": "yedekleme",
                     "url": "projects/yedekleme",
-                    "size": 910392,
-                    "date": "2025-07-04",
+                    "size": 949951,
+                    "date": "2025-07-15",
                     "relative_path": "projects\\yedekleme",
                     "full_url": "https://mefamex.com/projects/yedekleme",
                     "folder": [
                         {
                             "name": "_freelance",
                             "url": "projects/yedekleme/_freelance",
-                            "size": 36590,
-                            "date": "2025-07-04",
+                            "size": 76149,
+                            "date": "2025-07-15",
                             "relative_path": "projects\\yedekleme\\_freelance",
                             "full_url": "https://mefamex.com/projects/yedekleme/_freelance",
                             "folder": [],
                             "files": [
+                                {
+                                    "name": "Gtin-VeriGirme-otomasyon.js",
+                                    "url": "projects/yedekleme/_freelance/Gtin-VeriGirme-otomasyon.js",
+                                    "size": 39559,
+                                    "date": "2025-07-15",
+                                    "full_url": "https://mefamex.com/projects/yedekleme/_freelance/Gtin-VeriGirme-otomasyon.js",
+                                    "relative_path": "projects\\yedekleme\\_freelance\\Gtin-VeriGirme-otomasyon.js"
+                                },
                                 {
                                     "name": "Uyap_ihale_bot.js",
                                     "url": "projects/yedekleme/_freelance/Uyap_ihale_bot.js",
@@ -1382,7 +1390,7 @@
                             "name": "link_tree.json",
                             "url": "py/Linktree/link_tree.json",
                             "size": 15283,
-                            "date": "2025-07-14",
+                            "date": "2025-07-15",
                             "full_url": "https://mefamex.com/py/Linktree/link_tree.json",
                             "relative_path": "py\\Linktree\\link_tree.json"
                         }
@@ -2856,8 +2864,8 @@
         {
             "name": "YAPILACAKLAR.txt",
             "url": "YAPILACAKLAR.txt",
-            "size": 26099,
-            "date": "2025-07-11",
+            "size": 26132,
+            "date": "2025-07-15",
             "full_url": "https://mefamex.com/YAPILACAKLAR.txt",
             "relative_path": "YAPILACAKLAR.txt"
         }
