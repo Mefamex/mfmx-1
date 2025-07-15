@@ -233,6 +233,7 @@ stock images       : unsplash.com
 icons              : thenounproject.com
 color palets       : color.adobe.com
 rewarded webpages  : awwwards.com
+practise software  : coddy.tech
 
 
 
