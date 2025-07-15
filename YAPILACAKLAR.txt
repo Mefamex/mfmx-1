@@ -240,6 +240,7 @@ practise software  : coddy.tech
 
 
 
+
 =============== AI ===============
 - Blackbox 
 - Chatgpt 
