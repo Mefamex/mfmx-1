@@ -165,7 +165,7 @@
 - NEW: project astra, https://www.youtube.com/watch?v=RtfUtBsZyxU
 - NEW: Yazılımcılar için yapay zekalar tuzak mı, destek mi?
 - NEW: Yazılım alanları 
-
+- NEW: NN : Mutlak doğruyu ve kusursuzluğu arıyorsun hep, insan gibi aciz varlıklarda...
 
 
 
