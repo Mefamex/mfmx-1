@@ -1,7 +1,7 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "date": "2025-07-17",
+    "date": "2025-07-18",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "children": [
@@ -18,21 +18,21 @@
                     "url": "about/index.html",
                     "date": "2025-07-14",
                     "relative_path": "about\\index.html",
-                    "full_url": "https://mefamex.comabout/index.html"
+                    "full_url": "https://mefamex.com/about/index.html"
                 }
             ]
         },
         {
             "name": "blog",
             "url": "blog",
-            "date": "2025-07-11",
+            "date": "2025-07-17",
             "relative_path": "blog",
             "full_url": "https://mefamex.com/blog",
             "children": [
                 {
                     "name": "ozlu-sozler",
                     "url": "blog/ozlu-sozler",
-                    "date": "2025-07-04",
+                    "date": "2025-07-17",
                     "relative_path": "blog\\ozlu-sozler",
                     "full_url": "https://mefamex.com/blog/ozlu-sozler",
                     "children": [],
@@ -40,9 +40,9 @@
                         {
                             "name": "index.html",
                             "url": "blog/ozlu-sozler/index.html",
-                            "date": "2025-07-04",
+                            "date": "2025-07-17",
                             "relative_path": "blog\\ozlu-sozler\\index.html",
-                            "full_url": "https://mefamex.comblog/ozlu-sozler/index.html"
+                            "full_url": "https://mefamex.com/blog/ozlu-sozler/index.html"
                         }
                     ]
                 },
@@ -59,7 +59,7 @@
                             "url": "blog/yapay-zeka-insanin-yerini-alabilir-mi/index.html",
                             "date": "2025-07-04",
                             "relative_path": "blog\\yapay-zeka-insanin-yerini-alabilir-mi\\index.html",
-                            "full_url": "https://mefamex.comblog/yapay-zeka-insanin-yerini-alabilir-mi/index.html"
+                            "full_url": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/index.html"
                         }
                     ]
                 },
@@ -76,7 +76,7 @@
                             "url": "blog/yazilim-gelistirme-kaynaklari/index.html",
                             "date": "2025-07-04",
                             "relative_path": "blog\\yazilim-gelistirme-kaynaklari\\index.html",
-                            "full_url": "https://mefamex.comblog/yazilim-gelistirme-kaynaklari/index.html"
+                            "full_url": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/index.html"
                         }
                     ]
                 },
@@ -93,7 +93,7 @@
                             "url": "blog/zaman-yonetimi/index.html",
                             "date": "2025-07-04",
                             "relative_path": "blog\\zaman-yonetimi\\index.html",
-                            "full_url": "https://mefamex.comblog/zaman-yonetimi/index.html"
+                            "full_url": "https://mefamex.com/blog/zaman-yonetimi/index.html"
                         }
                     ]
                 }
@@ -104,7 +104,7 @@
                     "url": "blog/index.html",
                     "date": "2025-07-04",
                     "relative_path": "blog\\index.html",
-                    "full_url": "https://mefamex.comblog/index.html"
+                    "full_url": "https://mefamex.com/blog/index.html"
                 }
             ]
         },
@@ -121,7 +121,7 @@
                     "url": "contact/index.html",
                     "date": "2025-07-17",
                     "relative_path": "contact\\index.html",
-                    "full_url": "https://mefamex.comcontact/index.html"
+                    "full_url": "https://mefamex.com/contact/index.html"
                 }
             ]
         },
@@ -138,7 +138,7 @@
                     "url": "cv/index.html",
                     "date": "2025-07-04",
                     "relative_path": "cv\\index.html",
-                    "full_url": "https://mefamex.comcv/index.html"
+                    "full_url": "https://mefamex.com/cv/index.html"
                 }
             ]
         },
@@ -155,7 +155,7 @@
                     "url": "gallery/index.html",
                     "date": "2025-07-04",
                     "relative_path": "gallery\\index.html",
-                    "full_url": "https://mefamex.comgallery/index.html"
+                    "full_url": "https://mefamex.com/gallery/index.html"
                 }
             ]
         },
@@ -172,14 +172,14 @@
                     "url": "mystream/index.html",
                     "date": "2025-07-04",
                     "relative_path": "mystream\\index.html",
-                    "full_url": "https://mefamex.commystream/index.html"
+                    "full_url": "https://mefamex.com/mystream/index.html"
                 },
                 {
                     "name": "soloshare.html",
                     "url": "mystream/soloshare.html",
                     "date": "2025-03-13",
                     "relative_path": "mystream\\soloshare.html",
-                    "full_url": "https://mefamex.commystream/soloshare.html"
+                    "full_url": "https://mefamex.com/mystream/soloshare.html"
                 }
             ]
         },
@@ -203,7 +203,7 @@
                             "url": "projects/dizin-listeleme/index.html",
                             "date": "2025-07-04",
                             "relative_path": "projects\\dizin-listeleme\\index.html",
-                            "full_url": "https://mefamex.comprojects/dizin-listeleme/index.html"
+                            "full_url": "https://mefamex.com/projects/dizin-listeleme/index.html"
                         }
                     ]
                 },
@@ -220,7 +220,7 @@
                             "url": "projects/html-css-book/index.html",
                             "date": "2025-07-04",
                             "relative_path": "projects\\html-css-book\\index.html",
-                            "full_url": "https://mefamex.comprojects/html-css-book/index.html"
+                            "full_url": "https://mefamex.com/projects/html-css-book/index.html"
                         }
                     ]
                 },
@@ -237,7 +237,7 @@
                             "url": "projects/image-meta-dataset/index.html",
                             "date": "2025-07-04",
                             "relative_path": "projects\\image-meta-dataset\\index.html",
-                            "full_url": "https://mefamex.comprojects/image-meta-dataset/index.html"
+                            "full_url": "https://mefamex.com/projects/image-meta-dataset/index.html"
                         }
                     ]
                 },
@@ -254,7 +254,7 @@
                             "url": "projects/kali-change-boot-background/index.html",
                             "date": "2025-07-04",
                             "relative_path": "projects\\kali-change-boot-background\\index.html",
-                            "full_url": "https://mefamex.comprojects/kali-change-boot-background/index.html"
+                            "full_url": "https://mefamex.com/projects/kali-change-boot-background/index.html"
                         }
                     ]
                 },
@@ -271,7 +271,7 @@
                             "url": "projects/kali-linux/index.html",
                             "date": "2025-07-04",
                             "relative_path": "projects\\kali-linux\\index.html",
-                            "full_url": "https://mefamex.comprojects/kali-linux/index.html"
+                            "full_url": "https://mefamex.com/projects/kali-linux/index.html"
                         }
                     ]
                 },
@@ -288,7 +288,7 @@
                             "url": "projects/lisans-puan-hesaplama/index.html",
                             "date": "2025-07-04",
                             "relative_path": "projects\\lisans-puan-hesaplama\\index.html",
-                            "full_url": "https://mefamex.comprojects/lisans-puan-hesaplama/index.html"
+                            "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama/index.html"
                         }
                     ]
                 }
@@ -299,7 +299,7 @@
                     "url": "projects/index.html",
                     "date": "2025-07-04",
                     "relative_path": "projects\\index.html",
-                    "full_url": "https://mefamex.comprojects/index.html"
+                    "full_url": "https://mefamex.com/projects/index.html"
                 }
             ]
         },
@@ -316,7 +316,7 @@
                     "url": "software/index.html",
                     "date": "2025-07-04",
                     "relative_path": "software\\index.html",
-                    "full_url": "https://mefamex.comsoftware/index.html"
+                    "full_url": "https://mefamex.com/software/index.html"
                 }
             ]
         },
@@ -333,7 +333,7 @@
                     "url": "the-mefamex-project/index.html",
                     "date": "2025-07-04",
                     "relative_path": "the-mefamex-project\\index.html",
-                    "full_url": "https://mefamex.comthe-mefamex-project/index.html"
+                    "full_url": "https://mefamex.com/the-mefamex-project/index.html"
                 }
             ]
         }
@@ -344,21 +344,21 @@
             "url": "index.html",
             "date": "2025-07-16",
             "relative_path": "index.html",
-            "full_url": "https://mefamex.comindex.html"
+            "full_url": "https://mefamex.com/index.html"
         },
         {
             "name": "filetree.html",
             "url": "filetree.html",
-            "date": "2025-07-14",
+            "date": "2025-07-18",
             "relative_path": "filetree.html",
-            "full_url": "https://mefamex.comfiletree.html"
+            "full_url": "https://mefamex.com/filetree.html"
         },
         {
             "name": "linktree.html",
             "url": "linktree.html",
-            "date": "2025-07-14",
+            "date": "2025-07-18",
             "relative_path": "linktree.html",
-            "full_url": "https://mefamex.comlinktree.html"
+            "full_url": "https://mefamex.com/linktree.html"
         }
     ]
 }

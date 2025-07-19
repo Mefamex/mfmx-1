@@ -1,93 +1,126 @@
 #!/usr/bin/env python3 
 # -*- coding: utf-8 -*- 
 
-__project_name__ = "FileTreeCreator For Website"
-__project_version__ = "1.0.1"
-__author__ = "mefamex"
+"""
+===========================================================
+                File Tree Creator For Website
+===========================================================
+
+Description:
+    Bu proje, bir web sitesi veya dosya sistemi için belirtilen dizinden başlayarak tüm alt dizin
+    ve dosyaları tarar, dosya ve klasör yapısını JSON formatında dışa aktarır. Dosya boyutu, 
+    tarih, göreli yol ve tam URL gibi bilgileri toplar. Hariç tutulacak klasör ve dosyalar 
+    filtrelenebilir.
+
+Author:
+    @mefamex (info@mefamex.com) (https://mefamex.com)
+
+Features: 
+    - Belirtilen ana dizinden başlayarak tüm alt dizin ve dosyaları bulur.
+    - Her dosya ve klasör için isim, yol, url, boyut, tarih ve göreli yol bilgilerini toplar.
+    - Dizin ve dosya yapısını ağaç şeklinde JSON formatında dışa aktarır.
+    - Hariç tutulacak klasör ve dosyaları filtreleme imkanı sunar.
+    - Her dosya ve klasör için tam URL oluşturur.
+    - Çıktı dosyasını belirtilen dizine kaydeder.
+
+Modules:
+    - os      : Dosya ve dizin işlemleri için kullanılır.
+    - json    : JSON dosyası oluşturmak ve okumak için kullanılır.
+    - datetime: Dosya tarih bilgilerini almak için kullanılır.
+    - pathlib : Dosya ve dizin yollarını yönetmek için kullanılır.
+    - typing  : Tip ipuçları için kullanılır.
+
+Classes:
+    - Walker_file: Tek bir dosyanın bilgilerini tutar ve JSON'a dönüştürür.
+    - Walker_path: Bir dizinin bilgilerini, alt dizinlerini ve içindeki dosyaları tutar.
+    - FileTreeCreator: Dosya ağacını oluşturan ana sınıf; dizinleri tarar, verileri toplar ve JSON çıktısı üretir.
+
+Functions:
+    - Walker_file.to_dict(): Walker_file nesnesini sözlüğe çevirir.
+    - Walker_path.to_dict(): Walker_path nesnesini sözlüğe çevirir.
+    - FileTreeCreator.walker(root): Dizinleri ve dosyaları özyinelemeli olarak tarar.
+    - FileTreeCreator.print_file_tree(): Oluşturulan dosya ağacını ekrana yazdırır.
+    - FileTreeCreator.save_file_tree(): Dosya ağacını JSON dosyasına kaydeder.
+
+Usage:
+    1. Ana dizini ve çıktı dizinini belirleyin.
+    2. Gerekirse hariç tutulacak dizin ve dosya adlarını girin.
+    3. Scripti çalıştırın: `python FileTreeCreator copy.py`
+    4. Sonuç olarak belirtilen dizinde `file_tree.json` dosyası oluşacaktır.
+
+Requirements:
+    - Python 3.8 veya üstü
+    - Dependencies:
+        - os, json, datetime, pathlib, typing (standart kütüphane)
+
+Installation:
+    1. Dosyayı bir .py dosyası olarak kaydedin.
+    2. Gerekli bağımlılıklar standart kütüphane olduğu için ek yükleme gerekmez.
+    3. `if __name__ == "__main__":` bloğunu ihtiyaca göre düzenleyin.
+    4. Terminalde çalıştırın: `python FileTreeCreator copy.py`
+
+Documentation: None
+
+License:
+    MIT Lisansı (https://opensource.org/licenses/MIT)
+
+Changelog:
+    - 1.0.0 (2025-05-04): Ilk surum
+    - 1.0.1 (2025-05-03): dosya yolu -relative_path- ile oluşan hata giderildi. 
+    - 1.0.2 (2025-06-09): dosya yolu -relative_path- ile oluşan hata giderildi. 
+    - 1.0.3 (2025-07-14): değişken türleri düzenlendi.
+    - 1.0.4 (2025-07-18): Module_docs düzenlendi. `Walker_file` ve `Walker_path` sınıflarındaki `full_url ` değişkeni düzenlendi.
+
+Contributors: None
+
+Contact:
+    - E-mail: info@mefamex.com
+    - GitHub: https://github.com/Mefamex
+    - Web   : https://mefamex.com/contact/
+
+Additional Information: None
+
+Notes:
+    - Bu modul, `https://mefamex.com` adresi için özel olarak tasarlanmıştır.
+
+Disclaimer and Legal Notice:
+    Bu yazılım, herhangi bir garanti olmaksızın "olduğu gibi" sağlanmaktadır. Yazar, bu yazılımın kullanımı sonucunda oluşabilecek herhangi bir zarardan sorumlu değildir. Kullanıcılar, yazılımı kendi sorumlulukları altında kullanmalıdır.
+    Bu yazılım, açık kaynak lisansı altında dağıtılmaktadır ve kullanıcılar, lisans koşullarına uymakla yükümlüdür. Yazılımın herhangi bir şekilde değiştirilmesi, dağıtılması veya kullanılması, lisans koşullarına uygun olarak yapılmalıdır.
+===========================================================
+"""
+
+__version__ = "1.0.4"
+__author__ = "@mefamex"
 __email__ = "info@mefamex.com"
-__url__ = "https://mefamex.com/projects/filetreecreator"
 __license__ = "MIT"
-__copyright__ = "Telif Hakki (c) 2025 mefamex"
-__description__ = "FileTreeCreator, web siteniz icin bir dosya agaci olusturmanizi saglayan bir Python uygulamasidir."
-__url_github__ = "https://github.com/mefamex/filetreecreator"
-__status__ = "Development" 
-__date__ = "2025-05-04" 
-__date_modify__ = "2025-05-04" 
-__python_version__ = ">=3.8" 
+__status__ = "PRODUCTION"
+
+__project_name__ = "FileTreeCreator"
+__url__ = "https://mefamex.com/py/Filetree/FileTreeCreator.py"
+__url_github__ = "https://github.com/Mefamex/python-code-snippets"
+__copyright__ = "Copyright (c) 2025 Mefamex"
+__description__ = "Bir web sitesi veya dosya sistemi için belirtilen dizinden başlayarak tüm alt dizin ve dosyaları tarayarak dosya/klasör yapısını JSON formatında dışa aktaran Python uygulaması."
+__date__ = "2025-05-04"
+__date_modify__ = "2025-07-18"
+__python_version__ = ">=3.8"
 __dependencies__ = {
-    "python": ">=3.8"
+    "python": ">=3.8",
+    "os": None,
+    "json": None,
+    "datetime": None,
+    "pathlib": None,
+    "typing": None,
 }
 
-___doc___ = """
-Proje Adi: FileTreeCreator For Website
 
-Aciklama:
-FileTreeCreator, web siteniz icin bir dosya agaci olusturmanizi saglayan bir Python uygulamasidir.
-
-Ozellikler: 
-    - Verilen dizindeki her klasor ve dosya için bir dosya agaci olusturur.
-    - Çıktı olarak bir json dosyasi olusturur.
-
-Moduller:
-- os: Dosya ve dizin islemleri icin kullanilir.
-- sys: Sistem ile ilgili islemler icin kullanilir.
-- json: JSON dosyasi olusturmak ve okumak icin kullanilir.
-- datetime: Tarih ve saat islemleri icin kullanilir.
-- ...
-
-Siniflar:
-- FileTreeCreator: dosya agaci olusturmak icin gerekli olan sinif.
-- ...
-
-Fonksiyonlar:
-- fonksiyon2(parametre1): [Fonksiyon 2 aciklamasi]
-- ...
-
-Kullanim:
-[Projeyi nasil kullanacağinizi aciklayin. Ornekler ekleyebilirsiniz.]
-
-Gereksinimler:
-- ...
-- Bağimliliklar:
-    - paket1 (>= surum)
-    - paket2
-    - ...
-
-Kurulum:
-    - Proje klonlama: `git clone [repo adresi]` 
-    - Gerekli bağimliliklari kurma: `pip install -r requirements.txt`
-
-Belgeler: 
-    - Detayli belgeler icin: `README.md` 
-
-Lisans:
-MIT Lisansi (https://opensource.org/licenses/MIT)
-
-Yazar:
-mefamex (info@mefamex.com) (https://mefamex.com)
-
-Tarihce:
-- 1.0.0 (2025-05-04): Ilk surum
-- 1.0.1 (2025-05-03): dosya yolu -relative_path- ile oluşan hata giderildi. 
-- 1.0.2 (2025-06-09): dosya yolu -relative_path- ile oluşan hata giderildi. 
-- 1.0.3 (2025-07-14): değişken türleri düzenlendi.
-
-Iletisim:
-    - E-mail: info@mefamex.com
-    - Web   : https://mefamex.com/contact/
-    - GitHub: https://github.com/Mefamex 
+print((__doc__ or "") + ("="*60 + "\n")*2)
 
 
-Sorumluluk Reddi: 
-    Bu yazilim "olduğu gibi" sunulmaktadir. Yazar, bu yazilimin kullanimi sonucunda ortaya cikan herhangi bir zarardan sorumlu değildir.
-"""
-print(___doc___+("-"*20+"\n")*2)
-
-import os, sys, json, datetime, time
+import os, json, datetime
 from pathlib import Path
 from typing import Optional
 
-time.sleep(1) 
+
 
 BASE_URL = "https://mefamex.com"
 
@@ -99,7 +132,7 @@ class Walker_file:
         self.size : int = os.path.getsize(path) if os.path.isfile(path) else 0
         self.date : str = datetime.datetime.fromtimestamp(os.path.getmtime(path)).strftime("%Y-%m-%d") if os.path.isfile(path) else "2000-01-01"
         self.relative_path : str = relative_path 
-        self.full_url : str = BASE_URL + "/" + self.url 
+        self.full_url = lambda : BASE_URL + "/" + self.url if self.url else ""
         
     def to_dict(self):
         result = {
@@ -107,7 +140,7 @@ class Walker_file:
             "url" : self.url,
             "size": self.size,
             "date": self.date,
-            "full_url"      : self.full_url,
+            "full_url"      : self.full_url(),
             "relative_path" : self.relative_path,
         }
         if hasattr(self, 'path') and self.path: result["path"] = self.path
@@ -121,7 +154,7 @@ class Walker_path:
             self.size : int = 0
             self.date : str = date # format = YYYY-MM-DD 
             self.relative_path  : str = relative_path 
-            self.full_url       : str = BASE_URL + "/" + self.url 
+            self.full_url       = lambda : BASE_URL + "/" + self.url if self.url else None
             self.folder         : list[Walker_path] = [] 
             self.files          : list[Walker_file] = []
             
@@ -132,7 +165,7 @@ class Walker_path:
                 "size": self.size,
                 "date": self.date,
                 "relative_path" : self.relative_path,
-                "full_url"      : self.full_url,
+                "full_url"      : self.full_url(),
                 "folder"        : [child.to_dict() for child in self.folder],
                 "files"         : [file.to_dict() for file in self.files],
             }

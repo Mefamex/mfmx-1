@@ -1,93 +1,125 @@
 #!/usr/bin/env python3 
 # -*- coding: utf-8 -*- 
 
-__project_name__ = "LinkTreeCreator For Website"
-__project_version__ = "1.0.1"
-__author__ = "mefamex"
+
+"""
+===========================================================
+                Link Tree Creator For Website
+===========================================================
+
+Description:
+    Bu proje, bir web sitesi için dizinlerdeki tüm .html dosyalarını tarayarak, kolay gezinme ve 
+    erişim için bir link ağacı (link tree) oluşturur. Dizin gezintisi, dosya işleme ve JSON 
+    çıktısı üretme gibi özellikler içerir.
+
+Author:
+    @mefamex (info@mefamex.com) (https://mefamex.com)
+
+Features: 
+    - Belirtilen ana dizinden başlayarak tüm alt dizinlerdeki .html dosyalarını bulur.
+    - Her klasör ve dosya için isim, yol, url, tarih ve göreli yol bilgilerini toplar.
+    - Dizin ve dosya yapısını ağaç şeklinde JSON formatında dışa aktarır.
+    - İstenmeyen dizin ve dosyaları hariç tutmak için filtreleme imkanı sunar.
+    - Her dosya ve klasör için tam URL oluşturur.
+    - Çıktı dosyasını belirtilen dizine kaydeder.
+
+Modules:
+    - os      : Dosya ve dizin işlemleri için kullanılır.
+    - sys     : Sistem ile ilgili işlemler için kullanılır.
+    - json    : JSON dosyası oluşturmak ve okumak için kullanılır.
+    - datetime: Dosya tarih bilgilerini almak için kullanılır.
+    - pathlib : Dosya ve dizin yollarını yönetmek için kullanılır.
+    - typing  : Tip ipuçları için kullanılır.
+
+Classes:
+    - Walker_link    : Tek bir dosyanın (özellikle .html) bilgilerini tutar ve JSON'a dönüştürür.
+    - Walker_path    : Bir dizinin bilgilerini, alt dizinlerini ve içindeki dosyaları tutar.
+    - LinkTreeCreator: Link ağacını oluşturan ana sınıf; dizinleri tarar, verileri toplar ve JSON çıktısı üretir.
+
+Functions:
+    - Walker_link.to_dict()            : Walker_link nesnesini sözlüğe çevirir.
+    - Walker_path.to_dict()            : Walker_path nesnesini sözlüğe çevirir.
+    - LinkTreeCreator.walker(root)     : Dizinleri ve dosyaları özyinelemeli olarak tarar.
+    - LinkTreeCreator.print_link_tree(): Oluşturulan link ağacını ekrana yazdırır.
+    - LinkTreeCreator.save_link_tree() : Link ağacını JSON dosyasına kaydeder.
+
+Usage:
+    1. Ana dizini ve çıktı dizinini belirleyin.
+    2. Gerekirse hariç tutulacak dizin ve dosya adlarını girin.
+    3. Scripti çalıştırın: `python LinkTreeCreator-v1.0.4.py`
+    4. Sonuç olarak belirtilen dizinde `link_tree.json` dosyası oluşacaktır.
+
+Requirements:
+    - Python 3.8 veya üstü
+    - Dependencies:
+        - Build-in : os, json, 
+        - datetime, pathlib, typing
+
+Installation:
+    1. Dosyayı bir .py dosyası olarak kaydedin.
+    2. Gerekli bağımlılıklar standart kütüphane olduğu için ek yükleme gerekmez.
+    3. `if __name__ == "__main__":` bloğunu ihtiyaca göre düzenleyin.
+    4. Terminalde çalıştırın: `python LinkTreeCreator-v1.0.4.py`
+
+Documentation: None
+
+License: MIT Lisansı (https://opensource.org/licenses/MIT)
+
+Changelog:
+    - 1.0.0 (2025-05-03): Ilk sürüm
+    - 1.0.1 (2025-05-03): Dosya yolu -relative_path- ile oluşan hata giderildi. 
+    - 1.0.3 (2025-07-14): Değişken türleri düzenlendi, Walker_path url ataması hatası düzeltildi.
+    - 1.0.4 (2025-07-18): Module_docs düzenlendi. `Walker_link` ve `Walker_path` sınıflarındaki `full_url ` değişkeni düzenlendi.
+
+Contributors: None
+
+Contact:
+    - E-mail: info@mefamex.com
+    - GitHub: https://github.com/Mefamex 
+    - Web   : https://mefamex.com/contact/
+
+Additional Information: None
+
+Notes:
+    - Bu modul, `https://mefamex.com` adresi için özel olarak tasarlanmıştır.
+
+Disclaimer and Legal Notice:
+    Bu yazılım, herhangi bir garanti olmaksızın "olduğu gibi" sağlanmaktadır. Yazar, bu yazılımın kullanımı sonucunda oluşabilecek herhangi bir zarardan sorumlu değildir. Kullanıcılar, yazılımı kendi sorumlulukları altında kullanmalıdır.
+    Bu yazılım, açık kaynak lisansı altında dağıtılmaktadır ve kullanıcılar, lisans koşullarına uymakla yükümlüdür. Yazılımın herhangi bir şekilde değiştirilmesi, dağıtılması veya kullanılması, lisans koşullarına uygun olarak yapılmalıdır.
+===========================================================
+"""
+
+__version__ = "1.0.4"
+__author__ = "@mefamex"
 __email__ = "info@mefamex.com"
-__url__ = "https://mefamex.com/projects/linktreecreator"
 __license__ = "MIT"
-__copyright__ = "Telif Hakki (c) 2025 mefamex"
-__description__ = "LinkTreeCreator, web siteniz icin bir link agaci olusturmanizi saglayan bir Python uygulamasidir."
-__url_github__ = "https://github.com/mefamex/linktreecreator"
-__status__ = "Development" 
-__date__ = "2025-05-03" 
-__date_modify__ = "2025-05-03" 
-__python_version__ = ">=3.8" 
+__status__ = "PRODUCTION"  
+
+__project_name__ = "LinkTreeCreator"
+__url__ = "https://mefamex.com/py/Linktree/LinkTreeCreator.py"
+__url_github__ = "https://github.com/Mefamex/python-code-snippets"
+__copyright__ = "Copyright (c) 2025 Mefamex"
+__description__ = "Bir web sitesi için dizinlerdeki tüm .html dosyalarını tarayarak link ağacı (link tree) oluşturan Python uygulaması."
+__date__ = "2025-05-03"
+__date_modify__ = "2025-07-18"
+__python_version__ = ">=3.8"
 __dependencies__ = {
-    "python": ">=3.8"
+    "python": ">=3.8",
+    "os": None,
+    "json": None,
+    "datetime": None,
+    "pathlib": None,
+    "typing": None,
 }
 
-___doc___ = """
-Proje Adi: LinkTreeCreator For Website
-
-Aciklama:
-LinkTreeCreator, web siteniz icin bir link agaci olusturmanizi saglayan bir Python uygulamasidir.
-
-Ozellikler: 
-    - Verilen dizindeki her klasor içindeki .html dosyalarini okuyarak bir link agaci olusturur.
-    - Her bir .html dosyasini bir link olarak ekler.
-    - Çıktı olarak bir json dosyasi olusturur.
-
-Moduller:
-- os: Dosya ve dizin islemleri icin kullanilir.
-- sys: Sistem ile ilgili islemler icin kullanilir.
-- json: JSON dosyasi olusturmak ve okumak icin kullanilir.
-- datetime: Tarih ve saat islemleri icin kullanilir.
-- ...
-
-Siniflar:
-- LinkTreeCreator: Link agaci olusturmak icin gerekli olan sinif.
-- ...
-
-Fonksiyonlar:
-- fonksiyon2(parametre1): [Fonksiyon 2 aciklamasi]
-- ...
-
-Kullanim:
-[Projeyi nasil kullanacağinizi aciklayin. Ornekler ekleyebilirsiniz.]
-
-Gereksinimler:
-- ...
-- Bağimliliklar:
-    - paket1 (>= surum)
-    - paket2
-    - ...
-
-Kurulum:
-    - Proje klonlama: `git clone [repo adresi]` 
-    - Gerekli bağimliliklari kurma: `pip install -r requirements.txt`
-
-Belgeler: 
-    - Detayli belgeler icin: `README.md` 
-
-Lisans:
-MIT Lisansi (https://opensource.org/licenses/MIT)
-
-Yazar:
-mefamex (info@mefamex.com) (https://mefamex.com)
-
-Tarihce:
-- 1.0.0 (2025-05-03): Ilk surum
-- 1.0.1 (2025-05-03): dosya yolu -relative_path- ile oluşan hata giderildi. 
-- 1.0.3 (2025-07-14): değişken türleri düzenlendi, Walker_path url ataması hatası düzeltildi.
-
-Iletisim:
-    - E-mail: info@mefamex.com
-    - Web   : https://mefamex.com/contact/
-    - GitHub: https://github.com/Mefamex 
+print((__doc__ or "") + ("="*60 + "\n")*2)
 
 
-Sorumluluk Reddi: 
-    Bu yazilim "olduğu gibi" sunulmaktadir. Yazar, bu yazilimin kullanimi sonucunda ortaya cikan herhangi bir zarardan sorumlu değildir.
-"""
-print(___doc___+("-"*20+"\n")*2)
-
-import os, sys, json, datetime, time
+import os, json, datetime
 from pathlib import Path
 from typing import Optional
 
-time.sleep(1) 
+
 
 BASE_URL = "https://mefamex.com" # base url for the links
 
@@ -98,7 +130,30 @@ class Walker_link:
         self.url  : str = url
         self.date : str = date # format = YYYY-MM-DD 
         self.relative_path : str = relative_path 
-        self.full_url : str = BASE_URL + self.url
+        self.full_url = lambda : BASE_URL + "/" + self.url if self.url else None
+        
+    
+    def to_dict(self):
+        result = {
+            "name": self.name,
+            "url": self.url,
+            "date": self.date,
+            "relative_path": self.relative_path,
+            "full_url": self.full_url(),
+        }
+        if hasattr(self, 'path') and self.path: result["path"] = self.path
+        return result
+
+class Walker_path:
+    def __init__(self, name: str, path: str, url: str, date: str, relative_path : str):
+        self.name : str = name
+        self.path : str = path
+        self.url  : str = url
+        self.date : str = date # format = YYYY-MM-DD 
+        self.relative_path : str = relative_path 
+        self.full_url = lambda : BASE_URL + "/" + self.url if self.url else None
+        self.children : list[Walker_path] = [] 
+        self.files    : list[Walker_link] = []
         
     def to_dict(self):
         result = {
@@ -106,34 +161,12 @@ class Walker_link:
             "url": self.url,
             "date": self.date,
             "relative_path": self.relative_path,
-            "full_url": self.full_url,
+            "full_url": self.full_url(),
+            "children": [child.to_dict() for child in self.children],
+            "files": [file.to_dict() for file in self.files],
         }
         if hasattr(self, 'path') and self.path: result["path"] = self.path
         return result
-
-class Walker_path:
-        def __init__(self, name: str, path: str, url: str, date: str, relative_path : str):
-            self.name : str = name
-            self.path : str = path
-            self.url  : str = url
-            self.date : str = date # format = YYYY-MM-DD 
-            self.relative_path : str = relative_path 
-            self.full_url : str = BASE_URL + "/" + self.url 
-            self.children : list[Walker_path] = [] 
-            self.files    : list[Walker_link] = []
-            
-        def to_dict(self):
-            result = {
-                "name": self.name,
-                "url": self.url,
-                "date": self.date,
-                "relative_path": self.relative_path,
-                "full_url": self.full_url,
-                "children": [child.to_dict() for child in self.children],
-                "files": [file.to_dict() for file in self.files],
-            }
-            if hasattr(self, 'path') and self.path: result["path"] = self.path
-            return result
 
 
 

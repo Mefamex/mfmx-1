@@ -114,6 +114,8 @@
 - otomasyon : fallower find
 - node.js : (otomasyon) Puppeteer
 - python web8 
+- python module write
+- python @dataclass
 - image to webp 
 - profile_follower 
 - okuldaki son haberler 
@@ -215,6 +217,7 @@
 --- eğer görünüş ruhtan güzelse ruh neden göğe yükseldi de beden toprağa gömüldü
 ----  kendi yolunu bulamazsan başkasının yolunda gidersin. 
 --- bir kralı sirke koyarsan sirk saray gibi görünmez, kral palyaço gibi görünür.
+----- Mutsuzluğumuzun en büyük sebebi, elimizde olmayan durumlar için kaygılanmak
 
 https://www.instagram.com/p/DLNgsYaMaui/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
 
