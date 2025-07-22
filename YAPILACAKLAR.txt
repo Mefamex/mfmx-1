@@ -116,6 +116,7 @@
 - python web8 
 - python module write
 - python @dataclass
+- python module: pipdeptree 
 - image to webp 
 - profile_follower 
 - okuldaki son haberler 
