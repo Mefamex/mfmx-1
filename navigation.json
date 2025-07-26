@@ -49,7 +49,7 @@
                     "submenu": [
                         {
                             "title": "Yapay Zeka İnsanın Yerini Alabilir Mi?",
-                            "href": "https://mefamex.com/projects/yapay-zeka-insanin-yerini-alabilir-mi/",
+                            "href": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/",
                             "isVisible": true,
                             "description": "Yapay Zeka İnsanın Yerini Alabilir Mi? ",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -57,7 +57,7 @@
                         },
                         {
                             "title": "Yazılım Geliştirme Kaynakları",
-                            "href": "https://mefamex.com/projects/yazilim-gelistirme-kaynaklari/",
+                            "href": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/",
                             "isVisible": true,
                             "description": " Yazılım Geliştirme Kaynakları ve Araçları",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -65,7 +65,7 @@
                         },
                         {
                             "title": "Zaman Yönetimi",
-                            "href": "https://mefamex.com/projects/zaman-yonetimi/",
+                            "href": "https://mefamex.com/blog/zaman-yonetimi/",
                             "isVisible": true,
                             "description": " Zaman Yönetimi ve Planlama",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -73,7 +73,7 @@
                         },
                         {
                             "title": "Zaman Yönetimi",
-                            "href": "https://mefamex.com/projects/ozlu-sozler/",
+                            "href": "https://mefamex.com/blog/ozlu-sozler/",
                             "isVisible": true,
                             "description": " Özlü Sözler ",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -194,6 +194,6 @@
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
         "baseUrl": "https://mefamex.com",
         "languageCode": "tr",
-        "lastUpdated": "2025-06-01"
+        "lastUpdated": "2025-07-27"
     }
 }
