@@ -69,6 +69,7 @@
 - tailOs 128gb perMonth
 - Go için takipte ol -> https://www.youtube.com/@anthonygg_
 - Atalay Karahan - JunDev
+- cloudflared tunnel --url http://127.0.0.1:5500/ -> https://www.youtube.com/shorts/RLYqvlOw1mE
 
 
 
@@ -118,6 +119,7 @@
 - python module write
 - python @dataclass
 - python module: pipdeptree 
+- collaborative coding platform
 - image to webp 
 - profile_follower 
 - okuldaki son haberler 
