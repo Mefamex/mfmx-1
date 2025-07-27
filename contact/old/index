@@ -55,9 +55,9 @@
     <meta property="og:url" content="https://mefamex.com/contact/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mefamex" />
-    <meta property="og:date" content="2025-07-27T05:00:00Z" />
+    <meta property="og:date" content="2025-07-17T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-07-27T05:00:00Z" />
+    <meta property="article:modified_time" content="2025-07-17T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -69,7 +69,7 @@
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
     <meta name="twitter:url" content="https://mefamex.com/contact/" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-07-27T05:00:00Z" />
+    <meta name="twitter:date" content="2025-07-17T02:00:00Z" />
     <!---->
     <!-- Schema.org Social Media Links -->
     <script type="application/ld+json">
@@ -80,159 +80,71 @@
 </head>
 
 <body>
-    <!---->
-    <!---->
-    <main id="main">
-        <!---->
-        <h1>İLETİŞİM</h1>
-        <!---->
+    <main id="main-content">
+        <h1>CONTACT - MEFAMEX</h1>
         <p id="page-description">GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajını iletebilirsiniz.</p>
-        <!---->
-        <div id="mainCenter">
-            <!---->
-            <div id="divSocial"> <!---->
-                <div>
-                    <h2>Bağlantı Bilgileri</h2>
-                    <ul>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/mail_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/mail_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/mail_icon.png" alt="email icon" title="e-mail" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>E-mail</h3>
-                                <a href="mailto:info@mefamex.com"> info@mefamex.com </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/mail_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/mail_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/mail_icon.png" alt="email icon" title="e-mail" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>Website</h3>
-                                <a href="https://mefamex.com"> https://mefamex.com </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/mail_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/mail_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/mail_icon.png" alt="email icon" title="e-mail" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>İletişim Formu</h3>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link"> Doldur </a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <!---->
-                <!---->
-                <div>
-                    <h2>Sosyal Medya</h2>
-                    <ul>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/github_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/github_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/github_icon.png" alt="GitHub icon" title="GitHub" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>GitHub</h3>
-                                <a href="https://github.com/Mefamex/" title="github.com/Mefamex" aria-label="Mefamex Github Account " target="_blank" rel="noopener"> github.com/<b>Mefamex</b>/ </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/linkedin_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/linkedin_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/linkedin_icon.png" alt="LinkedIn icon" title="LinkedIn" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>LinkedIn</h3>
-                                <a href="https://www.linkedin.com/in/mefamex/" title="linkedin.com/in/mefamex/" aria-label="Mefamex LinkedIn Account " target="_blank" rel="noopener">
-                                    linkedin.com/in/<b>mefamex</b>/ </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/instagram_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/instagram_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/instagram_icon.png" alt="Instagram icon" title="Instagram" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>Instagram</h3>
-                                <a href="https://www.instagram.com/mefamex/" title="instagram.com/mefamex/" aria-label="Mefamex Instagram Account " target="_blank" rel="noopener">
-                                    instagram.com/<b>mefamex</b>/ </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/x_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/x_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/x_icon.png" alt="X icon" title="X (Twitter)" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>X (Twitter)</h3>
-                                <a href="https://x.com/Mefamex/" title="x.com/Mefamex/" aria-label="Mefamex X Account " target="_blank" rel="noopener"> x.com/<b>Mefamex</b>/ </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/youtube_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/youtube_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/youtube_icon.png" alt="YouTube icon" title="YouTube" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>YouTube</h3>
-                                <a href="https://www.youtube.com/@mefamex/" title="youtube.com/@mefamex/" aria-label="Mefamex YouTube Account " target="_blank" rel="noopener">
-                                    youtube.com/@<b>mefamex</b>/ </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/facebook_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/facebook_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/facebook_icon.png" alt="Facebook icon" title="Facebook" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>Facebook</h3>
-                                <a href="https://www.facebook.com/mefamex/" title="facebook.com/mefamex/" aria-label="Mefamex Facebook Account " target="_blank" rel="noopener">
-                                    facebook.com/<b>mefamex</b>/ </a>
-                            </span>
-                        </li>
-                        <li>
-                            <picture>
-                                <source type="image/png" srcset="../src/assets/icons/black/reddit_icon.png">
-                                <source type="image/png" srcset="https://mefamex.com/src/assets/icons/black/reddit_icon.png">
-                                <img src="https://mefamex.com/src/assets/icons/black/reddit_icon.png" alt="Reddit icon" title="Reddit" decoding="async" loading="lazy">
-                            </picture>
-                            <span>
-                                <h3>Reddit</h3>
-                                <a href="https://www.reddit.com/user/mefamex" title="reddit.com/user/mefamex" aria-label="Mefamex Reddit Account " target="_blank" rel="noopener">
-                                    reddit.com/user/<b>mefamex</b>/ </a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <!---->
-            </div>
-            <!---->
-            <div id="divContact">
-                <h2>İletişim Formu</h2>
-                <p>İletilerin son yanıtlandığı tarih: 27.07.2025</p>
-                <iframe id="ContactForm" title="Contact Form"  frameborder="0" marginheight="0" marginwidth="0"
-                    data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
-            </div>
-            <!---->
-        </div>
+        <fieldset>
+            <legend>E-MAIL</legend>
+            <a href="mailto:info@mefamex.com" type="mailto" title="info@mefamex.com" aria-label="Mefamex E-Mail Adresi" target="_blank" rel="noopener">info@mefamex.com</a>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>SOCIAL MEDIA</legend>
+            <table>
+                <tr>
+                    <td>GitHub</td>
+                    <td>:</td>
+                    <td><a href="https://github.com/Mefamex/" title="github.com/Mefamex" aria-label="Mefamex Github Account " target="_blank" rel="noopener">github.com/<b>Mefamex</b>/</a></td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td>:</td>
+                    <td><a href="https://www.linkedin.com/in/mefamex/" title="linkedin.com/in/mefamex/" aria-label="Mefamex LinkedIn Account " target="_blank"
+                            rel="noopener">linkedin.com/in/<b>mefamex</b>/</a></td>
+                </tr>
+                <tr>
+                    <td>Instagram</td>
+                    <td>:</td>
+                    <td><a href="https://www.instagram.com/mefamex/" title="instagram.com/mefamex" aria-label="Mefamex instagram Account " target="_blank"
+                            rel="noopener">instagram.com/<b>mefamex</b>/</a></td>
+                </tr>
+                <tr>
+                    <td>Twitter (X)</td>
+                    <td>:</td>
+                    <td><a href="https://x.com/Mefamex/" title="x.com/Mefamex" aria-label="Mefamex X Account " target="_blank" rel="noopener">x.com/<b>Mefamex</b>/</a></td>
+                </tr>
+                <tr>
+                    <td>YouTube</td>
+                    <td>:</td>
+                    <td><a href="https://www.youtube.com/@mefamex/" title="youtube.com/@mefamex" aria-label="Mefamex youtube Account " target="_blank" rel="noopener">youtube.com/@<b>mefamex</b>/</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Facebook</td>
+                    <td>:</td>
+                    <td><a href="https://www.facebook.com/mefamex58/" title="facebook.com/mefamex58" aria-label="Mefamex facebook Account " target="_blank"
+                            rel="noopener">facebook.com/<b>mefamex58</b>/</a></td>
+                </tr>
+                <tr>
+                    <td>Reddit</td>
+                    <td>:</td>
+                    <td><a href="https://www.reddit.com/user/mefamex/" title="reddit.com/user/mefamex/" aria-label="Mefamex Reddit Account " target="_blank"
+                            rel="noopener">reddit.com/user/<b>mefamex</b>/</a></td>
+                </tr>
+                <tr>
+                    <td>İletişim Formu</td>
+                    <td>:</td>
+                    <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link"> doldur</a></td>
+                </tr>
+            </table>
+        </fieldset>
         <!---->
         <!---->
-        <!--
-        -->
+        <p><br />İletilerin son yanıtlandığı tarih: 17.07.2025</p>
+        <!---->
+        <!---->
+        <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0" marginwidth="0"
+            data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
         <!---->
         <!---->
     </main>
@@ -243,9 +155,7 @@
     <script defer>
         document.addEventListener("DOMContentLoaded", () => {
             const formElement = document.getElementById("ContactForm");
-            const formDiv = document.getElementById("divContact");
-            if (formElement) formElement.style.height = '0';
-            else { console.error("❌ ContactForm iframe bulunamadı."); return; }
+            formElement.style.height = '0';
             let retryCount = 0;
             const maxRetries = 3;
             function handleFormError() {
@@ -259,15 +169,15 @@
                     if (entry.isIntersecting) {
                         formElement.src = formElement.dataset.src;
                         observer.unobserve(formElement);
+                        // 10 saniye içinde yüklenmezse hata ver
                         let loadTimeout = setTimeout(() => handleFormError(), 10000);
                         formElement.onload = () => {
                             clearTimeout(loadTimeout);
-                            try { if (formElement.contentWindow) { console.log('✅ Form yüklendi'); formElement.style.height = '';  } }
+                            try { if (formElement.contentWindow) { console.log('✅ Form yüklendi'); formElement.style.height = '' } }
                             catch (error) {
                                 console.log('⚠️ Form kontrol edilemedi:', error);
                                 if (error.name === 'SecurityError') console.log('✅ Form muhtemelen yüklendi (CORS kısıtlaması)');
                                 else handleFormError();
-                                formDiv.style.display = 'none'; formElement.style.display = 'none';
                             }
                         }; formElement.onerror = () => { clearTimeout(loadTimeout); handleFormError(); };
                     }
