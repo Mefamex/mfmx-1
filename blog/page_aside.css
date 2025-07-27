@@ -48,6 +48,7 @@ header {
     padding: 0;
     justify-content: start;
     align-items: center;
+    overflow: auto;
 }
 
 #main_container main #mainWellcome {
