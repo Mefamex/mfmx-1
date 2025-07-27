@@ -3,10 +3,10 @@
  * @author Mefamex <info@mefamex.com>
  * @copyright 2024 Mefamex
  * @license MIT
- * @version 1.0.0
+ * @version 1.0.1
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-04-23-UTC10:47 
+ * @lastModified 2025-07-27-T12:00:00Z  
  */
 'use strict';
 
@@ -50,14 +50,40 @@ let scriptPath = getScriptPath();
 
 
 async function CreateFooter() {
-    // Select / Create the footer
-    let footer = document.querySelector('body > footer') || document.createElement('footer');
+    const footer = document.querySelector('body footer') || document.createElement('footer');
     footer.id = "footer"; footer.innerHTML = '';
-    // Build the footer
-    footer.innerHTML = `<h1 id="footerText"> 2014-&infin; &copy; MEFAMEX. ALL RIGHT RESERVED</h1>`;
+
+    const firstPart = document.createElement("div"); firstPart.id = "firstPart"; footer.appendChild(firstPart);
+    firstPart.innerHTML = '';
+
+    const secondPart = document.createElement("div"); secondPart.id = "secondPart"; footer.appendChild(secondPart);
+    secondPart.innerHTML = `
+        <div id='secondLeft'>
+            <a href="https://mefamex.com" title="Anasayfa"> <img src="${scriptPath.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png')}" alt="mefamex_logo" id="footerLogo">  </a>
+            <span class="vl"></span>
+            <span> 2014-&infin; &copy;<b> MEFAMEX </b></span>
+            <span class="vl"></span>
+            <a href="https://mefamex.com/sitemap.xml" title="Website Haritası"> Sitemap </a>
+        </div>
+        <div id='secondRight'> 
+            <a href="https://github.com/Mefamex" target="_blank" rel="noopener noreferrer" title="GitHub"><img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/github_icon.png')}" alt="GitHub"></a>
+            <span class="vl"></span>
+            <a href="https://www.instagram.com/mefamex" target="_blank" rel="noopener noreferrer" title="Instagram"><img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/instagram_icon.png')}" alt="Instagram"></a>
+            <span class="vl"></span>
+            <a href="https://www.linkedin.com/in/mefamex/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/linkedin_icon.png')}" alt="LinkedIn"></a>
+        </div>
+    `;
+    footer.querySelectorAll("a").forEach((link) => {
+        const nSpan = document.createElement("span");
+        nSpan.className = "AlinkPopup";
+        nSpan.textContent = link.title || link.textContent || link.href;
+        link.appendChild(nSpan);
+    });
 
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
-    /*const style = document.createElement('style');style.innerHTML = ``;footer.appendChild(style); */
+    //footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    //document.querySelector("main").style.maxHeight = '1rem';
+    //document.querySelector("main").style.minHeight = '50vh';
 }
 
 
