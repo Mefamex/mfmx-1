@@ -90,7 +90,8 @@
         <!---->
         <div id="mainCenter">
             <!---->
-            <div id="divSocial"> <!---->
+            <div id="divSocial">
+                <!---->
                 <div>
                     <h2>Bağlantı Bilgileri</h2>
                     <ul>
@@ -224,7 +225,7 @@
             <div id="divContact">
                 <h2>İletişim Formu</h2>
                 <p>İletilerin son yanıtlandığı tarih: 27.07.2025</p>
-                <iframe id="ContactForm" title="Contact Form"  frameborder="0" marginheight="0" marginwidth="0"
+                <iframe id="ContactForm" title="Contact Form" frameborder="0" marginheight="0" marginwidth="0"
                     data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
             </div>
             <!---->
@@ -240,6 +241,25 @@
     <!---->
     <!---->
     <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("#divSocial li").forEach(lii => {
+                const picture = lii.querySelector("picture");
+                const currA = lii.querySelector("span a");
+                
+                if (!currA || !picture ) console.log("Iconlara bağlantı eklemede sorun oldu...");
+                
+                const newA = document.createElement("a");
+                
+                Array.from(currA.attributes).forEach(attr => {
+                    newA.setAttribute(attr.name, attr.value);
+                });
+                
+                lii.insertBefore(newA, picture);
+                newA.appendChild(picture);
+            });
+        });
+    </script>
     <script defer>
         document.addEventListener("DOMContentLoaded", () => {
             const formElement = document.getElementById("ContactForm");
@@ -262,7 +282,7 @@
                         let loadTimeout = setTimeout(() => handleFormError(), 10000);
                         formElement.onload = () => {
                             clearTimeout(loadTimeout);
-                            try { if (formElement.contentWindow) { console.log('✅ Form yüklendi'); formElement.style.height = '';  } }
+                            try { if (formElement.contentWindow) { console.log('✅ Form yüklendi'); formElement.style.height = ''; } }
                             catch (error) {
                                 console.log('⚠️ Form kontrol edilemedi:', error);
                                 if (error.name === 'SecurityError') console.log('✅ Form muhtemelen yüklendi (CORS kısıtlaması)');
