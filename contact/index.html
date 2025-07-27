@@ -232,8 +232,7 @@
         </div>
         <!---->
         <!---->
-        <!--
-        -->
+        <!---->
         <!---->
         <!---->
     </main>
@@ -246,15 +245,9 @@
             document.querySelectorAll("#divSocial li").forEach(lii => {
                 const picture = lii.querySelector("picture");
                 const currA = lii.querySelector("span a");
-                
-                if (!currA || !picture ) console.log("Iconlara bağlantı eklemede sorun oldu...");
-                
+                if (!currA || !picture) { console.log("Iconlara bağlantı eklemede sorun oldu..."); return }
                 const newA = document.createElement("a");
-                
-                Array.from(currA.attributes).forEach(attr => {
-                    newA.setAttribute(attr.name, attr.value);
-                });
-                
+                Array.from(currA.attributes).forEach(attr => { newA.setAttribute(attr.name, attr.value); });
                 lii.insertBefore(newA, picture);
                 newA.appendChild(picture);
             });
