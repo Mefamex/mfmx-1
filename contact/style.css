@@ -167,19 +167,18 @@ main #mainCenter #divSocial ul li:hover {
     & span {
         margin-left: 0.2rem;
         padding-left: 0.2rem;
-    }& h3 {
-        transform: translateY(-0.3em);
     }
 
-    & a {
+    & span h3 {
+        transform: translateY(-0.3em);
+        color: rgb(255, 255, 255);
+    }
+
+    & span a {
         scale: 1.1;
         transform: translateX(0.6em);
     }
 
-
-    & h3 {
-        color: rgb(255, 255, 255);
-    }
 }
 
 main #mainCenter #divSocial ul li picture {
