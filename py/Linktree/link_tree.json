@@ -25,7 +25,7 @@
         {
             "name": "blog",
             "url": "blog",
-            "date": "2025-07-17",
+            "date": "2025-07-27",
             "relative_path": "blog",
             "full_url": "https://mefamex.com/blog",
             "children": [
@@ -102,7 +102,7 @@
                 {
                     "name": "index.html",
                     "url": "blog/index.html",
-                    "date": "2025-07-04",
+                    "date": "2025-07-27",
                     "relative_path": "blog\\index.html",
                     "full_url": "https://mefamex.com/blog/index.html"
                 }

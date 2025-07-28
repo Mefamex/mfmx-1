@@ -6,7 +6,7 @@
  * @version 1.0.1
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-07-28-T01:45:00Z 
+ * @lastModified 2025-07-27-T12:00:00Z  
  */
 'use strict';
 
@@ -19,6 +19,8 @@ function getScriptPath() {
     return fallbackPath;
 };
 
+/* for development purposes only */
+setInterval(() => window.scrollTo(0, document.body.scrollHeight), 100);
 
 let scriptPath = getScriptPath();
 
@@ -41,8 +43,7 @@ let scriptPath = getScriptPath();
 })();
 
 
-/* for development purposes only */
-// if (window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1')) { setInterval(() => window.scrollTo(0, document.body.scrollHeight), 100); window.scrollTo(0, document.body.scrollHeight); }
+window.scrollTo(0, document.body.scrollHeight)
 
 
 
@@ -116,8 +117,7 @@ async function CreateFooter() {
             </details> 
         </div> 
     `;
-    if (window.innerWidth < 40 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16)) firstPart.querySelectorAll('details:not(:first-of-type)').forEach(details => details.removeAttribute('open'));
-    
+
     const splitter = document.createElement("div"); splitter.id = "splitter"; footer.appendChild(splitter);
 
     const secondPart = document.createElement("div"); secondPart.id = "secondPart"; footer.appendChild(secondPart);
@@ -145,37 +145,9 @@ async function CreateFooter() {
     });
 
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
-
-    await new Promise(resolve => setTimeout(resolve, 200));
-
     //footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     //document.querySelector("main").style.maxHeight = '1rem';
     //document.querySelector("main").style.minHeight = '50vh';
-
-
-    const styleElement = document.createElement('style');
-    styleElement.id = 'for_footer_visibility_and_animation';
-    styleElement.textContent = ` .footer-hidden { opacity: 0; transform: translateY(2em); transition: all 1s ease-out; } .footer-visible { opacity: 1; transform: translateY(0); } `;
-    document.head.appendChild(styleElement);
-    if (firstPart) firstPart.querySelectorAll('details').forEach(details => { details.querySelectorAll('a').forEach(li => { li.classList.add('footer-hidden'); }); });
-    if (secondPart) { Array.from(secondPart.children).forEach(childd => { if (childd.nodeType === Node.ELEMENT_NODE) { Array.from(childd.children).forEach(child => { if (child.nodeType === Node.ELEMENT_NODE) child.classList.add('footer-hidden'); }); } }); }
-    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.2 };
-    if (firstPart) { firstPart.querySelectorAll('details').forEach(details => { const detailsObserver = new IntersectionObserver((entries, observer) => { entries.forEach(entry => { if (entry.isIntersecting) { const listItems = entry.target.querySelectorAll('a'); listItems.forEach((li, index) => { setTimeout(() => { li.classList.remove('footer-hidden'); li.classList.add('footer-visible'); }, index * (Math.floor(Math.random() * 50) + 100)); }); observer.unobserve(entry.target); } }); }, observerOptions); detailsObserver.observe(details); }); }
-    if (secondPart) {
-        requestAnimationFrame(() => {
-            const secondPartObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const children = Array.from(entry.target.children).filter(child => child.nodeType === Node.ELEMENT_NODE);
-                        children.forEach((childd) => { Array.from(childd.children).forEach((child, index) => { setTimeout(() => { child.classList.remove('footer-hidden'); child.classList.add('footer-visible'); }, index * (Math.floor(Math.random() * 101) + 200)); }); });
-                        setTimeout(() => { const styleElement = document.getElementById('for_footer_visibility_and_animation'); if (styleElement) styleElement.remove(); footer.querySelectorAll('.footer-hidden, .footer-visible').forEach(element => { element.classList.remove('footer-hidden', 'footer-visible'); }); }, 10000);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            secondPartObserver.observe(secondPart);
-        });
-    }
 }
 
 
