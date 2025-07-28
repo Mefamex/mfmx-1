@@ -47,9 +47,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MEFAMEX" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="og:date" content="2025-05-18T02:00:00Z" />
+    <meta property="og:date" content="2025-07-28T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-05-18T02:00:00Z" />
+    <meta property="article:modified_time" content="2025-07-28T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -60,7 +60,7 @@
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
     <meta name="twitter:url" content="https://mefamex.com/cv/" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-05-18T02:00:00Z" />
+    <meta name="twitter:date" content="2025-07-28T02:00:00Z" />
     <!---->
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -104,7 +104,7 @@
     <!---->
     <!-- styleSheets -->
     <style>
-        .cizgi {
+        main .cizgi {
             display: block;
             background-color: rgba(170, 170, 170, 0.568);
             width: 100vw;
@@ -114,7 +114,7 @@
             margin-block: 2em;
         }
 
-        .non-block {
+        main .non-block {
             display: inline;
         }
 
@@ -182,7 +182,7 @@
             gap: 5rem 3rem;
         }
 
-        h2 {
+        main h2 {
             font-size: 2.5em;
             margin-block: 0.2em 0.5em;
             margin-inline: auto;
@@ -201,8 +201,8 @@
             columns: 2;
         }
 
-        h2,
-        h3 {
+        main h2,
+        main h3 {
             color: rgb(66, 0, 220);
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 1rem;
@@ -210,7 +210,7 @@
             padding: 0.2rem 1rem;
         }
 
-        h3 {
+        main h3 {
             width: fit-content;
             font-size: 1.5em;
             margin-block: 0 0.5rem;
@@ -218,38 +218,38 @@
             transform: translateY(-0.3em);
         }
 
-        h4 {
+        main h4 {
             margin: 0;
             font-size: 1.2em;
         }
 
-        .container>ul>li:not(:first-child) {
+        main .container>ul>li:not(:first-child) {
             margin-top: 2em;
         }
 
-        ul {
+        main ul {
             margin: 0 0 1em 0;
             padding-left: 1rem;
         }
 
-        li {
+        main li {
             margin-block-end: 0.2em;
             width: fit-content;
             line-height: 1.1;
             margin-block: 0.5em;
         }
 
-        p {
+        main p {
             padding: 0;
             margin: 0;
         }
 
-        a {
+        main a {
             color: inherit;
             text-decoration-color: aqua;
         }
 
-        span {
+        main span {
             display: block;
             width: 100%;
             height: 0.1rem;
@@ -257,7 +257,7 @@
             margin-block: 1rem 2rem;
         }
 
-        .container {
+        main .container {
             display: flex;
             flex-direction: column;
             flex: 1 1 35rem;
@@ -271,25 +271,25 @@
             background-image: linear-gradient(to bottom, rgba(50, 0, 255, 0.2), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0), rgba(50, 0, 255, 0));
         }
 
-        .container:hover {
+        main .container:hover {
             border: rgba(255, 0, 0, 0.3) solid 0.1rem;
             box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.6), 0 1.2rem 3rem rgba(0, 0, 0, 0.3);
         }
 
-        .container:hover h3 {
+        main .container:hover h3 {
             border-color: rgba(0, 255, 255, 0.3);
             text-shadow: 0 0 0.1rem rgba(0, 255, 255, 0.5), 0 0 0.2rem rgba(0, 255, 255, 0.2), 0 0 0.3rem rgba(0, 255, 255, 0.1);
         }
 
-        .container:nth-child(1) {
+        main .container:nth-child(1) {
             flex-basis: 100%;
         }
 
-        .container:nth-child(4) {
+        main .container:nth-child(4) {
             flex-basis: 50rem !important;
         }
 
-        .container:nth-child(5) {
+        main .container:nth-child(5) {
             flex-basis: 65rem;
         }
 
@@ -405,15 +405,15 @@
                 #software {
                     font-size: 4.5vw !important;
                 }
+            }
 
-                #history {
-                    font-size: 1.15rem;
-                    padding: 0.5rem !important;
-                    gap: 1rem !important;
+            #history {
+                font-size: 1.15rem;
+                padding: 0.5rem !important;
+                gap: 1rem !important;
 
-                    img {
-                        width: 10vw !important;
-                    }
+                img {
+                    width: 10vw !important;
                 }
             }
 
@@ -472,18 +472,18 @@
                     </li>
                     <li>
                         <h4 class="non-block">Ehliyet:</h4>
-                        <p class="non-block">B - B1</p>
+                        <p class="non-block">B</p>
+                    </li>
+                    <li>
+                        <h4 class="non-block">GitHub:</h4>
+                        <p class="non-block">
+                            <a href="https://github.com/Mefamex" target="_blank" rel="noopener">github.com/Mefamex</a>
+                        </p>
                     </li>
                     <li>
                         <h4 class="non-block">LinkedIn:</h4>
                         <p class="non-block">
                             <a href="https://www.linkedin.com/in/mefamex" target="_blank" rel="noopener">linkedin.com/in/mefamex</a>
-                        </p>
-                    </li>
-                    <li>
-                        <h4 class="non-block">Instagram:</h4>
-                        <p class="non-block">
-                            <a href="https://www.instagram.com/mefamex" target="_blank" rel="noopener">instagram.com/mefamex</a>
                         </p>
                     </li>
                     <li>

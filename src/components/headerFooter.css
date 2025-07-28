@@ -500,6 +500,8 @@ footer {
     justify-content: center;
     border-top: 0.1rem solid rgb(59, 59, 59);
     transition: all 0.3s ease-in-out;
+    color: white;
+    font-size: 1rem;
 }
 
 footer * {
