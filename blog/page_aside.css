@@ -64,8 +64,8 @@ header {
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0.1em 0.5em 0.25em rgba(0, 0, 0, 0.5);
-    margin-inline: 5%;
-    width: 100%;
+    margin-inline: 2rem;
+    width: 90%;
 }
 
 #main_container main #mainWellcome h1 {
@@ -167,7 +167,7 @@ header {
     user-select: none;
 }
 
-h2 {
+#main_container h2 {
     display: flex;
     justify-content: center;
     justify-self: center;
@@ -185,44 +185,44 @@ h2 {
     border-radius: 0 0 1rem 1rem;
 }
 
-h3 {
+#main_container h3 {
     font-size: 1.4rem;
     margin-top: 1.5em;
     margin-bottom: 0.1em;
 }
 
-a {
+#main_container a {
     color: inherit;
     text-decoration-color: rgba(255, 50, 50, 0.7);
 }
 
-ol {
+#main_container ol {
     margin: 0;
     padding: 0 0 0 1.5rem;
 }
 
-ul {
+#main_container ul {
     margin: 0;
     padding: 0 0 0 0.75em;
 }
 
-ul li {
+#main_container ul li {
     margin-bottom: 0.2em;
 }
 
-p {
+#main_container p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     line-height: 1.6;
 }
 
-hr {
+#main_container hr {
     width: 100%;
     background-color: black;
     height: 0.1em;
 }
 
-details {
+#main_container details {
     margin-bottom: 1em;
     padding: 0rem 0.3em;
     border-radius: 0.6em;
@@ -231,7 +231,7 @@ details {
     list-style-type: none;
 }
 
-summary {
+#main_container summary {
     cursor: pointer;
     padding: 0.5rem;
     font-weight: 500;
@@ -246,7 +246,7 @@ summary {
     user-select: none;
 }
 
-summary:hover {
+#main_container summary:hover {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.1);
 }

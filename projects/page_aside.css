@@ -430,43 +430,43 @@ body {
     user-select: none;
 }
 
-pre[class*=language-].line-numbers {
+#main_container pre[class*=language-].line-numbers {
     padding-left: 2.8em !important;
 }
 
-pre[class*=language-] {
+#main_container pre[class*=language-] {
     margin: 0 !important;
     font-size: 0.85em !important;
     width: fit-content;
     max-width: min(100%, 95vw);
 }
 
-code[class*=language-], pre[class*=language-] {
+#main_container code[class*=language-], pre[class*=language-] {
     line-height: 1.25 !important;
     font-size: 0.9em !important;
 }
 
-code[class*=language-]:not(pre code[class*=language-]) {
+#main_container code[class*=language-]:not(pre code[class*=language-]) {
     border: 0.1em solid rgba(245, 222, 179, 0.377);
     padding-inline: 0.5em;
 }
 
-a {
+#main_container a {
     color: inherit;
     text-decoration-color: rgba(255, 50, 50, 0.7);
 }
 
-hr {
+#main_container hr {
     width: 100%;
     height: 0.1em;
 }
 
-ol {
+#main_container ol {
     margin: 0;
     padding: 0 0 0 1.5rem;
 }
 
-ul {
+#main_container ul {
     margin: 0;
     padding: 0 0 0 1em;
 
@@ -475,18 +475,18 @@ ul {
     }
 }
 
-p {
+#main_container p {
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
 }
 
-section.section_full {
+#main_container section.section_full {
     flex-basis: 95% !important;
     width: 100% !important;
     margin-inline: auto;
 }
 
-section.compacts {
+#main_container section.compacts {
     /* sectionlar için, divleri bölmeler*/
     display: flex;
     flex-flow: row wrap !important;
@@ -495,7 +495,7 @@ section.compacts {
     margin-block: 3em !important;
 }
 
-section.compacts>div {
+#main_container section.compacts>div {
     max-width: min(100%, 95vw);
     flex: 1 1 30em;
     display: flex;
@@ -506,7 +506,7 @@ section.compacts>div {
     padding: 0.5em 0.5em 1em 0.5em;
 }
 
-h2 {
+#main_container h2 {
     width: fit-content;
     padding: 0.5rem 1rem;
     margin-inline: auto;
@@ -520,7 +520,7 @@ h2 {
     box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.4);
 }
 
-h3 {
+#main_container h3 {
     width: fit-content;
     padding: 0.5rem 1rem;
     margin-block: 0.3rem;
@@ -532,7 +532,7 @@ h3 {
     box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.4);
 }
 
-details {
+#main_container details {
     margin-block-end: 1em;
     padding: 0rem 0.3em;
     border-radius: 0.6em;
@@ -541,7 +541,7 @@ details {
     list-style-type: none;
 }
 
-summary {
+#main_container summary {
     cursor: pointer;
     padding: 0.5rem;
     font-weight: 500;
@@ -556,7 +556,7 @@ summary {
     user-select: none;
 }
 
-summary:hover {
+#main_container summary:hover {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.1);
 }
