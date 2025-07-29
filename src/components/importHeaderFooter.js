@@ -23,7 +23,6 @@ function getScriptPath() {
 let scriptPath = getScriptPath();
 
 
-
 (async () => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -103,7 +102,7 @@ async function CreateFooter() {
             </details> 
         </div> 
         <div class="FootSection"> 
-            <details close> 
+            <details> 
                 <summary> BLOG </summary> 
                 <ul> 
                     <li> <a href="https://mefamex.com/blog/" title="Blog"> Blog Anasayfa </a> </li>
@@ -116,8 +115,7 @@ async function CreateFooter() {
             </details> 
         </div> 
     `;
-    if (window.innerWidth < 40 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16)) firstPart.querySelectorAll('details:not(:first-of-type)').forEach(details => details.removeAttribute('open'));
-    
+
     const splitter = document.createElement("div"); splitter.id = "splitter"; footer.appendChild(splitter);
 
     const secondPart = document.createElement("div"); secondPart.id = "secondPart"; footer.appendChild(secondPart);
@@ -143,10 +141,25 @@ async function CreateFooter() {
         nSpan.textContent = link.title || link.textContent || link.href;
         link.appendChild(nSpan);
     });
-
+    const footerBaseRem = 40;
+    const getRem = () => parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
+    if (window.innerWidth < footerBaseRem * getRem()) [...firstPart.querySelectorAll('details')].slice(1).forEach(details => details.removeAttribute('open'));
 
+    if (firstPart.querySelectorAll('details').length > 1) { firstPart.querySelectorAll('details').forEach(details => { details.addEventListener('toggle', (event) => { checkDetails(event.target); }); }); }
+    // en son açılan details öğesini hariç diğerlerini kapat
+    function checkDetails(changedDetails) {
+        // Sadece açılan details için diğerlerini kapat
+        if (changedDetails.hasAttribute('open') && window.innerWidth < footerBaseRem * getRem() ) {
+            firstPart.querySelectorAll('details').forEach(details => {
+                if (details !== changedDetails) {
+                    details.removeAttribute('open');
+                }
+            });
+        }
+    }
     await new Promise(resolve => setTimeout(resolve, 200));
+
 
     //footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     //document.querySelector("main").style.maxHeight = '1rem';
