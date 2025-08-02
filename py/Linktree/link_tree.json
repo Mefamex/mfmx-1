@@ -1,7 +1,7 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "date": "2025-07-27",
+    "date": "2025-08-01",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "children": [
@@ -128,7 +128,7 @@
         {
             "name": "cv",
             "url": "cv",
-            "date": "2025-07-04",
+            "date": "2025-08-01",
             "relative_path": "cv",
             "full_url": "https://mefamex.com/cv",
             "children": [],
@@ -136,9 +136,16 @@
                 {
                     "name": "index.html",
                     "url": "cv/index.html",
-                    "date": "2025-07-04",
+                    "date": "2025-07-28",
                     "relative_path": "cv\\index.html",
                     "full_url": "https://mefamex.com/cv/index.html"
+                },
+                {
+                    "name": "cv-2.html",
+                    "url": "cv/cv-2.html",
+                    "date": "2025-08-01",
+                    "relative_path": "cv\\cv-2.html",
+                    "full_url": "https://mefamex.com/cv/cv-2.html"
                 }
             ]
         },

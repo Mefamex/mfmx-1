@@ -32,6 +32,7 @@ print(
 )
 
 import os, datetime
+from typing import Optional
 
 
 class DirExVis:
@@ -83,8 +84,7 @@ class DirExVis:
         self.printAll_dotted: bool = True
         self.start()
         self.saveDirExVis()
-
-    def walker(self, path="", depth=0, data: dict = None):
+    def walker(self, path="", depth=0, data: Optional[dict] = None):
         """Recursively traverses a directory structure and collects file and directory information.
 
                 This method systematically explores a directory and its subdirectories, gathering details
@@ -92,27 +92,27 @@ class DirExVis:
                 directory name, type, size, modification time, and depth within the directory hierarchy.
                 The gathered data is stored in a dictionary for further processing or analysis.
 
-         Args:
+        Args:
             self: A reference to the `DirExVis` object.
             path (str, optional): The path of the directory to start traversing. Defaults to the current directory.
             depth (int, optional): The current depth level within the directory structure. Defaults to 0.
             data (dict, optional): A dictionary to store file and directory information. Defaults to `self.datas`.
 
-         Returns:
+        Returns:
             None
 
 
-         Bu metot, belirtilen bir dizin yolundan başlayarak tüm alt dizinleri ve dosyaları rekürsif olarak inceler.
+        Bu metot, belirtilen bir dizin yolundan başlayarak tüm alt dizinleri ve dosyaları rekürsif olarak inceler.
                 Her bir dosya veya dizin için belirli bilgileri (ad, tür, boyut, son değiştirme tarihi, derinlik)
                 toplar ve `data` sözlüğünde saklar.
 
-         Args:
+        Args:
             self: DirExVis sınıfının bir örneği.
             path (str, optional): Gezinilecek dizinin yolu. Varsayılan olarak mevcut çalışma dizini.
             depth (int, optional): Gezinilen dizinin derinliği. Varsayılan olarak 0.
             data (dict, optional): Dosya ve dizin bilgilerini saklamak için bir sözlük. Varsayılan olarak `self.datas`.
 
-         Returns:
+        Returns:
             None
         """
 
@@ -242,9 +242,9 @@ class DirExVis:
         Dosya Adı Oluşturma:
             * Dosya adı "DirExVis_" ile başlar.
             * Ardından, geçerli zaman damgası insan tarafından okunabilir
-              bir formata dönüştürülür (iki nokta yerine nokta kullanılır).
+                bir formata dönüştürülür (iki nokta yerine nokta kullanılır).
             * Son olarak, ".txt" uzantısı eklenir. Bu sayede, benzersiz
-              bir dosya adı oluşturulur ve mevcut dosyaların üzerine yazılmaz.
+                bir dosya adı oluşturulur ve mevcut dosyaların üzerine yazılmaz.
 
         Veri Kaydetme:
             * `data_str` değişkeni, açılan metin dosyasına yazılır.
@@ -259,8 +259,7 @@ class DirExVis:
         with open(
             "DirExVis_"
             + self.unixToDate(datetime.datetime.now().timestamp()).replace(":", ".")
-            + ".txt",
-            "w",
+            + ".txt", "w", encoding="utf-8",
         ) as f:
             f.write(self.data_str)
         print("File saved at:", os.getcwd(), " and its starts by: DirExVis_******.txt")
@@ -272,5 +271,5 @@ class DirExVis:
 
 
 if __name__ == "__main__":
-    os.chdir("..")
+    #os.chdir("..")
     DirExVis(os.getcwd())  # you can add here full path
