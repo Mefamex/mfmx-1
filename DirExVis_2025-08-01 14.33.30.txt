@@ -2,12 +2,29 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
 |      |      index.html
 |      blog
+|      |      go-(golang)-nedir
+|      |      |      golang-0.md
+|      |      |      golang-1.md
+|      |      |      golang-2.0.md
+|      |      |      golang-2.1.md
+|      |      |      golang-3-local.md
 |      |      ozlu-sozler
 |      |      |      index.html
+|      |      set-active-brain
+|      |      |      ben insanın düşünce yoluyla yani zihniyle bir çok.md
+|      |      |      celebre max ilacı ne işe yarıyor. _celebre max_.md
+|      |      |      cerebramax.md
 |      |      yapay-zeka-insanin-yerini-alabilir-mi
 |      |      |      index.html
+|      |      yapilacaklarin-notlari
+|      |      |      history-of-a-conv.md
 |      |      yazilim-gelistirme-kaynaklari
 |      |      |      index.html
+|      |      yazilimci-ve-beyni
+|      |      |      beyin ihyaçları.md
+|      |      |      beyinde kullanılan fonksiyonlar ve ihtiyaçları.md
+|      |      |      last.md
+|      |      |      Yazılım Mühendisliğinde Beyin Fonksiyonlarının Kul.md
 |      |      zaman-yonetimi
 |      |      |      index.html
 |      |      index.html
@@ -16,10 +33,19 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      page_aside.js
 |      |      style.css
 |      contact
+|      |      old
+|      |      |      index
+|      |      |      style
 |      |      index.html
 |      |      style.css
 |      cv
+|      |      cv-2.html
 |      |      index.html
+|      |      mehmet-akif-akkoç-self-2.jpg
+|      |      Mehmet-akif-akkoç-self.jpg
+|      |      mfmx-logo.png
+|      |      style copy.css
+|      |      style.css
 |      gallery
 |      |      pictures
 |      |      |      converted
@@ -127,6 +153,7 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      index.html
 |      |      yedekleme
 |      |      |      _freelance
+|      |      |      |      Gtin-VeriGirme-otomasyon.js
 |      |      |      |      Uyap_ihale_bot.js
 |      |      eklenicek-pyToExeWithCODES.txt
 |      |      index.html
@@ -136,12 +163,11 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      style.css
 |      py
 |      |      Filetree
+|      |      |      FileTreeCreator.py
 |      |      |      file_tree.json
-|      |      |      LinkTreeCreator.py
 |      |      Linktree
 |      |      |      LinkTreeCreator.py
 |      |      |      link_tree.json
-|      |      DirExVis_2025-05-06 00.19.10.txt
 |      |      FileLister.js
 |      |      FileLister.py
 |      |      gnpToWebp.py
@@ -174,6 +200,23 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      |      UbuntuMedium-rYwL.ttf
 |      |      |      |      UbuntuMediumItalic-Myln.ttf
 |      |      |      icons
+|      |      |      |      black
+|      |      |      |      |      blog_icon.png
+|      |      |      |      |      contact_icon.png
+|      |      |      |      |      facebook_icon.png
+|      |      |      |      |      github_icon.png
+|      |      |      |      |      home_icon.png
+|      |      |      |      |      info_icon.png
+|      |      |      |      |      instagram_icon.png
+|      |      |      |      |      linkedin_icon.png
+|      |      |      |      |      mail_icon-1.png
+|      |      |      |      |      mail_icon.png
+|      |      |      |      |      project_icon.png
+|      |      |      |      |      reddit_icon.png
+|      |      |      |      |      signal_icon.png
+|      |      |      |      |      tiktok_icon.png
+|      |      |      |      |      x_icon.png
+|      |      |      |      |      youtube_icon.png
 |      |      |      |      =.ico
 |      |      |      |      cloudflare.png
 |      |      |      |      facebook_icon.png
@@ -277,9 +320,9 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      |      4_6041858661402282267.jpg
 |      |      components
 |      |      |      =.ico
-|      |      |      footer.css
-|      |      |      header.css
+|      |      |      headerFooter copy.css
 |      |      |      headerFooter.css
+|      |      |      importHeaderFooter copy.js
 |      |      |      importHeaderFooter.js
 |      |      |      mefamex_logo_bgb.png
 |      |      |      x.ico
@@ -303,26 +346,26 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      Kalsin
 |      |      |      a.jpg
 |      |      |      Group 1.png
-|      |      |      G r nt 0455.jpg
+|      |      |      Görüntü0455.jpg
 |      |      |      image 17.png
 |      |      |      P1030959.JPG
 |      |      |      P1050520.JPG
 |      |      |      Screenshot_2018-12-14-19-45-28.png
 |      |      mc
-|      |      |      Ekran G r nt s  (68).png
-|      |      |      Ekran G r nt s  (69).png
-|      |      |      Ekran G r nt s  (70).png
-|      |      |      Ekran G r nt s  (71).png
-|      |      |      Ekran G r nt s  (72).png
-|      |      |      Ekran G r nt s  (73).png
-|      |      |      Ekran G r nt s  (74).png
-|      |      |      Ekran G r nt s  (75).png
-|      |      |      Ekran G r nt s  (76).png
-|      |      |      Ekran G r nt s  (77).png
-|      |      |      Ekran G r nt s  (78).png
-|      |      |      Ekran G r nt s  (79).png
-|      |      |      Ekran G r nt s  (80).png
-|      |      |      Ekran G r nt s  (81).png
+|      |      |      Ekran Görüntüsü (68).png
+|      |      |      Ekran Görüntüsü (69).png
+|      |      |      Ekran Görüntüsü (70).png
+|      |      |      Ekran Görüntüsü (71).png
+|      |      |      Ekran Görüntüsü (72).png
+|      |      |      Ekran Görüntüsü (73).png
+|      |      |      Ekran Görüntüsü (74).png
+|      |      |      Ekran Görüntüsü (75).png
+|      |      |      Ekran Görüntüsü (76).png
+|      |      |      Ekran Görüntüsü (77).png
+|      |      |      Ekran Görüntüsü (78).png
+|      |      |      Ekran Görüntüsü (79).png
+|      |      |      Ekran Görüntüsü (80).png
+|      |      |      Ekran Görüntüsü (81).png
 |      |      |      _2025-02-06.txt
 |      |      a.jpg
 |      |      index.html
@@ -330,17 +373,17 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      index.html
 |      |      mefamex_logo_bgb.webp
 |      |      style.css
-|      DirExVis_2024-12-18 02.54.05.txt
+|      DirExVis_2025-08-01 07.18.16.txt
 |      filetree.html
 |      index.html
 |      linktree.html
 |      navigation.json
-|      notlar m472948288433.txt
+|      notlarım472948288433.txt
 |      package.json
 |      robots.txt
 |      sitemap-blog.xml
 |      sitemap-projects.xml
 |      sitemap.xml
 |      TERMS.png
-|      yandex_2180e408af580940.html
+|      yandex_dc1b74278af14447.html
 |      YAPILACAKLAR.txt
