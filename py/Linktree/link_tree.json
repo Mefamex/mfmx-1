@@ -1,14 +1,14 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "date": "2025-08-01",
+    "date": "2025-08-03",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "children": [
         {
             "name": "about",
             "url": "about",
-            "date": "2025-07-14",
+            "date": "2025-08-03",
             "relative_path": "about",
             "full_url": "https://mefamex.com/about",
             "children": [],
@@ -16,7 +16,7 @@
                 {
                     "name": "index.html",
                     "url": "about/index.html",
-                    "date": "2025-07-14",
+                    "date": "2025-08-03",
                     "relative_path": "about\\index.html",
                     "full_url": "https://mefamex.com/about/index.html"
                 }

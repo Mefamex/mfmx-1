@@ -6,7 +6,7 @@
  * @version 1.0.1
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-07-28-T01:45:00Z 
+ * @lastModified 2025-08-03-T05:30:00Z 
  */
 'use strict';
 
@@ -24,15 +24,27 @@ let scriptPath = getScriptPath();
 
 
 (async () => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    if (!scriptPath) throw new Error('Script path bulunamadı');
-    link.href = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
-    /*await new Promise((resolve, reject) => {
-        link.onload = resolve;
-        link.onerror = () => reject(new Error('CSS yüklenemedi'));
-    });*/
-    document.head.appendChild(link);
+    const cssPath = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
+    const existingLink = () => {
+        if (document.querySelector(`link[href="${cssPath}"]`)) return true;
+        if ([...document.querySelectorAll('link[rel="stylesheet"]')].some(link => link.href.endsWith('headerFooter.css'))) return true;
+        /* if ([...document.querySelectorAll('style')].some(style => style.textContent.includes('.footer') || style.textContent.includes('.header'))) return true; */
+        /*if (document.getElementById('headerFooterCSS')) return true;*/
+        return false;
+    };
+    if (!existingLink()) {
+
+        try {
+            const response = await fetch(cssPath, { method: 'HEAD' });
+            if (response.ok) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                if (!cssPath) throw new Error('CSS path bulunamadı');
+                link.href = cssPath;
+                document.head.appendChild(link);
+            } else console.warn('⚠️ headerFooter.css bulunamadı');
+        } catch (error) { console.warn('⚠️ CSS dosyası kontrol edilemedi', error); }
+    }
 
     const createFooterTask = (async () => { try { await CreateFooter(); } catch (error) { console.error('❌ Footer oluşturulurken hata:', error); } })();
     const createHeaderTask = (async () => { try { await CreateHeader(); } catch (error) { console.error('❌ Header oluşturulurken hata:', error); } })();
@@ -56,9 +68,9 @@ async function CreateFooter() {
         <div class="FootSection"> 
             <details open> 
                 <summary> WEBSITE </summary> 
-                <ul> <!-- Anasayfa, hakkında, projeler, blog, galeri, iletişim, özgeçmiş, Site Bağlantı Ağacı, Site Dosya Ağacı --> 
+                <ul> <!-- Anasayfa, platform, projeler, blog, galeri, iletişim, özgeçmiş, Site Bağlantı Ağacı, Site Dosya Ağacı --> 
                     <li> <a href="https://mefamex.com" title="Anasayfa"> Anasayfa </a> </li> 
-                    <li> <a href="https://mefamex.com/about/" title="Website Hakkında"> Hakkında </a> </li> 
+                    <li> <a href="https://mefamex.com/about/" title="Website Hakkında"> Platform </a> </li> 
                     <li> <a href="https://mefamex.com/projects/" title="Projeler"> Projeler </a> </li> 
                     <li> <a href="https://mefamex.com/blog/" title="Blog"> Blog </a> </li> 
                     <li> <a href="https://mefamex.com/gallery/" title="Galeri"> Galeri </a> </li> 
@@ -150,7 +162,7 @@ async function CreateFooter() {
     // en son açılan details öğesini hariç diğerlerini kapat
     function checkDetails(changedDetails) {
         // Sadece açılan details için diğerlerini kapat
-        if (changedDetails.hasAttribute('open') && window.innerWidth < footerBaseRem * getRem() ) {
+        if (changedDetails.hasAttribute('open') && window.innerWidth < footerBaseRem * getRem()) {
             firstPart.querySelectorAll('details').forEach(details => {
                 if (details !== changedDetails) {
                     details.removeAttribute('open');
@@ -166,10 +178,7 @@ async function CreateFooter() {
     //document.querySelector("main").style.minHeight = '50vh';
 
 
-    const styleElement = document.createElement('style');
-    styleElement.id = 'for_footer_visibility_and_animation';
-    styleElement.textContent = ` .footer-hidden { opacity: 0; transform: translateY(2em); transition: all 1s ease-out; } .footer-visible { opacity: 1; transform: translateY(0); } `;
-    document.head.appendChild(styleElement);
+
     if (firstPart) firstPart.querySelectorAll('details').forEach(details => { details.querySelectorAll('a').forEach(li => { li.classList.add('footer-hidden'); }); });
     if (secondPart) { Array.from(secondPart.children).forEach(childd => { if (childd.nodeType === Node.ELEMENT_NODE) { Array.from(childd.children).forEach(child => { if (child.nodeType === Node.ELEMENT_NODE) child.classList.add('footer-hidden'); }); } }); }
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.2 };
@@ -199,61 +208,146 @@ async function CreateFooter() {
 
 async function CreateHeader() {
     // Select / Create the header
-    let header = document.querySelector('body > header') || document.createElement('header');
+    let header = document.querySelectorAll('body > header') || document.querySelectorAll('#header');
+    if (header) {
+        if (header.length > 1) { header.forEach((heads) => { heads.remove(); }); header = null; }
+        else header = header[0];
+    }
+    if (!header) { header = document.createElement("header"); }
     header.id = "header"; header.innerHTML = '';
-    // Build the header
-    const headerDivLeftSpace = document.createElement("div"); header.appendChild(headerDivLeftSpace);
-    headerDivLeftSpace.id = "headerDivLeftSpace"; //for divleft to center
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
 
-    const divLeftIcon = document.createElement("img"); divLeft.appendChild(divLeftIcon);
-    divLeftIcon.id = "headerDivLeftIcon"
+    const divLeftDiv = document.createElement("div"); divLeft.appendChild(divLeftDiv);
+    divLeftDiv.id = "headerDivLefticonDiv";
+    const divLeftIcon = document.createElement("img"); divLeftDiv.appendChild(divLeftIcon);
 
     divLeftIcon.src = scriptPath.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png');
     divLeftIcon.alt = "mefamex_logo";
 
-    const divLeftText = document.createElement("h1"); divLeft.appendChild(divLeftText);
+    const divLeftText = document.createElement("div"); divLeft.appendChild(divLeftText);
     divLeftText.id = "headerDivLeftText"; divLeftText.textContent = "MEFAMEX";
-
 
     const navBar = document.createElement("nav"); header.appendChild(navBar);
     navBar.id = "headerNavBar";
 
     const navBarList = [
-        { text: "ANASAYFA", link: "https://mefamex.com" },
-        { text: "HAKKIMDA", link: "https://mefamex.com/about/" },
-        { text: "PROJELER", link: "https://mefamex.com/projects/" },
-        { text: "BLOG", link: "https://mefamex.com/blog/" },
-        { text: "GALERİ", link: "https://mefamex.com/gallery/" },
-        { text: "İLETİŞİM", link: "https://mefamex.com/contact/" },
-        { text: "ÖZGEÇMİŞ", link: "https://mefamex.com/cv/" }
+        { text: "ANASAYFA", link: "/", alterimg: "assets/icons/black/home_icon.png" },
+        { text: "PLATFORM", link: "/about/", alterimg: "assets/icons/black/info_icon.png" },
+        { text: "PROJELER", link: "/projects/", alterimg: "assets/icons/black/project_icon.png" },
+        { text: "BLOG", link: "/blog/", alterimg: "assets/icons/black/blog_icon.png" },
+        { text: "GALERİ", link: "/gallery/", alterimg: "assets/icons/black/gallery_icon.png" },
+        { text: "İLETİŞİM", link: "/contact/", alterimg: "assets/icons/black/contact_icon.png" },
+        { text: "ÖZGEÇMİŞ", link: "/cv/", alterimg: "assets/icons/black/cv_icon.png" }
     ]
-    navBarList.forEach((item) => {
-        let temp_item = document.createElement("a"); navBar.appendChild(temp_item);
-        temp_item.textContent = item.text; temp_item.href = item.link;
-        if (window.location.pathname.includes("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
+    navBarList.forEach((item, index) => {
+        let temp_item = document.createElement("a");
+        temp_item.classList.add("pageA"); temp_item.dataset.listIndex = index;
+        temp_item.textContent = item.text; temp_item.href = window.location.origin + item.link;
+        if (window.location.pathname.includes("/" + new URL(item.link, window.location.origin).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
+        navBar.appendChild(temp_item);
+        if (item.alterimg) item.alterimg = scriptPath.replace("components/importHeaderFooter.js", item.alterimg);
     })
 
-    const navBarHideButton = document.createElement("a"); header.appendChild(navBarHideButton);
-    navBarHideButton.id = "navBarHideButton"; navBarHideButton.className = "unselected";
-    navBarHideButton.title = "MENU";
-    navBarHideButton.onclick = () => { navBarHideButton.className = navBarHideButton.className == 'unselected' ? 'selected' : 'unselected'; navBarHidden.className = navBarHideButton.className; }
+    const menuButton = document.createElement("button"); menuButton.id = "headerMenuButton"; header.appendChild(menuButton);
+    menuButton.innerHTML = "<span class=\"hamburger-line\"></span> <span class=\"hamburger-line\"></span> <span class=\"hamburger-line\"></span>"
+    menuButton.addEventListener("click", () => {
+        header.classList.toggle("menuShow");
+        if (header.classList.contains("menuShow")) {
+            let lastScrollEvent = 0;
+            window.addEventListener('scroll', function () {
+                const now = Date.now();
+                if (now - lastScrollEvent < 100) return;
+                lastScrollEvent = now;
+                header.classList.remove('menuShow');
+            }, { once: true, passive: true });
 
-    const navBarHidden = document.createElement("section"); header.appendChild(navBarHidden);
-    navBarHidden.id = "navBarHidden"; navBarHidden.className = navBarHideButton.className;
-    navBarList.forEach((item) => {
-        let temp_item = document.createElement("a"); navBarHidden.appendChild(temp_item);
-        temp_item.textContent = item.text; temp_item.href = item.link;
-        if (window.location.pathname.includes("/" + new URL(item.link).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
-    })
-    window.addEventListener('scroll', function () { navBarHideButton.className = 'unselected'; });
-    window.addEventListener('click', function (event) { if (!navBarHideButton.contains(event.target) && !navBarHidden.contains(event.target)) navBarHideButton.className = 'unselected'; });
+            window.addEventListener('click', function (event) {
+                if (!header.contains(event.target)) header.classList.remove('menuShow');
+            }, { once: true });
+        }
+    });
+    header.classList.add("menuShow", "slim");
 
+    const menuDiv = document.createElement("div"); menuDiv.id = "headerMenuDiv"; header.appendChild(menuDiv);
+    header.appendChild(menuDiv);
+
+    /* header için scrolled classı */
+    let lastScroll = document.documentElement.scrollTop + 0;
+    window.addEventListener("scroll", () => {
+        let scrollTop = document.documentElement.scrollTop;
+        if (scrollTop > lastScroll && scrollTop > 50) header.classList.add('scrolled')
+        else header.classList.remove('scrolled');
+        lastScroll = scrollTop + 0;
+    }, { passive: true });
+    /* header'ı ekle */
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
     setTimeout(() => { if (window.scrollY < '150' && !window.location.hash) window.scrollTo({ top: 0, behavior: 'smooth' }) }, 100);
-    /*const style = document.createElement('style');style.innerHTML = ``;header.appendChild(style);*/
+    /* responsive header */
+    let lastCallTime = 0;
+    let CallCount = 0;
+    function navBarImager(isreturn = false) {
+        if (Date.now() - lastCallTime < 50) {
+            if (isreturn && CallCount < 1) { CallCount++; setTimeout(navBarImager, 100); }
+            else if (CallCount < 1) { CallCount++; setTimeout(navBarImager, 100); }
+            else { CallCount = Math.min(CallCount - 1, 0); }
+            return;
+        }
+        CallCount = Math.min(CallCount - 1, 0);
+        lastCallTime = Date.now();
+        let documentRem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+        let fark = navBar.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
+
+
+
+        let index = 0;
+        if (fark < documentRem * 1) {
+            while (index < navBar.children.length) {
+                let child = navBar.children[index];
+                if (!child.querySelector("img")) {
+                    const img = document.createElement("img"); img.src = navBarList[index].alterimg;
+                    child.innerHTML = ""; child.appendChild(img);
+                    setTimeout(navBarImager, 50);
+                    break;
+                } index++;
+            }
+            navBar.lastChild
+        } else if (fark > documentRem * 10 && !header.classList.contains("slim")) {
+            index = navBar.children.length - 1;
+            while (index >= 0) {
+                let child = navBar.children[index];
+                if (child.querySelector("img")) {
+                    child.innerHTML = navBarList[index].text;
+                    setTimeout(navBarImager, 50);
+                    break;
+                } index--;
+            };
+        }
+        if (menuDiv.children.length > 0) header.classList.add("slim");
+        else { header.classList.remove("slim", "menuShow"); }
+        if (index >= navBar.children.length) {
+            if (navBar.lastChild.getBoundingClientRect().right > navBar.getBoundingClientRect().right) {
+                header.classList.add("slim");
+                let childd = navBar.lastChild; childd.innerHTML = "";
+                menuDiv.appendChild(childd);
+                const img = document.createElement("img"); img.src = navBarList[childd.dataset.listIndex].alterimg;
+                childd.appendChild(img);
+                childd.innerHTML += navBarList[childd.dataset.listIndex].text;
+                setTimeout(navBarImager, 100); return;
+            }
+        } else if (fark > documentRem * 10 && menuDiv.children.length > 0) {
+            let childd = menuDiv.firstChild;
+            childd.innerHTML = "";
+            const img = document.createElement("img"); img.src = navBarList[childd.dataset.listIndex].alterimg;
+            childd.appendChild(img);
+            navBar.appendChild(childd);
+            setTimeout(navBarImager, 100);
+        }
+    }
+    setTimeout(navBarImager, 100);
+    setInterval(navBarImager, 3000);
+    window.addEventListener("resize", navBarImager, { passive: true });
 
 }
 
