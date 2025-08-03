@@ -203,7 +203,9 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      |      black
 |      |      |      |      |      blog_icon.png
 |      |      |      |      |      contact_icon.png
+|      |      |      |      |      cv_icon.png
 |      |      |      |      |      facebook_icon.png
+|      |      |      |      |      gallery_icon.png
 |      |      |      |      |      github_icon.png
 |      |      |      |      |      home_icon.png
 |      |      |      |      |      info_icon.png
@@ -320,9 +322,10 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      |      4_6041858661402282267.jpg
 |      |      components
 |      |      |      =.ico
-|      |      |      headerFooter copy.css
+|      |      |      headerFooter-v0-1.css
+|      |      |      headerFooter-v0-2.css
 |      |      |      headerFooter.css
-|      |      |      importHeaderFooter copy.js
+|      |      |      importHeaderFooter-v0-2.js
 |      |      |      importHeaderFooter.js
 |      |      |      mefamex_logo_bgb.png
 |      |      |      x.ico
@@ -335,11 +338,6 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      Privacy_Policy.txt
 |      |      |      SSS.txt
 |      |      |      YAPILACAKLAR.txt
-|      |      scripts
-|      |      |      canvaSocMed.js
-|      |      |      circleMouse.js
-|      |      |      home.js
-|      |      |      mouse_tail.js
 |      |      styles
 |      |      |      home.css
 |      sweetmonstermia
@@ -373,7 +371,7 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      index.html
 |      |      mefamex_logo_bgb.webp
 |      |      style.css
-|      DirExVis_2025-08-01 07.18.16.txt
+|      DirExVis_2025-08-01 14.33.30.txt
 |      filetree.html
 |      index.html
 |      linktree.html
