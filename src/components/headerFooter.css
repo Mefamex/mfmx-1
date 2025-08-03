@@ -35,10 +35,11 @@ html {
     overflow-y: auto;
     background-color: rgb(15, 15, 15);
     color: white;
-    -moz-osx-font-smoothing: grayscale;
     touch-action: manipulation;
     isolation: isolate;
 }
+
+/* -moz-osx-font-smoothing: grayscale; etkisiz */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     html {
@@ -72,7 +73,6 @@ body {
         "Segoe UI", Roboto, "Helvetica Neue", Arial,
         "Noto Sans", sans-serif, "Apple Color Emoji",
         "Segoe UI Emoji", "Segoe UI Symbol";
-    font-display: swap;
 }
 
 @font-face {
@@ -123,9 +123,10 @@ header a, header a img, footer a, footer a img {
     user-select: none;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
-    -moz-user-drag: none;
     -o-user-drag: none;
 }
+
+/* -moz-user-drag: none;  desteklenmezzz*/
 
 /* 
 *
@@ -233,7 +234,7 @@ header #headerDivLefticonDiv {
     display: flex;
     flex-wrap: wrap;
     aspect-ratio: 12 / 16;
-    height: -webkit-fill-available;
+    height: 100%;
     max-height: 100%;
     width: auto;
     max-width: 100%;
@@ -419,7 +420,7 @@ header .pageA.showImg:not(.showText) {
 }
 
 header #headerMenuDiv .pageA {
-    width: -webkit-fill-available;
+    width: auto;
     align-items: center;
     gap: 0.7rem;
     padding: 0.5rem;

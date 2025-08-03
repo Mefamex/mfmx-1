@@ -151,7 +151,7 @@
     <!---->
     <!---->
     <!---->
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js" ></script>
     <script defer>
         document.addEventListener("DOMContentLoaded", () => {
             const formElement = document.getElementById("ContactForm");

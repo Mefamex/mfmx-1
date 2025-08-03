@@ -126,7 +126,6 @@
                         <br> Python, Java, C gibi birden fazla programlama dilinde uzmanlaştım. Derin öğrenme alanına olan yoğun ilgimle Askeri Harp Okulu’nda edindiğim ekip çalışması ve problem çözme
                         becerilerimi birleştirerek yazılım teknolojileri konusunda yenilikçi çözümler geliştirmek istiyorum. <br>
                         <br> Sürekli öğrenmeye açık ve teknolojik gelişmeleri yakından takip eden biri olarak yapay zeka alanında çığır açıcı projelere imza atmayı hedefliyorum.
-                    
                     </p>
                     <div class="contact-info">
                         <div class="contact-item">
@@ -455,7 +454,7 @@
     <!---->
     <!---->
     <!---->
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" defer></script>
+    <script class="alternatively" src="../src/components/importHeaderFooter.js"></script>
     <!---->
     <!---->
     <!---->
@@ -474,10 +473,6 @@
         /* Initialize typing animation */
         window.addEventListener('DOMContentLoaded', () => {
             typeWriter(document.querySelector('.hero-content h1'), document.querySelector('.hero-content h1').textContent, 80, 2000);
-            setTimeout(() => {
-                const mainHeader = document.querySelector('.main-header');
-                if (mainHeader && window.scrollY / parseFloat(getComputedStyle(document.documentElement).fontSize) < 10) mainHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 1500);
         });
         /* Intersection Observer for scroll animations */
         /* Observe all elements with animate-on-scroll class */

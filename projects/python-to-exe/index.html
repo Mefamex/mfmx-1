@@ -63,11 +63,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" crossorigin="anonymous"  defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" crossorigin="anonymous"  defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" crossorigin="anonymous"  defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" crossorigin="anonymous"  defer>  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" crossorigin="anonymous"  defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" crossorigin="anonymous" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js" crossorigin="anonymous" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" crossorigin="anonymous" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" crossorigin="anonymous" defer>  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js" crossorigin="anonymous" defer>  </script>
 </head>
 
 <body>
@@ -203,7 +203,7 @@
         </main>
         <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"> </aside>
     </div>
-    <script class="alternatively" src="../../src/components/importHeaderFooter.js" defer></script>
+    <script class="alternatively" src="../../src/components/importHeaderFooter.js"></script>
     <script class="alternatively" src="../page_aside.js" defer>  </script>
     <script id="alternativelyJS" type="text/javascript" defer>
         /*  class="alternatively"  */
@@ -283,7 +283,7 @@
                 try {
                     fetch(element.src, { method: "HEAD" })
                         .then(response => {
-                            const contentType = response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") || contentType.includes("text/js") ) { approvedLoad(); }
+                            const contentType = response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") || contentType.includes("text/js")) { approvedLoad(); }
                             else { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { failedToLoad(`Geçersiz içerik türü: ${contentType}`); } }
                         })
                         .catch(() => { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { console.error(`⚠️ ${fileName} doğrulanamadı.`); loadFallbackScript(fileName); } });
