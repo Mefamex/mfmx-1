@@ -245,7 +245,7 @@ async function CreateHeader() {
         if (item.alterimg) item.alterimg = scriptPath.replace("components/importHeaderFooter.js", item.alterimg);
         const imgg = document.createElement("img"); imgg.src = item.alterimg; imgg.alt = item.text; imgg.loading = "lazy"; imgg.decoding = "async";
         const spann = document.createElement("span"); spann.textContent = item.text;
-        let temp_item = document.createElement("a"); temp_item.classList.add("pageA", "showImg"); 
+        let temp_item = document.createElement("a"); temp_item.classList.add("pageA", "showImg");
         temp_item.dataset.listIndex = index; temp_item.href = window.location.origin + item.link; temp_item.title = item.text;
         if (window.location.pathname.includes("/" + new URL(item.link, window.location.origin).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
         temp_item.appendChild(imgg); temp_item.appendChild(spann);
@@ -274,6 +274,7 @@ async function CreateHeader() {
         else header.classList.remove('scrolled');
         lastScroll = scrollTop + 0;
     }, { passive: true });
+    setTimeout(() => { window.scrollTo({ top: window.scrollY + 5, behavior: 'smooth' }); }, 200);
     /* header'ı ekle */
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
     setTimeout(() => { if (window.scrollY < '150' && !window.location.hash) window.scrollTo({ top: 0, behavior: 'smooth' }) }, 100);
