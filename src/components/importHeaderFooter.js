@@ -6,7 +6,7 @@
  * @version 1.0.1
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-08-03-T05:30:00Z 
+ * @lastModified 2025-08-03-T12:30:00Z 
  */
 'use strict';
 
@@ -214,7 +214,7 @@ async function CreateHeader() {
         else header = header[0];
     }
     if (!header) { header = document.createElement("header"); }
-    header.id = "header"; header.innerHTML = '';
+    header.id = "header"; header.innerHTML = ''; header.classList.add("scrolled")
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
@@ -240,42 +240,35 @@ async function CreateHeader() {
         { text: "GALERİ", link: "/gallery/", alterimg: "assets/icons/black/gallery_icon.png" },
         { text: "İLETİŞİM", link: "/contact/", alterimg: "assets/icons/black/contact_icon.png" },
         { text: "ÖZGEÇMİŞ", link: "/cv/", alterimg: "assets/icons/black/cv_icon.png" }
-    ]
+    ] /* navbar a classes : pageA, showImg, showText, current_page */;
     navBarList.forEach((item, index) => {
-        let temp_item = document.createElement("a");
-        temp_item.classList.add("pageA"); temp_item.dataset.listIndex = index;
-        temp_item.textContent = item.text; temp_item.href = window.location.origin + item.link;
-        if (window.location.pathname.includes("/" + new URL(item.link, window.location.origin).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
-        navBar.appendChild(temp_item);
         if (item.alterimg) item.alterimg = scriptPath.replace("components/importHeaderFooter.js", item.alterimg);
+        const imgg = document.createElement("img"); imgg.src = item.alterimg; imgg.alt = item.text; imgg.loading = "lazy"; imgg.decoding = "async";
+        const spann = document.createElement("span"); spann.textContent = item.text;
+        let temp_item = document.createElement("a"); temp_item.classList.add("pageA", "showImg"); 
+        temp_item.dataset.listIndex = index; temp_item.href = window.location.origin + item.link; temp_item.title = item.text;
+        if (window.location.pathname.includes("/" + new URL(item.link, window.location.origin).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
+        temp_item.appendChild(imgg); temp_item.appendChild(spann);
+        navBar.appendChild(temp_item);
     })
 
     const menuButton = document.createElement("button"); menuButton.id = "headerMenuButton"; header.appendChild(menuButton);
     menuButton.innerHTML = "<span class=\"hamburger-line\"></span> <span class=\"hamburger-line\"></span> <span class=\"hamburger-line\"></span>"
-    menuButton.addEventListener("click", () => {
-        header.classList.toggle("menuShow");
-        if (header.classList.contains("menuShow")) {
-            let lastScrollEvent = 0;
-            window.addEventListener('scroll', function () {
-                const now = Date.now();
-                if (now - lastScrollEvent < 100) return;
-                lastScrollEvent = now;
-                header.classList.remove('menuShow');
-            }, { once: true, passive: true });
-
-            window.addEventListener('click', function (event) {
-                if (!header.contains(event.target)) header.classList.remove('menuShow');
-            }, { once: true });
-        }
-    });
-    header.classList.add("menuShow", "slim");
-
+    menuButton.addEventListener("click", () => { header.classList.toggle("menuShow"); });
+    window.addEventListener('click', function (event) { if (!header.contains(event.target)) header.classList.remove('menuShow'); });
+    window.addEventListener('touchstart', function (event) { if (!header.contains(event.target)) header.classList.remove('menuShow'); });
     const menuDiv = document.createElement("div"); menuDiv.id = "headerMenuDiv"; header.appendChild(menuDiv);
     header.appendChild(menuDiv);
 
+    const docDate = ["article:modified_time", "og:date", "twitter:date", "date", "last-modified"].map(name => document.head.querySelector(`meta[property="${name}"], meta[name="${name}"]`)).find(meta => meta && meta.content)?.content;
+    let onlyDate = docDate ? docDate.split("T")[0] : null;
+    menuDiv.setAttribute("data-lastupdate", onlyDate ? `${onlyDate}` : "just do it");
+
     /* header için scrolled classı */
     let lastScroll = document.documentElement.scrollTop + 0;
+    let lastScrollEvent = 0; /*  header menu button için */
     window.addEventListener("scroll", () => {
+        if (Date.now() - lastScrollEvent < 100) return; lastScrollEvent = Date.now(); header.classList.remove('menuShow');
         let scrollTop = document.documentElement.scrollTop;
         if (scrollTop > lastScroll && scrollTop > 50) header.classList.add('scrolled')
         else header.classList.remove('scrolled');
@@ -286,66 +279,71 @@ async function CreateHeader() {
     setTimeout(() => { if (window.scrollY < '150' && !window.location.hash) window.scrollTo({ top: 0, behavior: 'smooth' }) }, 100);
     /* responsive header */
     let lastCallTime = 0;
-    let CallCount = 0;
-    function navBarImager(isreturn = false) {
-        if (Date.now() - lastCallTime < 50) {
-            if (isreturn && CallCount < 1) { CallCount++; setTimeout(navBarImager, 100); }
-            else if (CallCount < 1) { CallCount++; setTimeout(navBarImager, 100); }
-            else { CallCount = Math.min(CallCount - 1, 0); }
-            return;
-        }
-        CallCount = Math.min(CallCount - 1, 0);
-        lastCallTime = Date.now();
+    let throttleTimeout = null;
+
+    function navBarImager() {
+        const now = Date.now();
+        if (now - lastCallTime < 50) {
+            if (!throttleTimeout) {
+                throttleTimeout = setTimeout(() => {
+                    throttleTimeout = null;
+                    navBarImager();
+                }, 50 - (now - lastCallTime));
+            } return;
+        } lastCallTime = now;
+
         let documentRem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
         let fark = navBar.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
-
-
-
-        let index = 0;
-        if (fark < documentRem * 1) {
-            while (index < navBar.children.length) {
-                let child = navBar.children[index];
-                if (!child.querySelector("img")) {
-                    const img = document.createElement("img"); img.src = navBarList[index].alterimg;
-                    child.innerHTML = ""; child.appendChild(img);
-                    setTimeout(navBarImager, 50);
-                    break;
-                } index++;
-            }
-            navBar.lastChild
-        } else if (fark > documentRem * 10 && !header.classList.contains("slim")) {
-            index = navBar.children.length - 1;
-            while (index >= 0) {
-                let child = navBar.children[index];
-                if (child.querySelector("img")) {
-                    child.innerHTML = navBarList[index].text;
-                    setTimeout(navBarImager, 50);
-                    break;
-                } index--;
-            };
-        }
         if (menuDiv.children.length > 0) header.classList.add("slim");
         else { header.classList.remove("slim", "menuShow"); }
-        if (index >= navBar.children.length) {
-            if (navBar.lastChild.getBoundingClientRect().right > navBar.getBoundingClientRect().right) {
-                header.classList.add("slim");
-                let childd = navBar.lastChild; childd.innerHTML = "";
-                menuDiv.appendChild(childd);
-                const img = document.createElement("img"); img.src = navBarList[childd.dataset.listIndex].alterimg;
-                childd.appendChild(img);
-                childd.innerHTML += navBarList[childd.dataset.listIndex].text;
-                setTimeout(navBarImager, 100); return;
+        let index = 0;
+        /* sıkıştık.. kurtar bizi js 0_0 */
+        if (fark < documentRem) {
+            /* image and text */
+            index = Array.from(navBar.children).findIndex(child => child.classList.contains("showText") && child.classList.contains("showImg"));
+            if (index > -1) {
+                let child = Array.from(navBar.children)[index];
+                child.classList.remove("showImg"); child.classList.add("showText");
+            } else {
+                /* only image */
+                index = Array.from(navBar.children).findIndex(child => !child.classList.contains("showImg"));
+                if (index > -1) {
+                    let child = navBar.children[index];
+                    child.classList.add("showImg"); child.classList.remove("showText");
+                } else {
+                    /* move to menuDiv */
+                    header.classList.add("slim");
+                    let child = navBar.lastChild;
+                    if (child) {
+                        child.classList.add("showImg"); child.classList.add("showText");
+                        menuDiv.insertBefore(child, menuDiv.firstChild);
+                    }
+                    else return;
+                }
+            } setTimeout(navBarImager, 200); return;
+        } else if (fark > documentRem * 8) {
+            /* move to navBar */
+            let justImgIndex = Array.from(navBar.children).findLastIndex(child => child.classList.contains("showImg") && !child.classList.contains("showText"));
+            if (fark > documentRem * 10 && menuDiv.children.length > 0) {
+                let child = menuDiv.firstChild;
+                child.classList.add("showImg"); child.classList.remove("showText");
+                navBar.appendChild(child);
+                setTimeout(navBarImager, 200); return;
+            } else if (justImgIndex > -1) {
+                /* only text */
+                let child = Array.from(navBar.children)[justImgIndex];
+                child.classList.remove("showImg"); child.classList.add("showText");
+                setTimeout(navBarImager, 200); return;
+            } else {
+                let index = Array.from(navBar.children).findLastIndex(child => (!child.classList.contains("showText") || !child.classList.contains("showImg")));
+                if (index > -1) {
+                    navBar.children[index].classList.add("showImg", "showTxt");
+                    setTimeout(navBarImager, 200); return;
+                }
             }
-        } else if (fark > documentRem * 10 && menuDiv.children.length > 0) {
-            let childd = menuDiv.firstChild;
-            childd.innerHTML = "";
-            const img = document.createElement("img"); img.src = navBarList[childd.dataset.listIndex].alterimg;
-            childd.appendChild(img);
-            navBar.appendChild(childd);
-            setTimeout(navBarImager, 100);
         }
-    }
-    setTimeout(navBarImager, 100);
+    } /* navBarImager */
+    setTimeout(navBarImager, 10);
     setInterval(navBarImager, 3000);
     window.addEventListener("resize", navBarImager, { passive: true });
 
