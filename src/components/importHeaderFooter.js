@@ -6,7 +6,7 @@
  * @version 1.0.1
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-08-03-T12:30:00Z 
+ * @lastModified 2025-08-05-T02:00:00Z
  */
 'use strict';
 
@@ -214,7 +214,8 @@ async function CreateHeader() {
         else header = header[0];
     }
     if (!header) { header = document.createElement("header"); }
-    header.id = "header"; header.innerHTML = ''; header.classList.add("scrolled")
+    header.id = "header"; header.innerHTML = ''; header.classList.add("scrolled");
+    if (window.innerWidth < 600) {header.classList.add('slim');}
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
@@ -295,53 +296,59 @@ async function CreateHeader() {
 
         let documentRem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
         let fark = navBar.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
-        if (menuDiv.children.length > 0) header.classList.add("slim");
-        else { header.classList.remove("slim", "menuShow"); }
         let index = 0;
+        checkSlim();
         /* sıkıştık.. kurtar bizi js 0_0 */
         if (fark < documentRem) {
-            /* image and text */
-            index = Array.from(navBar.children).findIndex(child => child.classList.contains("showText") && child.classList.contains("showImg"));
-            if (index > -1) {
-                let child = Array.from(navBar.children)[index];
-                child.classList.remove("showImg"); child.classList.add("showText");
-            } else {
-                /* only image */
-                index = Array.from(navBar.children).findIndex(child => !child.classList.contains("showImg"));
+            while (fark < documentRem) {/* image and text */
+                fark = navBar.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
+                index = Array.from(navBar.children).findIndex(child => child.classList.contains("showText") && child.classList.contains("showImg"));
                 if (index > -1) {
-                    let child = navBar.children[index];
-                    child.classList.add("showImg"); child.classList.remove("showText");
+                    let child = Array.from(navBar.children)[index];
+                    child.classList.remove("showImg"); child.classList.add("showText");
                 } else {
-                    /* move to menuDiv */
-                    header.classList.add("slim");
-                    let child = navBar.lastChild;
-                    if (child) {
-                        child.classList.add("showImg"); child.classList.add("showText");
-                        menuDiv.insertBefore(child, menuDiv.firstChild);
+                    /* only image */
+                    index = Array.from(navBar.children).findIndex(child => !child.classList.contains("showImg"));
+                    if (index > -1) {
+                        let child = navBar.children[index];
+                        child.classList.add("showImg"); child.classList.remove("showText");
+                    } else {
+                        /* move to menuDiv */
+                        header.classList.add("slim");
+                        let child = navBar.lastChild;
+                        if (child) {
+                            child.classList.add("showImg"); child.classList.add("showText");
+                            menuDiv.insertBefore(child, menuDiv.firstChild);
+                        }
+                        else return;
                     }
-                    else return;
                 }
-            } setTimeout(navBarImager, 200); return;
+            } checkSlim(); setTimeout(navBarImager, 100); return;
+        } else if (fark > documentRem * 4 && menuDiv.children.length > 0) {
+            /* move to navBar */
+            let child = menuDiv.firstChild;
+            child.classList.add("showImg"); child.classList.remove("showText");
+            navBar.appendChild(child);
+            checkSlim(); setTimeout(navBarImager, 100); return;
         } else if (fark > documentRem * 8) {
             /* move to navBar */
             let justImgIndex = Array.from(navBar.children).findLastIndex(child => child.classList.contains("showImg") && !child.classList.contains("showText"));
-            if (fark > documentRem * 10 && menuDiv.children.length > 0) {
-                let child = menuDiv.firstChild;
-                child.classList.add("showImg"); child.classList.remove("showText");
-                navBar.appendChild(child);
-                setTimeout(navBarImager, 200); return;
-            } else if (justImgIndex > -1) {
+            if (justImgIndex > -1) {
                 /* only text */
                 let child = Array.from(navBar.children)[justImgIndex];
                 child.classList.remove("showImg"); child.classList.add("showText");
-                setTimeout(navBarImager, 200); return;
+                checkSlim(); setTimeout(navBarImager, 100); return;
             } else {
                 let index = Array.from(navBar.children).findLastIndex(child => (!child.classList.contains("showText") || !child.classList.contains("showImg")));
                 if (index > -1) {
-                    navBar.children[index].classList.add("showImg", "showTxt");
-                    setTimeout(navBarImager, 200); return;
+                    navBar.children[index].classList.add("showImg", "showText");
+                    checkSlim(); setTimeout(navBarImager, 100); return;
                 }
             }
+        }
+        function checkSlim() {
+            if (menuDiv.children.length > 0) header.classList.add("slim");
+            else { if (header.classList.contains("slim")) { header.classList.add("scrolled"); } header.classList.remove("slim", "menuShow"); }
         }
     } /* navBarImager */
     setTimeout(navBarImager, 10);
