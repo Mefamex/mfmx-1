@@ -33,7 +33,7 @@
 
 ## 🎯 Website Hakkında
 
-**MEFAMEX** (mefamex.com), kişisel bir web sitesidir. Site, modern web teknolojileri kullanılarak geliştirilmiş olup, responsive tasarım, SEO optimizasyonu ve yüksek performans odaklıdır. Tasarım ve göz alıcılık arka plandadır.
+**MEFAMEX** [mefamex.com](https://mefamex.com), kişisel bir web sitesidir. Site, modern web teknolojileri kullanılarak geliştirilmiş olup, responsive tasarım, SEO optimizasyonu ve yüksek performans odaklıdır. Tasarım ve göz alıcılık arka plandadır.
 
 ### 🎖️ Temel Amaçlar:
 - ✅ Profesyonel dijital kimlik oluşturma
@@ -137,15 +137,15 @@ mfmx-1/
 
 ## 📱 Sayfalar
 
-| Sayfa | Açıklama | Özellikler |
-|-------|----------|------------|
-| 🏠 **Ana Sayfa** | Genel tanıtım ve navigasyon | Hero section, animasyonlar |
-| 👨‍💻 **CV** | Detaylı özgeçmiş | İnteraktif timeline, skill bars |
-| 📝 **Blog** | Yazılar ve makaleler | Kategori filtreleme, SEO |
-| 🛠️ **Projeler** | Portfolio ve çalışmalar | Demo linkler, GitHub entegrasyonu |
-| 📞 **İletişim** | İletişim bilgileri ve form | Sosyal medya linkler |
-<!-- | 🖼️ **Galeri** | Fotoğraf koleksiyonu | Lightbox, kategoriler | -->
-<!--| 🎮 **Oyunlar** | Mini web oyunları | JavaScript tabanlı | --> 
+| Sayfa           | Açıklama                    | Özellikler                        |
+| --------------- | --------------------------- | --------------------------------- |
+| 🏠 **Ana Sayfa** | Genel tanıtım ve navigasyon | Hero section, animasyonlar        |
+| 👨‍💻 **CV**        | Detaylı özgeçmiş            | İnteraktif timeline, skill bars   |
+| 📝 **Blog**      | Yazılar ve makaleler        | Kategori filtreleme, SEO          |
+| 🛠️ **Projeler**  | Portfolio ve çalışmalar     | Demo linkler, GitHub entegrasyonu |
+| 📞 **İletişim**  | İletişim bilgileri ve form  | Sosyal medya linkler              |
+| <!--            | 🖼️ **Galeri**                | Fotoğraf koleksiyonu              | Lightbox, kategoriler | --> |
+| <!--            | 🎮 **Oyunlar**               | Mini web oyunları                 | JavaScript tabanlı    | --> |
 
 
 <br><br>
@@ -160,7 +160,7 @@ Telif hakları , suç ve gizlilik politikaları gereğince birçok proje sergile
 #### 📂 DirExVis (Dizin Listeleme)
 - **Açıklama:** Python ile dizin yapısı görselleştirme
 - **Teknolojiler:** Python, File I/O, Recursive algorithms
-- **GitHub:** [Directory_Explorer](https://github.com/Mefamex/Directory_Explorer)
+- **İçerik:** Dizin ağaç yapısı, dosya bilgileri
 
 #### 🐧 Kali Linux Araçları
 - **Açıklama:** Penetration testing araçları ve rehberler
@@ -250,11 +250,11 @@ Telif hakları , suç ve gizlilik politikaları gereğince birçok proje sergile
 - **📦 Code Minification:** CSS/JS compression
 
 ### 📊 Core Web Vitals
-| Metrik | Hedef | Mevcut |
-|--------|-------|--------|
-| **LCP** | < 1.5s | ~1s |
-| **FID** | < 100ms | ~85ms |
-| **CLS** | < 0.1 | ~0.05 |
+| Metrik  | Hedef   | Mevcut |
+| ------- | ------- | ------ |
+| **LCP** | < 1.5s  | ~1s    |
+| **FID** | < 100ms | ~85ms  |
+| **CLS** | < 0.1   | ~0.05  |
 
 
 
@@ -277,8 +277,7 @@ Copyright (c) 2025 Mehmet Akif Akkoç (MEFAMEX)
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files...
 ``` 
-
-<br>
+<hr>
 
 ### 📝 İçerik - Tam Koruma Altında
 **Blog yazıları, projeler, kişisel bilgiler ve tüm içerikler** telif hakkı koruması altındadır.
@@ -301,14 +300,15 @@ tamamı yasal koruma altındadır.
 Yasal uyarı: Bu içeriklerin izinsiz kullanımı 5846 sayılı 
 Fikir ve Sanat Eserleri Kanunu kapsamında suç teşkil eder.
 ```
+<hr>
 
 ### 📋 Lisans Özeti
-| Kategori | Lisans | Kullanım |
-|----------|--------|----------|
-| 💻 **Kod Dosyaları** | MIT | ✅ Serbest kullanım |
-| 📝 **İçerik/Blog** | © Korumalı | ❌ İzin gerekli |
-| 🖼️ **Görseller** | © Korumalı | ❌ İzin gerekli |
-| 👤 **Kişisel Bilgiler** | © Korumalı | ❌ Kullanım yasak |
+| Kategori               | Lisans     | Kullanım           |
+| ---------------------- | ---------- | ------------------ |
+| 💻 **Kod Dosyaları**    | MIT        | ✅ Serbest kullanım |
+| 📝 **İçerik/Blog**      | © Korumalı | ❌ İzin gerekli     |
+| 🖼️ **Görseller**        | © Korumalı | ❌ İzin gerekli     |
+| 👤 **Kişisel Bilgiler** | © Korumalı | ❌ Kullanım yasak   |
 
 
 
