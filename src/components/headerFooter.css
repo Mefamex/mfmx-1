@@ -209,7 +209,14 @@ header:hover {
 }
 
 header.scrolled:not(:hover) {
-    opacity: 0.9;
+    opacity: 0;
+    transition: opacity 5s cubic-bezier( 0.16, 0.91, 0.17, 0.9 ) ;
+}
+
+@media screen and (max-width: 40rem) {
+    header, header.scrolled:not(:hover) {
+        opacity: 1 !important;
+    }
 }
 
 header #headerDivLeft {
