@@ -48,16 +48,16 @@
 
 ### Detaylı Dosya Analizi
 
-| TYPE | CHAR    | FILE |
-|------|---------|------|
-| HTML | 781,934 | 28   |
-| CSS  | 160,935 | 17   |
-| JS   | 157,930 | 12   |
-| MD   | 138,007 | 14   |
-| TXT  | 118,208 | 15   |
-| PY   | 54,171  | 10   |
-|      |         |      |
-| TOTAL|1,411,185| 96  |
+| TYPE  | CHAR      | FILE |
+| ----- | --------- | ---- |
+| HTML  | 781,934   | 28   |
+| CSS   | 160,935   | 17   |
+| JS    | 157,930   | 12   |
+| MD    | 138,007   | 14   |
+| TXT   | 118,208   | 15   |
+| PY    | 54,171    | 10   |
+|       |           |      |
+| TOTAL | 1,411,185 | 96   |
 
 🔗 Güncel veriler:  [GitHub Raw](https://github.com/Mefamex/mfmx-1/blob/main/_folder_analysis_results.txt)
 
@@ -121,7 +121,7 @@ mfmx-1/
 ├── 📄 sitemap.xml         # SEO sitemap
 └── 📄 robots.txt          # Arama motoru direktifleri
 ```
-
+🔗 Güncel veriler:  [GitHub Raw](https://github.com/Mefamex/mfmx-1/blob/main/_DirExVis_results.txt)
 
 
 <br><br>

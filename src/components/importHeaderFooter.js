@@ -62,7 +62,7 @@ async function CreateFooter() {
     footer.id = "footer"; footer.innerHTML = '';
 
     const firstPart = document.createElement("div"); firstPart.id = "firstPart"; footer.appendChild(firstPart);
-    const icon_black_path = scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black');
+    const icon_black_path = scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64');
     firstPart.innerHTML = `
         <div class="FootSection"> 
             <details open> 
