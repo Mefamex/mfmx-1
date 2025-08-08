@@ -120,7 +120,7 @@ if __name__ == "__main__":
         time.sleep(0.1)
 
     # Dosyaya kaydet
-    filename = f"_folder_analysis_results_{datetime.datetime.now().strftime('%Y-%m-%d %H.%M.%S')}.txt"
+    filename = f"_folder_analysis_results.txt" #_{datetime.datetime.now().strftime('%Y-%m-%d %H.%M.%S')}.txt"
     with open(filename, "w", encoding="utf-8") as f: f.write(text)
 
     print(f"\n\nAnalysis results have been saved to '{os.path.abspath(filename)}'.")

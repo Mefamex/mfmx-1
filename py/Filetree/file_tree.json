@@ -1,7 +1,7 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "size": 91701319,
+    "size": 91704824,
     "date": "2025-08-09",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
@@ -9,7 +9,7 @@
         {
             "name": "about",
             "url": "about",
-            "size": 20860,
+            "size": 23349,
             "date": "2025-07-04",
             "relative_path": "about",
             "full_url": "https://mefamex.com/about",
@@ -18,7 +18,7 @@
                 {
                     "name": "index.html",
                     "url": "about/index.html",
-                    "size": 20860,
+                    "size": 23349,
                     "date": "2025-08-09",
                     "full_url": "https://mefamex.com/about/index.html",
                     "relative_path": "about\\index.html"
@@ -1413,7 +1413,7 @@
         {
             "name": "py",
             "url": "py",
-            "size": 264183,
+            "size": 265114,
             "date": "2025-08-09",
             "relative_path": "py",
             "full_url": "https://mefamex.com/py",
@@ -1421,7 +1421,7 @@
                 {
                     "name": "Filetree",
                     "url": "py/Filetree",
-                    "size": 210673,
+                    "size": 211438,
                     "date": "2025-07-18",
                     "relative_path": "py\\Filetree",
                     "full_url": "https://mefamex.com/py/Filetree",
@@ -1438,7 +1438,7 @@
                         {
                             "name": "file_tree.json",
                             "url": "py/Filetree/file_tree.json",
-                            "size": 197148,
+                            "size": 197913,
                             "date": "2025-08-09",
                             "full_url": "https://mefamex.com/py/Filetree/file_tree.json",
                             "relative_path": "py\\Filetree\\file_tree.json"
@@ -1485,7 +1485,7 @@
                 {
                     "name": "FileLister.py",
                     "url": "py/FileLister.py",
-                    "size": 12411,
+                    "size": 12570,
                     "date": "2025-08-09",
                     "full_url": "https://mefamex.com/py/FileLister.py",
                     "relative_path": "py\\FileLister.py"
@@ -1493,7 +1493,7 @@
                 {
                     "name": "file_analyzer.py",
                     "url": "py/file_analyzer.py",
-                    "size": 5318,
+                    "size": 5325,
                     "date": "2025-08-09",
                     "full_url": "https://mefamex.com/py/file_analyzer.py",
                     "relative_path": "py\\file_analyzer.py"
@@ -3233,20 +3233,20 @@
             "relative_path": "YAPILACAKLAR.txt"
         },
         {
-            "name": "_DirExVis_2025-08-09 01.16.28.txt",
-            "url": "_DirExVis_2025-08-09 01.16.28.txt",
-            "size": 5463,
+            "name": "_DirExVis_results.txt",
+            "url": "_DirExVis_results.txt",
+            "size": 5548,
             "date": "2025-08-09",
-            "full_url": "https://mefamex.com/_DirExVis_2025-08-09 01.16.28.txt",
-            "relative_path": "_DirExVis_2025-08-09 01.16.28.txt"
+            "full_url": "https://mefamex.com/_DirExVis_results.txt",
+            "relative_path": "_DirExVis_results.txt"
         },
         {
-            "name": "_folder_analysis_results_2025-08-09 01.09.29.txt",
-            "url": "_folder_analysis_results_2025-08-09 01.09.29.txt",
+            "name": "_folder_analysis_results.txt",
+            "url": "_folder_analysis_results.txt",
             "size": 441,
             "date": "2025-08-09",
-            "full_url": "https://mefamex.com/_folder_analysis_results_2025-08-09 01.09.29.txt",
-            "relative_path": "_folder_analysis_results_2025-08-09 01.09.29.txt"
+            "full_url": "https://mefamex.com/_folder_analysis_results.txt",
+            "relative_path": "_folder_analysis_results.txt"
         }
     ]
 }

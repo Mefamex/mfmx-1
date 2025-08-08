@@ -82,11 +82,12 @@
             margin-bottom: 1rem;
             font-size: 1.8rem;
             width: fit-content;
-            background-color: #0044873d;
+            background-color: #001830;
             padding: 0.2em 0.5em;
             border-radius: 0.5em;
-            border: 0.1em solid #8484f9;
+            border: 0.1em solid #29295d;
             margin-inline: auto;
+            text-align: center;
         }
 
         main .about-container {
@@ -112,8 +113,23 @@
 
         main .about-container ul li {
             color: rgb(200, 200, 200);
-            margin: 1.5em 0;
+            margin: 2.5em 0;
             line-height: 1.6;
+        }
+
+        main .about-container .about-sections a {
+            color: rgb(245, 245, 245);
+            background-color: rgba(0, 255, 255, 0.1);
+            padding-inline: 0.25em 0.5em;
+            padding-block: 0.2em;
+            border-radius: 0.5em;
+            display: flex;
+            text-align: center;
+            width: fit-content;
+            padding: 0.5rem 2rem;
+            margin-left: 1rem;
+            margin-bottom: 0.3rem;
+            text-decoration: none;
         }
 
         main .about-container .about-disclaimer {
@@ -121,6 +137,29 @@
             border-radius: 1rem;
             padding: 2rem;
             margin-top: 2rem;
+        }
+
+        main #folder-analysis pre {
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            width: fit-content;
+            padding: 2rem;
+            margin-block: 2rem;
+            align-self: center;
+            justify-self: center;
+            background-color: #00448926;
+            border-radius: 1rem;
+            font-family: monospace;
+            line-height: 1.2;
+            letter-spacing: 0.05em;
+            text-align: left;
+            font-variant-ligatures: none;
+            font-feature-settings: "liga" 0;
+            text-rendering: optimizeSpeed;
+            white-space: pre;
+            word-break: normal;
+            overflow-x: auto;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0;
         }
 
         main .disclaimer-content {
@@ -152,15 +191,6 @@
             color: rgb(200, 200, 200) !important;
         }
 
-        main .about-container .about-sections a {
-            color: rgb(245, 245, 245);
-            text-decoration-color: rgba(255, 50, 50, 0.7);
-            background-color: rgba(0, 255, 255, 0.1);
-            padding-inline: 0.25em 0.5em;
-            padding-block: 0.2em;
-            border-radius: 0.5em;
-        }
-
         main .about-container .about-update {
             opacity: 0.5;
         }
@@ -176,7 +206,11 @@
             }
 
             main .about-container .about-sections {
-                font-size: 0.9em;
+                font-size: 1.1em;
+
+                li {
+                    padding-left: 1rem;
+                }
             }
 
             main .about-container .about-disclaimer {
@@ -230,7 +264,37 @@
                     <li><strong><a href="https://mefamex.com/filetree.html"> Dosya Haritası :</a></strong> Sitedeki tüm dosyalara erişim sayfası. Sistem otomatik olarak boyutları ve tarihlerini alır.
                     </li>
                 </ul>
-            </section> 
+            </section>
+            <!---->
+            <!---->
+            <section id="folder-analysis">
+                <h2>Website Dosya Analizi</h2>
+                <div>
+                    <pre id="folder-analysis-pre">
+            Yükleniyor...
+                                </pre>
+                    <script type="text/javascript">
+                        // Dosya yolunu belirtin
+                        const filePath = "../_folder_analysis_results.txt";
+                        const pre = document.getElementById("folder-analysis-pre");
+                        fetch(filePath)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error("Dosya yüklenemedi");
+                                    document.querySelector("#folder-analysis").remove();
+                                }
+                                return response.text();
+                            })
+                            .then(text => {
+                                pre.textContent = text.split('\n').slice(3, -2).join('\n');
+                            })
+                            .catch(error => {
+                                pre.textContent = "Dosya yüklenemedi: " + error.message;
+                                document.querySelector("#folder-analysis").remove();
+                            });
+                    </script>
+                </div>
+            </section>
             <!---->
             <!---->
             <section class="about-disclaimer">

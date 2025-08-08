@@ -1,3 +1,6 @@
+# Created for : mefamex.com files
+# Created on  : 2025-08-09T01:57:37Z
+
 D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
 |      |      index.html
@@ -170,4 +173,5 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      sitemap.xml
 |      yandex_dc1b74278af14447.html
 |      YAPILACAKLAR.txt
-|      _folder_analysis_results_2025-08-09 01.09.29.txt
+|      _DirExVis_results.txt
+|      _folder_analysis_results.txt
