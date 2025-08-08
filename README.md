@@ -35,6 +35,8 @@
 
 **MEFAMEX** [mefamex.com](https://mefamex.com), kişisel bir web sitesidir. Site, modern web teknolojileri kullanılarak geliştirilmiş olup, responsive tasarım, SEO optimizasyonu ve yüksek performans odaklıdır. Tasarım ve göz alıcılık arka plandadır.
 
+<br>
+
 ### 🎖️ Temel Amaçlar:
 - ✅ Profesyonel dijital kimlik oluşturma
 - ✅ Projeler ve yeteneklerin sergilenmesi  
@@ -42,6 +44,22 @@
 - ✅ İletişim ve networking platformu
 - ✅ CV ve özgeçmiş sunumu
 
+<br>
+
+### Detaylı Dosya Analizi
+
+| TYPE | CHAR    | FILE |
+|------|---------|------|
+| HTML | 781,934 | 28   |
+| CSS  | 160,935 | 17   |
+| JS   | 157,930 | 12   |
+| MD   | 138,007 | 14   |
+| TXT  | 118,208 | 15   |
+| PY   | 54,171  | 10   |
+|      |         |      |
+| TOTAL|1,411,185| 96  |
+
+🔗 Güncel veriler:  [GitHub Raw](https://github.com/Mefamex/mfmx-1/blob/main/_folder_analysis_results.txt)
 
 
 <br><br>
