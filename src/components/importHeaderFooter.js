@@ -3,10 +3,9 @@
  * @author Mefamex <info@mefamex.com> 
  * @copyright 2024 Mefamex
  * @license MIT
- * @version 1.0.1
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-08-05-T02:00:00Z
+ * @lastModified 2025-08-08-T19:00:00Z
  */
 'use strict';
 
@@ -101,7 +100,7 @@ async function CreateFooter() {
                 <summary> İLETİŞİM </summary> 
                 <ul> 
                     <li> <a href="https://mefamex.com/contact/" title="İletişim"> İletişim Anasayfa </a> </li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="mailto:info@mefamex.com" title="e-mail"> <img src="${icon_black_path}/mail_icon-1.png"  alt="email icon" title="e-mail" decoding="async" loading="lazy"> E-mail: info@mefamex.com </a> </li>
+                    <li> <a target="_blank" rel="noopener noreferrer" href="mailto:info@mefamex.com" title="e-mail"> <img src="${icon_black_path}/mail_icon.png"  alt="email icon" title="e-mail" decoding="async" loading="lazy"> E-mail: info@mefamex.com </a> </li>
                     <li> <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link" title=" İletişim Formu "> <img src="${icon_black_path}/contact_icon.png" alt="iletisim icon" title="Iletişim Formu" decoding="async" loading="lazy"> Anonim İletişim Formu </a> </li>
                     <li> <a target="_blank" rel="noopener noreferrer" href="https://github.com/Mefamex/" title="GitHub"> <img src="${icon_black_path}/github_icon.png" alt="GitHub icon" title="GitHub" decoding="async" loading="lazy"> GitHub </a> </li>
                     <li> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Mefamex" title="Twitter"> <img src="${icon_black_path}/x_icon.png" alt="Twitter icon" title="Twitter" decoding="async" loading="lazy"> Twitter </a> </li>
@@ -140,11 +139,11 @@ async function CreateFooter() {
             <a href="https://mefamex.com/sitemap.xml" title="Website Haritası"> Sitemap  </a> 
         </div> 
         <div id='secondRight'> 
-            <a href="https://github.com/Mefamex" target="_blank" rel="noopener noreferrer" title="GitHub"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/github_icon.png')}" alt="GitHub"> </a> 
+            <a href="https://github.com/Mefamex" target="_blank" rel="noopener noreferrer" title="GitHub"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/github_icon.png')}" alt="GitHub"> </a> 
             <span class="vl"> </span> 
-            <a href="https://www.instagram.com/mefamex" target="_blank" rel="noopener noreferrer" title="Instagram"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/instagram_icon.png')}" alt="Instagram"> </a> 
+            <a href="https://www.instagram.com/mefamex" target="_blank" rel="noopener noreferrer" title="Instagram"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/instagram_icon.png')}" alt="Instagram"> </a> 
             <span class="vl"> </span> 
-            <a href="https://www.linkedin.com/in/mefamex/" target="_blank" rel="noopener noreferrer" title="LinkedIn"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/linkedin_icon.png')}" alt="LinkedIn"> </a> 
+            <a href="https://www.linkedin.com/in/mefamex/" target="_blank" rel="noopener noreferrer" title="LinkedIn"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/linkedin_icon.png')}" alt="LinkedIn"> </a> 
         </div> 
     `;
     secondPart.querySelectorAll("a").forEach((link) => {
@@ -215,7 +214,7 @@ async function CreateHeader() {
     }
     if (!header) { header = document.createElement("header"); }
     header.id = "header"; header.innerHTML = ''; header.classList.add("scrolled");
-    if (window.innerWidth < 600) {header.classList.add('slim');}
+    if (window.innerWidth < 600) { header.classList.add('slim'); }
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
     divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
@@ -234,13 +233,13 @@ async function CreateHeader() {
     navBar.id = "headerNavBar";
 
     const navBarList = [
-        { text: "ANASAYFA", link: "/", alterimg: "assets/icons/black/home_icon.png" },
-        { text: "PLATFORM", link: "/about/", alterimg: "assets/icons/black/info_icon.png" },
-        { text: "PROJELER", link: "/projects/", alterimg: "assets/icons/black/project_icon.png" },
-        { text: "BLOG", link: "/blog/", alterimg: "assets/icons/black/blog_icon.png" },
-        { text: "GALERİ", link: "/gallery/", alterimg: "assets/icons/black/gallery_icon.png" },
-        { text: "İLETİŞİM", link: "/contact/", alterimg: "assets/icons/black/contact_icon.png" },
-        { text: "ÖZGEÇMİŞ", link: "/cv/", alterimg: "assets/icons/black/cv_icon.png" }
+        { text: "ANASAYFA", link: "/", alterimg: "assets/icons/black/64x64/home_icon.png" },
+        { text: "PLATFORM", link: "/about/", alterimg: "assets/icons/black/64x64/info_icon.png" },
+        { text: "PROJELER", link: "/projects/", alterimg: "assets/icons/black/64x64/project_icon.png" },
+        { text: "BLOG", link: "/blog/", alterimg: "assets/icons/black/64x64/blog_icon.png" },
+        { text: "GALERİ", link: "/gallery/", alterimg: "assets/icons/black/64x64/gallery_icon.png" },
+        { text: "İLETİŞİM", link: "/contact/", alterimg: "assets/icons/black/64x64/contact_icon.png" },
+        { text: "CV", link: "/cv/", alterimg: "assets/icons/black/64x64/cv_icon.png" }
     ] /* navbar a classes : pageA, showImg, showText, current_page */;
     navBarList.forEach((item, index) => {
         if (item.alterimg) item.alterimg = scriptPath.replace("components/importHeaderFooter.js", item.alterimg);
@@ -255,9 +254,9 @@ async function CreateHeader() {
 
     const menuButton = document.createElement("button"); menuButton.id = "headerMenuButton"; header.appendChild(menuButton);
     menuButton.innerHTML = "<span class=\"hamburger-line\"></span> <span class=\"hamburger-line\"></span> <span class=\"hamburger-line\"></span>"
-    menuButton.addEventListener("click", () => { header.classList.toggle("menuShow"); });
-    window.addEventListener('click', function (event) { if (!header.contains(event.target)) header.classList.remove('menuShow'); });
-    window.addEventListener('touchstart', function (event) { if (!header.contains(event.target)) header.classList.remove('menuShow'); });
+    menuButton.addEventListener("click", () => { header.classList.toggle("menuShow"); }, { passive: true });
+    window.addEventListener('click', function (event) { if (!header.contains(event.target)) header.classList.remove('menuShow'); }, { passive: true });
+    window.addEventListener('touchstart', function (event) { if (!header.contains(event.target)) header.classList.remove('menuShow'); }, { passive: true });
     const menuDiv = document.createElement("div"); menuDiv.id = "headerMenuDiv"; header.appendChild(menuDiv);
     header.appendChild(menuDiv);
 
@@ -275,6 +274,8 @@ async function CreateHeader() {
         else header.classList.remove('scrolled');
         lastScroll = scrollTop + 0;
     }, { passive: true });
+    /* header hover olduğunda scrolled sınıfını sil */
+    header.addEventListener("mouseenter", () => { header.classList.remove('scrolled'); },{ passive: true });
     setTimeout(() => { window.scrollTo({ top: window.scrollY + 5, behavior: 'smooth' }); }, 200);
     /* header'ı ekle */
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
@@ -295,43 +296,46 @@ async function CreateHeader() {
         } lastCallTime = now;
 
         let documentRem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
-        let fark = navBar.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
+        const getfark = () => navBar.firstChild.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
+        let fark = getfark();
         let index = 0;
         checkSlim();
         /* sıkıştık.. kurtar bizi js 0_0 */
+        if (header.classList.contains("slim") && navBar.getBoundingClientRect().width < documentRem * 22) {
+            const child = navBar.lastChild;
+            if (child && navBar.children.length > 2) {
+                child.classList.add("showImg"); child.classList.add("showText");
+                menuDiv.insertBefore(child, menuDiv.firstChild);
+            } return;
+        }
         if (fark < documentRem) {
             while (fark < documentRem) {/* image and text */
-                fark = navBar.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
+                fark = getfark();
                 index = Array.from(navBar.children).findIndex(child => child.classList.contains("showText") && child.classList.contains("showImg"));
                 if (index > -1) {
                     let child = Array.from(navBar.children)[index];
                     child.classList.remove("showImg"); child.classList.add("showText");
-                } else {
-                    /* only image */
+                } else { /* only image */
                     index = Array.from(navBar.children).findIndex(child => !child.classList.contains("showImg"));
                     if (index > -1) {
                         let child = navBar.children[index];
                         child.classList.add("showImg"); child.classList.remove("showText");
-                    } else {
-                        /* move to menuDiv */
+                    } else { /* move to menuDiv */
                         header.classList.add("slim");
                         let child = navBar.lastChild;
-                        if (child) {
+                        if (child && navBar.children.length > 1) {
                             child.classList.add("showImg"); child.classList.add("showText");
                             menuDiv.insertBefore(child, menuDiv.firstChild);
                         }
-                        else return;
                     }
                 }
             } checkSlim(); setTimeout(navBarImager, 100); return;
-        } else if (fark > documentRem * 4 && menuDiv.children.length > 0) {
-            /* move to navBar */
+        } else if (fark > documentRem * 4 && menuDiv.children.length > 0) {  /* move to navBar */
             let child = menuDiv.firstChild;
             child.classList.add("showImg"); child.classList.remove("showText");
             navBar.appendChild(child);
             checkSlim(); setTimeout(navBarImager, 100); return;
         } else if (fark > documentRem * 8) {
-            /* move to navBar */
             let justImgIndex = Array.from(navBar.children).findLastIndex(child => child.classList.contains("showImg") && !child.classList.contains("showText"));
             if (justImgIndex > -1) {
                 /* only text */
@@ -339,6 +343,7 @@ async function CreateHeader() {
                 child.classList.remove("showImg"); child.classList.add("showText");
                 checkSlim(); setTimeout(navBarImager, 100); return;
             } else {
+                /* image and text */
                 let index = Array.from(navBar.children).findLastIndex(child => (!child.classList.contains("showText") || !child.classList.contains("showImg")));
                 if (index > -1) {
                     navBar.children[index].classList.add("showImg", "showText");
@@ -349,10 +354,10 @@ async function CreateHeader() {
         function checkSlim() {
             if (menuDiv.children.length > 0) header.classList.add("slim");
             else { if (header.classList.contains("slim")) { header.classList.add("scrolled"); } header.classList.remove("slim", "menuShow"); }
-        }
+        } checkSlim();
     } /* navBarImager */
     setTimeout(navBarImager, 10);
-    setInterval(navBarImager, 3000);
+    setInterval(navBarImager, 100);
     window.addEventListener("resize", navBarImager, { passive: true });
 
 }
