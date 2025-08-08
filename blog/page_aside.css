@@ -21,10 +21,6 @@ body {
     color: var(--color-black) !important;
 }
 
-header {
-    box-shadow: 0 0.2rem 0.3rem 0.2rem rgba(0, 0, 0, 0.7) !important;
-}
-
 #main_container {
     /* body > div:main_container */
     display: flex;
