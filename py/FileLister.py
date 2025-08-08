@@ -46,6 +46,7 @@ class DirExVis:
     width: int = 35
     maxNameLength: list = [0, 0]  # name, depth
     passDotDirs: bool = True  # passing dirs and files is starts with dot (.)
+    passEndFiles = []  # .webp, .tmp ....
 
     @staticmethod
     def unixToDate(unix: int | float) -> str:
@@ -124,6 +125,7 @@ class DirExVis:
         for entry in os.listdir(path):
             entry_path = os.path.join(path, entry)
             if self.passDotDirs and entry.startswith("."):continue
+            if any(entry.endswith(ext) for ext in self.passEndFiles): continue
             if os.path.isdir(entry_path):
 
                 data[entry] = [
@@ -143,6 +145,7 @@ class DirExVis:
                 files.append(entry)
 
         for file in files:
+            if any(file.endswith(ext) for ext in self.passEndFiles): continue
             os.chdir(path)
             size = os.path.getsize(file)
             mtime = self.unixToDate(os.path.getmtime(file))
@@ -257,7 +260,7 @@ class DirExVis:
         """
         os.chdir(self.path)
         with open(
-            "DirExVis_"
+            "_DirExVis_"
             + self.unixToDate(datetime.datetime.now().timestamp()).replace(":", ".")
             + ".txt", "w", encoding="utf-8",
         ) as f:
@@ -272,4 +275,5 @@ class DirExVis:
 
 if __name__ == "__main__":
     #os.chdir("..")
+    DirExVis.passEndFiles = [".webp", ".png", ".jpg",".psd", ".tmp", ".otf", ".ttf", ".woff", ".woff2", ".log", ".cache", ".bak", ".pyc", ".pyo"]
     DirExVis(os.getcwd())  # you can add here full path
