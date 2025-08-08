@@ -41,9 +41,6 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      cv
 |      |      cv-2.html
 |      |      index.html
-|      |      mehmet-akif-akkoç-self-2.jpg
-|      |      Mehmet-akif-akkoç-self.jpg
-|      |      mfmx-logo.png
 |      |      style copy.css
 |      |      style.css
 |      gallery
@@ -52,6 +49,8 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      converted-100
 |      |      |      main.exe
 |      |      |      main.py
+|      |      |      picture-009.jpeg
+|      |      |      picture-010.jpeg
 |      |      index.html
 |      |      style.css
 |      games
@@ -60,10 +59,7 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      queaz_game.js
 |      |      |      style.css
 |      mystream
-|      |      a.png
 |      |      index.html
-|      |      pp.jpg
-|      |      pp.png
 |      |      script.js
 |      |      soloshare.html
 |      |      style.css
@@ -104,6 +100,7 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      link_tree.json
 |      |      FileLister.js
 |      |      FileLister.py
+|      |      file_analyzer.py
 |      |      gnpToWebp.py
 |      |      sitemapCreator.py
 |      software
@@ -121,8 +118,11 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      icons
 |      |      |      |      black
 |      |      |      |      |      64x64
+|      |      |      |      =.ico
+|      |      |      |      x.ico
 |      |      |      images
 |      |      |      |      background
+|      |      |      |      |      gnpToWebp.py
 |      |      |      |      language_img
 |      |      |      |      |      asil
 |      |      |      |      |      png
@@ -136,40 +136,38 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      headerFooter.css
 |      |      |      importHeaderFooter-v0-2.js
 |      |      |      importHeaderFooter.js
-|      |      |      mefamex_logo_bgb.png
 |      |      |      x.ico
 |      |      data
 |      |      |      navigation.json
 |      |      My_nots
+|      |      |      Legal_terms.txt
+|      |      |      link_rel.txt
+|      |      |      privacy-policy(2).txt
+|      |      |      Privacy_Policy.txt
+|      |      |      SSS.txt
+|      |      |      YAPILACAKLAR.txt
 |      |      scripts
 |      |      styles
 |      |      |      home.css
 |      sweetmonstermia
 |      |      Kalsin
-|      |      |      a.jpg
-|      |      |      Group 1.png
-|      |      |      Görüntü0455.jpg
-|      |      |      image 17.png
 |      |      |      P1030959.JPG
 |      |      |      P1050520.JPG
-|      |      |      Screenshot_2018-12-14-19-45-28.png
-|      |      a.jpg
 |      |      index.html
 |      the-mefamex-project
 |      |      index.html
-|      |      mefamex_logo_bgb.webp
 |      |      style.css
-|      DirExVis_2025-08-03 08.24.11.txt
 |      filetree.html
 |      index.html
 |      linktree.html
 |      navigation.json
 |      notlarım472948288433.txt
 |      package.json
+|      README.md
 |      robots.txt
 |      sitemap-blog.xml
 |      sitemap-projects.xml
 |      sitemap.xml
-|      TERMS.png
 |      yandex_dc1b74278af14447.html
 |      YAPILACAKLAR.txt
+|      _folder_analysis_results_2025-08-09 01.09.29.txt

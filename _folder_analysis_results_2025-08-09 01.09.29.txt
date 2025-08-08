@@ -1,0 +1,20 @@
+# Created for : mefamex.com files
+# Created on  : 2025-08-09T01:09:23Z
+
+ANALYZING RESULTS
+
+|======|=========|======|
+| TYPE | CHAR    | FILE |
+|------|---------|------|
+| HTML | 779,448 | 28   |
+| CSS  | 160,935 | 17   |
+| JS   | 157,930 | 12   |
+| MD   | 138,007 | 14   |
+| TXT  | 128,149 | 14   |
+| PY   | 53,660  | 10   |
+|======|=========|======|
+
+TOTAL CHARS : 1,418,129 
+TOTAL FILES : 95
+
+           in mefamex.com

@@ -302,6 +302,7 @@ Fikir ve Sanat Eserleri Kanunu kapsamında suç teşkil eder.
 ```
 <hr>
 
+
 ### 📋 Lisans Özeti
 | Kategori               | Lisans     | Kullanım           |
 | ---------------------- | ---------- | ------------------ |

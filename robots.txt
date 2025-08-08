@@ -3,6 +3,7 @@ Disallow: *?q=
 Disallow: /*?*
 Disallow: /*?s=*
 
+
 Allow: /
 Allow: /sitemap.xml
 
