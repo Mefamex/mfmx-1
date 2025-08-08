@@ -258,14 +258,15 @@ class DirExVis:
         Returns:
             None
         """
+        self.data_str ='# Created for : mefamex.com files\n# Created on  : ' + datetime.datetime.now().isoformat(timespec='seconds') + 'Z\n\n' + self.data_str
+
         os.chdir(self.path)
         with open(
-            "_DirExVis_"
-            + self.unixToDate(datetime.datetime.now().timestamp()).replace(":", ".")
+            "_DirExVis_results"
+            # + self.unixToDate(datetime.datetime.now().timestamp()).replace(":", ".")
             + ".txt", "w", encoding="utf-8",
-        ) as f:
-            f.write(self.data_str)
-        print("File saved at:", os.getcwd(), " and its starts by: DirExVis_******.txt")
+        ) as f: f.write(self.data_str)
+        print("File saved at:", os.getcwd(), " and its starts by: _DirExVis_results.txt")
 
     def start(self):
         self.datas = {self.path: [0, "dir", 0, os.path.getmtime(self.path), {}]}
