@@ -5,89 +5,92 @@ javascript: (() => {
             Instagram   : https://www.instagram.com/mefamex 
         Date    : 2025-07-14
         Customer: https://bionluk.com/hgunay
-        Version 1.0 2025-07-14 -> DEMO - TEST: formdaki inputları okuma, form otomatik doldurma, barkod kaydetme ve kaydedilen barkodu xlsx ve txt olarak indirme işlemleri yapıldı.
-        Version 1.1 2025-07-14 -> GUI  - TEST: Sayfa üstüne block açıp okunan değeri, dosyaları indirme, tekli barkod oluşturma işlemleri yapıldı.
+        Version 1.0 2025-07-14 -> DEMO - TEST: formdaki inputlari okuma, form otomatik doldurma, barkod kaydetme ve kaydedilen barkodu xlsx ve txt olarak indirme islemleri yapildi.
+        Version 1.1 2025-07-14 -> GUI  - TEST: Sayfa ustune block acip okunan degeri, dosyalari indirme, tekli barkod olusturma islemleri yapildi.
+        Version 1.2 2025-07-17 -> UTF8 - UTF8 karakteri sorunlari icin bazi Turkce karakterler degistirildi. UTF8 destegi eklendi.
+        Version 1.3 2025-07-17 -> UTF8 - UTF8 karakteri sorunlari icin bazi Turkce karakterler degistirildi.
+        Version 1.4 2025-07-17 -> UTF8 - UTF8 karakteri sorunlari icin TUM Turkce karakterler degistirildi.
     */
 
 
-    /*  Bu javascript kodu, chrome tarayıcısında bookmark olarak kullanılmak üzere tasarlanmıştır.
-        İlgili sayfada bulunan bir iframe elementinin kaynağını yeni bir sekmede açar.
-        Kullanıcı, bu kodu bir bookmark olarak kaydedebilir ve istediği zaman çalıştırabilir.
+    /*  Bu javascript kodu, chrome tarayicisinda bookmark olarak kullanilmak uzere tasarlanmistir.
+        Ilgili sayfada bulunan bir iframe elementinin kaynagini yeni bir sekmede acar.
+        Kullanici, bu kodu bir bookmark olarak kaydedebilir ve istedigi zaman calistirabilir.
 
-        Adım 1:
-            - 2 kere bu bookmark'u kullanılacak: 
-                birinci çalıştırma: Iframe'i yeni sekmede açıcak. 
-                ikinci çalıştırma : yeni sekmede açılan form elementini üzerinde işlemler yapılmaya başlanıcak. 
-        Adım 2: 
-            - yeni sekmede açılan form elementini kullanıcı kendisi dolduracak. 
-            - Kayıt işlemi ile formun içeriği hafızada tutulacak. 
-        Adım 3:
-            - kullanıcının belirlediği sayı kadar bu form tekrar tekrar doldurulacak. 
-            - her doldurma ve ardından kayıt işlemleri sonucu oluşan barkod numarası hafızada tutulacak.
-        Adım 4: 
-            - kullanıcı hafızada tutulan barkod numaralarını ister xlsx isterse de txt dosyası olarak indirebilecek.
-        Adım 5:
-            - kullanıcı bu bookmark'u tekrar kullanarak yeni bir barkod numarası oluşturma işlemini başlatabilecek.
+        Adim 1:
+            - 2 kere bu bookmark'u kullanilacak: 
+                birinci calistirma: Iframe'i yeni sekmede acicak. 
+                ikinci calistirma : yeni sekmede acilan form elementini uzerinde islemler yapilmaya baslanicak. 
+        Adim 2: 
+            - yeni sekmede acilan form elementini kullanici kendisi dolduracak. 
+            - Kayit islemi ile formun icerigi hafizada tutulacak. 
+        Adim 3:
+            - kullanicinin belirledigi sayi kadar bu form tekrar tekrar doldurulacak. 
+            - her doldurma ve ardindan kayit islemleri sonucu olusan barkod numarasi hafizada tutulacak.
+        Adim 4: 
+            - kullanici hafizada tutulan barkod numaralarini ister xlsx isterse de txt dosyasi olarak indirebilecek.
+        Adim 5:
+            - kullanici bu bookmark'u tekrar kullanarak yeni bir barkod numarasi olusturma islemini baslatabilecek.
     */
+    document.characterSet = 'UTF-8'; document.charset = 'UTF-8';
+    /* sayfadaki iframe elementini bul ve yeni sekmede ac */
+    const iframeElement = document.getElementById('new-gtin13-iframe');
+    if (iframeElement) { const iframeSrc = iframeElement.src; window.open(iframeSrc, '_blank'); console.log("\nOTO: iframe kaynagi yeni sekmede acildi:\n", iframeSrc); return; }
+    else {
+        const formElement = document.querySelector('form');
+        if (formElement) { console.log("\nOTO: Form elementi bulundu, diger islemlere devam ediliyor.\n"); }
+        else { console.log("\nOTO: Belirtilen ID'ye sahip iframe veya form elementi bulunamadi.\n"); return; }
+    }
 
-    /* Yükleme göstergesinin kaybolmasını bekleyen yardımcı fonksiyon */
+    /* Yukleme gostergesinin kaybolmasini bekleyen yardimci fonksiyon */
     function waitForSpinnerToDisappear(timeout = 10000) {
         return new Promise((resolve, reject) => {
             const spinnerSelector = 'ngx-spinner .overlay', startTime = Date.now();
             const checkSpinner = setInterval(() => {
                 const spinner = document.querySelector(spinnerSelector);
                 if (!spinner || spinner.style.display === 'none' || spinner.style.opacity === '0') { clearInterval(checkSpinner); resolve(); }
-                else if (Date.now() - startTime > timeout) { clearInterval(checkSpinner); console.warn("OTO: Yükleme göstergesi zaman aşımına uğradı veya kaybolmadı."); reject(new Error("Spinner zaman aşımı")); }
+                else if (Date.now() - startTime > timeout) { clearInterval(checkSpinner); console.warn("OTO: Yukleme gostergesi zaman asimina ugradi veya kaybolmadi."); reject(new Error("Spinner zaman asimi")); }
             }, 50);
         });
     }
 
-    /* Seçim kutusu seçeneklerinin dolmasını bekleyen yardımcı fonksiyon */
+    /* Secim kutusu seceneklerinin dolmasini bekleyen yardimci fonksiyon */
     function waitForOptionsToLoad(selectElement, timeout = 10000) {
         return new Promise((resolve, reject) => {
             const startTime = Date.now();
             const checkOptions = setInterval(() => {
                 if (selectElement && selectElement.options && selectElement.options.length > 1) { clearInterval(checkOptions); resolve(); }
-                else if (Date.now() - startTime > timeout) { clearInterval(checkOptions); console.warn(`OTO: ${selectElement ? selectElement.id : 'select element'} için seçenekler zaman aşımına uğradı veya yüklenmedi.`); reject(new Error(`Options for ${selectElement ? selectElement.id : 'select element'} did not load in time`)); }
+                else if (Date.now() - startTime > timeout) { clearInterval(checkOptions); console.warn(`OTO: ${selectElement ? selectElement.id : 'select element'} icin secenekler zaman asimina ugradi veya yuklenmedi.`); reject(new Error(`Options for ${selectElement ? selectElement.id : 'select element'} did not load in time`)); }
             }, 100);
         });
     }
 
-    /* Bir elementin görünür olmasını bekleyen yardımcı fonksiyon */
+    /* Bir elementin gorunur olmasini bekleyen yardimci fonksiyon */
     function waitForElementToAppear(selector, timeout = 10000) {
         return new Promise((resolve, reject) => {
             const startTime = Date.now();
             const checkElement = setInterval(() => {
                 const element = document.querySelector(selector);
                 if (element && element.offsetParent !== null) { clearInterval(checkElement); resolve(element); }
-                else if (Date.now() - startTime > timeout) { clearInterval(checkElement); console.warn(`OTO: Element '${selector}' zaman aşımına uğradı veya görünür olmadı.`); reject(new Error(`Element '${selector}' did not appear in time`)); }
+                else if (Date.now() - startTime > timeout) { clearInterval(checkElement); console.warn(`OTO: Element '${selector}' zaman asimina ugradi veya gorunur olmadi.`); reject(new Error(`Element '${selector}' did not appear in time`)); }
             }, 100);
         });
     }
 
-
-    const iframeElement = document.getElementById('new-gtin13-iframe');
-    if (iframeElement) { const iframeSrc = iframeElement.src; window.open(iframeSrc, '_blank'); console.log("\nOTO: iframe kaynağı yeni sekmede açıldı:\n", iframeSrc); return; }
-    else {
-        const formElement = document.querySelector('form');
-        if (formElement) { console.log("\nOTO: Form elementi bulundu, diğer işlemlere devam ediliyor.\n"); }
-        else { console.log("\nOTO: Belirtilen ID'ye sahip iframe veya form elementi bulunamadı.\n"); return; }
-    }
-
     /* form elementleri
-        - önek numarası -> <select _ngcontent-c3="" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="gcpIdNew"><option _ngcontent-c3="" value="">  </option><option _ngcontent-c3="" value="63819"> 86828748 </option></select>
+        - onek numarasi -> <select _ngcontent-c3="" class="form-control ng-untouched ng-pristine ng-valid" formcontrolname="gcpIdNew"><option _ngcontent-c3="" value="">  </option><option _ngcontent-c3="" value="63819"> 86828748 </option></select>
         - marka -> <input _ngcontent-c3="" class="form-control col-md-9 col-lg-9 ng-pristine ng-invalid ng-touched" type="text" placeholder="" maxlength="70"> </input>
-        - açıklama -> <input _ngcontent-c3="" class="form-control col-md-9 col-lg-9 ng-pristine ng-invalid ng-touched" type="text" placeholder="" maxlength="500"> </input>
+        - aciklama -> <input _ngcontent-c3="" class="form-control col-md-9 col-lg-9 ng-pristine ng-invalid ng-touched" type="text" placeholder="" maxlength="500"> </input>
         - hedef pazar -> <select _ngcontent-c0="" class="form-control col-md-10 col-lg-11 ng-untouched ng-pristine ng-invalid"> </select>
         - net miktar -> <input _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid" type="text" placeholder="" maxlength="20"> </input>
-        - ölçü birimi -> <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid"> ..... </select>
-        - bölüm -> <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="segmentId" id="select_segment" name="select_segment"> ..... </select>
+        - olcu birimi -> <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid"> ..... </select>
+        - bolum -> <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="segmentId" id="select_segment" name="select_segment"> ..... </select>
         - aile ->  <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="familyId" id="select_family" name="select_family"><option _ngcontent-c0="" value=""></option><!-- the option will be loaded after the option before the item is selected --></select>
-        - sınıf -> <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="classId" id="select_class" name="select_class"><option _ngcontent-c0="" value=""></option><!-- the option will be loaded after the option before the item is selected --></select>
+        - sinif -> <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="classId" id="select_class" name="select_class"><option _ngcontent-c0="" value=""></option><!-- the option will be loaded after the option before the item is selected --></select>
         - kategori ->  <select _ngcontent-c0="" class="form-control ng-untouched ng-pristine ng-invalid" formcontrolname="brickId" id="select_brick" name="select_brick"><option _ngcontent-c0="" value=""></option><!--the option will be loaded after the option before the item is selected --></select>
-        - Barkod Oluştur -> <button _ngcontent-c0="" class="btn btn-gs1orange mx-1">Ürün barkod numarası oluştur</button>
-            - onaylıyorum -> <label for="swal2-checkbox" class="swal2-checkbox font-weight-bold" style="display: flex;"><input type="checkbox" value="1" id="swal2-checkbox"><span class="swal2-label">Onaylıyorum</span></label>
-            - evet / hayır -> <div class="swal2-actions"><button type="button" class="swal2-confirm swal2-styled" aria-label="" style="display: inline-block; background-color: rgb(48, 133, 214); border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);">Evet</button><button type="button" class="swal2-cancel swal2-styled" aria-label="" style="display: inline-block; background-color: rgb(221, 51, 51);">Hayır</button></div>
+        - Barkod Olustur -> <button _ngcontent-c0="" class="btn btn-gs1orange mx-1">Urun barkod numarasi olustur</button>
+            - onayliyorum -> <label for="swal2-checkbox" class="swal2-checkbox font-weight-bold" style="display: flex;"><input type="checkbox" value="1" id="swal2-checkbox"><span class="swal2-label">Onayliyorum</span></label>
+            - evet / hayir -> <div class="swal2-actions"><button type="button" class="swal2-confirm swal2-styled" aria-label="" style="display: inline-block; background-color: rgb(48, 133, 214); border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);">Evet</button><button type="button" class="swal2-cancel swal2-styled" aria-label="" style="display: inline-block; background-color: rgb(221, 51, 51);">Hayir</button></div>
     */
 
     const FormElementsSelectors = {
@@ -109,8 +112,8 @@ javascript: (() => {
         swal2ConfirmButton: 'button.swal2-confirm'
     };
 
-    /* gecici olarak şimdi deneme verileriyle doldurulacak */
-    /* bu veriler daha sonra kullanıcı tarafından doldurulacak */
+    /* gecici olarak simdi deneme verileriyle doldurulacak */
+    /* bu veriler daha sonra kullanici tarafindan doldurulacak */
     const FormData = { onekNumara: '', marka: '', aciklama: '', hedefPazar: '', netMiktar: '', olcuBirimi: '', bolum: '', aile: '', sinif: '', kategori: '' };
 
     const OlusturulanBarkodlar = [];
@@ -118,129 +121,129 @@ javascript: (() => {
     function getFormData() {
         Object.keys(FormData).forEach(key => { FormData[key] = ''; });
         let errorCount = 0;
-        try { FormData.onekNumara = document.querySelector(FormElementsSelectors.onekNumara).value; } catch (error) { console.error("OTO: Önek numarası alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.marka = document.querySelector(FormElementsSelectors.marka).value; } catch (error) { console.error("OTO: Marka alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.aciklama = document.querySelector(FormElementsSelectors.aciklama).value; } catch (error) { console.error("OTO: Açıklama alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.hedefPazar = document.querySelector(FormElementsSelectors.hedefPazar).value; } catch (error) { console.error("OTO: Hedef pazar alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.netMiktar = document.querySelector(FormElementsSelectors.netMiktar).value; } catch (error) { console.error("OTO: Net miktar alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.olcuBirimi = document.querySelector(FormElementsSelectors.olcuBirimi).value; } catch (error) { console.error("OTO: Ölçü birimi alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.bolum = document.querySelector(FormElementsSelectors.bolum).value; } catch (error) { console.error("OTO: Bölüm alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.aile = document.querySelector(FormElementsSelectors.aile).value; } catch (error) { console.error("OTO: Aile alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.sinif = document.querySelector(FormElementsSelectors.sinif).value; } catch (error) { console.error("OTO: Sınıf alınırken hata oluştu:", error); errorCount++; }
-        try { FormData.kategori = document.querySelector(FormElementsSelectors.kategori).value; } catch (error) { console.error("OTO: Kategori alınırken hata oluştu:", error); errorCount++; }
-        if (errorCount > 3) throw new Error(`OTO: Form verileri alınırken ${errorCount} hata oluştu. Lütfen form elementlerini kontrol edin.`); else console.log("\nOTO: Form verileri alındı:\n", FormData);
+        try { FormData.onekNumara = document.querySelector(FormElementsSelectors.onekNumara).value; } catch (error) { console.error("OTO: Onek numarasi alinirken hata olustu:", error); errorCount++; }
+        try { FormData.marka = document.querySelector(FormElementsSelectors.marka).value; } catch (error) { console.error("OTO: Marka alinirken hata olustu:", error); errorCount++; }
+        try { FormData.aciklama = document.querySelector(FormElementsSelectors.aciklama).value; } catch (error) { console.error("OTO: Aciklama alinirken hata olustu:", error); errorCount++; }
+        try { FormData.hedefPazar = document.querySelector(FormElementsSelectors.hedefPazar).value; } catch (error) { console.error("OTO: Hedef pazar alinirken hata olustu:", error); errorCount++; }
+        try { FormData.netMiktar = document.querySelector(FormElementsSelectors.netMiktar).value; } catch (error) { console.error("OTO: Net miktar alinirken hata olustu:", error); errorCount++; }
+        try { FormData.olcuBirimi = document.querySelector(FormElementsSelectors.olcuBirimi).value; } catch (error) { console.error("OTO: Olcu birimi alinirken hata olustu:", error); errorCount++; }
+        try { FormData.bolum = document.querySelector(FormElementsSelectors.bolum).value; } catch (error) { console.error("OTO: Bolum alinirken hata olustu:", error); errorCount++; }
+        try { FormData.aile = document.querySelector(FormElementsSelectors.aile).value; } catch (error) { console.error("OTO: Aile alinirken hata olustu:", error); errorCount++; }
+        try { FormData.sinif = document.querySelector(FormElementsSelectors.sinif).value; } catch (error) { console.error("OTO: Sinif alinirken hata olustu:", error); errorCount++; }
+        try { FormData.kategori = document.querySelector(FormElementsSelectors.kategori).value; } catch (error) { console.error("OTO: Kategori alinirken hata olustu:", error); errorCount++; }
+        if (errorCount > 3) throw new Error(`OTO: Form verileri alinirken ${errorCount} hata olustu. Lutfen form elementlerini kontrol edin.`); else console.log("\nOTO: Form verileri alindi:\n", FormData);
     }
 
     async function doldurFormDataAsync() {
-        function handleError(error) { OTOINFOTextRightdivList.textContent = `OTO: Form doldururken hata oluştu: \n${error.message}`; console.error("OTO: Form doldururken hata oluştu:", error); throw error; }
+        function handleError(error) { OTOINFOTextRightdivList.textContent = `OTO: Form doldururken hata olustu: \n${error.message}`; console.error("OTO: Form doldururken hata olustu:", error); throw error; }
         const gcpSelectElement = document.querySelector(FormElementsSelectors.onekNumara);
         if (gcpSelectElement) {
             gcpSelectElement.value ||= gcpSelectElement.querySelector('option[value]:not([value=""])')?.value || '';
             gcpSelectElement.dispatchEvent(new Event('change', { bubbles: true }));
             console.log("OTO: ✅ Onek Numara :", gcpSelectElement.value);
-        } else { console.log("OTO: ❌ Onek Numara bulunamadı."); handleError(new Error("Onek Numara elementi bulunamadı.")); }
+        } else { console.log("OTO: ❌ Onek Numara bulunamadi."); handleError(new Error("Onek Numara elementi bulunamadi.")); }
 
         let attempts = 0;
         const interval = setInterval(() => {
             const btn = document.querySelector(FormElementsSelectors.onekNumara2button);
-            if (btn) { btn.click(); clearInterval(interval); if (attempts % 5 === 1) console.log("OTO: ✅ 2. butona tıklandı."); }
-            else if (++attempts >= 75) { clearInterval(interval); console.log("OTO: ❌ 2. buton bulunamadı. "); handleError(new Error("2. buton bulunamadı.")); }
+            if (btn) { btn.click(); clearInterval(interval); if (attempts % 5 === 1) console.log("OTO: ✅ 2. butona tiklandi."); }
+            else if (++attempts >= 75) { clearInterval(interval); console.log("OTO: ❌ 2. buton bulunamadi. "); handleError(new Error("2. buton bulunamadi.")); }
         }, 200);
 
         const markaInput = document.querySelector(FormElementsSelectors.marka);
-        if (markaInput) { markaInput.value = FormData.marka || ''; markaInput.dispatchEvent(new Event('input', { bubbles: true })); console.log("OTO: ✅ Marka değeri ayarlandı:", markaInput.value); }
-        else { console.log("OTO: ❌ Marka girişi bulunamadı."); handleError(new Error("Marka girişi bulunamadı.")); }
+        if (markaInput) { markaInput.value = FormData.marka || ''; markaInput.dispatchEvent(new Event('input', { bubbles: true })); console.log("OTO: ✅ Marka degeri ayarlandi:", markaInput.value); }
+        else { console.log("OTO: ❌ Marka girisi bulunamadi."); handleError(new Error("Marka girisi bulunamadi.")); }
 
         const aciklamaInput = document.querySelector(FormElementsSelectors.aciklama);
-        if (aciklamaInput) { aciklamaInput.value = FormData.aciklama || ''; aciklamaInput.dispatchEvent(new Event('input', { bubbles: true })); console.log("OTO: ✅ Açıklama değeri ayarlandı:", aciklamaInput.value); }
-        else { console.log("OTO: ❌ Açıklama girişi bulunamadı."); handleError(new Error("Açıklama girişi bulunamadı.")); }
+        if (aciklamaInput) { aciklamaInput.value = FormData.aciklama || ''; aciklamaInput.dispatchEvent(new Event('input', { bubbles: true })); console.log("OTO: ✅ Aciklama degeri ayarlandi:", aciklamaInput.value); }
+        else { console.log("OTO: ❌ Aciklama girisi bulunamadi."); handleError(new Error("Aciklama girisi bulunamadi.")); }
 
         const hedefPazarSelect = document.querySelector(FormElementsSelectors.hedefPazar);
-        if (hedefPazarSelect) { hedefPazarSelect.value = FormData.hedefPazar || ''; hedefPazarSelect.dispatchEvent(new Event('change', { bubbles: true })); console.log("OTO: ✅ Hedef pazar değeri ayarlandı:", hedefPazarSelect.value); }
-        else { console.log("OTO: ❌ Hedef pazar seçimi bulunamadı."); handleError(new Error("Hedef pazar seçimi bulunamadı.")); }
+        if (hedefPazarSelect) { hedefPazarSelect.value = FormData.hedefPazar || ''; hedefPazarSelect.dispatchEvent(new Event('change', { bubbles: true })); console.log("OTO: ✅ Hedef pazar degeri ayarlandi:", hedefPazarSelect.value); }
+        else { console.log("OTO: ❌ Hedef pazar secimi bulunamadi."); handleError(new Error("Hedef pazar secimi bulunamadi.")); }
 
         const netMiktarInput = document.querySelector(FormElementsSelectors.netMiktar);
-        if (netMiktarInput) { netMiktarInput.value = FormData.netMiktar || ''; netMiktarInput.dispatchEvent(new Event('input', { bubbles: true })); console.log("OTO: ✅ Net miktar değeri ayarlandı:", netMiktarInput.value); }
-        else { console.log("OTO: ❌ Net miktar girişi bulunamadı."); handleError(new Error("Net miktar girişi bulunamadı.")); }
+        if (netMiktarInput) { netMiktarInput.value = FormData.netMiktar || ''; netMiktarInput.dispatchEvent(new Event('input', { bubbles: true })); console.log("OTO: ✅ Net miktar degeri ayarlandi:", netMiktarInput.value); }
+        else { console.log("OTO: ❌ Net miktar girisi bulunamadi."); handleError(new Error("Net miktar girisi bulunamadi.")); }
 
         const olcuBirimiSelect = document.querySelector(FormElementsSelectors.olcuBirimi);
-        if (olcuBirimiSelect) { olcuBirimiSelect.value = FormData.olcuBirimi || ''; olcuBirimiSelect.dispatchEvent(new Event('change', { bubbles: true })); console.log("OTO: ✅ Ölçü birimi değeri ayarlandı:", olcuBirimiSelect.value); }
-        else { console.log("OTO: ❌ Ölçü birimi seçimi bulunamadı."); handleError(new Error("Ölçü birimi seçimi bulunamadı.")); }
+        if (olcuBirimiSelect) { olcuBirimiSelect.value = FormData.olcuBirimi || ''; olcuBirimiSelect.dispatchEvent(new Event('change', { bubbles: true })); console.log("OTO: ✅ Olcu birimi degeri ayarlandi:", olcuBirimiSelect.value); }
+        else { console.log("OTO: ❌ Olcu birimi secimi bulunamadi."); handleError(new Error("Olcu birimi secimi bulunamadi.")); }
 
         try {
             const bolumSelect = document.querySelector(FormElementsSelectors.bolum);
             if (bolumSelect) {
                 bolumSelect.value = FormData.bolum || '';
                 bolumSelect.dispatchEvent(new Event('change', { bubbles: true }));
-                console.log("OTO: ✅ Bölüm değeri ayarlandı:", bolumSelect.value);
+                console.log("OTO: ✅ Bolum degeri ayarlandi:", bolumSelect.value);
                 await waitForSpinnerToDisappear();
                 const aileSelectForWait = document.querySelector(FormElementsSelectors.aile);
                 if (aileSelectForWait) { await waitForOptionsToLoad(aileSelectForWait); }
-                else { console.warn("OTO: Aile select elementi bulunamadı, beklenemedi."); }
-            } else { console.log("OTO: ❌ Bölüm seçimi bulunamadı."); handleError(new Error("Bölüm seçimi bulunamadı.")); }
+                else { console.warn("OTO: Aile select elementi bulunamadi, beklenemedi."); }
+            } else { console.log("OTO: ❌ Bolum secimi bulunamadi."); handleError(new Error("Bolum secimi bulunamadi.")); }
 
             const aileSelect = document.querySelector(FormElementsSelectors.aile);
             if (aileSelect) {
                 aileSelect.value = FormData.aile || '';
                 aileSelect.dispatchEvent(new Event('change', { bubbles: true }));
-                console.log("OTO: ✅ Aile değeri ayarlandı:", aileSelect.value);
+                console.log("OTO: ✅ Aile degeri ayarlandi:", aileSelect.value);
                 await waitForSpinnerToDisappear();
                 const sinifSelectForWait = document.querySelector(FormElementsSelectors.sinif);
                 if (sinifSelectForWait) { await waitForOptionsToLoad(sinifSelectForWait); }
-                else { console.warn("OTO: Sınıf select elementi bulunamadı, beklenemedi."); }
-            } else { console.log("OTO: ❌ Aile seçimi bulunamadı."); handleError(new Error("Aile seçimi bulunamadı.")); }
+                else { console.warn("OTO: Sinif select elementi bulunamadi, beklenemedi."); }
+            } else { console.log("OTO: ❌ Aile secimi bulunamadi."); handleError(new Error("Aile secimi bulunamadi.")); }
 
             const sinifSelect = document.querySelector(FormElementsSelectors.sinif);
             if (sinifSelect) {
                 sinifSelect.value = FormData.sinif || '';
                 sinifSelect.dispatchEvent(new Event('change', { bubbles: true }));
-                console.log("OTO: ✅ Sınıf değeri ayarlandı:", sinifSelect.value);
+                console.log("OTO: ✅ Sinif degeri ayarlandi:", sinifSelect.value);
                 await waitForSpinnerToDisappear();
                 const kategoriSelectForWait = document.querySelector(FormElementsSelectors.kategori);
                 if (kategoriSelectForWait) { await waitForOptionsToLoad(kategoriSelectForWait); }
-                else { console.warn("OTO: Kategori select elementi bulunamadı, beklenemedi."); }
-            } else { console.log("OTO: ❌ Sınıf seçimi bulunamadı."); handleError(new Error("Sınıf seçimi bulunamadı.")); }
+                else { console.warn("OTO: Kategori select elementi bulunamadi, beklenemedi."); }
+            } else { console.log("OTO: ❌ Sinif secimi bulunamadi."); handleError(new Error("Sinif secimi bulunamadi.")); }
 
             const kategoriSelect = document.querySelector(FormElementsSelectors.kategori);
             if (kategoriSelect) {
                 kategoriSelect.value = FormData.kategori || '';
                 kategoriSelect.dispatchEvent(new Event('change', { bubbles: true }));
-                console.log("OTO: ✅ Kategori değeri ayarlandı:", kategoriSelect.value);
-            } else { console.log("OTO: ❌ Kategori seçimi bulunamadı."); handleError(new Error("Kategori seçimi bulunamadı.")); }
-        } catch (error) { console.error("OTO: ❌ Kategori seçimlerinde bir hata oluştu:", error); handleError(error); }
+                console.log("OTO: ✅ Kategori degeri ayarlandi:", kategoriSelect.value);
+            } else { console.log("OTO: ❌ Kategori secimi bulunamadi."); handleError(new Error("Kategori secimi bulunamadi.")); }
+        } catch (error) { console.error("OTO: ❌ Kategori secimlerinde bir hata olustu:", error); handleError(error); }
     }
 
 
-    /* Barkod olusturma butonuna tıkla daha sonra bekliyecek  */
+    /* Barkod olusturma butonuna tikla daha sonra bekliyecek  */
     async function barkodOlusturAsync() {
-        function handleError(error) { OTOINFOTextRightdivList.textContent = `OTO: Form doldururken hata oluştu: \n${error.message}`; console.error("OTO: Form doldururken hata oluştu:", error); throw error; }
-        if (Object.values(FormData).some(value => !value)) { console.error("OTO: FormData'da boş değerler var."); OTOINFOTextRightdivList.innerHTML = "Lütfen tüm form alanlarını doldurun."; return; }
+        function handleError(error) { OTOINFOTextRightdivList.textContent = `OTO: Form doldururken hata olustu: \n${error.message}`; console.error("OTO: Form doldururken hata olustu:", error); throw error; }
+        if (Object.values(FormData).some(value => !value)) { console.error("OTO: FormData'da bos degerler var."); OTOINFOTextRightdivList.innerHTML = "Lutfen tum form alanlarini doldurun."; return; }
         try {
             const barkodOlusturButton = document.querySelector(FormElementsSelectors.barkodOlusturButton);
             if (barkodOlusturButton) {
-                barkodOlusturButton.click(); console.log("OTO: ✅ 'Ürün barkod numarası oluştur' butonuna tıklandı.");
+                barkodOlusturButton.click(); console.log("OTO: ✅ 'Urun barkod numarasi olustur' butonuna tiklandi.");
                 /*await waitForSpinnerToDisappear();
                 await new Promise(res => setTimeout(res, 500)); */
                 await waitForElementToAppear(FormElementsSelectors.onayliyorumCheckbox, 20000);
                 const onayliyorumCheckbox = document.querySelector(FormElementsSelectors.onayliyorumCheckbox);
                 if (onayliyorumCheckbox) {
-                    onayliyorumCheckbox.click(); console.log("OTO: ✅ 'Onaylıyorum' checkbox'ına tıklandı.");
+                    onayliyorumCheckbox.click(); console.log("OTO: ✅ 'Onayliyorum' checkbox'ina tiklandi.");
                     const evetButton = document.querySelector(FormElementsSelectors.evetButton);
-                    if (evetButton) { evetButton.click(); console.log("OTO: ✅ 'Evet' butonuna tıklandı."); }
-                    else { console.log("OTO: ❌ 'Evet' butonu bulunamadı."); handleError(new Error("'Evet' butonu bulunamadı.")); }
-                } else { console.log("OTO: ❌ 'Onaylıyorum' checkbox'ı bulunamadı."); handleError(new Error("'Onaylıyorum' checkbox'ı bulunamadı.")); }
-            } else { console.log("OTO: ❌ 'Ürün barkod numarası oluştur' butonu bulunamadı."); handleError(new Error("'Ürün barkod numarası oluştur' butonu bulunamadı.")); }
-        } catch (error) { console.error("OTO: ❌ Barkod oluşturma adımlarında bir hata oluştu:", error); handleError(error); }
+                    if (evetButton) { evetButton.click(); console.log("OTO: ✅ 'Evet' butonuna tiklandi."); }
+                    else { console.log("OTO: ❌ 'Evet' butonu bulunamadi."); handleError(new Error("'Evet' butonu bulunamadi.")); }
+                } else { console.log("OTO: ❌ 'Onayliyorum' checkbox'i bulunamadi."); handleError(new Error("'Onayliyorum' checkbox'i bulunamadi.")); }
+            } else { console.log("OTO: ❌ 'Urun barkod numarasi olustur' butonu bulunamadi."); handleError(new Error("'Urun barkod numarasi olustur' butonu bulunamadi.")); }
+        } catch (error) { console.error("OTO: ❌ Barkod olusturma adimlarinda bir hata olustu:", error); handleError(error); }
         await new Promise(resolve => setTimeout(resolve, 500));
         try {
             const contentElement = await waitForElementToAppear(FormElementsSelectors.swal2Content);
-            const dialogText = contentElement.textContent; console.log("OTO: ✅ Barkod onay pop-up'ı metni:", dialogText);
+            const dialogText = contentElement.textContent; console.log("OTO: ✅ Barkod onay pop-up'i metni:", dialogText);
             const barcodeNumbers = dialogText.match(/\d{8,}/g);
-            if (barcodeNumbers && barcodeNumbers[0]) { const barcodeNumber = barcodeNumbers[0]; OlusturulanBarkodlar.push(barcodeNumber); console.log(`OTO: 🎉 Ürün başarıyla eklendi. Barkod Numarası: ${barcodeNumber}`); }
-            else { console.log("OTO: ⚠️ Barkod numarası pop-up metninden çıkarılamadı."); handleError(new Error("Barkod numarası pop-up metninden çıkarılamadı.")); }
+            if (barcodeNumbers && barcodeNumbers[0]) { const barcodeNumber = barcodeNumbers[0]; OlusturulanBarkodlar.push(barcodeNumber); console.log(`OTO: 🎉 Urun basariyla eklendi. Barkod Numarasi: ${barcodeNumber}`); }
+            else { console.log("OTO: ⚠️ Barkod numarasi pop-up metninden cikarilamadi."); handleError(new Error("Barkod numarasi pop-up metninden cikarilamadi.")); }
             const okButton = await waitForElementToAppear(FormElementsSelectors.swal2ConfirmButton);
-            okButton.click(); console.log("OTO: ✅ Onay pop-up'ındaki 'OK' butonuna tıklandı.");
-        } catch (error) { console.error("OTO: ❌ Barkod onay pop-up'ı yönetilirken bir hata oluştu:", error); handleError(error); }
+            okButton.click(); console.log("OTO: ✅ Onay pop-up'indaki 'OK' butonuna tiklandi.");
+        } catch (error) { console.error("OTO: ❌ Barkod onay pop-up'i yonetilirken bir hata olustu:", error); handleError(error); }
     }
 
 
@@ -249,11 +252,11 @@ javascript: (() => {
             await doldurFormDataAsync();
             console.log("OTO: ✅ Form verileri dolduruldu.");
             await barkodOlusturAsync();
-        } catch (masterError) { console.error("OTO: Ana otomasyon sürecinde bir hata oluştu:", masterError); throw masterError; }
+        } catch (masterError) { console.error("OTO: Ana otomasyon surecinde bir hata olustu:", masterError); throw masterError; }
 
     };
     function SaveXlsxFile() {
-        if (OlusturulanBarkodlar.length === 0) { console.error("OTO: Henüz barkod oluşturulmadı. Excel dosyası indirilemedi."); OTOINFOTextRightdivList.textContent = "Henüz barkod oluşturulmadı. Excel dosyası indirilemedi."; return; }
+        if (OlusturulanBarkodlar.length === 0) { console.error("OTO: Henuz barkod olusturulmadi. Excel dosyasi indirilemedi."); OTOINFOTextRightdivList.textContent = "Henuz barkod olusturulmadi. Excel dosyasi indirilemedi."; return; }
         try {
             const data = [['GTIN'], ...OlusturulanBarkodlar.map(barkod => [barkod])];
             const scriptt = document.createElement('script');
@@ -271,10 +274,10 @@ javascript: (() => {
                 link.click(); document.body.removeChild(link);
             }; document.body.appendChild(scriptt);
         }
-        catch { console.error("OTO: Barkod numaraları xlsx olarak indirilirken bir hata oluştu."); }
+        catch { console.error("OTO: Barkod numaralari xlsx olarak indirilirken bir hata olustu."); }
     }
     function SaveTxtFile() {
-        if (OlusturulanBarkodlar.length === 0) { console.error("OTO: Henüz barkod oluşturulmadı. Barkod metin dosyası indirilemedi."); OTOINFOTextRightdivList.textContent = "Henüz barkod oluşturulmadı. Barkod metin dosyası indirilemedi."; return; }
+        if (OlusturulanBarkodlar.length === 0) { console.error("OTO: Henuz barkod olusturulmadi. Barkod metin dosyasi indirilemedi."); OTOINFOTextRightdivList.textContent = "Henuz barkod olusturulmadi. Barkod metin dosyasi indirilemedi."; return; }
         try {
             const data = [['GTIN'], ...OlusturulanBarkodlar.map(barkod => [barkod])];
             const txtBlob = new Blob([data.map(row => row.join('\t')).join('\n')], { type: 'text/plain' });
@@ -283,9 +286,9 @@ javascript: (() => {
             txtLink.download = `Barkod-OTO-${new Date().toISOString().split('T')[0]}.txt`;
             document.body.appendChild(txtLink);
             txtLink.click(); document.body.removeChild(txtLink);
-            console.log("OTO: Barkod numaraları txt olarak indirildi.");
+            console.log("OTO: Barkod numaralari txt olarak indirildi.");
         }
-        catch { console.error("OTO: Barkod numaraları txt olarak indirilirken bir hata oluştu."); }
+        catch { console.error("OTO: Barkod numaralari txt olarak indirilirken bir hata olustu."); }
     }
 
     /***************************************************** */
@@ -568,28 +571,28 @@ body {padding-top: 11.2rem !important;}
         OTOdiv.appendChild(mfmxDiv);
 
         const OTOActionDiv = document.createElement('div'); OTOActionDiv.id = 'OTOActionDiv';
-        const OTOActionButtonRead = document.createElement('button'); OTOActionButtonRead.id = 'OTOActionButtonRead'; OTOActionButtonRead.textContent = 'İÇERİKLERİ OKU'; OTOActionDiv.appendChild(OTOActionButtonRead);
-        const OTOActionButtonTek = document.createElement('button'); OTOActionButtonTek.id = 'OTOActionButtonTek'; OTOActionButtonTek.textContent = 'TEK BARKOD OLUŞTUR'; OTOActionDiv.appendChild(OTOActionButtonTek);
+        const OTOActionButtonRead = document.createElement('button'); OTOActionButtonRead.id = 'OTOActionButtonRead'; OTOActionButtonRead.textContent = 'ICERIKLERI OKU'; OTOActionDiv.appendChild(OTOActionButtonRead);
+        const OTOActionButtonTek = document.createElement('button'); OTOActionButtonTek.id = 'OTOActionButtonTek'; OTOActionButtonTek.textContent = 'TEK BARKOD OLUSTUR'; OTOActionDiv.appendChild(OTOActionButtonTek);
         OTOActionButtonTek.addEventListener('click', async () => {
             try {
-                if (Object.values(FormData).some(value => !value)) { console.error("OTO: FormData'da boş değerler var."); OTOINFOTextRightdivList.innerHTML = "Lütfen tüm form alanlarını doldurun."; return; }
-                await FormDoldurBarkodOlustur(); console.log("OTO: Barkod numarası oluşturuldu:");
-            } catch (error) { console.error("OTO: Barkod oluşturulurken hata oluştu:", error); OTOINFOTextRightdivList.textContent = "Barkod oluşturulurken hata oluştu. " + error; }
+                if (Object.values(FormData).some(value => !value)) { console.error("OTO: FormData'da bos degerler var."); OTOINFOTextRightdivList.innerHTML = "Lutfen tum form alanlarini doldurun."; return; }
+                await FormDoldurBarkodOlustur(); console.log("OTO: Barkod numarasi olusturuldu:");
+            } catch (error) { console.error("OTO: Barkod olusturulurken hata olustu:", error); OTOINFOTextRightdivList.textContent = "Barkod olusturulurken hata olustu. " + error; }
         });
 
         const OTOSplitter = document.createElement('span'); OTOSplitter.className = 'OTOSplitter';
         OTOActionDiv.appendChild(OTOSplitter);
 
-        const OTOActionInput = document.createElement('input'); OTOActionInput.id = 'OTOActionInput'; OTOActionInput.type = 'number'; OTOActionInput.placeholder = 'Barkod Sayısı'; OTOActionInput.value = 1; OTOActionInput.min = 1; OTOActionInput.max = 10000; OTOActionDiv.appendChild(OTOActionInput);
+        const OTOActionInput = document.createElement('input'); OTOActionInput.id = 'OTOActionInput'; OTOActionInput.type = 'number'; OTOActionInput.placeholder = 'Barkod Sayisi'; OTOActionInput.value = 1; OTOActionInput.min = 1; OTOActionInput.max = 10000; OTOActionDiv.appendChild(OTOActionInput);
         OTOActionInput.addEventListener('input', () => { const value = parseInt(OTOActionInput.value, 10); if (isNaN(value) || value < 1) OTOActionInput.value = 1; else if (value > 10000) OTOActionInput.value = 10000; else OTOActionInput.value = value; });
-        const OTOActionStartFull = document.createElement('button'); OTOActionStartFull.id = 'OTOActionStartFull'; OTOActionStartFull.textContent = 'BAŞLA'; OTOActionDiv.appendChild(OTOActionStartFull);
+        const OTOActionStartFull = document.createElement('button'); OTOActionStartFull.id = 'OTOActionStartFull'; OTOActionStartFull.textContent = 'BASLA'; OTOActionDiv.appendChild(OTOActionStartFull);
         OTOActionStartFull.addEventListener('click', async () => { createMultipleBarcodes(); });
 
         OTOdiv.appendChild(OTOActionDiv);
 
         const OTOInfoDiv = document.createElement('div'); OTOInfoDiv.id = 'OTOInfoDiv';
 
-        const OTOInfoButtonDiv = document.createElement('div'); OTOInfoButtonDiv.id = 'OTOInfoButtonDiv'; OTOInfoButtonDiv.innerHTML = '<span>Oluşturulan Numaraları İndir :</span>';
+        const OTOInfoButtonDiv = document.createElement('div'); OTOInfoButtonDiv.id = 'OTOInfoButtonDiv'; OTOInfoButtonDiv.innerHTML = '<span>Olusturulan Numaralari Indir :</span>';
         const OTOInfoButtonXlsx = document.createElement('button'); OTOInfoButtonXlsx.id = 'OTOInfoButtonXlsx'; OTOInfoButtonXlsx.textContent = 'Excel (.xlsx)';
         OTOInfoButtonXlsx.addEventListener('click', SaveXlsxFile);
         OTOInfoButtonDiv.appendChild(OTOInfoButtonXlsx);
@@ -600,17 +603,17 @@ body {padding-top: 11.2rem !important;}
 
         const OTOInfoTextDiv = document.createElement('div'); OTOInfoTextDiv.id = 'OTOInfoTextDiv';
         const OTOINFOTextLeftdiv = document.createElement('div'); OTOINFOTextLeftdiv.id = 'OTOINFOTextLeftdiv'; OTOInfoTextDiv.appendChild(OTOINFOTextLeftdiv);
-        const OTOINFOTextLeftdivTitle = document.createElement('span'); OTOINFOTextLeftdivTitle.textContent = 'Oluşturulan Barkodlar'; OTOINFOTextLeftdiv.appendChild(OTOINFOTextLeftdivTitle); OTOINFOTextLeftdivTitle.style.fontWeight = 'bold';
+        const OTOINFOTextLeftdivTitle = document.createElement('span'); OTOINFOTextLeftdivTitle.textContent = 'Olusturulan Barkodlar'; OTOINFOTextLeftdiv.appendChild(OTOINFOTextLeftdivTitle); OTOINFOTextLeftdivTitle.style.fontWeight = 'bold';
         const OTOINFOTextLeftSplitter = document.createElement('span'); OTOINFOTextLeftSplitter.className = 'OTOSplitter'; OTOINFOTextLeftdiv.appendChild(OTOINFOTextLeftSplitter);
         const OTOINFOTextLeftdivList = document.createElement('div'); OTOINFOTextLeftdivList.id = 'OTOINFOTextLeftdivList'; OTOINFOTextLeftdivList.textContent = 'YOK'; OTOINFOTextLeftdiv.appendChild(OTOINFOTextLeftdivList);
-        function updateInfoText() { OTOINFOTextLeftdivTitle.textContent = OlusturulanBarkodlar.length > 0 ? 'Adet: ' + OlusturulanBarkodlar.length : 'Oluşturulanlar:'; OTOINFOTextLeftdivList.innerHTML = OlusturulanBarkodlar.length > 0 ? OlusturulanBarkodlar.map(barkod => `${barkod}`).join('<br>') : 'YOK'; } updateInfoText();
+        function updateInfoText() { OTOINFOTextLeftdivTitle.textContent = OlusturulanBarkodlar.length > 0 ? 'Adet: ' + OlusturulanBarkodlar.length : 'Olusturulanlar:'; OTOINFOTextLeftdivList.innerHTML = OlusturulanBarkodlar.length > 0 ? OlusturulanBarkodlar.map(barkod => `${barkod}`).join('<br>') : 'YOK'; } updateInfoText();
         const originalPush = OlusturulanBarkodlar.push; OlusturulanBarkodlar.push = function (...args) { const result = originalPush.apply(this, args); updateInfoText(); return result; };
         const OTOINFOTextRightdiv = document.createElement('div'); OTOINFOTextRightdiv.id = 'OTOINFOTextRightdiv'; OTOInfoTextDiv.appendChild(OTOINFOTextRightdiv);
-        const OTOINFOTextRightdivTitle = document.createElement('span'); OTOINFOTextRightdivTitle.textContent = 'Form İçeriği'; OTOINFOTextRightdiv.appendChild(OTOINFOTextRightdivTitle); OTOINFOTextRightdivTitle.style.fontWeight = 'bold';
+        const OTOINFOTextRightdivTitle = document.createElement('span'); OTOINFOTextRightdivTitle.textContent = 'Form Icerigi'; OTOINFOTextRightdiv.appendChild(OTOINFOTextRightdivTitle); OTOINFOTextRightdivTitle.style.fontWeight = 'bold';
         const OTOINFOTextRightSplitter = document.createElement('span'); OTOINFOTextRightSplitter.className = 'OTOSplitter'; OTOINFOTextRightdiv.appendChild(OTOINFOTextRightSplitter);
         const OTOINFOTextRightdivList = document.createElement('div'); OTOINFOTextRightdivList.id = 'OTOINFOTextRightdivList'; OTOINFOTextRightdivList.textContent = 'YOK'; OTOINFOTextRightdiv.appendChild(OTOINFOTextRightdivList);
-        function updateInfoRightText() { const formDataSiralama = ["Önek", "Marka", "Açıklama", "Hedef Pazar", "Net Miktar", "Ölçü Birimi", "Bölüm", "Aile", "Sınıf", "Kategori"]; const formDataKeySirali = ['onekNumara', 'marka', 'aciklama', 'hedefPazar', 'netMiktar', 'olcuBirimi', 'bolum', 'aile', 'sinif', 'kategori']; OTOINFOTextRightdivList.innerHTML = formDataSiralama.map((key, index) => { const value = FormData[formDataKeySirali[index]] || 'YOK'; return `<strong >${key}:</strong> ${value}`; }).join('<br>'); } updateInfoRightText();
-        OTOActionButtonRead.addEventListener('click', () => { try { getFormData(); updateInfoRightText(); OTOINFOTextRightdivTitle.textContent = 'Form Verileri Okundu'; setTimeout(() => { OTOINFOTextRightdivTitle.textContent = 'Form İçeriği'; }, 2000); } catch (error) { console.error("OTO: Form verileri okunurken bir hata oluştu:", error); OTOINFOTextRightdivList.textContent = 'OTO: Form verileri okunurken bir hata oluştu: ' + error.message; } });
+        function updateInfoRightText() { const formDataSiralama = ["Onek", "Marka", "Aciklama", "Hedef Pazar", "Net Miktar", "Olcu Birimi", "Bolum", "Aile", "Sinif", "Kategori"]; const formDataKeySirali = ['onekNumara', 'marka', 'aciklama', 'hedefPazar', 'netMiktar', 'olcuBirimi', 'bolum', 'aile', 'sinif', 'kategori']; OTOINFOTextRightdivList.innerHTML = formDataSiralama.map((key, index) => { const value = FormData[formDataKeySirali[index]] || 'YOK'; return `<strong >${key}:</strong> ${value}`; }).join('<br>'); } updateInfoRightText();
+        OTOActionButtonRead.addEventListener('click', () => { try { getFormData(); updateInfoRightText(); OTOINFOTextRightdivTitle.textContent = 'Form Verileri Okundu'; setTimeout(() => { OTOINFOTextRightdivTitle.textContent = 'Form Icerigi'; }, 2000); } catch (error) { console.error("OTO: Form verileri okunurken bir hata olustu:", error); OTOINFOTextRightdivList.textContent = 'OTO: Form verileri okunurken bir hata olustu: ' + error.message; } });
         OTOInfoDiv.appendChild(OTOInfoTextDiv);
         OTOdiv.appendChild(OTOInfoDiv);
 
@@ -618,16 +621,14 @@ body {padding-top: 11.2rem !important;}
     SetGui();
 
     async function createMultipleBarcodes() {
-        if (Object.values(FormData).some(value => !value)) { console.error("OTO: FormData'da boş değerler var."); OTOINFOTextRightdivList.innerHTML = "Lütfen tüm form alanlarını doldurun."; return; }
+        if (Object.values(FormData).some(value => !value)) { console.error("OTO: FormData'da bos degerler var."); OTOINFOTextRightdivList.innerHTML = "Lutfen tum form alanlarini doldurun."; return; }
         let countt = 0;
-        try {
-            countt = parseInt(OTOActionInput.value, 10);
-            if (isNaN(countt) || countt < 1) { OTOINFOTextRightdivList.innerHTML = "Lütfen geçerli bir barkod sayısı girin."; return; }
-        } catch (error) { console.error("OTO: Toplu barkod oluşturmak için sayıyı okurken bir hata oluştu:", error); OTOINFOTextRightdivList.textContent = "Toplu barkod oluşturmak için sayıyı okurken bir hata oluştu: " + error; }
-        if (countt < 1 || countt > 10000) { console.error("OTO: Barkod sayısı 1 ile 10000 arasında olmalıdır."); OTOINFOTextRightdivList.textContent = "Barkod sayısı 1 ile 10000 arasında olmalıdır."; return; }
+        try { countt = parseInt(OTOActionInput.value, 10); if (isNaN(countt) || countt < 1) { OTOINFOTextRightdivList.innerHTML = "Lutfen gecerli bir barkod sayisi girin."; return; } }
+        catch (error) { console.error("OTO: Toplu barkod olusturmak icin sayiyi okurken bir hata olustu:", error); OTOINFOTextRightdivList.textContent = "Toplu barkod olusturmak icin sayiyi okurken bir hata olustu: " + error; }
+        if (countt < 1 || countt > 10000) { console.error("OTO: Barkod sayisi 1 ile 10000 arasinda olmalidir."); OTOINFOTextRightdivList.textContent = "Barkod sayisi 1 ile 10000 arasinda olmalidir."; return; }
         for (let i = 0; i < countt; i++) {
             try { await FormDoldurBarkodOlustur(); }
-            catch (error) { console.error(`OTO: Toplu Barkod ${i + 1} oluşturulurken hata oluştu:`, error); OTOINFOTextRightdivList.textContent = ` Toplu Barkod ${i + 1} oluşturulurken hata oluştu: ` + error.message; break; }
+            catch (error) { console.error(`OTO: Toplu Barkod ${i + 1} olusturulurken hata olustu:`, error); OTOINFOTextRightdivList.textContent = ` Toplu Barkod ${i + 1} olusturulurken hata olustu: ` + error.message; break; }
         }
     }
 
