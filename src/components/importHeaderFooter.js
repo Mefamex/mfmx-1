@@ -5,7 +5,7 @@
  * @license MIT
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-08-08-T19:00:00Z
+ * @lastModified 2025-08-10-T00:00:00Z
  */
 'use strict';
 
@@ -23,6 +23,7 @@ let scriptPath = getScriptPath();
 
 
 (async () => {
+    console.log('🔄 HeaderFooter CSS yükleniyor...');
     const cssPath = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
     const existingLink = () => {
         if (document.querySelector(`link[href="${cssPath}"]`)) return true;
@@ -44,7 +45,7 @@ let scriptPath = getScriptPath();
             } else console.warn('⚠️ headerFooter.css bulunamadı');
         } catch (error) { console.warn('⚠️ CSS dosyası kontrol edilemedi', error); }
     }
-
+    console.log('✅ HeaderFooter CSS yüklendi.');
     const createFooterTask = (async () => { try { await CreateFooter(); } catch (error) { console.error('❌ Footer oluşturulurken hata:', error); } })();
     const createHeaderTask = (async () => { try { await CreateHeader(); } catch (error) { console.error('❌ Header oluşturulurken hata:', error); } })();
     Promise.all([createFooterTask, createHeaderTask]);
@@ -58,6 +59,7 @@ let scriptPath = getScriptPath();
 
 
 async function CreateFooter() {
+    console.log('🔄 Footer oluşturuluyor...');
     const footer = document.querySelector('body footer') || document.createElement('footer');
     footer.id = "footer"; footer.innerHTML = '';
 
@@ -100,15 +102,15 @@ async function CreateFooter() {
                 <summary> İLETİŞİM </summary> 
                 <ul> 
                     <li> <a href="https://mefamex.com/contact/" title="İletişim"> İletişim Anasayfa </a> </li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="mailto:info@mefamex.com" title="e-mail"> <img src="${icon_black_path}/mail_icon.png"  alt="email icon" title="e-mail" decoding="async" loading="lazy"> E-mail: info@mefamex.com </a> </li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link" title=" İletişim Formu "> <img src="${icon_black_path}/contact_icon.png" alt="iletisim icon" title="Iletişim Formu" decoding="async" loading="lazy"> Anonim İletişim Formu </a> </li>
                     <li> <a target="_blank" rel="noopener noreferrer" href="https://github.com/Mefamex/" title="GitHub"> <img src="${icon_black_path}/github_icon.png" alt="GitHub icon" title="GitHub" decoding="async" loading="lazy"> GitHub </a> </li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Mefamex" title="Twitter"> <img src="${icon_black_path}/x_icon.png" alt="Twitter icon" title="Twitter" decoding="async" loading="lazy"> Twitter </a> </li>
                     <li> <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mefamex" title="LinkedIn"> <img src="${icon_black_path}/linkedin_icon.png" alt="LinkedIn icon" title="LinkedIn" decoding="async" loading="lazy"> LinkedIn </a> </li>
                     <li> <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mefamex" title="Instagram"> <img src="${icon_black_path}/instagram_icon.png" alt="Instagram icon" title="Instagram" decoding="async" loading="lazy"> Instagram </a> </li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/mefamex58/" title="Facebook"> <img src="${icon_black_path}/facebook_icon.png" alt="Facebook icon" title="Facebook" decoding="async" loading="lazy"> Facebook </a> </li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@mefamex/" title="YouTube"> <img src="${icon_black_path}/youtube_icon.png" alt="YouTube icon" title="YouTube" decoding="async" loading="lazy"> YouTube </a> </li>
-                    <li> <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/user/mefamex" title="Reddit"> <img src="${icon_black_path}/reddit_icon.png" alt="Reddit icon" title="Reddit" decoding="async" loading="lazy"> Reddit </a> </li>
+                    <li> <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/mefamex58/" title="Facebook"> <img src="${icon_black_path}/facebook_icon.png" alt="Facebook icon" title="Facebook" decoding="async" loading="lazy"> Facebook </a> </li> 
+                    <!-- <li> <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/user/mefamex" title="Reddit"> <img src="${icon_black_path}/reddit_icon.png" alt="Reddit icon" title="Reddit" decoding="async" loading="lazy"> Reddit </a> </li> -->
+                    <!-- <li> <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@mefamex/" title="YouTube"> <img src="${icon_black_path}/youtube_icon.png" alt="YouTube icon" title="YouTube" decoding="async" loading="lazy"> YouTube </a> </li> -->
+                    <!-- <li> <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Mefamex" title="Twitter"> <img src="${icon_black_path}/x_icon.png" alt="Twitter icon" title="Twitter" decoding="async" loading="lazy"> Twitter </a> </li> -->
+                    <li> <a target="_blank" rel="noopener noreferrer" href="mailto:info@mefamex.com" title="e-mail"> <img src="${icon_black_path}/mail_icon.png"  alt="email icon" title="e-mail" decoding="async" loading="lazy"> E-mail: info@mefamex.com </a> </li>
+                    <li> <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link" title=" İletişim Formu "> <img src="${icon_black_path}/contact_icon.png" alt="iletisim icon" title="Iletişim Formu" decoding="async" loading="lazy"> İletişim Formu </a> </li>
                 </ul> 
             </details> 
         </div> 
@@ -155,17 +157,20 @@ async function CreateFooter() {
     const footerBaseRem = 40;
     const getRem = () => parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
-    if (window.innerWidth < footerBaseRem * getRem()) [...firstPart.querySelectorAll('details')].slice(1).forEach(details => details.removeAttribute('open'));
+    if (window.innerWidth < footerBaseRem * getRem()) [...firstPart.querySelectorAll('details')].slice(2).forEach(details => details.removeAttribute('open'));
 
     if (firstPart.querySelectorAll('details').length > 1) { firstPart.querySelectorAll('details').forEach(details => { details.addEventListener('toggle', (event) => { checkDetails(event.target); }); }); }
     // en son açılan details öğesini hariç diğerlerini kapat
     function checkDetails(changedDetails) {
-        // Sadece açılan details için diğerlerini kapat
+        // burada detailsler 2li sıralar halinde diziliyor. biri açıldığında yanındakini de aç, diğerlerini kapat
         if (changedDetails.hasAttribute('open') && window.innerWidth < footerBaseRem * getRem()) {
-            firstPart.querySelectorAll('details').forEach(details => {
-                if (details !== changedDetails) {
-                    details.removeAttribute('open');
-                }
+            const detailsList = Array.from(firstPart.querySelectorAll('details'));
+            const idx = detailsList.indexOf(changedDetails);
+            const groupStart = idx % 2 === 0 ? idx : idx - 1;
+            // 2'li gruptaki details'leri açık bırak, diğerlerini kapat
+            detailsList.forEach((details, i) => {
+                if (i === groupStart || i === groupStart + 1) details.setAttribute('open', '');
+                else details.removeAttribute('open');
             });
         }
     }
@@ -197,6 +202,7 @@ async function CreateFooter() {
             secondPartObserver.observe(secondPart);
         });
     }
+    console.log('✅ Footer oluşturuldu.');
 }
 
 
@@ -206,6 +212,7 @@ async function CreateFooter() {
 
 
 async function CreateHeader() {
+    console.log('🔄 Header oluşturuluyor...');
     // Select / Create the header
     let header = document.querySelectorAll('body > header') || document.querySelectorAll('#header');
     if (header) {
@@ -213,7 +220,7 @@ async function CreateHeader() {
         else header = header[0];
     }
     if (!header) { header = document.createElement("header"); }
-    header.id = "header"; header.innerHTML = ''; header.classList.add("scrolled");
+    header.id = "header"; header.innerHTML = ''; header.classList.add("scrolled", "slim");
     if (window.innerWidth < 600) { header.classList.add('slim'); }
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
@@ -265,6 +272,16 @@ async function CreateHeader() {
     menuDiv.setAttribute("data-lastupdate", onlyDate ? `${onlyDate}` : "just do it");
 
     /* header için scrolled classı */
+
+    /* 5remden küçükce yukarı kaydır */
+    setInterval(() => {
+        if (document.documentElement.scrollTop < 5 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16) && !window.location.hash) {
+            header.classList.remove("scrolled");
+            if (10 < document.documentElement.scrollTop) setTimeout(() => { if (document.documentElement.scrollTop < 5 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16) && !window.location.hash) { window.scrollTo({ top: 0, behavior: 'smooth' }); header.classList.remove("scrolled"); } }, 1000);
+        }
+    }, 500, { passive: true });
+
+    /* scroll ise header gizle */
     let lastScroll = document.documentElement.scrollTop + 0;
     let lastScrollEvent = 0; /*  header menu button için */
     window.addEventListener("scroll", () => {
@@ -275,11 +292,12 @@ async function CreateHeader() {
         lastScroll = scrollTop + 0;
     }, { passive: true });
     /* header hover olduğunda scrolled sınıfını sil */
-    header.addEventListener("mouseenter", () => { header.classList.remove('scrolled'); },{ passive: true });
+    header.addEventListener("mouseenter", () => { header.classList.remove('scrolled'); }, { passive: true });
     setTimeout(() => { window.scrollTo({ top: window.scrollY + 5, behavior: 'smooth' }); }, 200);
     /* header'ı ekle */
     if (header !== document.body.firstChild) { document.body.insertBefore(header, document.body.firstChild); }
     setTimeout(() => { if (window.scrollY < '150' && !window.location.hash) window.scrollTo({ top: 0, behavior: 'smooth' }) }, 100);
+
     /* responsive header */
     let lastCallTime = 0;
     let throttleTimeout = null;
@@ -295,6 +313,11 @@ async function CreateHeader() {
             } return;
         } lastCallTime = now;
 
+        try {
+            header.classList.remove("blink");
+            void header.offsetWidth;
+            header.classList.add("blink");
+        } catch (e) { }
         let documentRem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
         const getfark = () => navBar.firstChild.getBoundingClientRect().left - divLeft.getBoundingClientRect().right;
         let fark = getfark();
@@ -356,9 +379,9 @@ async function CreateHeader() {
             else { if (header.classList.contains("slim")) { header.classList.add("scrolled"); } header.classList.remove("slim", "menuShow"); }
         } checkSlim();
     } /* navBarImager */
-    setTimeout(navBarImager, 10);
-    setInterval(navBarImager, 100);
+    setTimeout(navBarImager, 100); setTimeout(navBarImager, 200); setTimeout(navBarImager, 300); setTimeout(navBarImager, 500); setTimeout(navBarImager, 750); setTimeout(navBarImager, 1000);
+    setInterval(navBarImager, 2000);
     window.addEventListener("resize", navBarImager, { passive: true });
-
+    console.log('✅ Header oluşturuldu.');
 }
 
