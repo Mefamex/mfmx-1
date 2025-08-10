@@ -50,9 +50,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MEFAMEX" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="og:date" content="2025-04-23T02:00:00Z" />
+    <meta property="og:date" content="2025-08-10T02:00:00Z" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-04-23T02:00:00Z" />
+    <meta property="article:modified_time" content="2025-08-10T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -63,7 +63,7 @@
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
     <meta name="twitter:url" content="https://mefamex.com/gallery/" />
     <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-04-23T02:00:00Z" />
+    <meta name="twitter:date" content="2025-08-10T02:00:00Z" />
 </head>
 
 <body>
@@ -79,21 +79,6 @@
                 <p id="legal_notice">Bu sayfada yer alan görsellerin tüm hakları Mefamex'e aittir. İzinsiz kullanımı yasaktır.</p>
                 <p>Açılış tarihi: 29.01.2025 || Son güncelleme tarihi: 27.02.2025</p>
             </div>
-        </section> 
-        <!-- -->
-        <!-- -->
-        <!-- -->
-        <section id="page-navigator">
-            <h2>SEÇİCİLER</h2>
-            <fieldset id="gorsel_boyutu">
-                <legend>Resim Boyutu:</legend>
-                <label> <input id="0" type="radio" name="sizee" /> X1 </label>
-                <label> <input id="1" type="radio" name="sizee" checked /> X2 </label>
-                <label> <input id="2" type="radio" name="sizee" /> X3 </label>
-                <label> <input id="3" type="radio" name="sizee" /> X4 </label>
-                <label> <input id="4" type="radio" name="sizee" /> X5 </label>
-                <label> <input id="5" type="radio" name="sizee" /> MAX </label>
-            </fieldset>
         </section>
         <!-- -->
         <!--  webp:  type="image/webp"   png:  type="image/png"   jpg:  type="image/jpeg"  —  -->
@@ -170,7 +155,7 @@
         <!-- -->
         <br />
         <hr />
-        <h2 class="image-titles"> DESIGNS </h2>
+        <h2 class="image-titles"> FUTURE </h2>
         <section class="images">
             <div class="card">
                 <picture id="picture-020" name="picture-020" itemprop="image" itemtype="http://schema.org/ImageObject">
@@ -415,28 +400,10 @@
     <!-- -->
     <script class="alternatively" src="../src/components/importHeaderFooter.js"></script>
     <!-- -->
-    <script defer>
-        document.querySelectorAll('input[name="sizee"]').forEach((checkbox) => {
-            checkbox.style.display = "none";
-            checkbox.parentElement.classList.toggle("label-secildi", checkbox.checked);
-            if (checkbox.checked)
-                document.documentElement.style.setProperty(
-                    "--images-card-width",
-                    ["10em", "14em", "20em", "28em", "42em", "100vw"][checkbox.id] || "30vw"
-                );
-            checkbox.onchange = () => {
-                requestAnimationFrame(() => {
-                    document.querySelectorAll('input[name="sizee"]').forEach((element) => {
-                        element.parentElement.classList.toggle("label-secildi", element.checked);
-                        if (element.checked)
-                            document.documentElement.style.setProperty(
-                                "--images-card-width",
-                                ["10em", "14em", "20em", "28em", "42em", "100vw"][element.id] || "30vw"
-                            );
-                    });
-                });
-            };
-        });
+    <script text="text/javascript" defer>
+        // if click to big image. class=display-none
+        // Eğer büyük resme tıklanırsa kapat
+        document.querySelector("#big-image").onclick = function (e) { if (e.target === this) this.classList.add("display-none"); };
         const bigImage = document.querySelector("#big-image");
         document.querySelectorAll(".card picture").forEach((pictureElement) => {
             pictureElement.style.cursor = "pointer";

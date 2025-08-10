@@ -464,10 +464,10 @@
 
         /* Typing animation for hero title */
         function typeWriter(element, text, speed = 100, timeoutt) {
-            element.innerHTML = ' '; let i = 0;
+            element.innerHTML = '\u00A0'; let i = 0;
             if (timeoutt) { setTimeout(() => { typeWriter(element, text, speed); }, timeoutt); return; }
             else element.innerHTML = '';
-            function typee() { if (i < text.length) { element.innerHTML += text.charAt(i++); setTimeout(typee, speed); } }
+            function typee() { if (i < text.length) { element.textContent += text.charAt(i++); setTimeout(typee, speed); } }
             typee();
         }
         /* Initialize typing animation */

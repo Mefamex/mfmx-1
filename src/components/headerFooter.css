@@ -6,7 +6,7 @@
 * Copyright 2024 Mefamex
 * Licensed under MIT (https://github.com/Mefamex/)
 * Created on  : 2024-08-20
-* Last update : 2025-08-08-T19:00:00Z
+* Last update : 2025-08-10-T00:00:00Z
 * Title : headerFooter.css
 * This css file is for the header and footer of the Mefamex website.
 */
@@ -210,8 +210,17 @@ header:hover {
 }
 
 header.scrolled:not(:hover) {
+    animation: opa-0 1s ease-in-out 2s backwards;
     opacity: 0;
-    transition: opacity 5s cubic-bezier( 0.16, 0.91, 0.17, 0.9 ) ;
+}
+
+@keyframes opa-0 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width: 40rem) {
@@ -236,7 +245,10 @@ header #headerDivLeft {
     margin-top: 0.5rem;
     margin-right: auto;
     align-self: flex-start;
+    border-right: 1px solid transparent;
 }
+
+
 
 header #headerDivLeft:hover {
     transform: scale(1.05) translateX(0.2em);
@@ -305,6 +317,20 @@ header #headerDivLeftText {
     letter-spacing: 0.05em;
     white-space: nowrap;
     animation: 1s gradientAnimation infinite alternate;
+}
+
+header.blink  #headerDivLeftText{
+    animation: header-blink 0.2s linear 1;
+}
+
+@keyframes header-blink {
+    0% {
+        filter: brightness(1.5)
+    }
+
+    100% {
+        filter: brightness(1)
+    }
 }
 
 header.slim #headerDivLeftText {
@@ -675,9 +701,9 @@ header #headerMenuDiv::after {
 */
 
 header.scrolled, header.slim {
+    transition: all 0.5s ease-in-out;
     height: 3rem;
     margin-bottom: 2rem;
-    transition: all 0.5s ease-in-out;
     border-bottom: 0.1rem solid #70709e;
 }
 
@@ -790,27 +816,29 @@ footer .vl {
 footer #firstPart {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-    gap: 2rem;
+    gap: 2rem 1rem;
     width: 100%;
     max-width: 98vw;
     height: auto;
     justify-content: space-evenly;
     margin: 2rem auto;
     padding: 2rem clamp(1rem, 4vw, 3rem);
-
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
 }
 
 /* Desktop için */
 @media (min-width: 64rem) {
     footer #firstPart {
         grid-template-columns: repeat(auto-fit, minmax(18rem, 22rem));
-        gap: 3rem;
     }
 }
 
 footer #firstPart .FootSection {
     display: flex;
     flex-direction: column;
+    justify-self: center;
+    margin-inline: auto;
+    max-width: max-content;
     -webkit-user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
@@ -833,12 +861,12 @@ footer #firstPart .FootSection details {
 @media (max-width: 50rem) {
     footer #firstPart .FootSection details {
         width: 100%;
-        padding-inline: 1rem;
+        padding-inline: 0.5rem;
     }
 
     footer #firstPart {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        column-gap: 1rem;
     }
 
     footer #firstPart .FootSection details summary {
@@ -849,7 +877,7 @@ footer #firstPart .FootSection details {
     }
 
     footer #firstPart .FootSection details ul {
-        background-color: rgba(20, 20, 25, 0.5);
+        /* background-color: rgba(20, 20, 25, 0.5); */
         border-radius: 0.5rem;
         padding: 0.5rem 0;
 
@@ -893,7 +921,7 @@ footer #firstPart details summary {
     height: 2.5rem;
     padding-inline: 1em;
     background-color: rgb(20, 20, 25);
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     border-radius: 0.75rem 0.75rem 0.5rem 0.5rem;
@@ -917,6 +945,7 @@ footer #firstPart details ul li {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    min-width: 10em;
     padding-block: 0.25em;
 }
 

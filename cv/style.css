@@ -21,7 +21,7 @@
     --bg-secondary: #2a2a2a;
     --text-primary: #ffffff;
     --text-secondary: #b0b0b0;
-    --text-muted: #808080;
+    --text-muted: #a0a0a0;
     --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
     --gradient-accent: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
     --gradient-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
@@ -151,24 +151,6 @@ main .main-header #head-back-img-2 {
     margin-inline: auto;
 }
 
-@media screen and (max-width: 40rem) {
-    main .main-header #head-background {
-        justify-content: center;
-        padding-top: 27rem;
-    }
-
-    main .main-header #head-back-img {
-        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 65%, transparent 100%);
-        mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 65%, transparent 100%);
-        width: 100%;
-        object-fit: cover;
-    }
-
-    main .main-header #head-back-img-2 {
-        display: none;
-    }
-}
-
 main .main-header .hero-container {
     max-width: 100%;
     width: 100%;
@@ -196,7 +178,7 @@ main .main-header .hero-container .hero-visual {
 main .main-header .hero-content h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: -1rem;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -207,15 +189,15 @@ main .main-header .hero-content h1 {
 main .main-header .hero-content .subtitle {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    animation: slideInLeft 1s ease-out 0.2s both;
+    animation: slideInLeft 1s ease-out 0.2s backwards;
 }
 
 main .main-header .hero-content .description {
     font-size: 1.1rem;
     color: var(--text-muted);
-    margin-bottom: 2rem;
-    animation: slideInLeft 1s ease-out 2s both;
+    margin-block: 2rem;
+    line-height: 1.35;
+    animation: slideInLeft 1s ease-out 2s backwards;
 }
 
 main .main-header .hero-content .description br {
@@ -227,7 +209,7 @@ main .main-header .hero-content .contact-info {
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-bottom: 2rem;
-    animation: slideInLeft 1s ease-out 3s both;
+    animation: slideInLeft 1s ease-out 3s backwards;
 }
 
 main .main-header .hero-content .contact-item {
@@ -263,7 +245,7 @@ main .main-header .hero-container .hero-visual {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: slideInRight 1s ease-out;
+    animation: slideInRight 1s ease-out backwards;
 }
 
 main .main-header .profile-card {
@@ -660,7 +642,34 @@ main .language-description {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 40rem) {
+    main {
+        margin-top: -2rem;
+    }
+
+    main .main-header #head-background {
+        justify-content: center;
+        padding-top: 27rem;
+    }
+
+    main .main-header #head-back-img {
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 65%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 65%, transparent 100%);
+        width: 100%;
+        object-fit: cover;
+    }
+
+    main .main-header #head-back-img-2 {
+        display: none;
+    }
+    main .contact-info{
+        justify-content: space-between !important;
+    }
+    main .contact-item {
+        font-size: 0.8em ;
+        padding: 0.6rem 1rem  !important;
+        min-width: 45% !important ;
+    }
 
     /* for performance */
     main .profile-card,
@@ -693,11 +702,6 @@ main .language-description {
 
     main .contact-info {
         justify-content: center;
-    }
-
-    main .contact-item {
-        font-size: 0.9rem;
-        padding: 0.6rem 1rem;
     }
 
     main .cards-grid {
