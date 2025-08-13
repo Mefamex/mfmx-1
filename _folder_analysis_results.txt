@@ -1,20 +1,22 @@
-# Created for : mefamex.com files
-# Created on  : 2025-08-09T01:57:53Z
+# Created for : mefamex.com
+# Created on  : 2025-08-13T21:05:50Z
 
 ANALYZING RESULTS
 
-|======|=========|======|
-| TYPE | CHAR    | FILE |
-|------|---------|------|
-| HTML | 781,934 | 28   |
-| CSS  | 160,935 | 17   |
-| JS   | 157,930 | 12   |
-| MD   | 138,007 | 14   |
-| TXT  | 118,208 | 15   |
-| PY   | 54,171  | 10   |
-|======|=========|======|
+|=============|=========|======|
+|    TYPE     |  CHAR   | FILE |
+|-------------|---------|------|
+|        HTML | 528,077 | 28   |
+|        JSON | 145,292 | 6    |
+|          JS | 128,363 | 12   |
+|         CSS | 119,531 | 17   |
+|          MD | 116,783 | 14   |
+|         TXT |  89,940 | 14   |
+|          PY |  41,981 | 10   |
+| WEBMANIFEST |   1,572 | 1    |
+|=============|=========|======|
 
-TOTAL CHARS : 1,411,185 
-TOTAL FILES : 96
+TOTAL CHARS : 1,171,539 
+TOTAL FILES : 102
 
            in mefamex.com
