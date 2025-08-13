@@ -8,5 +8,3 @@ Allow: /
 Allow: /sitemap.xml
 
 Sitemap: https://mefamex.com/sitemap.xml
-Sitemap: https://mefamex.com/sitemap-projects.xml
-Sitemap: https://mefamex.com/sitemap-blog.xml
