@@ -1,0 +1,51 @@
+{
+    "id": "/",
+    "name": "MEFAMEX | Mehmet Akif Akkoç",
+    "short_name": "MEFAMEX",
+    "description": "MEFAMEX kişisel web sitesi: projeler, blog, CV, yazılım ve yapay zeka odaklı içerikler.",
+    "lang": "tr",
+    "dir": "ltr",
+    "start_url": "/?v=2025-08-13",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#081a2c",
+    "theme_color": "#0a2744",
+    "categories": ["technology", "software", "portfolio", "blog", "productivity", "education", "cv", "mehmet akif akkoç", "mefamex"],
+    "icons": [
+        {"src": "/src/assets/images/mfmx/mfmx-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any"},
+        {"src": "/src/assets/images/mfmx/mfmx-256.png", "sizes": "256x256", "type": "image/png", "purpose": "any"},
+        {"src": "/src/assets/images/mfmx/mfmx-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+    ],
+    "shortcuts": [
+        {
+            "name": "CV",
+            "short_name": "CV",
+            "description": "Kişisel özgeçmiş",
+            "url": "/cv/?v=2025-08-13",
+            "icons": [{"src": "/src/assets/images/mfmx/mfmx-144.png", "sizes": "144x144", "type": "image/png"}]
+        },
+        {
+            "name": "Projeler",
+            "short_name": "Projeler",
+            "description": "Portföy projeleri",
+            "url": "/projects/?v=2025-08-13",
+            "icons": [{"src": "/src/assets/images/mfmx/mfmx-144.png", "sizes": "144x144", "type": "image/png"}]
+        },
+        {
+            "name": "Blog",
+            "short_name": "Blog",
+            "description": "Son yazılar",
+            "url": "/blog/?v=2025-08-13",
+            "icons": [{"src": "/src/assets/images/mfmx/mfmx-144.png", "sizes": "144x144", "type": "image/png"}]
+        },
+        {
+            "name": "İletişim",
+            "short_name": "İletişim",
+            "description": "İletişim kanalları",
+            "url": "/contact/?v=2025-08-13",
+            "icons": [{"src": "/src/assets/images/mfmx/mfmx-144.png", "sizes": "144x144", "type": "image/png"}]
+        }
+    ],
+    "prefer_related_applications": false
+}
