@@ -4,19 +4,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Language" content="tr" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!---->
     <!-- SEO Meta Etiketleri -->
-    <title> Anasayfa - MEFAMEX (Mehmet Akif AKKOÇ) </title>
-    <meta name="author" content="Mefamex, Mehmet Akif AKKOC" />
-    <meta name="description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog | Görseller | Mehmet Akif Akkoç" />
+    <title>Anasayfa - MEFAMEX (Mehmet Akif AKKOÇ)</title>
+    <meta name="author" content="Mefamex, Mehmet Akif AKKOÇ" />
+    <meta name="description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog | Görseller | Mehmet Akif AKKOÇ" />
     <meta name="keywords"
         content="MEFAMEX, mehmet akif akkoç, mehmet akif akkoc, kişisel web sitesi, yazılım, projeler, blog, iletişim, yapay zeka, web geliştirme, özgeçmiş, sosyal medya, teknoloji" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="googlebot" content="index, follow" />
     <meta name="yandex-verification" content="dc1b74278af14447" />
+    <!---->
+    <!-- Ek AI / Provenans Metaları -->
     <meta name="mfmx-AI-verification" content="20250514195506-2607:f0d0:1002:51:0:8a2e:454:4-019842-auth=pirmJmchFG-endflow" />
+    <meta name="ai-content" content="portfolio,projects,blog,cv,software,ai">
+    <meta name="ai-topics" content="python,c,javascript,ai,systems,security">
+    <meta name="content-origin" content="original">
+    <meta name="content-license" content="Code MIT; Text CC-BY-NC">
+    <meta name="original-author" content="Mehmet Akif Akkoç">
+    <meta name="color-scheme" content="dark light">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), interest-cohort=()">
     <!---->
     <!-- Preconnect ve DNS Prefetch -->
     <link rel="preconnect" href="https://mefamex.com" />
@@ -27,8 +36,6 @@
     <!---->
     <!-- Site Haritası -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <link rel="sitemap" type="application/xml" href="/sitemap-projects.xml" />
-    <link rel="sitemap" type="application/xml" href="/sitemap-blog.xml" />
     <!---->
     <!-- Performans için preload -->
     <link rel="preload" as="style" href="./src/styles/home.css" crossorigin="anonymous" />
@@ -50,13 +57,10 @@
     <!-- Open Graph Meta Etiketleri -->
     <meta property="og:title" content="Anasayfa - MEFAMEX ( Mehmet Akif AKKOÇ )" />
     <meta property="og:description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
-    <meta property="og:creator" content="@mefamex" />
     <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
     <meta property="og:url" content="https://mefamex.com" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MEFAMEX" />
-    <meta property="og:date" content="2025-08-09T02:00:00Z" />
-    <meta property="og:locale" content="tr_TR" />
     <meta property="article:modified_time" content="2025-08-09T02:00:00Z" />
     <!---->
     <!-- Twitter Meta Etiketleri -->
@@ -77,43 +81,94 @@
         if (["about", "blog", "contact", "cv", "gallery", "games", "linktree", "mystream", "projects", "software", "sweetmonstermia", "the-mefamex-project"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
         else if (currentPath !== "/") window.location.href = "/";
     </script> -->
+    <!-- PWA / Renk  istemez kalsın -->
+    <meta name="theme-color" content="#0a2744">
+    <!---->
+    <!-- MS Tiles -->
+    <link rel="browserconfig" href="/browserconfig.xml" /> <!-- dursun yine de sırtımızda mı taşıyoz.-->
+    <meta name="msapplication-TileColor" content="#0a2744">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!---->
+    <!-- Manifest -->
+    <link rel="manifest" href="/site.webmanifest" crossorigin="anonymous">
     <!---->
     <!-- JSON-LD -->
-    <script type="application/ld+json">
+    <script type="application/ld+json"> {
+        "@context": "https://schema.org",
+        "@graph": [
             {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Mehmet Akif Akkoç",
-                "jobTitle": "Yazılım Mühendisi",
-                "url": "https://mefamex.com/cv/",
-                "logo": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png",
-                "image": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png",
-                "sameAs": ["https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex", "https://github.com/Mefamex"],
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "email": "info@mefamex.com"
+                "@type": "WebSite",
+                "@id": "https://mefamex.com/#website",
+                "url": "https://mefamex.com/",
+                "name": "MEFAMEX",
+                "inLanguage": "tr",
+                "publisher": {"@id": "https://mefamex.com/#organization"}
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://mefamex.com/#organization",
+                "name": "MEFAMEX",
+                "url": "https://mefamex.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png",
+                    "width": 256,
+                    "height": 256
                 },
-                "description": "Mehmet Akif Akkoç, 10 yılı aşkın deneyimiyle Python, C, Javascript dillerinde uzmanlaşmış bir Yazılım Mühendisi olup, derin öğrenme ve yapay genel zeka alanlarına özel ilgi duymaktadır."
+                "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex"],
+                "foundingDate":"2024-08-20",
+                "contactPoint":[{ "@type":"ContactPoint", "contactType":"inquiries", "email":"info@mefamex.com", "availableLanguage":["tr","en"] }]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://mefamex.com/#person",
+                "name": "Mehmet Akif Akkoç",
+                "alternateName": "Mefamex",
+                "url": "https://mefamex.com/",
+                "image": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png",
+                "jobTitle": "Yazılım Geliştirme Mühendisi",
+                "description": "wm: Python, C, JavaScript ve yapay zeka alanlarında çalışan yazılım geliştirici.",
+                "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex"]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://mefamex.com/#webpage",
+                "url": "https://mefamex.com/",
+                "name": "Anasayfa | MEFAMEX",
+                "isPartOf": {"@id": "https://mefamex.com/#website"},
+                "about": {"@id": "https://mefamex.com/#person"},
+                "datePublished": "2024-08-20",
+                "dateModified": "2025-08-13",
+                "inLanguage": "tr",
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-512.png",
+                    "width": 512,
+                    "height": 512
+                },
+                "description": "wm: MEFAMEX kişisel web sitesi: projeler, blog, CV ve yapay zeka içerikleri."
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://mefamex.com/#breadcrumb",
+                "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com/"}]
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "https://mefamex.com/#navigation",
+                "name": ["About", "Projects", "Blog", "Gallery", "CV", "Contact", "The Mefamex Project"],
+                "url": [
+                    "https://mefamex.com/about/",
+                    "https://mefamex.com/projects/",
+                    "https://mefamex.com/blog/",
+                    "https://mefamex.com/gallery/",
+                    "https://mefamex.com/cv/",
+                    "https://mefamex.com/contact/",
+                    "https://mefamex.com/the-mefamex-project/"
+                ]
             }
-    </script>
-    <!---->
-    <!-- BreadcrumbList -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Anasayfa - MEFAMEX ( Mehmet Akif AKKOÇ )", "item": "https://mefamex.com" },
-                { "@type": "ListItem", "position": 2, "name": "Website Hakkında", "item": "https://mefamex.com/about/" },
-                { "@type": "ListItem", "position": 3, "name": "Projeler", "item": "https://mefamex.com/projects/" },
-                { "@type": "ListItem", "position": 4, "name": "Blog", "item": "https://mefamex.com/blog/" },
-                { "@type": "ListItem", "position": 5, "name": "Galeri", "item": "https://mefamex.com/gallery/" },
-                { "@type": "ListItem", "position": 6, "name": "CV", "item": "https://mefamex.com/cv/" },
-                { "@type": "ListItem", "position": 7, "name": "İletişim",  "item": "https://mefamex.com/contact/" },
-                { "@type": "ListItem", "position": 8, "name": "The Mefamex Project", "item": "https://mefamex.com/the-mefamex-project/" }
-            ]
-        }
-        </script>
+        ]
+    } </script>
 </head>
 
 <body>
@@ -121,22 +176,22 @@
     <!---->
     <picture id="background_img" class="noSelect noDrag noPointer">
         <source type="image/webp" srcset="./src/assets/images/background/home_bg_square_blue_blur.webp" />
-        <img loading="eager" decoding="sync" importance="low" src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" />
+        <img loading="eager" decoding="async" importance="high" src="./src/assets/images/background/home_bg_square_blue_blur.png" alt="Blue blurred background" />
     </picture>
     <!---->
     <!---->
     <header id="header" class="noSelect noDrag noPointer">
-        <h1>MEFAMEX</h1>
+        <h1 id="organizationHeader">MEFAMEX</h1>
     </header>
     <!---->
     <!---->
-    <main>
+    <main id="main" role="main">
         <!---->
         <!---->
         <div id="left_card" class="noSelect noDrag noPointer">
             <picture id="mefamex_logo">
                 <source srcset="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.webp" type="image/webp" />
-                <img src="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" alt="mefamex logo" loading="eager" decoding="sync" />
+                <img src="./src/assets/images/mfmx_symbol/mefamex_logo_bgb.png" alt="mefamex logo" loading="eager" decoding="async" importance="high" />
             </picture>
         </div>
         <!---->
