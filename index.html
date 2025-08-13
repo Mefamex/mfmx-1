@@ -71,14 +71,12 @@
     <meta name="twitter:date" content="2025-08-09T02:00:00Z" />
     <!---->
     <!---->
-    <script type="text/javascript">
-        setTimeout(() => {
-            let currentPath = window.location.pathname;
-            if (currentPath.length > 1 && currentPath.endsWith("/")) currentPath = currentPath.slice(0, -1);
-            if (["about", "blog", "contact", "cv", "gallery", "games", "linktree", "mystream", "projects", "software", "sweetmonstermia", "the-mefamex-project"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
-            else if (currentPath !== "/") window.location.href = "/";
-        }, 1000);
-    </script>
+    <!--<script type="text/javascript">
+        let currentPath = window.location.pathname;
+        if (currentPath.length > 1 && currentPath.endsWith("/")) currentPath = currentPath.slice(0, -1);
+        if (["about", "blog", "contact", "cv", "gallery", "games", "linktree", "mystream", "projects", "software", "sweetmonstermia", "the-mefamex-project"].some((subdir) => currentPath.startsWith(`/${subdir}/`))) window.location.href = currentPath.substring(0, currentPath.lastIndexOf("/"));
+        else if (currentPath !== "/") window.location.href = "/";
+    </script> -->
     <!---->
     <!-- JSON-LD -->
     <script type="application/ld+json">
