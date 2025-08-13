@@ -1,12 +1,12 @@
 {
     "menu": [
         {
-            "title": "Anasayfa - MEFAMEX ( Mehmet Akif AKKOÇ )",
-            "href": "https://mefamex.com",
+            "title": "Anasayfa | MEFAMEX",
+            "href": "https://mefamex.com/",
             "active": true,
             "isVisible": true,
             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-            "description": "MEFAMEX - Kişisel Web Sitesi ",
+            "description": "MEFAMEX - Kişisel Web Sitesi | Mehmet Akif AKKOÇ",
             "order": 1
         },
         {
@@ -19,7 +19,7 @@
                     "title": "Hakkında",
                     "href": "https://mefamex.com/about/",
                     "isVisible": true,
-                    "description": "Website Hakkında",
+                    "description": "Website hakkında",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 1
                 },
@@ -27,7 +27,7 @@
                     "title": "İletişim",
                     "href": "https://mefamex.com/contact/",
                     "isVisible": true,
-                    "description": "İletişim ve Sosyal Medya",
+                    "description": "İletişim ve sosyal bağlantılar",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 2
                 },
@@ -43,15 +43,15 @@
                     "title": "Blog",
                     "href": "https://mefamex.com/blog/",
                     "isVisible": true,
-                    "description": "Teknoloji, Bilim, Yazılım Bloğu",
+                    "description": "Teknoloji, yazılım ve notlar",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 4,
                     "submenu": [
                         {
-                            "title": "Yapay Zeka İnsanın Yerini Alabilir Mi?",
+                            "title": "Yapay Zeka İnsanın Yerini Alabilir mi?",
                             "href": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/",
                             "isVisible": true,
-                            "description": "Yapay Zeka İnsanın Yerini Alabilir Mi? ",
+                            "description": "Yapay zekâ üzerine değerlendirme",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 1
                         },
@@ -59,7 +59,7 @@
                             "title": "Yazılım Geliştirme Kaynakları",
                             "href": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/",
                             "isVisible": true,
-                            "description": " Yazılım Geliştirme Kaynakları ve Araçları",
+                            "description": "Kaynaklar ve araçlar",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 2
                         },
@@ -67,15 +67,15 @@
                             "title": "Zaman Yönetimi",
                             "href": "https://mefamex.com/blog/zaman-yonetimi/",
                             "isVisible": true,
-                            "description": " Zaman Yönetimi ve Planlama",
+                            "description": "Planlama ve üretkenlik",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 3
                         },
                         {
-                            "title": "Zaman Yönetimi",
+                            "title": "Özlü Sözler",
                             "href": "https://mefamex.com/blog/ozlu-sozler/",
                             "isVisible": true,
-                            "description": " Özlü Sözler ",
+                            "description": "Seçili kısa sözler",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 4
                         }
@@ -85,7 +85,7 @@
                     "title": "Projects",
                     "href": "https://mefamex.com/projects/",
                     "isVisible": true,
-                    "description": "Mefamex Projeler",
+                    "description": "Projeler",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 5,
                     "submenu": [
@@ -93,7 +93,7 @@
                             "title": "Dizin Listeleme",
                             "href": "https://mefamex.com/projects/dizin-listeleme/",
                             "isVisible": true,
-                            "description": "Python Dizin Listeleme Aracı",
+                            "description": "Python dizin analiz aracı",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 1
                         },
@@ -101,15 +101,15 @@
                             "title": "Kali Linux",
                             "href": "https://mefamex.com/projects/kali-linux/",
                             "isVisible": true,
-                            "description": "Kali Linux Notları",
+                            "description": "Kali Linux notları",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 2
                         },
                         {
-                            "title": "Kali Linux Bootloader Arkaplan Değiştirme",
+                            "title": "Kali Boot Arkaplan",
                             "href": "https://mefamex.com/projects/kali-change-boot-background/",
                             "isVisible": true,
-                            "description": "Kali Linux Bootloader Arkaplan Değiştirme",
+                            "description": "GRUB arkaplan değişimi",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 3
                         },
@@ -117,15 +117,15 @@
                             "title": "HTML/CSS Kitaplığı",
                             "href": "https://mefamex.com/projects/html-css-book/",
                             "isVisible": true,
-                            "description": "Web Geliştirme Referansı, SEO, HTML, CSS",
+                            "description": "Web geliştirme rehberi",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 4
                         },
                         {
-                            "title": "Python To Exe",
+                            "title": "Python To EXE",
                             "href": "https://mefamex.com/projects/python-to-exe/",
                             "isVisible": true,
-                            "description": "Python EXE Dönüştürücü",
+                            "description": "Paketleme notları",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 5
                         },
@@ -133,7 +133,7 @@
                             "title": "Image Meta Dataset",
                             "href": "https://mefamex.com/projects/image-meta-dataset/",
                             "isVisible": true,
-                            "description": "Görsel metaverilerini değiştirme",
+                            "description": "Görsel meta verisi aracı",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 6
                         }
@@ -143,7 +143,7 @@
                     "title": "Galeri",
                     "href": "https://mefamex.com/gallery/",
                     "isVisible": true,
-                    "description": "Fotoğraf ve Video Galerisi",
+                    "description": "Fotoğraf & video",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 6
                 },
@@ -151,7 +151,7 @@
                     "title": "The Mefamex Project",
                     "href": "https://mefamex.com/the-mefamex-project/",
                     "isVisible": true,
-                    "description": "MEFAMEX Yapay Zeka Projesi",
+                    "description": "Yapay zekâ proje vizyonu",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 7
                 },
@@ -159,7 +159,7 @@
                     "title": "Site Haritası",
                     "href": "https://mefamex.com/linktree.html",
                     "isVisible": true,
-                    "description": "mefamex.com site haritaası",
+                    "description": "Site bağlantıları",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 8
                 },
@@ -167,7 +167,7 @@
                     "title": "Dosya Haritası",
                     "href": "https://mefamex.com/filetree.html",
                     "isVisible": true,
-                    "description": "mefamex.com dosya haritaası",
+                    "description": "Dosya yapısı listesi",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 9
                 },
@@ -175,15 +175,15 @@
                     "title": "Software",
                     "href": "https://mefamex.com/software/",
                     "isVisible": true,
-                    "description": "Yazılım Dilleri ve Araçları",
+                    "description": "Diller ve araçlar",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 10
                 },
                 {
-                    "title": "sweetmonstermia",
+                    "title": "SweetMonsterMia",
                     "href": "https://mefamex.com/sweetmonstermia/",
                     "isVisible": true,
-                    "description": "Tatlış bir prenses peri",
+                    "description": "Kişisel sayfa",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                     "order": 11
                 }
@@ -192,8 +192,8 @@
     ],
     "settings": {
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-        "baseUrl": "https://mefamex.com",
+        "baseUrl": "https://mefamex.com/",
         "languageCode": "tr",
-        "lastUpdated": "2025-08-08"
+        "lastUpdated": "2025-08-13"
     }
 }
