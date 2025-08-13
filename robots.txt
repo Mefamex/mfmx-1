@@ -1,9 +1,16 @@
+# General
 User-agent: *
-Disallow: *?q=
-Disallow: /*?*
-Disallow: /*?s=*
 
+# internel query
+# Disallow: /*?q=
+# Disallow: /*?s=
+# Disallow: /*?path=
 
+# filetree & linktree 
+Disallow: /filetree.html?
+Disallow: /linktree.html?
+
+# loose it
 Allow: /
 Allow: /sitemap.xml
 
