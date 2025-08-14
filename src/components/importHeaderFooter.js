@@ -64,7 +64,7 @@ async function CreateFooter() {
     footer.id = "footer"; footer.innerHTML = '';
 
     const firstPart = document.createElement("div"); firstPart.id = "firstPart"; footer.appendChild(firstPart);
-    const icon_black_path = scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64');
+    const icon_black_path = '/src/assets/icons/black/64x64';
     firstPart.innerHTML = `
         <div class="FootSection"> 
             <details open> 
@@ -240,16 +240,15 @@ async function CreateHeader() {
     navBar.id = "headerNavBar";
 
     const navBarList = [
-        { text: "ANASAYFA", link: "/", alterimg: "assets/icons/black/64x64/home_icon.png" },
-        { text: "PLATFORM", link: "/about/", alterimg: "assets/icons/black/64x64/info_icon.png" },
-        { text: "PROJELER", link: "/projects/", alterimg: "assets/icons/black/64x64/project_icon.png" },
-        { text: "BLOG", link: "/blog/", alterimg: "assets/icons/black/64x64/blog_icon.png" },
-        { text: "GALERİ", link: "/gallery/", alterimg: "assets/icons/black/64x64/gallery_icon.png" },
-        { text: "İLETİŞİM", link: "/contact/", alterimg: "assets/icons/black/64x64/contact_icon.png" },
-        { text: "CV", link: "/cv/", alterimg: "assets/icons/black/64x64/cv_icon.png" }
+        { text: "ANASAYFA", link: "/", alterimg: "/src/assets/icons/black/64x64/home_icon.png" },
+        { text: "PLATFORM", link: "/about/", alterimg: "/src/assets/icons/black/64x64/info_icon.png" },
+        { text: "PROJELER", link: "/projects/", alterimg: "/src/assets/icons/black/64x64/project_icon.png" },
+        { text: "BLOG", link: "/blog/", alterimg: "/src/assets/icons/black/64x64/blog_icon.png" },
+        { text: "GALERİ", link: "/gallery/", alterimg: "/src/assets/icons/black/64x64/gallery_icon.png" },
+        { text: "İLETİŞİM", link: "/contact/", alterimg: "/src/assets/icons/black/64x64/contact_icon.png" },
+        { text: "CV", link: "/cv/", alterimg: "/src/assets/icons/black/64x64/cv_icon.png" }
     ] /* navbar a classes : pageA, showImg, showText, current_page */;
     navBarList.forEach((item, index) => {
-        if (item.alterimg) item.alterimg = scriptPath.replace("components/importHeaderFooter.js", item.alterimg);
         const imgg = document.createElement("img"); imgg.src = item.alterimg; imgg.alt = item.text; imgg.loading = "lazy"; imgg.decoding = "async";
         const spann = document.createElement("span"); spann.textContent = item.text;
         let temp_item = document.createElement("a"); temp_item.classList.add("pageA", "showImg");
