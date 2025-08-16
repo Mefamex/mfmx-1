@@ -79,7 +79,7 @@
             "https://www.instagram.com/mefamex"] }
         </script>
         <meta http-equiv="Content-Security-Policy"
-            content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';">
+            content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';" />
     </head>
 
     <body>
@@ -292,7 +292,8 @@
             console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}.
             Alternatif kaynak yükleniyor...`); element.remove(); loadFallbackScript(fileName); } function
             approvedLoad(text = "") { console.log(`✅ ${fileName} başarıyla yüklendi ${text ? '(' + text + ')' : ""}.`);
-            } }     </script>
+            } }
+    </script>
         <!---->
         <!---->
         <!---->

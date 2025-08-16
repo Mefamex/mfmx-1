@@ -1,5 +1,5 @@
 # Created for : mefamex.com files
-# Created on  : 2025-08-09T01:57:37Z
+# Created on  : 2025-08-17T01:01:15Z
 
 D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
@@ -148,8 +148,6 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      privacy-policy(2).txt
 |      |      |      Privacy_Policy.txt
 |      |      |      SSS.txt
-|      |      |      YAPILACAKLAR.txt
-|      |      scripts
 |      |      styles
 |      |      |      home.css
 |      sweetmonstermia
@@ -160,16 +158,18 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      the-mefamex-project
 |      |      index.html
 |      |      style.css
+|      browserconfig.xml
 |      filetree.html
 |      index.html
 |      linktree.html
+|      llm.txt
+|      llms.txt
 |      navigation.json
 |      notlarım472948288433.txt
 |      package.json
 |      README.md
 |      robots.txt
-|      sitemap-blog.xml
-|      sitemap-projects.xml
+|      site.webmanifest
 |      sitemap.xml
 |      yandex_dc1b74278af14447.html
 |      YAPILACAKLAR.txt
