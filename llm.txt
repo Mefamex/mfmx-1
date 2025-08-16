@@ -1,0 +1,22 @@
+# mefamex.com llm.txt ; update: 2025-08-17 
+- [Anasayfa - MEFAMEX (Mehmet Akif AKKOÇ)](https://mefamex.com): Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog | Görseller | Mehmet Akif AKKOÇ
+- [WEBSITE HAKKINDA - Mefamex.com](https://mefamex.com/about/): Website hakkında...
+- [PROJELER - MEFAMEX](https://mefamex.com/projects/): Mefamex tarafından oluşturulan kişisel çalışmalar ve yazılım projelerin sergilendiği / not edildiği sayfadır.
+- [The Mefamex Project - Yapay Zeka ve AI Projesi | MEFAMEX](https://mefamex.com/the-mefamex-project/): Mefamex (Mehmet Akif AKKOÇ) tarafından oluşturulan -Mefamex Projesi-nin bilgilendirme sayfası.
+- [BLOG - MEFAMEX](https://mefamex.com/blog/): Yakında...
+- [Gallery | MEFAMEX](https://mefamex.com/gallery/): Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır.
+- [CV | Mehmet Akif Akkoç - Software Development Engineer](https://mefamex.com/cv/): Mehmet Akif Akkoç'un yazılım geliştirme becerilerini ve deneyimlerini sergileyen özgeçmiş.
+- [CONTACT - MEFAMEX](https://mefamex.com/contact/): GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz.
+- [Site Haritası - MEFAMEX](https://mefamex.com/linktree.html): mefamex.com için site haritası
+- [Dosya Haritası - MEFAMEX](https://mefamex.com/filetree.html): mefamex.com için dosya haritası
+- [Html-Css Kitaplığı | MEFAMEX-PROJECTS](https://mefamex.com/projects/html-css-book/): Websayfası (Html-css-SEO) için kapsamlı başvuru kılavuzu. Meta etiketler, SEO optimizasyonu, best practices ve daha fazlası.
+- [Kali Linux | MEFAMEX-PROJECTS](https://mefamex.com/projects/kali-linux/): Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar.
+- [Kali Linux Bootloader Arkaplan Değiştirme | MEFAMEX-PROJECTS](https://mefamex.com/projects/kali-change-boot-background/): Kali Linux | Boot Menusu Arkaplan Görseli Değiştirme | Default Bootloader Değiştirme | GRUB Config Ayarları ve Parametreleri | Linux
+- [Dizin Listeme (python) | MEFAMEX-PROJECTS](https://mefamex.com/projects/dizin-listeleme/): Proje ismi: Dizin-listeleme | Yazılım Dili: Python | Açıklama: Dizindeki dosyalar ve klasörlerin komut istemcisi üzerinde ayrıntılarıntılarını görme.
+- [Python To Exe | MEFAMEX-PROJECTS](https://mefamex.com/projects/python-to-exe/): Image Meta Dataset | Python | Python dilindeki projeleri PyInstaller kullanarak .exe formatına dönüştürme yöntemleri.
+- [Image Meta Dataset | MEFAMEX-PROJECTS](https://mefamex.com/projects/image-meta-dataset/): Image Meta Dataset | Python | Görüntü dosyalarının meta verilerini okuma, silme ve yönetme işlemlerini yapan bir Python projesi
+- [Yazılım Geliştirme Kaynakları | MEFAMEX-BLOG](https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/): Yazılım öğrenme yolculuğu için geniş bir yelpazede bir kaynak listesi. İster yeni başlayan ister deneyimli bir yazılımcı olun, bu kaynaklar sayesinde bilgi ve becerilerinizi artırabilirsiniz.
+- [Zaman Yönetimi | MEFAMEX-BLOG](https://mefamex.com/blog/zaman-yonetimi/): Zaman yönetimi stratejileri ile kişisel ve profesyonel hedeflerinize ulaşın. Günlük, haftalık ve aylık planlama ile verimliliğinizi artırın ve dengeli bir yaşam sürün.
+- [Özlü Sözler | MEFAMEX-BLOG](https://mefamex.com/blog/ozlu-sozler/): Kaydetmeye ve hatırlamaya değer bulduğum bazı özlü sözler...
+- [Yapay Zeka İnsanın Yerini Alabilir Mi? | MEFAMEX-BLOG](https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/): Duygusal zeka, yaratıcılık ve insan bilincinin benzersiz özellikleri ile AI'nın sınırlarını karşılaştırma.
+- [CONTACT - MEFAMEX](https://mefamex.com/contact): GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz.
