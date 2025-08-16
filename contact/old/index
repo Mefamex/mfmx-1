@@ -1,247 +1,269 @@
 <!DOCTYPE html>
 <html lang="tr">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-Language" content="tr" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!---->
-    <!-- SEO Meta Etiketleri -->
-    <title>CONTACT - MEFAMEX</title>
-    <meta name="author" content="mefamex" />
-    <meta name="description"
-        content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
-    <meta name="keywords"
-        content="mefamex, iletişim, contact, sosyal medya, github mefamex, linkedin mefamex, instagram mefamex, twitter mefamex, youtube mefamex, iletişim formu, mail, mehmet akif akkoç, software developer, yazılım geliştirici, web developer, web tasarım" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="googlebot" content="index, follow" />
-    <!---->
-    <!-- Preconnect ve DNS Prefetch -->
-    <link rel="preconnect" href="https://mefamex.com" />
-    <link rel="dns-prefetch" href="https://mefamex.com" />
-    <!---->
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://mefamex.com/contact/" />
-    <!---->
-    <!-- Performans için preload -->
-    <link rel="preload" as="style" href="style.css" />
-    <link rel="preload" as="style" href="../src/components/headerFooter.css" />
-    <link rel="preload" as="script" href="../src/components/importHeaderFooter.js" />
-    <!---->
-    <!-- Stil Optimizasyonu -->
-    <link rel="stylesheet" href="style.css" class="alternatively" />
-    <link rel="stylesheet" href="../src/components/headerFooter.css" class="alternatively" />
-    <!---->
-    <!-- Google Forms preconnect and DNS prefetch for faster form loading -->
-    <link rel="preconnect" href="https://docs.google.com" crossorigin="anonymous" />
-    <link rel="dns-prefetch" href="https://docs.google.com" />
-    <!---->
-    <!-- favicon set -->
-    <link rel="icon" sizes="16x16" href="https://mefamex.com/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
-    <link rel="icon" sizes="32x32" href="https://mefamex.com/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
-    <link rel="icon" sizes="64x64" href="https://mefamex.com/src/assets/images/mfmx/mfmx-64.png" type="image/png" />
-    <link rel="icon" sizes="144x144" href="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" type="image/png" />
-    <link rel="icon" sizes="256x256" href="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" type="image/png" />
-    <link rel="icon" sizes="512x512" href="https://mefamex.com/src/assets/images/mfmx/mfmx-512.png" type="image/png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" type="image/png" />
-    <!---->
-    <!-- Open Graph Meta Etiketleri -->
-    <meta property="og:title" content="Mefamex - CONTACT" />
-    <meta property="og:description"
-        content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
-    <meta property="og:creator" content="@mefamex" />
-    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-    <meta property="og:url" content="https://mefamex.com/contact/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Mefamex" />
-    <meta property="og:date" content="2025-07-17T02:00:00Z" />
-    <meta property="og:locale" content="tr_TR" />
-    <meta property="article:modified_time" content="2025-07-17T02:00:00Z" />
-    <!---->
-    <!-- Twitter Meta Etiketleri -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="Mefamex" />
-    <meta name="twitter:creator" content="@mefamex" />
-    <meta name="twitter:title" content="Mefamex - CONTACT" />
-    <meta name="twitter:description"
-        content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
-    <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
-    <meta name="twitter:url" content="https://mefamex.com/contact/" />
-    <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-07-17T02:00:00Z" />
-    <!---->
-    <!-- Schema.org Social Media Links -->
-    <script type="application/ld+json">
-            { "@context": "https://schema.org", "@type": "Person", "name": "Mehmet Akif Akkoç", "url": "https://mefamex.com", "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://www.instagram.com/mefamex"] }
-    </script>
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Language" content="tr" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!---->
+        <!-- SEO Meta Etiketleri -->
+        <title>CONTACT - MEFAMEX</title>
+        <meta name="author" content="mefamex" />
+        <meta name="description"
+            content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
+        <meta name="keywords"
+            content="mefamex, iletişim, contact, sosyal medya, github mefamex, linkedin mefamex, instagram mefamex, twitter mefamex, youtube mefamex, iletişim formu, mail, mehmet akif akkoç, software developer, yazılım geliştirici, web developer, web tasarım" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <!---->
+        <!-- Preconnect ve DNS Prefetch -->
+        <link rel="preconnect" href="https://mefamex.com" />
+        <link rel="dns-prefetch" href="https://mefamex.com" />
+        <!---->
+        <!-- Canonical Link -->
+        <link rel="canonical" href="https://mefamex.com/contact/" />
+        <!---->
+        <!-- Performans için preload -->
+        <link rel="preload" as="style" href="style.css" />
+        <link rel="preload" as="style" href="/src/components/headerFooter.css" />
+        <link rel="preload" as="script" href="/src/components/importHeaderFooter.js" />
+        <!---->
+        <!-- Stil Optimizasyonu -->
+        <link rel="stylesheet" href="style.css" class="alternatively" />
+        <link rel="stylesheet" href="/src/components/headerFooter.css" class="alternatively" />
+        <!---->
+        <!-- Google Forms preconnect and DNS prefetch for faster form loading -->
+        <link rel="preconnect" href="https://docs.google.com" crossorigin="anonymous" />
+        <link rel="dns-prefetch" href="https://docs.google.com" />
+        <!---->
+        <!-- favicon set -->
+        <link rel="icon" sizes="16x16" href="https://mefamex.com/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
+        <link rel="icon" sizes="32x32" href="https://mefamex.com/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
+        <link rel="icon" sizes="64x64" href="https://mefamex.com/src/assets/images/mfmx/mfmx-64.png" type="image/png" />
+        <link rel="icon" sizes="144x144" href="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" type="image/png" />
+        <link rel="icon" sizes="256x256" href="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" type="image/png" />
+        <link rel="icon" sizes="512x512" href="https://mefamex.com/src/assets/images/mfmx/mfmx-512.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png"
+            type="image/png" />
+        <!---->
+        <!-- Open Graph Meta Etiketleri -->
+        <meta property="og:title" content="Mefamex - CONTACT" />
+        <meta property="og:description"
+            content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
+        <meta property="og:creator" content="@mefamex" />
+        <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+        <meta property="og:url" content="https://mefamex.com/contact/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Mefamex" />
+        <meta property="og:date" content="2025-07-17T02:00:00Z" />
+        <meta property="og:locale" content="tr_TR" />
+        <meta property="article:modified_time" content="2025-07-17T02:00:00Z" />
+        <!---->
+        <!-- Twitter Meta Etiketleri -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="Mefamex" />
+        <meta name="twitter:creator" content="@mefamex" />
+        <meta name="twitter:title" content="Mefamex - CONTACT" />
+        <meta name="twitter:description"
+            content="GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz." />
+        <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
+        <meta name="twitter:url" content="https://mefamex.com/contact/" />
+        <meta name="twitter:type" content="website" />
+        <meta name="twitter:date" content="2025-07-17T02:00:00Z" />
+        <!---->
+        <!-- Schema.org Social Media Links -->
+        <script type="application/ld+json">
+            { "@context": "https://schema.org", "@type": "Person", "name": "Mehmet Akif Akkoç", "url":
+            "https://mefamex.com", "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex",
+            "https://www.instagram.com/mefamex"] }
+        </script>
+        <meta http-equiv="Content-Security-Policy"
+            content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline';">
+    </head>
 
-<body>
-    <main id="main-content">
-        <h1>CONTACT - MEFAMEX</h1>
-        <p id="page-description">GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajını iletebilirsiniz.</p>
-        <fieldset>
-            <legend>E-MAIL</legend>
-            <a href="mailto:info@mefamex.com" type="mailto" title="info@mefamex.com" aria-label="Mefamex E-Mail Adresi" target="_blank" rel="noopener">info@mefamex.com</a>
-        </fieldset>
-        <br />
-        <fieldset>
-            <legend>SOCIAL MEDIA</legend>
-            <table>
-                <tr>
-                    <td>GitHub</td>
-                    <td>:</td>
-                    <td><a href="https://github.com/Mefamex/" title="github.com/Mefamex" aria-label="Mefamex Github Account " target="_blank" rel="noopener">github.com/<b>Mefamex</b>/</a></td>
-                </tr>
-                <tr>
-                    <td>LinkedIn</td>
-                    <td>:</td>
-                    <td><a href="https://www.linkedin.com/in/mefamex/" title="linkedin.com/in/mefamex/" aria-label="Mefamex LinkedIn Account " target="_blank"
-                            rel="noopener">linkedin.com/in/<b>mefamex</b>/</a></td>
-                </tr>
-                <tr>
-                    <td>Instagram</td>
-                    <td>:</td>
-                    <td><a href="https://www.instagram.com/mefamex/" title="instagram.com/mefamex" aria-label="Mefamex instagram Account " target="_blank"
-                            rel="noopener">instagram.com/<b>mefamex</b>/</a></td>
-                </tr>
-                <tr>
-                    <td>Twitter (X)</td>
-                    <td>:</td>
-                    <td><a href="https://x.com/Mefamex/" title="x.com/Mefamex" aria-label="Mefamex X Account " target="_blank" rel="noopener">x.com/<b>Mefamex</b>/</a></td>
-                </tr>
-                <tr>
-                    <td>YouTube</td>
-                    <td>:</td>
-                    <td><a href="https://www.youtube.com/@mefamex/" title="youtube.com/@mefamex" aria-label="Mefamex youtube Account " target="_blank" rel="noopener">youtube.com/@<b>mefamex</b>/</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Facebook</td>
-                    <td>:</td>
-                    <td><a href="https://www.facebook.com/mefamex58/" title="facebook.com/mefamex58" aria-label="Mefamex facebook Account " target="_blank"
-                            rel="noopener">facebook.com/<b>mefamex58</b>/</a></td>
-                </tr>
-                <tr>
-                    <td>Reddit</td>
-                    <td>:</td>
-                    <td><a href="https://www.reddit.com/user/mefamex/" title="reddit.com/user/mefamex/" aria-label="Mefamex Reddit Account " target="_blank"
-                            rel="noopener">reddit.com/user/<b>mefamex</b>/</a></td>
-                </tr>
-                <tr>
-                    <td>İletişim Formu</td>
-                    <td>:</td>
-                    <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link"> doldur</a></td>
-                </tr>
-            </table>
-        </fieldset>
+    <body>
+        <main id="main-content">
+            <h1>CONTACT - MEFAMEX</h1>
+            <p id="page-description">GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir,
+                mail gönderebilir veya iletişim formunu doldurarak mesajını iletebilirsiniz.</p>
+            <fieldset>
+                <legend>E-MAIL</legend>
+                <a href="mailto:info@mefamex.com" type="mailto" title="info@mefamex.com"
+                    aria-label="Mefamex E-Mail Adresi" target="_blank" rel="noopener">info@mefamex.com</a>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>SOCIAL MEDIA</legend>
+                <table>
+                    <tr>
+                        <td>GitHub</td>
+                        <td>:</td>
+                        <td>
+                            <a href="https://github.com/Mefamex/" title="github.com/Mefamex"
+                                aria-label="Mefamex Github Account " target="_blank" rel="noopener">github.com/<b>
+                                Mefamex</b>/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>LinkedIn</td>
+                        <td>:</td>
+                        <td>
+                            <a href="https://www.linkedin.com/in/mefamex/" title="linkedin.com/in/mefamex/"
+                                aria-label="Mefamex LinkedIn Account " target="_blank"
+                                rel="noopener">linkedin.com/in/<b>mefamex</b>/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Instagram</td>
+                        <td>:</td>
+                        <td>
+                            <a href="https://www.instagram.com/mefamex/" title="instagram.com/mefamex"
+                                aria-label="Mefamex instagram Account " target="_blank"
+                                rel="noopener">instagram.com/<b>mefamex</b>/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Twitter (X)</td>
+                        <td>:</td>
+                        <td>
+                            <a href="https://x.com/Mefamex/" title="x.com/Mefamex" aria-label="Mefamex X Account "
+                                target="_blank" rel="noopener">x.com/<b>Mefamex</b>/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>YouTube</td>
+                        <td>:</td>
+                        <td>
+                            <a href="https://www.youtube.com/@mefamex/" title="youtube.com/@mefamex"
+                                aria-label="Mefamex youtube Account " target="_blank" rel="noopener">youtube.com/@<b>
+                                mefamex</b>/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Facebook</td>
+                        <td>:</td>
+                        <td>
+                            <a href="https://www.facebook.com/mefamex58/" title="facebook.com/mefamex58"
+                                aria-label="Mefamex facebook Account " target="_blank"
+                                rel="noopener">facebook.com/<b>mefamex58</b>/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reddit</td>
+                        <td>:</td>
+                        <td>
+                            <a href="https://www.reddit.com/user/mefamex/" title="reddit.com/user/mefamex/"
+                                aria-label="Mefamex Reddit Account " target="_blank"
+                                rel="noopener">reddit.com/user/<b>mefamex</b>/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>İletişim Formu</td>
+                        <td>:</td>
+                        <td>
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link">
+                                doldur</a>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <!---->
+            <!---->
+            <p><br />İletilerin son yanıtlandığı tarih: 17.07.2025</p>
+            <!---->
+            <!---->
+            <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0"
+                marginwidth="0"
+                data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">
+                Yükleniyor…</iframe>
+            <!---->
+            <!---->
+        </main>
         <!---->
         <!---->
-        <p><br />İletilerin son yanıtlandığı tarih: 17.07.2025</p>
         <!---->
-        <!---->
-        <iframe id="ContactForm" title="Contact Form" width="94%" height="65rem" frameborder="0" marginheight="0" marginwidth="0"
-            data-src="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?embedded=true">Yükleniyor…</iframe>
-        <!---->
-        <!---->
-    </main>
-    <!---->
-    <!---->
-    <!---->
-    <script class="alternatively" src="../src/components/importHeaderFooter.js" ></script>
-    <script defer>
-        document.addEventListener("DOMContentLoaded", () => {
+        <script class="alternatively" src="/src/components/importHeaderFooter.js"></script>
+        <script defer>
+            document.addEventListener("DOMContentLoaded", () => {
             const formElement = document.getElementById("ContactForm");
             formElement.style.height = '0';
             let retryCount = 0;
             const maxRetries = 3;
             function handleFormError() {
-                retryCount++;
-                console.log(`❌ Form yüklenemedi (Deneme ${retryCount}/${maxRetries})`);
-                if (retryCount >= maxRetries) formElement.style.display = 'none';
-                else setTimeout(() => { formElement.src = formElement.dataset.src; }, 1000 * retryCount);
+            retryCount++;
+            console.log(`❌ Form yüklenemedi (Deneme ${retryCount}/${maxRetries})`);
+            if (retryCount >= maxRetries) formElement.style.display = 'none';
+            else setTimeout(() => { formElement.src = formElement.dataset.src; }, 1000 * retryCount);
             }
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        formElement.src = formElement.dataset.src;
-                        observer.unobserve(formElement);
-                        // 10 saniye içinde yüklenmezse hata ver
-                        let loadTimeout = setTimeout(() => handleFormError(), 10000);
-                        formElement.onload = () => {
-                            clearTimeout(loadTimeout);
-                            try { if (formElement.contentWindow) { console.log('✅ Form yüklendi'); formElement.style.height = '' } }
-                            catch (error) {
-                                console.log('⚠️ Form kontrol edilemedi:', error);
-                                if (error.name === 'SecurityError') console.log('✅ Form muhtemelen yüklendi (CORS kısıtlaması)');
-                                else handleFormError();
-                            }
-                        }; formElement.onerror = () => { clearTimeout(loadTimeout); handleFormError(); };
-                    }
-                });
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            formElement.src = formElement.dataset.src;
+            observer.unobserve(formElement);
+            // 10 saniye içinde yüklenmezse hata ver
+            let loadTimeout = setTimeout(() => handleFormError(), 10000);
+            formElement.onload = () => {
+            clearTimeout(loadTimeout);
+            try { if (formElement.contentWindow) { console.log('✅ Form yüklendi'); formElement.style.height = '' } }
+            catch (error) {
+            console.log('⚠️ Form kontrol edilemedi:', error);
+            if (error.name === 'SecurityError') console.log('✅ Form muhtemelen yüklendi (CORS kısıtlaması)');
+            else handleFormError();
+            }
+            }; formElement.onerror = () => { clearTimeout(loadTimeout); handleFormError(); };
+            }
+            });
             }); observer.observe(formElement);
-        });
-    </script>
-    <!---->
-    <!---->
-    <!---->
-    <script id="alternativelyJS" type="text/javascript" defer>
-        /*  class="alternatively"  */
-        /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */
-        const kaynaklar = {};
-        const urlObj = new URL(location.href);
-        const { host, origin } = urlObj;
-        const targetElements = document.querySelectorAll(".alternatively");
-        const firstSegment = urlObj.pathname.replace(/^\//, '').split('/')[0] || null;
-        targetElements.forEach(element => {
-            const path = (element.getAttribute('src') || element.getAttribute('href')); if (!path) return;
-            const fileName = path.split('/').pop(); if (!fileName) return;
-            const cleanPath = path.replace(/\.\.\//g, '').replace(/\.\//g, '').replace(/\/+/g, '/');
-            kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
-            if (host != 'mefamex.com') { kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`); }
-        });
-        async function initializeAlternatives() { await Promise.all(Array.from(targetElements).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
-        (async () => { await initializeAlternatives(); })();
-        async function initializeResource(element) {
-            const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
-            if (!fileName) return;
-            if (kaynaklar[fileName]) {
-                console.log(`🔄 Dosya için alternatif kaynaklar belirlendi (${kaynaklar[fileName].length - 2}): ${fileName}`);
-                if (fileName.endsWith(".js")) { element.onerror = () => checkScriptLoaded(element, fileName); element.onload = () => checkScriptLoaded(element, fileName); }
-                else if (fileName.endsWith(".css")) { (async () => checkStyleLoaded(element, fileName))(); }
-                else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`);
-            } else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`);
-        }
-        function loadFallbackScript(fileName) {
-            const subelement = kaynaklar[fileName][0];
-            const fileIndex = ++kaynaklar[fileName][1];
-            if (fileIndex >= kaynaklar[fileName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${fileName}`); return; }
-            console.log('⏳ Dosya için alternatif kaynak yükleniyor : ' + fileName + ' (' + fileIndex + ')\n -------> \'' + kaynaklar[fileName][fileIndex] + '\'');
-            if (fileName.endsWith(".js")) {
-                const fallbackScript = document.createElement('script');
-                fallbackScript.src = kaynaklar[fileName][fileIndex];
-                /* Tüm özellikleri kopyala (src, onerror, onload ve alternatively sınıfı hariç) */
-                Array.from(subelement.attributes).forEach(attr => { if (!['src', 'onerror', 'onload', 'class'].includes(attr.name)) fallbackScript.setAttribute(attr.name, attr.value); });
-                if (subelement.hasAttribute('class')) { const classes = subelement.getAttribute('class').split(' ').filter(c => c !== 'alternatively').join(' '); if (classes) fallbackScript.setAttribute('class', classes); }
-                fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName); fallbackScript.onload = () => checkScriptLoaded(fallbackScript, fileName);
-                document.head.appendChild(fallbackScript);
-            } else if (fileName.endsWith(".css")) {
-                const fragment = document.createDocumentFragment();
-                const fallbackLink = document.createElement('link'); fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
-                fragment.appendChild(fallbackLink);
-                document.head.appendChild(fragment); checkStyleLoaded(fallbackLink, fileName);
-            } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
-        }
-        async function checkStyleLoaded(element, fileName) {
-            let maxAttempts = 10; let isLoaded = false;
-            return new Promise((resolve, reject) => {
-                element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); reject(new Error('CSS yükleme hatası')); };
-                element.onload = () => { isLoaded = true; clearInterval(checkInterval); resolve(true); };
-                const checkInterval = setInterval(async () => {
-                    if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); reject(new Error('CSS yükleme zaman aşımı')); } return; }
+            });
+        </script>
+        <!---->
+        <!---->
+        <!---->
+        <script id="alternativelyJS" type="text/javascript" defer> /* class="alternatively" */ /* alternatif kaynaklar: {
+            name: [ subelement , last_used_index, altertatives... ] } */ const kaynaklar = {}; const urlObj = new
+            URL(location.href); const { host, origin } = urlObj; const targetElements =
+            document.querySelectorAll(".alternatively"); const firstSegment = urlObj.pathname.replace(/^\//,
+            '').split('/')[0] || null; targetElements.forEach(element => { const path = (element.getAttribute('src') ||
+            element.getAttribute('href')); if (!path) return; const fileName = path.split('/').pop(); if (!fileName)
+            return; const cleanPath = path.replace(/\.\.\//g, '').replace(/\.\//g, '').replace(/\/+/g, '/');
+            kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`,
+            `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`,
+            `${host}/${firstSegment}/${cleanPath}`]; if (host != 'mefamex.com') {
+            kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`,
+            `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`); } }); async
+            function initializeAlternatives() { await Promise.all(Array.from(targetElements).map(element =>
+            initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata:
+            ${error.message}`)))); } (async () => { await initializeAlternatives(); })(); async function
+            initializeResource(element) { const fileName = element.src ? element.src.split("/").pop() : element.href ?
+            element.href.split("/").pop() : null; if (!fileName) return; if (kaynaklar[fileName]) { console.log(`🔄
+            Dosya için alternatif kaynaklar belirlendi (${kaynaklar[fileName].length - 2}): ${fileName}`); if
+            (fileName.endsWith(".js")) { element.onerror = () => checkScriptLoaded(element, fileName); element.onload =
+            () => checkScriptLoaded(element, fileName); } else if (fileName.endsWith(".css")) { (async () =>
+            checkStyleLoaded(element, fileName))(); } else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`); }
+            else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`); } function
+            loadFallbackScript(fileName) { const subelement = kaynaklar[fileName][0]; const fileIndex =
+            ++kaynaklar[fileName][1]; if (fileIndex >= kaynaklar[fileName].length) { console.log(`Tüm alternatif
+            kaynaklar denendi, yükleme başarısız: ${fileName}`); return; } console.log('⏳ Dosya için alternatif kaynak
+            yükleniyor : ' + fileName + ' (' + fileIndex + ')\n -------> \'' + kaynaklar[fileName][fileIndex] + '\'');
+            if (fileName.endsWith(".js")) { const fallbackScript = document.createElement('script'); fallbackScript.src
+            = kaynaklar[fileName][fileIndex]; /* Tüm özellikleri kopyala (src, onerror, onload ve alternatively sınıfı
+            hariç) */ Array.from(subelement.attributes).forEach(attr => { if (!['src', 'onerror', 'onload',
+            'class'].includes(attr.name)) fallbackScript.setAttribute(attr.name, attr.value); }); if
+            (subelement.hasAttribute('class')) { const classes = subelement.getAttribute('class').split(' ').filter(c =>
+            c !== 'alternatively').join(' '); if (classes) fallbackScript.setAttribute('class', classes); }
+            fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName); fallbackScript.onload = () =>
+            checkScriptLoaded(fallbackScript, fileName); document.head.appendChild(fallbackScript); } else if
+            (fileName.endsWith(".css")) { const fragment = document.createDocumentFragment(); const fallbackLink =
+            document.createElement('link'); fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel =
+            'stylesheet'; fallbackLink.type = 'text/css'; fragment.appendChild(fallbackLink);
+            document.head.appendChild(fragment); checkStyleLoaded(fallbackLink, fileName); } else console.log(`Dosya
+            türü desteklenmiyor: ${fileName}`); } async function checkStyleLoaded(element, fileName) { let maxAttempts =
+            10; let isLoaded = false; return new Promise((resolve, reject) => { element.onerror = () => {
+            console.error(`❌ CSS yüklenemedi: ${fileName}`); reject(new Error('CSS yükleme hatası')); }; element.onload
+            = () => { isLoaded = true; clearInterval(checkInterval); resolve(true); }; const checkInterval =
+            setInterval(async () => { if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); reject(new Error('CSS yükleme zaman aşımı')); } return; }
                     try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) { loadFallbackScript(fileName); console.error('CSS kontrol hatası:', error); }
                 }, 500);
             });
@@ -249,41 +271,31 @@
         function isStylesheetLoadedByHref(href) {
             const sheets = Array.from(document.styleSheets);
             let loaded = false;
-            return new Promise(resolve => {
-                loaded = sheets.some(sheet => {
-                    if (!sheet.href) { return false; }
-                    if (sheet.href.includes(href)) {
-                        try { const hasRules = sheet.cssRules.length > 0; if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; } } catch (e) { return false;/* CORS hatası veya diğer hatalar */ }
-                    } return false;
-                }); resolve(loaded);
-            });
-            /*return new Promise(resolve => { const check = () => { const loaded = Array.from(document.styleSheets).some(sheet => sheet.href && sheet.href.includes(href));  if (loaded) resolve(true); else requestAnimationFrame(check); };requestAnimationFrame(check); });*/
-        }
-        function checkScriptLoaded(element, fileName) {
-            if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
-            if (element.readyState === 'complete' || element.readyState === 'loaded') { approvedLoad(); return; }
-            setTimeout(async () => {
-                try {
-                    fetch(element.src, { method: "HEAD" })
-                        .then(response => {
-                            const contentType = response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") || contentType.includes("text/js")) { approvedLoad(); } else {
-                                if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { failedToLoad(`Geçersiz içerik türü: ${contentType}`); }
-                            }
-                        })
-                        .catch(() => { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { console.error(`⚠️ ${fileName} doğrulanamadı.`); loadFallbackScript(fileName); } });
-                } catch (error) { failedToLoad("Doğrulanamadı"); }
-            }, 500);
-            function failedToLoad(text = "") {
-                element.dataset.failed = true; element.onerror = null; element.onload = null;
-                console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}. Alternatif kaynak yükleniyor...`);
-                element.remove(); loadFallbackScript(fileName);
-            }
-            function approvedLoad(text = "") { console.log(`✅ ${fileName} başarıyla yüklendi ${text ? '(' + text + ')' : ""}.`); }
-        }
-    </script>
-    <!---->
-    <!---->
-    <!---->
-</body>
+            return new Promise(resolve => { loaded = sheets.some(sheet => { if (!sheet.href) { return
+            false; } if (sheet.href.includes(href)) { try { const hasRules = sheet.cssRules.length > 0; if (hasRules) {
+            console.log(`✅ ${href} başarıyla yüklendi.`); return true; } } catch (e) { return false;/* CORS hatası veya
+            diğer hatalar */ } } return false; }); resolve(loaded); }); /*return new Promise(resolve => { const check =
+            () => { const loaded = Array.from(document.styleSheets).some(sheet => sheet.href &&
+            sheet.href.includes(href)); if (loaded) resolve(true); else requestAnimationFrame(check);
+            };requestAnimationFrame(check); });*/ } function checkScriptLoaded(element, fileName) { if
+            (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak
+            yükleniyor...`); loadFallbackScript(fileName); return; } if (element.readyState === 'complete' ||
+            element.readyState === 'loaded') { approvedLoad(); return; } setTimeout(async () => { try {
+            fetch(element.src, { method: "HEAD" }) .then(response => { const contentType =
+            response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") ||
+            contentType.includes("text/js")) { approvedLoad(); } else { if (element.textContent &&
+            element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { failedToLoad(`Geçersiz içerik
+            türü: ${contentType}`); } } }) .catch(() => { if (element.textContent && element.textContent.length > 0) {
+            approvedLoad('içerik kontrolü'); } else { console.error(`⚠️ ${fileName} doğrulanamadı.`);
+            loadFallbackScript(fileName); } }); } catch (error) { failedToLoad("Doğrulanamadı"); } }, 500); function
+            failedToLoad(text = "") { element.dataset.failed = true; element.onerror = null; element.onload = null;
+            console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}.
+            Alternatif kaynak yükleniyor...`); element.remove(); loadFallbackScript(fileName); } function
+            approvedLoad(text = "") { console.log(`✅ ${fileName} başarıyla yüklendi ${text ? '(' + text + ')' : ""}.`);
+            } }     </script>
+        <!---->
+        <!---->
+        <!---->
+    </body>
 
 </html>
