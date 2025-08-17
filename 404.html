@@ -2,12 +2,35 @@
 <html lang="tr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Language" content="tr" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 — Sayfa Bulunamadı • mefamex.com</title>
-  <link rel="canonical" href="https://mefamex.com/404.html">
   <meta name="robots" content="noindex">
   <meta name="description" content="Aradığınız sayfa bulunamadı — mefamex.com. Anasayfaya dönün veya site içinde arama yapın.">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), interest-cohort=()">
+  <!---->
+  <!-- Preconnect ve DNS Prefetch -->
+  <link rel="preconnect" href="https://mefamex.com" />
+  <link rel="dns-prefetch" href="https://mefamex.com" />
+  <!---->
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://mefamex.com/404.html" />
+  <!---->
+  <!-- Site Haritası -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <!---->
+  <!-- Performans için preload -->
+  <link rel="preload" as="image" type="image/png" importance="high" href="https://mefamex.com/src/assets/images/mfmx_icon/mefamex_logo_bg.png" crossorigin="anonymous"  referrerpolicy="no-referrer"/>
+  <!-- Favicon Set -->
+  <link rel="icon" sizes="16x16" href="/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
+  <link rel="icon" sizes="32x32" href="/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
+  <link rel="icon" sizes="64x64" href="/src/assets/images/mfmx/mfmx-64.png" type="image/png" />
+  <link rel="icon" sizes="144x144" href="/src/assets/images/mfmx/mfmx-144.png" type="image/png" />
+  <link rel="icon" sizes="256x256" href="/src/assets/images/mfmx/mfmx-256.png" type="image/png" />
+  <link rel="icon" sizes="512x512" href="/src/assets/images/mfmx/mfmx-512.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/src/assets/images/mfmx/mfmx-144.png" />
   <style>
     :root {
       --bg1: #071126;
@@ -28,6 +51,10 @@
       /*color: #fff;
       align-items: center;
       justify-content: center;*/
+    }
+
+    main hr {
+      opacity: 0;
     }
 
     #main-container {
@@ -54,7 +81,7 @@
       /*margin-bottom: clamp(3rem, 10vw, 9rem);*/
       margin-block: 3rem;
       padding: 2rem;
-      gap: 28px;
+      gap: 4rem 2rem;
       align-items: center;
       justify-content: center;
       border: 1px solid rgba(255, 255, 255, 0.04);
@@ -63,7 +90,7 @@
       border-radius: 14px;
       color: #fff;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      transition: all 0.5s normal;
+      transition: all 0.5s ease;
     }
 
     @media (max-width:880px) {
@@ -75,6 +102,7 @@
     main .left {
       display: flex;
       flex-direction: column;
+      flex: 3 3 25rem;
       gap: 0.5rem;
       width: 60rem;
       max-width: 95%;
@@ -95,7 +123,14 @@
     main .left p {
       margin: .2rem 0 1rem;
       color: var(--muted);
-      line-height: 1.5
+      line-height: 1.5;
+    }
+
+    main .left p span {
+      display: block;
+      padding-top: 1rem;
+      font-size: 0.8em;
+      color: rgb(74, 105, 123);
     }
 
     main .left .note-2 {
@@ -179,6 +214,98 @@
       font-size: .85rem;
       color: var(--muted)
     }
+
+    main .right {
+      flex: 1 1 15rem;
+      max-width: 100%;
+      padding: 1.25rem;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      box-shadow: 0 8px 20px rgba(2, 6, 23, 0.5);
+      align-self: flex-start;
+      margin-left: 1rem;
+      color: var(--muted);
+    }
+
+    main .right h2 {
+      margin: 0 0 .6rem 0;
+      font-size: 1.15rem;
+      color: var(--accent);
+      letter-spacing: .2px;
+    }
+
+    main .right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main .right ul:hover li:nth-child(odd) {
+      transform: translateX(-0.1rem) rotate(-0.1deg);
+      box-shadow: -6px 10px 24px rgba(2, 6, 23, 0.08);
+      margin-block: 0.2rem;
+    }
+
+    main .right ul:hover li:nth-child(even) {
+      transform: translateX(0.1rem) rotate(0.1deg);
+      box-shadow: 6px 10px 24px rgba(2, 6, 23, 0.08);
+    }
+
+    main .right ul:not(:hover) li {
+      transform: none;
+      box-shadow: none;
+    }
+
+    main .right li {
+      margin: 0;
+      padding-block: 0.4rem;
+      transition: all 0.5s ease-in-out;
+    }
+
+    main .right a {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      padding: .7rem .65rem;
+      border-radius: 10px;
+      color: #eaf6ff;
+      text-decoration: none;
+      transition: all .12s ease;
+      background: linear-gradient(180deg, rgb(33, 64, 92), rgb(13, 41, 67));
+      border: 1px solid #194b46;
+    }
+
+    main .right a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.45);
+      background: linear-gradient(180deg, rgba(0, 215, 255, 0.06), rgba(0, 80, 123, 0.03));
+      color: #001219;
+    }
+
+    /* küçük ikon kutucuğu */
+    main .right a::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(0, 215, 255, 0.12), rgba(0, 80, 123, 0.08));
+      display: inline-block;
+      box-shadow: inset 0 -6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    main .right a .label {
+      font-weight: 600;
+      color: #eaf6ff;
+    }
+
+    main .right a .meta {
+      font-size: .85rem;
+      color: rgba(234, 246, 255, 0.65);
+      margin-top: .15rem;
+    }
   </style>
 </head>
 
@@ -196,69 +323,77 @@
           </div>
         </div>
         <h1> <strong>404</strong> <br> Sayfa bulunamadı</h1>
-        <p>Sayfa mevcut değil veya taşınmış olabilir. Aşağıdaki seçeneklerden birine bakabilirsiniz veya geri dönebilirsiniz.</p>
+        <p>Sayfa mevcut değil veya taşınmış olabilir. Seçeneklerden birine bakabilir veya geri dönebilirsin. <br> <span>Nereye bakmaya çalıştığını bilmiyorum ama <strong>belki de aradığın şey burada
+              değildir</strong>.</span></p>
         <div class="actions">
+          <p>İletişime geçmekten çekinmeyin.</p>
+          <hr>
           <a class="btn primary" href="/">Anasayfaya Dön</a>
           <a class="btn" href="/contact/">İletişim</a>
         </div>
       </div>
+      <div class="right" aria-labelledby="alt-links-title">
+        <h2 id="alt-links-title">Alternatif Bağlantılar</h2>
+        <ul>
+          <li>
+            <a href="/" title="Anasayfa">
+              <span aria-hidden="true"></span>
+              <div>
+                <div class="label">Anasayfa</div>
+                <div class="meta">Güncel giriş sayfası</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/about/" title="Hakkında">
+              <span aria-hidden="true"></span>
+              <div>
+                <div class="label">Hakkında</div>
+                <div class="meta">Ben kimim, neler yapıyorum</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/projects/" title="Projeler">
+              <span aria-hidden="true"></span>
+              <div>
+                <div class="label">Projeler</div>
+                <div class="meta">Öne çıkan çalışmalar</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/blog/" title="Blog">
+              <span aria-hidden="true"></span>
+              <div>
+                <div class="label">Blog</div>
+                <div class="meta">Yazılar ve notlar</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/contact/" title="İletişim">
+              <span aria-hidden="true"></span>
+              <div>
+                <div class="label">İletişim</div>
+                <div class="meta">İletişim bilgileri ve sosyal</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/cv/" title="CV">
+              <span aria-hidden="true"></span>
+              <div>
+                <div class="label">CV</div>
+                <div class="meta">Özgeçmişim</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </main>
   </div>
   <script src="/src/components/importHeaderFooter.js"></script>
-  <script>
-    let index = [];
-
-    function buildIndexFrom(data) {
-      const flat = [];
-      const pushIfValid = item => {
-        if (!item || typeof item !== 'object') return;
-        const title = (item.title || item.name || item.label || item.text || '').trim();
-        const url = (item.href || item.url || item.path || item.link || '').trim();
-        if (title && url) {
-          try {
-            const u = new URL(url, location.origin);
-            if (u.origin === location.origin) flat.push({ title, url: u.pathname + u.search + u.hash });
-            else flat.push({ title, url });
-          } catch (e) {
-            flat.push({ title, url });
-          }
-        }
-      };
-      const walk = node => {
-        if (!node) return;
-        if (Array.isArray(node)) return node.forEach(walk);
-        if (typeof node !== 'object') return;
-        if (node.title || node.href || node.url) pushIfValid(node);
-        const childKeys = ['menu', 'submenu', 'items', 'children'];
-        for (const k of childKeys) if (node[k]) walk(node[k]);
-        for (const k in node) if (node.hasOwnProperty(k) && typeof node[k] === 'object') walk(node[k]);
-      };
-      if (data && data.menu) walk(data.menu); else walk(data);
-      const seen = new Set();
-      index = flat.filter(it => {
-        if (!it || !it.url) return false;
-        const key = it.url;
-        if (seen.has(key)) return false;
-        seen.add(key); return true;
-      });
-      try { if (q && q.value && q.value.trim()) { q.dispatchEvent(new Event('input')); } } catch (e) { }
-    }
-
-    // Eğer index.html tarafından önceden yüklenmiş navigation verisi varsa kullan
-    if (window._NAVIGATION) buildIndexFrom(window._NAVIGATION);
-    else {
-      fetch('/navigation.json').then(r => { if (!r.ok) throw new Error('no nav'); return r.json(); }).then(buildIndexFrom).catch(() => {
-        index = [
-          { title: 'Anasayfa', url: '/' },
-          { title: 'Hakkında', url: '/about/' },
-          { title: 'Projeler', url: '/projects/' },
-          { title: 'Blog', url: '/blog/' },
-          { title: 'İletişim', url: '/contact/' },
-          { title: 'CV', url: '/cv/' }
-        ];
-      });
-    }
-  </script>
 </body>
 
 </html>
