@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "link[fetchpriority]",
+          "meta[name=theme-color]"
+        ]
+      }
+    ]
+  }
+}

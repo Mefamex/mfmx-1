@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ziyaretçi Bilgileri</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="data:,">
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #0e1116;
+            --fg: #e6e8ea;
+            --panel: #1b222c;
+            --accent: #4ea1ff;
+            --warn: #ffb347;
+            --err: #ff5f56;
+            --ok: #5aff91;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #121821, #0d0f13);
+            color: var(--fg);
+        }
+
+        body * {
+            max-width: 100% !important;
+        }
+
+        header {
+            padding: 1rem 1.2rem;
+            background: #161d27;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.1rem;
+            letter-spacing: .5px;
+        }
+
+        button,
+        select {
+            background: #223140;
+            color: var(--fg);
+            border: 1px solid #2e3e50;
+            padding: .55rem .9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: .85rem;
+        }
+
+        button:hover {
+            background: #2b4257;
+        }
+
+        main {
+            padding: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #status {
+            font-size: .75rem;
+            opacity: .8;
+        }
+
+        .grid {
+            display: grid;
+            gap: 4rem 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid #57687c;
+            border-radius: 10px;
+            padding: .9rem 1rem 1.1rem;
+            position: relative;
+            box-shadow: 0 4px 10px -4px #0008;
+            grid-column:1/-1;
+        }
+
+        .panel h2 {
+            display: flex;
+            margin: .1rem 0 .6rem;
+            align-items: center;
+            gap: .4rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            text-decoration: underline;
+            letter-spacing: 0.1em;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            background: linear-gradient(360deg, #0077ff, #1b222c, #1b222c, #1b222c);
+        }
+
+        small.muted {
+            opacity: .6;
+            font-size: .7rem;
+        }
+
+        code.inline {
+            background: #10161d;
+            padding: .15rem .4rem;
+            border-radius: 4px;
+            font-size: .75rem;
+        }
+
+        pre {
+            overflow: auto;
+            background: #10161d;
+            padding: .6rem .7rem;
+            border-radius: 6px;
+            font-size: .8rem;
+            line-height: 1.2;
+        }
+
+        pre::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: #33485d;
+            border-radius: 4px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: .15rem .45rem;
+            font-size: .6rem;
+            background: #223140;
+            border: 1px solid #314455;
+            border-radius: 999px;
+            margin-right: .3rem;
+        }
+
+        .badge.ok {
+            border-color: #1e6b3d;
+            background: #174d2c;
+            color: var(--ok);
+        }
+
+        .badge.warn {
+            border-color: #6b5b1e;
+            background: #4d3f17;
+            color: var(--warn);
+        }
+
+        .badge.err {
+            border-color: #6b1e1e;
+            background: #4d1717;
+            color: var(--err);
+        }
+
+        .flex {
+            display: flex;
+            gap: .4rem;
+            flex-wrap: wrap;
+        }
+
+        .section-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: .9rem;
+            line-height: 1.25;
+        }
+
+        .section-list li {
+            margin-block: 0.5rem;
+            padding: .15rem 0;
+            border-bottom: 1px solid #27323f55;
+        }
+
+        main li {
+            overflow-wrap: break-word;
+            word-break: break-word;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+
+        .section-list li:last-child {
+            border-bottom: none;
+        }
+
+        #rawJson {
+            height: 30rem;
+        }
+
+        footer {
+            padding: 1rem;
+            text-align: center;
+            font-size: .65rem;
+            opacity: .5;
+        }
+
+        #toast {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: #1f2a34;
+            color: var(--fg);
+            padding: .7rem .9rem;
+            font-size: .7rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px -2px #000a;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(8px);
+            transition: .35s;
+        }
+
+        #toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        progress {
+            width: 140px;
+            height: 10px;
+        }
+
+        @media (max-width:700px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ziyaretçi Bilgilerim</h1>
+        <div class="flex">
+            <button id="btnRefresh">Yeniden Topla</button>
+            <button id="btnGeo">Konum +</button>
+            <button id="btnHeavy">Heavy Fingerprint</button>
+            <button id="btnClipboard">Clipboard</button>
+            <button id="btnDownload">JSON İndir</button>
+        </div>
+        <div id="status">Hazırlanıyor...</div>
+    </header>
+    <main>
+        <div class="grid" id="panels"></div>
+        <div class="panel">
+            <h2>RAW JSON</h2>
+            <pre id="rawJson">(yok)</pre>
+        </div>
+    </main>
+    <div id="toast"></div>
+    <script src="./ziyaretciInfo.js"></script>
+    <script>
+        const panelsEl = document.getElementById('panels');
+        const rawEl = document.getElementById('rawJson');
+        const statusEl = document.getElementById('status');
+        const toastEl = document.getElementById('toast');
+        function toast(msg) { toastEl.textContent = msg; toastEl.classList.add('show'); setTimeout(() => toastEl.classList.remove('show'), 2600); }
+
+        function createPanel(title, bodyHtml) {
+            const div = document.createElement('div');
+            div.className = 'panel';
+            div.innerHTML = `<h2>${title}</h2>${bodyHtml}`;
+            return div;
+        }
+
+        function list(obj) {
+            if (!obj) return '<small class="muted">(yok)</small>';
+            if (Array.isArray(obj)) return `<ul class='section-list'>${obj.map(v => `<li>${escapeHtml(JSON.stringify(v))}</li>`).join('')}</ul>`;
+            return `<ul class='section-list'>${Object.entries(obj).map(([k, v]) => `<li><strong>${escapeHtml(k)}:</strong> ${escapeHtml(typeof v === 'object' ? JSON.stringify(v) : String(v))}</li>`).join('')}</ul>`;
+        }
+
+        function escapeHtml(str) { return String(str).replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[m])); }
+
+        function render(info) {
+            panelsEl.innerHTML = '';
+            if (!info) { panelsEl.textContent = 'Bilgi yok'; return; }
+            const sections = {
+                "Genel": {
+                    Timestamp: info.timestamp,
+                    URL: info.location_href,
+                    Referrer: info.referrer,
+                    UserAgent: info.userAgent,
+                    Platform: info.platform,
+                    Dil: info.language,
+                    Diller: (info.languages || []).join(', '),
+                    Timezone: info.timezone,
+                    Locale: info.locale,
+                    Online: info.online,
+                    DoNotTrack: info.doNotTrack
+                },
+                "Donanım": {
+                    CPU_Threads: info.hardwareConcurrency,
+                    DeviceMemoryGB: info.deviceMemoryGB,
+                    MaxTouchPoints: info.maxTouchPoints
+                },
+                "Ekran": info.screen,
+                "Viewport": info.viewport,
+                "Performans": info.performanceTiming,
+                "Bağlantı": info.connection,
+                "Batarya": info.battery,
+                "Ağ IP": { Public: info.publicIP && info.publicIP.ip, Local: (info.localIPs || []).join(', ') },
+                "Konum": info.geolocation,
+                "WebGL": info.webgl,
+                "Depolama Tahmini": info.storageEstimate,
+                "Fingerprint": { fingerprint: info.fingerprint, ...info.fingerprintPieces },
+                "Extended": info.extended
+            };
+            Object.entries(sections).forEach(([title, obj]) => panelsEl.appendChild(createPanel(title, list(obj))));
+            rawEl.textContent = JSON.stringify(info, null, 2);
+        }
+
+        async function refresh(opts = {}) {
+            statusEl.textContent = 'Toplanıyor...';
+            const info = await window.getVisitorInfo(opts);
+            render(info);
+            statusEl.textContent = 'Hazır';
+            toast('Güncellendi');
+        }
+
+        window.waitVisitorInfo().then(info => { render(info); statusEl.textContent = 'Hazır'; });
+
+        // 5 saniye sonra otomatik heavy fingerprint toplama
+        let heavyAutoDone = false;
+        setTimeout(async () => {
+            try {
+                // Eğer zaten heavy (canvasFingerprint veya audioFingerprint) varsa tekrar yapma
+                const current = window.__VISITOR_INFO;
+                const alreadyHeavy = current && current.extended && (current.extended.canvasFingerprint || current.extended.audioFingerprint);
+                if (alreadyHeavy || heavyAutoDone) return;
+                toast('Heavy fingerprint toplanıyor...');
+                await refresh({ wantGeolocation: false, wantPublicIP: true, wantExtended: true, wantHeavy: true, wantFonts: true });
+                heavyAutoDone = true;
+            } catch (e) { console.error('Auto heavy fingerprint hata:', e); }
+        }, 5000);
+
+        // Buttons
+        btnRefresh.onclick = () => refresh({ wantGeolocation: false, wantPublicIP: true, wantExtended: true });
+        btnGeo.onclick = () => refresh({ wantGeolocation: true, preciseLocation: false, wantPublicIP: true, wantExtended: true });
+        btnHeavy.onclick = () => refresh({ wantGeolocation: false, wantPublicIP: true, wantExtended: true, wantHeavy: true, wantFonts: true });
+        btnClipboard.onclick = () => refresh({ wantClipboard: true, wantExtended: true });
+        btnDownload.onclick = () => { window.downloadVisitorInfo(); toast('JSON indiriliyor'); };
+    </script>
+</body>
+
+</html>
