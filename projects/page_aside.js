@@ -3,21 +3,24 @@
  * @author Mefamex <info@mefamex.com>
  * @copyright 2024 Mefamex
  * @license MIT
- * @version 1.0.0
  * @see https://mefamex.com/
  * @since 2024-12-02 
- * @lastModified 2025-03-16-18:19
+ * @lastModified 2025-08-18-T00:00:00Z
  */
 
+'use strict';
 
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+else init();
 
-(async () => { await CreateAside(); })();
+function init() {
+    (async () => { await CreateAside(); })();
+    domLoaded();
+}
+
 /*await CreateNavContainer();*/
-
-
-document.addEventListener('DOMContentLoaded', () => {
+function domLoaded() {
     const sections = document.querySelectorAll('#main_container main > section');
-
     if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -30,16 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, { threshold: [0.1, 0.2, 0.3], rootMargin: '50px 0px', });
-
         sections.forEach(section => {
-            try {
-                section.style.opacity = '0';
-                observer.observe(section);
-            } catch (error) {
-                console.warn('Section gözlemleme hatası:', error);
-                section.style.opacity = '1';
-                section.classList.add('visible');
-            }
+            try { section.style.opacity = '0'; observer.observe(section); }
+            catch (error) { section.style.opacity = '1'; section.classList.add('visible'); console.warn('Section gözlemleme hatası:', error); }
         });
     } else {
         console.warn('IntersectionObserver desteklenmiyor. Fallback kullanılıyor.');
@@ -47,28 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
             sections.forEach(section => {
                 const rect = section.getBoundingClientRect();
                 const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
-                if (rect.top <= windowHeight * 0.8 && rect.bottom >= 0) {
-                    section.classList.add('visible');
-                    section.style.opacity = '';
-                }
+                if (rect.top <= windowHeight * 0.8 && rect.bottom >= 0) { section.classList.add('visible'); section.style.opacity = ''; }
             });
         };
-
         let ticking = false;
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    checkVisibility();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }, { passive: true });
-
+        window.addEventListener('scroll', () => { if (!ticking) { window.requestAnimationFrame(() => { checkVisibility(); ticking = false; }); ticking = true; } }, { passive: true });
         window.addEventListener('load', checkVisibility);
     }
-});
+};
 
 
 

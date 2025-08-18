@@ -3,13 +3,13 @@
  * @author Mefamex <info@mefamex.com>
  * @copyright 2024 Mefamex
  * @license MIT
- * @version 1.0.0
  * @see https://mefamex.com
  * @since 2024-12-08
- * @lastModified 2025-04-14
+ * @lastModified 2025-08-18-T00:00:00Z
  */
-
-document.addEventListener('DOMContentLoaded', domLoaded);
+'use strict';
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', domLoaded, { once: true });
+else domLoaded();
 
 
 var searchInput, checkboxes, checkboxContainer, projectItems, languages;

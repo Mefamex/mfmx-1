@@ -31,7 +31,7 @@
         <!---->
         <!-- Stil Optimizasyonu -->
         <link rel="stylesheet" href="style.css" class="alternatively" />
-        <link rel="stylesheet" href="/src/components/headerFooter.css" class="alternatively" />
+        <link rel="stylesheet" href="/src/components/headerFooter.css" class="alternatively" importance="high" fetchpriority="high" />
         <!---->
         <!-- Google Forms preconnect and DNS prefetch for faster form loading -->
         <link rel="preconnect" href="https://docs.google.com" crossorigin="anonymous" />
