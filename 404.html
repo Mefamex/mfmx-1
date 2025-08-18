@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 — Sayfa Bulunamadı • mefamex.com</title>
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="noindex nofollow" />
   <meta name="description" content="Aradığınız sayfa bulunamadı — mefamex.com. Anasayfaya dönün veya site içinde arama yapın.">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), interest-cohort=()">
   <!---->
@@ -22,7 +22,12 @@
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <!---->
   <!-- Performans için preload -->
-  <link rel="preload" as="image" type="image/png" importance="high" href="https://mefamex.com/src/assets/images/mfmx_icon/mefamex_logo_bg.png" crossorigin="anonymous"  referrerpolicy="no-referrer"/>
+  <link rel="preload" as="image" type="image/png" importance="high" href="https://mefamex.com/src/assets/images/mfmx_icon/mefamex_logo_bg.png" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!---->
+  <!-- Header Footer -->
+  <link rel="stylesheet" href="/src/components/headerFooter.css" class="alternatively" importance="high" fetchpriority="high" />
+  <script src="/src/components/importHeaderFooter.js" defer></script>
+  <!---->
   <!-- Favicon Set -->
   <link rel="icon" sizes="16x16" href="/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
   <link rel="icon" sizes="32x32" href="/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
@@ -393,7 +398,6 @@
       </div>
     </main>
   </div>
-  <script src="/src/components/importHeaderFooter.js"></script>
 </body>
 
 </html>
