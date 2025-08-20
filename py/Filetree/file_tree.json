@@ -1,7 +1,7 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "size": 91783817,
+    "size": 91783558,
     "date": "2025-08-18",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
@@ -1421,7 +1421,7 @@
         {
             "name": "py",
             "url": "py",
-            "size": 269996,
+            "size": 271054,
             "date": "2025-08-13",
             "relative_path": "py",
             "full_url": "https://mefamex.com/py",
@@ -1429,7 +1429,7 @@
                 {
                     "name": "Filetree",
                     "url": "py/Filetree",
-                    "size": 213737,
+                    "size": 214795,
                     "date": "2025-08-13",
                     "relative_path": "py\\Filetree",
                     "full_url": "https://mefamex.com/py/Filetree",
@@ -1446,8 +1446,8 @@
                         {
                             "name": "file_tree.json",
                             "url": "py/Filetree/file_tree.json",
-                            "size": 200212,
-                            "date": "2025-08-17",
+                            "size": 201270,
+                            "date": "2025-08-21",
                             "full_url": "https://mefamex.com/py/Filetree/file_tree.json",
                             "relative_path": "py\\Filetree\\file_tree.json"
                         }
@@ -1474,7 +1474,7 @@
                             "name": "link_tree.json",
                             "url": "py/Linktree/link_tree.json",
                             "size": 16075,
-                            "date": "2025-08-19",
+                            "date": "2025-08-21",
                             "full_url": "https://mefamex.com/py/Linktree/link_tree.json",
                             "relative_path": "py\\Linktree\\link_tree.json"
                         }
@@ -3305,8 +3305,8 @@
         {
             "name": "_DirExVis_results.txt",
             "url": "_DirExVis_results.txt",
-            "size": 5584,
-            "date": "2025-08-19",
+            "size": 4267,
+            "date": "2025-08-21",
             "full_url": "https://mefamex.com/_DirExVis_results.txt",
             "relative_path": "_DirExVis_results.txt"
         },
@@ -3314,7 +3314,7 @@
             "name": "_folder_analysis_results.txt",
             "url": "_folder_analysis_results.txt",
             "size": 574,
-            "date": "2025-08-19",
+            "date": "2025-08-21",
             "full_url": "https://mefamex.com/_folder_analysis_results.txt",
             "relative_path": "_folder_analysis_results.txt"
         }
