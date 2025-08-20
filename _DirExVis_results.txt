@@ -1,5 +1,5 @@
 # Created for : mefamex.com files
-# Created on  : 2025-08-19T20:56:53Z
+# Created on  : 2025-08-21T00:03:52Z
 
 D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
@@ -116,7 +116,45 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      tempCodeRunnerFile.py
 |      |      Yazilim_Ayrintili.txt
 |      src
-|      |     ***************
+|      |      assets
+|      |      |      fontss
+|      |      |      icons
+|      |      |      |      black
+|      |      |      |      |      64x64
+|      |      |      |      =.ico
+|      |      |      |      x.ico
+|      |      |      images
+|      |      |      |      background
+|      |      |      |      |      gnpToWebp.py
+|      |      |      |      language_img
+|      |      |      |      |      asil
+|      |      |      |      |      png
+|      |      |      |      mfmx
+|      |      |      |      mfmx_icon
+|      |      |      |      mfmx_symbol
+|      |      components
+|      |      |      =.ico
+|      |      |      headerFooter-v0-1.css
+|      |      |      headerFooter-v0-2.css
+|      |      |      headerFooter.css
+|      |      |      importHeaderFooter-v0-2.js
+|      |      |      importHeaderFooter.js
+|      |      |      x.ico
+|      |      data
+|      |      |      navigation.json
+|      |      My_nots
+|      |      |      Legal_terms.txt
+|      |      |      link_rel.txt
+|      |      |      privacy-policy(2).txt
+|      |      |      Privacy_Policy.txt
+|      |      |      SSS.txt
+|      |      styles
+|      |      |      home.css
+|      sweetmonstermia
+|      |      Kalsin
+|      |      |      P1030959.JPG
+|      |      |      P1050520.JPG
+|      |      index.html
 |      the-mefamex-project
 |      |      index.html
 |      |      style.css
