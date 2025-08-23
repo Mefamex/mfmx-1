@@ -5,17 +5,20 @@
  * @license MIT
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-08-18-T00:00:00Z
+ * @lastModified 2025-08-24-T00:00:00Z
  */
 
 'use strict';
 
 function getScriptPath() {
-    if (document.currentScript?.src) return document.currentScript.getAttribute('src');
-    if (document.currentScript?.href) return document.currentScript.getAttribute('href');
     const currentScript = Array.from(document.getElementsByTagName('script')).find(script => script.src?.includes('importHeaderFooter.js'));
     if (currentScript?.src) return currentScript.src; if (currentScript?.href) return currentScript.href;
-    const fallbackPath = '/src/components/importHeaderFooter.js';
+    //if (document.currentScript?.src) return document.currentScript.getAttribute('src');
+    //if (document.currentScript?.href) return document.currentScript.getAttribute('href');
+    // bu ikisi saçma şekilde tarayıcı tarafından hata veriyor. dinamik yüklemede tarayıcı niye kendi dizininde arasında amk
+    // absolute path vermeme rağmen tarayıcı bunu benim sitemin kök dizininden başlıyarak alması gerektiğini çözemiyor. 
+    // frameworklerde bu hata çözümlüştü....
+    const fallbackPath = 'https://mefamex.com/src/components/importHeaderFooter.js';
     console.log('⚠️ HeaderFooter Script yolu bulunamadı! Varsayılan konum kullanılıyor:', fallbackPath);
     return fallbackPath;
 };

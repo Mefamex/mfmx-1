@@ -181,6 +181,24 @@
 
 
 
+================ SORU-CEVAP ( forum gibi bişe işte ) ===============
+- NEW: Herhangi bir dil, birisinin onu ne kadar iyi bildiğini (uzmanlığını) anlamak için kodlarında neleri kullanmasını beklersiniz?
+        - Mesela... Python'da yield
+        - Mesela... Python'da async / await
+        - Mesela... python'da @staticmethod , @classmethod
+        - Mesela... python'da Context managers (with ile __enter__ , __exit__)
+        - Mesela... python'da decorators
+        - Mesela... python'da metaclass
+        - Mesela... python'da Pydantic (Dataclasses...)
+        - Mesela... go'da Embedding yapı ve methodalr 
+        - Mesela... go'da build tags
+        - Mesela... react'da HOC
+        - Mesela... react'da .memo
+        - Mesela... Kubernetes'de helm charst
+
+
+
+
 
 
 
