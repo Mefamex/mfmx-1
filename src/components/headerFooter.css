@@ -6,7 +6,7 @@
 * Copyright 2024 Mefamex
 * Licensed under MIT (https://github.com/Mefamex/)
 * Created on  : 2024-08-20
-* Last update : 2025-08-10-T00:00:00Z
+* Last update : 2025-08-25-T00:00:00Z
 * Title : headerFooter.css
 * This css file is for the header and footer of the Mefamex website.
 */
@@ -62,18 +62,15 @@ screen and (min-resolution: 192dpi) {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    /*flex-direction: column;*/
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: rgb(15, 15, 15);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, "Helvetica Neue", Arial,
-        "Noto Sans", sans-serif, "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @font-face {
@@ -181,13 +178,14 @@ header a, header a img, footer a, footer a img {
 */
 
 header {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
+    left: 0px;
     height: 5rem;
     margin: 0;
     background-color: rgb(16, 16, 36);
@@ -323,7 +321,7 @@ header #headerDivLeftText {
 }
 
 header.blink #headerDivLeftText {
-    animation: header-blink 0.2s linear 1;
+    animation: header-blink 0.5s linear 1;
 }
 
 @keyframes header-blink {
@@ -878,7 +876,8 @@ footer #secondPart #secondLeft img {
     width: 2rem;
     object-fit: contain;
 }
-footer #secondPart #secondLeft>*{
+
+footer #secondPart #secondLeft>* {
     transition: all 0.2s ease-in-out;
 }
 
