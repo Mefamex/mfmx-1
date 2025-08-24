@@ -513,17 +513,24 @@ header .pageA.current_page img {
 }
 
 header .pageA.current_page::after {
-    opacity: 0;
-    content: "▼";
     position: absolute;
+    display: inline-block;
+    content: "▼";
     top: 0%;
     transform: translateX(-50%);
     left: 50%;
-    display: inline-block;
+    /* hoverlanmasın */
+    opacity: 1;
+    color: #d68b8b;
+    top: 20%;
+    font-size: 0.8em;
+    white-space: nowrap;
+    line-height: 0;
+    transition: 0.2s all 0.2s ease-in-out;
 }
 
 header .pageA.current_page:hover::after {
-    position: absolute;
+    /*position: absolute;
     display: inline-block;
     content: "▼";
     color: #d68b8b;
@@ -534,7 +541,8 @@ header .pageA.current_page:hover::after {
     white-space: nowrap;
     line-height: 0;
     transition: 0.2s all 0.2s ease-in-out;
-    opacity: 1;
+    opacity: 1;*/
+    color: #ffffff;
 }
 
 header .pageA:not(.showText) span {
