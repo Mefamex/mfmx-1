@@ -69,7 +69,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(12, 16, 20);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -148,7 +148,7 @@ header a, header a img, footer a, footer a img {
     cursor: grab;
     transition: all 0.5s ease-in-out;
     /* border: 1px solid red; */
-    border-left: 4px solid rgb(0, 153, 255);
+    border-left: 4px solid rgb(0, 59, 99);
 }
 
 ::-webkit-scrollbar-thumb:active {
@@ -203,9 +203,9 @@ header * {
 
 header:hover {
     transition: all 0.3s ease-in-out !important;
-    box-shadow: 0 16px 40px 0 rgba(0, 121, 189, 0.25), 0 2px 8px 0 rgba(139, 92, 246, 0.15);
+    box-shadow: 0 1rem 2rem 0 rgba(0, 68, 108, 0.137), 0 0.1rem 0.5rem 0 rgba(139, 92, 246, 0.15);
     border-bottom: 0.1rem solid #004451 !important;
-    filter: brightness(1.08) drop-shadow(0 0 0.5rem #00425e);
+    filter: brightness(1.08) drop-shadow(0 0 0.5rem #002b3d);
     /* top: 0.3rem; */
 }
 
@@ -385,8 +385,6 @@ header #headerNavBar {
     height: 100%;
     max-height: 100%;
     width: 100%;
-    width: 100%;
-    width: 100%;
     max-width: 100%;
     align-items: center;
     align-self: center;
@@ -445,7 +443,7 @@ header .pageA:hover {
     transform: translateY(-0.2em);
     box-shadow: 0px 0.2em 0.7em 0.5em rgba(21, 79, 140, 0.25);
     background-color: rgba(139, 92, 246, 0.1);
-    border: 1px solid #888888;
+    border-color: rgba(0, 79, 176, 0.324);
 }
 
 
@@ -504,6 +502,7 @@ header .pageA.current_page {
     text-decoration-style: solid;
     text-decoration-color: #00b3ff;
     font-weight: 700;
+    color: rgb(223, 232, 232);
     letter-spacing: 0.1em;
     background-color: rgb(0, 60, 80) !important;
 }
@@ -514,6 +513,7 @@ header .pageA.current_page img {
     margin-right: 0.2em;
 }
 
+/*
 header .pageA.current_page::after {
     position: absolute;
     display: inline-block;
@@ -521,7 +521,6 @@ header .pageA.current_page::after {
     top: 0%;
     transform: translateX(-50%);
     left: 50%;
-    /* hoverlanmasın */
     opacity: 1;
     color: #d68b8b;
     top: 20%;
@@ -535,9 +534,8 @@ header #headerMenuDiv .pageA.current_page::after {
     display: none !important;
 }
 
-
 header .pageA.current_page:hover::after {
-    /*position: absolute;
+    position: absolute;
     display: inline-block;
     content: "▼";
     color: #d68b8b;
@@ -548,9 +546,8 @@ header .pageA.current_page:hover::after {
     white-space: nowrap;
     line-height: 0;
     transition: 0.2s all 0.2s ease-in-out;
-    opacity: 1;*/
-    color: #ffffff;
-}
+    opacity: 1;
+}*/
 
 header .pageA:not(.showText) span {
     display: none;
