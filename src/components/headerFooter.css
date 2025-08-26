@@ -6,7 +6,7 @@
 * Copyright 2024 Mefamex
 * Licensed under MIT (https://github.com/Mefamex/)
 * Created on  : 2024-08-20
-* Last update : 2025-08-25-T00:00:00Z
+* Last update : 2025-08-26-T00:00:00Z
 * Title : headerFooter.css
 * This css file is for the header and footer of the Mefamex website.
 */
@@ -497,6 +497,7 @@ header .pageA:hover img {
     filter: invert(0.9);
 }
 
+
 header .pageA.current_page {
     /* color: #c36565;*/
     text-decoration: underline;
@@ -504,6 +505,7 @@ header .pageA.current_page {
     text-decoration-color: #00b3ff;
     font-weight: 700;
     letter-spacing: 0.1em;
+    background-color: rgb(0, 60, 80) !important;
 }
 
 header .pageA.current_page img {
@@ -528,6 +530,11 @@ header .pageA.current_page::after {
     line-height: 0;
     transition: 0.2s all 0.2s ease-in-out;
 }
+
+header #headerMenuDiv .pageA.current_page::after {
+    display: none !important;
+}
+
 
 header .pageA.current_page:hover::after {
     /*position: absolute;
