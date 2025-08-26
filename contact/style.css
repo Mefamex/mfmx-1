@@ -42,199 +42,226 @@ main {
 
 main h1 {
     font-size: 3rem;
-    margin-block-end: 0.7rem;
+    margin-block-end: 1rem;
 }
 
 main #page-description {
     margin: 0;
     width: 90%;
     text-align: center;
-    font-size: clamp(0.8em, 1vw, 1.1em);
+    font-size: clamp(0.8em, 1.1vw, 1.1em);
 }
 
 main #mainCenter {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     max-width: 99vw;
     margin: 3rem auto 0 auto;
-    align-items: self-start;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+/*
+*
+*
+*
+*
+*
+*/
+main #divSocial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    gap: 10vh;
 }
 
-main #mainCenter>div {
-    padding: 1.5rem;
-    transition: all 0.2s ease;
-    margin: 2rem;
-
-    &:hover {
-        background-color: rgb(28, 30, 30);
-        box-shadow: 0 0.2rem 1.5rem rgb(11, 11, 11);
-    }
+main .socialCards h2#activeAccounts {
+    color: black;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) -20%, rgb(255, 255, 255) 100%);
 }
 
-@media screen and (min-width: 50rem) {
-    main #mainCenter>div {
-        background-color: rgb(27 27 27);
-        border-radius: 1rem;
-        box-shadow: 0 0.1rem 0.5rem rgb(8, 8, 8);
-    }
-}
-
-@media screen and (max-width: 50rem) {
-    main #mainCenter>div>div, #divContact {
-        background-color: rgb(27 27 27);
-        border-radius: 1rem;
-        box-shadow: 0 0.1rem 0.5rem rgb(8, 8, 8);
-        padding: 1.5rem;
-        font-size: 0.8em;
-
-        &:hover {
-            background-color: rgb(28, 30, 30);
-            box-shadow: 0 0.2rem 1.5rem rgb(11, 11, 11);
-        }
-    }
-
-    main #mainCenter>div {
-        padding: 0;
-
-        &:hover {
-            background-color: transparent;
-            box-shadow: none;
-        }
-    }
-}
-
-
-main #mainCenter>div>div:first-child {
-    margin-bottom: 3rem;
-}
-
-main #mainCenter h2 {
+main .socialCards h2 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 1rem;
+    padding: 0.2em 1em;
+    align-self: center;
     text-align: center;
-    margin-block: 0.5rem 1.5rem;
-    font-size: 2em;
-    background-color: #484848;
-    margin-inline: auto;
-    justify-self: center;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgb(120 120 120);
+    background-image: linear-gradient(to top, rgba(139, 238, 255, 0.148) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 0.8rem;
+
 }
 
-main #mainCenter #divSocial {
+main .socialCards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 100%;
+    font-size: clamp(0.8em, 1vw, 1em);
+}
+
+main .socialCards ul {
     display: flex;
     flex-direction: row;
-    align-items: self-start;
     flex-wrap: wrap;
-    gap: 2rem;
-    align-items: start;
-    justify-content: center;
-    width: fit-content;
-    max-width: 100%;
-}
-
-
-main #mainCenter #divSocial ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: fit-content;
-    max-width: 100%;
-    min-width: 20rem;
-    margin: 0 auto;
-    padding-inline-start: 0;
-}
-
-main #mainCenter #divSocial ul li {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem;
-    border-radius: 8px;
-    background-color: rgb(34, 34, 34);
-    border: 0.1rem solid rgb(41, 41, 41);
-    transition: all 0.3s ease;
-}
-
-main #mainCenter #divSocial ul li:hover {
-    background-color: rgb(45, 45, 45);
-    transform: scale(1.02);
-    border: 0.1rem solid rgb(137, 137, 137);
-
-    & img {
-        transform: scale(1.15);
-    }
-
-    & picture {
-        border-radius: 0.2rem;
-        background-color: rgb(255, 255, 255)
-    }
-
-    & span {
-        margin-left: 0.2rem;
-        padding-left: 0.2rem;
-    }
-
-    & span h3 {
-        transform: translateY(-0.3em);
-        color: rgb(255, 255, 255);
-    }
-
-    & span a {
-        scale: 1.1;
-        transform: translateX(0.6em);
-    }
-
-}
-
-main #mainCenter #divSocial ul li picture {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(171, 171, 171);
-    overflow: hidden;
-    transition: all 0.2s ease;
-}
-
-main #mainCenter #divSocial ul li picture img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    padding: 0.2rem;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    row-gap: 2em;
 }
 
-/* Social Media Text */
-main #mainCenter #divSocial ul li span {
+main .socialCards li {
+    position: relative;
+    display: flex;
+    margin: 0.6rem;
+    padding: 0.08rem;
+    width: 7em;
+    height: 7em;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    /*box-shadow: 0 0 0.5rem rgba(0, 255, 255, 0.5);*/
+    transition: all 0.3s ease;
+    
+    background-color: rgba(80, 220, 255, 0.06);
+    box-shadow:
+        0 0.6rem 1.5rem rgba(0, 120, 160, 0.1),
+        inset 0 0.1rem 0 rgba(255, 255, 255, 0.05),
+        0 0 1rem rgba(0, 200, 255, 0.12);
+}
+
+main .socialCards li a {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: inherit;
     justify-content: center;
-    border-left: 1px solid #7f7f7f;
-    margin-left: 0.5rem;
-    padding-left: 0.5rem;
-}
-
-main #mainCenter #divSocial ul li span h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #ccc;
-}
-
-main #mainCenter #divSocial ul li span a {
-    color: #66ccff;
+    color: rgb(186, 186, 186);
     text-decoration: none;
-    font-weight: 500;
-    padding-right: 0.5em;
+    background-color: rgb(0, 30, 30);
+    background-image: radial-gradient(circle at 50% 40%, rgba(139, 238, 255, 0.148) 0%, transparent 50%);
+}
+
+main .socialCards li::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0%;
+    left: 0%;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    background-color: rgb(90, 27, 0);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    animation: donder linear infinite;
+    animation-duration: var(--donder-duration, 4s);
+    animation-play-state: running;
     transition: all 0.3s ease;
 }
 
-main #mainCenter #divSocial ul li span a:hover {
-    color: #99ffff;
+main .socialCards li:hover {
+    padding: 0.1rem;
+    filter: brightness(1.2) !important;
+    scale: 1.05;
+}
+
+main .socialCards li:hover::before {
+    width: 300%;
+    height: 300%;
+    animation-play-state: paused !important;
+    transition-duration: 0.7s;
+}
+
+main .socialCards li.donder-reset::before {
+    animation: none;
+}
+
+@keyframes donder {
+    0% {
+        top: 0%;
+        left: 0%;
+    }
+
+    25% {
+        top: 90%;
+        left: 0%;
+    }
+
+    50% {
+        top: 100%;
+        left: 90%;
+    }
+
+    75% {
+        top: 10%;
+        left: 100%;
+    }
+
+    100% {
+        top: 0%;
+        left: 10%;
+    }
+}
+
+main .socialCards picture {
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0.5rem;
+}
+
+main .socialCards picture img {
+    width: 3em;
+    height: 3em;
+    max-width: 100%;
+    object-fit: contain;
+    filter: invert(100%);
+}
+
+main .socialCards small {
+    font-size: 1em;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+
+
+main #socialAlternatives {
+    font-size: 0.6em;
+    width: fit-content !important;
+}
+
+main #socialAlternatives ul {
+    gap: 1rem;
+}
+
+main #socialAlternatives li {
+    filter: brightness(0.6);
 }
 
 /*
@@ -244,26 +271,44 @@ main #mainCenter #divSocial ul li span a:hover {
 *
 *
 */
-main #mainCenter #divContact {
+main #divContact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: fit-content;
+    padding: 1rem;
+    margin-top: 15vh;
     max-width: 95%;
+    border-radius: 1rem;
+    background-color: rgb(0, 30, 30);
 }
 
-main #mainCenter #divContact p {
-    margin: 0;
+main #divContact h2 {
+    margin: 0 0 1rem 0;
+    background-color: rgb(0, 60, 60);
+    padding: 0.4em 0.6em;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 0.7rem;
 }
 
-main #mainCenter #divContact #ContactForm {
+main #divContact p {
+    margin: 0 0 1rem 0;
+    text-align: left;
+    align-self: flex-start;
+    color: #828282;
+    font-size: 0.9em;
+}
+
+main #divContact #ContactForm {
     font-size: 0.5rem;
     margin-block: 0 1em;
     max-width: min(45rem, 100%);
     width: 40rem;
-    height: 40rem;
+    height: 55rem;
 }
+
 
 /*
 *
@@ -274,46 +319,3 @@ main #mainCenter #divContact #ContactForm {
 *
 *
 */
-@keyframes sirabunda {
-
-    0%,
-    50%,
-    100% {
-        background-color: transparent;
-        border-color: transparent;
-    }
-
-    10% {
-        background-color: black;
-        border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    15% {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-}
-
-/*
-*
-*
-*
-*
-*
-*
-*
-*/
-@media only screen and (max-width: 40rem) {
-
-    main #page-description {
-        width: 90%;
-    }
-
-    main #mainCenter #divContact {
-        padding-inline: 0;
-        margin-inline: 0.5rem;
-    }
-
-    main #mainCenter #divContact #ContactForm {
-        height: 65rem;
-    }
-}
