@@ -91,7 +91,6 @@
             <div id="divSocial">
                 <!---->
                 <div class="socialCards" id="socialTop">
-                    <h2 id="activeAccounts">AKTİF</h2>
                     <ul>
                         <li>
                             <a href="mailto:info@mefamex.com">
@@ -148,7 +147,6 @@
                 <!---->
                 <!---->
                 <div class="socialCards" id="socialAlternatives">
-                    <h2 id="passiveAccounts">PASİF</h2>
                     <ul>
                         <li>
                             <a href="https://www.facebook.com/mefamex58/" title="facebook.com/mefamex58/" aria-label="Mefamex Facebook Account " target="_blank" rel="noopener">
@@ -236,12 +234,13 @@
         document.addEventListener("DOMContentLoaded", () => {
             function degistir(element) {
                 // random süre
-                const randomSüre = Math.random() * 2 + 2;
+                const randomSure = Math.random() * 3 + 3;
                 if (element != Element)
-                    element.style.setProperty('--donder-duration', `${randomSüre}s`);
+                    element.style.setProperty('--donder-duration', `${randomSure}s`);
                 element.classList.add('donder-reset');
-                setTimeout(() => element.classList.remove('donder-reset'), 10);
-                setTimeout(() => { degistir(element) }, randomSüre * 1000);
+                void element.offsetWidth;
+                element.classList.remove('donder-reset');
+                setTimeout(() => degistir(element), parseFloat(randomSure) * 1000);
             }
             Array.from(document.querySelectorAll('.socialCards li')).forEach(element => { degistir(element); });
         });

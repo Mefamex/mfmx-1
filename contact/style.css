@@ -83,21 +83,6 @@ main #divSocial {
     gap: 10vh;
 }
 
-main .socialCards h2#activeAccounts {
-    color: black;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) -20%, rgb(255, 255, 255) 100%);
-}
-
-main .socialCards h2 {
-    font-size: 1.5rem;
-    margin: 0 0 1rem 1rem;
-    padding: 0.2em 1em;
-    align-self: center;
-    text-align: center;
-    background-image: linear-gradient(to top, rgba(139, 238, 255, 0.148) 0%, rgba(0, 0, 0, 0) 100%);
-    border-radius: 0.8rem;
-
-}
 
 main .socialCards {
     position: relative;
@@ -121,7 +106,7 @@ main .socialCards ul {
     align-items: center;
     justify-content: space-around;
     list-style: none;
-    row-gap: 2em;
+    gap: 2em;
 }
 
 main .socialCards li {
@@ -137,7 +122,6 @@ main .socialCards li {
     border-radius: 1rem;
     /*box-shadow: 0 0 0.5rem rgba(0, 255, 255, 0.5);*/
     transition: all 0.3s ease;
-    
     background-color: rgba(80, 220, 255, 0.06);
     box-shadow:
         0 0.6rem 1.5rem rgba(0, 120, 160, 0.1),
@@ -169,8 +153,8 @@ main .socialCards li::before {
     display: block;
     top: 0%;
     left: 0%;
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     border-radius: 100%;
     background-color: rgb(90, 27, 0);
     pointer-events: none;
@@ -183,7 +167,7 @@ main .socialCards li::before {
 }
 
 main .socialCards li:hover {
-    padding: 0.1rem;
+    padding: 0.15em;
     filter: brightness(1.2) !important;
     scale: 1.05;
 }
@@ -196,7 +180,7 @@ main .socialCards li:hover::before {
 }
 
 main .socialCards li.donder-reset::before {
-    animation: none;
+    animation: none !important;
 }
 
 @keyframes donder {
