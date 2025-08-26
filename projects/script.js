@@ -5,7 +5,7 @@
  * @license MIT
  * @see https://mefamex.com
  * @since 2024-12-08
- * @lastModified 2025-08-18-T00:00:00Z
+ * @lastModified 2025-08-26-T00:00:00Z
  */
 'use strict';
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', domLoaded, { once: true });
@@ -25,8 +25,6 @@ async function domLoaded() {
         checkboxContainer.addEventListener('change', (event) => changed_checkbox(event.target));
         document.getElementById('search-form').addEventListener('submit', e => e.preventDefault());
         searchInput?.addEventListener('input', () => requestAnimationFrame(updateSearchResults));
-        console.log('');
-        console.log('✅ Search Form initialized');
     }
     catch (error) {
         console.log('\n❌ Search Form Error: please contact to @mefamex with screenshots');

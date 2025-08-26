@@ -1,4 +1,4 @@
-# updated 2025-08-19T17-56-00Z
+# updated 2025-08-26T17-56-00Z
 
 =========================================================================
 "PERSON"   : "Mehmet Akif AKKOÇ"
@@ -36,6 +36,13 @@
 
 
 
+mefamex.com
+mefamex.com.tr
+mefamex.tr
+
+github.mefamex.com
+ai.mefamex.com
+work.mefamex.com
 
 
 

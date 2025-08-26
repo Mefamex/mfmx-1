@@ -5,7 +5,7 @@
  * @license MIT
  * @see https://mefamex.com/
  * @since 2024-12-02 
- * @lastModified 2025-08-18-T00:00:00Z
+ * @lastModified 2025-08-26-T00:00:00Z
  */
 
 'use strict';
@@ -88,11 +88,9 @@ async function CreateAside() {
             if (forceClose) aside.classList.add('closed-aside');
             else aside.classList.toggle('closed-aside');
         }
-
-
         aside_button.classList = aside.classList;
     }
-    setTimeout(() => aside_change_visiblety(forceClose = true), 2000);
+    setTimeout(() => {aside_change_visiblety(true);}, 2000);
 }
 
 
