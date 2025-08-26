@@ -53,17 +53,17 @@
 
 |    TYPE     |  CHAR   | FILE |
 |-------------|---------|------|
-|        HTML | 527,415 | 28   |
-|        JSON | 145,564 | 6    |
-|          JS | 128,248 | 12   |
-|         CSS | 119,531 | 17   |
-|          MD | 116,783 | 14   |
-|         TXT |  96,988 | 16   |
+|        HTML | 537,001 | 30   |
+|        JSON | 146,470 | 6    |
+|          JS | 136,249 | 13   |
+|          MD | 116,834 | 14   |
+|         CSS | 116,455 | 17   |
+|         TXT |  97,639 | 16   |
 |          PY |  41,981 | 10   |
 |             |         |      |
 
-**TOTAL CHARS** : 1,178,082  <br>
-**TOTAL FILES** : 104
+**TOTAL CHARS** : 1,194,201  <br>
+**TOTAL FILES** : 107
 
 🔗 Güncel veriler:  [GitHub Raw](https://github.com/Mefamex/mfmx-1/blob/main/_folder_analysis_results.txt)
 

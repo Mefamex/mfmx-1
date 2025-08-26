@@ -1,5 +1,5 @@
 # Created for : mefamex.com files
-# Created on  : 2025-08-21T00:03:52Z
+# Created on  : 2025-08-27T01:25:30Z
 
 D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
@@ -36,9 +36,6 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      page_aside.js
 |      |      style.css
 |      contact
-|      |      old
-|      |      |      index
-|      |      |      style
 |      |      index.html
 |      |      style.css
 |      cv
