@@ -710,18 +710,256 @@ Bu rehberi kendime göre hazırlamış olup bir gencin günlük yaşamı göz ö
 
 
 
-
+================  ================
+================  ================
+================  ================
 ================  ================
 
 
 
 
+## 1. KAN TESTLERİ
+
+### Temel Hemogram ve Metabolik Panel
+- Tam Kan Sayımı (Hemoglobin, Hematokrit, Lökosit, Trombosit)
+- Glukoz (Açlık)
+- HbA1c (3 aylık şeker ortalaması)
+- Böbrek Fonksiyonları (Üre, Kreatinin, eGFR)
+- Karaciğer Fonksiyonları (ALT, AST, GGT, Bilirubin, Albumin)
+
+### Vitaminler ve Mineraller
+- B12 (Kobalamin)
+- B6 (Piridoksin)
+- D Vitamini (25-OH)
+- Folik Asit
+- Magnezyum
+- Çinko
+- Demir + Ferritin + Transferin Saturasyonu
+- Bakır (Çinko dengesi için)
+- Selenyum
+- Krom
+
+### Hormonal Profil
+- TSH (Tiroid Stimülan Hormon)
+- T3 (Triiyodotironin)
+- T4 (Tiroksin)
+- Reverse T3 (rT3)
+- Tiroid Antikorları (Anti-TPO, Anti-TG)
+- Kortizol (24 saatlik idrar)
+- DHEA-S
+- Testosteron (Total ve Serbest)
+- IGF-1 (Büyüme faktörü)
+- Melatonin (Gece seviyesi)
+
+### Kardiyovasküler Risk Markörleri
+- Lipid Profili (Total kolesterol, HDL, LDL, Trigliserit)
+- Kolesterol Fraksiyonları (LDL parçacık boyutu, HDL alt tipleri)
+- Lipoprotein(a) [Lp(a)]
+- Apolipoprotein A1/B oranı
+- Troponin I (Ultra-sensitif)
+- NT-proBNP (Kalp yetmezliği markörü)
+- CRP (High-sensitivity)
+- Sedimentasyon Hızı
+- Homosistein
+- Fibrinojen
+
+### İnsülin Metabolizması
+- İnsülin (Açlık)
+- HOMA-IR (İnsülin direnci indeksi)
+- C-Peptid
+- Glukoz Tolerans Testi (OGTT)
+
+### Oksidatif Stress ve Antioksidanlar
+- Glutatyon (Redükte/Okside oranı)
+- Vitamin E (Tokoferol)
+- Vitamin C (Askorbik asit)
+- MDA (Malondialdehit - oksidatif stress)
+- 8-OHdG (DNA oksidatif hasar)
+
+### Mitokondriyal Fonksiyon
+- CoQ10 (Koenzim Q10)
+- Karnitin (L-karnitin, Asetil-L-karnitin)
+- Laktat/Piruvat oranı
+- Organik asitler (İdrar)
+
+### Nörotransmitter Metabolitleri
+- Serotonin metabolitleri (5-HIAA)
+- Dopamin metabolitleri (HVA, DOPAC)
+- Norepinefrin metabolitleri (VMA)
+- GABA
+
+### Beyin Sağlığı Markörleri
+- BDNF (Brain-Derived Neurotrophic Factor)
+- S100B (Nöron hasar markörü)
+- NSE (Nöron-spesifik enolaz)
+
+### Yağ Asidi Profili
+- Omega-3 İndeksi (EPA + DHA)
+- Omega-6/Omega-3 oranı
+- Arakidonik asit/EPA oranı
+
+## 2. KARDİYOVASKÜLER TESTLER
+
+### Yapısal Değerlendirme
+- Ekokardiyografi (Transtorasik)
+- Transözofageal Eko (Gerekirse)
+- Kardiyak MR (Detaylı yapı analizi)
+
+### Elektriksel Aktivite
+- EKG (12 derivasyon)
+- 24 Saatlik Holter EKG
+- Event Monitor (Uzun süreli)
+
+### Fonksiyonel Testler
+- Efor Testi (Bruce Protokolü)
+- Kardiyopulmoner Efor Testi (VO2 max)
+- 6 Dakika Yürüme Testi
+
+### Damar Görüntüleme
+- Koroner Anjiyografi/BT
+- Kalsiyum Skoru
+- Karotis-Vertebral Doppler
+- Venöz Doppler (Alt ekstremite)
+- ABI (Ankle-Brachial Index)
+
+### Genetik Testler
+- BRUGADA Sendromu (SCN5A, GPD1L, CACNA1C)
+- Hipertrofik Kardiyomiyopati (MYH7, MYBPC3, TNNT2)
+- Aritmojenik Kardiyomiyopati (PKP2, DSG2, DSC2)
+- Long QT Sendromu (KCNQ1, KCNH2, SCN5A)
+- Familyal Hiperkolesterolemi (LDLR, APOB, PCSK9)
+
+## 3. SOLUNUM SİSTEMİ TESTLER
+
+### Solunum Fonksiyonu
+- Spirometri (FVC, FEV1, FEV1/FVC, PEF)
+- Tam Solunum Fonksiyon Testi (TLC, RV, DLCO)
+- Difüzyon Kapasitesi Testi (DLCO, DLNO)
+- Bronkodilatör Yanıt Testi
+- Metakolin Provokasyon Testi
+
+### İleri Solunum Değerlendirme
+- Arterial Kan Gazı
+- 6 Dakika Yürüme + Oksijen Saturasyon
+- Gece Oksimetri
+
+## 4. NÖROLOJİK VE BİLİŞSEL TESTLER
+
+### Elektrofizyolojik Testler
+- qEEG (Kantitatif Elektroensefalografi)
+- Standart EEG (Uyanık ve uyku)
+- EMG/NCS (Elektromiyografi/Sinir İletim)
+- P300 (Bilişsel potansiyel)
+- ERN (Error-Related Negativity)
+
+### Görüntüleme
+- MR Beyin (Yapısal)
+- fMRI (Fonksiyonel MR)
+- DTI (Difüzyon Tensör Görüntüleme)
+- MR Spektroskopi
+- PET Scan (Glukoz metabolizması)
+
+### Bilişsel Fonksiyon Testleri
+- Stroop Testi (Dikkat kontrolü)
+- N-Back Testi (Çalışma hafızası)
+- Trail Making Test (Mental esneklik)
+- Digit Span Test (Kısa süreli hafıza)
+- Wisconsin Kart Sıralama (Executive fonksiyon)
+- Rey-Osterrieth Karmaşık Figür (Visuospatial hafıza)
+- Wechsler Adult Intelligence Scale (IQ)
+- Cambridge Neuropsychological Test (CANTAB)
+
+### Nöropsikometrik Değerlendirme
+- Continuous Performance Test (Dikkat)
+- Go/No-Go Test (İmpuls kontrolü)
+- Flanker Test (Selective attention)
+- Task Switching (Kognitif esneklik)
+
+## 5. PSİKOLOJİK DEĞERLENDİRME
+
+### Ruh Hali Ölçekleri
+- Hamilton Depresyon Ölçeği
+- Beck Depresyon Envanteri
+- Beck Anksiyete Ölçeği
+- GAD-7 (Generalize Anksiyete)
+- DASS-21 (Depresyon, Anksiyete, Stress)
+
+### Uyku Değerlendirmesi
+- Pittsburgh Uyku Kalitesi İndeksi
+- Epworth Sleepiness Scale
+- Polisomnografi (Tam gece)
+- MSLT (Multiple Sleep Latency Test)
+- Actigraphy (2 haftalık)
+
+### Kişilik ve Yaşam Kalitesi
+- Big Five Personality Test
+- Myers-Briggs Type Indicator
+- WHO Quality of Life Scale
+
+## 6. ÖZEL RİSK DEĞERLENDİRMELERİ
+
+### Göz Sağlığı (Yazılım Geliştirici)
+- Oftalmolojik Muayene
+- Fundus Muayenesi (Retina damarları)
+- Göz İçi Basınç
+- Görme Alanı Testi
+- Kuru Göz Testi
+
+### Kas-İskelet Sistemi
+- Boyun ve Omuz MR
+- Postür Analizi
+- Vertebral Doppler (Oturma pozisyonu etkisi)
+
+### Elektromanyetik Hassasiyet
+- Tiroid Autoantikor Testleri (EMF etkisi)
+- Nörotransmitter Dengesi (EMF etkisi)
+
+### Detoksifikasyon Kapasitesi
+- Glutatyon S-Transferaz (Genetik polimorfizm)
+- CYP450 Enzimleri (Detoks kapasitesi)
+- Ağır Metal Analizi (Saç, idrar)
+
+## 7. İLERİ UZMANLIK TESTLERİ
+
+### Epigenetik Testler
+- DNA Metilasyon Profili
+- Telomer Uzunluğu
+- Sirtuin Aktivitesi
+
+### Mikrobiyom Analizi
+- Bağırsak Mikrobiyomu
+- Beyin-Bağırsak Aksı Markörleri
+- SCFA (Kısa zincirli yağ asitleri)
+
+### Nutrigenetik Testler
+- Vitamin D Reseptör Polimorfizmi
+- MTHFR (Folat metabolizması)
+- COMT (Dopamin metabolizması)
+- 5-HTTLPR (Serotonin taşıyıcı)
+
+## 8. FİZİKSEL PERFORMANS
+
+### Kardiyorespiratuvar Fitness
+- VO2 Max Testi
+- Anaerobik Eşik
+- Laktat Eşik Testi
+
+### Vücut Kompozisyonu
+- DEXA Scan (Kemik, kas, yağ analizi)
+- BodPod (Vücut yoğunluğu)
+- Biyoelektrik İmpedans
+
+### Metabolik Profil
+- RMR (Resting Metabolic Rate)
+- Respiratory Quotient
+- Substrate Utilization
 
 
 
 
-
-
+================  ================
+================  ================
+================  ================
 ================  ================
 
 
