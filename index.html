@@ -192,15 +192,15 @@
         <!---->
         <div id="main_cards">
             <div id="card_about_website" class="card" title="WEBSITE HAKKINDA" aria-label="Website hakkında" tabindex="0">
-                <h1 class="card_title">
+                <h2 class="card_title">
                     <a href="https://mefamex.com/about/" title="WEBSITE HAKKINDA" aria-label="Website hakkında" target="_self" tabindex="-1">WEBSITE HAKKINDA</a>
-                </h1>
+                </h2>
                 <p>Bu web sitesi, MEFAMEX’in projelerini, kişisel çalışmalarını ve notlarını paylaşmak için oluşturulmuştur.</p>
                 <p>Burada yazılım, yapay zeka ve sistem geliştirme alanlarında içerikler bulabilirsiniz.</p>
             </div>
             <!---->
             <div id="card_project" class="card" title="PROJELER" aria-label="Projeler" tabindex="0">
-                <h1 class="card_title"><a href="https://mefamex.com/projects/" title="PROJELER" aria-label="Projeler" target="_self" tabindex="-1"> PROJELER </a></h1>
+                <h2 class="card_title"><a href="https://mefamex.com/projects/" title="PROJELER" aria-label="Projeler" target="_self" tabindex="-1"> PROJELER </a></h2>
                 <p>Bu sayfada, tamamladığım ve üzerinde çalıştığım projeleri sergiliyorum.</p>
                 <p>
                     <a href="https://mefamex.com/the-mefamex-project/" title="The Mefamex Project" aria-label="The Mefamex Project" target="_self" tabindex="0">The Mefamex Project</a>, yapay zeka
@@ -209,29 +209,29 @@
             </div>
             <!---->
             <div id="card_blog" class="card" title="BLOG" aria-label="Teknoloji ve yazılım dünyasından içerikler" tabindex="0">
-                <h1 class="card_title">
+                <h2 class="card_title">
                     <a href="https://mefamex.com/blog/" title="BLOG SAYFASI" aria-label="Yazılım ve teknoloji blogum" target="_self" tabindex="-1">BLOG </a>
-                </h1>
+                </h2>
                 <p>Bu sayfada, yazılım dünyasındaki yolculuğumdan edindiğim deneyimleri, öğrendiklerimi, fikirlerimi ve notlarımı paylaşıyorum.</p>
                 <p> Ayrıca sektördeki ve gündemdeki güncel gelişmelere dair bazı yazılar da burada yer alıyor. </p>
             </div>
             <!---->
             <div id="card_gallery" class="card" title="GALERİ" aria-label="Fotoğraf arşivi" tabindex="0">
-                <h1 class="card_title">
+                <h2 class="card_title">
                     <a href="https://mefamex.com/gallery/" title="GALERİ SAYFASI" aria-label="Fotoğraf arşivi" target="_self" tabindex="-1">GALERİ </a>
-                </h1>
+                </h2>
                 <p>Projelerimden, etkinliklerden ve tasarımlardan elde edilen görsellerin arşivlendiği özel bir bölümdür.</p>
                 <p>Burada geçmişten kalan kareleri, oluşturulmuş görselleri ve bazı arşivleri bulabilirsiniz.</p>
             </div>
             <!---->
             <div id="card_cv" class="card" title="ÖZGEÇMİŞ" aria-label="Özgeçmiş" tabindex="0">
-                <h1 class="card_title"><a href="https://mefamex.com/cv/" title="ÖZGEÇMİŞ" aria-label="Özgeçmiş" target="_self" tabindex="-1"> CV </a></h1>
+                <h2 class="card_title"><a href="https://mefamex.com/cv/" title="ÖZGEÇMİŞ" aria-label="Özgeçmiş" target="_self" tabindex="-1"> CV </a></h2>
                 <p>Eğitimim, iş deneyimlerim ve becerilerim hakkında detaylı bilgileri bu sayfada bulabilirsiniz.</p>
                 <p>Kariyer yolculuğum ve yetkinliklerim hakkında daha fazla bilgi almak için iletişime geçebilirsiniz.</p>
             </div>
             <!---->
             <div id="card_contact" class="card" title="İLETİŞİM" aria-label="İletişim" tabindex="0">
-                <h1 class="card_title"><a href="https://mefamex.com/contact/" title="İLETİŞİM" aria-label="İletişim" target="_self" tabindex="-1"> İLETİŞİM </a></h1>
+                <h2 class="card_title"><a href="https://mefamex.com/contact/" title="İLETİŞİM" aria-label="İletişim" target="_self" tabindex="-1"> İLETİŞİM </a></h2>
                 <p>E-posta adresim ve sosyal medya hesaplarım aracılığıyla bana ulaşabilirsiniz.</p>
                 <p>Sorularınız, önerileriniz, işbirlikleri, projeler veya sektöre dair sohbetler için benimle iletişime geçmekten çekinmeyin.</p>
             </div>
@@ -250,7 +250,7 @@
                 card.style.opacity = 0;
                 card.style.cursor = "pointer";
                 setTimeout(() => (card.style.opacity = 1), 400);
-                card.addEventListener("click", () => (window.location.href = card.querySelector("h1 a").href));
+                card.addEventListener("click", () => (window.location.href = card.querySelector("h2 a").href));
             });
         });
     </script>

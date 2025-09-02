@@ -219,7 +219,7 @@ main #left_card #mefamex_logo img {
     padding: 0.5rem 1.3rem;
     font-size: 1.2rem;
     /* Kenarlık ve arka plan */
-    border: 0.2rem solid rgb(160, 160, 160);
+    border: 0.1rem solid rgb(47, 45, 80);
     border-radius: 3.5em 1.5em;
     background: -webkit-linear-gradient(top, rgb(37, 0, 38) 15%, rgb(0, 63, 65));
     background: -moz-linear-gradient(top, rgb(37, 0, 38) 15%, rgb(0, 63, 65));
@@ -262,7 +262,7 @@ main #left_card #mefamex_logo img {
     background-color: rgb(0, 19, 19);
 }
 
-.card:hover h1 {
+.card:hover h2 {
     text-decoration-color: rgb(0, 157, 255)
 }
 
@@ -287,7 +287,7 @@ main #left_card #mefamex_logo img {
     opacity: 0.6;
 }
 */
-.card h1 {
+.card h2 {
     font-size: 1.6em;
     margin: 0px;
     padding: 0.5rem 0 1rem 0;
@@ -301,7 +301,7 @@ main #left_card #mefamex_logo img {
     transition: all 0.2s normal;
 }
 
-.card h1 a {
+.card h2 a {
     all: inherit;
     margin: 0;
     padding: 0;
@@ -565,7 +565,7 @@ main #left_card #mefamex_logo img {
         flex-basis: 90%;
     }
 
-    .card h1 {
+    .card h2 {
         padding: 1rem 0 0.5rem 0;
     }
 }
