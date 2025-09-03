@@ -5,7 +5,7 @@
  * @license MIT
  * @see https://mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-08-25-T00:00:00Z
+ * @lastModified 2025-09-03-T00:00:00Z
  */
 
 'use strict';
@@ -55,33 +55,25 @@ async function initHeaderFooter() {
 async function CreateFooter() {
     const footer = document.querySelector('body footer') || document.createElement('footer');
     footer.id = "footer"; footer.innerHTML = '';
-
-    const splitter = document.createElement("div"); splitter.id = "splitter"; footer.appendChild(splitter);
-
-    const secondPart = document.createElement("div"); secondPart.id = "secondPart"; footer.appendChild(secondPart);
-    secondPart.innerHTML = `
-        <div id='secondLeft'> 
-            <a href="https://mefamex.com" title="Anasayfa"> <img src="${scriptPath.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png')}" alt="M" id="footerLogo"> </a> 
-            <span class="vl"> </span> 
-            <span> 2014-&infin; &copy;<b> MEFAMEX </b> </span> 
-            <span class="vl"> </span> 
-            <a href="https://mefamex.com/sitemap.xml" title="Website Haritası"> Sitemap  </a> 
+    footer.innerHTML = `
+        <div id='footerLeft'> 
+            <span> &copy; 2014-&infin; Mefamex, All rights reserved </span> 
         </div> 
-        <div id='secondRight'> 
-            <a href="https://github.com/Mefamex" target="_blank" rel="noopener noreferrer" title="G"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/github_icon.png')}" alt="GitHub" > </a> 
-            <span class="vl"> </span> 
-            <a href="https://www.instagram.com/mefamex" target="_blank" rel="noopener noreferrer" title="I"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/instagram_icon.png')}" alt="Instagram"> </a> 
-            <span class="vl"> </span> 
-            <a href="https://www.linkedin.com/in/mefamex/" target="_blank" rel="noopener noreferrer" title="L"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/linkedin_icon.png')}" alt="LinkedIn"> </a> 
-            <span class="vl"> </span> 
+        <div id="footerMid">
+            <a href="https://mefamex.com" title="Anasayfa"> <img src="${scriptPath.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png')}" alt="MEFAMEX"> </a> 
+        </div>
+        <div id='footerRight'> 
+            <a href="https://github.com/Mefamex" target="_blank" rel="noopener noreferrer" title="Github"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/github_icon.png')}" alt="GitHub" > </a> 
+            <a href="https://www.instagram.com/mefamex" target="_blank" rel="noopener noreferrer" title="Instagram"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/instagram_icon.png')}" alt="Instagram"> </a> 
+            <a href="https://www.linkedin.com/in/mefamex/" target="_blank" rel="noopener noreferrer" title="LinkedIn"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/linkedin_icon.png')}" alt="LinkedIn"> </a> 
             <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSeT3DIqUkKNvyjoh8n-qtXphr44jCxf9sdIizKvNkK09i4Fsw/viewform?usp=sf_link" title=" İletişim Formu "> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/contact_icon.png')}" alt="iletisim icon" title="Iletişim Formu" decoding="async" loading="lazy"> </a>
         </div> 
     `;
-    secondPart.querySelectorAll('img').forEach((img) => {
+    footer.querySelectorAll('img').forEach((img) => {
         img.loading = "lazy";
         img.decoding = "async";
     });
-    secondPart.querySelectorAll("a").forEach((link) => {
+    footer.querySelectorAll("#footerRight a").forEach((link) => {
         const nSpan = document.createElement("span");
         nSpan.className = "AlinkPopup";
         nSpan.textContent = link.title || link.textContent || link.href;
@@ -90,9 +82,9 @@ async function CreateFooter() {
     if (footer !== document.body.lastChild) { document.body.appendChild(footer); }
 
 
-    if (secondPart) { Array.from(secondPart.children).forEach(childd => { if (childd.nodeType === Node.ELEMENT_NODE) { Array.from(childd.children).forEach(child => { if (child.nodeType === Node.ELEMENT_NODE) child.classList.add('footer-hidden'); }); } }); }
+    if (footer) { Array.from(footer.children).forEach(childd => { if (childd.nodeType === Node.ELEMENT_NODE) { Array.from(childd.children).forEach(child => { if (child.nodeType === Node.ELEMENT_NODE) child.classList.add('footer-hidden'); }); } }); }
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.2 };
-    if (secondPart) {
+    if (footer) {
         requestAnimationFrame(() => {
             const secondPartObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -105,7 +97,7 @@ async function CreateFooter() {
                     }
                 });
             }, observerOptions);
-            secondPartObserver.observe(secondPart);
+            secondPartObserver.observe(footer);
         });
     }
 }

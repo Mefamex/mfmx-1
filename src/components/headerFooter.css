@@ -6,7 +6,7 @@
 * Copyright 2024 Mefamex
 * Licensed under MIT (https://github.com/Mefamex/)
 * Created on  : 2024-08-20
-* Last update : 2025-08-26-T00:00:00Z
+* Last update : 2025-09-03-T00:00:00Z
 * Title : headerFooter.css
 * This css file is for the header and footer of the Mefamex website.
 */
@@ -760,20 +760,40 @@ header.scrolled .pageA, header.slim .pageA {
 
 footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     bottom: 0px;
     min-height: 10rem;
     height: fit-content;
     margin-top: auto;
-    padding-bottom: 2rem;
+    padding-block: 4rem 2rem;
     background-color: rgb(14, 16, 19);
     align-content: center;
-    /*justify-content: center;*/
+    align-items: center;
+    justify-content: space-around;
     border-top: 0.1rem solid rgb(59, 59, 59);
     transition: all 0.3s ease-in-out;
     color: white;
     font-size: 1rem;
+}
+
+@media (max-width: 40rem) {
+    footer {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    footer #footerMid {
+        order: -1;
+    }
+
+    footer #footerMid a {
+        padding: 0.4rem !important;
+    }
+
+    footer #footerRight a {
+        margin-inline: 1rem !important;
+    }
 }
 
 footer * {
@@ -814,29 +834,6 @@ footer a:hover .AlinkPopup {
 }
 
 
-footer .vl {
-    height: 80%;
-    width: 0;
-    margin-inline: 0.5em;
-    border-left: 0.1em solid rgb(97, 97, 97);
-}
-
-
-/*
-*
-*
-*
-*
-*/
-
-footer #splitter {
-    width: calc(100% - 4rem);
-    height: 0.1rem;
-    background-color: rgb(59, 59, 59);
-    border-radius: 0.5rem;
-    margin-inline: 2rem;
-    margin-bottom: auto;
-}
 
 /*
 *
@@ -844,32 +841,12 @@ footer #splitter {
 *
 *
 *
+*
+*
 */
 
-footer #secondPart {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    width: 100%;
-    height: 100%;
-    margin: 2rem 0 0 0;
-    padding-inline: 2rem;
-    justify-self: center;
-    justify-content: space-around;
-    align-self: center;
-    text-align: center;
-    gap: 1.5rem;
-}
 
-@media screen and (max-width: 50rem) {
-    footer #secondPart {
-        margin-block-start: 3rem;
-    }
-}
-
-
-footer #secondPart>div {
-    /* secondLeft and secondRight */
+footer>div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -879,31 +856,51 @@ footer #secondPart>div {
     align-items: center;
 }
 
-footer #secondPart #secondLeft .vl {
-    margin-inline: 1rem;
+footer #footerMid {
+    display: flex;
 }
 
-footer #secondPart #secondLeft img {
-    height: 3em;
-    width: 2rem;
-    object-fit: contain;
+footer #footerMid a {
+    padding: 1rem;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 1px 1px 0.1rem;
+    transition: all 0.1s ease-in-out, border-radius 0.5s ease-in-out;
 }
 
-footer #secondPart #secondLeft>* {
-    transition: all 0.2s ease-in-out;
+footer #footerMid a:hover {
+    border-color: rgba(57, 57, 57, 0.242);
+    border-bottom-color: rgb(97, 92, 92);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
-
-footer #secondPart #secondRight a {
-    padding: 0rem 1rem;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
-
-    &~.vl {
-        margin-inline: 0rem
+@media screen and (min-width: 40rem) {
+    footer #footerMid a:hover img {
+        scale: 1.2;
     }
 }
 
-footer #secondPart #secondRight a:hover img {
+footer #footerMid img {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.5s ease-in-out;
+}
+
+footer #footerLeft>* {
+    transition: all 0.2s ease-in-out;
+}
+footer #footerRight{
+    margin-top: 1rem;
+}
+footer #footerRight a {
+    padding: 0.2rem;
+    margin-inline: 0.5rem;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+footer #footerRight a:hover img {
     filter: invert(0);
     background-color: white;
     transition: all 200ms ease-in-out;
@@ -911,7 +908,7 @@ footer #secondPart #secondRight a:hover img {
 }
 
 
-footer #secondPart #secondRight img {
+footer #footerRight img {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0.2rem;
