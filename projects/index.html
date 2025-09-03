@@ -24,17 +24,14 @@
     <link rel="canonical" href="https://mefamex.com/projects/" />
     <!---->
     <!-- Kritik stiller -->
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/projects/style.css" />
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/projects/page_aside.css" />
+    <link rel="stylesheet" href="/projects/style.css">
+    <link rel="stylesheet" href="/projects/page_aside.css">
     <!---->
     <!-- headerFooter -->
-    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/src/components/headerFooter.css">
-    <noscript>
-        <link rel="stylesheet" href="/src/components/headerFooter.css">
-    </noscript>
+    <link rel="stylesheet" href="/src/components/headerFooter.css">
     <link rel="preload" as="script" href="/src/components/importHeaderFooter.js">
     <script src="/src/components/importHeaderFooter.js" sync></script>
-    <script src="page_aside.js" async></script>
+    <script src="page_aside.js" sync></script>
     <script src="script.js" async></script>
     <!-- defer ekle , page işlemeye devam etsin. script işlemlerden asenkron çalışsın -->
     <!---->
@@ -206,7 +203,6 @@
         <!---->
         <!---->
         <!---->
-        <aside id="aside" name="aside" role="complementary" aria-label="Yan içerik"></aside>
     </div>
     <!---->
     <!---->

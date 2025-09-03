@@ -5,7 +5,7 @@
  * @license MIT
  * @see https://mefamex.com/
  * @since 2024-12-02 
- * @lastModified 2025-08-26-T00:00:00Z
+ * @lastModified 2025-09-03-T00:00:00Z
  */
 
 'use strict';
@@ -14,7 +14,6 @@ if (document.readyState === 'loading') document.addEventListener('DOMContentLoad
 else init();
 
 function init() {
-    (async () => { await CreateAside(); })();
     domLoaded();
 }
 
@@ -51,47 +50,6 @@ function domLoaded() {
         window.addEventListener('load', checkVisibility);
     }
 };
-
-
-
-async function CreateAside() {
-    const aside = document.getElementById("aside");
-    aside.style.display = 'flex'; // aside.style.display = 'none' in css;
-    //const aside = document.createElement('aside'); document.body.appendChild(aside); 
-
-
-    aside.innerHTML = `
-    <h2>SON DEĞİŞENLER</h2>
-    <ul>
-    <li ><a href="https://mefamex.com/projects/kali-change-boot-background/" > Kali Bootloader Background </a> <p class="p_tooltip noSelect">07.03.2025</p></li>
-    <li ><a href="https://mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
-    <li ><a href="https://mefamex.com/projects/html-css-book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
-    <li ><a href="https://mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
-    <li ><a href="https://mefamex.com/projects/kali-linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
-    <li ><a href="https://mefamex.com/projects/dizin-listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
-    <li>PROJECTS sayfası açıldı <p class="p_tooltip noSelect">08.12.2024</p></li>
-    </ul>
-    `
-
-
-    const aside_button = document.createElement('button');
-    aside_button.textContent = '🔄';
-    aside_button.id = 'aside-show-button';
-    aside_button.addEventListener('click', () => aside_change_visiblety());
-    document.body.appendChild(aside_button);
-
-
-    aside.querySelector('h2').addEventListener('click', () => aside_change_visiblety());
-    function aside_change_visiblety(forceClose = false) {
-        if (aside.getBoundingClientRect().top > 6 * parseFloat(getComputedStyle(document.documentElement).fontSize)) aside.classList.remove('closed-aside');
-        else {
-            if (forceClose) aside.classList.add('closed-aside');
-            else aside.classList.toggle('closed-aside');
-        }
-        aside_button.classList = aside.classList;
-    }
-    setTimeout(() => {aside_change_visiblety(true);}, 2000);
-}
 
 
 
