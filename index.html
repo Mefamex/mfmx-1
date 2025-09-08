@@ -55,7 +55,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/src/assets/images/mfmx/mfmx-144.png" />
     <!---->
     <!-- Open Graph Meta Etiketleri -->
-    <meta property="og:title" content="Anasayfa - MEFAMEX ( Mehmet Akif AKKOÇ )" />
+    <meta property="og:title" content="Anasayfa - MEFAMEX (Mehmet Akif AKKOÇ)" />
     <meta property="og:description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
     <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
     <meta property="og:url" content="https://mefamex.com" />
@@ -67,7 +67,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="Mefamex" />
     <meta name="twitter:creator" content="@mefamex" />
-    <meta name="twitter:title" content="Anasayfa - MEFAMEX ( Mehmet Akif AKKOÇ )" />
+    <meta name="twitter:title" content="Anasayfa - MEFAMEX (Mehmet Akif AKKOÇ)" />
     <meta name="twitter:description" content="Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog" />
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
     <meta name="twitter:url" content="https://mefamex.com" />
@@ -87,6 +87,24 @@
     <link rel="manifest" href="/site.webmanifest" crossorigin="anonymous">
     <!---->
     <!-- JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement":
+            [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item":
+                    {
+                        "@id": "https://mefamex.com/",
+                        "name": "Anasayfa - MEFAMEX (Mehmet Akif AKKOÇ)"
+                    }
+                }
+            ]
+        }
+    </script>
     <script type="application/ld+json"> {
         "@context": "https://schema.org",
         "@graph": [
@@ -141,11 +159,6 @@
                     "height": 512
                 },
                 "description": "wm: MEFAMEX kişisel web sitesi: projeler, blog, CV ve yapay zeka içerikleri."
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://mefamex.com/#breadcrumb",
-                "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com/"}]
             },
             {
                 "@type": "SiteNavigationElement",
