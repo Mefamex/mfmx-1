@@ -352,10 +352,10 @@ Fikir ve Sanat Eserleri Kanunu kapsamında suç teşkil eder.
 - 📸 **Instagram:** [@mefamex](https://instagram.com/mefamex)
 
 ### 🔗 Bağlantılar
-- 📖 **Blog:** [mefamex.com/blog](https://mefamex.com/blog)
-- 🛠️ **Projeler:** [mefamex.com/projects](https://mefamex.com/projects)
-- 📄 **CV:** [mefamex.com/cv](https://mefamex.com/cv)
-- 📞 **İletişim:** [mefamex.com/contact](https://mefamex.com/contact)
+- 📖 **Blog:** [mefamex.com/blog](https://mefamex.com/blog/)
+- 🛠️ **Projeler:** [mefamex.com/projects](https://mefamex.com/projects/)
+- 📄 **CV:** [mefamex.com/cv](https://mefamex.com/cv/)
+- 📞 **İletişim:** [mefamex.com/contact](https://mefamex.com/contact/)
 
 
 <br><br><br>

@@ -12,6 +12,10 @@ Disallow: /linktree.html?
 
 # loose it
 Allow: /
+Allow: /index.html
 Allow: /sitemap.xml
+Allow: /sitemap/sitemap_pages.xml
+Allow: /robots.txt
+Allow: /navigation.json
 
 Sitemap: https://mefamex.com/sitemap.xml

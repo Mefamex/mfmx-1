@@ -19,4 +19,4 @@
 - [Zaman Yönetimi | MEFAMEX-BLOG](https://mefamex.com/blog/zaman-yonetimi/): Zaman yönetimi stratejileri ile kişisel ve profesyonel hedeflerinize ulaşın. Günlük, haftalık ve aylık planlama ile verimliliğinizi artırın ve dengeli bir yaşam sürün.
 - [Özlü Sözler | MEFAMEX-BLOG](https://mefamex.com/blog/ozlu-sozler/): Kaydetmeye ve hatırlamaya değer bulduğum bazı özlü sözler...
 - [Yapay Zeka İnsanın Yerini Alabilir Mi? | MEFAMEX-BLOG](https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/): Duygusal zeka, yaratıcılık ve insan bilincinin benzersiz özellikleri ile AI'nın sınırlarını karşılaştırma.
-- [CONTACT - MEFAMEX](https://mefamex.com/contact): GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz.
+- [CONTACT - MEFAMEX](https://mefamex.com/contact/): GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz.
