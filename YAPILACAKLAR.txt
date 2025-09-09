@@ -43,6 +43,7 @@ mefamex.tr
 github.mefamex.com
 ai.mefamex.com
 work.mefamex.com
+assistant.mefamex.com
 
 
 
