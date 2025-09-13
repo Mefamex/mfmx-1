@@ -10,7 +10,7 @@
  */
 
 
-(async () => { await Greeting(); })();
+(async () => { Greeting(); })();
 /* await CreateAside(); */
 /*await CreateNavContainer();*/
 
@@ -22,19 +22,6 @@ async function Greeting() {
     console.log('%cThis is a blog page.', '                               color: #333; background-color: #fff; padding: 0.5em; border-radius: 0.5em; font-size: 1rem; font-weight: bold; text-shadow: 0.05em 0.05em 0.05em #000;');
     console.log('%cHave a good time ^^ ', '                               color: #333; background-color: #fff; padding: 0.5em; border-radius: 0.5em; font-size: 1rem; font-weight: bold; text-shadow: 0.05em 0.05em 0.05em #000;');
 }
-
-
-
-
-/* NOT WORKING I WILL RETURN 
-importStylesheep();
-function importStylesheep() {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'page_aside.css';
-    document.head.appendChild(link);
-}*/
 
 /* abonded */
 async function CreateNavContainer() {

@@ -180,13 +180,6 @@
                     "date": "2025-09-13",
                     "relative_path": "mystream\\index.html",
                     "full_url": "https://mefamex.com/mystream/index.html"
-                },
-                {
-                    "name": "soloshare.html",
-                    "url": "mystream/soloshare.html",
-                    "date": "2025-03-13",
-                    "relative_path": "mystream\\soloshare.html",
-                    "full_url": "https://mefamex.com/mystream/soloshare.html"
                 }
             ]
         },
@@ -304,7 +297,7 @@
                 {
                     "name": "index.html",
                     "url": "projects/index.html",
-                    "date": "2025-09-11",
+                    "date": "2025-09-13",
                     "relative_path": "projects\\index.html",
                     "full_url": "https://mefamex.com/projects/index.html"
                 }

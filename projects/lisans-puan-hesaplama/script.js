@@ -109,12 +109,10 @@ function createOneLesson() {
 }
 
 function changed_selectDersKredisi(item) {
-    console.log(item.value);
     const li = item.parentElement;
     const inputDersNotu = li.querySelector('input[type="number"]');
     if (item.value == 0) {
         inputDersNotu.value = '';
-        console.log(item.parentElement.querySelector('input[type="number"]').value);
     } else if (inputDersNotu.value == '' || inputDersNotu.value < 0) inputDersNotu.value = 0;
 
     changed_inputDersNotu(inputDersNotu);
@@ -122,7 +120,6 @@ function changed_selectDersKredisi(item) {
 
 function changed_inputDersNotu(item) {
     check_inputDersNotuIsLastUsed();
-    console.log('\n\nİNPUT ', item);
     // bu inputun ile aynı li'de bulunan selecti bul
     // bu inputun value'sunu al
     // selectin value'sunu al
@@ -131,24 +128,20 @@ function changed_inputDersNotu(item) {
     const li = item.parentElement;
     const inputDersNotuValue = li.querySelector('input[type="number"]').value;
     const select = li.querySelector('select');
-    console.log('select.value', select.value);
-    console.log('inputDersNotuValue', inputDersNotuValue);
-
     if (select.value == 0 && !(inputDersNotuValue == '' || inputDersNotuValue < 0)) select.value = 1;
     const selectValue = select.value;
-    const span3 = li.querySelector('span:last-child');
+    const span3 = li.querySelector('span.ders_notu_agirlikli');
 
 
     if (inputDersNotuValue == '' || inputDersNotuValue < 0) {
-        console.log('inputDersNotu.value', inputDersNotuValue);
         li.querySelectorAll('input').forEach(element => element.style.backgroundColor = '');
         li.querySelectorAll('select').forEach(element => element.style.backgroundColor = '');
         span3.style.display = 'none';
         return;
     }
     /* #container_hesapla ul li input ,#container_hesapla ul li select : backcolor #fff; */
-    li.querySelectorAll('input').forEach(element => element.style.backgroundColor = '#fff');
-    li.querySelectorAll('select').forEach(element => element.style.backgroundColor = '#fff');
+    li.querySelectorAll('input').forEach(element => element.style.backgroundColor = '#05004eff');
+    li.querySelectorAll('select').forEach(element => element.style.backgroundColor = '#000148ff');
 
     span3.style.display = '';
     span3.textContent = ': ' + (inputDersNotuValue * selectValue).toFixed(0);

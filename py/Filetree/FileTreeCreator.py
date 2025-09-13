@@ -201,6 +201,7 @@ class FileTreeCreator:
         self.walker(base_dir)
         # self.print_file_tree()
         self.save_file_tree()
+        return None
         
     def walker(self, root : Path) -> Optional[Walker_path] :
         # get directories and files in the root directory

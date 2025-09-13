@@ -1,5 +1,5 @@
 # Created for : mefamex.com files
-# Created on  : 2025-09-13T05:56:36Z
+# Created on  : 2025-09-13T10:54:26Z
 
 D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
@@ -61,7 +61,6 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      mystream
 |      |      index.html
 |      |      script.js
-|      |      soloshare.html
 |      |      style.css
 |      projects
 |      |      dizin-listeleme
