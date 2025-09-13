@@ -30,13 +30,13 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://mefamex.com/linktree.html</loc>
+        <loc>https://mefamex.com/linktree</loc>
         <lastmod>2025-08-17T02:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://mefamex.com/filetree.html</loc>
+        <loc>https://mefamex.com/filetree</loc>
         <lastmod>2025-08-17T02:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>

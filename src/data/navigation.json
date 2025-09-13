@@ -2,7 +2,7 @@
     "menu": [
         {
             "title": "Anasayfa | MEFAMEX",
-            "href": "https://mefamex.com/",
+            "href": "https://mefamex.com",
             "active": true,
             "isVisible": true,
             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -157,7 +157,7 @@
                 },
                 {
                     "title": "Site Haritası",
-                    "href": "https://mefamex.com/linktree.html",
+                    "href": "https://mefamex.com/linktree",
                     "isVisible": true,
                     "description": "Site bağlantıları",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -165,7 +165,7 @@
                 },
                 {
                     "title": "Dosya Haritası",
-                    "href": "https://mefamex.com/filetree.html",
+                    "href": "https://mefamex.com/filetree",
                     "isVisible": true,
                     "description": "Dosya yapısı listesi",
                     "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
@@ -192,7 +192,7 @@
     ],
     "settings": {
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-        "baseUrl": "https://mefamex.com/",
+        "baseUrl": "https://mefamex.com",
         "languageCode": "tr",
         "lastUpdated": "2025-08-23"
     }

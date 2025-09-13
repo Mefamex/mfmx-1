@@ -7,8 +7,8 @@
 - [Gallery | MEFAMEX](https://mefamex.com/gallery/): Mefamex'in çeşitli etkinliklerinden, projelerinden, yapımlarından ve geçmişten hatırlanmak üzere görsellerin yer aldığı bir sayfadır.
 - [CV | Mehmet Akif Akkoç - Software Development Engineer](https://mefamex.com/cv/): Mehmet Akif Akkoç'un yazılım geliştirme becerilerini ve deneyimlerini sergileyen özgeçmiş.
 - [CONTACT - MEFAMEX](https://mefamex.com/contact/): GitHub, LinkedIn, Instagram ve diğer sosyal medya hesaplarımdan bana ulaşabilir, mail gönderebilir veya iletişim formunu doldurarak mesajınızı iletebilirsiniz.
-- [Site Haritası - MEFAMEX](https://mefamex.com/linktree.html): mefamex.com için site haritası
-- [Dosya Haritası - MEFAMEX](https://mefamex.com/filetree.html): mefamex.com için dosya haritası
+- [Site Haritası - MEFAMEX](https://mefamex.com/linktree): mefamex.com için site haritası
+- [Dosya Haritası - MEFAMEX](https://mefamex.com/filetree): mefamex.com için dosya haritası
 - [Html-Css Kitaplığı | MEFAMEX-PROJECTS](https://mefamex.com/projects/html-css-book/): Websayfası (Html-css-SEO) için kapsamlı başvuru kılavuzu. Meta etiketler, SEO optimizasyonu, best practices ve daha fazlası.
 - [Kali Linux | MEFAMEX-PROJECTS](https://mefamex.com/projects/kali-linux/): Proje ismi: Kali Linux Komutları | Yazılım Dili: Linux | Açıklama: Kali Linux için bazı komutlar, ipuçları, hatırlatmalar.
 - [Kali Linux Bootloader Arkaplan Değiştirme | MEFAMEX-PROJECTS](https://mefamex.com/projects/kali-change-boot-background/): Kali Linux | Boot Menusu Arkaplan Görseli Değiştirme | Default Bootloader Değiştirme | GRUB Config Ayarları ve Parametreleri | Linux
