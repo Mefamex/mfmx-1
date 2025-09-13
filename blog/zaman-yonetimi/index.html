@@ -2,30 +2,73 @@
 <html lang="tr">
 
 <head>
+    <!-- BASE META TAGS -->
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Language" content="tr" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- SEO Meta Etiketleri -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="tr" />
+    <!---->
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), interest-cohort=()" />
+    <!---->
+    <!-- SEO TAGS -->
     <title>Zaman Yönetimi | MEFAMEX-BLOG</title>
     <meta name="author" content="Mefamex" />
     <meta name="description"
         content="Zaman yönetimi stratejileri ile kişisel ve profesyonel hedeflerinize ulaşın. Günlük, haftalık ve aylık planlama ile verimliliğinizi artırın ve dengeli bir yaşam sürün." />
     <meta name="keywords"
         content="mefamex, mefamex blog, zaman yönetimi, kişisel gelişim, verimlilik, planlama, günlük aktiviteler, haftalık plan, aylık plan, hedef belirleme, ruhsal sağlık, fiziksel sağlık" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="googlebot" content="index, follow" />
-    <!-- Preconnect ve DNS Prefetch -->
+    <meta name="copyright" content="© 2025 Mefamex">
+    <!---->
+    <!-- INDEXING & CRAWLING -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!---->
+    <!---->
+    <!-- VERIFICATIONS -->
+    <meta name="yandex-verification" content="dc1b74278af14447" />
+    <meta name="mfmx-AI-verification" content="20250514195506-2607:f0d0:1002:51:0:8a2e:454:4-019842-auth=pirmJmchFG-endflow" />
+    <!---->
+    <!-- CONTENT CLASSIFICATION -->
+    <meta name="rating" content="General" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="last-modified" content="2025-09-13T00:00:00+03:00" />
+    <meta name="profession" content="Software Developer, Blog Yazarı" />
+    <meta name="category" content="Blog, Kişisel Gelişim, Alıntılar, Felsefe" />
+    <meta name="coverage" content="Turkey" />
+    <meta name="distribution" content="global" />
+    <meta name="language" content="Turkish" />
+    <meta name="geo.region" content="TR" />
+    <meta name="geo.country" content="Turkey" />
+    <!---->
+    <!-- AI & MODERN WEB METADATA -->
+    <meta name="ai-content" content="human-authored, human-reviewed">
+    <meta name="ai-topics"
+        content="mefamex, mefamex blog, zaman yönetimi, kişisel gelişim, verimlilik, planlama, günlük aktiviteler, haftalık plan, aylık plan, hedef belirleme, ruhsal sağlık, fiziksel sağlık">
+    <meta name="content-origin" content="original">
+    <meta name="original-author" content="Mehmet Akif Akkoç">
+    <meta name="color-scheme" content="dark light">
+    <meta name="supported-color-schemes" content="light dark" />
+    <!---->
+    <!-- PERFORMANCE OPTIMIZATIONS -->
     <link rel="preconnect" href="https://mefamex.com" />
     <link rel="dns-prefetch" href="https://mefamex.com" />
-    <!-- Canonical Link -->
+    <link rel="preconnect" href="https://www.clarity.ms" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <!---->
+    <!-- CANONICAL ALTERNATE URLS -->
     <link rel="canonical" href="https://mefamex.com/blog/zaman-yonetimi/" />
-    <!-- Stil Optimizasyonu -->
-    <link rel="preload" href="/blog/page_aside.css" as="style" />
-    <link rel="stylesheet" href="/blog/page_aside.css" class="alternatively" />
-    <link rel="preload" as="style" href="/src/components/headerFooter.css" class="alternatively" />
-    <link rel="preload" as="script" href="/src/components/importHeaderFooter.js" />
-    <!-- favicon set -->
+    <link rel="alternate" hreflang="x-default" href="https://mefamex.com/blog/zaman-yonetimi/" />
+    <link rel="alternate" hreflang="tr" href="https://mefamex.com/blog/zaman-yonetimi/" />
+    <!---->
+    <!-- SITE STRUCTURE -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="robots" type="text/plain" href="/robots.txt" />
+    <!---->
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/images/mfmx/mfmx.svg" />
+    <link rel="mask-icon" href="/src/assets/images/mfmx/mfmx.svg" color="#0a2744" />
     <link rel="icon" sizes="16x16" href="/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
     <link rel="icon" sizes="32x32" href="/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
     <link rel="icon" sizes="64x64" href="/src/assets/images/mfmx/mfmx-64.png" type="image/png" />
@@ -33,33 +76,151 @@
     <link rel="icon" sizes="256x256" href="/src/assets/images/mfmx/mfmx-256.png" type="image/png" />
     <link rel="icon" sizes="512x512" href="/src/assets/images/mfmx/mfmx-512.png" type="image/png" />
     <link rel="apple-touch-icon" sizes="144x144" href="/src/assets/images/mfmx/mfmx-144.png" />
-    <!-- Open Graph Meta Etiketleri -->
-    <meta property="og:title" content="Zaman Yönetimi | MEFAMEX-BLOG" />
-    <meta property="og:description" content="Kişisel ve profesyonel hedeflerinize ulaşın. Günlük, haftalık ve aylık planlama ile verimliliğinizi artırın ve dengeli bir yaşam sürün." />
-    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-    <meta property="og:url" content="https://mefamex.com/blog/zaman-yonetimi/" />
+    <!---->
+    <!-- MANIFEST (PWA : PROGRESSIVE WEB APP) (dont use browserconfig.xml , its deprecated) -->
+    <link rel="manifest" href="/site.webmanifest" crossorigin="anonymous">
+    <meta name="msapplication-TileColor" content="#0a2744">
+    <meta name="msapplication-TileImage" content="/src/assets/images/mfmx/mfmx-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="apple-mobile-web-app-title" content="MEFAMEX">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-touch-icon" href="/src/assets/images/mfmx/mfmx-144.png">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="mobile-web-app-capable" content="no">
+    <!---->
+    <!-- SOCIAL META TAGS -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="MEFAMEX" />
-    <meta property="article:modified_time" content="2025-05-18T02:00:00Z" />
-    <!-- Twitter Meta Etiketleri -->
+    <meta property="og:title" content="Zaman Yönetimi | MEFAMEX-BLOG" />
+    <meta property="og:description"
+        content="Zaman yönetimi stratejileri ile kişisel ve profesyonel hedeflerinize ulaşın. Günlük, haftalık ve aylık planlama ile verimliliğinizi artırın ve dengeli bir yaşam sürün." />
+    <meta property="og:url" content="https://mefamex.com/blog/zaman-yonetimi/" />
+    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:image:secure_url" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:image:type" content="image/png" /> <!-- image/jpeg w1200 h630 -->
+    <meta property="og:image:width" content="144" />
+    <meta property="og:image:height" content="144" />
+    <meta property="og:image:alt" content="MEFAMEX" />
+    <meta property="og:date" content="2025-09-13T00:00:00Z" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="Mefamex" />
     <meta name="twitter:creator" content="@mefamex" />
+    <meta name="twitter:domain" content="mefamex.com" />
     <meta name="twitter:title" content="Zaman Yönetimi | MEFAMEX-BLOG" />
-    <meta name="twitter:description" content="Kişisel ve profesyonel hedeflerinize ulaşın. Günlük, haftalık ve aylık planlama ile verimliliğinizi artırın ve dengeli bir yaşam sürün." />
+    <meta name="twitter:description"
+        content="Zaman yönetimi stratejileri ile kişisel ve profesyonel hedeflerinize ulaşın. Günlük, haftalık ve aylık planlama ile verimliliğinizi artırın ve dengeli bir yaşam sürün." />
     <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-    <meta name="twitter:url" content="https://mefamex.com/blog/zaman-yonetimi/" />
-    <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-05-18T02:00:00Z" />
+    <meta name="twitter:image:alt" content="MEFAMEX Logo" />
+    <meta name="twitter:image:width" content="144" />
+    <meta name="twitter:image:height" content="144" />
+    <meta property="article:published_time" content="2025-02-26T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-02-26T00:00:00Z" />
+    <meta property="article:author" content="Mehmet Akif Akkoç" />
+    <meta property="article:section" content="Zaman Yönetimi" />
+    <meta property="article:tag"
+        content="mefamex, mefamex blog, zaman yönetimi, kişisel gelişim, verimlilik, planlama, günlük aktiviteler, haftalık plan, aylık plan, hedef belirleme, ruhsal sağlık, fiziksel sağlık" />
+    <!-- Bu sayfa bir profil değil <meta property="profile:first_name, last_name, username, gender" content="Mehmet Akif, Akkoç, mefamex, male" /> -->
+    <!---->
+    <!-- JSON-LD -->
+    <script type="application/ld+json"> {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://mefamex.com/#website",
+                "url": "https://mefamex.com",
+                "name": "MEFAMEX",
+                "alternateName": "Mehmet Akif AKKOÇ",
+                "inLanguage": ["tr", "en"],
+                "datePublished": "2024-08-20T00:00:00+03:00",
+                "dateModified": "2025-09-13T00:00:00+03:00"
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://mefamex.com/#organization",
+                "name": "MEFAMEX",
+                "legalName": "Mehmet Akif Akkoç",
+                "url": "https://mefamex.com",
+                "logo": { "@type": "ImageObject", "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png", "width": 256, "height": 256 },
+                "foundingDate":"2024-08-20",
+                "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex"],
+                "contactPoint":[{ "@type":"ContactPoint", "contactType":"inquiries", "email":"info@mefamex.com", "availableLanguage":["tr","en"] }],
+                "founder": {"@id": "https://mefamex.com/#person"}
+            },
+            {
+                "@type": "Person",
+                "@id": "https://mefamex.com/#person",
+                "name": "Mehmet Akif Akkoç",
+                "alternateName": "Mefamex",
+                "url": "https://mefamex.com",
+                "image": { "@type": "ImageObject", "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png", "width": 256, "height": 256 },
+                "jobTitle": "Yazılım Geliştirme Mühendisi",
+                "description": "Yazılım geliştirme, makine öğrenimi ve yapay zeka alanlarında pratik deneyime sahip mühendis. Python, Java, C/C++ ve web teknolojilerinde proje liderliği ve uygulama geliştirme deneyimi.",
+                "knowsAbout": ["Python", "Java", "C", "C++", "JavaScript", "Machine Learning", "Deep Learning", "Artificial Intelligence", "Web Development", "Data Analysis", "Embedded Systems" , "Software Engineering"],
+                "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex"],
+                "contactPoint": { "@type": "ContactPoint", "contactType": "professional", "email": "info@mefamex.com", "availableLanguage": ["tr", "en"] }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://mefamex.com/blog/zaman-yonetimi/#webpage",
+                "url": "https://mefamex.com/blog/zaman-yonetimi/",
+                "name": "Zaman Yönetimi | MEFAMEX-BLOG",
+                "isPartOf": {"@id": "https://mefamex.com/#website"},
+                "about": {"@id": "https://mefamex.com/#person"},
+                "datePublished": "2024-02-26T00:00:00+03:00",
+                "dateModified": "2025-02-26T00:00:00+03:00",
+                "inLanguage": "tr",
+                "breadcrumb": { 
+                    "@type": "BreadcrumbList", 
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com" },
+                        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mefamex.com/blog/" },
+                        { "@type": "ListItem", "position": 3, "name": "Zaman Yönetimi", "item": "https://mefamex.com/blog/zaman-yonetimi/" }
+                    ] 
+                }
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "https://mefamex.com/#navigation",
+                "name": ["Zaman Yönetimi", "About", "Projects", "Blog", "Gallery", "CV", "Contact", "The Mefamex Project"],
+                "url": [ "https://mefamex.com/blog/zaman-yonetimi/", "https://mefamex.com/about/", "https://mefamex.com/projects/", "https://mefamex.com/blog/", "https://mefamex.com/gallery/", "https://mefamex.com/cv/", "https://mefamex.com/contact/", "https://mefamex.com/the-mefamex-project/" ]
+            }
+        ]
+    } </script>
+    <!---->
+    <!-- TRACKING  -->
+    <!-- Clarity added in main.js -->
+    <!---->
+    <!-- PWA / THEME & VISUAL  -->
+    <meta name="theme-color" content="#0a2744">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0a2744" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a2744" />
+    <!---->
+    <!-- PRELOADS (CRITICAL IMAGES, NON-CRITICAL CSS)-->
+    <!---->
+    <!-- BASE STYLES and SCRIPTS -->
+    <link rel="stylesheet" href="/src/styles/normalize.css" />
+    <script src="/src/scripts/main.js" async></script>
+    <link rel="stylesheet" href="/src/components/headerFooter.css" />
+    <script src="/src/components/importHeaderFooter.js" defer fetchpriority="high"></script>
+    <!---->
+    <!-- PAGE STYLES AND SCRIPTS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../page_aside.css" />
+    <script src="../page_scripts.js" async></script>
+    <!---->
+    <!-- SERVICE WORKER REGISTRATION -->
+    <!-- <script> if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').then(function (registration) { console.log('SW registered: ', registration); }).catch(function (registrationError) { console.log('SW registration failed: ', registrationError); }); }); } </script> -->
+    <!---->
+    <!-- INLINE STYLE -->
     <style>
         main li {
             margin-block: 0 !important;
         }
     </style>
-    <!---->
-    <!---->
-    <!-- Microsoft Clarity -->
-    <script>(function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt"; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "t71705cgbn");</script>
 </head>
 
 <body>
@@ -369,101 +530,6 @@
             <!---->
         </main>
     </div>
-    <script class="alternatively" src="/src/components/importHeaderFooter.js"></script>
-    <script class="alternatively" src="../page_aside.js" defer></script>
-    <script id="alternativelyJS" type="text/javascript" defer>
-        /*  class="alternatively"  */
-        /* alternatif kaynaklar: { name: [ subelement , last_used_index, altertatives... ] } */
-        const kaynaklar = {};
-        const urlObj = new URL(location.href);
-        const { host, origin } = urlObj;
-        const targetElements = document.querySelectorAll(".alternatively");
-        const firstSegment = urlObj.pathname.replace(/^\//, '').split('/')[0] || null;
-        targetElements.forEach(element => {
-            const path = (element.getAttribute('src') || element.getAttribute('href')); if (!path) return;
-            const fileName = path.split('/').pop(); if (!fileName) return;
-            const cleanPath = path.replace(/\.\.\//g, '').replace(/\.\//g, '').replace(/\/+/g, '/');
-            kaynaklar[fileName] = [element, 1, path, `./${cleanPath}`, `/${firstSegment}/${cleanPath}`, `${origin}/${cleanPath}`, `${origin}/${firstSegment}/${cleanPath}`, `${host}/${cleanPath}`, `${host}/${firstSegment}/${cleanPath}`];
-            if (host != 'mefamex.com') { kaynaklar[fileName].push(`mefamex.com/${cleanPath}`, `mefamex.com/${firstSegment}/${cleanPath}`, `https://mefamex.com/${cleanPath}`, `https://mefamex.com/${firstSegment}/${cleanPath}`); }
-        });
-        async function initializeAlternatives() { await Promise.all(Array.from(targetElements).map(element => initializeResource(element).catch(error => console.error(`⚠️ Kaynak başlatılırken hata: ${error.message}`)))); }
-        (async () => { await initializeAlternatives(); })();
-        async function initializeResource(element) {
-            const fileName = element.src ? element.src.split("/").pop() : element.href ? element.href.split("/").pop() : null;
-            if (!fileName) return;
-            if (kaynaklar[fileName]) {
-                console.log(`🔄 Dosya için alternatif kaynaklar belirlendi (${kaynaklar[fileName].length - 2}): ${fileName}`);
-                if (fileName.endsWith(".js")) { element.onerror = () => checkScriptLoaded(element, fileName); element.onload = () => checkScriptLoaded(element, fileName); }
-                else if (fileName.endsWith(".css")) { (async () => checkStyleLoaded(element, fileName))(); }
-                else console.log(`❌ Dosya türü desteklenmiyor: ${fileName}`);
-            } else console.log(`⚠️ Dosya için alternatif kaynak bulunamadı: '${fileName}'`);
-        }
-        function loadFallbackScript(fileName) {
-            const subelement = kaynaklar[fileName][0];
-            const fileIndex = ++kaynaklar[fileName][1];
-            if (fileIndex >= kaynaklar[fileName].length) { console.log(`Tüm alternatif kaynaklar denendi, yükleme başarısız: ${fileName}`); return; }
-            console.log('⏳ Dosya için alternatif kaynak yükleniyor : ' + fileName + ' (' + fileIndex + ')\n -------> \'' + kaynaklar[fileName][fileIndex] + '\'');
-            if (fileName.endsWith(".js")) {
-                const fallbackScript = document.createElement('script');
-                fallbackScript.src = kaynaklar[fileName][fileIndex];
-                /* Tüm özellikleri kopyala (src, onerror, onload ve alternatively sınıfı hariç) */
-                Array.from(subelement.attributes).forEach(attr => { if (!['src', 'onerror', 'onload', 'class'].includes(attr.name)) fallbackScript.setAttribute(attr.name, attr.value); });
-                if (subelement.hasAttribute('class')) { const classes = subelement.getAttribute('class').split(' ').filter(c => c !== 'alternatively').join(' '); if (classes) fallbackScript.setAttribute('class', classes); }
-                fallbackScript.onerror = () => checkScriptLoaded(fallbackScript, fileName); fallbackScript.onload = () => checkScriptLoaded(fallbackScript, fileName);
-                document.head.appendChild(fallbackScript);
-            } else if (fileName.endsWith(".css")) {
-                const fragment = document.createDocumentFragment();
-                const fallbackLink = document.createElement('link'); fallbackLink.href = kaynaklar[fileName][fileIndex]; fallbackLink.rel = 'stylesheet'; fallbackLink.type = 'text/css';
-                fragment.appendChild(fallbackLink);
-                document.head.appendChild(fragment); checkStyleLoaded(fallbackLink, fileName);
-            } else console.log(`Dosya türü desteklenmiyor: ${fileName}`);
-        }
-        async function checkStyleLoaded(element, fileName) {
-            let maxAttempts = 10; let isLoaded = false;
-            return new Promise((resolve, reject) => {
-                element.onerror = () => { console.error(`❌ CSS yüklenemedi: ${fileName}`); reject(new Error('CSS yükleme hatası')); };
-                element.onload = () => { isLoaded = true; clearInterval(checkInterval); resolve(true); };
-                const checkInterval = setInterval(async () => {
-                    if (--maxAttempts <= 0) { clearInterval(checkInterval); if (!isLoaded) { console.warn(`⚠️ CSS yükleme zaman aşımı: ${fileName}`); loadFallbackScript(fileName); reject(new Error('CSS yükleme zaman aşımı')); } return; }
-                    try { const loaded = await isStylesheetLoadedByHref(fileName); if (loaded) { isLoaded = true; clearInterval(checkInterval); resolve(true); } } catch (error) { loadFallbackScript(fileName); console.error('CSS kontrol hatası:', error); }
-                }, 500);
-            });
-        }
-        function isStylesheetLoadedByHref(href) {
-            const sheets = Array.from(document.styleSheets);
-            let loaded = false;
-            return new Promise(resolve => {
-                loaded = sheets.some(sheet => {
-                    if (!sheet.href) { return false; }
-                    if (sheet.href.includes(href)) {
-                        try { const hasRules = sheet.cssRules.length > 0; if (hasRules) { console.log(`✅ ${href} başarıyla yüklendi.`); return true; } } catch (e) { return false;/* CORS hatası veya diğer hatalar */ }
-                    } return false;
-                }); resolve(loaded);
-            });
-            /*return new Promise(resolve => { const check = () => { const loaded = Array.from(document.styleSheets).some(sheet => sheet.href && sheet.href.includes(href));  if (loaded) resolve(true); else requestAnimationFrame(check); };requestAnimationFrame(check); });*/
-        }
-        function checkScriptLoaded(element, fileName) {
-            if (element.dataset.failed) { console.warn(`Hata: ${element.src} yüklenemedi. Alternatif kaynak yükleniyor...`); loadFallbackScript(fileName); return; }
-            if (element.readyState === 'complete' || element.readyState === 'loaded') { approvedLoad(); return; }
-            setTimeout(async () => {
-                try {
-                    fetch(element.src, { method: "HEAD" })
-                        .then(response => {
-                            const contentType = response.headers.get("Content-Type") || ""; if (contentType.includes("javascript") || contentType.includes("text/js")) { approvedLoad(); } else {
-                                if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { failedToLoad(`Geçersiz içerik türü: ${contentType}`); }
-                            }
-                        })
-                        .catch(() => { if (element.textContent && element.textContent.length > 0) { approvedLoad('içerik kontrolü'); } else { console.error(`⚠️ ${fileName} doğrulanamadı.`); loadFallbackScript(fileName); } });
-                } catch (error) { failedToLoad("Doğrulanamadı"); }
-            }, 500);
-            function failedToLoad(text = "") {
-                element.dataset.failed = true; element.onerror = null; element.onload = null;
-                console.error(`❌ Hata (${kaynaklar[fileName][1]}): ${fileName} yüklenemedi ${text ? '(' + text + ')' : ""}. Alternatif kaynak yükleniyor...`);
-                element.remove(); loadFallbackScript(fileName);
-            }
-            function approvedLoad(text = "") { console.log(`✅ ${fileName} başarıyla yüklendi ${text ? '(' + text + ')' : ""}.`); }
-        }
-    </script>
 </body>
 
 </html>
