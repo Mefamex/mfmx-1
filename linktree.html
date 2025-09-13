@@ -2,65 +2,202 @@
 <html lang="tr">
 
 <head>
-    <!---->
+    <!-- BASE META TAGS -->
     <meta charset="UTF-8" />
-    <meta http-equiv="Content-Language" content="tr" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="tr" />
+    <!-- meta name="format-detection" content="telephone=yes" /> -->
     <!---->
-    <!-- SEO Meta Etiketleri -->
-    <title>Site Haritası - MEFAMEX</title>
-    <meta name="author" content="Mefamex" />
-    <meta name="description" content="mefamex.com için site haritası" />
-    <meta name="keywords" content="MEFAMEX, mefamex, mefamex.com, site haritası, sitemap, linktree, mefamex.com linktree, mefamex linktree" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="googlebot" content="index, follow" />
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), interest-cohort=()" />
     <!---->
-    <!-- Preconnect ve DNS Prefetch -->
+    <!-- SEO TAGS -->
+    <title>Site Haritası | MEFAMEX</title>
+    <meta name="author" content="Mehmet Akif Akkoç (Mefamex)" />
+    <meta name="description" content="Mefamex.com için otomatik oluşturulmuş site haritası — sitedeki tüm sayfaların listesi, son güncellenme tarihleri ve bağlantılar." />
+    <meta name="keywords" content="MEFAMEX, mefamex, site haritası, sitemap, linktree, site map, sayfa listesi, seo" />
+    <meta name="copyright" content="© 2025 Mefamex">
+    <!---->
+    <!-- INDEXING & CRAWLING -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!---->
+    <!---->
+    <!-- VERIFICATIONS -->
+    <!---->
+    <!-- CONTENT CLASSIFICATION -->
+    <meta name="rating" content="General" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="last-modified" content="2025-09-13T00:00:00+03:00" />
+    <meta name="profession" content="Software Developer" />
+    <meta name="category" content="Site Haritası, Sayfa Listesi, Site Yapısı, Web Geliştirme, SEO, Site Yönetimi" />
+    <meta name="coverage" content="Turkey">
+    <meta name="distribution" content="global" />
+    <meta name="language" content="Turkish" />
+    <meta name="geo.region" content="TR" />
+    <meta name="geo.country" content="Turkey" />
+    <!---->
+    <!-- AI & MODERN WEB METADATA -->
+    <meta name="ai-content" content="sitemap,linktree,site-map,pages,site-navigation" />
+    <meta name="ai-topics" content="seo,site-structure,web-development,site-audit,site-navigation" />
+    <meta name="content-origin" content="original">
+    <meta name="original-author" content="Mehmet Akif Akkoç">
+    <meta name="color-scheme" content="dark light">
+    <meta name="supported-color-schemes" content="light dark" />
+    <!---->
+    <!-- PERFORMANCE OPTIMIZATIONS -->
     <link rel="preconnect" href="https://mefamex.com" />
     <link rel="dns-prefetch" href="https://mefamex.com" />
+    <link rel="preconnect" href="https://www.clarity.ms" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <!---->
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://mefamex.com/linktree" />
+    <!-- CANONICAL ALTERNATE URLS -->
+    <link rel="canonical" href="https://mefamex.com/filetree" />
+    <link rel="alternate" hreflang="x-default" href="https://mefamex.com/filetree" />
+    <link rel="alternate" hreflang="tr" href="https://mefamex.com/filetree" />
     <!---->
-    <!-- Performans için preload -->
-    <link rel="preload" as="style" href="/src/components/headerFooter.css" />
-    <link rel="preload" as="script" href="/src/components/importHeaderFooter.js" />
+    <!-- SITE STRUCTURE -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="robots" type="text/plain" href="/robots.txt" />
     <!---->
-    <!-- Stil Optimizasyonu -->
-    <link rel="stylesheet" href="/src/components/headerFooter.css" importance="high" fetchpriority="high" />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/images/mfmx/mfmx.svg" />
+    <link rel="mask-icon" href="/src/assets/images/mfmx/mfmx.svg" color="#0a2744" />
+    <link rel="icon" sizes="16x16" href="/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
+    <link rel="icon" sizes="64x64" href="/src/assets/images/mfmx/mfmx-64.png" type="image/png" />
+    <link rel="icon" sizes="144x144" href="/src/assets/images/mfmx/mfmx-144.png" type="image/png" />
+    <link rel="icon" sizes="256x256" href="/src/assets/images/mfmx/mfmx-256.png" type="image/png" />
+    <link rel="icon" sizes="512x512" href="/src/assets/images/mfmx/mfmx-512.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/src/assets/images/mfmx/mfmx-144.png" />
     <!---->
-    <!-- favicon set -->
-    <link rel="icon" sizes="16x16" href="https://mefamex.com/src/assets/images/mfmx/mfmx-16.png" type="image/png" />
-    <link rel="icon" sizes="32x32" href="https://mefamex.com/src/assets/images/mfmx/mfmx-32.png" type="image/png" />
-    <link rel="icon" sizes="64x64" href="https://mefamex.com/src/assets/images/mfmx/mfmx-64.png" type="image/png" />
-    <link rel="icon" sizes="144x144" href="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" type="image/png" />
-    <link rel="icon" sizes="256x256" href="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" type="image/png" />
-    <link rel="icon" sizes="512x512" href="https://mefamex.com/src/assets/images/mfmx/mfmx-512.png" type="image/png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" type="image/png" />
+    <!-- MANIFEST (PWA : PROGRESSIVE WEB APP) (dont use browserconfig.xml , its deprecated) -->
+    <link rel="manifest" href="/site.webmanifest" crossorigin="anonymous">
+    <meta name="msapplication-TileColor" content="#0a2744">
+    <meta name="msapplication-TileImage" content="/src/assets/images/mfmx/mfmx-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="apple-mobile-web-app-title" content="MEFAMEX">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-touch-icon" href="/src/assets/images/mfmx/mfmx-144.png">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="mobile-web-app-capable" content="no">
     <!---->
-    <!-- Open Graph Meta Etiketleri -->
-    <meta property="og:title" content="Site Haritası - MEFAMEX" />
-    <meta property="og:description" content="mefamex.com için site haritası" />
-    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
-    <meta property="og:url" content="https://mefamex.com/linktree.html" />
+    <!-- SOCIAL META TAGS -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Mefamex" />
-    <meta property="article:modified_time" content="2025-08-17T02:00:00Z" />
-    <!---->
-    <!-- Twitter Meta Etiketleri -->
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="MEFAMEX" />
+    <meta property="og:title" content="Site Haritası | MEFAMEX" />
+    <meta property="og:description" content="Mefamex.com için otomatik oluşturulmuş site haritası — sitedeki tüm sayfaların listesi, son güncellenme tarihleri ve bağlantılar." />
+    <meta property="og:url" content="https://mefamex.com/linktree" />
+    <meta property="og:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:image:secure_url" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta property="og:image:type" content="image/png" /> <!-- image/jpeg w1200 h630 -->
+    <meta property="og:image:width" content="144" />
+    <meta property="og:image:height" content="144" />
+    <meta property="og:image:alt" content="MEFAMEX" />
+    <meta property="og:date" content="2025-09-13T00:00:00Z" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="Mefamex" />
     <meta name="twitter:creator" content="@mefamex" />
-    <meta name="twitter:title" content="Site Haritası - MEFAMEX" />
-    <meta name="twitter:description" content="mefamex.com için site haritası" />
-    <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-256.png" />
-    <meta name="twitter:url" content="https://mefamex.com/linktree.html" />
-    <meta name="twitter:type" content="website" />
-    <meta name="twitter:date" content="2025-08-17T02:00:00Z" />
+    <meta name="twitter:domain" content="mefamex.com" />
+    <meta name="twitter:title" content="Site Haritası | MEFAMEX" />
+    <meta name="twitter:description" content="Mefamex.com için otomatik oluşturulmuş site haritası — sitedeki tüm sayfaların listesi, son güncellenme tarihleri ve bağlantılar." />
+    <meta name="twitter:image" content="https://mefamex.com/src/assets/images/mfmx/mfmx-144.png" />
+    <meta name="twitter:image:alt" content="MEFAMEX Logo" />
+    <meta name="twitter:image:width" content="144" />
+    <meta name="twitter:image:height" content="144" />
+    <!-- Bu sayfa bir blog   değil <meta property="article:published_time, modified_time, author, section, tag content="..." /> -->
+    <!-- Bu sayfa bir profil değil <meta property="profile:first_name, last_name, username, gender" content="Mehmet Akif, Akkoç, mefamex, male" /> -->
     <!---->
+    <!-- JSON-LD -->
+    <script type="application/ld+json"> {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://mefamex.com/#website",
+                "url": "https://mefamex.com",
+                "name": "MEFAMEX",
+                "alternateName": "Mehmet Akif AKKOÇ",
+                "inLanguage": ["tr", "en"],
+                "datePublished": "2024-08-20T00:00:00+03:00",
+                "dateModified": "2025-09-13T10:00:00+03:00"
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://mefamex.com/#organization",
+                "name": "MEFAMEX",
+                "legalName": "Mehmet Akif Akkoç",
+                "url": "https://mefamex.com",
+                "logo": { "@type": "ImageObject", "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png", "width": 256, "height": 256 },
+                "foundingDate":"2024-08-20",
+                "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex"],
+                "contactPoint":[{ "@type":"ContactPoint", "contactType":"inquiries", "email":"info@mefamex.com", "availableLanguage":["tr","en"] }],
+                "founder": {"@id": "https://mefamex.com/#person"}
+            },
+            {
+                "@type": "Person",
+                "@id": "https://mefamex.com/#person",
+                "name": "Mehmet Akif Akkoç",
+                "alternateName": "Mefamex",
+                "url": "https://mefamex.com",
+                "image": { "@type": "ImageObject", "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png", "width": 256, "height": 256 },
+                "jobTitle": "Yazılım Geliştirme Mühendisi",
+                "description": "wm: Python, C, JavaScript ve yapay zeka alanlarında yazılım geliştirici.",
+                "knowsAbout": ["Python", "JavaScript", "Artificial Intelligence", "Web Development", "Machine Learning", "Software Engineering"],
+                "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex"],
+                "contactPoint": { "@type": "ContactPoint", "contactType": "professional", "email": "info@mefamex.com", "availableLanguage": ["tr", "en"] }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://mefamex.com/linktree#webpage",
+                "url": "https://mefamex.com/linktree",
+                "name": "Site Haritası | MEFAMEX",
+                "isPartOf": {"@id": "https://mefamex.com/#website"},
+                "about": {"@id": "https://mefamex.com/#person"},
+                "datePublished": "2024-05-04T00:00:00+03:00",
+                "dateModified": "2025-09-13T12:00:00+03:00",
+                "inLanguage": "tr",
+                "breadcrumb": { 
+                    "@type": "BreadcrumbList", 
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com" },
+                        { "@type": "ListItem", "position": 2, "name": "Site Haritası", "item": "https://mefamex.com/linktree" }
+                    ] 
+                }
+            },
+            {
+                "@type": "SiteNavigationElement",
+                "@id": "https://mefamex.com/#navigation",
+                "name": ["About", "Projects", "Blog", "Gallery", "CV", "Contact", "The Mefamex Project", "Dosya Haritası"],
+                "url": ["https://mefamex.com/linktree", "https://mefamex.com/about/", "https://mefamex.com/projects/", "https://mefamex.com/blog/", "https://mefamex.com/gallery/", "https://mefamex.com/cv/", "https://mefamex.com/contact/", "https://mefamex.com/the-mefamex-project/" ]
+            }
+        ]
+    } </script>
     <!---->
+    <!-- TRACKING  -->
+    <!-- Clarity added in main.js -->
     <!---->
+    <!-- PWA / THEME & VISUAL  -->
+    <meta name="theme-color" content="#0a2744">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0a2744" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a2744" />
+    <!---->
+    <!-- PRELOADS (CRITICAL IMAGES, NON-CRITICAL CSS)-->
+    <!---->
+    <!-- BASE STYLES and SCRIPTS -->
+    <link rel="stylesheet" href="/src/styles/normalize.css" />
+    <script src="/src/scripts/main.js" defer></script>
+    <link rel="stylesheet" href="/src/components/headerFooter.css" />
+    <script src="/src/components/importHeaderFooter.js" async></script>
+    <!---->
+    <!-- PAGE STYLES AND SCRIPTS -->
+    <!---->
+    <!-- INLINE STYLE -->
     <style>
         body {
             background-color: rgb(20, 20, 20);
@@ -238,10 +375,6 @@
             place-self: center;
         }
     </style>
-    <!---->
-    <!---->
-    <!-- Microsoft Clarity -->
-    <script>(function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt"; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "t71705cgbn");</script>
 </head>
 
 <body>
@@ -251,7 +384,7 @@
             <p> Bu sayfada, <a href="https://mefamex.com" title="mefamex.com" aria-label="mefamex"><b>mefamex.com</b></a> için bir site haritası olarak oluşturulmuştur.</p>
             <p> Site içerisindeki tüm web sayfalarını otomatik olarak kontrol ederek son güncellenmeleriyle beraber ulaşımı kolaylaştırır</p>
             <p> Görüş ve önerileriniz için <a href="https://mefamex.com/contact/" title="contact-me" aria-label="contant-me" target="_blank" rel="noopener"><b>iletişime geçebilirsiniz</b></a> . </p>
-            <p> Sayfa açılış tarihi: 03.05.2024 | son güncelleme: 17.08.2025</p>
+            <p> Sayfa açılış tarihi: 03.05.2024 | son güncelleme: 13.09.2025</p>
         </section>
         <section id="mainContent">
             <h2> Mefamex.com </h2>
@@ -305,7 +438,7 @@
                             li.appendChild(a);
                             li.innerHTML += ` <span class="lastDate">(${file.date})</span>`;
                             parentUl.appendChild(li);
-                            if (file.name == "linktree.html") document.getElementById("lastupdate").innerHTML += `<br>* Liste güncellendi: ${file.date}`;
+                            if ("linktree" in file.name) document.getElementById("lastupdate").innerHTML += `<br>* Liste güncellendi: ${file.date}`;
 
 
                         }
