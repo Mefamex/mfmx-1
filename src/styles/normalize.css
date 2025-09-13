@@ -1,0 +1,138 @@
+/*
+* @author     : mefamex 
+* @website    : https://mefamex.com/
+* @copyright  : © 2025 Mefamex | All right reserved.
+* @file       : normalize.css
+* @created    : 2024-08-20
+* @updated    : 2025-09-13-T00:00:00Z
+* @description: This css file is for the normalization of styles across the Mefamex website.
+*/
+
+
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html {
+    /* Modern font rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Text wrapping */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    /* Modern line height */
+    line-height: 1.5;
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    /* Touch optimizasyonu - double-tap zoom devre dışı bırakır */
+    touch-action: manipulation;
+    /* Stacking context izolasyonu - z-index problemlerini önler */
+    isolation: isolate;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    html {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi) {
+    html {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+body {
+    /* Better font rendering */
+    -webkit-font-smoothing: antialiased;
+    /* Better text selection */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* Better display */
+    display: block;
+    /* Prevent horizontal scroll */
+    height: 100%;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    /* Sayfa arka planı */
+    background-color: rgb(12, 16, 20);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@font-face {
+    font-family: system;
+    font-display: optional;
+    src: local(".SFNS-Regular"), local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma") local("-apple-system"), local("BlinkMacSystemFont"), local(" UI"), local("Roboto"), local("Helvetica Neue"), local("Arial");
+}
+
+body, #root {
+    min-height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, dl, dd, ul, ol, li, pre, code, table, th, td, fieldset, legend {
+    text-rendering: optimizeLegibility;
+}
