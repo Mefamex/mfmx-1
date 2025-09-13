@@ -143,3 +143,92 @@ function buttonShareClickedAfterDelay(button) {
     if (!button.dataset.lastClicked || Date.now() - button.dataset.lastClicked < 3000) return;
     buttonShareDefText(button); delete button.dataset.lastClicked; delete button.dataset.sharedCount;
 }
+
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+    buttonAllEmojisList = { 'options': ['ⓘ'], 'like': ['👍'], 'comment': ['💬'], 'share': ['🔄'] };
+    function buttonRandomEmoji(buttonType) { const emojis = buttonAllEmojisList[buttonType]; return emojis[Math.floor(Math.random() * emojis.length)] || " "; }
+    if (typeof buttonOptionsClicked !== 'function') { window.buttonOptionsClicked = function (event) { return ""; }; }
+    if (typeof buttonLikeClicked !== 'function') { window.buttonLikeClicked = function (event) { return ""; }; }
+    if (typeof buttonCommentClicked !== 'function') { window.buttonCommentClicked = function (event) { return ""; }; }
+    if (typeof buttonShareClicked !== 'function') { window.buttonShareClicked = function (event) { return ""; }; }
+
+    /* tüm postları yeniden düzenle */
+    try { document.querySelectorAll('.post').forEach(post => postReorganize(post)); }
+    catch (error) { console.error('Hata:', error); }
+
+    updateImageSources();
+
+    async function postReorganize(post) {
+        post.id = 'post-' + post.dataset.postid;
+        const postHeader = document.createElement('div');
+        postHeader.classList.add('postHeader');
+        postHeader.innerHTML = `
+                <picture class="postHeaderImage noSelect noDrag noPointer">
+                    <source srcset="pp.jpg" />
+                    <img class="noDrag" loading="lazy" decoding="async" importance="low" role="img" src="pp.png" title="pp" alt="comment" />
+                </picture>
+                <div class="postHeaderTitle">
+                    <h2 class="postTitle">${post.dataset.title || 'Post Title'}</h2>
+                    <span class="postTime">${post.dataset.author || '@mefamex'} ~ ${post.dataset.date || '13.03.2025'}</span>
+                </div> `;
+        post.prepend(postHeader);
+
+        /* optionsButton : last element of postHeader */
+        const optionsButton = document.createElement('button');
+        optionsButton.classList.add('buttonOptions', 'noSelect', 'noDrag');
+        optionsButton.onclick = buttonOptionsClicked;
+        optionsButton.innerHTML = `${buttonRandomEmoji('options')}`;
+        post.querySelector('.postHeader').appendChild(optionsButton);
+
+        /* postButtons */
+        const postButtons = document.createElement('div');
+        postButtons.classList.add('postButtons', 'noSelect', 'noDrag');
+        postButtons.innerHTML = `
+                <button class="buttonLike noSelect noDrag" onclick="buttonLikeClicked"> 👍 Beğen </button>
+                <button class="buttonComment noSelect noDrag" onclick="buttonCommentClicked">🗨️ Yorum yapma </button>
+                <button class="buttonShare noSelect noDrag" onclick="buttonShareClicked">🚀 Paylaş </button>
+            `;
+        post.appendChild(postButtons);
+    }
+
+    async function updateImageSources() {
+        try {
+            document.querySelector('main').querySelectorAll('picture').forEach(picture => {
+                const baseUrl = new URL(window.location.href).origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1)
+                const sources = picture.querySelectorAll('source');
+                sources.forEach(source => {
+                    const sourceSrcset = source.getAttribute('srcset');
+                    if (sourceSrcset) {
+                        const absoluteSourceSrcset = new URL(sourceSrcset, baseUrl).href;
+                        const newSource = document.createElement('source');
+                        newSource.setAttribute('srcset', absoluteSourceSrcset);
+                        picture.prepend(newSource);
+                    }
+                });
+                const img = picture.querySelector('img');
+                if (img) {
+                    const imgSrc = img.getAttribute('src');
+                    if (imgSrc) {
+                        const absoluteImgSrc = new URL(imgSrc, baseUrl).href;
+                        const newSource = document.createElement('source');
+                        newSource.setAttribute('srcset', absoluteImgSrc);
+                        picture.prepend(newSource);
+                    }
+                }
+            });
+            console.log('✅✅✅ Picture elementlerinin kaynakları güncellendi');
+        } catch (error) { console.error('❌❌❌ Picture kaynak güncellemesi başarısız:', error); }
+    }
+
+    const bigImage = document.querySelector("#big-image");
+    document.querySelectorAll("main picture").forEach((pictureElement) => {
+        pictureElement.style.cursor = "pointer";
+        pictureElement.onclick = () => {
+            bigImage.classList.remove("display-none");
+            bigImage.querySelector("img").src = pictureElement.querySelector("img").src;
+        };
+    });
+    document.querySelector("#big-image-close").onclick = () => bigImage.classList.add("display-none");
+});
