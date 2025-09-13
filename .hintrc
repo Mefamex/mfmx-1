@@ -8,7 +8,8 @@
       {
         "ignore": [
           "link[fetchpriority]",
-          "meta[name=theme-color]"
+          "meta[name=theme-color]",
+          "script[fetchpriority]"
         ]
       }
     ],
