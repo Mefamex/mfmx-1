@@ -1,5 +1,5 @@
 # Created for : mefamex.com files
-# Created on  : 2025-08-27T01:25:30Z
+# Created on  : 2025-09-13T05:56:36Z
 
 D:\SOFTWARE\WEB\Websites\mfmx-1
 |      about
@@ -103,6 +103,8 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      file_analyzer.py
 |      |      gnpToWebp.py
 |      |      sitemapCreator.py
+|      sitemap
+|      |      sitemap_pages.xml
 |      software
 |      |      cevir.py
 |      |      index.html
@@ -131,10 +133,7 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      |      mfmx_symbol
 |      |      components
 |      |      |      =.ico
-|      |      |      headerFooter-v0-1.css
-|      |      |      headerFooter-v0-2.css
 |      |      |      headerFooter.css
-|      |      |      importHeaderFooter-v0-2.js
 |      |      |      importHeaderFooter.js
 |      |      |      x.ico
 |      |      data
@@ -145,8 +144,11 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      |      privacy-policy(2).txt
 |      |      |      Privacy_Policy.txt
 |      |      |      SSS.txt
+|      |      scripts
+|      |      |      main.js
 |      |      styles
 |      |      |      home.css
+|      |      |      normalize.css
 |      sweetmonstermia
 |      |      Kalsin
 |      |      |      P1030959.JPG
@@ -156,7 +158,10 @@ D:\SOFTWARE\WEB\Websites\mfmx-1
 |      |      index.html
 |      |      style.css
 |      404.html
+|      BingSiteAuth.xml
 |      browserconfig.xml
+|      domain_notes.md
+|      e73328461d254a239f324bc84e3c0c2d.txt
 |      filetree.html
 |      index.html
 |      linktree.html
