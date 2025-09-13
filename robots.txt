@@ -10,6 +10,10 @@ User-agent: *
 Disallow: /filetree.html?
 Disallow: /linktree.html?
 
+# images
+Disallow: /src/assets/images/background/home_bg_square_blue_blur.webp
+Disallow: /src/assets/images/background/home_bg_square_blue_blur.png
+
 # loose it
 Allow: /
 Allow: /index.html
