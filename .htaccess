@@ -5,7 +5,7 @@ AddType application/javascript .js
 AddType text/javascript .js
 AddType text/css .css
 
-ErrorDocument 404 ../index.html
+ErrorDocument 404 /404.html
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
