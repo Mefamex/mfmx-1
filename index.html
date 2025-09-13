@@ -58,8 +58,8 @@
     <!---->
     <!-- CANONICAL ALTERNATE URLS -->
     <link rel="canonical" href="https://mefamex.com" />
-    <link rel="alternate" hreflang="x-default" href="https://mefamex.com/" />
-    <link rel="alternate" hreflang="tr" href="https://mefamex.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://mefamex.com" />
+    <link rel="alternate" hreflang="tr" href="https://mefamex.com" />
     <!---->
     <!-- SITE STRUCTURE -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -123,7 +123,7 @@
             {
                 "@type": "WebSite",
                 "@id": "https://mefamex.com/#website",
-                "url": "https://mefamex.com/",
+                "url": "https://mefamex.com",
                 "name": "MEFAMEX",
                 "alternateName": "Mehmet Akif AKKOÇ",
                 "inLanguage": ["tr", "en"],
@@ -135,7 +135,7 @@
                 "@id": "https://mefamex.com/#organization",
                 "name": "MEFAMEX",
                 "legalName": "Mehmet Akif Akkoç",
-                "url": "https://mefamex.com/",
+                "url": "https://mefamex.com",
                 "logo": { "@type": "ImageObject", "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png", "width": 256, "height": 256 },
                 "foundingDate":"2024-08-20",
                 "sameAs": ["https://github.com/Mefamex", "https://www.linkedin.com/in/mefamex", "https://instagram.com/mefamex"],
@@ -147,7 +147,7 @@
                 "@id": "https://mefamex.com/#person",
                 "name": "Mehmet Akif Akkoç",
                 "alternateName": "Mefamex",
-                "url": "https://mefamex.com/",
+                "url": "https://mefamex.com",
                 "image": { "@type": "ImageObject", "url": "https://mefamex.com/src/assets/images/mfmx/mfmx-256.png", "width": 256, "height": 256 },
                 "jobTitle": "Yazılım Geliştirme Mühendisi",
                 "description": "wm: Python, C, JavaScript ve yapay zeka alanlarında yazılım geliştirici.",
@@ -158,28 +158,25 @@
             {
                 "@type": "WebPage",
                 "@id": "https://mefamex.com/#webpage",
-                "url": "https://mefamex.com/",
+                "url": "https://mefamex.com",
                 "name": "Anasayfa | MEFAMEX",
                 "isPartOf": {"@id": "https://mefamex.com/#website"},
                 "about": {"@id": "https://mefamex.com/#person"},
                 "datePublished": "2024-08-20T00:00:00+03:00",
                 "dateModified": "2025-09-13T12:00:00+03:00",
                 "inLanguage": "tr",
-                "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com/" }] }
+                "breadcrumb": { 
+                    "@type": "BreadcrumbList", 
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com" }
+                    ] 
+                }
             },
             {
                 "@type": "SiteNavigationElement",
                 "@id": "https://mefamex.com/#navigation",
                 "name": ["About", "Projects", "Blog", "Gallery", "CV", "Contact", "The Mefamex Project"],
-                "url": [
-                    "https://mefamex.com/about/",
-                    "https://mefamex.com/projects/",
-                    "https://mefamex.com/blog/",
-                    "https://mefamex.com/gallery/",
-                    "https://mefamex.com/cv/",
-                    "https://mefamex.com/contact/",
-                    "https://mefamex.com/the-mefamex-project/"
-                ]
+                "url": [ "https://mefamex.com/about/", "https://mefamex.com/projects/", "https://mefamex.com/blog/", "https://mefamex.com/gallery/", "https://mefamex.com/cv/", "https://mefamex.com/contact/", "https://mefamex.com/the-mefamex-project/" ]
             }
         ]
     } </script>
@@ -207,14 +204,17 @@
     <!---->
     <!-- SERVICE WORKER REGISTRATION -->
     <!-- <script> if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').then(function (registration) { console.log('SW registered: ', registration); }).catch(function (registrationError) { console.log('SW registration failed: ', registrationError); }); }); } </script> -->
+    <!---->
+    <!-- INLINE STYLE -->
+    <!-- <style></style> -->
 </head>
 
 <body>
     <!---->
     <!---->
-    <picture id="background_img" class="noSelect noDrag noPointer" >
+    <picture id="background_img" class="noSelect noDrag noPointer">
         <source type="image/webp" width="2560" height="1600" srcset="/src/assets/images/background/home_bg_square_blue_blur.webp" />
-        <source type="image/png" width="2560" height="1600"  srcset="/src/assets/images/background/home_bg_square_blue_blur.png" />
+        <source type="image/png" width="2560" height="1600" srcset="/src/assets/images/background/home_bg_square_blue_blur.png" />
         <img loading="eager" decoding="async" importance="high" width="2560" height="1600" src="/src/assets/images/background/home_bg_square_blue_blur.webp" alt="Blue blurred background" />
     </picture>
     <!---->
@@ -248,8 +248,8 @@
                 <h2 class="card_title"><a href="/projects/" title="PROJELER" aria-label="Projeler" target="_self" tabindex="-1"> PROJELER </a></h2>
                 <p>Bu sayfada, tamamladığım ve üzerinde çalıştığım projeleri sergiliyorum.</p>
                 <p>
-                    <a href="/the-mefamex-project/" title="The Mefamex Project" aria-label="The Mefamex Project" target="_self" tabindex="0">The Mefamex Project</a>, yapay zeka
-                    modelleme, sinir ağları, sistem ve web uygulamaları, penetrasyon testleri ve daha fazlası burada yer alıyor.
+                    <a href="/the-mefamex-project/" title="The Mefamex Project" aria-label="The Mefamex Project" target="_self" tabindex="0">The Mefamex Project</a>, yapay zeka modelleme, sinir
+                    ağları, sistem ve web uygulamaları, penetrasyon testleri ve daha fazlası burada yer alıyor.
                 </p>
             </div>
             <!---->
