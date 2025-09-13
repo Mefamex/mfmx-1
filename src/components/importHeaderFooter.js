@@ -26,7 +26,10 @@ function getScriptPath() {
 
 let scriptPath = getScriptPath();
 
+if (typeof RUSHED === 'undefined') { var RUSHED = false; }
+
 (async () => {
+    if (RUSHED) return; RUSHED = true;
     /*console.log('🔄 [HeaderFooter] yükleniyor...');*/
     const cssPath = scriptPath.replace('importHeaderFooter.js', 'headerFooter.css');
     const existingLink = () => {
@@ -38,6 +41,7 @@ let scriptPath = getScriptPath();
     if (document.readyState === 'loading') { /*console.log('🔄 [HeaderFooter] bekliyor...');*/ document.addEventListener('DOMContentLoaded', initHeaderFooter, { once: true }); }
     else initHeaderFooter();
 })();
+
 
 
 
