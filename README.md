@@ -51,18 +51,18 @@
 ### Detaylı Dosya Analizi
 
 
-|    TYPE     |  CHAR   | FILE |
-|-------------|---------|------|
-|        HTML | 537,001 | 30   |
-|        JSON | 146,470 | 6    |
-|          JS | 136,249 | 13   |
-|          MD | 116,834 | 14   |
-|         CSS | 116,455 | 17   |
-|         TXT |  97,639 | 16   |
-|          PY |  41,981 | 10   |
-|             |         |      |
+| TYPE | CHAR    | FILE |
+| ---- | ------- | ---- |
+| HTML | 570,437 | 29   |
+| JSON | 146,860 | 6    |
+| JS   | 124,523 | 13   |
+| MD   | 118,761 | 15   |
+| TXT  | 103,075 | 17   |
+| CSS  | 85,831  | 16   |
+| PY   | 42,557  | 10   |
+|      |         |      |
 
-**TOTAL CHARS** : 1,194,201  <br>
+**TOTAL CHARS** : 1,193,613  <br>
 **TOTAL FILES** : 107
 
 🔗 Güncel veriler:  [GitHub Raw](https://github.com/Mefamex/mfmx-1/blob/main/_folder_analysis_results.txt)
