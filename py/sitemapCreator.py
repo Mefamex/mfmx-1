@@ -12,7 +12,7 @@ changefreq = "daily"
 priority = "1.0"
 
 # Get the current timestamp not file
-current_timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+00:00")
+current_timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+03:00")
 
 # Create the sitemap.xml file
 sitemap_file = open("sitemap_auto.xml", "w")
