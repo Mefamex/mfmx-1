@@ -8,7 +8,7 @@ Garipseyip kabul ettiler. Arkama yaslandım ve anlatmaya başladım.
 
 ## Perde 1: Dijital Kâbus
 
-Geçen gün bir arkadaşım benden yardım istedi. Yardım istediği kişi üniversite öğrencisi, pırıl pırıl bir genç kız. Sabah uyandığında telefonuna gelen mesajlarla nutku tutulmuştu. Yapay zekâ ile üretilmiş, yüzü kendisine ait ama vücudu tamamen sahte olan özel fotoğrafları, instagramdan bulunan tüm okul arkadaşlarına, ailesine, akrabalarına yayılmıştı.
+Birkaç gün önce arkadaşım birisi için benden yardım istedi. Yardım istediği kişi üniversite öğrencisi, pırıl pırıl bir genç kız. Sabah uyandığında telefonuna gelen mesajlarla nutku tutulmuştu. Yapay zekâ ile üretilmiş, yüzü kendisine ait ama vücudu tamamen sahte olan özel fotoğrafları, instagramdan bulunan tüm okul arkadaşlarına, ailesine, akrabalarına yayılmıştı.
 
 Panik, utanç ve çaresizlik... Ne yapabilirdi ki? "Bu ben değilim!" diye bağırmasının hiçbir anlamı yoktu. İnkar, suçluluğun ilk belirtisi olarak görülürdü. Fotoğraflar o kadar gerçekçiydi ki, en yakın arkadaşları bile şüpheyle bakmaya başlamıştı. Dijital bir yangının ortasında tek başınaydı ve alevler her şeyi yutuyordu. Ailesine durumu anlatsa ve inansalar da akrabalar, arkadaşlar... Ailesiyle hemen polis karakoluna gittiler ama aldıkları yanıt: " Elimizden bir şey gelmez, dava açılsa bile işlemler aylar sürer ve sonuç alınamaz." Kısacası, kapana kısılmıştı.
 

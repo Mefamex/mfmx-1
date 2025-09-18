@@ -37,14 +37,14 @@ body {
     display: flex;
     flex-direction: column;
     height: auto;
-    width: clamp(60%, 56rem, 95%);
+    width: clamp(60%, 56rem, 98%);
     margin-top: 0;
-    margin-bottom: auto;
-    /*margin-inline: auto;*/
     padding: 0;
+    margin-bottom: auto;
+    margin-inline: auto;
     justify-content: start;
     align-items: center;
-    overflow: auto;
+    overflow: visible;
 }
 
 #main_container main #mainWellcome {
@@ -53,22 +53,22 @@ body {
     flex-direction: column;
     flex-basis: 100%;
     min-height: 10rem;
-    margin-top: 2rem;
-    margin-bottom: 0;
+    margin-top: clamp(0rem, 2vw, 2rem);
+    margin-bottom: 2rem;
     padding: 1rem;
     border: 0.1rem solid black;
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0.1em 0.5em 0.25em rgba(0, 0, 0, 0.5);
     margin-inline: 2rem;
-    width: 90%;
+    width: clamp(80%, 40rem, 100%);
 }
 
 #main_container main #mainWellcome h1 {
     text-align: center;
     margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
-    font-size: 2.3em;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
 }
 
 #main_container main #mainWellcome p {
@@ -104,14 +104,15 @@ body {
     padding-bottom: 3em;
     padding-inline: 3%;
     line-height: 1.5;
-    font-size: 1.1rem;
+    font-size: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     border-radius: 0;
     border: 0.1rem solid rgba(0, 0, 113, 0.5);
 }
 
 #main_container main .Content h2:first-child {
-    margin-top: 1rem;
+    margin-top: 0.1rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     color: white;
     position: sticky;
     top: -0.9em;
@@ -136,12 +137,6 @@ body {
     100% {
         width: 10rem;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    /*body {
-        font-size: 0.75rem;
-    }*/
 }
 
 /*
