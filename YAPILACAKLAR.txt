@@ -97,7 +97,6 @@ assistant.mefamex.com
 - GALRY: catogrized , rovşan behbutov, büyütme ekle 
 - software : index.html
 - CV   : her dil için yetkinlikler ve alanlar, dillerini görünümünü elden geçir hedefe odaklan, giriş kısmını fotoğraflar ile zenginleştir.
-- NEW PAGE: file.html display page
 - Adobe ile arka plan: https://youtube.com/shorts/6CmLj9JiIIo?si=XBw5wUo8D14KqHcX
 - Anasayfa tasarımını ilk bölüm üzerine alta doğru kaydırmalı olacak şekilde görsellerle destekleyerek ekle 
 
@@ -285,9 +284,9 @@ practise software  : coddy.tech
 - Claude 
 - Grok
 - Bing 
-- V0.dev : android app 
-- perplexity : searcher
-- krea.ai : realtime image
+- V0.dev    : android app 
+- perplexity: searcher
+- krea.ai   : realtime image
 - blazer ai : akademik problemler
 
 
@@ -455,20 +454,6 @@ sende çek: https://www.instagram.com/reel/DDMq0vytuKu/?igsh=cXZsM2VjanVqd3pl
 
 
 
-================ BİLMECELER ================
-- 3 bilge . 2 siyah, 3 beyaz. hepsi beyaz
-- 1 yalancı 1 doğrucu 1 belirsiz. her birine 2şer soru
-- ÇAPA , komşu - okul - ev, anne ve çocuk
-- 2 kapı 2 bekçi
-- 100 silivrideki mahkum 1 lambalı tuvelet
-- 100 mahkum, siyah veya beyaz şapka, arka arkaya dizilir arkadan başlar. en az 99 hayatta kalıcak
-
-
-
-
-
-
-
 
 ================ DAİLY ================
 - mail    : akk.....2@gmail.com
@@ -476,7 +461,7 @@ sende çek: https://www.instagram.com/reel/DDMq0vytuKu/?igsh=cXZsM2VjanVqd3pl
 - Google  : Search Console, G-Form
 - GitHub  : DM, commits
 - Sosyal medya LinkedIn, Insta, YouTube, Facebook, X, Reddit, Meta
-- Bionluk, fiver, upwork, freelancer
+- Bionluk, fiver, upwork, freelance
 
 
 ================  ================
