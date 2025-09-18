@@ -11,7 +11,7 @@
     <!-- Home Page -->
     <url>
         <loc>https://mefamex.com/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -19,31 +19,31 @@
     <!-- About , CV, LinkTree and Contact Pages -->
     <url>
         <loc>https://mefamex.com/about/</loc>
-        <lastmod>2025-09-27T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-27T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://mefamex.com/cv/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://mefamex.com/linktree</loc>
-        <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-17T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://mefamex.com/filetree</loc>
-        <lastmod>2025-09-17T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-17T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://mefamex.com/contact/</loc>
-        <lastmod>2025-09-27T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-27T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -51,19 +51,19 @@
     <!-- Section Roots -->
     <url>
         <loc>https://mefamex.com/projects/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://mefamex.com/blog/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-18T00:00:00+03:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://mefamex.com/gallery/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -71,7 +71,7 @@
     <!-- Specific Project Pages -->
     <url>
         <loc>https://mefamex.com/the-mefamex-project/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
         <image:image>
@@ -81,43 +81,43 @@
     </url>
     <url>
         <loc>https://mefamex.com/sweetmonstermia/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/projects/dizin-listeleme/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/projects/kali-linux/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/projects/kali-change-boot-background/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/projects/html-css-book/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/projects/python-to-exe/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/projects/image-meta-dataset/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -125,19 +125,19 @@
     <!-- Blog Posts -->
     <url>
         <loc>https://mefamex.com/blog/zaman-yonetimi/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://mefamex.com/blog/ozlu-sozler/</loc>
-        <lastmod>2025-09-13T00:00:00+00:00</lastmod>
+        <lastmod>2025-09-13T00:00:00+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>

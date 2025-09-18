@@ -48,28 +48,12 @@
                     "order": 4,
                     "submenu": [
                         {
-                            "title": "Yapay Zeka İnsanın Yerini Alabilir mi?",
-                            "href": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/",
-                            "isVisible": true,
-                            "description": "Yapay zekâ üzerine değerlendirme",
-                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                            "order": 1
-                        },
-                        {
                             "title": "Yazılım Geliştirme Kaynakları",
                             "href": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/",
                             "isVisible": true,
                             "description": "Kaynaklar ve araçlar",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                            "order": 2
-                        },
-                        {
-                            "title": "Zaman Yönetimi",
-                            "href": "https://mefamex.com/blog/zaman-yonetimi/",
-                            "isVisible": true,
-                            "description": "Planlama ve üretkenlik",
-                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
-                            "order": 3
+                            "order": 1
                         },
                         {
                             "title": "Özlü Sözler",
@@ -77,7 +61,31 @@
                             "isVisible": true,
                             "description": "Seçili kısa sözler",
                             "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+                            "order": 2
+                        },
+                        {
+                            "title": "Yapay Zeka ve Bir Gencin İtibar Savaşı",
+                            "href": "https://mefamex.com/blog/yapay-zeka-ile-gencin-itibar-savasi/",
+                            "isVisible": true,
+                            "description": "Bir öğrencinin deepfake saldırısıyla mücadelesi",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+                            "order": 3
+                        },
+                        {
+                            "title": "Zaman Yönetimi",
+                            "href": "https://mefamex.com/blog/zaman-yonetimi/",
+                            "isVisible": true,
+                            "description": "Planlama ve üretkenlik",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
                             "order": 4
+                        },
+                        {
+                            "title": "Yapay Zeka İnsanın Yerini Alabilir mi?",
+                            "href": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/",
+                            "isVisible": true,
+                            "description": "Yapay zekâ üzerine değerlendirme",
+                            "icon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
+                            "order": 5
                         }
                     ]
                 },
@@ -194,6 +202,6 @@
         "defaultIcon": "https://mefamex.com/src/assets/images/mfmx/mfmx-144.png",
         "baseUrl": "https://mefamex.com",
         "languageCode": "tr",
-        "lastUpdated": "2025-09-13T00:00:00+03:00"
+        "lastUpdated": "2025-09-18T00:00:00+03:00"
     }
 }
