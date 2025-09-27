@@ -466,7 +466,7 @@
                             li.appendChild(a);
                             li.innerHTML += ` <span class="lastDate">(${file.date})</span>`;
                             parentUl.appendChild(li);
-                            if ("linktree" in file.name) document.getElementById("lastupdate").innerHTML += `<br>* Liste güncellendi: ${file.date}`;
+                            if (file.name.includes("linktree")) document.getElementById("lastupdate").innerHTML += `<br>* Liste güncellendi: ${file.date}`;
 
 
                         }

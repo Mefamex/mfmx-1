@@ -8,6 +8,9 @@
 * Licensed under MIT (https://github.com/Mefamex/) 
 */
 
+main{
+    color: white;
+}
 
 main a {
     color: inherit;
