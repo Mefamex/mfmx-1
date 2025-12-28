@@ -148,6 +148,7 @@ async function CreateHeader() {
         { text: "İLETİŞİM", link: "/contact/", alterimg: "/src/assets/icons/black/64x64/contact_icon.png" },
         { text: "CV", link: "/cv/", alterimg: "/src/assets/icons/black/64x64/cv_icon.png" }
     ] /* navbar a classes : pageA, showImg, showText, current_page */;
+    let projectsNavElement = null;
     navBarList.forEach((item, index) => {
         const imgg = document.createElement("img"); imgg.src = item.alterimg; imgg.alt = ""; imgg.loading = "lazy"; imgg.decoding = "async"; imgg.setAttribute("importance", "low"); imgg.setAttribute("fetchpriority", "low");
         const spann = document.createElement("span"); spann.textContent = item.text;
@@ -155,6 +156,7 @@ async function CreateHeader() {
         temp_item.dataset.listIndex = index; temp_item.href = window.location.origin + item.link; temp_item.title = item.text;
         if (window.location.pathname.includes("/" + new URL(item.link, window.location.origin).pathname.split('/').filter(Boolean).pop())) temp_item.classList.add("current_page");
         temp_item.appendChild(imgg); temp_item.appendChild(spann);
+        if (item.text === "PROJELER") { projectsNavElement = temp_item; }
         navBar.appendChild(temp_item);
     })
 
@@ -165,6 +167,187 @@ async function CreateHeader() {
     window.addEventListener('touchstart', function (event) { if (!header.contains(event.target)) header.classList.remove('menuShow'); }, { passive: true });
     const menuDiv = document.createElement("div"); menuDiv.id = "headerMenuDiv"; header.appendChild(menuDiv);
     header.appendChild(menuDiv);
+
+    /* Projects Big Menu Overlay */
+    let projectsBigMenu = document.getElementById('projectsBigMenu');
+    if (!projectsBigMenu) {
+        projectsBigMenu = document.createElement('div');
+        projectsBigMenu.id = 'projectsBigMenu';
+        projectsBigMenu.setAttribute('aria-hidden', 'true');
+        projectsBigMenu.innerHTML = "" +
+            "<div class=\"projects-bigmenu-inner\">" +
+            "  <div class=\"projects-bigmenu-header\">" +
+            "    <h2>Projeler</h2>" +
+            "    <button type=\"button\" class=\"projects-bigmenu-close\" aria-label=\"Kapat\">&times;</button>" +
+            "  </div>" +
+            "  <div class=\"projects-bigmenu-grid\" id=\"projectsBigMenuGrid\"></div>" +
+            "</div>";
+        document.body.appendChild(projectsBigMenu);
+    }
+
+    const projectsBigMenuGrid = document.getElementById('projectsBigMenuGrid');
+
+    async function loadProjectsFromProjectsPage() {
+        try {
+            const resp = await fetch('/projects/index.html', { cache: 'no-store' });
+            if (!resp.ok) return [];
+            const htmlText = await resp.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(htmlText, 'text/html');
+            const sections = Array.from(doc.querySelectorAll('section.card'));
+            const projects = [];
+            sections.forEach(section => {
+                const categoryTitle = (section.querySelector('h2')?.textContent || '').trim();
+                const lis = Array.from(section.querySelectorAll('ul li'));
+                lis.forEach(li => {
+                    const link = li.querySelector('a');
+                    const title = (link ? link.textContent : li.textContent || '').trim();
+                    const href = link ? link.getAttribute('href') : null;
+                    if (!title) return;
+                    const description = li.getAttribute('data-language') || li.getAttribute('data-date') || '';
+                    projects.push({
+                        category: categoryTitle,
+                        title: title,
+                        href: href,
+                        description: description
+                    });
+                });
+            });
+            return projects;
+        } catch (e) {
+            return [];
+        }
+    }
+
+    async function fillProjectsBigMenu() {
+        if (!projectsBigMenuGrid || projectsBigMenuGrid.childElementCount > 0) return;
+
+        function renderProjects(list) {
+            list.forEach(p => {
+                if (!p || !p.title) return;
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'projects-bigmenu-item';
+
+                if (p.category) {
+                    const cat = document.createElement('div');
+                    cat.className = 'projects-bigmenu-category';
+                    cat.textContent = p.category;
+                    itemDiv.appendChild(cat);
+                }
+
+                const hasHref = !!p.href;
+                const linkOrDiv = hasHref ? document.createElement('a') : document.createElement('div');
+                if (hasHref) {
+                    linkOrDiv.href = p.href;
+                    linkOrDiv.title = p.title || '';
+                }
+
+                const titleEl = document.createElement('h3');
+                titleEl.className = 'projects-bigmenu-title';
+                titleEl.textContent = p.title;
+
+                const descEl = document.createElement('p');
+                descEl.className = 'projects-bigmenu-description';
+                if (p.description) descEl.textContent = p.description;
+
+                linkOrDiv.appendChild(titleEl);
+                if (p.description) linkOrDiv.appendChild(descEl);
+                itemDiv.appendChild(linkOrDiv);
+                projectsBigMenuGrid.appendChild(itemDiv);
+            });
+        }
+
+        let allProjects = await loadProjectsFromProjectsPage();
+
+        if (!allProjects || !allProjects.length) {
+            let projects = [];
+            try {
+                const resp = await fetch('/navigation.json', { cache: 'no-store' });
+                if (resp.ok) {
+                    const data = await resp.json();
+                    const menu = (data && data.menu) || [];
+                    const pagesEntry = menu.find(m => Array.isArray(m.submenu));
+                    let projectsEntry = null;
+                    if (pagesEntry && Array.isArray(pagesEntry.submenu)) {
+                        projectsEntry = pagesEntry.submenu.find(s => s.title === 'Projects');
+                    }
+                    if (projectsEntry && Array.isArray(projectsEntry.submenu)) {
+                        projects = projectsEntry.submenu.filter(p => p.isVisible !== false);
+                    }
+                }
+            } catch (e) { }
+
+            if (!projects.length) {
+                projects = [
+                    { title: 'Dizin Listeleme', href: '/projects/dizin-listeleme/', description: 'Python dizin analiz aracı' },
+                    { title: 'Kali Linux', href: '/projects/kali-linux/', description: 'Kali Linux notları' },
+                    { title: 'Kali Boot Arkaplan', href: '/projects/kali-change-boot-background/', description: 'GRUB arkaplan değişimi' },
+                    { title: 'HTML/CSS Kitaplığı', href: '/projects/html-css-book/', description: 'Web geliştirme rehberi' },
+                    { title: 'Python To EXE', href: '/projects/python-to-exe/', description: 'Paketleme notları' },
+                    { title: 'Image Meta Dataset', href: '/projects/image-meta-dataset/', description: 'Görsel meta verisi aracı' }
+                ];
+            }
+
+            allProjects = projects.map(p => ({
+                category: 'Projects',
+                title: p.title,
+                href: p.href,
+                description: p.description
+            }));
+        }
+
+        renderProjects(allProjects);
+    }
+
+    function openProjectsBigMenu() {
+        if (!projectsBigMenu) return;
+        try {
+            const headerRect = header.getBoundingClientRect();
+            const headerHeight = headerRect && headerRect.height ? headerRect.height : 0;
+            projectsBigMenu.style.top = headerHeight + 'px';
+            projectsBigMenu.style.height = 'calc(100vh - ' + headerHeight + 'px)';
+        } catch (e) { }
+        projectsBigMenu.classList.add('show');
+        projectsBigMenu.setAttribute('aria-hidden', 'false');
+        fillProjectsBigMenu();
+    }
+
+    function closeProjectsBigMenu() {
+        if (!projectsBigMenu) return;
+        projectsBigMenu.classList.remove('show');
+        projectsBigMenu.setAttribute('aria-hidden', 'true');
+    }
+
+    if (projectsBigMenu) {
+        const closeBtn = projectsBigMenu.querySelector('.projects-bigmenu-close');
+        if (closeBtn) closeBtn.addEventListener('click', closeProjectsBigMenu, { passive: true });
+        projectsBigMenu.addEventListener('click', (event) => { if (event.target === projectsBigMenu) closeProjectsBigMenu(); });
+        projectsBigMenu.addEventListener('mouseleave', () => {
+            setTimeout(() => { if (!projectsNavElement || !projectsNavElement.matches(':hover')) closeProjectsBigMenu(); }, 150);
+        }, { passive: true });
+        window.addEventListener('keyup', (event) => { if (event.key === 'Escape') closeProjectsBigMenu(); }, { passive: true });
+    }
+
+    if (projectsNavElement) {
+        let hoverTimeout = null;
+        projectsNavElement.addEventListener('mouseenter', () => {
+            if (hoverTimeout) window.clearTimeout(hoverTimeout);
+            openProjectsBigMenu();
+        }, { passive: true });
+
+        projectsNavElement.addEventListener('mouseleave', () => {
+            hoverTimeout = window.setTimeout(() => {
+                if (!projectsBigMenu || projectsBigMenu.matches(':hover')) return;
+                closeProjectsBigMenu();
+            }, 150);
+        }, { passive: true });
+
+        projectsNavElement.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (projectsBigMenu && projectsBigMenu.classList.contains('show')) closeProjectsBigMenu();
+            else openProjectsBigMenu();
+        });
+    }
 
     const docDate = ["article:modified_time", "og:date", "twitter:date", "date", "last-modified"].map(name => document.head.querySelector(`meta[property="${name}"], meta[name="${name}"]`)).find(meta => meta && meta.content)?.content;
     let onlyDate = docDate ? docDate.split("T")[0] : null;

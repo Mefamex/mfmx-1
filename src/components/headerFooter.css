@@ -482,6 +482,130 @@ header .pageA.showImg.showText {
 }
 
 /*
+ * Projects Big Menu Overlay
+ */
+
+#projectsBigMenu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0;
+    background: radial-gradient(circle at top, rgba(0, 173, 255, 0.15), rgba(0, 0, 0, 0.96));
+    backdrop-filter: blur(0.6rem);
+}
+
+#projectsBigMenu.show {
+    display: flex;
+}
+
+.projects-bigmenu-inner {
+    width: min(64rem, 96vw);
+    max-height: calc(100vh - 6rem);
+    padding: 1.5rem 2rem 2rem 2rem;
+    border-radius: 1.25rem;
+    background: radial-gradient(circle at top left, rgba(9, 132, 227, 0.25), rgba(5, 10, 30, 0.98));
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 200, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.projects-bigmenu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.projects-bigmenu-header h2 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    letter-spacing: 0.08em;
+}
+
+.projects-bigmenu-close {
+    border: 1px solid rgba(0, 200, 255, 0.7);
+    background: radial-gradient(circle at top, rgba(0, 0, 0, 0.9), rgba(0, 120, 180, 0.65));
+    color: #ffffff;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-bigmenu-close:hover {
+    background: radial-gradient(circle at top, rgba(20, 20, 20, 0.9), rgba(0, 200, 255, 0.85));
+}
+
+.projects-bigmenu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 1rem;
+    padding-top: 0.25rem;
+    overflow: auto;
+}
+
+.projects-bigmenu-item {
+    position: relative;
+    padding: 0.9rem 0.9rem 0.9rem 0.9rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(0, 200, 255, 0.35);
+    background: radial-gradient(circle at top left, rgba(0, 200, 255, 0.2), rgba(0, 8, 25, 0.95));
+    box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.8);
+}
+
+.projects-bigmenu-category {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 0.35rem 0;
+    padding: 0.1rem 0.55rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(220, 240, 255, 0.9);
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.4), rgba(0, 38, 66, 0.9));
+}
+
+.projects-bigmenu-item a {
+    display: block;
+    color: inherit;
+}
+
+.projects-bigmenu-title {
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.projects-bigmenu-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: rgba(220, 236, 255, 0.8);
+}
+
+@media (max-width: 40rem) {
+    .projects-bigmenu-inner {
+        padding: 1.1rem 1.1rem 1.5rem 1.1rem;
+    }
+}
+
+/*
 *
 *
 *
