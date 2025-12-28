@@ -1,5 +1,4 @@
-#!/usr/bin/env python3 
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 """
 ===========================================================
@@ -15,7 +14,7 @@ Description:
 Author:
     @mefamex (info@mefamex.com) (https://mefamex.com)
 
-Features: 
+Features:
     - Belirtilen ana dizinden başlayarak tüm alt dizin ve dosyaları bulur.
     - Her dosya ve klasör için isim, yol, url, boyut, tarih ve göreli yol bilgilerini toplar.
     - Dizin ve dosya yapısını ağaç şeklinde JSON formatında dışa aktarır.

@@ -85,7 +85,7 @@ def create_table(results, grand_total_char, grand_total_files):
     for row in table_data:
         table += f"|{row['type']:>{type_width-1}} |{row['char']:>{char_width-1}} | {row['file']:<{file_width-1}}|\n"
 
-    table += f"{separator}\n\nTOTAL CHARS : {grand_total_char:,} \nTOTAL FILES : {grand_total_files:,}\n\n"+ f"in {PROJECT_NAME}".rjust(32) + "\n"
+    table += f"{separator}\n\nTOTAL CHARS : {grand_total_char:,}\nTOTAL FILES : {grand_total_files:,}\n\n"+ f"in {PROJECT_NAME}".rjust(32) + "\n"
 
     return table
 

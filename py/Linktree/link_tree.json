@@ -1,14 +1,14 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "date": "2025-09-13",
+    "date": "2025-11-04",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "children": [
         {
             "name": "about",
             "url": "about",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "about",
             "full_url": "https://mefamex.com/about",
             "children": [],
@@ -16,8 +16,8 @@
                 {
                     "name": "index.html",
                     "url": "about/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "about\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "about/index.html",
                     "full_url": "https://mefamex.com/about/index.html"
                 }
             ]
@@ -25,40 +25,57 @@
         {
             "name": "blog",
             "url": "blog",
-            "date": "2025-09-13",
+            "date": "2025-11-02",
             "relative_path": "blog",
             "full_url": "https://mefamex.com/blog",
             "children": [
                 {
                     "name": "ozlu-sozler",
                     "url": "blog/ozlu-sozler",
-                    "date": "2025-09-13",
-                    "relative_path": "blog\\ozlu-sozler",
+                    "date": "2025-09-18",
+                    "relative_path": "blog/ozlu-sozler",
                     "full_url": "https://mefamex.com/blog/ozlu-sozler",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "blog/ozlu-sozler/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "blog\\ozlu-sozler\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "blog/ozlu-sozler/index.html",
                             "full_url": "https://mefamex.com/blog/ozlu-sozler/index.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "yapay-zeka-ile-gencin-itibar-savasi",
+                    "url": "blog/yapay-zeka-ile-gencin-itibar-savasi",
+                    "date": "2025-09-18",
+                    "relative_path": "blog/yapay-zeka-ile-gencin-itibar-savasi",
+                    "full_url": "https://mefamex.com/blog/yapay-zeka-ile-gencin-itibar-savasi",
+                    "children": [],
+                    "files": [
+                        {
+                            "name": "index.html",
+                            "url": "blog/yapay-zeka-ile-gencin-itibar-savasi/index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "blog/yapay-zeka-ile-gencin-itibar-savasi/index.html",
+                            "full_url": "https://mefamex.com/blog/yapay-zeka-ile-gencin-itibar-savasi/index.html"
                         }
                     ]
                 },
                 {
                     "name": "yapay-zeka-insanin-yerini-alabilir-mi",
                     "url": "blog/yapay-zeka-insanin-yerini-alabilir-mi",
-                    "date": "2025-09-13",
-                    "relative_path": "blog\\yapay-zeka-insanin-yerini-alabilir-mi",
+                    "date": "2025-09-18",
+                    "relative_path": "blog/yapay-zeka-insanin-yerini-alabilir-mi",
                     "full_url": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "blog/yapay-zeka-insanin-yerini-alabilir-mi/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "blog\\yapay-zeka-insanin-yerini-alabilir-mi\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "blog/yapay-zeka-insanin-yerini-alabilir-mi/index.html",
                             "full_url": "https://mefamex.com/blog/yapay-zeka-insanin-yerini-alabilir-mi/index.html"
                         }
                     ]
@@ -66,16 +83,16 @@
                 {
                     "name": "yazilim-gelistirme-kaynaklari",
                     "url": "blog/yazilim-gelistirme-kaynaklari",
-                    "date": "2025-09-13",
-                    "relative_path": "blog\\yazilim-gelistirme-kaynaklari",
+                    "date": "2025-11-02",
+                    "relative_path": "blog/yazilim-gelistirme-kaynaklari",
                     "full_url": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "blog/yazilim-gelistirme-kaynaklari/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "blog\\yazilim-gelistirme-kaynaklari\\index.html",
+                            "date": "2025-11-02",
+                            "relative_path": "blog/yazilim-gelistirme-kaynaklari/index.html",
                             "full_url": "https://mefamex.com/blog/yazilim-gelistirme-kaynaklari/index.html"
                         }
                     ]
@@ -83,16 +100,16 @@
                 {
                     "name": "zaman-yonetimi",
                     "url": "blog/zaman-yonetimi",
-                    "date": "2025-09-13",
-                    "relative_path": "blog\\zaman-yonetimi",
+                    "date": "2025-09-18",
+                    "relative_path": "blog/zaman-yonetimi",
                     "full_url": "https://mefamex.com/blog/zaman-yonetimi",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "blog/zaman-yonetimi/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "blog\\zaman-yonetimi\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "blog/zaman-yonetimi/index.html",
                             "full_url": "https://mefamex.com/blog/zaman-yonetimi/index.html"
                         }
                     ]
@@ -102,8 +119,8 @@
                 {
                     "name": "index.html",
                     "url": "blog/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "blog\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "blog/index.html",
                     "full_url": "https://mefamex.com/blog/index.html"
                 }
             ]
@@ -111,7 +128,7 @@
         {
             "name": "contact",
             "url": "contact",
-            "date": "2025-09-13",
+            "date": "2025-11-02",
             "relative_path": "contact",
             "full_url": "https://mefamex.com/contact",
             "children": [],
@@ -119,8 +136,8 @@
                 {
                     "name": "index.html",
                     "url": "contact/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "contact\\index.html",
+                    "date": "2025-11-02",
+                    "relative_path": "contact/index.html",
                     "full_url": "https://mefamex.com/contact/index.html"
                 }
             ]
@@ -128,7 +145,7 @@
         {
             "name": "cv",
             "url": "cv",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "cv",
             "full_url": "https://mefamex.com/cv",
             "children": [],
@@ -136,15 +153,15 @@
                 {
                     "name": "index.html",
                     "url": "cv/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "cv\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "cv/index.html",
                     "full_url": "https://mefamex.com/cv/index.html"
                 },
                 {
                     "name": "cv-2.html",
                     "url": "cv/cv-2.html",
                     "date": "2025-09-13",
-                    "relative_path": "cv\\cv-2.html",
+                    "relative_path": "cv/cv-2.html",
                     "full_url": "https://mefamex.com/cv/cv-2.html"
                 }
             ]
@@ -152,7 +169,7 @@
         {
             "name": "gallery",
             "url": "gallery",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "gallery",
             "full_url": "https://mefamex.com/gallery",
             "children": [],
@@ -160,8 +177,8 @@
                 {
                     "name": "index.html",
                     "url": "gallery/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "gallery\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "gallery/index.html",
                     "full_url": "https://mefamex.com/gallery/index.html"
                 }
             ]
@@ -169,7 +186,7 @@
         {
             "name": "mystream",
             "url": "mystream",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "mystream",
             "full_url": "https://mefamex.com/mystream",
             "children": [],
@@ -177,8 +194,8 @@
                 {
                     "name": "index.html",
                     "url": "mystream/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "mystream\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "mystream/index.html",
                     "full_url": "https://mefamex.com/mystream/index.html"
                 }
             ]
@@ -186,23 +203,23 @@
         {
             "name": "projects",
             "url": "projects",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "projects",
             "full_url": "https://mefamex.com/projects",
             "children": [
                 {
                     "name": "dizin-listeleme",
                     "url": "projects/dizin-listeleme",
-                    "date": "2025-09-13",
-                    "relative_path": "projects\\dizin-listeleme",
+                    "date": "2025-09-18",
+                    "relative_path": "projects/dizin-listeleme",
                     "full_url": "https://mefamex.com/projects/dizin-listeleme",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "projects/dizin-listeleme/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "projects\\dizin-listeleme\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "projects/dizin-listeleme/index.html",
                             "full_url": "https://mefamex.com/projects/dizin-listeleme/index.html"
                         }
                     ]
@@ -210,16 +227,16 @@
                 {
                     "name": "html-css-book",
                     "url": "projects/html-css-book",
-                    "date": "2025-09-13",
-                    "relative_path": "projects\\html-css-book",
+                    "date": "2025-09-18",
+                    "relative_path": "projects/html-css-book",
                     "full_url": "https://mefamex.com/projects/html-css-book",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "projects/html-css-book/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "projects\\html-css-book\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "projects/html-css-book/index.html",
                             "full_url": "https://mefamex.com/projects/html-css-book/index.html"
                         }
                     ]
@@ -227,16 +244,16 @@
                 {
                     "name": "image-meta-dataset",
                     "url": "projects/image-meta-dataset",
-                    "date": "2025-09-13",
-                    "relative_path": "projects\\image-meta-dataset",
+                    "date": "2025-09-18",
+                    "relative_path": "projects/image-meta-dataset",
                     "full_url": "https://mefamex.com/projects/image-meta-dataset",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "projects/image-meta-dataset/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "projects\\image-meta-dataset\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "projects/image-meta-dataset/index.html",
                             "full_url": "https://mefamex.com/projects/image-meta-dataset/index.html"
                         }
                     ]
@@ -244,16 +261,16 @@
                 {
                     "name": "kali-change-boot-background",
                     "url": "projects/kali-change-boot-background",
-                    "date": "2025-09-13",
-                    "relative_path": "projects\\kali-change-boot-background",
+                    "date": "2025-09-18",
+                    "relative_path": "projects/kali-change-boot-background",
                     "full_url": "https://mefamex.com/projects/kali-change-boot-background",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "projects/kali-change-boot-background/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "projects\\kali-change-boot-background\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "projects/kali-change-boot-background/index.html",
                             "full_url": "https://mefamex.com/projects/kali-change-boot-background/index.html"
                         }
                     ]
@@ -261,16 +278,16 @@
                 {
                     "name": "kali-linux",
                     "url": "projects/kali-linux",
-                    "date": "2025-09-13",
-                    "relative_path": "projects\\kali-linux",
+                    "date": "2025-09-18",
+                    "relative_path": "projects/kali-linux",
                     "full_url": "https://mefamex.com/projects/kali-linux",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "projects/kali-linux/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "projects\\kali-linux\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "projects/kali-linux/index.html",
                             "full_url": "https://mefamex.com/projects/kali-linux/index.html"
                         }
                     ]
@@ -278,16 +295,16 @@
                 {
                     "name": "lisans-puan-hesaplama",
                     "url": "projects/lisans-puan-hesaplama",
-                    "date": "2025-09-13",
-                    "relative_path": "projects\\lisans-puan-hesaplama",
+                    "date": "2025-09-18",
+                    "relative_path": "projects/lisans-puan-hesaplama",
                     "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama",
                     "children": [],
                     "files": [
                         {
                             "name": "index.html",
                             "url": "projects/lisans-puan-hesaplama/index.html",
-                            "date": "2025-09-13",
-                            "relative_path": "projects\\lisans-puan-hesaplama\\index.html",
+                            "date": "2025-09-18",
+                            "relative_path": "projects/lisans-puan-hesaplama/index.html",
                             "full_url": "https://mefamex.com/projects/lisans-puan-hesaplama/index.html"
                         }
                     ]
@@ -297,8 +314,8 @@
                 {
                     "name": "index.html",
                     "url": "projects/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "projects\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "projects/index.html",
                     "full_url": "https://mefamex.com/projects/index.html"
                 }
             ]
@@ -306,7 +323,7 @@
         {
             "name": "software",
             "url": "software",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "software",
             "full_url": "https://mefamex.com/software",
             "children": [],
@@ -314,8 +331,8 @@
                 {
                     "name": "index.html",
                     "url": "software/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "software\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "software/index.html",
                     "full_url": "https://mefamex.com/software/index.html"
                 }
             ]
@@ -323,7 +340,7 @@
         {
             "name": "the-mefamex-project",
             "url": "the-mefamex-project",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "the-mefamex-project",
             "full_url": "https://mefamex.com/the-mefamex-project",
             "children": [],
@@ -331,8 +348,8 @@
                 {
                     "name": "index.html",
                     "url": "the-mefamex-project/index.html",
-                    "date": "2025-09-13",
-                    "relative_path": "the-mefamex-project\\index.html",
+                    "date": "2025-09-18",
+                    "relative_path": "the-mefamex-project/index.html",
                     "full_url": "https://mefamex.com/the-mefamex-project/index.html"
                 }
             ]
@@ -342,35 +359,35 @@
         {
             "name": "index.html",
             "url": "index.html",
-            "date": "2025-09-13",
+            "date": "2025-11-04",
             "relative_path": "index.html",
             "full_url": "https://mefamex.com/index.html"
         },
         {
             "name": "404.html",
             "url": "404.html",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "404.html",
             "full_url": "https://mefamex.com/404.html"
         },
         {
             "name": "filetree.html",
             "url": "filetree.html",
-            "date": "2025-09-13",
+            "date": "2025-09-18",
             "relative_path": "filetree.html",
             "full_url": "https://mefamex.com/filetree.html"
         },
         {
             "name": "linktree.html",
             "url": "linktree.html",
-            "date": "2025-09-13",
+            "date": "2025-09-27",
             "relative_path": "linktree.html",
             "full_url": "https://mefamex.com/linktree.html"
         },
         {
             "name": "visitor-info.html",
             "url": "visitor-info.html",
-            "date": "2025-09-11",
+            "date": "2025-09-18",
             "relative_path": "visitor-info.html",
             "full_url": "https://mefamex.com/visitor-info.html"
         }

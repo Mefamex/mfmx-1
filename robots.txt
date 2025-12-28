@@ -6,7 +6,7 @@ User-agent: *
 # Disallow: /*?s=
 # Disallow: /*?path=
 
-# filetree & linktree 
+# filetree & linktree
 Disallow: /filetree.html?
 Disallow: /linktree.html?
 
