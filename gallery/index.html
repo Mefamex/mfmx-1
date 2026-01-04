@@ -209,7 +209,32 @@
 </head>
 
 <body>
-    <header id="header"></header>
+    <header id="header">
+        <style>
+            #header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #header a {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+        <a id="headerDivLeft" href="https://mefamex.com">
+            <div id="headerDivLeftText">MEFAMEX</div>
+        </a>
+        <div id="headerNavBar">
+            <a class="pageA showText showImg" href="https://mefamex.com/" title="ANASAYFA"> <span>ANASAYFA</span></a>
+            <a class="pageA showText showImg" href="https://mefamex.com/about/" title="PLATFORM"> <span>PLATFORM</span></a>
+            <a class="pageA showImg" href="https://mefamex.com/projects/" title="PROJELER"><span>PROJELER</span> </a>
+            <a class="pageA showImg" href="https://mefamex.com/blog/" title="BLOG"><span>BLOG</span></a>
+            <a class="pageA  showImg" href="https://mefamex.com/gallery/" title="GALERİ"><span>GALERİ</span></a>
+            <a class="pageA  showImg" href="https://mefamex.com/contact/" title="İLETİŞİM"><span>İLETİŞİM</span></a>
+            <a class="pageA  showImg" href="https://mefamex.com/cv/" title="CV"><span>CV</span></a>
+        </div>
+    </header>
     <!---->
     <!---->
     <!---->
@@ -225,18 +250,6 @@
                 <p id="legal_notice">Bu sayfada yer alan görsellerin tüm hakları Mefamex'e aittir. İzinsiz kullanımı yasaktır.</p>
                 <p>Açılış tarihi: 29.01.2025 || Son güncelleme tarihi: 27.02.2025</p>
             </div>
-        </section>
-        <!-- Gallery Slider: sayfadaki tüm görselleri özetleyen bölüm -->
-        <section id="gallerySliderSection" aria-label="Galeri slider">
-            <h2 class="gallery-slider-title">Tüm Görseller için Hızlı Önizleme</h2>
-            <div id="gallerySlider">
-                <button class="slider-control slider-control-prev" type="button" aria-label="Önceki görsel">&#10094;</button>
-                <div class="slider-viewport">
-                    <div class="slider-track" id="gallerySliderTrack"></div>
-                </div>
-                <button class="slider-control slider-control-next" type="button" aria-label="Sonraki görsel">&#10095;</button>
-            </div>
-            <div class="slider-dots" id="gallerySliderDots" aria-hidden="true"></div>
         </section>
         <!-- -->
         <!--  webp:  type="image/webp"   png:  type="image/png"   jpg:  type="image/jpeg"  —  -->
@@ -544,113 +557,6 @@
             </div>
         </section>
     </main>
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            try {
-                const track = document.getElementById('gallerySliderTrack');
-                const dotsContainer = document.getElementById('gallerySliderDots');
-                const prevBtn = document.querySelector('.slider-control-prev');
-                const nextBtn = document.querySelector('.slider-control-next');
-                if (!track || !dotsContainer || !prevBtn || !nextBtn) return;
-
-                const images = Array.from(document.querySelectorAll('main section.images picture img'));
-                if (!images.length) {
-                    document.getElementById('gallerySliderSection')?.classList.add('display-none');
-                    return;
-                }
-
-                const slides = images.map(function (img, index) {
-                    const slide = document.createElement('div');
-                    slide.className = 'slider-slide';
-
-                    const originalPicture = img.closest('picture');
-                    const clonedPicture = originalPicture ? originalPicture.cloneNode(true) : img.cloneNode(true);
-                    const picImg = clonedPicture.tagName && clonedPicture.tagName.toLowerCase() === 'img' ? clonedPicture : clonedPicture.querySelector('img');
-                    if (picImg) {
-                        picImg.loading = 'lazy';
-                        picImg.decoding = 'async';
-                    }
-
-                    slide.appendChild(clonedPicture);
-                    slide.dataset.index = String(index);
-                    track.appendChild(slide);
-
-                    const dot = document.createElement('button');
-                    dot.type = 'button';
-                    dot.className = 'slider-dot';
-                    dot.setAttribute('aria-label', (img.alt || img.title || 'Görsel') + ' - ' + (index + 1));
-                    dot.dataset.index = String(index);
-                    dot.addEventListener('click', function () {
-                        currentIndex = index;
-                        updateSlider(false);
-                        resetAutoPlay();
-                    }, { passive: true });
-                    dotsContainer.appendChild(dot);
-
-                    return slide;
-                });
-
-                var currentIndex = 0;
-                var autoPlayTimer = null;
-
-                function updateSlider(animate) {
-                    if (animate === void 0) animate = true;
-                    var total = slides.length;
-                    if (!total) return;
-                    if (currentIndex < 0) currentIndex = total - 1;
-                    if (currentIndex >= total) currentIndex = 0;
-
-                    if (!animate) track.style.transition = 'none';
-                    else track.style.transition = '';
-
-                    var translateX = -currentIndex * 100;
-                    track.style.transform = 'translateX(' + translateX + '%)';
-
-                    Array.from(dotsContainer.children).forEach(function (el, idx) {
-                        el.classList.toggle('active', idx === currentIndex);
-                    });
-
-                    if (!animate) {
-                        void track.offsetWidth;
-                        track.style.transition = '';
-                    }
-                }
-
-                function goNext() {
-                    currentIndex += 1;
-                    updateSlider(true);
-                }
-
-                function goPrev() {
-                    currentIndex -= 1;
-                    updateSlider(true);
-                }
-
-                function resetAutoPlay() {
-                    if (autoPlayTimer) window.clearInterval(autoPlayTimer);
-                    autoPlayTimer = window.setInterval(function () {
-                        goNext();
-                    }, 7000);
-                }
-
-                prevBtn.addEventListener('click', function () {
-                    goPrev();
-                    resetAutoPlay();
-                }, { passive: true });
-
-                nextBtn.addEventListener('click', function () {
-                    goNext();
-                    resetAutoPlay();
-                }, { passive: true });
-
-                updateSlider(false);
-                resetAutoPlay();
-            } catch (e) {
-                console.error('Gallery slider init error:', e);
-                try { document.getElementById('gallerySliderSection')?.classList.add('display-none'); } catch (_) { }
-            }
-        });
-    </script>
     <!-- -->
     <!-- -->
     <!-- -->
