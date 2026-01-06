@@ -901,8 +901,10 @@
                 const scopeData = progress[activeScopeKey] ?? { correct: {}, wrongCount: {} };
                 const remaining = getRemainingQuestions(questionPool, scopeData);
 
-                const correctCount = Object.keys(scopeData.correct ?? {}).length;
-                return { remainingCount: remaining.length, correctCount, totalLoaded: questionPool.length };
+                const remainingCount = remaining.length;
+                const totalLoaded = questionPool.length;
+                const correctCount = Math.max(0, totalLoaded - remainingCount);
+                return { remainingCount, correctCount, totalLoaded };
             }
 
             function renderStatus() {
