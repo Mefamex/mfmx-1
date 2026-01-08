@@ -1,14 +1,14 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "date": "2025-11-04",
+    "date": "2026-01-08",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "children": [
         {
             "name": "about",
             "url": "about",
-            "date": "2025-09-18",
+            "date": "2025-12-07",
             "relative_path": "about",
             "full_url": "https://mefamex.com/about",
             "children": [],
@@ -16,7 +16,7 @@
                 {
                     "name": "index.html",
                     "url": "about/index.html",
-                    "date": "2025-09-18",
+                    "date": "2025-12-07",
                     "relative_path": "about/index.html",
                     "full_url": "https://mefamex.com/about/index.html"
                 }
@@ -169,7 +169,7 @@
         {
             "name": "gallery",
             "url": "gallery",
-            "date": "2025-09-18",
+            "date": "2026-01-05",
             "relative_path": "gallery",
             "full_url": "https://mefamex.com/gallery",
             "children": [],
@@ -177,9 +177,26 @@
                 {
                     "name": "index.html",
                     "url": "gallery/index.html",
-                    "date": "2025-09-18",
+                    "date": "2026-01-05",
                     "relative_path": "gallery/index.html",
                     "full_url": "https://mefamex.com/gallery/index.html"
+                }
+            ]
+        },
+        {
+            "name": "lesson",
+            "url": "lesson",
+            "date": "2026-01-08",
+            "relative_path": "lesson",
+            "full_url": "https://mefamex.com/lesson",
+            "children": [],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "lesson/index.html",
+                    "date": "2026-01-08",
+                    "relative_path": "lesson/index.html",
+                    "full_url": "https://mefamex.com/lesson/index.html"
                 }
             ]
         },

@@ -1,8 +1,8 @@
 {
     "name": "https://mefamex.com",
     "url": ".",
-    "size": 91930813,
-    "date": "2025-12-07",
+    "size": 92666226,
+    "date": "2026-01-08",
     "relative_path": ".",
     "full_url": "https://mefamex.com/.",
     "folder": [
@@ -19,7 +19,7 @@
                     "name": "index.html",
                     "url": "about/index.html",
                     "size": 25020,
-                    "date": "2025-09-18",
+                    "date": "2025-12-07",
                     "full_url": "https://mefamex.com/about/index.html",
                     "relative_path": "about/index.html"
                 }
@@ -441,7 +441,7 @@
         {
             "name": "gallery",
             "url": "gallery",
-            "size": 66911713,
+            "size": 66914562,
             "date": "2025-07-04",
             "relative_path": "gallery",
             "full_url": "https://mefamex.com/gallery",
@@ -974,15 +974,15 @@
                     "name": "index.html",
                     "url": "gallery/index.html",
                     "size": 40628,
-                    "date": "2025-09-18",
+                    "date": "2026-01-05",
                     "full_url": "https://mefamex.com/gallery/index.html",
                     "relative_path": "gallery/index.html"
                 },
                 {
                     "name": "style.css",
                     "url": "gallery/style.css",
-                    "size": 7460,
-                    "date": "2025-08-10",
+                    "size": 10309,
+                    "date": "2025-12-29",
                     "full_url": "https://mefamex.com/gallery/style.css",
                     "relative_path": "gallery/style.css"
                 }
@@ -991,7 +991,7 @@
         {
             "name": "games",
             "url": "games",
-            "size": 19365,
+            "size": 60052,
             "date": "2025-12-07",
             "relative_path": "games",
             "full_url": "https://mefamex.com/games",
@@ -1036,10 +1036,327 @@
                 {
                     "name": "index.html",
                     "url": "games/index.html",
-                    "size": 14686,
+                    "size": 16317,
                     "date": "2025-12-07",
                     "full_url": "https://mefamex.com/games/index.html",
                     "relative_path": "games/index.html"
+                },
+                {
+                    "name": "Kart.png",
+                    "url": "games/Kart.png",
+                    "size": 18148,
+                    "date": "2025-12-07",
+                    "full_url": "https://mefamex.com/games/Kart.png",
+                    "relative_path": "games/Kart.png"
+                },
+                {
+                    "name": "Sudoku.png",
+                    "url": "games/Sudoku.png",
+                    "size": 20908,
+                    "date": "2025-12-07",
+                    "full_url": "https://mefamex.com/games/Sudoku.png",
+                    "relative_path": "games/Sudoku.png"
+                }
+            ]
+        },
+        {
+            "name": "lesson",
+            "url": "lesson",
+            "size": 668729,
+            "date": "2026-01-08",
+            "relative_path": "lesson",
+            "full_url": "https://mefamex.com/lesson",
+            "folder": [
+                {
+                    "name": "gomulu-sistemler-final",
+                    "url": "lesson/gomulu-sistemler-final",
+                    "size": 273248,
+                    "date": "2026-01-06",
+                    "relative_path": "lesson/gomulu-sistemler-final",
+                    "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final",
+                    "folder": [],
+                    "files": [
+                        {
+                            "name": "master.json",
+                            "url": "lesson/gomulu-sistemler-final/master.json",
+                            "size": 2974,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/master.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/master.json"
+                        },
+                        {
+                            "name": "unite-01-gomulu-sistemlere-giris.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-01-gomulu-sistemlere-giris.json",
+                            "size": 21139,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-01-gomulu-sistemlere-giris.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-01-gomulu-sistemlere-giris.json"
+                        },
+                        {
+                            "name": "unite-02-siniflandirma-ve-ozellikler.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-02-siniflandirma-ve-ozellikler.json",
+                            "size": 18067,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-02-siniflandirma-ve-ozellikler.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-02-siniflandirma-ve-ozellikler.json"
+                        },
+                        {
+                            "name": "unite-03-tasarim-sureci.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-03-tasarim-sureci.json",
+                            "size": 18739,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-03-tasarim-sureci.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-03-tasarim-sureci.json"
+                        },
+                        {
+                            "name": "unite-04-donanim-bilesenleri.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-04-donanim-bilesenleri.json",
+                            "size": 18077,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-04-donanim-bilesenleri.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-04-donanim-bilesenleri.json"
+                        },
+                        {
+                            "name": "unite-05-hafiza-yonetimi.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-05-hafiza-yonetimi.json",
+                            "size": 16640,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-05-hafiza-yonetimi.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-05-hafiza-yonetimi.json"
+                        },
+                        {
+                            "name": "unite-06-sensorler-ve-aktuatorler.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-06-sensorler-ve-aktuatorler.json",
+                            "size": 15739,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-06-sensorler-ve-aktuatorler.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-06-sensorler-ve-aktuatorler.json"
+                        },
+                        {
+                            "name": "unite-07-haberlesme-arabirimleri-i2c-spi-can.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-07-haberlesme-arabirimleri-i2c-spi-can.json",
+                            "size": 16114,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-07-haberlesme-arabirimleri-i2c-spi-can.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-07-haberlesme-arabirimleri-i2c-spi-can.json"
+                        },
+                        {
+                            "name": "unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json",
+                            "size": 16410,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json"
+                        },
+                        {
+                            "name": "unite-09-gomulu-yazilim-tasarimi.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-09-gomulu-yazilim-tasarimi.json",
+                            "size": 16689,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-09-gomulu-yazilim-tasarimi.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-09-gomulu-yazilim-tasarimi.json"
+                        },
+                        {
+                            "name": "unite-10-rtos-giris.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-10-rtos-giris.json",
+                            "size": 16020,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-10-rtos-giris.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-10-rtos-giris.json"
+                        },
+                        {
+                            "name": "unite-11-gorevler-arasi-haberlesme.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-11-gorevler-arasi-haberlesme.json",
+                            "size": 16707,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-11-gorevler-arasi-haberlesme.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-11-gorevler-arasi-haberlesme.json"
+                        },
+                        {
+                            "name": "unite-12-proje-ve-sistem-entegrasyon.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-12-proje-ve-sistem-entegrasyon.json",
+                            "size": 16663,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-12-proje-ve-sistem-entegrasyon.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-12-proje-ve-sistem-entegrasyon.json"
+                        },
+                        {
+                            "name": "unite-13-ders-notlari.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-13-ders-notlari.json",
+                            "size": 16983,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-13-ders-notlari.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-13-ders-notlari.json"
+                        },
+                        {
+                            "name": "unite-14-kritik-onemli-kisimlar.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-14-kritik-onemli-kisimlar.json",
+                            "size": 11903,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-14-kritik-onemli-kisimlar.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-14-kritik-onemli-kisimlar.json"
+                        },
+                        {
+                            "name": "unite-15-derste-soylenilenler.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-15-derste-soylenilenler.json",
+                            "size": 12135,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-15-derste-soylenilenler.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-15-derste-soylenilenler.json"
+                        },
+                        {
+                            "name": "unite-16-online-derste-soylenilenler.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-16-online-derste-soylenilenler.json",
+                            "size": 12004,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-16-online-derste-soylenilenler.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-16-online-derste-soylenilenler.json"
+                        },
+                        {
+                            "name": "unite-17-icindekiler-konu-haritasi.json",
+                            "url": "lesson/gomulu-sistemler-final/unite-17-icindekiler-konu-haritasi.json",
+                            "size": 10245,
+                            "date": "2026-01-06",
+                            "full_url": "https://mefamex.com/lesson/gomulu-sistemler-final/unite-17-icindekiler-konu-haritasi.json",
+                            "relative_path": "lesson/gomulu-sistemler-final/unite-17-icindekiler-konu-haritasi.json"
+                        }
+                    ]
+                },
+                {
+                    "name": "isletim-sistemleri-final",
+                    "url": "lesson/isletim-sistemleri-final",
+                    "size": 227370,
+                    "date": "2026-01-05",
+                    "relative_path": "lesson/isletim-sistemleri-final",
+                    "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final",
+                    "folder": [],
+                    "files": [
+                        {
+                            "name": "master.json",
+                            "url": "lesson/isletim-sistemleri-final/master.json",
+                            "size": 810,
+                            "date": "2026-01-05",
+                            "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final/master.json",
+                            "relative_path": "lesson/isletim-sistemleri-final/master.json"
+                        },
+                        {
+                            "name": "unite-01-giris.json",
+                            "url": "lesson/isletim-sistemleri-final/unite-01-giris.json",
+                            "size": 38124,
+                            "date": "2026-01-05",
+                            "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final/unite-01-giris.json",
+                            "relative_path": "lesson/isletim-sistemleri-final/unite-01-giris.json"
+                        },
+                        {
+                            "name": "unite-02-giris-cikis-sistemi.json",
+                            "url": "lesson/isletim-sistemleri-final/unite-02-giris-cikis-sistemi.json",
+                            "size": 37335,
+                            "date": "2026-01-05",
+                            "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final/unite-02-giris-cikis-sistemi.json",
+                            "relative_path": "lesson/isletim-sistemleri-final/unite-02-giris-cikis-sistemi.json"
+                        },
+                        {
+                            "name": "unite-03-gorev-yonetimi.json",
+                            "url": "lesson/isletim-sistemleri-final/unite-03-gorev-yonetimi.json",
+                            "size": 40116,
+                            "date": "2026-01-05",
+                            "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final/unite-03-gorev-yonetimi.json",
+                            "relative_path": "lesson/isletim-sistemleri-final/unite-03-gorev-yonetimi.json"
+                        },
+                        {
+                            "name": "unite-04-birlikte-calisan-gorevler.json",
+                            "url": "lesson/isletim-sistemleri-final/unite-04-birlikte-calisan-gorevler.json",
+                            "size": 38671,
+                            "date": "2026-01-05",
+                            "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final/unite-04-birlikte-calisan-gorevler.json",
+                            "relative_path": "lesson/isletim-sistemleri-final/unite-04-birlikte-calisan-gorevler.json"
+                        },
+                        {
+                            "name": "unite-05-ana-bellek-yonetimi.json",
+                            "url": "lesson/isletim-sistemleri-final/unite-05-ana-bellek-yonetimi.json",
+                            "size": 37164,
+                            "date": "2026-01-05",
+                            "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final/unite-05-ana-bellek-yonetimi.json",
+                            "relative_path": "lesson/isletim-sistemleri-final/unite-05-ana-bellek-yonetimi.json"
+                        },
+                        {
+                            "name": "unite-06-kutuk-yonetimi.json",
+                            "url": "lesson/isletim-sistemleri-final/unite-06-kutuk-yonetimi.json",
+                            "size": 35150,
+                            "date": "2026-01-05",
+                            "full_url": "https://mefamex.com/lesson/isletim-sistemleri-final/unite-06-kutuk-yonetimi.json",
+                            "relative_path": "lesson/isletim-sistemleri-final/unite-06-kutuk-yonetimi.json"
+                        }
+                    ]
+                },
+                {
+                    "name": "web-tasarımı-ve-programlama-final",
+                    "url": "lesson/web-tasarımı-ve-programlama-final",
+                    "size": 121417,
+                    "date": "2026-01-08",
+                    "relative_path": "lesson/web-tasarımı-ve-programlama-final",
+                    "full_url": "https://mefamex.com/lesson/web-tasarımı-ve-programlama-final",
+                    "folder": [],
+                    "files": [
+                        {
+                            "name": "master.json",
+                            "url": "lesson/web-tasarımı-ve-programlama-final/master.json",
+                            "size": 885,
+                            "date": "2026-01-08",
+                            "full_url": "https://mefamex.com/lesson/web-tasarımı-ve-programlama-final/master.json",
+                            "relative_path": "lesson/web-tasarımı-ve-programlama-final/master.json"
+                        },
+                        {
+                            "name": "unite-01-html.json",
+                            "url": "lesson/web-tasarımı-ve-programlama-final/unite-01-html.json",
+                            "size": 21236,
+                            "date": "2026-01-08",
+                            "full_url": "https://mefamex.com/lesson/web-tasarımı-ve-programlama-final/unite-01-html.json",
+                            "relative_path": "lesson/web-tasarımı-ve-programlama-final/unite-01-html.json"
+                        },
+                        {
+                            "name": "unite-02-css.json",
+                            "url": "lesson/web-tasarımı-ve-programlama-final/unite-02-css.json",
+                            "size": 25605,
+                            "date": "2026-01-08",
+                            "full_url": "https://mefamex.com/lesson/web-tasarımı-ve-programlama-final/unite-02-css.json",
+                            "relative_path": "lesson/web-tasarımı-ve-programlama-final/unite-02-css.json"
+                        },
+                        {
+                            "name": "unite-03-javascript.json",
+                            "url": "lesson/web-tasarımı-ve-programlama-final/unite-03-javascript.json",
+                            "size": 25450,
+                            "date": "2026-01-08",
+                            "full_url": "https://mefamex.com/lesson/web-tasarımı-ve-programlama-final/unite-03-javascript.json",
+                            "relative_path": "lesson/web-tasarımı-ve-programlama-final/unite-03-javascript.json"
+                        },
+                        {
+                            "name": "unite-04-bootstrap.json",
+                            "url": "lesson/web-tasarımı-ve-programlama-final/unite-04-bootstrap.json",
+                            "size": 24739,
+                            "date": "2026-01-08",
+                            "full_url": "https://mefamex.com/lesson/web-tasarımı-ve-programlama-final/unite-04-bootstrap.json",
+                            "relative_path": "lesson/web-tasarımı-ve-programlama-final/unite-04-bootstrap.json"
+                        },
+                        {
+                            "name": "unite-05-jquery.json",
+                            "url": "lesson/web-tasarımı-ve-programlama-final/unite-05-jquery.json",
+                            "size": 23502,
+                            "date": "2026-01-08",
+                            "full_url": "https://mefamex.com/lesson/web-tasarımı-ve-programlama-final/unite-05-jquery.json",
+                            "relative_path": "lesson/web-tasarımı-ve-programlama-final/unite-05-jquery.json"
+                        }
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "name": "index.html",
+                    "url": "lesson/index.html",
+                    "size": 46694,
+                    "date": "2026-01-08",
+                    "full_url": "https://mefamex.com/lesson/index.html",
+                    "relative_path": "lesson/index.html"
                 }
             ]
         },
@@ -1429,7 +1746,7 @@
         {
             "name": "py",
             "url": "py",
-            "size": 274731,
+            "size": 296082,
             "date": "2025-09-18",
             "relative_path": "py",
             "full_url": "https://mefamex.com/py",
@@ -1437,7 +1754,7 @@
                 {
                     "name": "Filetree",
                     "url": "py/Filetree",
-                    "size": 215904,
+                    "size": 236166,
                     "date": "2025-08-13",
                     "relative_path": "py/Filetree",
                     "full_url": "https://mefamex.com/py/Filetree",
@@ -1446,7 +1763,7 @@
                         {
                             "name": "FileTreeCreator.py",
                             "url": "py/Filetree/FileTreeCreator.py",
-                            "size": 13520,
+                            "size": 13519,
                             "date": "2025-12-07",
                             "full_url": "https://mefamex.com/py/Filetree/FileTreeCreator.py",
                             "relative_path": "py/Filetree/FileTreeCreator.py"
@@ -1454,8 +1771,8 @@
                         {
                             "name": "file_tree.json",
                             "url": "py/Filetree/file_tree.json",
-                            "size": 202384,
-                            "date": "2025-09-13",
+                            "size": 222647,
+                            "date": "2026-01-08",
                             "full_url": "https://mefamex.com/py/Filetree/file_tree.json",
                             "relative_path": "py/Filetree/file_tree.json"
                         }
@@ -1464,7 +1781,7 @@
                 {
                     "name": "Linktree",
                     "url": "py/Linktree",
-                    "size": 29079,
+                    "size": 30169,
                     "date": "2025-07-18",
                     "relative_path": "py/Linktree",
                     "full_url": "https://mefamex.com/py/Linktree",
@@ -1481,8 +1798,8 @@
                         {
                             "name": "link_tree.json",
                             "url": "py/Linktree/link_tree.json",
-                            "size": 15748,
-                            "date": "2025-09-27",
+                            "size": 16838,
+                            "date": "2026-01-08",
                             "full_url": "https://mefamex.com/py/Linktree/link_tree.json",
                             "relative_path": "py/Linktree/link_tree.json"
                         }
@@ -1509,8 +1826,8 @@
                 {
                     "name": "file_analyzer.py",
                     "url": "py/file_analyzer.py",
-                    "size": 7430,
-                    "date": "2025-09-13",
+                    "size": 7429,
+                    "date": "2025-12-07",
                     "full_url": "https://mefamex.com/py/file_analyzer.py",
                     "relative_path": "py/file_analyzer.py"
                 },
@@ -1637,7 +1954,7 @@
         {
             "name": "src",
             "url": "src",
-            "size": 20928079,
+            "size": 20928080,
             "date": "2025-11-15",
             "relative_path": "src",
             "full_url": "https://mefamex.com/src",
@@ -3016,7 +3333,7 @@
                 {
                     "name": "components",
                     "url": "src/components",
-                    "size": 49854,
+                    "size": 49853,
                     "date": "2025-09-13",
                     "relative_path": "src/components",
                     "full_url": "https://mefamex.com/src/components",
@@ -3033,8 +3350,8 @@
                         {
                             "name": "headerFooter.css",
                             "url": "src/components/headerFooter.css",
-                            "size": 18120,
-                            "date": "2025-12-07",
+                            "size": 18119,
+                            "date": "2026-01-05",
                             "full_url": "https://mefamex.com/src/components/headerFooter.css",
                             "relative_path": "src/components/headerFooter.css"
                         },
@@ -3042,7 +3359,7 @@
                             "name": "importHeaderFooter.js",
                             "url": "src/components/importHeaderFooter.js",
                             "size": 17305,
-                            "date": "2025-09-13",
+                            "date": "2026-01-05",
                             "full_url": "https://mefamex.com/src/components/importHeaderFooter.js",
                             "relative_path": "src/components/importHeaderFooter.js"
                         },
@@ -3137,7 +3454,7 @@
                 {
                     "name": "scripts",
                     "url": "src/scripts",
-                    "size": 1807,
+                    "size": 1809,
                     "date": "2025-11-04",
                     "relative_path": "src/scripts",
                     "full_url": "https://mefamex.com/src/scripts",
@@ -3146,8 +3463,8 @@
                         {
                             "name": "main.js",
                             "url": "src/scripts/main.js",
-                            "size": 1807,
-                            "date": "2025-11-04",
+                            "size": 1809,
+                            "date": "2026-01-05",
                             "full_url": "https://mefamex.com/src/scripts/main.js",
                             "relative_path": "src/scripts/main.js"
                         }
@@ -3343,8 +3660,8 @@
         {
             "name": "README.md",
             "url": "README.md",
-            "size": 12274,
-            "date": "2025-09-13",
+            "size": 12272,
+            "date": "2025-12-07",
             "full_url": "https://mefamex.com/README.md",
             "relative_path": "README.md"
         },
@@ -3407,16 +3724,16 @@
         {
             "name": "_DirExVis_results.txt",
             "url": "_DirExVis_results.txt",
-            "size": 5574,
-            "date": "2025-09-13",
+            "size": 7395,
+            "date": "2026-01-08",
             "full_url": "https://mefamex.com/_DirExVis_results.txt",
             "relative_path": "_DirExVis_results.txt"
         },
         {
             "name": "_folder_analysis_results.txt",
             "url": "_folder_analysis_results.txt",
-            "size": 581,
-            "date": "2025-09-13",
+            "size": 558,
+            "date": "2026-01-08",
             "full_url": "https://mefamex.com/_folder_analysis_results.txt",
             "relative_path": "_folder_analysis_results.txt"
         }

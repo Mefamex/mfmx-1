@@ -1,5 +1,5 @@
 # Created for : mefamex.com files
-# Created on  : 2025-12-07T19:02:05Z
+# Created on  : 2026-01-08T21:57:05Z
 
 /run/media/mfmx/D/SOFTWARE/WEB/Websites/mfmx-1
 |      about
@@ -62,6 +62,42 @@
 |      |      |      index.html
 |      |      |      queaz_game.js
 |      |      |      style.css
+|      |      index.html
+|      lesson
+|      |      gomulu-sistemler-final
+|      |      |      master.json
+|      |      |      unite-01-gomulu-sistemlere-giris.json
+|      |      |      unite-02-siniflandirma-ve-ozellikler.json
+|      |      |      unite-03-tasarim-sureci.json
+|      |      |      unite-04-donanim-bilesenleri.json
+|      |      |      unite-05-hafiza-yonetimi.json
+|      |      |      unite-06-sensorler-ve-aktuatorler.json
+|      |      |      unite-07-haberlesme-arabirimleri-i2c-spi-can.json
+|      |      |      unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json
+|      |      |      unite-09-gomulu-yazilim-tasarimi.json
+|      |      |      unite-10-rtos-giris.json
+|      |      |      unite-11-gorevler-arasi-haberlesme.json
+|      |      |      unite-12-proje-ve-sistem-entegrasyon.json
+|      |      |      unite-13-ders-notlari.json
+|      |      |      unite-14-kritik-onemli-kisimlar.json
+|      |      |      unite-15-derste-soylenilenler.json
+|      |      |      unite-16-online-derste-soylenilenler.json
+|      |      |      unite-17-icindekiler-konu-haritasi.json
+|      |      isletim-sistemleri-final
+|      |      |      master.json
+|      |      |      unite-01-giris.json
+|      |      |      unite-02-giris-cikis-sistemi.json
+|      |      |      unite-03-gorev-yonetimi.json
+|      |      |      unite-04-birlikte-calisan-gorevler.json
+|      |      |      unite-05-ana-bellek-yonetimi.json
+|      |      |      unite-06-kutuk-yonetimi.json
+|      |      web-tasarımı-ve-programlama-final
+|      |      |      master.json
+|      |      |      unite-01-html.json
+|      |      |      unite-02-css.json
+|      |      |      unite-03-javascript.json
+|      |      |      unite-04-bootstrap.json
+|      |      |      unite-05-jquery.json
 |      |      index.html
 |      mystream
 |      |      index.html
