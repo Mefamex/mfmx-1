@@ -21,7 +21,7 @@
     <meta name="copyright" content="© 2026 Mefamex">
     <!---->
     <!-- INDEXING & CRAWLING -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="robots" content="noindex, nofollow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <!---->
     <!---->
     <!-- VERIFICATIONS -->
@@ -666,6 +666,11 @@
                     title: "Gömülü Sistemler (Final)",
                     masterPath: "gomulu-sistemler-final/master.json",
                 },
+                {
+                    key: "web-tasarımı-ve-programlama-final",
+                    title: "Web Tasarımı ve Programlama (Final)",
+                    masterPath: "web-tasarımı-ve-programlama-final/master.json",
+                },
             ];
 
             const STORAGE_KEY = "mfmx.lesson.quiz.progress.v1";
@@ -711,10 +716,9 @@
             }
 
             async function fetchJson(path) {
-                const res = await fetch(path, { cache: "no-store" });
-                if (!res.ok) {
-                    throw new Error(`JSON yüklenemedi: ${path} (HTTP ${res.status})`);
-                }
+                const url = encodeURI(path);
+                const res = await fetch(url, { cache: "no-store" });
+                if (!res.ok) throw new Error(`JSON yüklenemedi: ${path} (HTTP ${res.status})`);
                 return await res.json();
             }
 
@@ -982,8 +986,8 @@
                 explainBox.classList.toggle("explain-correct", isCorrect);
                 explainBox.classList.toggle("explain-wrong", !isCorrect);
                 explainBox.textContent = isCorrect
-                    ? `Doğru!\n\nAçıklama: ${activeQuestion.explanation || "(Açıklama yok)"}`
-                    : `Yanlış. Doğru cevap: ${correctDisplayKey}\n\nAçıklama: ${activeQuestion.explanation || "(Açıklama yok)"}`;
+                    ? `Doğru!\n\n${activeQuestion.explanation || "(Açıklama yok)"}`
+                    : `Yanlış. Doğru cevap: ${correctDisplayKey}\n\n${activeQuestion.explanation || "(Açıklama yok)"}`;
 
                 nextBtn.disabled = false;
                 renderStatus();
