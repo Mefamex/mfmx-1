@@ -65,7 +65,7 @@
         },
         {
             "No": 6,
-            "question": "(Soru 5 ile aynıdır)",
+            "question": "Aşağıdaki durumlardan hangisinde acil durum planı hazırlanması gerekir?",
             "options": {
                 "A": "İşyeri koşullarını iyileştirmek amacıyla",
                 "B": "Meslek hastalıklarını önlemek amacıyla",
@@ -73,7 +73,7 @@
                 "D": "Yangın, sel, deprem, patlama vb. felaketlerin oluşum olasılığını önlemek amacıyla"
             },
             "correct": "D",
-            "explanation": "Soru 5 ile aynı olduğundan cevap da D'dir."
+            "explanation": "Acil durum planı yangın/deprem/patlama gibi afet ve acil durumlar için hazırlanır."
         },
         {
             "No": 7,
@@ -115,7 +115,7 @@
                 "C": "7",
                 "D": "15"
             },
-            "correct": "",
+            "correct": "A",
             "explanation": "Revize anahtarda A (1 gün) önerilse de 5510 kapsamında iş kazasında geçici iş göremezlik ödeneği için prim/sigortalılık günü şartı aranmaz; mevcut seçenekler mevzuatla tam uyumlu değildir."
         },
         {
@@ -236,7 +236,8 @@
                 "D": "1950-1955"
             },
             "correct": "A",
-            "explanation": "Tarihsel olarak 1932/1946 bilgisi bilinir; seçeneklerde 1932 yok, bu yüzden en yakın ve beklenen seçenek A'dır."
+            "explanation": "Tarihsel olarak 1932/1946 bilgisi bilinir; seçeneklerde 1932 yok, bu yüzden en yakın ve beklenen seçenek 
+ 39-46"
         },
         {
             "No": 21,
@@ -332,7 +333,7 @@
                 "D": "İhbar tazminatı"
             },
             "correct": "B",
-            "explanation": "Revize anahtarda D (ihbar tazminatı) tercih edilmiştir; ihbar tazminatı fesih rejimiyle ilgilidir. Bu nedenle soru, tazminat türlerinin kapsamına göre kaynaklar arasında tartışmalı yorum içerebilir."
+            "explanation": "Revize anahtarda ihbar tazminatı tercih edilmiştir; ihbar tazminatı fesih rejimiyle ilgilidir. Bu nedenle soru, tazminat türlerinin kapsamına göre kaynaklar arasında tartışmalı yorum içerebilir."
         },
         {
             "No": 29,
@@ -356,7 +357,7 @@
                 "D": "Sektörel kaza sıklık hızı"
             },
             "correct": "B",
-            "explanation": "Bu formül iş kazası ağırlık oranını verir."
+            "explanation": "Bu formül iş kazası AĞIRLIK oranını verir."
         },
         {
             "No": 31,
@@ -440,7 +441,7 @@
                 "D": "Domino teorisi"
             },
             "correct": "B",
-            "explanation": "Bu listede standart kabul edilmeyen seçenek çift etken teorisidir."
+            "explanation": "Bu listede standart kabul edilmeyen seçenek çift etken teorisidir. ÇOK ETKEN teorisi var..."
         },
         {
             "No": 38,
@@ -452,7 +453,7 @@
                 "D": "Yönetim"
             },
             "correct": "C",
-            "explanation": "4M içinde medya yer almaz."
+            "explanation": "4M içinde medya yer almaz. Neden olduğunu bilmiyom. hocaya sormak lazım. İngilizce media diye var pdf'te. Bir de yönetim(management), M var"
         },
         {
             "No": 39,
@@ -476,7 +477,7 @@
                 "D": "10000 gün"
             },
             "correct": "C",
-            "explanation": "Kaza ağırlık oranı hesabında ölüm/sürekli iş göremezlik için 7500 gün kullanılır."
+            "explanation": "Kaza ağırlık oranı hesabında ölüm/sürekli iş göremezlik için 7.500 gün kullanılır."
         },
         {
             "No": 41,
