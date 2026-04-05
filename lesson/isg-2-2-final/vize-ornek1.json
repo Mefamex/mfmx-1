@@ -1,0 +1,1087 @@
+{
+    "unitNumber": 1,
+    "unitTitle": "İSG - Vize-Ornek1",
+    "questionCount": 90,
+    "questions": [
+        {
+            "No": 1,
+            "question": "İş sağlığı ve güvenliğine yönelik risk değerlendirme uygulaması aşağıdakilerden hangisinde zorunludur?",
+            "options": {
+                "A": "ISO 9001",
+                "B": "ISO 14001",
+                "C": "ISO 22000",
+                "D": "OHSAS18001"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 2,
+            "question": "Aşağıdaki ifadelerden hangisi yanlıştır?",
+            "options": {
+                "A": "Tehlike ve risk aynı şey değildir.",
+                "B": "Tehlike ve risk kavramları arasında farklılık bulunmaktadır.",
+                "C": "Tehlikeleri belirlemeden de riskleri değerlendirmek mümkündür.",
+                "D": "Risk, tehlikenin meydana gelme olasılığı ile ortaya çıkan zararın şiddetinin bileşkesidir."
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 3,
+            "question": "Riski doğru değerlendirebilmek için aşağıdaki beş temel faktör nasıl sıralanmalıdır? I-Riskleri değerlendirme, II-Tehlikeleri tanımlama, III-Kontrol tedbirlerini tamamlama, IV-Kontrol tedbirlerine karar verme, V-İzleme ve tekrar etme",
+            "options": {
+                "A": "I-II-III-IV-V",
+                "B": "II-I-IV-III-V",
+                "C": "I-III-II-V-IV",
+                "D": "II-III-I-IV-V"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 4,
+            "question": "Ülkemiz 6331 sayılı yasaya göre hangi işletmeler risk analizi yapmalıdır?",
+            "options": {
+                "A": "Kanuna tabi tüm işletmelerde",
+                "B": "Yalnızca 50'den fazla işçisi olan işletmeler",
+                "C": "Yalnızca sanayiden sayılan işletmelerde",
+                "D": "6 aydan fazla iş sürecek işletmelerde"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi iş sağlığı ve güvenliği açısından en uygun tehlike tanımıdır?",
+            "options": {
+                "A": "Büyük zarara yol açabilecek durum",
+                "B": "Malın, malzemenin ya da işyeri ortamının zarar görmesine yol açabilecek durum, işlem",
+                "C": "İnsanların yaralanması veya sağlığının bozulmasına sebep olabilecek kaynak, durum veya işlem",
+                "D": "İnsanların yaralanması veya sağlığının bozulması ihtimali"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 6,
+            "question": "Aşağıdakilerden hangisi iş sağlığı ve güvenliği yönetim sistemi 18001 açısından en uygun risk tanımıdır?",
+            "options": {
+                "A": "Yaralanmalara, ölüme, maddi zararlara veya diğer kayıplara yol açan ve istenmeyen olay",
+                "B": "İnsanların yaralanması veya sağlığının bozulması veya bunların birlikte gerçekleşmesine sebep olabilecek kaynak, durum veya işlem",
+                "C": "Tehlikeli bir olayın olasılığı ile meydana geldiğinde oluşturacağı sağlık bozulmasının ciddiyet derecesinin birleşimi",
+                "D": "Kazaya neden olan veya kazaya sebep potansiyele sahip istenmeyen durum"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 7,
+            "question": "Risk kişi tarafından ilk belirlendiğinde bir önem seviyesinde algılanır. Ancak zamanla önem seviyesinde bir düşüş gözlenir. Bu olaya ne denilmektedir?",
+            "options": {
+                "A": "İlgisizlik",
+                "B": "Kanıksama",
+                "C": "Dikkatsizlik",
+                "D": "Önemsememe"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 8,
+            "question": "Kuruluşun, tehlike tanımlama ve risk değerlendirmesi için yaklaşım biçimleri hangileri olmalıdır?",
+            "options": {
+                "A": "Koruyucu-Düzeltici",
+                "B": "Proaktif-Reaktif",
+                "C": "Reaktif-Uzman",
+                "D": "Önleyici-Düzeltici"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 9,
+            "question": "Aşağıda belirtilenlerden hangisi mekanik tehlike kaynağı değildir? I. Basınçlı kap veya hatlar II. Alçak veya yüksek basınç III. Kaldırma ve taşıma araçları IV. Sabit ve seyyar merdivenler V. Elektromanyetik alan",
+            "options": {
+                "A": "IV, V",
+                "B": "II, V",
+                "C": "III, IV, V",
+                "D": "II, III"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 10,
+            "question": "Aşağıda önce risk, sonra tehlike yazılmıştır. Bu sıralamalardan hangisi yanlıştır?",
+            "options": {
+                "A": "Doğal gaz - Yangın veya patlama",
+                "B": "Bel ağrısı - Elle taşıma işleri",
+                "C": "Elde dolaşım bozuklukları - Titreşim",
+                "D": "Bulanık görme - Kaynak ışınları"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 11,
+            "question": "İş sağlığı ve güvenliği risk değerlendirme faaliyetlerindeki kontrol tedbirlerinin uygulanmasında öncelik aşağıdakilerden hangisindedir?",
+            "options": {
+                "A": "Mühendislik önlemlerini uygulamak",
+                "B": "Ergonomik yaklaşımlardan yararlanmak",
+                "C": "Riskleri kaynağında yok etmeye çalışmak",
+                "D": "Tehlikeli olanı, daha az tehlikeli olanla değiştirmek"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 12,
+            "question": "Risk değerlendirmesinin aşağıdaki hangi soruya cevap vermesi beklenmez?",
+            "options": {
+                "A": "Yetkili makamlar önünde kusursuzluğun ispat edilmesi",
+                "B": "Tehlikelerin potansiyel etki ve sonuçlarının meydana gelme ihtimali",
+                "C": "Riskin kabul edilebilir durumunun devam ettirilebilmesi için kontrol ölçümlerinin yeterliliği",
+                "D": "Tehlikelerin potansiyel etki ve sonuçlarının neler olduğu ve bunların kabul edilebilir olup olmadığının araştırılması"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 13,
+            "question": "Aşağıda belirtilenlerden hangisi, risk değerlendirmesinde olası hata türleri ve etkileri analizini ifade etmektedir?",
+            "options": {
+                "A": "HAZOP",
+                "B": "FMEA",
+                "C": "FTA",
+                "D": "PRA"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 14,
+            "question": "Bir şoförün kaza yapmadığı sürece algıladığı risk düzeyinin düşmesi aşağıdaki kavramlardan hangisiyle açıklanabilir?",
+            "options": {
+                "A": "Kazanın korkutuculuk düzeyinin düşmesi",
+                "B": "Kazanın anlaşılabilirlik düzeyinin düşmesi",
+                "C": "Kazanın etkileyeceği kişi sayının az olacağı düşüncesi",
+                "D": "Kaza olayları ve haberlerine maruziyet nedeniyle kanıksama"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 15,
+            "question": "Risk kontrol önlemlerinin hiyerarşisine ilişkin aşağıdaki sıralamalardan hangisi doğrudur? I. Elimine etmek II. Tehlikeli ortamı izole etmek III. Daha zararsız ile değiştirmek IV. Kişisel koruyucu kullanmak V. Yönetimsel düzenlemelerle tehlike ve çalışanı ayırmak",
+            "options": {
+                "A": "I, II, III, IV, V",
+                "B": "II, I, V, III, IV",
+                "C": "II, I, III, V, IV",
+                "D": "I, III, II, V, IV"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 16,
+            "question": "Çalışma ortamı havasındaki zararlı maddelerin solunması nedeniyle oluşabilecek riski kontrol altına almada son adım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Uygun havalandırma",
+                "B": "Zararlı maddelerin çalışma ortam havasına yayılmasını önleme",
+                "C": "Zararlı maddelerin yerine zararsız maddeleri kullanma",
+                "D": "Uygun kişisel koruyucu donanım kullanma"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 17,
+            "question": "Aşağıdakilerden hangisi İSG'de tehlike tanımına uymaz?",
+            "options": {
+                "A": "Yüksekte çalışma",
+                "B": "Forklift çarpması sonucu yaralanma",
+                "C": "Kaynak işlemi",
+                "D": "Vinç operasyon alanında baretsiz dolaşma"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 18,
+            "question": "Risk yönetiminde sürekli iyileştirme neyi hedefler?",
+            "options": {
+                "A": "İşyerinde risklerin belli bir düzeyin altına indirilmesi",
+                "B": "İşyerinde tehlikeler belirlenerek öncelikli yüksek tehlike unsurlarına önlem alınması",
+                "C": "İşyerinde risklerin öncelikli olanlardan başlanarak sürekli azaltılması",
+                "D": "İşyerinde tüm risklerin ortadan kaldırılması"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 19,
+            "question": "Aşağıdakilerden hangisi risk yönetiminde proaktif yaklaşım prensibinin uygulamalarıyla ilişkili kabul edilmemelidir?",
+            "options": {
+                "A": "Kaza raporları",
+                "B": "İSG kurul toplantı raporları",
+                "C": "Sağlık gözetim raporları",
+                "D": "İş güvenliği talimatların ortadan kaldırılması"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdaki uygulamalardan hangisi tehlikeyi kaynağında yok etmeye yönelik değildir?",
+            "options": {
+                "A": "Teknolojisi eski olan ve çift el kumanda ya da fotosel tertibatı yapılamayan presin kullanımdan kaldırılması",
+                "B": "Tehlikeli olan üretim şeklinin kullanılmaması",
+                "C": "Tehlikenin ortama yayılmasının genel veya yerel yöntemlerle önlenmesi",
+                "D": "Yüksek düzeyde gürültü ile çalışan makinenin üretim hattından çıkarılarak kullanılmaması"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 21,
+            "question": "İşyerinde risk değerlendirmesi yapıldıktan sonra kontrol önlemlerinin alınmasına karar verilmiştir. Kontrol önlemlerine ilişkin öncelik sıralaması hangisinde doğru verilmiştir? I. İşçilere kişisel koruyucu verilmesi II. Tehlikeli bölümde daha az sayıda işçi çalıştırılması III. Tehlikenin ortadan kaldırılması IV. İkame",
+            "options": {
+                "A": "I, II, III, IV",
+                "B": "III, IV, II, I",
+                "C": "I, III, II, IV",
+                "D": "II, IV, III, I"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 22,
+            "question": "Risk kontrol önlemlerinin hiyerarşik düzenine göre en etkin kontrol önlemi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Eliminasyon",
+                "B": "Mühendislik önlemleri",
+                "C": "İdari önlemler",
+                "D": "Kişisel koruyucu donanım"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 23,
+            "question": "Yapı, tehlikelerin tanımlanması, risklere değer biçilmesi ve güvenlik ölçüsü önerisi olarak dört aşamadan oluşan risk analizi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Olay Ağacı Analizi",
+                "B": "İş Güvenliği Analizi (JSA)",
+                "C": "Hata Ağacı Analizi",
+                "D": "Ön Tehlike Analizi"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 24,
+            "question": "Risk değerlendirmesinde tehlikelerin tespit edilmesinde aşağıdakilerden hangisi geçmiş kayıtlardan biri değildir?",
+            "options": {
+                "A": "İş kazası ve ramak kala raporlarının incelenmesi",
+                "B": "Ortam ölçüm raporlarının incelenmesi",
+                "C": "Teknik periyodik kontrol raporlarının incelenmesi",
+                "D": "İSG mevzuatının incelenmesi"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 25,
+            "question": "Yapılmış olan risk değerlendirmesi; tehlike sınıfına göre çok tehlikeli, tehlikeli ve az tehlikeli işyerlerinde sırasıyla en geç kaç yılda bir yenilenir?",
+            "options": {
+                "A": "1-3-5",
+                "B": "1-4-5",
+                "C": "2-4-6",
+                "D": "1-2-3"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 26,
+            "question": "Aşağıdakilerden hangisi kantitatif bir risk analiz metodu değildir?",
+            "options": {
+                "A": "5x5 Matris Metodu",
+                "B": "Kinney Metodu",
+                "C": "PRA",
+                "D": "Ridley Metodu"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 27,
+            "question": "Hangisi risk değerlendirmesinin tamamen veya kısmen yenilenme sebebi olmamalıdır?",
+            "options": {
+                "A": "Üretim yönteminde değişiklikler olması",
+                "B": "Çalışma ortamına ait sınır değerlere ilişkin bir mevzuat değişikliğinin olmaması",
+                "C": "İş kazası, meslek hastalığı veya ramak kala olay meydana gelmesi",
+                "D": "İşyerinde uygulanan teknoloji, kullanılan madde ve ekipmanlarda değişiklikler meydana gelmesi"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 28,
+            "question": "Aynı çalışma alanını birden fazla işverenin paylaşması durumunda işverenler, risk değerlendirmesi çalışmalarını koordinasyon içinde yürütür, birbirlerini ve ______ tespit edilen riskler konusunda bilgilendirir.",
+            "options": {
+                "A": "Sendika üyelerini",
+                "B": "Yerel sağlık kuruluşlarını",
+                "C": "Çalışan temsilcilerini",
+                "D": "Sosyal güvenlik kurumlarını"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 29,
+            "question": "Aşağıdakilerden hangisi risk değerlendirmesinin yapılması veya yenilenmesini gerektiren durumlardan biri değildir?",
+            "options": {
+                "A": "İşe başlama aşamasında",
+                "B": "2-4-6 aylık periyodik aralıklarla",
+                "C": "İşyerinde bir değişiklik olması durumunda",
+                "D": "İş kazası ve meslek hastalığı sonrasında"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 30,
+            "question": "Aşağıdakilerden hangisi risk değerlendirmesinin hedeflerinden değildir?",
+            "options": {
+                "A": "Herhangi bir hata oluştuğunda bu hatanın can, mal ve çevreye etkilerinin belirlenmesi",
+                "B": "Ürün kalitesinin nasıl geliştirileceğinin belirlenmesi",
+                "C": "Çalışanların, toplumun ve çevrenin güvenlik ve sağlıklarının hangi düzeyde koruma altına alındığının kanıtlanabilir biçimde belirlenmesi",
+                "D": "Güvenlik gereksinimlerine uygunluğun doğrulanması ve teyit edilmesi"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 31,
+            "question": "Aşağıdakilerden hangisi İş Sağlığı ve Güvenliği Risk Yönetiminin genel prensiplerinden değildir?",
+            "options": {
+                "A": "Risk değerlendirme çalışmaları işe başlamadan önce başlanmalıdır",
+                "B": "Risklerin kabul edilebilirliği hakkındaki değer yargıları algılamaya dayanır",
+                "C": "Risk yönetimi proaktif bir yaklaşıma ihtiyaç duyar",
+                "D": "Risklerin en etkin kontrolü çalışanların algılamasını değiştirmekle sağlanır"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 32,
+            "question": "Hangisi risk değerlendirmesi ekibi üyesi olmamalıdır?",
+            "options": {
+                "A": "Muhtemel tehlike kaynakları ile riskler konusunda bilgi sahibi çalışanlar",
+                "B": "Alt işveren taşeronları",
+                "C": "Destek elemanları",
+                "D": "İşveren vekili"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 33,
+            "question": "OHSAS 18001 prosesine göre hangisi uygulama aşamasındaki bir adımdır?",
+            "options": {
+                "A": "Risklerin kabul edilebilir olup olmadığına karar verme",
+                "B": "Olası sapmaları tespit etme ve kaydetme",
+                "C": "İç talimatlar hazırlama",
+                "D": "İlgili kişileri bilgilendirme"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 34,
+            "question": "Kinney risk hesaplama metoduna göre esaslı risk aralığı hangisidir?",
+            "options": {
+                "A": "R > 400",
+                "B": "50 < R < 200",
+                "C": "200 < R < 400",
+                "D": "R < 20"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 35,
+            "question": "Bir kişinin acele şekilde hafif aydınlatılmış bölgede yürürken ayağının odun parçasına takılıp sendelemesi olayında, tek faktör teorisine göre çözüm ne olabilir?",
+            "options": {
+                "A": "Odun parçasını kaldırmak yeterlidir",
+                "B": "Işıklandırma ve gerekli tehlike analiz edilmelidir",
+                "C": "Kişisel kusurlar hakkında eğitim verilmelidir",
+                "D": "Proses 18010 derhal uygulanmalı"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 36,
+            "question": "\"Risk değerlendirme çalışmalarının işletmenin özelliğine göre takım olarak yapılması yararlı değildir\" ifadesinin nedeni aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Gerekli bilgi tüm çalışanlar tarafından sağlanır",
+                "B": "Herkesi tatmin edecek sonuçlar elde edilebilir",
+                "C": "Takım içi etkileşim sonucu etkileyebilir",
+                "D": "Katılanlara aidiyet ve işbirliği ruhu kazandırır"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 37,
+            "question": "Risk değerlendirmesi sırasında aşağıdaki bilgi kaynaklarının hangisinden yararlanılmaz?",
+            "options": {
+                "A": "İş ekipmanlarının kullanma kılavuzları",
+                "B": "Hammadde tüketim giderleri",
+                "C": "Çalışanların eğitimleri",
+                "D": "Kimyasal maddeler için malzeme güvenlik bilgi formları"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 38,
+            "question": "Aşağıdaki ifadelerden hangisi yanlıştır?",
+            "options": {
+                "A": "Gerekli yerlerde uyarı işaretlerinin kullanılması riski azaltır",
+                "B": "Kişisel koruyucu donanımların kullanılması riski azaltır",
+                "C": "Kişisel koruyucu donanımların kullanılması tehlikeyi ortadan kaldırır",
+                "D": "Kontrol önlemlerinde tehlikeyi ortadan kaldırma birinci önceliğe sahiptir"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 39,
+            "question": "Aşağıdakilerden hangisi risk yanıtlama planlarından birisi değildir?",
+            "options": {
+                "A": "Kaçınma",
+                "B": "Transfer etme",
+                "C": "Birleştirme",
+                "D": "Kabullenme"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 40,
+            "question": "Aşağıdakilerden hangisi risk değerlendirme metotlarından değildir?",
+            "options": {
+                "A": "Proaktif metotlar",
+                "B": "Yarı kalitatif metotlar",
+                "C": "Kantitatif metotlar",
+                "D": "Kalitatif metotlar"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 41,
+            "question": "Aşağıdakilerden hangisi risk değerlendirme metotlarından biri değildir?",
+            "options": {
+                "A": "Nicel risk değerlendirme metotları",
+                "B": "Karma risk değerlendirme metotları",
+                "C": "Olasılık risk değerlendirme metotları",
+                "D": "Nitel risk değerlendirme metotları"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 42,
+            "question": "Aşağıdakilerden hangisi risk analiz yöntemidir?",
+            "options": {
+                "A": "OHSAS 18001",
+                "B": "FBİ",
+                "C": "HAZOP",
+                "D": "BS 8800"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 43,
+            "question": "FTA, ETA, HAZOP, FMEA kısaltmalarının açık yazılışları sırasıyla hangisinde doğru verilmiştir?",
+            "options": {
+                "A": "Olay Ağacı Analizi - Hata Türleri ve Etkileri Analizi - Tehlike ve İşletilebilme Çalışması - Hata Ağacı Analizi",
+                "B": "Tehlike ve İşletilebilme Çalışması - Hata Ağacı Analizi - Hata Türleri ve Etkileri Analizi - Olay Ağacı Analizi",
+                "C": "Hata Ağacı Analizi - Olay Ağacı Analizi - Tehlike ve İşletilebilme Çalışması - Hata Türleri ve Etkileri Analizi",
+                "D": "Olay Ağacı Analizi - Hata Ağacı Analizi - Tehlike ve İşletilebilme Çalışması - Hata Türleri ve Etkileri Analizi"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 44,
+            "question": "Aşağıdakilerden hangisi risk değerlendirme yöntemlerinden biri değildir?",
+            "options": {
+                "A": "HAZOP",
+                "B": "FMEA",
+                "C": "FTA",
+                "D": "HACCP"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 45,
+            "question": "Hata türleri ve etkileri analizinde zararların etkileri ve sonuçlarının belirlenmesinde kullanılan parametreler hangileridir?",
+            "options": {
+                "A": "Olasılık-şiddet",
+                "B": "Olasılık-fark edilebilirlik",
+                "C": "Şiddet-fark edilebilirlik",
+                "D": "Olasılık-şiddet-fark edilebilirlik"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 46,
+            "question": "Fine-Kinney metoduna göre yapılan risk değerlendirmesinde risk değeri 150 bulunmuştur. Buna göre karar ve eylem hangisi olmalıdır?",
+            "options": {
+                "A": "Esaslı risk - Kısa dönemde (birkaç ay içinde) iyileştirilmelidir",
+                "B": "Önemli risk - Uzun dönemde (yıl içinde) iyileştirilmelidir",
+                "C": "Olası risk - Gözetim altında uygulanmalıdır",
+                "D": "Tolerans gösterilemez risk - Hemen gerekli önlemler alınmalı ve/veya tesisin kapatılması düşünülmelidir"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 47,
+            "question": "Bir bölüm/olay seçilip 5 yıllık geçmiş kaza kayıtlarının incelenmesi ve tekrar olasılığının araştırıldığı uygulama yönteminin kullanıldığı risk değerlendirme metodu hangisidir?",
+            "options": {
+                "A": "Olursa Ne Olur Analizi",
+                "B": "L Tipi Matris Yöntemi",
+                "C": "Olay Ağacı Analizi",
+                "D": "X Tipi Matris Yöntemi"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 48,
+            "question": "Risk değerlendirme metodolojilerinden L Tipi Matris için aşağıda verilenlerden hangisi yanlıştır?",
+            "options": {
+                "A": "Acil önlem alınması gerekli tehlikelerin tespiti için kullanılmalıdır",
+                "B": "Öncelikle olasılık ve gerçekleşmesi halindeki sonuç derecelendirilir",
+                "C": "Orta düzey risklerin skorları 15, 16, 20'dir",
+                "D": "Risk skoru, olasılık ve şiddetin çarpımından elde edilir"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 49,
+            "question": "İş güvenliği uzmanı; sosyal çevre, istenmeyen insan davranışları, güvensiz davranış ve şartlar, kaza ve yaralanma gibi olayları gözlemlediğinde hangi kaza teorisini düşünmelidir?",
+            "options": {
+                "A": "Kaza halkaları teorisi",
+                "B": "Kaza piramidi teorisi",
+                "C": "Domino teorisi",
+                "D": "Kaza nedenleri teorisi"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 50,
+            "question": "Aşağıda belirtilenlerden hangisi yaşlı çalışanlar için risk değerlendirmesinde yanlış belirlemedir?",
+            "options": {
+                "A": "Yaşlı kişilerin mesleki birikimleri artmıştır",
+                "B": "Yaşlı kişilerin düşünme ve öğrenme hızları artmıştır",
+                "C": "Yaşlı kişilerin hareket hızı azalmıştır",
+                "D": "Yaşlı kişilerin görme ve duyma yetisi azalmıştır"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 51,
+            "question": "\"Risk değerlendirmesi çalışmalarını, işletmenin özelliğine göre bireyin yapması yararlı değildir\" cümlesinin nedeni aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Bireyin kendisine olan özgüveni artar",
+                "B": "Tek boyutluk",
+                "C": "Çabuk netice alınması sağlanır",
+                "D": "Bireyin meslektaşları tarafından yönlendirilmesi engellenir"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 52,
+            "question": "İşveren, risk değerlendirmesi sonuçlarına göre risklerin giderilemediği veya yeterince azaltılamadığı durumlarda aşağıdakilerden hangisini bulundurmak ve uygun şekilde kullanmak zorundadır?",
+            "options": {
+                "A": "İş makineleri kullanma talimatları",
+                "B": "Güvenlik ve sağlık işaretleri",
+                "C": "Kişisel koruyucu donanımları",
+                "D": "Makine koruyucuları"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 53,
+            "question": "İSG açısından işletmelerde risk değerlendirmesi çalışması yapmaktaki amaç aşağıdakilerden hangisi değildir?",
+            "options": {
+                "A": "Çalışanların iş güvenliklerini sağlamak",
+                "B": "İş kazaları ve meslek hastalıklarını minimum seviyede tutmak",
+                "C": "Çalışanların sosyal güvenliğini sağlamak",
+                "D": "İşyerinde bulunan riskli durumlar konusunda önlemler almak"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 54,
+            "question": "Bir zarar, hasar veya yaralanma oluşturabilme potansiyeline ne denir?",
+            "options": {
+                "A": "Olay",
+                "B": "Risk",
+                "C": "Kaza",
+                "D": "Tehlike"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 55,
+            "question": "İş kazaları ve meslek hastalıklarını oluşturan nedenler ile bunları etkileyen faktörler hakkında en doğru bilgiyi toplayarak görünmeyen tehlikeleri önlemek ve etkili bir güvenlik ağı kurmak için yapılan çalışmalara ne denir?",
+            "options": {
+                "A": "Kaza teorisi",
+                "B": "Kabul edilebilir risk",
+                "C": "Risk yönetimi",
+                "D": "Tehlikeli risk"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 56,
+            "question": "Aşağıdakilerden hangisi risk analizi ve yönetimi prosesinin yararlarından değildir?",
+            "options": {
+                "A": "Çalışanların İSG konularında bilgi sahibi olmasını ve katılımını sağlar",
+                "B": "Yönetimin İSG konularında bilgi sahibi olmasını ve karar vermesini sağlar",
+                "C": "Yazılı prosedür ve politikaların oluşmasını veya olgunlaşmasını sağlar",
+                "D": "Risklerin büyüklüğünün hesaplanmasına ve tolere edilebilirliğine karar vermeye gerek olmadığını gösterir"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 57,
+            "question": "Aşağıdaki durumlardan hangisinde risk değerlendirmesi yapılması gerekmez?",
+            "options": {
+                "A": "İşyerinin taşınması veya binalarda değişiklik yapılması",
+                "B": "İşyerinde teknoloji, madde ve ekipman değişiklikleri olması",
+                "C": "Üretim maliyetinde değişiklikler olması",
+                "D": "İş kazası, meslek hastalığı veya ramak kala olay meydana gelmesi"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 58,
+            "question": "Risk kontrol hiyerarşisinin doğru sırasını belirleyiniz: I-Tehlikeyi yok et, II-Tehlikeli ortamı izole et, III-Daha zararsız ile değiştir, IV-Kişisel koruyucu kullan, V-Yönetimsel düzenlemelerle tehlike ve kişileri ayır",
+            "options": {
+                "A": "I-II-III-IV-V",
+                "B": "II-I-V-III-IV",
+                "C": "II-I-III-V-IV",
+                "D": "I-III-II-V-IV"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 59,
+            "question": "Risk aşağıdaki hangi faktörlerin bileşkesidir? I-Meydana gelme olasılığı II-Meydana gelme süresi III-Zarar verme etkisi (derecesi) IV-Zarar verme süresi",
+            "options": {
+                "A": "I-III",
+                "B": "I-II",
+                "C": "II-IV",
+                "D": "I-IV"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 60,
+            "question": "Kuruluşların iş kazası risk değerlendirme çalışmalarının ne zaman yapılması gerekli değildir?",
+            "options": {
+                "A": "İşe başlama aşamasında",
+                "B": "İş kazası/meslek hastalığı olayı sonrasında",
+                "C": "Bakım sonrası dönemde",
+                "D": "Düzenli aralıklarla"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 61,
+            "question": "Aşağıdaki durumlardan hangisinde risk değerlendirmesinin yenilenmesine gerek yoktur?",
+            "options": {
+                "A": "Bir önceki risk değerlendirmesinin üzerinden 2 yıl geçmiş olması",
+                "B": "İşyerine yeni işçi alınmış olması",
+                "C": "Yeni bir mevzuatın yürürlüğe girmesi veya mevcut mevzuatta değişiklik yapılması",
+                "D": "Yer, üretim teknolojisi veya ekipman değişikliği"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 62,
+            "question": "Tehlike ve risk tanımları göz önünde bulundurulduğunda aşağıdakilerden hangisi/hangileri riski ifade etmektedir? I-Yüksekte çalışma II-Makine III-Çıplak uçlu kablo IV-Asit yanıkları oluşumu",
+            "options": {
+                "A": "Yalnız IV",
+                "B": "III, IV",
+                "C": "I, II",
+                "D": "Hepsi"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 63,
+            "question": "Olayların ortaya çıkmasından önce önlem alma faaliyeti aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Reaktif faaliyet",
+                "B": "Proaktif faaliyet",
+                "C": "Ön izleme",
+                "D": "Hepsi"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 64,
+            "question": "Aşağıda belirtilenlerden hangisi/hangileri tehlikedir? I-Elektrik enerjisi II-Gürültülü ortam III-Kapalı ortamda çalışma IV-Aynası çıkartılmış freze tezgahından talaş fırlaması",
+            "options": {
+                "A": "Yalnız II",
+                "B": "Yalnız IV",
+                "C": "III, IV",
+                "D": "I, II, III"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 65,
+            "question": "Aşağıda belirtilenlerden hangisi/hangileri işyeri yönetiminden kaynaklanan tehlikelerden değildir? (I) İSG politikasının olmaması/eksikliği (II) İSG hedefinin olmaması/tam belirlenmemesi (III) İşyerinde OHSAS 14001 İSG yönetim sisteminin olmaması (IV) Sağlık ve güvenlik yatırımlarına yeterince pay ayırmama",
+            "options": {
+                "A": "Hiçbiri",
+                "B": "II, III",
+                "C": "Yalnız III",
+                "D": "III, IV"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 66,
+            "question": "Aşağıda belirtilenlerden hangisi/hangileri risk kontrol tedbirlerindendir? (I) İş ekipmanlarının bakımı (II) Prosedür ve talimatların oluşturulması (III) İş ekipmanlarında acil durdurma sistemlerinin kullanımı (IV) İşe girişte ve periyodik uygun sağlık gözetimi",
+            "options": {
+                "A": "I, II, III",
+                "B": "I, II, III, IV",
+                "C": "I, II, IV",
+                "D": "II, III, IV"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 67,
+            "question": "Aşağıda belirtilen durumlardan hangisi/hangilerinde risk değerlendirmesinin yenilenmesi zorunluluk olmamalıdır? (I) Yangın/parlama/patlama gibi olaylar (II) Risk değerlendirmesinin üzerinden 5 yıl geçmiş olması (III) Mevzuat değişikliği (IV) İş müfettişleri denetiminde gerekli görülmesi",
+            "options": {
+                "A": "I, II",
+                "B": "Yalnız II",
+                "C": "III, IV",
+                "D": "Hepsi"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 68,
+            "question": "Aşağıda belirtilenlerden hangisi/hangileri risk değerlendirme raporunda bulunmalıdır? (I) Tespit edilen tehlikeler (II) Değerlendirilen riskler (III) Alınması gerekli önlemler (IV) Revizyon tarihi",
+            "options": {
+                "A": "II, III",
+                "B": "I, II, III",
+                "C": "I, II",
+                "D": "I, II, III, IV"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 69,
+            "question": "Risk değerlendirmesi için aşağıdakilerden hangisi yanlıştır?",
+            "options": {
+                "A": "Tehlikeler tanımlanır",
+                "B": "Her tehlikenin olasılığı hesaplanır",
+                "C": "Risk ile olasılığın çarpımı tehlikenin şiddetini verir",
+                "D": "Riskler kabul edilebilir seviyeye indirilir"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 70,
+            "question": "OHSAS 18001 yönetim sistemine göre önleyici faaliyet nedir?",
+            "options": {
+                "A": "Düzelmeyen faaliyettir",
+                "B": "Talimatsız faaliyettir",
+                "C": "Uygunsuzluğun ilk defa meydana gelmesini önlemek için yapılan faaliyettir",
+                "D": "Uygunsuzluğun her defasında önlenmesi amaçlanan faaliyettir"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 71,
+            "question": "Kişilerde, tesislerde, makinelerde, maddelerde ve iş örgütlenmesinde yaralanmaya, kayba, hasara yol açma potansiyeli olan her şey ____dir. Tehlikenin yol açacağı zararın gerçekleşebileceği durumlara ____ denir.",
+            "options": {
+                "A": "Kaza-risk",
+                "B": "Tehlike-kaza",
+                "C": "Kaza-risk",
+                "D": "Tehlike-risk"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 72,
+            "question": "Aşağıdakilerden hangisi risk değerlendirme sırasında gözden kaçan tehlike tiplerinden olmamalıdır?",
+            "options": {
+                "A": "Ön belirti göstermeyenler",
+                "B": "Sıklıkla karşılaşılan tehlikeler",
+                "C": "Sürekliliği olmayan durum ve davranışlar",
+                "D": "Uzman olmayanlarca fark edilemeyenler"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 73,
+            "question": "Tehlikeli kimyasal maddelerden kaynaklanan risklerin azaltılmasında alınacak önlemlerin öncelik sıralaması hangisidir? I-İkame II-Kişisel korunma III-Toplu koruma (iş organizasyonu/havalandırma) IV-Uygun proses ve mühendislik kontrol",
+            "options": {
+                "A": "I, II, III, IV",
+                "B": "I, III, II, IV",
+                "C": "I, IV, III, II",
+                "D": "I, III, IV, II"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 74,
+            "question": "Aşağıda belirtilenlerden hangisi işyerlerinde biyolojik risklerin belirlenmesi ve değerlendirilmesinde göz önünde bulundurulacak etmenlerdendir?",
+            "options": {
+                "A": "Maruziyetin türü, düzeyi ve süresinin belirlenmesi",
+                "B": "Birden fazla biyolojik etkende toplam tehlikenin dikkate alınması",
+                "C": "Risk değerlendirmesinin düzenli aralıklarla ve değişikliklerde yenilenmesi",
+                "D": "Yukarıdakilerin hepsi"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 75,
+            "question": "6331 sayılı kanuna bağlı risk değerlendirmesi yönetmeliğine göre, işyerinde iş sağlığı ve güvenliği ile ilgili riskleri ortadan kaldırmak veya azaltmak için planlanan ve alınan tedbirlerin tümüne ne denir?",
+            "options": {
+                "A": "Ramak kala olay",
+                "B": "Reaktif faaliyet",
+                "C": "Önleme",
+                "D": "Risk değerlendirmesi"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 76,
+            "question": "6331 sayılı kanuna bağlı risk değerlendirmesi yönetmeliğine göre işveren, görevlendirilen kişilerin görevlerini yerine getirebilmesi için hangi ihtiyaçları karşılar?",
+            "options": {
+                "A": "Lojistik hizmet",
+                "B": "Maddi gereksinimler",
+                "C": "Araç, gereç, mekan ve zaman",
+                "D": "Eğitim"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 77,
+            "question": "Kabul edilebilir risk için aşağıdakilerden hangisi doğrudur?",
+            "options": {
+                "A": "Yasal zorunluluklar ve işletmenin İSG politikası dikkate alındığında kabul edilebilir düzeye indirilmiş risk",
+                "B": "İşletme şartlarının zorunlu kabul ettiği bir durum",
+                "C": "Riskle birlikte çalışmanın kaçınılmaz görülmesi",
+                "D": "Tamamen subjektif ölçülerin sonucu"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 78,
+            "question": "Kimyasallardan kaynaklanabilecek meslek hastalığı risk değerlendirmesinde işlem aşamalarının doğru sırası hangisidir? (I) Sağlık tehlikesi kod seçimi (II) MSDS oluşturulması (III) Kimyasalların sağlık sınıflaması (IV) Tehlikenin tanımlanması (V) Fiziksel şartların gözden geçirilmesi",
+            "options": {
+                "A": "II-I-III-V-IV",
+                "B": "I-II-III-IV-V",
+                "C": "IV-V-III-I-II",
+                "D": "III-V-II-IV-I"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 79,
+            "question": "Süreç odaklı tehlike tespitinde aşağıdaki hangi sıralama doğrudur? (I) Çalışma sisteminin tanımlanması (II) Her faaliyet için tehlike faktörlerinin belirlenmesi (III) Faaliyetlerin tanımlanması (IV) Faaliyet adımlarının belirlenmesi (V) Risk kaynakları ve tetikleyicilerin belirlenmesi",
+            "options": {
+                "A": "I-III-IV-II-V",
+                "B": "V-II-I-III-IV",
+                "C": "I-V-IV-II-III",
+                "D": "IV-III-V-I-II"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 80,
+            "question": "6331 sayılı kanuna bağlı risk değerlendirmesi yönetmeliğine göre aşağıdaki tanımlardan hangisi yanlıştır?",
+            "options": {
+                "A": "Ramak kala olay: zarar potansiyeli olduğu halde zarar oluşturmayan olay",
+                "B": "Risk: tehlikeden kaynaklanacak kayıp/yaralanma/zararlı sonuç olasılığı",
+                "C": "Kabul edilebilir risk seviyesi: yasal yükümlülüklere ve önleme politikasına uygun olmayan ama kayıp oluşturmayacak seviye",
+                "D": "Tehlike: çalışanı veya işyerini etkileyebilecek zarar verme potansiyeli"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 81,
+            "question": "Risk analiz yöntemleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+            "options": {
+                "A": "Kantitatif risk analizi sayısal yöntemlere başvurur",
+                "B": "Kalitatif risk analizinde sayısal değerler verilir ve matematiksel olarak risk değeri bulunur",
+                "C": "Kalitatif risk analizi yüksek/çok yüksek gibi tanımlayıcı değerler kullanır",
+                "D": "Risk = olasılık x şiddet ifadesi analizde temel yaklaşımlardan biridir"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 82,
+            "question": "6331 sayılı kanuna bağlı risk değerlendirmesi yönetmeliğine göre tehlikeli prosesin daha az tehlikeli olanla değiştirilmesi, risk kontrol adımlarının hangi aşamasındadır?",
+            "options": {
+                "A": "Uygulamaların izlenmesi",
+                "B": "Planlama",
+                "C": "Risk kontrol tedbirlerinin kararlaştırılması",
+                "D": "Risk kontrol tedbirlerinin uygulanması"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 83,
+            "question": "Aşağıdakilerden hangisi risk analizi amacını en kapsamlı şekilde belirtmektedir?",
+            "options": {
+                "A": "İş yerindeki tehlikelerin tanımlanması ve çalışanların sağlığı/güvenliğinin en üst seviyede tutulması",
+                "B": "İş yeri ortamlarının düzenlenmesini sağlamak",
+                "C": "İş yerinde uyulması gereken kuralları belirlemek",
+                "D": "İşe başlama ve molaları düzenlemek"
+            },
+            "correct": "A",
+            "explanation": ""
+        },
+        {
+            "No": 84,
+            "question": "Potansiyel bir uygunsuzluğun veya başka bir istenmeyen durumun sebebinin ortadan kaldırılması için yapılan işlem, TS 18001'de aşağıdakilerden hangisi olarak adlandırılır?",
+            "options": {
+                "A": "Düzeltici faaliyet",
+                "B": "Tehlike tanımlaması",
+                "C": "Sürekli iyileştirme",
+                "D": "Önleyici faaliyet"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 85,
+            "question": "İSG Risk Değerlendirmesi Yönetmeliği'ne göre risk değerlendirmesi tüm işyerleri için hangi aşamadan başlamak üzere gerçekleştirilir?",
+            "options": {
+                "A": "Giriş kısmından",
+                "B": "Her ünite aşamasından",
+                "C": "Üretim ve işletme prosesinden",
+                "D": "Tasarım veya kuruluş aşamasından"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 86,
+            "question": "Risk kontrol adımları uygulanırken toplu korunma önlemlerine öncelik verilir. Aşağıdakilerden hangisi toplu korunma önlemine örnektir?",
+            "options": {
+                "A": "Çelik burunlu bot",
+                "B": "Vücut kemer sistemleri",
+                "C": "Bağlantı halatları",
+                "D": "Güvenlik ağları"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 87,
+            "question": "İSG Risk Değerlendirmesi Yönetmeliği'ne göre işyerinde belirlenen riskleri analiz ederken kullanılacak yöntemi seçmede aşağıdakilerden hangisi esas alınacak faktörlerden değildir?",
+            "options": {
+                "A": "İşyerinin kısıtları",
+                "B": "İşletmenin faaliyetine ilişkin özellikleri",
+                "C": "Resmi makamlarca yapılan denetimler",
+                "D": "İşyerindeki tehlike veya risklerin nitelikleri"
+            },
+            "correct": "C",
+            "explanation": ""
+        },
+        {
+            "No": 88,
+            "question": "Risk değerlendirmesi ile ilgili olarak aşağıdaki ifadelerden hangisi yanlıştır?",
+            "options": {
+                "A": "Tehlikelerin tanımı yapılır",
+                "B": "Tehlikelerin gerçekleşme olasılığı hesaplanır",
+                "C": "Tehlike potansiyelinin şiddet derecesi belirlenir",
+                "D": "Risk ile şiddet derecesinin çarpımıyla riskin düzeyi belirlenir"
+            },
+            "correct": "D",
+            "explanation": ""
+        },
+        {
+            "No": 89,
+            "question": "İSG Risk Değerlendirmesi Yönetmeliği'ne göre risk değerlendirmesi ekibinde aşağıdakilerden hangisinin bulunması zorunlu değildir?",
+            "options": {
+                "A": "İşveren veya işveren vekili",
+                "B": "Risk değerlendirmesi uzmanı",
+                "C": "İşyerindeki çalışan temsilcileri",
+                "D": "İşyerinde varsa destek elemanı"
+            },
+            "correct": "B",
+            "explanation": ""
+        },
+        {
+            "No": 90,
+            "question": "İş sağlığı ve güvenliği yönetim sisteminin temel amacı doğrultusunda, \"______\" iş sağlığı ve güvenliği yönetim sisteminin temel taşını teşkil eder.",
+            "options": {
+                "A": "Kök Tehlike Analizi",
+                "B": "Risk Yönetim Prosesi",
+                "C": "Standartlara Uyum",
+                "D": "Performans Artırma"
+            },
+            "correct": "B",
+            "explanation": ""
+        }
+    ]
+}

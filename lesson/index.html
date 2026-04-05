@@ -31,7 +31,7 @@
     <!-- CONTENT CLASSIFICATION -->
     <meta name="rating" content="General" />
     <meta name="revisit-after" content="7 days" />
-    <meta name="last-modified" content="2026-01-05T00:00:00+03:00" />
+    <meta name="last-modified" content="2026-04-05T00:00:00+03:00" />
     <meta name="profession" content="Yazılım Geliştiricisi & Yapay Zeka Uzmanı" />
     <meta name="category" content="Lesson Page, Quiz, Education" />
     <meta name="coverage" content="Turkey" />
@@ -100,7 +100,7 @@
     <meta property="og:image:width" content="144" />
     <meta property="og:image:height" content="144" />
     <meta property="og:image:alt" content="MEFAMEX" />
-    <meta property="og:date" content="2026-01-05T00:00:00+03:00" />
+    <meta property="og:date" content="2026-04-05T00:00:00+03:00" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="Mefamex" />
     <meta name="twitter:creator" content="@mefamex" />
@@ -126,7 +126,7 @@
                 "alternateName": "Mehmet Akif AKKOÇ",
                 "inLanguage": ["tr", "en"],
                 "datePublished": "2024-08-20T00:00:00+03:00",
-                "dateModified": "2026-01-05T00:00:00+03:00"
+                "dateModified": "2026-04-05T00:00:00+03:00"
             },
             {
                 "@type": "Organization",
@@ -160,8 +160,8 @@
                 "name": "LESSON - Ders Soruları | MEFAMEX",
                 "isPartOf": {"@id": "https://mefamex.com/#website"},
                 "about": {"@id": "https://mefamex.com/#person"},
-                "datePublished": "2026-01-05T00:00:00+03:00",
-                "dateModified": "2026-01-05T00:00:00+03:00",
+                "datePublished": "2026-04-05T00:00:00+03:00",
+                "dateModified": "2026-04-05T00:00:00+03:00",
                 "inLanguage": "tr",
                 "breadcrumb": {
                     "@type": "BreadcrumbList",
@@ -291,6 +291,16 @@
             touch-action: manipulation;
         }
 
+        .static-field {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(0, 0, 0, 0.25);
+            color: inherit;
+            min-height: 44px;
+        }
+
         /* Dropdown option’larında okunurluk: sistem renklerini kullan */
         select option {
             background-color: Canvas;
@@ -298,7 +308,9 @@
         }
 
         @media (prefers-color-scheme: light) {
-            select {
+
+            select,
+            .static-field {
                 border: 1px solid rgba(0, 0, 0, 0.16);
                 background: rgba(255, 255, 255, 0.9);
             }
@@ -608,6 +620,8 @@
                             <option value="all_random">Tüm ünitelerden rastgele</option>
                         </select>
                     </label>
+                    <label> Son güncelleme <span id="updatedAtText" class="static-field">-</span>
+                    </label>
                 </div>
                 <div class="lesson-actions">
                     <button id="resetBtn" class="btn btn-danger" type="button">Doğru Geçmişini Sıfırla</button>
@@ -656,32 +670,84 @@
             "use strict";
 
             const LESSONS = [
-                {
-                    key: "isletim-sistemleri-final",
-                    title: "İşletim Sistemleri (Final)",
-                    masterPath: "isletim-sistemleri-final/master.json",
-                },
-                {
-                    key: "gomulu-sistemler-final",
-                    title: "Gömülü Sistemler (Final)",
-                    masterPath: "gomulu-sistemler-final/master.json",
-                },
-                {
-                    key: "web-tasarımı-ve-programlama-final",
-                    title: "Web Tasarımı ve Programlama (Final)",
-                    masterPath: "web-tasarımı-ve-programlama-final/master.json",
-                },
-            ];
+                { key: "isg-2-2-final" },
+                { key: "isletim-sistemleri-2-1-final" },
+                { key: "gomulu-sistemler-2-1-final" },
+                { key: "web-tasarımı-2-1-final" },
+            ].map((lesson) => ({
+                ...lesson,
+                masterPath: `${lesson.key}/master.json`,
+                title: lesson.key,
+            }));
 
             const STORAGE_KEY = "mfmx.lesson.quiz.progress.v1";
+            const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+            const EMPTY_SCOPE = Object.freeze({ correct: {}, wrongCount: {} });
+
+            const byId = (id) => document.getElementById(id);
+            const lessonSelect = byId("lessonSelect");
+            const unitSelect = byId("unitSelect");
+            const modeSelect = byId("modeSelect");
+            const updatedAtText = byId("updatedAtText");
+            const startBtn = byId("startBtn");
+            const resetBtn = byId("resetBtn");
+            const setupHint = byId("setupHint");
+
+            const introCard = byId("introCard");
+            const setup = byId("setup");
+            const quiz = byId("quiz");
+            const done = byId("done");
+            const doneText = byId("doneText");
+            const errorBox = byId("error");
+            const errorText = byId("errorText");
+
+            const statusLesson = byId("statusLesson");
+            const statusProgress = byId("statusProgress");
+            const qHeader = byId("qHeader");
+            const qText = byId("qText");
+            const optionsBox = byId("options");
+            const explainBox = byId("explain");
+            const nextBtn = byId("nextBtn");
+            const backToSetupBtn = byId("backToSetupBtn");
+            const doneBackBtn = byId("doneBackBtn");
+
+            const state = {
+                currentLesson: null,
+                currentMaster: null,
+                currentUnit: null,
+                mode: "random",
+                scopeKey: "",
+                questionPool: [],
+                activeQuestion: null,
+                activeDisplay: null,
+                lastCorrectDisplayIndex: null,
+                hasAnsweredCurrent: false,
+            };
+
+            const masterCache = new Map();
+
+            const getScopeKey = (lessonKey) => `${lessonKey}::ALL`;
+            const pickRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+            function showOnly(which) {
+                setup.classList.toggle("hidden", which !== "setup");
+                quiz.classList.toggle("hidden", which !== "quiz");
+                done.classList.toggle("hidden", which !== "done");
+                errorBox.classList.toggle("hidden", which !== "error");
+                if (introCard) introCard.classList.toggle("hidden", which !== "setup");
+            }
+
+            function setError(message) {
+                errorText.textContent = message;
+                showOnly("error");
+            }
 
             function loadProgress() {
                 try {
                     const raw = localStorage.getItem(STORAGE_KEY);
                     if (!raw) return {};
                     const parsed = JSON.parse(raw);
-                    if (!parsed || typeof parsed !== "object") return {};
-                    return parsed;
+                    return parsed && typeof parsed === "object" ? parsed : {};
                 } catch {
                     return {};
                 }
@@ -691,8 +757,85 @@
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
             }
 
-            function getScopeKey(lessonKey) {
-                return `${lessonKey}::ALL`;
+            async function fetchJson(path) {
+                const url = encodeURI(path);
+                const res = await fetch(url, { cache: "no-store" });
+                if (!res.ok) throw new Error(`JSON yüklenemedi: ${path} (HTTP ${res.status})`);
+                return await res.json();
+            }
+
+            async function loadMaster(lesson) {
+                if (masterCache.has(lesson.key)) return masterCache.get(lesson.key);
+                const master = await fetchJson(lesson.masterPath);
+                if (!master || !Array.isArray(master.units)) {
+                    throw new Error("master.json formatı beklenenden farklı (units bulunamadı)");
+                }
+                masterCache.set(lesson.key, master);
+                return master;
+            }
+
+            async function hydrateLessonTitles() {
+                await Promise.all(
+                    LESSONS.map(async (lesson) => {
+                        try {
+                            const master = await loadMaster(lesson);
+                            const title = typeof master?.title === "string" ? master.title.trim() : "";
+                            lesson.title = title || lesson.key;
+                        } catch {
+                            lesson.title = lesson.key;
+                        }
+                    })
+                );
+            }
+
+            function updateSetupHint() {
+                const lesson = LESSONS.find((x) => x.key === lessonSelect.value);
+                const selectedUnitLabel = unitSelect.options[unitSelect.selectedIndex]?.textContent ?? "";
+                const modeLabel = modeSelect.options[modeSelect.selectedIndex]?.textContent ?? "";
+                const unitLabel = unitSelect.value === "__all__" ? "Tüm üniteler" : selectedUnitLabel;
+                const lessonLabel = lesson?.title || lesson?.key || "Ad Bulunamadı";
+                setupHint.textContent = `Seçim: ${lessonLabel} • ${unitLabel} • ${modeLabel}`;
+            }
+
+            function populateLessonSelect() {
+                lessonSelect.innerHTML = "";
+                for (const lesson of LESSONS) {
+                    const opt = document.createElement("option");
+                    opt.value = lesson.key;
+                    opt.textContent = lesson.title || lesson.key;
+                    lessonSelect.appendChild(opt);
+                }
+            }
+
+            function populateUnitSelect(master) {
+                unitSelect.innerHTML = "";
+                for (const unit of master.units) {
+                    const opt = document.createElement("option");
+                    opt.value = unit.fileName;
+                    opt.textContent = `${unit.unitNumber}. Ünite — ${unit.unitTitle}`;
+                    unitSelect.appendChild(opt);
+                }
+            }
+
+            async function refreshUnits() {
+                const lesson = LESSONS.find((x) => x.key === lessonSelect.value);
+                if (!lesson) return;
+                try {
+                    const master = await loadMaster(lesson);
+                    state.currentLesson = lesson;
+                    state.currentMaster = master;
+                    populateUnitSelect(master);
+                    if (updatedAtText) {
+                        const updatedAt = typeof master?.guncellenmeTarihi === "string"
+                            ? master.guncellenmeTarihi.trim()
+                            : "";
+                        updatedAtText.textContent = updatedAt || "-";
+                    }
+                    updateSetupHint();
+                } catch (e) {
+                    if (updatedAtText) updatedAtText.textContent = "-";
+                    setError(e?.message ?? String(e));
+                }
             }
 
             function normalizeOptions(options) {
@@ -709,166 +852,11 @@
                         .filter(Boolean);
                 }
                 if (typeof options === "object") {
-                    const keys = Object.keys(options).sort();
-                    return keys.map((k) => ({ key: k, text: String(options[k]) }));
+                    return Object.keys(options)
+                        .sort()
+                        .map((k) => ({ key: k, text: String(options[k]) }));
                 }
                 return [];
-            }
-
-            async function fetchJson(path) {
-                const url = encodeURI(path);
-                const res = await fetch(url, { cache: "no-store" });
-                if (!res.ok) throw new Error(`JSON yüklenemedi: ${path} (HTTP ${res.status})`);
-                return await res.json();
-            }
-
-            function pickRandom(arr) {
-                return arr[Math.floor(Math.random() * arr.length)];
-            }
-
-            function shuffleCopy(arr) {
-                const copy = [...arr];
-                for (let i = copy.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [copy[i], copy[j]] = [copy[j], copy[i]];
-                }
-                return copy;
-            }
-
-            function buildDisplayOptions(question, lastCorrectIndex) {
-                const letters = ["A", "B", "C", "D", "E", "F", "G", "H"]; // güvenli üst sınır
-                const original = question.options.length ? question.options : [{ key: "", text: "(Seçenek bulunamadı)" }];
-                let shuffled = shuffleCopy(original).map((opt) => ({
-                    originalKey: opt.key,
-                    text: opt.text,
-                    isCorrect: String(opt.key).trim() === String(question.correct).trim(),
-                }));
-
-                // Doğru seçeneğin ekrandaki pozisyonu sürekli aynı olmasın (mümkünse kaydır).
-                if (shuffled.length > 1) {
-                    const correctIdx = shuffled.findIndex((x) => x.isCorrect);
-                    if (correctIdx !== -1 && lastCorrectIndex != null && correctIdx === lastCorrectIndex) {
-                        // 1 adım döndür (rotation) — dağılımı bozmaz ama doğru pozisyonu değiştirir.
-                        shuffled = [shuffled[shuffled.length - 1], ...shuffled.slice(0, -1)];
-                    }
-                }
-
-                const withDisplay = shuffled.map((opt, idx) => ({
-                    displayKey: letters[idx] ?? String(idx + 1),
-                    ...opt,
-                }));
-
-                const correctDisplayIndex = withDisplay.findIndex((x) => x.isCorrect);
-                const correctDisplayKey = correctDisplayIndex !== -1 ? withDisplay[correctDisplayIndex].displayKey : "";
-                return { options: withDisplay, correctDisplayIndex, correctDisplayKey };
-            }
-
-            function el(id) {
-                return document.getElementById(id);
-            }
-
-            const lessonSelect = el("lessonSelect");
-            const unitSelect = el("unitSelect");
-            const modeSelect = el("modeSelect");
-            const startBtn = el("startBtn");
-            const resetBtn = el("resetBtn");
-            const setupHint = el("setupHint");
-
-            const introCard = el("introCard");
-
-            const setup = el("setup");
-            const quiz = el("quiz");
-            const done = el("done");
-            const doneText = el("doneText");
-            const errorBox = el("error");
-            const errorText = el("errorText");
-
-            const statusLesson = el("statusLesson");
-            const statusProgress = el("statusProgress");
-            const qHeader = el("qHeader");
-            const qText = el("qText");
-            const optionsBox = el("options");
-            const explainBox = el("explain");
-            const nextBtn = el("nextBtn");
-            const backToSetupBtn = el("backToSetupBtn");
-            const doneBackBtn = el("doneBackBtn");
-
-            let master = null;
-            let questionPool = [];
-            let activeQuestion = null;
-            let activeLesson = null;
-            let activeUnit = null;
-            let activeMode = "random";
-            let activeScopeKey = "";
-            let sequentialIndex = -1;
-            let activeDisplay = null;
-            let lastCorrectDisplayIndex = null;
-            let hasAnsweredCurrent = false;
-
-            function showOnly(which) {
-                setup.classList.toggle("hidden", which !== "setup");
-                quiz.classList.toggle("hidden", which !== "quiz");
-                done.classList.toggle("hidden", which !== "done");
-                errorBox.classList.toggle("hidden", which !== "error");
-
-                // Quiz başladığında üstteki açıklama kartını gizle
-                if (introCard) {
-                    introCard.classList.toggle("hidden", which !== "setup");
-                }
-            }
-
-            function setError(message) {
-                errorText.textContent = message;
-                showOnly("error");
-            }
-
-            function updateSetupHint() {
-                const lesson = LESSONS.find((x) => x.key === lessonSelect.value);
-                const unitOpt = unitSelect.value;
-                const mode = modeSelect.value;
-                const unitLabel = unitOpt === "__all__" ? "Tüm üniteler" : (unitSelect.options[unitSelect.selectedIndex]?.textContent ?? "");
-                const modeLabel = modeSelect.options[modeSelect.selectedIndex]?.textContent ?? "";
-                setupHint.textContent = `Seçim: ${lesson?.title ?? ""} • ${unitLabel} • ${modeLabel}`;
-            }
-
-            async function loadMasterForLesson(lesson) {
-                master = await fetchJson(lesson.masterPath);
-                if (!master || !Array.isArray(master.units)) {
-                    throw new Error("master.json formatı beklenenden farklı (units bulunamadı)");
-                }
-                return master;
-            }
-
-            function populateLessonSelect() {
-                lessonSelect.innerHTML = "";
-                for (const lesson of LESSONS) {
-                    const opt = document.createElement("option");
-                    opt.value = lesson.key;
-                    opt.textContent = lesson.title;
-                    lessonSelect.appendChild(opt);
-                }
-            }
-
-            function populateUnitSelect(masterJson) {
-                unitSelect.innerHTML = "";
-                for (const u of masterJson.units) {
-                    const opt = document.createElement("option");
-                    opt.value = u.fileName;
-                    opt.textContent = `${u.unitNumber}. Ünite — ${u.unitTitle}`;
-                    unitSelect.appendChild(opt);
-                }
-            }
-
-            async function refreshUnits() {
-                const lesson = LESSONS.find((x) => x.key === lessonSelect.value);
-                if (!lesson) return;
-                try {
-                    const m = await loadMasterForLesson(lesson);
-                    populateUnitSelect(m);
-                    updateSetupHint();
-                } catch (e) {
-                    setError(e?.message ?? String(e));
-                }
             }
 
             function makeQuestionId(lessonKey, unitFileName, questionNo) {
@@ -895,6 +883,10 @@
                     .filter((q) => q.no != null && q.question);
             }
 
+            function getScopeData(progress, scopeKey) {
+                return progress[scopeKey] ?? EMPTY_SCOPE;
+            }
+
             function getRemainingQuestions(pool, progressByScope) {
                 const correctMap = progressByScope?.correct ?? {};
                 return pool.filter((q) => !correctMap[q.id]);
@@ -902,45 +894,76 @@
 
             function computeStats() {
                 const progress = loadProgress();
-                const scopeData = progress[activeScopeKey] ?? { correct: {}, wrongCount: {} };
-                const remaining = getRemainingQuestions(questionPool, scopeData);
-
-                const remainingCount = remaining.length;
-                const totalLoaded = questionPool.length;
+                const scopeData = getScopeData(progress, state.scopeKey);
+                const remainingCount = getRemainingQuestions(state.questionPool, scopeData).length;
+                const totalLoaded = state.questionPool.length;
                 const correctCount = Math.max(0, totalLoaded - remainingCount);
-                return { remainingCount, correctCount, totalLoaded };
+                return { remainingCount, totalLoaded, correctCount };
             }
 
             function renderStatus() {
-                const { remainingCount, correctCount, totalLoaded } = computeStats();
-                const unitLabel = activeMode === "all_random"
+                const { remainingCount, totalLoaded, correctCount } = computeStats();
+                const unitLabel = state.mode === "all_random"
                     ? "Tüm üniteler"
-                    : (activeUnit?.unitTitle ? `${activeUnit.unitNumber}. Ünite — ${activeUnit.unitTitle}` : "Ünite");
+                    : (state.currentUnit?.unitTitle ? `${state.currentUnit.unitNumber}. Ünite — ${state.currentUnit.unitTitle}` : "Ünite");
 
-                statusLesson.textContent = `${activeLesson?.title ?? ""} • ${unitLabel} • ${activeMode === "sequential" ? "Sırayla" : "Rastgele"}`;
+                statusLesson.textContent = `${state.currentLesson?.title ?? ""} • ${unitLabel} • ${state.mode === "sequential" ? "Sırayla" : "Rastgele"}`;
                 statusProgress.textContent = `Kalan: ${remainingCount} / Yüklenen: ${totalLoaded} • Doğru: ${correctCount}`;
             }
 
-            function renderQuestion(q) {
-                activeQuestion = q;
-                sequentialIndex = Math.max(sequentialIndex, 0);
-                hasAnsweredCurrent = false;
+            function shuffleCopy(arr) {
+                const copy = [...arr];
+                for (let i = copy.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [copy[i], copy[j]] = [copy[j], copy[i]];
+                }
+                return copy;
+            }
 
-                activeDisplay = buildDisplayOptions(q, lastCorrectDisplayIndex);
-                lastCorrectDisplayIndex = activeDisplay.correctDisplayIndex;
+            function buildDisplayOptions(question, lastCorrectIndex) {
+                const original = question.options.length
+                    ? question.options
+                    : [{ key: "", text: "(Seçenek bulunamadı)" }];
+
+                let shuffled = shuffleCopy(original).map((opt) => ({
+                    originalKey: opt.key,
+                    text: opt.text,
+                    isCorrect: String(opt.key).trim() === String(question.correct).trim(),
+                }));
+
+                if (shuffled.length > 1) {
+                    const correctIdx = shuffled.findIndex((x) => x.isCorrect);
+                    if (correctIdx !== -1 && lastCorrectIndex != null && correctIdx === lastCorrectIndex) {
+                        shuffled = [shuffled[shuffled.length - 1], ...shuffled.slice(0, -1)];
+                    }
+                }
+
+                const options = shuffled.map((opt, idx) => ({
+                    displayKey: LETTERS[idx] ?? String(idx + 1),
+                    ...opt,
+                }));
+
+                const correctDisplayIndex = options.findIndex((x) => x.isCorrect);
+                const correctDisplayKey = correctDisplayIndex === -1 ? "" : options[correctDisplayIndex].displayKey;
+                return { options, correctDisplayIndex, correctDisplayKey };
+            }
+
+            function renderQuestion(question) {
+                state.activeQuestion = question;
+                state.hasAnsweredCurrent = false;
+                state.activeDisplay = buildDisplayOptions(question, state.lastCorrectDisplayIndex);
+                state.lastCorrectDisplayIndex = state.activeDisplay.correctDisplayIndex;
 
                 explainBox.classList.add("hidden");
                 explainBox.classList.remove("explain-correct", "explain-wrong");
                 explainBox.textContent = "";
-                // Sonraki her zaman görünür; cevaplanmadıysa da geçilebilir.
                 nextBtn.disabled = false;
 
-                qHeader.textContent = `Soru ${q.no}`;
-                qText.textContent = q.question;
+                qHeader.textContent = `Soru ${question.no}`;
+                qText.textContent = question.question;
                 optionsBox.innerHTML = "";
 
-                const opts = activeDisplay.options;
-                for (const opt of opts) {
+                for (const opt of state.activeDisplay.options) {
                     const btn = document.createElement("button");
                     btn.type = "button";
                     btn.className = "opt";
@@ -956,29 +979,31 @@
             }
 
             function handleAnswer(selectedOpt, clickedBtn) {
-                if (!activeQuestion) return;
-                hasAnsweredCurrent = true;
+                if (!state.activeQuestion) return;
+                state.hasAnsweredCurrent = true;
+
                 const isCorrect = !!selectedOpt?.isCorrect;
-                const correctDisplayKey = activeDisplay?.correctDisplayKey ?? "";
+                const correctDisplayKey = state.activeDisplay?.correctDisplayKey ?? "";
 
                 const progress = loadProgress();
-                const scopeData = progress[activeScopeKey] ?? { correct: {}, wrongCount: {} };
-                scopeData.correct = scopeData.correct ?? {};
-                scopeData.wrongCount = scopeData.wrongCount ?? {};
+                const scopeData = {
+                    correct: { ...(getScopeData(progress, state.scopeKey).correct ?? {}) },
+                    wrongCount: { ...(getScopeData(progress, state.scopeKey).wrongCount ?? {}) },
+                };
 
                 if (isCorrect) {
-                    scopeData.correct[activeQuestion.id] = true;
+                    scopeData.correct[state.activeQuestion.id] = true;
                 } else {
-                    scopeData.wrongCount[activeQuestion.id] = (scopeData.wrongCount[activeQuestion.id] ?? 0) + 1;
+                    scopeData.wrongCount[state.activeQuestion.id] = (scopeData.wrongCount[state.activeQuestion.id] ?? 0) + 1;
                 }
-                progress[activeScopeKey] = scopeData;
+
+                progress[state.scopeKey] = scopeData;
                 saveProgress(progress);
 
-                // lock buttons + style
                 const buttons = Array.from(optionsBox.querySelectorAll("button.opt"));
-                for (const b of buttons) {
-                    b.disabled = true;
-                    if ((b.dataset.isCorrect ?? "0") === "1") b.classList.add("opt-correct");
+                for (const btn of buttons) {
+                    btn.disabled = true;
+                    if ((btn.dataset.isCorrect ?? "0") === "1") btn.classList.add("opt-correct");
                 }
                 if (clickedBtn && !isCorrect) clickedBtn.classList.add("opt-wrong");
 
@@ -986,43 +1011,37 @@
                 explainBox.classList.toggle("explain-correct", isCorrect);
                 explainBox.classList.toggle("explain-wrong", !isCorrect);
                 explainBox.textContent = isCorrect
-                    ? `Doğru!\n\n${activeQuestion.explanation || "(Açıklama yok)"}`
-                    : `Yanlış. Doğru cevap: ${correctDisplayKey}\n\n${activeQuestion.explanation || "(Açıklama yok)"}`;
+                    ? `Doğru!\n\n${state.activeQuestion.explanation || "(Açıklama yok)"}`
+                    : `Yanlış. Doğru cevap: ${correctDisplayKey}\n\n${state.activeQuestion.explanation || "(Açıklama yok)"}`;
 
-                nextBtn.disabled = false;
                 renderStatus();
             }
 
             function pickNextQuestion(avoidId) {
                 const progress = loadProgress();
-                const scopeData = progress[activeScopeKey] ?? { correct: {}, wrongCount: {} };
-                const remaining = getRemainingQuestions(questionPool, scopeData);
-                if (remaining.length === 0) return null;
+                const scopeData = getScopeData(progress, state.scopeKey);
+                const remaining = getRemainingQuestions(state.questionPool, scopeData);
+                if (!remaining.length) return null;
 
-                if (activeMode === "sequential") {
-                    const sorted = [...questionPool].sort((a, b) => {
-                        const ua = a.unitNumber ?? 0;
-                        const ub = b.unitNumber ?? 0;
-                        if (ua !== ub) return ua - ub;
-                        return (a.no ?? 0) - (b.no ?? 0);
+                if (state.mode === "sequential") {
+                    const sorted = [...state.questionPool].sort((a, b) => {
+                        const unitCmp = (a.unitNumber ?? 0) - (b.unitNumber ?? 0);
+                        return unitCmp || ((a.no ?? 0) - (b.no ?? 0));
                     });
 
-                    // Find next remaining after current index; wrap around once.
                     const idxById = new Map(sorted.map((q, idx) => [q.id, idx]));
-                    let start = 0;
-                    if (activeQuestion && idxById.has(activeQuestion.id)) {
-                        start = idxById.get(activeQuestion.id) + 1;
-                    }
+                    const start = state.activeQuestion && idxById.has(state.activeQuestion.id)
+                        ? idxById.get(state.activeQuestion.id) + 1
+                        : 0;
 
                     for (let offset = 0; offset < sorted.length; offset++) {
-                        const i = (start + offset) % sorted.length;
-                        const q = sorted[i];
+                        const idx = (start + offset) % sorted.length;
+                        const q = sorted[idx];
                         if (!scopeData.correct?.[q.id]) return q;
                     }
                     return null;
                 }
 
-                // random
                 if (avoidId && remaining.length > 1) {
                     const filtered = remaining.filter((q) => q.id !== avoidId);
                     if (filtered.length) return pickRandom(filtered);
@@ -1033,7 +1052,6 @@
             function finishIfDone() {
                 const stats = computeStats();
                 if (stats.remainingCount > 0) return false;
-
                 doneText.textContent = `Bu seçim için yüklenen tüm sorular bitti. (Yüklenen: ${stats.totalLoaded}, Doğru: ${stats.correctCount})`;
                 showOnly("done");
                 return true;
@@ -1043,38 +1061,32 @@
                 try {
                     showOnly("setup");
 
-                    activeLesson = LESSONS.find((x) => x.key === lessonSelect.value);
-                    if (!activeLesson) throw new Error("Ders seçimi bulunamadı");
+                    const lesson = LESSONS.find((x) => x.key === lessonSelect.value);
+                    if (!lesson) throw new Error("Ders seçimi bulunamadı");
 
-                    if (!master) {
-                        master = await loadMasterForLesson(activeLesson);
-                    }
-
-                    activeMode = modeSelect.value;
+                    const master = await loadMaster(lesson);
+                    state.currentLesson = lesson;
+                    state.currentMaster = master;
+                    state.mode = modeSelect.value;
+                    state.scopeKey = getScopeKey(lesson.key);
+                    state.currentUnit = null;
+                    state.questionPool = [];
 
                     const selectedUnitFile = unitSelect.value;
-                    const isAllUnits = activeMode === "all_random";
-                    activeScopeKey = getScopeKey(activeLesson.key);
-
-                    questionPool = [];
-                    activeUnit = null;
-                    sequentialIndex = -1;
-
-                    if (isAllUnits) {
-                        for (const u of master.units) {
-                            const unitJson = await fetchJson(`${activeLesson.key}/${u.fileName}`);
-                            questionPool.push(...buildPoolFromUnitJson(activeLesson.key, u.fileName, unitJson));
+                    if (state.mode === "all_random") {
+                        for (const unit of master.units) {
+                            const unitJson = await fetchJson(`${lesson.key}/${unit.fileName}`);
+                            state.questionPool.push(...buildPoolFromUnitJson(lesson.key, unit.fileName, unitJson));
                         }
                     } else {
-                        const u = master.units.find((x) => x.fileName === selectedUnitFile);
-                        if (!u) throw new Error("Ünite seçimi bulunamadı");
-                        activeUnit = u;
-                        const unitJson = await fetchJson(`${activeLesson.key}/${u.fileName}`);
-                        questionPool = buildPoolFromUnitJson(activeLesson.key, u.fileName, unitJson);
+                        const unit = master.units.find((x) => x.fileName === selectedUnitFile);
+                        if (!unit) throw new Error("Ünite seçimi bulunamadı");
+                        state.currentUnit = unit;
+                        const unitJson = await fetchJson(`${lesson.key}/${unit.fileName}`);
+                        state.questionPool = buildPoolFromUnitJson(lesson.key, unit.fileName, unitJson);
                     }
 
-                    if (!questionPool.length) throw new Error("Soru bulunamadı (pool boş)");
-
+                    if (!state.questionPool.length) throw new Error("Soru bulunamadı (pool boş)");
                     if (finishIfDone()) return;
 
                     const next = pickNextQuestion(null);
@@ -1091,24 +1103,21 @@
             function resetProgress() {
                 const lesson = LESSONS.find((x) => x.key === lessonSelect.value);
                 if (!lesson) return;
-                const scopeKey = getScopeKey(lesson.key);
 
                 const ok = confirm("Bu seçim için doğru geçmişi sıfırlansın mı?\n\nNot: Bu işlem geri alınamaz.");
                 if (!ok) return;
 
                 const progress = loadProgress();
-                for (const k of Object.keys(progress)) {
-                    if (k === scopeKey || k.startsWith(`${lesson.key}::`)) delete progress[k];
+                const scopeKey = getScopeKey(lesson.key);
+                for (const key of Object.keys(progress)) {
+                    if (key === scopeKey || key.startsWith(`${lesson.key}::`)) delete progress[key];
                 }
                 saveProgress(progress);
                 updateSetupHint();
                 alert("Sıfırlandı.");
             }
 
-            // events
-            lessonSelect.addEventListener("change", async () => {
-                await refreshUnits();
-            });
+            lessonSelect.addEventListener("change", refreshUnits);
             unitSelect.addEventListener("change", updateSetupHint);
             modeSelect.addEventListener("change", updateSetupHint);
 
@@ -1117,7 +1126,7 @@
 
             nextBtn.addEventListener("click", () => {
                 if (finishIfDone()) return;
-                const avoidId = hasAnsweredCurrent ? null : (activeQuestion?.id ?? null);
+                const avoidId = state.hasAnsweredCurrent ? null : (state.activeQuestion?.id ?? null);
                 const next = pickNextQuestion(avoidId);
                 if (!next) {
                     finishIfDone();
@@ -1126,17 +1135,19 @@
                 renderQuestion(next);
             });
 
-            backToSetupBtn.addEventListener("click", () => {
-                showOnly("setup");
-            });
-            doneBackBtn.addEventListener("click", () => {
-                showOnly("setup");
-            });
+            backToSetupBtn.addEventListener("click", () => showOnly("setup"));
+            doneBackBtn.addEventListener("click", () => showOnly("setup"));
 
-            // init
-            populateLessonSelect();
-            refreshUnits();
-            updateSetupHint();
+            (async function init() {
+                try {
+                    await hydrateLessonTitles();
+                    populateLessonSelect();
+                    await refreshUnits();
+                    updateSetupHint();
+                } catch (e) {
+                    setError(e?.message ?? String(e));
+                }
+            })();
         })();
     </script>
 </body>

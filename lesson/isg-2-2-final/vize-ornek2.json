@@ -1,0 +1,602 @@
+{
+    "unitNumber": 2,
+    "unitTitle": "İSG - Vize-Ornek2",
+    "questionCount": 50,
+    "questions": [
+        {
+            "No": 1,
+            "question": "İşyerinde iş kazası meydana geldiğinde işçilerin stresinin artmasının nedenleri arasında aşağıdakilerden hangisi bulunmaz?",
+            "options": {
+                "A": "İşçinin çalışma arkadaşının yaralanması/kaybından dolayı üzüntü duyması",
+                "B": "İşçinin ek mesai ücreti alması",
+                "C": "İşçinin iş yükünün artması",
+                "D": "İşçinin empati yapması"
+            },
+            "correct": "B",
+            "explanation": "İçerik olarak da stres artış nedeni olmayan seçenek ek mesai ücreti alınmasıdır."
+        },
+        {
+            "No": 2,
+            "question": "İşçiyi gözetme borcuna aykırılık sebebiyle oluşan iş kazasından doğan zararlar karşısında işverenin hukuksal sorumluluğu ile ilgili yanlış ifade aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Kazazede, iş kazası sonucu oluşan manevi zararı için işveren aleyhine dava açabilir.",
+                "B": "İş kazası sonucu ölen işçinin hak sahiplerine SGK tarafından ölüm geliri bağlanmış ise, işverenden manevi tazminat talep edemezler.",
+                "C": "Kazazede, iş kazası sonucu oluşan ve SGK tarafından karşılanamayan maddi zararlarının telafisi için işveren aleyhine tazminat davası açabilir.",
+                "D": "İş kazası sonucu yaralanan işçinin ailesi, işçinin bedensel bütünlüğünde oluşan zararı gerekçe göstererek işverenden maddi tazminat talep edemezler."
+            },
+            "correct": "B",
+            "explanation": "İçerik olarak da yanlış ifade B seçeneğidir."
+        },
+        {
+            "No": 3,
+            "question": "Aşağıdaki durumlardan hangisi iş kazasına girmez?",
+            "options": {
+                "A": "Sigortalının işveren tarafından görev ile başka bir yere gönderilmesi yüzünden, asıl işini yapmaksızın geçen zamanlarda meydana gelen kaza",
+                "B": "Sigortalının, işverence sağlanan bir taşıtla işin yapıldığı yere toplu olarak götürülüp getirilmeleri sırasında meydana gelen kaza",
+                "C": "Emzikli sigortalı kadının çocuğuna süt vermek için ayrılan zamanlarda meydana gelen kaza",
+                "D": "Sigortalının kendi aracı ile iş yerine gidip gelmesi sırasında meydana gelen kaza"
+            },
+            "correct": "D",
+            "explanation": "İçerik olarak da kendi aracıyla işe gidiş-geliş genel olarak iş kazası kapsamına girmez."
+        },
+        {
+            "No": 4,
+            "question": "Aşağıdakilerden hangisinde iş kazası oranı daha fazladır?",
+            "options": {
+                "A": "Tehlikeli durum ile tehlikeli hareketin birlikte oluşturduğu kazalar",
+                "B": "Tehlikeli durumun tek başına neden olduğu kazalar",
+                "C": "Tehlikeli hareketin tek başına oluşturduğu kazalar",
+                "D": "Önlenmesi mümkün olmayan kazalar"
+            },
+            "correct": "A",
+            "explanation": "Tehlikeli durum + tehlikeli hareket birlikte olduğunda kaza olasılığı en yüksektir."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdaki durumlardan hangisinde acil durum planı hazırlanması gerekir?",
+            "options": {
+                "A": "İşyeri koşullarını iyileştirmek amacıyla",
+                "B": "Meslek hastalıklarını önlemek amacıyla",
+                "C": "İş kazası meydana gelmesini önlemek için",
+                "D": "Yangın, sel, deprem, patlama vb. felaketlerin oluşum olasılığını önlemek amacıyla"
+            },
+            "correct": "D",
+            "explanation": "Acil durum planı yangın/deprem/patlama gibi afet ve acil durumlar için hazırlanır."
+        },
+        {
+            "No": 6,
+            "question": "(Soru 5 ile aynıdır)",
+            "options": {
+                "A": "İşyeri koşullarını iyileştirmek amacıyla",
+                "B": "Meslek hastalıklarını önlemek amacıyla",
+                "C": "İş kazası meydana gelmesini önlemek için",
+                "D": "Yangın, sel, deprem, patlama vb. felaketlerin oluşum olasılığını önlemek amacıyla"
+            },
+            "correct": "D",
+            "explanation": "Soru 5 ile aynı olduğundan cevap da D'dir."
+        },
+        {
+            "No": 7,
+            "question": "Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'na göre iş kazası halinde verilecek geçici iş göremezlik ödeneği, yatarak tedavilerde sigortalının günlük kazancının ne kadardır?",
+            "options": {
+                "A": "Tümü",
+                "B": "Yarısı",
+                "C": "Üçte ikisi",
+                "D": "Dörtte biri"
+            },
+            "correct": "B",
+            "explanation": "Soruda istenen yatarak tedavi için günlük kazancın yarısıdır."
+        },
+        {
+            "No": 8,
+            "question": "İş Kanunu'na göre işverenler işyerinde meydana gelen iş kazasını ve tespit edilecek meslek hastalığını en geç kaç iş günü içinde yazı ile ilgili birime bildirmek zorundadır?",
+            "options": {
+                "A": "10",
+                "B": "7",
+                "C": "3",
+                "D": "2"
+            },
+            "correct": "C",
+            "explanation": "Metindeki seçeneklere göre bildirim süresi 3 iş günü olarak işaretlenmiş."
+        },
+        {
+            "No": 9,
+            "question": "Ekip anlayışı olmalı ...",
+            "options": {},
+            "correct": "",
+            "explanation": "Soru metni ve seçenekler eksik olduğu için revize anahtarla da kesin cevap doğrulaması yapılamaz; ekip anlayışının çalışanlar ve yönetimi birlikte kapsaması gerektiği not edilir."
+        },
+        {
+            "No": 10,
+            "question": "İş kazasında geçici iş göremezlik verilmesi için sigortalılık süresinin en az kaç gün olması gerekir?",
+            "options": {
+                "A": "1",
+                "B": "3",
+                "C": "7",
+                "D": "15"
+            },
+            "correct": "",
+            "explanation": "Revize anahtarda A (1 gün) önerilse de 5510 kapsamında iş kazasında geçici iş göremezlik ödeneği için prim/sigortalılık günü şartı aranmaz; mevcut seçenekler mevzuatla tam uyumlu değildir."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdakilerden hangisi iş kazası değildir?",
+            "options": {
+                "A": "Sigortasız çalıştırılan işçinin işyerinde kaza geçirmesi",
+                "B": "İşçinin işyerinde intihar etmesi",
+                "C": "İşveren tarafından sağlanan servis aracı ile işçilerin topluca götürülüp getirilmeleri sırasında meydana gelen kaza sonucu işçinin yaralanması",
+                "D": "İşyerinde kule vincin devrilmesi"
+            },
+            "correct": "B",
+            "explanation": "Revize anahtarda D işaretlenmiştir; ayrıca Yargıtay içtihatlarında işyerinde gerçekleşen intihar olayları da koşullara göre iş kazası sayılabildiğinden bu soru kaynaklar arasında tartışmalı kabul edilir."
+        },
+        {
+            "No": 12,
+            "question": "İş Kazası ve Meslek Hastalığı aşağıdaki hangi kanunda tanımlanmıştır?",
+            "options": {
+                "A": "4857 sayılı İş Kanunu",
+                "B": "5510 sayılı Sosyal Sigortalar Kanunu",
+                "C": "Umumi Hıfzıssıhha Kanunu",
+                "D": "Borçlar Kanunu"
+            },
+            "correct": "B",
+            "explanation": "İş kazası ve meslek hastalığı 5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu'nda tanımlanır."
+        },
+        {
+            "No": 13,
+            "question": "Aşağıdaki tanımlardan hangisi belirlenmiş tehlikeli bir olayın oluşma olasılığı ve sonuçlarının birleşimidir?",
+            "options": {
+                "A": "Risk",
+                "B": "Tehlike",
+                "C": "Tolore edilebilir risk",
+                "D": "Vak'a"
+            },
+            "correct": "A",
+            "explanation": "Olasılık ile sonuçların birleşimi risk tanımıdır."
+        },
+        {
+            "No": 14,
+            "question": "İş Kazaları iş saatlerin en fazla kaçıncı saatinde olur?",
+            "options": {
+                "A": "1. saat",
+                "B": "2. saat",
+                "C": "Öğleden sonra",
+                "D": "Vardiyalı çalışmalarda"
+            },
+            "correct": "B",
+            "explanation": "Revize anahtarda A (1. saat) kabul edilmiştir; işe başlangıç periyodunda dikkat uyumu ve organizasyon kaynaklı risk artışı nedeniyle ilk saat vurgulanır."
+        },
+        {
+            "No": 15,
+            "question": "Fiziksel, ruhsal ve sosyal açıdan tam iyilik olarak sağlığın tanımı nerede tanımlanmıştır?",
+            "options": {
+                "A": "Dünya Çalışma Örgütü (ILO)",
+                "B": "Dünya Sağlık Örgütü (WHO)",
+                "C": "Avrupa Konseyi Direktifleri",
+                "D": "Avrupa Parlamento Direktifi"
+            },
+            "correct": "B",
+            "explanation": "Sağlığın fiziksel, ruhsal ve sosyal tam iyilik hali olarak tanımı WHO'ya aittir."
+        },
+        {
+            "No": 16,
+            "question": "İş kazalarının içinde önlenmesi mümkün olmayan kaçınılmazlık oranı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "%10",
+                "B": "%5",
+                "C": "%3",
+                "D": "%2"
+            },
+            "correct": "D",
+            "explanation": "Klasik dağılımda kaçınılmaz olaylar yaklaşık %2 olarak verilir."
+        },
+        {
+            "No": 17,
+            "question": "Aşağıdakilerden hangisi tehlikeli davranış sebebi değildir?",
+            "options": {
+                "A": "Makine ve tezgahların hatalı yerleşimi",
+                "B": "Eğitim yetersizliği",
+                "C": "Koruyucu tertibatı kullanmama",
+                "D": "Alet ve makineleri tehlikeli şekilde kullanma"
+            },
+            "correct": "A",
+            "explanation": "Makine ve tezgahların hatalı yerleşimi tehlikeli davranış değil, tehlikeli durum örneğidir."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi kazalardan korunmak için yapılacak çalışmalardan değildir?",
+            "options": {
+                "A": "Mühendislik ve revizyon",
+                "B": "Teşvik tedbirleri uygulama",
+                "C": "Eğitim",
+                "D": "Kişisel özürleri önleme"
+            },
+            "correct": "D",
+            "explanation": "Kazadan korunma çalışmalarında kişisel özürleri önleme diye bir başlık yer almaz."
+        },
+        {
+            "No": 19,
+            "question": "ILO kaç yılında kuruldu?",
+            "options": {
+                "A": "1811",
+                "B": "1890",
+                "C": "1919",
+                "D": "1923"
+            },
+            "correct": "C",
+            "explanation": "ILO 1919 yılında kurulmuştur."
+        },
+        {
+            "No": 20,
+            "question": "Türkiye ILO'ya kaç yılında girdi ve fiili işbirliğine kaç yılında başladı?",
+            "options": {
+                "A": "1939-1946",
+                "B": "1942-1946",
+                "C": "1945-1950",
+                "D": "1950-1955"
+            },
+            "correct": "A",
+            "explanation": "Tarihsel olarak 1932/1946 bilgisi bilinir; seçeneklerde 1932 yok, bu yüzden en yakın ve beklenen seçenek A'dır."
+        },
+        {
+            "No": 21,
+            "question": "Türkiye'de ilk İş Kanunu kaç yılında çıkarılmıştır?",
+            "options": {
+                "A": "1923",
+                "B": "1926",
+                "C": "1936",
+                "D": "1971"
+            },
+            "correct": "C",
+            "explanation": "Türkiye'de ilk İş Kanunu 1936 yılında çıkarılmıştır."
+        },
+        {
+            "No": 22,
+            "question": "Aşağıdakilerden hangisi iş sağlığı ve güvenliği mevzuatının öncelikli yaklaşımıdır?",
+            "options": {
+                "A": "Çalışanların sağlığının ve güvenliğinin korunması",
+                "B": "İş kazaları ve meslek hastalıklarını en aza indirmek",
+                "C": "İş kazaları ve meslek hastalıklarının sebeplerini araştırmak",
+                "D": "İş kazaları ve meslek hastalıklarında kusurluları cezalandırmak"
+            },
+            "correct": "A",
+            "explanation": "Mevzuatın önceliği çalışanların sağlığını ve güvenliğini korumaktır."
+        },
+        {
+            "No": 23,
+            "question": "506 sayılı SSK Kanunu'nun 11. maddesine göre aşağıdaki durumlardan hangisi iş kazası sayılmaz?",
+            "options": {
+                "A": "Görevli olarak işyerine malzeme almaya giden işçinin geçirdiği trafik kazası",
+                "B": "Kendi aracı ile işe gelen işçinin yolda geçirdiği trafik kazası",
+                "C": "İşveren tarafından sağlanan taşıtla evine dönen işçinin geçirdiği trafik kazası",
+                "D": "İşyerinde buzdan kayarak düşen işçinin kazası"
+            },
+            "correct": "B",
+            "explanation": "Kendi aracıyla işe geliş-gidiş sırasında meydana gelen kaza genel olarak iş kazası sayılmaz."
+        },
+        {
+            "No": 24,
+            "question": "Aşağıdakilerden hangisi meslek hastalığı unsurlarından birisi değildir?",
+            "options": {
+                "A": "Geçici hastalık",
+                "B": "Ruhi bir arıza",
+                "C": "Yaşlılık",
+                "D": "Sürekli hastalık"
+            },
+            "correct": "C",
+            "explanation": "Yaşlılık meslek hastalığı unsuru değildir."
+        },
+        {
+            "No": 25,
+            "question": "Aşağıdakilerden hangisi üretim sürecinde genel olarak alınabilecek emniyet tedbirlerindendir?",
+            "options": {
+                "A": "Kurma izni ve İşletme Belgesi alınması",
+                "B": "İşyeri binasının uygun kurulması",
+                "C": "Tavan yüksekliğinin en az 3 metre olması",
+                "D": "Periyodik sağlık kontrolleri yapılması"
+            },
+            "correct": "B",
+            "explanation": "Genel emniyet tedbirleri içinde işyeri binasının uygun kurulması yer alır."
+        },
+        {
+            "No": 26,
+            "question": "Ölümlü iş kazalarının dağılımında en fazla ölüm hangi meslek kolunda meydana gelmektedir?",
+            "options": {
+                "A": "İnşaat",
+                "B": "Metal eşya sanayii",
+                "C": "Kömür madenciliği",
+                "D": "Dokuma"
+            },
+            "correct": "A",
+            "explanation": "Ölümlü iş kazalarında en yüksek oran inşaat sektöründe görülür."
+        },
+        {
+            "No": 27,
+            "question": "ILO araştırmalarında makine ve tezgahlarda koruma sistemlerinin geliştirilmesi ile iş güvenliğinin sağlanması sonucunda önemli ölçüde neyin sağlandığı belirtilmiştir?",
+            "options": {
+                "A": "Üretim artışının",
+                "B": "İstihdamın",
+                "C": "Satışın",
+                "D": "Reklamın"
+            },
+            "correct": "A",
+            "explanation": "İş güvenliği önlemleri üretim artışını da beraberinde getirir."
+        },
+        {
+            "No": 28,
+            "question": "İş kazası sonucunda vücut bütünlüğü kısmen bozulan veya tamamen bozulan işçinin yakınları işverenden aşağıdaki tazminatlardan hangisini talep edemez?",
+            "options": {
+                "A": "Destekten yoksun kalma tazminatı",
+                "B": "İş göremezlik tazminatı",
+                "C": "Manevi tazminat",
+                "D": "İhbar tazminatı"
+            },
+            "correct": "B",
+            "explanation": "Revize anahtarda D (ihbar tazminatı) tercih edilmiştir; ihbar tazminatı fesih rejimiyle ilgilidir. Bu nedenle soru, tazminat türlerinin kapsamına göre kaynaklar arasında tartışmalı yorum içerebilir."
+        },
+        {
+            "No": 29,
+            "question": "İş kazaları ve meslek hastalıkları ile ilgili maddi sorumluluk konusu aşağıdakilerden hangisinde yer almaktadır?",
+            "options": {
+                "A": "Borçlar Kanunu",
+                "B": "Deniz İş Kanunu",
+                "C": "Türk Ticaret Kanunu",
+                "D": "4857 sayılı İş Kanunu"
+            },
+            "correct": "A",
+            "explanation": "Maddi sorumluluk konusu Borçlar Kanunu kapsamındadır."
+        },
+        {
+            "No": 30,
+            "question": "Takvim yılı içindeki mesleki yaralanmalardan dolayı toplam kayıp gün sayısının, aynı yıl çalışma saatlerinin toplamına bölünüp 1000 katsayısı ile çarpılmasıyla hesaplanan kavram hangisidir?",
+            "options": {
+                "A": "Kaza oranı",
+                "B": "İş kazası ağırlık oranı",
+                "C": "İş kazası sıklık hızı",
+                "D": "Sektörel kaza sıklık hızı"
+            },
+            "correct": "B",
+            "explanation": "Bu formül iş kazası ağırlık oranını verir."
+        },
+        {
+            "No": 31,
+            "question": "I. Makine kaynaklı II. Çalışma ortamı ve çevre kaynaklı III. Yönetim kaynaklı. Yukarıdakilerden hangileri iş kazalarının meydana gelmesinde etkendir?",
+            "options": {
+                "A": "I-II",
+                "B": "I-III",
+                "C": "II-III",
+                "D": "I-II-III"
+            },
+            "correct": "D",
+            "explanation": "Makine, çevre ve yönetim kaynaklı etkenlerin hepsi iş kazalarında rol oynar."
+        },
+        {
+            "No": 32,
+            "question": "Ülkemizde iş kazalarının sebepleri incelendiğinde en fazladan en aza doğru sıralama nasıl olması beklenir? I. Mekanik hatalar II. İnsan hatası III. Öngörülemeyen kazalar",
+            "options": {
+                "A": "II-I-III",
+                "B": "I-III-II",
+                "C": "I-II-III",
+                "D": "II-III-I"
+            },
+            "correct": "A",
+            "explanation": "İnsan hatası en fazla, ardından mekanik hatalar ve en sonda öngörülemeyen kazalar gelir."
+        },
+        {
+            "No": 33,
+            "question": "Kaza kaçınılmazlık sebebiyle meydana gelmiş ve kusur bulunmuyor ise, zararın belli oranlarda işçi ve işveren tarafından karşılanmasına ilişkin işveren yükümlülüğü nedir?",
+            "options": {
+                "A": "Manevi tazminat",
+                "B": "Kusursuz sorumluluk",
+                "C": "Destek tazminatı",
+                "D": "Kaçınılmazlık sorumluluğu"
+            },
+            "correct": "D",
+            "explanation": "Kaçınılmazlık halinde zararın paylaşılması kaçınılmazlık sorumluluğu olarak ifade edilir."
+        },
+        {
+            "No": 34,
+            "question": "İş kazasında işverenin %100 kusurlu olduğu tespit edilirse, SGK'nın bağladığı gelirin alınması için işveren aleyhine açacağı dava hangisidir?",
+            "options": {
+                "A": "Destekten yoksun kalma tazminatı davası",
+                "B": "Rücu davası",
+                "C": "Peşin sermaye değeri davası",
+                "D": "Manevi tazminat davası"
+            },
+            "correct": "B",
+            "explanation": "SGK'nın işverene yönelttiği dava rücu davasıdır."
+        },
+        {
+            "No": 35,
+            "question": "İşçinin iş kazasına uğraması ya da meslek hastalığına yakalanması halinde, işverenin sorumluluğuna etki eden faktörler kapsamı dışındaki seçenek hangisidir?",
+            "options": {
+                "A": "İşverenin İSG tedbirlerini alma borcunu yerine getirmemesi",
+                "B": "İşçinin zarar görmesi",
+                "C": "İşçinin zararının iş kazası/meslek hastalığı sonucu ortaya çıkması",
+                "D": "İşçinin cinsiyeti dolayısı ile zarar görmesi"
+            },
+            "correct": "D",
+            "explanation": "İşçinin cinsiyeti, işveren sorumluluğunu belirleyen bir etken değildir."
+        },
+        {
+            "No": 36,
+            "question": "Eşi iş kazasında ölen kadın hangi davayı açabilir?",
+            "options": {
+                "A": "İş göremezlik tazminatı davası",
+                "B": "Rücu davası",
+                "C": "Destekten yoksun kalma tazminatı davası",
+                "D": "Maddi tazminat davası"
+            },
+            "correct": "C",
+            "explanation": "Eşin ölümü halinde destekten yoksun kalma tazminatı davası açılabilir."
+        },
+        {
+            "No": 37,
+            "question": "Aşağıdaki seçeneklerden hangisi iş kazalarının önlenmesi ile ilgili çalışmalarda kaza teorilerinden değildir?",
+            "options": {
+                "A": "Tek etken teorisi",
+                "B": "Çift etken teorisi",
+                "C": "Enerji boşalımı teorisi",
+                "D": "Domino teorisi"
+            },
+            "correct": "B",
+            "explanation": "Bu listede standart kabul edilmeyen seçenek çift etken teorisidir."
+        },
+        {
+            "No": 38,
+            "question": "Domino etkisi ve 4M etkenleri içinde aşağıdakilerden hangisi yer almaz?",
+            "options": {
+                "A": "Man (İnsan faktörü)",
+                "B": "Makine (Ekipman/fiziksel faktör)",
+                "C": "Medya",
+                "D": "Yönetim"
+            },
+            "correct": "C",
+            "explanation": "4M içinde medya yer almaz."
+        },
+        {
+            "No": 39,
+            "question": "1988 çalışma istatistikçileri toplantısında iş kazası istatistiklerinde kullanılan ölçüm değerlerinden biri hangisidir?",
+            "options": {
+                "A": "Ölümlü iş kazaları oranı",
+                "B": "İş göremezlikle sonuçlanan iş kazası oranı",
+                "C": "İş kazası ve meslek hastalığı oranları",
+                "D": "Kaza ağırlık oranı"
+            },
+            "correct": "D",
+            "explanation": "Kaza ağırlık oranı iş kazası istatistiklerinde kullanılan temel ölçüm değerlerinden biridir."
+        },
+        {
+            "No": 40,
+            "question": "Kaza ağırlık oranı hesaplamasında ölüm veya sürekli iş göremezlik halinde kayıp gün sayısı kaç gün olarak değerlendirilir?",
+            "options": {
+                "A": "365 gün",
+                "B": "1000 gün",
+                "C": "7500 gün",
+                "D": "10000 gün"
+            },
+            "correct": "C",
+            "explanation": "Kaza ağırlık oranı hesabında ölüm/sürekli iş göremezlik için 7500 gün kullanılır."
+        },
+        {
+            "No": 41,
+            "question": "Aşağıdakilerden hangi rapor iş kazası sonucunda ceza ve hukuk mahkemesince dikkate alınır?",
+            "options": {
+                "A": "Bilirkişi raporları",
+                "B": "Müfettiş raporları",
+                "C": "Savcılık raporları",
+                "D": "Polis raporları"
+            },
+            "correct": "A",
+            "explanation": "Ceza ve hukuk mahkemelerinde teknik kusur değerlendirmesinde bilirkişi raporu esas alınır."
+        },
+        {
+            "No": 42,
+            "question": "İş kazalarının iş müfettişlerince incelenmesinin asıl nedeni hangisidir?",
+            "options": {
+                "A": "Mahkemece kusurluların tespiti için",
+                "B": "Kazanın verdiği zararı tespit etmek için",
+                "C": "Kazanın nedenini tespit edip tekrarını önleyici tedbirler geliştirmek için",
+                "D": "İstatistiklerin düzenli bir şekilde yapılarak ülkemizdeki iş kazalarını belirlemek için"
+            },
+            "correct": "C",
+            "explanation": "İş müfettişi incelemesinin temel amacı neden analizi yapıp tekrarını önleyecek tedbir geliştirmektir."
+        },
+        {
+            "No": 43,
+            "question": "Araştırmalara göre kazaların oluş nedenleri en fazla hangi sebeplerden meydana gelmektedir?",
+            "options": {
+                "A": "Kişisel nedenler",
+                "B": "Teknik nedenler",
+                "C": "Doğal nedenler",
+                "D": "İşyeri çevre nedenleri"
+            },
+            "correct": "A",
+            "explanation": "Kazaların büyük kısmı insan/kişisel nedenli tehlikeli davranışlardan kaynaklanır."
+        },
+        {
+            "No": 44,
+            "question": "İş kazaları aşağıdaki hangi iki faktörün bir araya gelmesi sonucu oluşur?",
+            "options": {
+                "A": "Tehlikeli durum + Uygunsuzluk",
+                "B": "Tehlikeli durum + Tehlikeli hareket",
+                "C": "Tehlikeli durum + Bilgisizlik",
+                "D": "Tehlikeli hareket + Bilgisizlik"
+            },
+            "correct": "B",
+            "explanation": "Kaza oluşumunda klasik eşleşme: tehlikeli durum + tehlikeli hareket."
+        },
+        {
+            "No": 45,
+            "question": "Aşağıdakilerin hangisi kaza önlenmesi yönünden yapılabilecekler arasında yer almaz?",
+            "options": {
+                "A": "Güvenli tesis ve makine oluşturulması",
+                "B": "Çalışanlara eğitim verilmesi",
+                "C": "Kişisel koruyucu donanım sağlanması",
+                "D": "Kaza araştırmalarının yapılmaması"
+            },
+            "correct": "D",
+            "explanation": "Kaza araştırması yapılmaması önleme çalışması değildir; tersine önlemeyi zayıflatır."
+        },
+        {
+            "No": 46,
+            "question": "Aşağıdaki durumlardan hangisi iş kazası kapsamına girmez?",
+            "options": {
+                "A": "Sigortalının işveren tarafından görev ile başka bir yere gönderilmesi yüzünden meydana gelen kaza",
+                "B": "Emzikli sigortalı kadının çocuğuna süt vermek için ayrılan zamanlarda meydana gelen kaza",
+                "C": "İşçinin komşu işverenin aracı ile işyerine gelirken geçirdiği kaza",
+                "D": "Sigortalının, işverence sağlanan taşıtla toplu götürülüp getirilmeleri sırasında meydana gelen kaza"
+            },
+            "correct": "C",
+            "explanation": "Komşu işverenin aracıyla işe geliş, kanundaki işverenin sağladığı taşıt kapsamına girmez."
+        },
+        {
+            "No": 47,
+            "question": "Aşağıdakilerden hangisi tehlikeli durum kapsamına girmez?",
+            "options": {
+                "A": "Yanlış depolama, düzenleme ve istifleme",
+                "B": "Tehlikeli boyutta hızlı çalışma",
+                "C": "Kötü ve tehlikeli çevre koşulları",
+                "D": "Sıcak/soğuk, elektrik akımı, ses, ışık, radyasyon ve vibrasyon"
+            },
+            "correct": "B",
+            "explanation": "Tehlikeli boyutta hızlı çalışma tehlikeli durum değil, tehlikeli davranıştır."
+        },
+        {
+            "No": 48,
+            "question": "Aşağıdakilerden hangisi tehlikeli hareket sayılmaz?",
+            "options": {
+                "A": "Kişisel koruyucuların kullanımı konusunda bilgi sahibi olmamak",
+                "B": "Mesleki deneyime sahip olmak",
+                "C": "Makine koruyucuları yönünde bilgi sahibi olmamak",
+                "D": "Heyecanlı veya aceleci olmak"
+            },
+            "correct": "B",
+            "explanation": "Mesleki deneyime sahip olmak tehlikeli hareket sayılmaz."
+        },
+        {
+            "No": 49,
+            "question": "2012 istatistiklerine göre yaş gruplarına göre en çok iş kazasının olduğu yaş aralığı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "29-34",
+                "B": "25-29",
+                "C": "55-59",
+                "D": "45-49"
+            },
+            "correct": "B",
+            "explanation": "Verilen istatistik sorusunda en yüksek kaza aralığı 25-29 olarak işaretlenmiş."
+        },
+        {
+            "No": 50,
+            "question": "Aşağıdakilerden hangisi iş kazasının oluşturduğu dolaylı maliyetlerden birisi değildir?",
+            "options": {
+                "A": "İş günü kaybı maliyeti",
+                "B": "Tıbbi merkez maliyetleri",
+                "C": "Üretim kaybı maliyetleri",
+                "D": "İş gücü değiştirme maliyeti"
+            },
+            "correct": "B",
+            "explanation": "Tıbbi merkez maliyetleri doğrudan maliyettir; dolaylı maliyet değildir."
+        }
+    ]
+}

@@ -1,35 +1,37 @@
 {
-  "unitCount": 6,
-  "units": [
-    {
-      "unitNumber": 1,
-      "unitTitle": "Giriş",
-      "fileName": "unite-01-giris.json"
-    },
-    {
-      "unitNumber": 2,
-      "unitTitle": "Giriş/Çıkış Sistemi",
-      "fileName": "unite-02-giris-cikis-sistemi.json"
-    },
-    {
-      "unitNumber": 3,
-      "unitTitle": "Görev Yönetimi",
-      "fileName": "unite-03-gorev-yonetimi.json"
-    },
-    {
-      "unitNumber": 4,
-      "unitTitle": "Birlikte Çalışan Görevler",
-      "fileName": "unite-04-birlikte-calisan-gorevler.json"
-    },
-    {
-      "unitNumber": 5,
-      "unitTitle": "Ana Bellek Yönetimi",
-      "fileName": "unite-05-ana-bellek-yonetimi.json"
-    },
-    {
-      "unitNumber": 6,
-      "unitTitle": "Kütük Yönetimi",
-      "fileName": "unite-06-kutuk-yonetimi.json"
-    }
-  ]
+    "guncellenmeTarihi": "06.01.2026",
+    "unitCount": 6,
+    "title": "İşletim Sistemleri (2-1-Final)",
+    "units": [
+        {
+            "unitNumber": 1,
+            "unitTitle": "Giriş",
+            "fileName": "unite-01-giris.json"
+        },
+        {
+            "unitNumber": 2,
+            "unitTitle": "Giriş/Çıkış Sistemi",
+            "fileName": "unite-02-giris-cikis-sistemi.json"
+        },
+        {
+            "unitNumber": 3,
+            "unitTitle": "Görev Yönetimi",
+            "fileName": "unite-03-gorev-yonetimi.json"
+        },
+        {
+            "unitNumber": 4,
+            "unitTitle": "Birlikte Çalışan Görevler",
+            "fileName": "unite-04-birlikte-calisan-gorevler.json"
+        },
+        {
+            "unitNumber": 5,
+            "unitTitle": "Ana Bellek Yönetimi",
+            "fileName": "unite-05-ana-bellek-yonetimi.json"
+        },
+        {
+            "unitNumber": 6,
+            "unitTitle": "Kütük Yönetimi",
+            "fileName": "unite-06-kutuk-yonetimi.json"
+        }
+    ]
 }

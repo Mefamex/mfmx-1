@@ -1,0 +1,17 @@
+{
+    "guncellenmeTarihi": "05.04.2026",
+    "unitCount": 2,
+    "title": "İş Güvenliği (2-2-Final)",
+    "units": [
+        {
+            "unitNumber": 1,
+            "unitTitle": "İSG - Vize-Ornek1",
+            "fileName": "vize-ornek1.json"
+        },
+        {
+            "unitNumber": 2,
+            "unitTitle": "İSG - Vize-Ornek2",
+            "fileName": "vize-ornek2.json"
+        }
+    ]
+}
