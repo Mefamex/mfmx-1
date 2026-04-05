@@ -1,0 +1,658 @@
+{
+    "unitNumber": 4,
+    "unitTitle": "Birlikte Çalışan Görevler",
+    "sourceMarkdown": "isletim_sistemleri_md/04-birlikte-çalisan-görevler.md",
+    "questionCount": 50,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Kritik bölge (critical section) sorununun özü aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her görevin aynı anda farklı komut çalıştırabilmesi",
+                "B": "Paylaşılan veri/kaynak üzerinde, yarış koşulu yaratmadan karşılıklı dışlamayı sağlamak",
+                "C": "Yalnızca giriş/çıkış aygıtlarını hızlandırmak",
+                "D": "Sadece tek işlemcili sistemlerde anahtarlama yapmak",
+                "E": "Bellek adreslerini rastgele dağıtmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Kritik bölge sorunu, paylaşılan değişken/kaynaklara erişimde karşılıklı dışlamayı (mutual exclusion) sağlayıp yarış koşullarını önlemektir. Yanlışlar: A/C/D/E kritik bölge problemini tanımlamaz."
+        },
+        {
+            "No": 2,
+            "question": "Yarış koşulu (race condition) en doğru hangi durumda ortaya çıkar?",
+            "options": {
+                "A": "İki görev paylaşımsız veriler üzerinde çalışırken",
+                "B": "Paylaşılan bir veri güncellenirken işlemlerin sırası sonucu değiştiriyorsa",
+                "C": "Bir görev hiç kesilmiyorsa",
+                "D": "Tüm erişimler salt okunursa",
+                "E": "Sistem tek kullanıcıliyken"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Paylaşılan veri üzerinde eşzamanlı erişimde yürütüm sırası sonucu etkiliyorsa race condition vardır. Yanlışlar: A/C/D/E race koşulunu gerektirmez; D’de yazma yoksa genelde yarış etkisi oluşmaz."
+        },
+        {
+            "No": 3,
+            "question": "Kritik bölge için ‘kesilmeleri devre dışı bırakma’ yaklaşımının temel sakıncası metinde hangi gerekçeyle vurgulanır?",
+            "options": {
+                "A": "Sadece kullanıcı modunda işe yarar",
+                "B": "Genellenebilir değildir; tepki süresini bozar ve ayrıcalıksız görevlere bırakılması tehlikelidir",
+                "C": "Her zaman kilitlenmeyi önleyemez",
+                "D": "Bellek kullanımını iki katına çıkarır",
+                "E": "Disk erişimlerini tamamen durdurur"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Kesilmeleri kapatmak tek işlemciye özgü/pratik olmayan bir çözümdür; sistemin duyarlılığını düşürür ve bunu kullanıcı görevlerine vermek tehlikelidir. Yanlışlar: C metindeki ana vurgu değildir; D/E konu dışı."
+        },
+        {
+            "No": 4,
+            "question": "Yazılım tabanlı karşılıklı dışlama algoritmalarında ‘test et + kur’ işleminin atomik olmaması neye yol açar?",
+            "options": {
+                "A": "Karşılıklı dışlamanın bozulmasına",
+                "B": "Her zaman adil (fair) sıraya",
+                "C": "Kesilmelerin ortadan kalkmasına",
+                "D": "Sayfa hatalarının azalmasına",
+                "E": "G/Ç gecikmesinin sıfırlanmasına"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Test ve kur iki ayrı adım ise araya başka görev girip aynı koşulu sağlayabilir; karşılıklı dışlama bozulur. Yanlışlar: B/C/D/E ilgisizdir."
+        },
+        {
+            "No": 5,
+            "question": "Dekker algoritması metinde hangi nedenle ‘doğru ama sınırlı/karmaşık’ bir çözüm olarak geçer?",
+            "options": {
+                "A": "Sadece mesajlaşma ile çalıştığı için",
+                "B": "Yalnız iki görev için tasarlanmış ve uygulanması görece karmaşık olduğu için",
+                "C": "Donanım desteği olmadan imkânsız olduğu için",
+                "D": "Sadece Windows’ta çalıştığı için",
+                "E": "Kilitlenmeyi özellikle teşvik ettiği için"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Dekker iki görev için yazılım tabanlı, doğru bir mutual exclusion çözümü olsa da genellemesi zordur ve karmaşıktır. Yanlışlar: A/C/D/E metinle uyumsuz."
+        },
+        {
+            "No": 6,
+            "question": "Donanım destekli ‘test-and-set’ (ya da xchg gibi) komutların kritik bölge problemindeki rolü nedir?",
+            "options": {
+                "A": "Atomik kilit alma sağlayarak karşılıklı dışlamayı kolaylaştırmak",
+                "B": "Kesilmeleri tüm sistemde kalıcı kapatmak",
+                "C": "Dosya adlarını şifrelemek",
+                "D": "Sayfa tablosunu büyütmek",
+                "E": "Sadece derleme zamanında çalışmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Test-and-set/xchg gibi atomik işlemler kilit alma/kurma adımlarını bölünemez kılar. Yanlışlar: B/C/D/E konu dışıdır."
+        },
+        {
+            "No": 7,
+            "question": "Metindeki semafor tanımına göre P(S) (wait) işleminin temel etkisi nedir?",
+            "options": {
+                "A": "S’yi 1 artırır ve bekleyenleri uyandırır",
+                "B": "S’yi 1 azaltır; mümkün değilse görevi beklemeye alır",
+                "C": "S’yi sıfırlar ve tüm görevleri durdurur",
+                "D": "S’yi rastgele bir değere ayarlar",
+                "E": "Sadece kayıt (log) tutar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Dijkstra semaforunda P(S) kaynak talebidir; S uygunsa azaltır, değilse görev bloklanır. Yanlışlar: A V(S)’nin etkisine yakındır; C/D/E yanlış."
+        },
+        {
+            "No": 8,
+            "question": "V(S) (signal) işleminin tipik etkisi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "S’yi 1 azaltır",
+                "B": "S’yi 1 artırır ve gerekirse bekleyen bir görevi uyandırır",
+                "C": "S’yi kilitler ve geri alınamaz yapar",
+                "D": "Tüm bekleme kuyruklarını siler",
+                "E": "G/Ç kesilmelerini kapatır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: V(S) serbest bırakmadır; S artar ve kuyruk varsa bir görev hazır duruma geçer. Yanlışlar: A/C/D/E yanlıştır."
+        },
+        {
+            "No": 9,
+            "question": "İkili (binary) semafor ile sayıcı (counting) semafor arasındaki temel fark nedir?",
+            "options": {
+                "A": "Binary semaforun hiçbir zaman bekleme kuyruğu olmaz",
+                "B": "Binary semafor yalnız 0/1 durumunu temsil eder; sayıcı semafor birden çok birim kaynağı sayabilir",
+                "C": "Counting semafor sadece tek görev için çalışır",
+                "D": "Binary semafor sadece diskler içindir",
+                "E": "Counting semafor kesilmeleri devre dışı bırakır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Binary semafor kilit gibi 0/1 davranır; counting semafor birden çok aynı tür kaynağı sayar. Yanlışlar: A/C/D/E doğru değildir."
+        },
+        {
+            "No": 10,
+            "question": "Semafor işlemlerinin işletim sistemi düzeyinde ‘bloklama/uyandırma’ ile tasarlanmasının (spin yerine) temel faydası nedir?",
+            "options": {
+                "A": "CPU’yu boşuna meşgul eden beklemeyi azaltmak",
+                "B": "Diskte parçalanmayı azaltmak",
+                "C": "Kütük adlarını kısaltmak",
+                "D": "Sayfa tablosu erişimini üçe katlamak",
+                "E": "Kesim yazmaçlarını kaldırmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Bekleyen görevi kuyrukta bloklamak busy-wait’i azaltır, CPU verimini artırır. Yanlışlar: B/C/D/E ilgisiz."
+        },
+        {
+            "No": 11,
+            "question": "Üretici-tüketici probleminde, tampon doluluk/boşluk sayısını izlemek için en uygun semafor türü hangisidir?",
+            "options": {
+                "A": "Binary semafor",
+                "B": "Sayıcı (counting) semafor",
+                "C": "Sadece mutex kilidi",
+                "D": "Kesmeleri kapatma",
+                "E": "Zaman aşımı sayacı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Tampondaki boş/dolu yer sayısı bir sayıdır; counting semafor bu sayımı doğal yapar. Mutex kritik bölgeyi korur ama sayım yapmaz."
+        },
+        {
+            "No": 12,
+            "question": "Üretici-tüketici çözümünde mutex (karşılıklı dışlama) semaforu tipik olarak neyi korur?",
+            "options": {
+                "A": "Tampon indekslerini ve tamponun güncellenen kritik bölgesini",
+                "B": "Disk FAT tablosunu",
+                "C": "Kesim tanım çizelgesini",
+                "D": "Sadece zamanlayıcı kesilmesini",
+                "E": "Sadece yazıcı kuyruğunu"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Üretici/tüketicide mutex, ortak tampon yapısının (indeksler/veri) kritik güncellemelerini korur. Yanlışlar: B/C/D/E farklı konular."
+        },
+        {
+            "No": 13,
+            "question": "Semafor bekleme kuyruğu ile G/Ç bekleme kuyruğu arasındaki ayrım metinde hangi fikirle vurgulanır?",
+            "options": {
+                "A": "İkisi de aynıdır, sadece isimleri farklıdır",
+                "B": "G/Ç kuyruğu aygıt olayını, semafor kuyruğu ise senkronizasyon koşulunu bekler",
+                "C": "Semafor kuyruğu sadece çekirdek için vardır",
+                "D": "G/Ç kuyruğu sadece kullanıcı için vardır",
+                "E": "Hiçbiri bloklama yapmaz"
+            },
+            "correct": "B",
+            "explanation": "Doğru: G/Ç beklemeleri cihaz tamamlanmasını; semafor beklemeleri ise paylaşımlı koşul/lock serbest kalmasını bekler. Yanlışlar: A/C/D/E yanlıştır."
+        },
+        {
+            "No": 14,
+            "question": "Mesajlaşma temelli senkronizasyonda ‘rendezvous’ kavramı en doğru nasıl açıklanır?",
+            "options": {
+                "A": "Görevlerin aynı anda disk yedeklemesi yapması",
+                "B": "Gönderici ve alıcının belirli bir noktada buluşup iletinin teslimi için karşılıklı beklemesi",
+                "C": "Kesilmelerin kapatılması",
+                "D": "Sayfaların LRU ile çıkarılması",
+                "E": "Bir kütüğün i-node’a bağlanması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Rendezvous, send/receive senkron mesajlaşmada tarafların eşleşip aktarımın o anda gerçekleşmesidir. Yanlışlar: A/C/D/E ilgisiz."
+        },
+        {
+            "No": 15,
+            "question": "Posta kutusu (mailbox) kullanan mesajlaşmada işletim sistemi genellikle hangi işlevi üstlenir?",
+            "options": {
+                "A": "Mesajları disk sektörlerine fiziksel olarak bitişken yazmak",
+                "B": "Mesajlar için tamponlama/kuyruklama sağlayıp gönderici-alıcıyı bağlamak",
+                "C": "Sayfa tablosunu tamamen kaldırmak",
+                "D": "Tüm kilitlenmeleri imkânsız kılmak",
+                "E": "Kesimleri 0/1’e indirgemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Mailbox, OS’nin mesajları arabelleğe alıp kuyruklayarak süreçleri gevşek bağlı hale getirdiği mekanizmadır. Yanlışlar: A/C/D/E yanlış."
+        },
+        {
+            "No": 16,
+            "question": "UNIX’te boru hattı (pipe) kullanımının temel fikri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Bir sürecin çıktısını başka bir sürecin girdisine bağlayan çekirdek tamponu",
+                "B": "Diskin FAT tablosunu RAM’e almak",
+                "C": "Kesim zorlama öneki eklemek",
+                "D": "Kilitlenmeleri kaynak sırasıyla önlemek",
+                "E": "Ana belleği bitiştirmek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Pipe/FIFO, süreçler arası veri akışını çekirdek tamponuyla sağlar (üretici → tüketici). Yanlışlar: B/C/D/E başka konular."
+        },
+        {
+            "No": 17,
+            "question": "Monitör (monitor) kavramı metinde hangi amaçla tanıtılır?",
+            "options": {
+                "A": "Disk erişim süresini ölçmek",
+                "B": "Paylaşılan veri üzerinde karşılıklı dışlama ve koşul senkronizasyonunu daha üst düzey bir soyutlama ile sağlamak",
+                "C": "Sayfa tablosu boyunu azaltmak",
+                "D": "Kütük sistemini yedeklemek",
+                "E": "Kesimleri sayfalara bölmek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Monitör, kritik bölgeyi otomatik dışlama + koşul değişkenleri (wait/signal) ile yönetir. Yanlışlar: A/C/D/E farklı başlıklar."
+        },
+        {
+            "No": 18,
+            "question": "Monitörde koşul değişkeni için wait() çağrısının tipik anlamı nedir?",
+            "options": {
+                "A": "Kilit bırakmadan sonsuz döngüye girmek",
+                "B": "Monitör kilidini bırakıp koşul sağlanana kadar bloklanmak",
+                "C": "Disk önbelleğini temizlemek",
+                "D": "Tüm semaforları sıfırlamak",
+                "E": "Sayfa bellekte bitini 1 yapmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Koşul değişkeni wait, monitörün dışlama kilidini bırakıp koşul için beklemeyi ifade eder; aksi halde diğerleri içeri giremez. Yanlışlar: A/C/D/E yanlış."
+        },
+        {
+            "No": 19,
+            "question": "Monitörde signal() çağrısı en doğru hangi etkiyi amaçlar?",
+            "options": {
+                "A": "Bekleyen bir görevi koşul kuyruğundan uyandırmak",
+                "B": "Kesilmeleri kapatmak",
+                "C": "Kütüğü silmek",
+                "D": "Öbek boyunu artırmak",
+                "E": "Banker algoritmasını çalıştırmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: signal, ilgili koşulda bekleyen görev(lerden) birini uyandırmak içindir. Yanlışlar: B/C/D/E ilgisiz."
+        },
+        {
+            "No": 20,
+            "question": "Java’daki synchronized yöntem/blok yapısı metindeki anlatıma göre hangi kavramla ilişkilidir?",
+            "options": {
+                "A": "Her nesneye ait kilit (monitor lock) ile karşılıklı dışlama",
+                "B": "Diskte bitiştirme",
+                "C": "Sayfa çıkarma (FIFO)",
+                "D": "FAT zinciri",
+                "E": "RAID şeritleme"
+            },
+            "correct": "A",
+            "explanation": "Doğru: synchronized, nesne başına kilit/monitör fikrini kullanarak kritik bölgede mutual exclusion sağlar. Yanlışlar: B/C/D/E farklı konular."
+        },
+        {
+            "No": 21,
+            "question": "Kilitlenme (deadlock) metinde en doğru nasıl tanımlanır?",
+            "options": {
+                "A": "Görevlerin CPU’yu sürekli meşgul etmesi",
+                "B": "Bekleyen görevlerin, hazır duruma geçmek için birbirlerinin sağlayacağı koşulu karşılıklı beklemesi",
+                "C": "Disk parçalanmasının artması",
+                "D": "Sayfa hatası sayısının sıfırlanması",
+                "E": "Program sayacının güncellenmesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Deadlock, görevlerin birbirinden beklediği koşulların asla oluşmaması nedeniyle karşılıklı beklemede kalmasıdır. Yanlışlar: A/C/D/E değil."
+        },
+        {
+            "No": 22,
+            "question": "Kilitlenmenin oluşması için metinde verilen dört koşuldan biri değildir?",
+            "options": {
+                "A": "Karşılıklı dışlama",
+                "B": "İstem üzerine kaynak atama",
+                "C": "Atanan kaynakların geri alınamaması",
+                "D": "Döngüsel bekleme",
+                "E": "Zaman dilimleme (time slicing)"
+            },
+            "correct": "E",
+            "explanation": "Doğru: Zaman dilimleme kilitlenme koşulu değildir. Diğerleri (mutual exclusion, hold-and-wait, no preemption, circular wait) klasik dört koşuldur."
+        },
+        {
+            "No": 23,
+            "question": "Kilitlenmeyi önlemek için genel ilke aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Dört koşulun da her zaman sağlanmasını garantilemek",
+                "B": "Dört koşuldan en az birinin oluşmasını engellemek",
+                "C": "Tüm görevleri tek kuyruğa almak",
+                "D": "Disk önbelleğini kapatmak",
+                "E": "Sayfa boyunu 1 bayta düşürmek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin açıkça, kilitlenmeyi önlemenin dört koşuldan en az birini kırmakla mümkün olduğunu söyler. Yanlışlar: A/C/D/E hatalı."
+        },
+        {
+            "No": 24,
+            "question": "‘İstem üzerine kaynak atama’ koşulunu kırmaya yönelik doğrudan yaklaşım hangisidir?",
+            "options": {
+                "A": "Görevlerin tüm gereksediği kaynakları işin başında bildirmesi ve tümü verilemeden hiç kaynak verilmemesi",
+                "B": "Kaynakları rastgele sırayla vermek",
+                "C": "Kesilmeleri kapatmak",
+                "D": "Her kaynağı sonsuz sayıda yapmak",
+                "E": "G/Ç’yi tamamen iptal etmek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metindeki korunma yöntemlerinden biri, tüm kaynakların baştan istenip tek seferde atanmasıdır (hold-and-wait’i kırar). Yanlışlar: B/C/D/E uygulanabilir/ilgili değil."
+        },
+        {
+            "No": 25,
+            "question": "Görevin yeni kaynak istemeden önce elindeki kaynakları bırakmaya zorlanması hangi kilitlenme koşulunu hedef alır?",
+            "options": {
+                "A": "Karşılıklı dışlama",
+                "B": "İstem üzerine kaynak atama (hold-and-wait)",
+                "C": "Döngüsel bekleme",
+                "D": "Sayfa bellekte biti",
+                "E": "Öbek içi parçalanma"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Yeni kaynak istemeden önce eldeki kaynakları bırakmak, ‘elde tutarken bekleme’ türü istem-üzerine atama davranışını kırmayı amaçlar. Yanlışlar: A/C farklı koşullardır; D/E ilgisiz."
+        },
+        {
+            "No": 26,
+            "question": "Kaynakları kümeleyip sıralı (hiyerarşik) bir sıradüzenle isteme/serbest bırakma yaklaşımı hangi koşulu kırmayı hedefler?",
+            "options": {
+                "A": "Döngüsel bekleme",
+                "B": "Karşılıklı dışlama",
+                "C": "Zincirli yer atama",
+                "D": "Eksik sayfa uyarısı",
+                "E": "Kesimden taşma"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Kaynaklara global bir sıra verip her görevin bu sıraya uymasını zorlamak circular wait’i engeller. Yanlışlar: B/D/E başka; C dosya yönetimi."
+        },
+        {
+            "No": 27,
+            "question": "İki aşamalı kilitleme (two-phase locking) yaklaşımının veri tabanlarında kilitlenmeye karşı temel fikri nedir?",
+            "options": {
+                "A": "Tüm kilitler alınmadan günleme yapmamak; kilit alınamazsa eldeki kilitleri bırakıp yeniden denemek",
+                "B": "Kilitleri hiç bırakmamak",
+                "C": "Sadece kesilmeleri kapatmak",
+                "D": "Her tutanağı diskte bitişken tutmak",
+                "E": "Page table’ı belleğe taşımamak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metinde iki aşamalı kilitleme; gerekli tüm kayıtlar kilitlenmeden güncelleme yapmamak ve çatışmada geri dönüp yeniden denemek olarak anlatılır. Yanlışlar: B/C/D/E yanlış."
+        },
+        {
+            "No": 28,
+            "question": "‘Kilitlenmelerden sakınma’ yaklaşımında işletim sistemi kaynak isteği geldiğinde ne yapar?",
+            "options": {
+                "A": "Her isteği koşulsuz kabul eder",
+                "B": "İsteğin gelecekte kilitlenme doğurup doğurmayacağını inceleyip güvenliyse atar",
+                "C": "Tüm görevleri sonlandırır",
+                "D": "Disk önbelleğini temizler",
+                "E": "Kesim yazmaçlarını günceller"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Avoidance’da her istek, potansiyel deadlock açısından değerlendirilir; güvenli durumda izin verilir. Yanlışlar: A/C/D/E uygun değil."
+        },
+        {
+            "No": 29,
+            "question": "Banker (Bankacı) algoritmasının temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Disk erişimini sıfırlamak",
+                "B": "Kaynakları öyle dağıtmak ki sistem ‘güvenli’ durumda kalsın ve kilitlenme oluşmasın",
+                "C": "Sayfa boyunu otomatik büyütmek",
+                "D": "Kütükleri bitişken yapmak",
+                "E": "Kesilmeleri kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Banker algoritması, kaynak atamalarında güvenli (safe) durumdan çıkmayacak şekilde karar vermeyi hedefler. Yanlışlar: A/C/D/E başka konular."
+        },
+        {
+            "No": 30,
+            "question": "Banker algoritmasının pratikte her zaman uygulanamamasının metinde verilen temel nedeni nedir?",
+            "options": {
+                "A": "Donanım desteği gerektirmesi",
+                "B": "Görevlerin toplam kaynak gereksinimini baştan bildirmesinin her zaman mümkün olmaması",
+                "C": "Sadece tek tür kaynağa uygulanabilmesi",
+                "D": "Sadece tüketilir kaynaklar için çalışması",
+                "E": "Sadece kesimleme ile birlikte çalışması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, görevlerin baştan maksimum gereksinimlerini belirleyememesi durumunda algoritmanın uygulanamayacağını vurgular. Yanlışlar: A/C/D/E metne uymaz."
+        },
+        {
+            "No": 31,
+            "question": "Kilitlenmelerin ‘yakalanması ve ortadan kaldırılması’ yaklaşımında işletim sistemi genelde neyi yapar?",
+            "options": {
+                "A": "Kilitlenmeyi imkânsız kılacak kısıtları baştan koyar",
+                "B": "Kısıt koymadan çalışır; kaynak atamalarını izleyip kilitlenmeyi saptayınca müdahale eder",
+                "C": "Tüm kaynakları sonsuz kabul eder",
+                "D": "Hiçbir izleme yapmadan kilitlenmeyi önler",
+                "E": "Sadece pipe kullanır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Detection+recovery yaklaşımında kısıt yoktur; izleme ile deadlock tespit edilir ve görev sonlandırma gibi yöntemlerle çözülür. Yanlışlar: A prevention’dır; C/D/E yanlış."
+        },
+        {
+            "No": 32,
+            "question": "Kaynak çizgeleri (resource allocation graph) üzerinde kilitlenmeyi gösteren ana işaret nedir?",
+            "options": {
+                "A": "Grafikte yaprak düğüm olması",
+                "B": "Görev-kaynak ilişkilerinde bir döngü oluşması",
+                "C": "Okların hiç olmaması",
+                "D": "Tüm kaynakların aynı görevde olması",
+                "E": "Grafiğin yönsüz olması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, döngüsel beklemenin kilitlenme için gerekli ve yeterli işaret olduğunu; grafikte bunun döngüyle görüldüğünü anlatır. Yanlışlar: A/C/D/E değil."
+        },
+        {
+            "No": 33,
+            "question": "‘Hiç önlem almamak’ yaklaşımında (UNIX örneği) kilitlenme oluşursa tipik çözüm nedir?",
+            "options": {
+                "A": "Banker algoritmasını çalıştırmak",
+                "B": "Sistem işletmeninin müdahalesiyle kilitlenen görevleri yok etmek veya gerekirse sistemi yeniden başlatmak",
+                "C": "Tüm kaynakları iki katına çıkarmak",
+                "D": "Tüm semaforları 1 yapmak",
+                "E": "Tüm kütükleri i-node’a dönüştürmek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bazı sistemlerin kilitlenmeyi ender sayıp otomatik önlem almadığını; oluşursa görevleri öldürme/yeniden başlatma gibi müdahalelerin yapıldığını söyler."
+        },
+        {
+            "No": 34,
+            "question": "Tüketilir kaynaklar ile yeniden kullanılır kaynaklar ayrımında kilitlenme açısından doğru ifade hangisidir?",
+            "options": {
+                "A": "Tüketilir kaynaklarda kilitlenme hiç olmaz",
+                "B": "Yeniden kullanılır kaynaklar (yazıcı, bellek, disk vb.) için OS düzeyinde önlemler daha anlamlıdır",
+                "C": "Yeniden kullanılır kaynaklar sadece mesajlardır",
+                "D": "Tüketilir kaynaklar sadece CPU’dur",
+                "E": "İki sınıfın kilitlenme ile ilgisi yoktur"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, OS önlemlerinin esasen yeniden kullanılır kaynaklara yönelik olduğunu; tüketilir kaynak kilitlenmelerinin çoğunlukla programlama hatası olarak ele alındığını vurgular. Yanlışlar: A/C/D/E yanlış."
+        },
+        {
+            "No": 35,
+            "question": "Semafor tabanlı çözüm tasarımlarında ‘hedef semafora özel bekleme kuyruğu’ tutmanın olası artısı nedir?",
+            "options": {
+                "A": "Disk erişimini azaltmak",
+                "B": "Doğru görevleri uyandırarak gereksiz uyanmaları azaltmak",
+                "C": "Sayfa tablosunu küçültmek",
+                "D": "Kritik bölgeyi tamamen ortadan kaldırmak",
+                "E": "Kesimleri sayfalara ayırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Semafora özel kuyruk, V(S) ile doğru bekleyeni uyandırmayı kolaylaştırır; rastgele uyanmaları azaltır. Yanlışlar: A/C/D/E alakasız."
+        },
+        {
+            "No": 36,
+            "question": "Mesajlaşma yaklaşımı semafor/lock yaklaşımına kıyasla hangi noktada avantaj sağlayabilir?",
+            "options": {
+                "A": "Paylaşımlı durum yerine veri aktarımı ile gevşek bağlama sağlaması",
+                "B": "Her zaman daha az bellek kullanması",
+                "C": "Her zaman daha hızlı olması",
+                "D": "Kilitlenmeyi teorik olarak imkânsız kılması",
+                "E": "Kesilmeleri gereksiz kılması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Message passing, paylaşılan bellek yerine ileti aktarımıyla senkronizasyonu sağlayarak gevşek bağlı tasarım sunabilir. Yanlışlar: B/C/D/E garanti değildir."
+        },
+        {
+            "No": 37,
+            "question": "FIFO (named pipe) ile anonim pipe arasındaki temel kullanım farkı en iyi hangisiyle özetlenir?",
+            "options": {
+                "A": "FIFO disk üzerinde adlandırılabilir bir nesnedir; anonim pipe genelde akraba süreçler (fork sonrası) arasında kullanılır",
+                "B": "Anonim pipe sadece ağ içindir",
+                "C": "FIFO sadece Windows’ta vardır",
+                "D": "FIFO sadece bellek yönetimi içindir",
+                "E": "Aralarında hiçbir fark yoktur"
+            },
+            "correct": "A",
+            "explanation": "Doğru: FIFO isimli bir uç noktadır; pipe ise çoğunlukla fork ile oluşturulan süreçler arasında dosya tanıtıcılarıyla kullanılır. Yanlışlar: B/C/D/E yanlıştır."
+        },
+        {
+            "No": 38,
+            "question": "Kilitlenmeye örnek olarak metindeki yazıcı (YS) ve disk (DS) semaforlu senaryoda kilitlenmeyi yaratan temel durum hangisidir?",
+            "options": {
+                "A": "İki görevin de kaynakları aynı sırayla istemesi",
+                "B": "G1’in diski alıp yazıcıyı beklemesi, G2’nin yazıcıyı alıp diski beklemesi (çapraz bekleme)",
+                "C": "Kaynakların sonsuz olması",
+                "D": "Görevlerin hiç kesilmemesi",
+                "E": "Tüm kaynakların serbest olması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: G1 DS’yi alıp YS’yi, G2 YS’yi alıp DS’yi bekleyince döngüsel bekleme oluşur. Yanlışlar: A kilitlenmeyi önler; C/D/E değil."
+        },
+        {
+            "No": 39,
+            "question": "Kilitlenmeye karşı ‘kaynak atamalarını izleyip döngü bulunca görev(leri) öldürme’ yaklaşımının temel bedeli hangisidir?",
+            "options": {
+                "A": "Hiçbir bedeli yoktur",
+                "B": "İş kaybı/geri alma ve tutarlılık sorunları; görev sonlandırma yan etkileri",
+                "C": "Her zaman daha hızlı çalışır",
+                "D": "Kütük sistemi parçalanmaz",
+                "E": "Yalnızca tüketilir kaynaklarda çalışır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Recovery genelde görevleri yok etmeyi gerektirir; bu da yapılan işin kaybı, veri tutarlılığı ve kullanıcı etkileri gibi maliyetler doğurur. Yanlışlar: A/C/D/E yanlış."
+        },
+        {
+            "No": 40,
+            "question": "Semafor kullanımında ‘suspend/resume’ (blokla/uyandır) yaklaşımı hangi iki sonucu birlikte hedefler?",
+            "options": {
+                "A": "CPU verimini artırmak ve doğru senkronizasyon sağlamak",
+                "B": "Diskte bitişkenlik ve RAID sağlamak",
+                "C": "Kütük adlarını kısaltmak ve i-node sayısını azaltmak",
+                "D": "Sayfa boyunu büyütmek ve thrashing’i artırmak",
+                "E": "Kesim taşmalarını yok saymak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Bloklama/uyandırma hem busy-wait’i azaltır (verim) hem de senkronizasyon koşullarını doğru uygular. Yanlışlar: B/C/D/E alakasız."
+        },
+        {
+            "No": 41,
+            "question": "Kritik bölge çözümlerinde ‘adalet’ (starvation olmaması) gereksinimi en iyi hangisiyle ifade edilir?",
+            "options": {
+                "A": "Bazı görevlerin sürekli içeri girip diğerlerini sonsuza dek bekletmemesi",
+                "B": "Her görevin aynı anda içeri girmesi",
+                "C": "Kesilmelerin tamamen kaldırılması",
+                "D": "Tüm kaynakların tüketilir olması",
+                "E": "Tüm kütüklerin bitişken olması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Starvation olmaması, bekleyen görevin sonsuza dek engellenmemesidir. Yanlışlar: B/C/D/E ilgisiz."
+        },
+        {
+            "No": 42,
+            "question": "Spinlock (döngüsel bekleme) ile bloklayan semafor yaklaşımı arasındaki temel performans farkı nedir?",
+            "options": {
+                "A": "Spinlock beklerken CPU tüketir; bloklama CPU’yu serbest bırakır",
+                "B": "Bloklama her zaman daha hızlıdır",
+                "C": "Spinlock sadece diskte çalışır",
+                "D": "Bloklama sadece kullanıcı modunda çalışır",
+                "E": "Aralarında fark yoktur"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Spinlock busy-wait’dir; bloklama uyuyup CPU’yu başka görevlere bırakır. Yanlışlar: B/C/D/E yanlıştır."
+        },
+        {
+            "No": 43,
+            "question": "Mesajlaşmada ‘tamponlu’ (buffered) iletişim ile ‘tamponsuz’ (rendezvous) iletişim arasındaki temel fark hangisidir?",
+            "options": {
+                "A": "Tamponlu iletişimde OS mesajı kuyruklayabilir; tamponsuzda gönderici/alıcı eşzamanlı buluşur",
+                "B": "Tamponsuz iletişimde mesajlar diskte saklanır",
+                "C": "Tamponlu iletişimde hiçbir zaman bloklama olmaz",
+                "D": "Tamponsuz iletişim sadece dosya sistemi içindir",
+                "E": "İkisi aynı kavramdır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Buffered message passing mailboxes/kuyruklar ile ayrışma sağlar; rendezvous’ta aktarım için taraflar eşleşir. Yanlışlar: B/C/D/E yanlış."
+        },
+        {
+            "No": 44,
+            "question": "Kilitlenme yakalamada ‘uzun süre bekleyen görevi kilitlenmiş sayıp öldürme’ yöntemi metinde hangi benzetmeyle anılır?",
+            "options": {
+                "A": "Newton’un elması",
+                "B": "Büyük İskender’in Gordiyon Düğümü’nü kesmesi",
+                "C": "Turing makinesi",
+                "D": "Moore yasası",
+                "E": "Belady anormalliği"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin bu kaba yöntemi Gordiyon Düğümü benzetmesiyle anlatır. Yanlışlar: Diğerleri başka kavramlar."
+        },
+        {
+            "No": 45,
+            "question": "Kilitlenmelerde ‘karşılıklı dışlama’ koşulunu tamamen kaldırmanın çoğu donanım kaynağı için zor/olanaksız olmasının nedeni nedir?",
+            "options": {
+                "A": "Kaynakların paylaşılmak zorunda olması ve aynı anda tek görevce kullanılabilmesi",
+                "B": "Çünkü semaforlar bunu engeller",
+                "C": "Çünkü tüm kaynaklar tüketilirdir",
+                "D": "Çünkü tüm görevler aynı önceliktedir",
+                "E": "Çünkü adres dönüştürme bunu zorunlu kılar"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Yazıcı gibi bölüşülmez kaynaklar aynı anda tek görevce kullanılabilir; bu nedenle mutual exclusion çoğu fiziksel kaynakta doğaldır. Yanlışlar: B/C/D/E uygun değil."
+        },
+        {
+            "No": 46,
+            "question": "Kaynağı görevden zorla geri alma (preemption) yaklaşımının her kaynak için uygulanamamasının en iyi örneği hangisidir?",
+            "options": {
+                "A": "CPU zamanı",
+                "B": "Ana bellek sayfası",
+                "C": "Yazıcı çıktısı (yazma tamamlanmadan) veya şerit sürücü işlemi",
+                "D": "Sayaç değişkeni",
+                "E": "Monitör koşul değişkeni"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Bölüşülmez kaynaklarda (yazıcı/şerit) işlem bitmeden geri alma genelde mümkün değildir. CPU/bellek daha bölüşülebilir/geri alınabilir örneklerdir."
+        },
+        {
+            "No": 47,
+            "question": "Monitörlerin semaforlara kıyasla programlama açısından tipik avantajı hangisidir?",
+            "options": {
+                "A": "Kullanıcıya tüm kilit sıralarını ezberletir",
+                "B": "Karşılıklı dışlamayı yapısal olarak kapsülleyip hataya açık P/V sıralamasını azaltır",
+                "C": "Kesilmeleri kapatır",
+                "D": "Kütük sistemini doğrudan yönetir",
+                "E": "Donanım desteği gerektirmez"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Monitörler, mutual exclusion’u dil/çatı yapısına alarak semaforların yanlış kullanım riskini azaltır. Yanlışlar: A/C/D/E uygun değil (E her zaman doğru bir ayırt edici değildir)."
+        },
+        {
+            "No": 48,
+            "question": "Kilitlenme önlemlerinin ‘ekonomik/fiziksel kısıtlar’ nedeniyle zor olmasına metinden uygun bir örnek hangisidir?",
+            "options": {
+                "A": "Tüm kaynakları sınırsız yapmak",
+                "B": "Karşılıklı dışlamayı her kaynak için kaldırmak",
+                "C": "Tüm görevleri tek göreve indirgemek",
+                "D": "Sadece tüketilir kaynak kullanmak",
+                "E": "Sadece FIFO zamanlama kullanmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, mutual exclusion’u donanımsal kaynaklar için kaldırmanın genelde olanaksız olduğunu vurgular. Yanlışlar: A/C/D/E gerçekçi/ilgili değil."
+        },
+        {
+            "No": 49,
+            "question": "Kilitlenme saptamada kaynak çizgesinin matrislerle ifade edilip cebirsel işlemlerle döngü bulunması yaklaşımı hangi fikre dayanır?",
+            "options": {
+                "A": "Grafın döngülerini sayısal biçimde saptayabilmek",
+                "B": "Öbekleri bitişken yapmak",
+                "C": "Sayfa boyunu küçültmek",
+                "D": "Monitör kilidini artırmak",
+                "E": "Pipe tamponunu kapatmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kaynak çizgelerinin matrislerle ifade edilip döngülerin algoritmik olarak saptanabileceğini söyler. Yanlışlar: B/C/D/E alakasız."
+        },
+        {
+            "No": 50,
+            "question": "Kilitlenme çözümünde ‘görevleri öldürme’ dışında, bazı sistemlerde son çare olarak görülen ağır çözüm hangisidir?",
+            "options": {
+                "A": "Sayfa tablosunu temizlemek",
+                "B": "Tüm sistemi yeniden başlatmak",
+                "C": "Disk önbelleğini artırmak",
+                "D": "Kütükleri dizinli atamak",
+                "E": "Kesim zorlama öneki eklemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kilitlenme çözülemezse sistemin yeniden başlatılmasının da kullanılan bir yöntem olabileceğini belirtir. Yanlışlar: A/C/D/E konuyla ilgili değildir."
+        }
+    ]
+}

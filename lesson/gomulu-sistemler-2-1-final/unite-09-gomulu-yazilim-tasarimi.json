@@ -1,0 +1,267 @@
+{
+    "unitNumber": 9,
+    "unitTitle": "Gömülü Yazılım Tasarımı",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Gömülü yazılım tasarımında “deterministik davranış” ifadesi en doğru şekilde neyi vurgular?",
+            "options": {
+                "A": "Her çalıştırmada rastgele farklı sonuç",
+                "B": "Aynı koşullarda aynı zamanlama ve çıktının öngörülebilir olması",
+                "C": "Sadece yüksek CPU kullanımı",
+                "D": "Sadece daha büyük RAM",
+                "E": "Sadece kablosuz haberleşme"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemlerde (özellikle real-time) aynı giriş koşullarında aynı tepki süresi ve benzer sonuç beklenir. Determinism; task zamanlaması, kesmeler, bloklayıcı çağrılar ve bellek erişim gecikmeleri gibi etkenlerle ilişkilidir."
+        },
+        {
+            "No": 2,
+            "question": "Ana döngü (super loop) yaklaşımının tipik riski aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Asla çalışmaması",
+                "B": "Uzayan bloklayıcı işlemler (delay, uzun hesap) nedeniyle diğer işlerin gecikmesi",
+                "C": "Sadece ROM kullanması",
+                "D": "I2C adresleme gerektirmesi",
+                "E": "Her zaman deadlock üretmesi"
+            },
+            "correct": "B",
+            "explanation": "Super loop yapısında işler genellikle sırayla yürütülür. Döngü içinde bloklayıcı fonksiyonlar (delay) veya uzun süren işlemler varsa, diğer periyodik işlerin zamanında çalışması bozulur. Bu, gerçek zamanlı beklentiler için risk oluşturur."
+        },
+        {
+            "No": 3,
+            "question": "Kesme (interrupt) kullanımının en temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Programı yavaşlatmak",
+                "B": "Önemli/ani olaylara hızlı tepki verip ana akışı keserek ilgili ISR’ı çalıştırmak",
+                "C": "Flash yazma ömrünü artırmak",
+                "D": "PWM duty’yi sabitlemek",
+                "E": "UART’ı kapatmak"
+            },
+            "correct": "B",
+            "explanation": "Interrupt, olay tabanlı tepki mekanizmasıdır. Örneğin bir buton olayı veya timer taşması gibi durumlarda ana program akışı kesilir ve ISR (interrupt service routine) çalışır. Bu sayede polling ile kaçırılabilecek olaylar yakalanır."
+        },
+        {
+            "No": 4,
+            "question": "ISR (interrupt service routine) yazarken en doğru kural aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "ISR içinde uzun delay’ler koymak",
+                "B": "ISR’ı mümkün olduğunca kısa tutmak; ağır işleri ana döngü/task tarafına taşımak",
+                "C": "ISR içinde dinamik bellek ayırmak",
+                "D": "ISR içinde seri porttan uzun metin basmak",
+                "E": "ISR içinde dosya sistemi kullanmak"
+            },
+            "correct": "B",
+            "explanation": "ISR uzun sürerse diğer kesmelerin gecikmesine ve sistemin jitter/latency değerlerinin bozulmasına yol açar. Bu yüzden ISR’da bayrak set etmek, kısa buffer yazmak gibi minimal işler yapılır; ağır iş ana akışta yapılır."
+        },
+        {
+            "No": 5,
+            "question": "“Debounce” (buton sıçraması) problemi için yazılımda en doğru yaklaşımlardan biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Buton okumasını hiç yapmamak",
+                "B": "Histerezis ve/veya zaman tabanlı doğrulama (belirli süre aynı seviyede kalma)",
+                "C": "Her okuma sonrası Flash’a yazmak",
+                "D": "UART baud rate’i yükseltmek",
+                "E": "PWM periyodunu sıfıra çekmek"
+            },
+            "correct": "B",
+            "explanation": "Mekanik butonlar basma anında hızlı geçişler üretir. Yazılımda belirli süre aynı seviyenin korunmasını beklemek veya state machine ile doğrulamak yaygın çözümdür. Sadece delay eklemek bazen işe yarasa da zamanlamayı bozabilir."
+        },
+        {
+            "No": 6,
+            "question": "Gömülü yazılımda “state machine (durum makinesi)” yaklaşımı neyi kolaylaştırır?",
+            "options": {
+                "A": "Rastgele davranış üretmeyi",
+                "B": "Karmaşık davranışları durumlar ve geçişlerle yönetip okunabilirliği/test edilebilirliği artırmayı",
+                "C": "Sadece RAM’i artırmayı",
+                "D": "Sadece CAN arbitration’ı",
+                "E": "Sadece ADC bit sayısını"
+            },
+            "correct": "B",
+            "explanation": "Durum makineleri; sistemin modlarını (IDLE, RUN, ERROR gibi) ve geçiş koşullarını açıkça modelleyerek karmaşıklığı azaltır. Ayrıca test senaryolarını (hangi durumda hangi girdiyle ne olur?) daha sistematik hale getirir."
+        },
+        {
+            "No": 7,
+            "question": "“Watchdog timer” kullanımı en çok hangi problemi hedefler?",
+            "options": {
+                "A": "Sensör kalibrasyonu",
+                "B": "Sistem kilitlenmesi/sonsuz döngü gibi durumlarda otomatik reset ile toparlanma",
+                "C": "I2C adres çakışması",
+                "D": "PWM duty kontrolü",
+                "E": "Flash yazma ömrü"
+            },
+            "correct": "B",
+            "explanation": "Watchdog timer, sistemin kilitlenmesi/sonsuz döngüye girmesi gibi durumlarda “kendini kurtarmasını” hedefler. Normal çalışmada yazılım belirli aralıklarla watchdog’u besler; eğer besleme gerçekleşmezse (ör. task takıldı, deadlock oldu, beklenmeyen bir exception) watchdog timeout olur ve sistemi resetler. Bu, sahada uzun süre çalışan gömülü cihazlarda güvenilirlik için kritik bir emniyet kemeridir; kök nedeni çözmez ama sistemin tamamen “donup kalmasını” engeller."
+        },
+        {
+            "No": 8,
+            "question": "Birden fazla işin periyodik çalışması gereken bir sistemde, “delay tabanlı” yaklaşımın en büyük eksiği hangisidir?",
+            "options": {
+                "A": "Her zaman daha az kod yazdırması",
+                "B": "Bloklayıcı olması nedeniyle zamanlamayı bozması ve tepki süresini uzatması",
+                "C": "ADC’yi hızlandırması",
+                "D": "CAN’ı otomatik seçmesi",
+                "E": "SPI’ı kablosuz yapması"
+            },
+            "correct": "B",
+            "explanation": "Delay CPU’yu bekletir ve aynı anda yapılması gereken diğer işleri geciktirir. Bu yüzden zaman tabanlı scheduler (millis) veya RTOS gibi çözümlerle bloklamadan periyodik iş yürütmek daha sağlıklıdır."
+        },
+        {
+            "No": 9,
+            "question": "“Polling” yaklaşımının en doğru tanımı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Olay olunca kesmeye gitmek",
+                "B": "Belirli aralıklarla bir koşulu/sensörü sürekli kontrol etmek",
+                "C": "Belleği blok bazlı silmek",
+                "D": "CS pini ile cihaz seçmek",
+                "E": "Hata sinyalini sıfırlamak"
+            },
+            "correct": "B",
+            "explanation": "Polling, olay olup olmadığını sürekli kontrol etmektir. Basit sistemlerde işe yarar; ancak CPU zamanı harcar ve hızlı olaylar kontrol aralığına bağlı olarak kaçırılabilir."
+        },
+        {
+            "No": 10,
+            "question": "Gömülü yazılımda “modülerlik” (modularity) en çok hangi kazanımı sağlar?",
+            "options": {
+                "A": "Kodun tek dosyada toplanmasını",
+                "B": "Bakım/test kolaylığı ve değişikliklerin lokalize edilebilmesi",
+                "C": "Sadece daha yüksek clock",
+                "D": "Sadece daha iyi anten",
+                "E": "Sadece daha büyük PCB"
+            },
+            "correct": "B",
+            "explanation": "Sürücüler (driver), uygulama mantığı ve donanım soyutlama katmanı gibi ayrımlar; test etmeyi, yeniden kullanımı ve hata ayıklamayı kolaylaştırır. Ayrıca donanım değiştiğinde sadece ilgili modülü değiştirmek mümkün olur."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdakilerden hangisi “güç yönetimi” ile yazılım tasarımı arasındaki doğru ilişkiyi kurar?",
+            "options": {
+                "A": "Yazılım güç tüketimini hiç etkilemez",
+                "B": "Uyku modları, görev zamanlaması ve çevre birimlerini gerektiğinde aç/kapatma ile yazılım güç tüketimini belirgin etkiler",
+                "C": "Güç sadece pil kapasitesidir",
+                "D": "Güç sadece kablo seçimine bağlıdır",
+                "E": "Güç sadece sensor doğrusalığıdır"
+            },
+            "correct": "B",
+            "explanation": "Mobil/taşınabilir gömülü sistemlerde enerji kritik kısıttır. Yazılım; sleep mode kullanımı, interrupt ile uyanma, çevre birimlerinin duty-cycling’i gibi tekniklerle tüketimi ciddi şekilde etkiler."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdakilerden hangisi “sürücü (driver)” kavramına en yakın tanımdır?",
+            "options": {
+                "A": "Kullanıcı arayüzü teması",
+                "B": "Donanım çevre birimine erişimi soyutlayan ve register/iletişim detaylarını yöneten yazılım katmanı",
+                "C": "Sadece algoritma dosyası",
+                "D": "Sadece kablo standardı",
+                "E": "Sadece bellek türü"
+            },
+            "correct": "B",
+            "explanation": "Driver, bir sensör/motor/haberleşme modülünü kontrol etmek için donanım detaylarını kapsülleyen koddur. Uygulama katmanı driver’ı kullanarak “ne yapmak istediğini” söyler; “nasıl” kısmı driver’ın görevidir."
+        },
+        {
+            "No": 13,
+            "question": "Gerçek zamanlı bir sistemde “en kötü durum yürütme süresi (WCET)” neden önemlidir?",
+            "options": {
+                "A": "Sadece dosya boyutunu belirler",
+                "B": "Deadline’lara uyumu garanti etmek için en kötü senaryodaki süreyi bilmek gerekir",
+                "C": "Sadece PWM frekansını artırır",
+                "D": "Sadece UART baud’u seçer",
+                "E": "Sadece sensör range’ini belirler"
+            },
+            "correct": "B",
+            "explanation": "Real-time sistemlerde “ortalama” süre değil, en kötü durum süreleri kritik olabilir. Bir işin WCET’i deadline’ı aşarsa sistem zamanında tepki veremez. Bu yüzden yazılım tasarımında ölçüm/analiz ve sınırlar önemlidir."
+        },
+        {
+            "No": 14,
+            "question": "“Jitter” kavramı en doğru şekilde neyi ifade eder?",
+            "options": {
+                "A": "Sabit gecikme",
+                "B": "Zamanlama değişkenliği; periyodik bir olayın tam beklenen zamanda gelmemesi",
+                "C": "Sadece bellek taşması",
+                "D": "Sadece kablo gürültüsü",
+                "E": "Sadece ADC hatası"
+            },
+            "correct": "B",
+            "explanation": "Jitter, aynı işin her seferinde farklı zamanlarda tetiklenmesi/bitmesi gibi zamanlama dalgalanmalarıdır. Kontrol sistemlerinde ve real-time görevlerde jitter performansı bozabilir."
+        },
+        {
+            "No": 15,
+            "question": "Gömülü yazılımda “loglama” için UART kullanımı neden yaygındır?",
+            "options": {
+                "A": "Çünkü UART sadece kablosuzdur",
+                "B": "Basit, yaygın destekli ve PC’ye bağlanıp hızlı gözlem imkanı verdiği için",
+                "C": "Çünkü UART her zaman deterministik değildir",
+                "D": "Çünkü UART RAM’i artırır",
+                "E": "Çünkü UART ADC’yi büyütür"
+            },
+            "correct": "B",
+            "explanation": "UART hem MCU’da hem PC tarafında kolay erişilebilir olduğu için debug/log için sık tercih edilir. Ancak real-time sistemlerde aşırı log, zamanlamayı bozabileceğinden kontrollü kullanılmalıdır."
+        },
+        {
+            "No": 16,
+            "question": "“Fail-safe” yaklaşımı aşağıdakilerden hangisini en iyi ifade eder?",
+            "options": {
+                "A": "Hata olunca sistemi daha tehlikeli moda almak",
+                "B": "Hata durumunda sistemi güvenli bir duruma geçirmek (ör. motoru durdurmak)",
+                "C": "Hata durumunda logları silmek",
+                "D": "Hata durumunda baud rate’i artırmak",
+                "E": "Hata durumunda ADC’yi kapatmak"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemler fiziksel dünyayı etkiler; hata durumunda güvenli moda geçmek (motoru kesmek, röleyi bırakmak, alarm vermek) güvenilirlik ve emniyet için kritik bir tasarım ilkesidir."
+        },
+        {
+            "No": 17,
+            "question": "“Zamanlayıcı (timer) tabanlı scheduler” kullanımı en çok hangi problemi çözer?",
+            "options": {
+                "A": "Kütüphane boyutunu artırmak",
+                "B": "Periyodik işleri delay kullanmadan, belirli aralıklarla çalıştırabilmek",
+                "C": "I2C adresini bulmak",
+                "D": "CAN arbitration yapmak",
+                "E": "EEPROM yazma ömrünü artırmak"
+            },
+            "correct": "B",
+            "explanation": "Timer tabanlı yaklaşımda sistem zamanı izlenir (millis gibi) ve işler belirlenen periyotlarda tetiklenir. Böylece delay gibi bloklayıcı beklemeler azalır ve sistem daha responsif olur."
+        },
+        {
+            "No": 18,
+            "question": "Gömülü yazılımda “test edilebilirlik” için en doğru pratik aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her şeyi global değişkende tutmak",
+                "B": "Donanım erişimini soyutlamak (driver/HAL) ve saf mantık fonksiyonlarını ayrı tutmak",
+                "C": "Tüm kodu ISR içine taşımak",
+                "D": "Her döngüde Flash’a yazmak",
+                "E": "Sadece delay kullanmak"
+            },
+            "correct": "B",
+            "explanation": "Donanım bağımlı kısımları soyutlamak, saf hesap/mantık fonksiyonlarını ayrı tutmak birim test ve simülasyon gibi yöntemleri kolaylaştırır. Ayrıca hata ayıklama daha hızlı olur."
+        },
+        {
+            "No": 19,
+            "question": "Aşağıdakilerden hangisi gömülü yazılımda “yarış durumu (race condition)” riskini artırır?",
+            "options": {
+                "A": "ISR ile ana döngünün aynı değişkeni eşzamanlı güncellemesi",
+                "B": "Sadece tek thread kullanımı",
+                "C": "Hiç kesme kullanmama",
+                "D": "Sadece ROM kullanımı",
+                "E": "Sadece I2C kullanımı"
+            },
+            "correct": "A",
+            "explanation": "ISR ve ana akış aynı değişkeni korumasız kullanıyorsa veri tutarsızlığı oluşabilir. Bu nedenle kritik bölge koruması, atomik erişim veya uygun senkronizasyon (RTOS’ta mutex/critical section) gerekir."
+        },
+        {
+            "No": 20,
+            "question": "“Zamanlama + kaynak kısıtı + güvenilirlik” üçlüsü, gömülü yazılım tasarımını PC yazılımından neden farklılaştırır?",
+            "options": {
+                "A": "PC yazılımı hiç test edilmez",
+                "B": "Gömülüde donanım kısıtları ve real-time beklentileri nedeniyle tasarım kararları daha kısıtlı ve sistem odaklıdır",
+                "C": "Gömülüde hiç hata olmaz",
+                "D": "PC’de bellek hiç kullanılmaz",
+                "E": "PC’de yalnız sensör vardır"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemler sınırlı bellek/CPU/güç ile çalışır ve çoğu zaman belirli sürede tepki vermek zorundadır. Ayrıca fiziksel dünyayı etkilediği için güvenilirlik/emniyet ön plana çıkar. Bu üçlü, yazılım tasarımını daha “sistem mühendisliği” odaklı yapar."
+        }
+    ]
+}

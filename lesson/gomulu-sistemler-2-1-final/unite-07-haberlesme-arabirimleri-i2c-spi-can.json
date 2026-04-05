@@ -1,0 +1,267 @@
+{
+    "unitNumber": 7,
+    "unitTitle": "Haberleşme Arabirimleri (I2C/SPI/CAN)",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "I2C protokolünde kullanılan hatlar aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "MOSI ve MISO",
+                "B": "SDA ve SCL",
+                "C": "TX ve RX",
+                "D": "CS ve SCK",
+                "E": "CANH ve CANL"
+            },
+            "correct": "B",
+            "explanation": "I2C iki hatlı bir protokoldür: SDA (veri) ve SCL (saat/clock). Aynı iki hat üzerinde birden fazla cihaz bulunabildiği için cihaz seçimi adresleme (7-bit/10-bit adres + R/W) ile yapılır; SPI’daki gibi her cihaza ayrı CS hattı gerektirmez. Pratikte SDA/SCL hatları genellikle open-drain/collector ve pull-up dirençleriyle çalışır; bu da hat paylaşımını ve çakışma yönetimini mümkün kılar."
+        },
+        {
+            "No": 2,
+            "question": "SPI protokolünde “hangi slave ile konuşulacağını” seçen hat/pin aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "SCK",
+                "B": "MISO",
+                "C": "MOSI",
+                "D": "CS/SS",
+                "E": "SDA"
+            },
+            "correct": "D",
+            "explanation": "SPI’da her slave için ayrı CS/SS (Chip Select / Slave Select) hattı kullanılır. Master konuşmak istediği cihazın CS pinini aktif seviyeye çekerek o cihazı seçer."
+        },
+        {
+            "No": 3,
+            "question": "SPI’daki MISO hattı en doğru şekilde neyi ifade eder?",
+            "options": {
+                "A": "Master Out Slave In",
+                "B": "Master In Slave Out",
+                "C": "Memory In Serial Out",
+                "D": "Multi In Single Out",
+                "E": "Main Interrupt Serial Output"
+            },
+            "correct": "B",
+            "explanation": "MISO (Master In Slave Out), verinin slave cihazdan master cihaza aktığı hattır. MOSI (Master Out Slave In) ise verinin master’dan slave’e aktığı hattı ifade eder; yani iki hat veri yönünü ayırdığı için SPI teorik olarak aynı anda gönderme/alma (full duplex) yapabilir. Sınavda en sık karışan nokta, isimlerin master perspektifinden verilmesidir: “Master In” demek, master’ın o hattan veri aldığı anlamına gelir."
+        },
+        {
+            "No": 4,
+            "question": "I2C’de “ACK” bitinin temel anlamı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Verinin şifrelendiğini gösterir",
+                "B": "Alıcının veriyi aldığını onaylamasıdır",
+                "C": "Saat sinyalinin bittiğini gösterir",
+                "D": "CS pininin aktif olduğunu gösterir",
+                "E": "Yalnızca CAN’da kullanılır"
+            },
+            "correct": "B",
+            "explanation": "I2C çerçevesinde adres/RW ve veri baytlarından sonra ACK (acknowledgement) beklenir. ACK gelmezse pratikte adres/pull-up/bağlantı/cihaz beslemesi gibi sorunlar düşünülebilir ve “timeout/iletişim yok” hatası oluşabilir."
+        },
+        {
+            "No": 5,
+            "question": "I2C’de birden fazla cihazın aynı hatta çalışabilmesini sağlayan temel mekanizma aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her cihaz için ayrı CS hattı",
+                "B": "Adresleme (7-bit adres + R/W biti)",
+                "C": "Sadece parity",
+                "D": "Sadece PWM",
+                "E": "Sadece UART baud rate"
+            },
+            "correct": "B",
+            "explanation": "I2C’de master, konuşmak istediği slave’in adresini hatta gönderir. Yalnız adresi eşleşen cihaz cevap verir. Bu sayede aynı SDA/SCL üzerinde birden fazla cihaz bulunabilir."
+        },
+        {
+            "No": 6,
+            "question": "SPI’ın I2C’ye göre tipik avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Genellikle daha yüksek hız",
+                "B": "Daha az pin kullanımı",
+                "C": "Adresleme gerektirmemesi nedeniyle daha yavaş olması",
+                "D": "Daha uzun mesafede daha güvenli olması",
+                "E": "Mutlaka kablosuz olması"
+            },
+            "correct": "A",
+            "explanation": "SPI genellikle I2C’den daha hızlıdır; ancak daha fazla hat/pin kullanır (MISO, MOSI, SCK, CS). Her iki protokol de genelde kart içi kısa mesafe sensör/hafıza haberleşmesinde tercih edilir."
+        },
+        {
+            "No": 7,
+            "question": "Ders notlarında SPI ile ilgili mesafe-frekans ilişkisi için önerilen doğru yaklaşım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Mesafe uzadıkça saat frekansını artırmak",
+                "B": "Mesafe uzadıkça veri kaybı riskini azaltmak için saat frekansını düşürmek",
+                "C": "Mesafe uzadıkça CS hattını kaldırmak",
+                "D": "Mesafe uzadıkça MOSI’yi kapatmak",
+                "E": "Mesafe uzadıkça ADC çözünürlüğünü artırmak"
+            },
+            "correct": "B",
+            "explanation": "Notlarda mesafe uzadığında veya kablo kalitesi düştüğünde veri kaybını azaltmak için saat frekansını düşürmek gerektiği vurgulanır. Frekans yükselirse sinyal bütünlüğü bozulup yanlış örnekleme olabilir."
+        },
+        {
+            "No": 8,
+            "question": "CAN bus’ın otomotivde öne çıkan özelliği aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Çok yüksek pin sayısı gerektirmesi",
+                "B": "Gürültülü ortamlarda güvenilir haberleşme ve mesaj önceliklendirme (arbitration) mantığı",
+                "C": "Sadece kart içi 10 cm mesafede çalışması",
+                "D": "Mutlaka internet protokolü olması",
+                "E": "Adresleme yerine sadece CS kullanması"
+            },
+            "correct": "B",
+            "explanation": "CAN bus otomotiv/endüstride dayanıklılık ve güvenilirlik için geliştirilmiştir. Notlarda fren gibi hayati verilerin önceliklendirilmesi vurgulanır: aynı anda gelen mesajlarda kritik olana öncelik verilir."
+        },
+        {
+            "No": 9,
+            "question": "I2C çerçevesinde (frame) start bitinden sonra tipik olarak hangi alan gelir?",
+            "options": {
+                "A": "Stop bit",
+                "B": "7-bit adres",
+                "C": "CRC",
+                "D": "CS",
+                "E": "PWM duty"
+            },
+            "correct": "B",
+            "explanation": "I2C’de START koşulundan hemen sonra tipik olarak adres alanı gelir: 7-bit adres + R/W biti. Ardından alıcı tarafın ACK/NACK bitleri ile aktarımın kabul edilip edilmediği görülür ve 8-bit veri baytları taşınır; işlem STOP (veya repeated START) ile biter. Buradaki ana fikir şudur: çoklu cihaz desteği, START’tan sonra gelen adresleme adımıyla sağlanır; bu yüzden adres alanı protokol akışının merkezindedir."
+        },
+        {
+            "No": 10,
+            "question": "SPI’da veri örneklemenin “kenar” (edge) ile ilişkisi aşağıdakilerden hangisini anlatır?",
+            "options": {
+                "A": "Veri her zaman rastgele okunur",
+                "B": "Saat sinyalinin rising/falling edge anında verinin okunması/yazılması; yanlış kenarda okuma hataya yol açabilir",
+                "C": "Kenarlarda sadece analog filtreleme yapılır",
+                "D": "Edge sadece UART için geçerlidir",
+                "E": "Edge sadece CAN için geçerlidir"
+            },
+            "correct": "B",
+            "explanation": "Notlarda rising edge gibi kavramlar geçer: SPI’da veri genellikle saat sinyalinin belirli kenarında örneklenir. Sinyal bütünlüğü bozulursa veya mod/kenar ayarı yanlışsa yanlış bit okunabilir."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdakilerden hangisi I2C’nin SPI’a göre tipik avantajına daha yakındır?",
+            "options": {
+                "A": "Daha fazla pin kullanması",
+                "B": "ACK mekanizmasıyla temel onay/hata fark etme imkanı ve iki hatla çoklu cihaz",
+                "C": "Her zaman daha yüksek hız",
+                "D": "CS ile cihaz seçmesi",
+                "E": "Hiç adres kullanmaması"
+            },
+            "correct": "B",
+            "explanation": "I2C iki hatla çalışır ve adresleme sayesinde çoklu cihaz desteği sunar. ACK mekanizması, alıcının veri aldığını onaylayarak güvenilirliği artırır. SPI genelde daha hızlıdır ama daha fazla hat kullanır."
+        },
+        {
+            "No": 12,
+            "question": "Endüstriyel protokoller (Modbus/Profibus) için ders notlarında vurgulanan beklenti aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Tüm bit seviyesini ezbere bilmek",
+                "B": "İsimlerini ve endüstriyel dünyadaki yerlerini bilmek; asıl detayın mikrodenetleyici protokollerinde (UART/SPI/I2C) olduğu",
+                "C": "Sadece oyun geliştirmede kullanıldıklarını bilmek",
+                "D": "Sadece kablosuz olduklarını bilmek",
+                "E": "Sadece RAM’i artırdıklarını bilmek"
+            },
+            "correct": "B",
+            "explanation": "Notlarda Modbus/Profibus gibi protokollerin isim olarak bilinmesi gerektiği; sınavda daha detaylı sorulabileceklerin UART/SPI/I2C gibi mikrodenetleyici tabanlı protokoller olduğu belirtilir."
+        },
+        {
+            "No": 13,
+            "question": "Bir I2C haberleşmesinde ACK gelmiyorsa, aşağıdaki kök nedenlerden hangisi ilk kontrol edileceklerdendir?",
+            "options": {
+                "A": "Sensörün ekran çözünürlüğü",
+                "B": "Adresin yanlış olması veya pull-up dirençlerinin/bağlantının hatalı olması",
+                "C": "PWM duty’nin düşük olması",
+                "D": "ADC’nin kapalı olması",
+                "E": "Harvard mimarisi kullanılması"
+            },
+            "correct": "B",
+            "explanation": "ACK gelmemesi genellikle fiziksel bağlantı, yanlış adres, pull-up eksikliği, sensör beslemesi gibi temel nedenlerden kaynaklanır. Entegrasyon notlarında da I2C doğrulamada ACK kontrolü önerilir."
+        },
+        {
+            "No": 14,
+            "question": "SPI’da birden fazla slave ile çalışırken temel ölçeklenme problemi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her slave için genelde ayrı CS hattı gerektiği için pin sayısı artar",
+                "B": "Adresleme olmadığı için hiç çalışmaz",
+                "C": "MISO hattı hiç kullanılamaz",
+                "D": "SCL hattı zorunludur",
+                "E": "ACK zorunludur"
+            },
+            "correct": "A",
+            "explanation": "SPI’da her slave için ayrı CS/SS hattı kullanmak tipiktir. Slave sayısı artınca CS pin ihtiyacı artar. I2C’de ise iki hatla çoklu cihaz için adresleme kullanılır."
+        },
+        {
+            "No": 15,
+            "question": "Aşağıdakilerden hangisi otomasyon piramidinde en alt katmana örnektir?",
+            "options": {
+                "A": "SCADA",
+                "B": "PLC/CPU kontrol birimi",
+                "C": "Sensörler ve aktüatörler",
+                "D": "Bulut sunucu",
+                "E": "Veri merkezi"
+            },
+            "correct": "C",
+            "explanation": "Notlarda otomasyon piramidi: en alt katman saha elemanları (sensör/aktüatör), orta katman kontrol birimleri (MCU/PLC), üst katman SCADA (izleme/yönetim) şeklinde anlatılır."
+        },
+        {
+            "No": 16,
+            "question": "CAN bus’ta “öncelik” sistemi ders notlarında hangi örnekle açıklanır?",
+            "options": {
+                "A": "Fren verisi ile radyo verisi aynı anda gelirse frenin öncelikli olması",
+                "B": "LED ile LDR aynı anda okunursa LED’in öncelikli olması",
+                "C": "PWM ile UART çakışınca PWM’in iptal olması",
+                "D": "I2C’de ACK gelmezse frekansın artması",
+                "E": "SPI’da CS high iken veri gönderilmesi"
+            },
+            "correct": "A",
+            "explanation": "Notlarda CAN bus’ın otomotivdeki öncelik/arbitration mantığı fren örneğiyle verilir: hayati veriler (fren) öncelik alır; radyo gibi daha az kritik mesajlar bekleyebilir."
+        },
+        {
+            "No": 17,
+            "question": "SPI’da CS/SS pininin tipik “idle” ve “aktif” seviyeleri ders notlarına göre hangi seçenekteki gibidir?",
+            "options": {
+                "A": "Idle Low, Aktif High",
+                "B": "Idle High, Aktif Low",
+                "C": "Her zaman High",
+                "D": "Her zaman Low",
+                "E": "CS kullanılmaz"
+            },
+            "correct": "B",
+            "explanation": "Ders notlarında CS’nin genelde idle iken High olduğu ve master konuşmak istediğinde ilgili cihazın CS’sini Low’a çektiği anlatılır. (Pratikte aktif seviye tasarıma göre değişebilir; burada ders notu yaklaşımı hedeflenir.)"
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi kart içi kısa mesafe yüksek hızlı hafıza/sensör haberleşmesi için daha sık tercih edilir?",
+            "options": {
+                "A": "SPI",
+                "B": "GSM",
+                "C": "MQTT",
+                "D": "SCADA",
+                "E": "Energy harvesting"
+            },
+            "correct": "A",
+            "explanation": "SPI kısa mesafede yüksek hız avantajı nedeniyle ekran, hızlı ADC, flash bellek gibi çevre birimleriyle sık kullanılır. GSM/MQTT ağ/IoT katmanına aittir; SCADA üst seviye izleme sistemidir."
+        },
+        {
+            "No": 19,
+            "question": "I2C’nin kart içi sensör haberleşmesinde yaygın olmasının nedenlerinden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İki hatla (SDA/SCL) çoklu cihaz bağlayabilme",
+                "B": "Çok yüksek pin sayısı gerektirmesi",
+                "C": "Adresleme olmadan çalışması",
+                "D": "Sadece 1 metre üzeri mesafe için tasarlanması",
+                "E": "Sadece analog sinyal taşıması"
+            },
+            "correct": "A",
+            "explanation": "I2C’nin kart içi sensör haberleşmesinde çok görülmesinin temel nedeni pin tasarrufudur: çok sayıda sensörü aynı SDA/SCL hattına bağlayıp cihazları adresleyebilirsiniz. ACK/NACK mekanizması aktarımın kontrolünü kolaylaştırır ve tipik sensör register okuma/yazma modelleriyle uyumludur. Buna karşılık I2C, SPI’a kıyasla genelde daha düşük hızlara ve pull-up kaynaklı kenar/kapasitans etkilerine daha duyarlıdır; yani tercih sebebi çoğu zaman “kolay kablolama ve çoklu cihaz”dır."
+        },
+        {
+            "No": 20,
+            "question": "Seri haberleşmede “frame/çerçeve” kavramı en doğru şekilde neyi ifade eder?",
+            "options": {
+                "A": "Kablonun fiziksel uzunluğunu",
+                "B": "Bit akışının anlamlı paketlenmesi: başlangıç, kontrol/adres, veri (payload), hata kontrolü, bitiş gibi alanlar",
+                "C": "Sadece PWM periyodunu",
+                "D": "Sadece ADC ölçeğini",
+                "E": "Sadece bellek blok boyutunu"
+            },
+            "correct": "B",
+            "explanation": "Seri hatta gelen bit akışını alıcının doğru yorumlaması için çerçeveleme gerekir: başlangıç/bitiş, adres/ID, payload ve hata kontrol alanları gibi. Notlarda I2C frame örneği bu mantığı somutlar."
+        }
+    ]
+}

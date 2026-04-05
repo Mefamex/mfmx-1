@@ -1,0 +1,267 @@
+{
+    "unitNumber": 6,
+    "unitTitle": "Sensörler ve Aktüatörler",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Bir sensörün temel görevi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Elektrik enerjisini mekanik enerjiye çevirmek",
+                "B": "Fiziksel büyüklüğü elektriksel sinyale/veriye dönüştürmek",
+                "C": "Program kodunu saklamak",
+                "D": "PWM üretmek",
+                "E": "Sadece haberleşme yapmak"
+            },
+            "correct": "B",
+            "explanation": "Sensörler (duyular), sıcaklık/ışık/basınç/konum gibi fiziksel büyüklükleri MCU’nun anlayabileceği elektriksel sinyale dönüştürür. Bu sinyal analogsa ADC ile sayısallaştırılır; dijitalse doğrudan veya I2C/SPI/UART üzerinden okunabilir."
+        },
+        {
+            "No": 2,
+            "question": "Aşağıdakilerden hangisi sensör performans kavramlarından biri değildir?",
+            "options": {
+                "A": "Çözünürlük",
+                "B": "Doğrusallık",
+                "C": "Ölçüm aralığı (range)",
+                "D": "Tepki süresi",
+                "E": "Von Neumann darboğazı"
+            },
+            "correct": "E",
+            "explanation": "Çözünürlük, doğrusallık ve aralık sensör performansını tanımlar. Von Neumann darboğazı ise işlemci/bellek mimarisiyle ilgilidir; sensör performans metriği değildir."
+        },
+        {
+            "No": 3,
+            "question": "ADC’si 10-bit olan bir sistemde analog okuma değeri tipik olarak hangi aralıkta olur?",
+            "options": {
+                "A": "0–255",
+                "B": "0–1023",
+                "C": "0–4095",
+                "D": "-1–1",
+                "E": "0–65535"
+            },
+            "correct": "B",
+            "explanation": "10-bit ADC, $2^{10}=1024$ seviyeye sahiptir; bu nedenle okuma aralığı genellikle 0–1023 olur. LDR örneğinde eşik olarak orta nokta 512’nin kullanılabileceği notlarda geçer."
+        },
+        {
+            "No": 4,
+            "question": "Bir giriş pininin “floating” kalmasının tipik sonucu aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Pin her zaman kararlı 0 okur",
+                "B": "Pin her zaman kararlı 1 okur",
+                "C": "Pin rastgele/kararsız değerler okuyabilir; hayalet tetiklemeler oluşabilir",
+                "D": "Pin otomatik olarak PWM üretir",
+                "E": "Pin otomatik olarak ADC’ye dönüşür"
+            },
+            "correct": "C",
+            "explanation": "Floating giriş, elektriksel olarak belirsiz kalır ve gürültüden etkilenip rastgele 0/1 okuyabilir. Pull-up/pull-down dirençleri, pinin varsayılan seviyesini belirleyerek bu kararsızlığı giderir."
+        },
+        {
+            "No": 5,
+            "question": "Pull-up direnci aşağıdaki bağlantılardan hangisini ifade eder?",
+            "options": {
+                "A": "Giriş pinini direnç üzerinden GND’ye bağlayıp varsayılanı 0 yapmak",
+                "B": "Giriş pinini direnç üzerinden Vcc’ye bağlayıp varsayılanı 1 yapmak",
+                "C": "Giriş pinini doğrudan Vcc’ye kısa devre yapmak",
+                "D": "Giriş pinini doğrudan GND’ye kısa devre yapmak",
+                "E": "Giriş pinini analog girişe çevirmek"
+            },
+            "correct": "B",
+            "explanation": "Pull-up, giriş pinini bir direnç üzerinden Vcc’ye bağlayarak pinin boşta iken 1 seviyesinde kalmasını sağlar. Pull-down ise direnç üzerinden GND’ye bağlayarak varsayılanı 0 yapar."
+        },
+        {
+            "No": 6,
+            "question": "Aktüatör kavramına en uygun örnek aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "LDR",
+                "B": "Potansiyometre",
+                "C": "Servo motor",
+                "D": "Termistör",
+                "E": "Basınç sensörü"
+            },
+            "correct": "C",
+            "explanation": "Aktüatörler sistemin “çıktı” tarafıdır; elektriksel komutu fiziksel etkiye dönüştürür (motor döndürmek, röle çekmek, ısıtmak/soğutmak, titreşim üretmek vb.). Bu yüzden motor/röle/Peltier/piezo gibi elemanlar aktüatör sınıfına girer. LDR, termistör, basınç sensörü gibi elemanlar ise çevreden bilgi toplayan “sensör”dür; yani ölçer ama doğrudan fiziksel işi yapmaz. Bu ayrım, açık/kapalı çevrim kontrol sorularında da temel rol oynar."
+        },
+        {
+            "No": 7,
+            "question": "Açık çevrim (open-loop) kontrolün en belirgin özelliği aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Çıktı sürekli ölçülür ve hata düzeltilir",
+                "B": "Geri besleme yoktur; sistem çıktıyı kontrol etmeden komutu uygular",
+                "C": "Mutlaka PID kullanır",
+                "D": "Mutlaka servo motor içerir",
+                "E": "Mutlaka I2C üzerinden haberleşir"
+            },
+            "correct": "B",
+            "explanation": "Açık çevrim sistemlerde geri besleme yoktur; sistem sonuçtan “habersiz” çalışır. Step motor, ek sensör olmadan “verdiğim sinyalle gitti varsayıyorum” yaklaşımıyla açık çevrim örneğidir."
+        },
+        {
+            "No": 8,
+            "question": "Kapalı çevrim (closed-loop) kontrolün temel mekanizması aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sensörle çıktıyı ölç → hata hesapla → kontrol et → düzelt",
+                "B": "Sadece bekleme (delay) eklemek",
+                "C": "Sadece motoru maksimum güçte sürmek",
+                "D": "Sadece komut belleğini büyütmek",
+                "E": "Sadece kabloyu kısaltmak"
+            },
+            "correct": "A",
+            "explanation": "Kapalı çevrimde sistem çıktıyı ölçer ve hedefle karşılaştırarak hatayı azaltacak şekilde davranır. Notlarda servo motor kapalı çevrime örneklenir: dış etkiyle durdurulsa bile etki kalkınca hedef konuma dönmeye çalışır."
+        },
+        {
+            "No": 9,
+            "question": "Ders notlarında verilen hata sinyali ifadesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "e(t) = girdi − çıktı",
+                "B": "e(t) = çıktı − girdi",
+                "C": "e(t) = çıktı × girdi",
+                "D": "e(t) = çıktı / girdi",
+                "E": "e(t) = 0 her zaman"
+            },
+            "correct": "B",
+            "explanation": "Derste söylenilenler notunda hata sinyali “e(t) = Çıktı − girdi” olarak yazılmış. Kontrol teorisinde işaret konvansiyonu projeye göre değişebilir; ancak sınav için hocanın yazdığı formülü doğru hatırlamak önemlidir."
+        },
+        {
+            "No": 10,
+            "question": "PWM (Darbe Genişlik Modülasyonu) en doğru şekilde neyi değiştirerek “ortalama güç/gerilim etkisi” oluşturur?",
+            "options": {
+                "A": "Sinyalin frekansını sıfıra çekerek",
+                "B": "Sinyalin doluluk oranını (duty cycle) değiştirerek",
+                "C": "Sinyali tamamen analog yaparak",
+                "D": "Sinyalin fazını kilitleyerek",
+                "E": "Sinyali sadece 1 yapmak"
+            },
+            "correct": "B",
+            "explanation": "PWM’de sinyal 0/1 (0V/5V) arasında hızlı anahtarlanır. Bir periyotta 1’de kalma yüzdesi duty cycle’dır. Duty cycle arttıkça ortalama güç/gerilim etkisi artar. LED parlaklığı, DC motor hız kontrolü ve servo kontrolü gibi alanlarda kullanılır."
+        },
+        {
+            "No": 11,
+            "question": "Servo motorun kontrolünde ders notlarında özellikle vurgulanan kavram aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Paket yönlendirme",
+                "B": "Duty cycle / PWM ile pozisyon komutu",
+                "C": "CRC hesaplama",
+                "D": "Harvard mimarisi",
+                "E": "RS485 topolojisi"
+            },
+            "correct": "B",
+            "explanation": "Ders notlarında servo motorların PWM ile kontrol edildiği, doluluk oranına göre pozisyonlandırma yapıldığı vurgulanır. Servo içinde kontrol devresi olsa da, ders bağlamında kritik fikir “PWM → açı/pozisyon komutu”dur."
+        },
+        {
+            "No": 12,
+            "question": "Step motor sürüş yöntemleri içinde torkun genellikle en düşük olduğu yöntem hangisidir?",
+            "options": {
+                "A": "Wave drive (dalga sürüş)",
+                "B": "Full step (tam adım)",
+                "C": "Half step (yarım adım)",
+                "D": "Microstepping (mikro adım)",
+                "E": "Kapalı çevrim sürüş"
+            },
+            "correct": "A",
+            "explanation": "Wave drive’da bobinler tek tek enerjilenir; bu nedenle oluşan manyetik alan ve tutma torku genellikle daha düşüktür. Full step’de iki bobin aynı anda enerjilenerek tork artırılır. Half step ve microstepping ise daha akıcı/hassas hareket hedefler."
+        },
+        {
+            "No": 13,
+            "question": "Half-step (yarım adım) sürüşün temel avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Daha düşük hassasiyet",
+                "B": "Tek bobinle sürekli sürüş",
+                "C": "Tek bobin/çift bobin geçişleriyle ara konumlara erişip daha akıcı hareket sağlaması",
+                "D": "Sadece ses üretmesi",
+                "E": "Sadece torku düşürmesi"
+            },
+            "correct": "C",
+            "explanation": "Yarım adım sürüşte bobinler tek-çift-tek-çift şeklinde enerjilenir. Bu, adımlar arasına ara konumlar ekleyerek hassasiyeti artırır ve hareketi daha akıcı hale getirir."
+        },
+        {
+            "No": 14,
+            "question": "Microstepping yaklaşımının temel fikri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Bobinlere sadece tam kare dalga uygulamak",
+                "B": "Keskin geçişler yerine daha yumuşak (sinüs benzeri) akım profiliyle daha ince ve sessiz adımlama sağlamak",
+                "C": "Motoru tamamen kapatmak",
+                "D": "Sadece iki bobini aynı anda sürmek",
+                "E": "Sadece torku maksimum yapmak"
+            },
+            "correct": "B",
+            "explanation": "Microstepping’de amaç daha küçük adımlar ve daha yumuşak geçişlerdir. Notlarda kare sinyal yerine sinüzoidal benzeri bir sürüş profiliyle motorun daha sessiz ve akıcı dönmesi vurgulanır."
+        },
+        {
+            "No": 15,
+            "question": "Sensör verilerinde ani sıçramaları (parazit) azaltmak için en basit filtreleme yöntemi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "CRC",
+                "B": "Aritmetik ortalama / hareketli ortalama",
+                "C": "Şifreleme",
+                "D": "CS pini",
+                "E": "Parity biti"
+            },
+            "correct": "B",
+            "explanation": "Notlarda sensör verilerinde ani sıçramalara karşı basit çözüm olarak belirli bir penceredeki değerlerin ortalamasını almak (aritmetik/hareketli ortalama) anlatılır. Bu, anlık paraziti törpüler. İsim olarak low-pass, high-pass, Kalman gibi filtreler de geçer."
+        },
+        {
+            "No": 16,
+            "question": "LDR ile LED kontrolü örneğinde, 10-bit ADC için orta eşik değeri olarak sıklıkla kullanılan değer hangisidir?",
+            "options": {
+                "A": "128",
+                "B": "256",
+                "C": "512",
+                "D": "768",
+                "E": "1023"
+            },
+            "correct": "C",
+            "explanation": "0–1023 aralığında orta nokta 512’dir. Notlarda LDR örneğinde 512 eşik olarak referans alınabileceği belirtilir. Eşik çevresinde titreme varsa delay yerine histerezis veya filtreleme düşünmek daha sağlıklıdır."
+        },
+        {
+            "No": 17,
+            "question": "Eşik değerinde LED’in “yanıp sönme” yapmasını azaltmak için en doğru yaklaşım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Tek eşik kullanıp hiç önlem almamak",
+                "B": "Histerezis (açma ve kapama için iki farklı eşik) veya filtreleme uygulamak",
+                "C": "ADC’yi kapatmak",
+                "D": "PWM’i kaldırmak",
+                "E": "Mikrodenetleyiciyi değiştirmek"
+            },
+            "correct": "B",
+            "explanation": "Eşik çevresinde ölçüm gürültüsü ve küçük dalgalanmalar titremeye neden olur. Histerezis (ör. aç=560, kapa=460 gibi) veya filtreleme (hareketli ortalama) titremeyi kökten azaltır. Sadece delay eklemek titremeyi gizleyebilir ama kök nedeni her zaman çözmez."
+        },
+        {
+            "No": 18,
+            "question": "Kararlılık (stability) benzetmesinde “çukurun dibindeki top” hangi sistemi temsil eder?",
+            "options": {
+                "A": "Kararsız sistemi",
+                "B": "Kararlı sistemi",
+                "C": "Sadece open-loop sistemi",
+                "D": "Sadece UART’ı",
+                "E": "Sadece SPI’ı"
+            },
+            "correct": "B",
+            "explanation": "Notlarda kararlı sistem, itilsen bile tekrar dengeye dönen “çukurun dibindeki top” benzetmesiyle anlatılır. Kararsız sistem ise tümsekte duran ve küçük etkiyle devrilen top gibidir."
+        },
+        {
+            "No": 19,
+            "question": "Derste “delay” kullanımıyla ilgili verilen uyarı aşağıdakilerden hangisine en yakındır?",
+            "options": {
+                "A": "Delay her zaman hassasiyeti artırır",
+                "B": "Uygunsuz delay/frekans seçimi motorun sadece “ötmesine” neden olabilir; deterministik kontrolü bozabilir",
+                "C": "Delay sadece SPI’da çalışır",
+                "D": "Delay sadece bellek kullanımını azaltır",
+                "E": "Delay sadece kablo uzunluğunu etkiler"
+            },
+            "correct": "B",
+            "explanation": "Notlarda motor kontrolünde uygun frekans aralığı tutturulamazsa ve gecikmeler yanlış kullanılırsa motorun dönmek yerine “ötmesi” gibi davranışlar görülebileceği belirtilir. Delay, bloklayıcı olduğu için zamanlamayı ve tepki süresini de olumsuz etkileyebilir."
+        },
+        {
+            "No": 20,
+            "question": "PID kontrol yaklaşımının temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Haberleşme paketlerini şifrelemek",
+                "B": "Hata sinyaline göre sistemi hedefe daha iyi yaklaştırmak; aşma/salınım/kalıcı hata gibi davranışları iyileştirmek",
+                "C": "Program belleğini büyütmek",
+                "D": "ADC çözünürlüğünü artırmak",
+                "E": "UART baud rate’ini sabitlemek"
+            },
+            "correct": "B",
+            "explanation": "Kapalı çevrim sistemlerde hedefe yaklaşırken overshoot (aşma), oscillation (salınım) veya steady-state error (kalıcı hata) görülebilir. PID, hataya dayalı düzeltme yaparak bu davranışları iyileştirmeye çalışan klasik bir kontrol yöntemidir."
+        }
+    ]
+}

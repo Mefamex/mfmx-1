@@ -1,0 +1,462 @@
+{
+    "unitNumber": 3,
+    "unitTitle": "JavaScript Temelleri, DOM ve Olaylar (Events)",
+    "questionCount": 35,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Aşağıdakilerden hangisi JavaScript’te değişken tanımlamanın (declaration) modern ve blok kapsamlı (block-scoped) yoludur?",
+            "options": {
+                "A": "var",
+                "B": "let",
+                "C": "define",
+                "D": "dim",
+                "E": "constvar"
+            },
+            "correct": "B",
+            "explanation": "Blok kapsamlı değişkenler, yalnızca bulundukları süslü parantez bloğu içinde yaşar ve bu da yan etkileri azaltır. Modern JS’te genelde `const` varsayılan, yeniden atama gerekiyorsa `let` tercih edilir; `var` ise kapsam/hoisting nedeniyle sürprizlere açıktır."
+        },
+        {
+            "No": 2,
+            "question": "Aşağıdakilerden hangisi tekrar atama (reassign) yapılamayan değişken tanımıdır?",
+            "options": {
+                "A": "var",
+                "B": "let",
+                "C": "const",
+                "D": "mutable",
+                "E": "static"
+            },
+            "correct": "C",
+            "explanation": "Bu tür tanımda yeniden atama yapılamaz; yani aynı değişkene yeni bir değer bağlayamazsın. Ancak değer bir nesne/array ise “referans” sabit kalırken içeriği değiştirilebilir; bu ayrımı bilmek hataları önler."
+        },
+        {
+            "No": 3,
+            "question": "Aşağıdakilerden hangisi JavaScript’te ‘strict equality’ (katı eşitlik) operatörüdür?",
+            "options": {
+                "A": "=",
+                "B": "==",
+                "C": "===",
+                "D": "=>",
+                "E": "!==="
+            },
+            "correct": "C",
+            "explanation": "Katı eşitlik, hem türü hem değeri aynı anda karşılaştırır ve otomatik tür dönüştürmesi yapmaz. Bu yüzden beklenmedik sonuçları azaltır; gevşek karşılaştırma ise dönüştürme (coercion) yüzünden sürpriz üretebilir."
+        },
+        {
+            "No": 4,
+            "question": "Aşağıdaki ifadenin sonucu nedir? `\\\"5\\\" + 2`",
+            "options": {
+                "A": "7",
+                "B": "52",
+                "C": "NaN",
+                "D": "Hata verir",
+                "E": "3"
+            },
+            "correct": "B",
+            "explanation": "`+` operatörü operandlardan biri string olunca birleştirme yapar; sayı toplama davranışı yerine metin yan yana gelir. Sayısal sonuç isteniyorsa dönüşüm yapılır (ör. `Number(\\\"5\\\") + 2`)."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi `typeof null` ifadesinin sonucudur?",
+            "options": {
+                "A": "null",
+                "B": "undefined",
+                "C": "object",
+                "D": "number",
+                "E": "boolean"
+            },
+            "correct": "C",
+            "explanation": "Bu, JavaScript’in tarihsel bir tuhaflığıdır: `null` “boş değer” olmasına rağmen `typeof` sonucu `object` çıkar. Pratikte `value === null` gibi doğrudan kontrol veya `value == null` ile `null/undefined` birlikte kontrolü daha anlamlıdır."
+        },
+        {
+            "No": 6,
+            "question": "Aşağıdakilerden hangisi bir fonksiyon tanımıdır (function declaration)?",
+            "options": {
+                "A": "`sum = function(a,b){ return a+b }`",
+                "B": "`const sum = (a,b) => a+b`",
+                "C": "`function sum(a,b) { return a+b; }`",
+                "D": "`sum(a,b) = a+b`",
+                "E": "`fn sum(a,b) {}`"
+            },
+            "correct": "C",
+            "explanation": "Fonksiyon deklarasyonu (declaration) isimli tanımlanır ve çoğu durumda kapsam içinde daha öngörülebilir bir şekilde hoist edilir. Fonksiyon ifadeleri/arrow fonksiyonlar ise bir değişkene atanır ve kullanım zamanlaması farklılık gösterebilir."
+        },
+        {
+            "No": 7,
+            "question": "Arrow function (`=>`) ile klasik function arasındaki en önemli farklardan biri hangisidir?",
+            "options": {
+                "A": "Arrow function `return` kullanamaz",
+                "B": "Arrow function kendi `this` bağlamını (this binding) oluşturmaz",
+                "C": "Arrow function sadece tarayıcıda çalışır",
+                "D": "Arrow function parametre alamaz",
+                "E": "Arrow function sadece async olur"
+            },
+            "correct": "B",
+            "explanation": "Arrow fonksiyonlar kendi `this` bağlamını üretmez; `this` değerini dış kapsamdan “miras” alır. Bu yüzden callback’lerde faydalıdır; ama metot yazarken klasik fonksiyon kullanmak bazen daha doğru olur."
+        },
+        {
+            "No": 8,
+            "question": "Hoisting ile ilgili en doğru ifade hangisidir?",
+            "options": {
+                "A": "`let` ve `const` tamamen hoist edilmez",
+                "B": "`var` değişkenleri hoist edilir ve başlangıçta `undefined` olur",
+                "C": "Tüm değişkenler hoist edilir ve otomatik değer alır",
+                "D": "Hoisting sadece CSS’te vardır",
+                "E": "Hoisting = kodu hızlandırma tekniği"
+            },
+            "correct": "B",
+            "explanation": "Değişken bildirimi çalışma zamanı başında tanınır; `var` için bu, değişkenin erken erişimde `undefined` görünmesine yol açabilir. `let/const` ise “temporal dead zone” nedeniyle bildirilmeden önce erişilirse hata verir; en güvenlisi değişkeni kullanmadan önce tanımlamaktır."
+        },
+        {
+            "No": 9,
+            "question": "Aşağıdakilerden hangisi bir dizinin (array) sonuna eleman ekler?",
+            "options": {
+                "A": "pop()",
+                "B": "shift()",
+                "C": "push()",
+                "D": "unshiftEnd()",
+                "E": "append()"
+            },
+            "correct": "C",
+            "explanation": "Dizinin sonuna eleman ekleme işlemi bu metotla yapılır ve genellikle yeni uzunluğu döndürür. Ters işlem, sondan eleman çıkarmaktır; baştan ekleme/çıkarma için farklı metotlar kullanılır."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdakilerden hangisi bir diziyi dolaşıp her elemanı dönüştürerek yeni bir dizi döndürür?",
+            "options": {
+                "A": "forEach",
+                "B": "map",
+                "C": "filter",
+                "D": "find",
+                "E": "reduceRightOnly"
+            },
+            "correct": "B",
+            "explanation": "Dönüştürme mantığı “girdi dizisi → yeni çıktı dizisi” şeklindedir; orijinal dizi değişmeden kalır. Yan etki üretmek için `forEach`, filtrelemek için `filter` daha uygun kavramlardır."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdaki kodun çıktısı nedir?\n\n`[1,2,3].filter(n => n > 1)`",
+            "options": {
+                "A": "[1]",
+                "B": "[2,3]",
+                "C": "[1,2,3]",
+                "D": "2",
+                "E": "true"
+            },
+            "correct": "B",
+            "explanation": "Filtreleme, koşulu sağlayan elemanları seçip yeni bir dizi döndürür. Bu örnekte koşulu geçen elemanlar seçildiği için sonuç iki elemanlı bir dizi olur; kaynak dizi değişmez."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdakilerden hangisi bir objenin (object) özelliğine erişmenin doğru yollarından biridir? (Birden fazla doğru var ama tek şık seç)\n\n`const user = { name: 'Ali' }`",
+            "options": {
+                "A": "user->name",
+                "B": "user.name",
+                "C": "user(name)",
+                "D": "user::name",
+                "E": "user[name] // name değişkeni yoksa hata"
+            },
+            "correct": "B",
+            "explanation": "Özellik erişimi iki ana biçimde yapılır: nokta notasyonu sabit adlar için, köşeli parantez ise dinamik anahtarlar için uygundur. Köşeli parantezde anahtar bir string (veya string’e çevrilebilir) ifade olmalıdır."
+        },
+        {
+            "No": 13,
+            "question": "Aşağıdaki kodda `person.city` hangi değeri verir?\n\n`const person = { name: 'Ece', address: { city: 'Ankara' } };`\n`person.address.city`",
+            "options": {
+                "A": "Ece",
+                "B": "Ankara",
+                "C": "undefined",
+                "D": "null",
+                "E": "Hata verir"
+            },
+            "correct": "B",
+            "explanation": "İç içe nesnelerde erişim “zincir” şeklindedir; her adım bir alt nesneyi verir. Eğer arada `undefined` olma ihtimali varsa optional chaining (`?.`) hataları azaltabilir."
+        },
+        {
+            "No": 14,
+            "question": "Aşağıdakilerden hangisi `JSON.parse` fonksiyonunun görevidir?",
+            "options": {
+                "A": "JS objesini JSON string’e çevirir",
+                "B": "JSON string’i JS objesine çevirir",
+                "C": "HTML’i JSON’a çevirir",
+                "D": "CSS’i JS’e çevirir",
+                "E": "Sadece sayıları parse eder"
+            },
+            "correct": "B",
+            "explanation": "JSON metnini JavaScript değeri/nesnesine dönüştürür. Geçersiz JSON gelirse hata fırlatabileceği için güvenli kullanımda hata yakalama (try/catch) düşünülür; ters dönüşüm için başka bir fonksiyon kullanılır."
+        },
+        {
+            "No": 15,
+            "question": "Aşağıdakilerden hangisi `JSON.stringify` fonksiyonunun görevidir?",
+            "options": {
+                "A": "JS objesini JSON string’e çevirir",
+                "B": "JSON string’i JS objesine çevirir",
+                "C": "DOM’u JSON’a çevirir",
+                "D": "Sadece dizileri çalıştırır",
+                "E": "Sadece fonksiyonları string’e çevirir"
+            },
+            "correct": "A",
+            "explanation": "JavaScript değerini JSON metnine çevirir ve genellikle ağ üzerinden gönderme veya depolama için kullanılır. Fonksiyonlar JSON’a yazılmaz; döngüsel (circular) yapı varsa dönüştürme hata verebilir."
+        },
+        {
+            "No": 16,
+            "question": "DOM’da bir elementi `id` ile seçmek için en uygun yöntem hangisidir?",
+            "options": {
+                "A": "document.getElementById('x')",
+                "B": "document.getElementByClass('x')",
+                "C": "document.queryAll('#x')",
+                "D": "window.select('#x')",
+                "E": "document.findId('x')"
+            },
+            "correct": "A",
+            "explanation": "Kimliğe göre seçim yapan bu yöntem tek bir öğe döndürür (yoksa `null`). CSS seçicisiyle çalışmak istersen `querySelector` da kullanılabilir; ancak `getElementById` id odaklı ve nettir."
+        },
+        {
+            "No": 17,
+            "question": "Bir elementin içindeki metni değiştirmek için aşağıdaki özelliklerden hangisi daha güvenli/uygundur? (HTML eklemek istemiyorsun)",
+            "options": {
+                "A": "innerHTML",
+                "B": "textContent",
+                "C": "outerHTML",
+                "D": "write()",
+                "E": "htmlText"
+            },
+            "correct": "B",
+            "explanation": "Sadece metin yerleştirmek istiyorsan HTML olarak yorumlanmayan güvenli bir alan kullanılır. HTML eklemek gerekiyorsa farklı bir özellik tercih edilir; fakat kullanıcı girdisini HTML’e basmak XSS gibi güvenlik riskleri doğurabileceğinden dikkat ister."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdaki kod ne yapar? `element.classList.add('active')`",
+            "options": {
+                "A": "Elementi sayfadan siler",
+                "B": "Elementin id’sini değiştirir",
+                "C": "Elemente `active` class’ını ekler",
+                "D": "Tüm class’ları temizler",
+                "E": "CSS dosyasını değiştirir"
+            },
+            "correct": "C",
+            "explanation": "Sınıf listesine yeni bir sınıf ekler ve mevcut sınıfları bozmadan günceller. Sınıf yönetiminde ekleme/çıkarma/değiştirme kontrolleri için aynı API’nin farklı metotları bulunur."
+        },
+        {
+            "No": 19,
+            "question": "Bir butona tıklanınca çalışacak kodu eklemek için doğru kullanım hangisidir?",
+            "options": {
+                "A": "btn.onClick = handler()",
+                "B": "btn.addEventListener('click', handler)",
+                "C": "btn.addEvent('click', handler)",
+                "D": "btn.listen('click', handler)",
+                "E": "btn.click(handler) // saf JS’te yok"
+            },
+            "correct": "B",
+            "explanation": "Olay dinleme için standart yaklaşım, dinleyiciye bir fonksiyon referansı vermektir. Parantezle çağırmak “hemen çalıştırma” anlamına gelir; amaç tıklanınca çalışmasıysa fonksiyon çağrılmadan iletilmelidir."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdaki kodda hata nerede?\n\n`btn.addEventListener('click', handler());`",
+            "options": {
+                "A": "Hata yok",
+                "B": "`click` olayı yok",
+                "C": "`handler()` çağrıldığı için, event anında değil hemen çalışır",
+                "D": "`addEventListener` eski bir API’dir",
+                "E": "`btn` sadece id ile seçilebilir"
+            },
+            "correct": "C",
+            "explanation": "Bu kullanımda fonksiyon anında çağrılır ve dinleyiciye geri dönüş değeri verilir; bu yüzden tıklama anında çalışmaz. Doğru yaklaşım fonksiyonun kendisini geçirmek ya da `() => handler()` gibi bir sarmal fonksiyon kullanmaktır."
+        },
+        {
+            "No": 21,
+            "question": "Event bubbling (olay kabarcıklanması) için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Olay sadece hedef elementte kalır",
+                "B": "Olay hedef elementten başlayıp üst (parent) elementlere doğru yayılabilir",
+                "C": "Olay sadece `window`’da oluşur",
+                "D": "Sadece klavye olaylarında olur",
+                "E": "Bubbling CSS özelliğidir"
+            },
+            "correct": "B",
+            "explanation": "Bir olay, hedef öğede başladıktan sonra üst kapsayıcılara doğru yayılabilir; buna bubbling denir. Bu özellik, dinamik elemanlar için olay delegasyonu yapmayı mümkün kılar."
+        },
+        {
+            "No": 22,
+            "question": "Aşağıdakilerden hangisi bir event’in varsayılan davranışını engeller? (Örn: link tıklanınca sayfanın gitmesini) ",
+            "options": {
+                "A": "event.stop()",
+                "B": "event.preventDefault()",
+                "C": "event.cancelAll()",
+                "D": "event.default(false)",
+                "E": "event.block()"
+            },
+            "correct": "B",
+            "explanation": "Tarayıcının varsayılan davranışını (ör. linke gidilmesi, form submit) iptal eder. Olayın üst öğelere yayılmasını durdurmak ayrı bir kavramdır ve farklı bir metotla yapılır."
+        },
+        {
+            "No": 23,
+            "question": "Aşağıdakilerden hangisi `stopPropagation()` için en doğru açıklamadır?",
+            "options": {
+                "A": "Default davranışı engeller",
+                "B": "Olayın parent’lara yayılmasını durdurur",
+                "C": "Event’i siler",
+                "D": "Event’i asenkron yapar",
+                "E": "Sadece mouse event’lerinde çalışır"
+            },
+            "correct": "B",
+            "explanation": "Bu metot, olayın yayılımını keser; böylece ebeveynlerdeki dinleyiciler tetiklenmez. Varsayılan davranışı durdurmaz; gerekirse ayrıca `preventDefault()` kullanılır."
+        },
+        {
+            "No": 24,
+            "question": "Aşağıdakilerden hangisi `setTimeout` için doğru bir ifadedir?",
+            "options": {
+                "A": "Kodu senkron çalıştırır",
+                "B": "Belirli bir gecikmeden sonra bir kez çalıştırır",
+                "C": "Her saniye tekrar eder (sonsuz)",
+                "D": "Sadece CSS animasyonlarında kullanılır",
+                "E": "Tarayıcıyı kilitler"
+            },
+            "correct": "B",
+            "explanation": "Belirlenen gecikmeden sonra fonksiyonu bir kez çalıştırır ve bir zamanlayıcı kimliği döndürür. Gerekirse bu kimlik ile iptal edilebilir; tekrar eden işler için ayrı bir zamanlayıcı yaklaşımı kullanılır."
+        },
+        {
+            "No": 25,
+            "question": "Aşağıdakilerden hangisi Promise (vaat) kavramını en doğru açıklar?",
+            "options": {
+                "A": "Sadece döngü türüdür",
+                "B": "Asenkron işlemin gelecekteki sonucu için bir temsil (pending/fulfilled/rejected)",
+                "C": "CSS kütüphanesidir",
+                "D": "Sadece `await` ile çalışır",
+                "E": "LocalStorage API’sidir"
+            },
+            "correct": "B",
+            "explanation": "Promise, henüz sonucu gelmemiş bir asenkron işlemi temsil eder; durumlar beklemede/başarılı/başarısız şeklinde ilerler. Zincirleme `then/catch/finally` ile akış kontrolü daha okunur hale gelir."
+        },
+        {
+            "No": 26,
+            "question": "`async/await` ile ilgili en doğru ifade hangisidir?",
+            "options": {
+                "A": "`await` sadece for döngüsünde kullanılabilir",
+                "B": "`await` bir Promise’in sonucunu beklemeyi daha okunur hale getirir",
+                "C": "`async` fonksiyonlar asla Promise döndürmez",
+                "D": "`await` kodu her zaman tamamen senkron yapar",
+                "E": "`async` sadece Node.js’te çalışır"
+            },
+            "correct": "B",
+            "explanation": "`await`, Promise sonucunu “daha düz” bir kod akışıyla beklemeyi sağlar; ama programı tamamen senkron yapmaz. `async` ile işaretlenen fonksiyonlar her zaman Promise döndürür; hata yönetimi için çoğu zaman try/catch kullanılır."
+        },
+        {
+            "No": 27,
+            "question": "`fetch(url)` fonksiyonunun döndürdüğü şey genelde nedir?",
+            "options": {
+                "A": "Direkt JSON objesi",
+                "B": "Bir Promise (Response’a resolve olur)",
+                "C": "Bir HTML string’i",
+                "D": "Bir CSS dosyası",
+                "E": "Senkron bir Response"
+            },
+            "correct": "B",
+            "explanation": "`fetch` ağ isteğini başlatır ve bir `Response` döndüren Promise verir. Yanıt gövdesini JSON’a çevirmek ayrı bir adımdır; ayrıca HTTP 404/500 gibi durumlarda Promise genelde yine resolve olur, bu yüzden `response.ok` kontrolü önemlidir."
+        },
+        {
+            "No": 28,
+            "question": "Aşağıdaki kodda `data` nasıl elde edilir?\n\n`fetch('/api').then(r => r.json()).then(data => { ... })`\nBu akışın doğru açıklaması hangisidir?",
+            "options": {
+                "A": "`r.json()` senkron çalışır ve direkt obje döndürür",
+                "B": "`r.json()` bir Promise döndürür, ikinci `then` gerçek JSON verisini alır",
+                "C": "`fetch` JSON’u otomatik parse eder, `r.json()` gereksizdir",
+                "D": "Bu kod sadece jQuery ile çalışır",
+                "E": "`then` sadece döngülerde kullanılır"
+            },
+            "correct": "B",
+            "explanation": "Yanıt gövdesini JSON’a dönüştürmek de asenkron bir işlemdir ve Promise üretir. Bu Promise çözüldüğünde gerçek veri sonraki adımda elde edilir; zincirde bu ayrımı bilmek sık yapılan hataları azaltır."
+        },
+        {
+            "No": 29,
+            "question": "Aşağıdakilerden hangisi bir hata yakalama (error handling) yaklaşımıdır?",
+            "options": {
+                "A": "try/catch",
+                "B": "if/else",
+                "C": "switch/case",
+                "D": "for/while",
+                "E": "return/break"
+            },
+            "correct": "A",
+            "explanation": "Bu yapı, hata üretebilecek kodu güvenli bir çerçeveye alır ve hata oluşursa kontrolü yakalama bloğuna aktarır. `await` kullanılan asenkron akışlarda da aynı şekilde hata yönetimi için tercih edilir."
+        },
+        {
+            "No": 30,
+            "question": "LocalStorage ile ilgili en doğru ifade hangisidir?",
+            "options": {
+                "A": "Veriler sadece sekme kapanana kadar saklanır (session)",
+                "B": "Anahtar-değer (key-value) olarak string saklar",
+                "C": "Sadece sayı saklar",
+                "D": "Sunucuda saklanır",
+                "E": "Sadece POST ile çalışır"
+            },
+            "correct": "B",
+            "explanation": "Tarayıcıda kalıcı anahtar-değer depolama sağlar ve değerler string olarak tutulur. Nesne/array saklamak için JSON’a çevirip geri almak gerekir; ayrıca API senkron çalıştığı için çok büyük veriler performansı etkileyebilir."
+        },
+        {
+            "No": 31,
+            "question": "Aşağıdakilerden hangisi `localStorage`’a veri yazmanın doğru yoludur?",
+            "options": {
+                "A": "localStorage.add('theme', 'dark')",
+                "B": "localStorage.setItem('theme', 'dark')",
+                "C": "localStorage.write('theme', 'dark')",
+                "D": "localStorage.save('theme', 'dark')",
+                "E": "localStorage.put('theme', 'dark')"
+            },
+            "correct": "B",
+            "explanation": "Depolama için standart yöntem `setItem`, okuma için `getItem`’dır. Değerler string olduğu için sayı/nesne saklarken dönüşüm adımını unutmamak gerekir."
+        },
+        {
+            "No": 32,
+            "question": "Aşağıdaki kod ne yapar? `document.querySelectorAll('.item')`",
+            "options": {
+                "A": "Sadece ilk `.item` elementini döndürür",
+                "B": "Tüm `.item` elementlerini seçer ve NodeList döndürür",
+                "C": "Sadece id’si item olanı seçer",
+                "D": "CSS dosyasını okur",
+                "E": "NodeList yerine string döndürür"
+            },
+            "correct": "B",
+            "explanation": "Seçiciye uyan tüm öğeleri bulur ve bir NodeList döndürür; bu liste çoğu modern tarayıcıda `forEach` ile gezilebilir. Tek bir eşleşme gerekiyorsa `querySelector` daha uygundur."
+        },
+        {
+            "No": 33,
+            "question": "Aşağıdakilerden hangisi bir formdaki input değerini almak için tipik bir yaklaşımdır?\n\nHTML: `<input id=\"email\" />`",
+            "options": {
+                "A": "document.getElementById('email').value",
+                "B": "document.getElementById('email').textContent",
+                "C": "document.getElementById('email').innerHTML",
+                "D": "window.email.value",
+                "E": "document.email.value"
+            },
+            "correct": "A",
+            "explanation": "Input gibi form kontrollerinde kullanıcı girdisi `value` alanında tutulur. `textContent`/`innerHTML` ise öğenin metinsel/HTML içeriğiyle ilgilidir ve input değerini temsil etmez."
+        },
+        {
+            "No": 34,
+            "question": "Aşağıdakilerden hangisi `NaN` için doğru bir ifadedir?",
+            "options": {
+                "A": "`NaN === NaN` true döner",
+                "B": "`NaN` bir sayıdır (number) ama ‘not a number’ değerini temsil eder",
+                "C": "`NaN` sadece string türündedir",
+                "D": "`NaN` null ile aynıdır",
+                "E": "`NaN` hiç oluşmaz"
+            },
+            "correct": "B",
+            "explanation": "`NaN`, tür olarak `number` olsa da geçersiz sayısal işlemleri temsil eder. Kendisine eşit olmaması yüzünden özel kontrol fonksiyonları kullanılır; özellikle `Number.isNaN(...)` daha güvenilir bir kontroldür."
+        },
+        {
+            "No": 35,
+            "question": "Aşağıdakilerden hangisi bir değişkenin tanımlı olup olmadığını güvenli kontrol etmenin yollarından biridir?",
+            "options": {
+                "A": "`if (x == null)` her durumda güvenlidir",
+                "B": "`typeof x === 'undefined'`",
+                "C": "`x === undefined` her durumda hatasızdır",
+                "D": "`defined(x)`",
+                "E": "`isset(x)`"
+            },
+            "correct": "B",
+            "explanation": "Değişken hiç tanımlanmamış olsa bile `typeof` kontrolü ReferenceError üretmez; bu yüzden güvenli bir “var mı?” kontrolü sağlar. Nesne özellikleri içinse farklı bir kontrol (ör. `in` operatörü) daha uygun olabilir."
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+    "unitNumber": 3,
+    "unitTitle": "Tasarım Süreci",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Gömülü sistem tasarım sürecinde “gereksinim analizi” aşamasında aşağıdakilerden hangisi en doğru hedeflerden biridir?",
+            "options": {
+                "A": "Kod yazmaya başlayıp sonra hedefleri belirlemek",
+                "B": "Fonksiyon, zamanlama (deadline/latency/jitter), kaynak (bellek/güç/maliyet) ve güvenilirlik gereksinimlerini netleştirmek",
+                "C": "Sadece kullanılan programlama dilini seçmek",
+                "D": "Sadece kasa tasarımını bitirmek",
+                "E": "Sadece sensör marka modelini seçmek"
+            },
+            "correct": "B",
+            "explanation": "Gereksinim analizi “ne istiyoruz?” sorusunu net cümlelere çevirir. Fonksiyonel gereksinimler (Sense–Process–Act akışı), zaman gereksinimleri (deadline, periyot, maksimum gecikme, jitter), kaynak gereksinimleri (RAM/Flash/CPU/güç/maliyet/boyut) ve güvenilirlik/emniyet gereksinimleri bu aşamada belirginleştirilir. Belirsiz cümleler yerine ölçülebilir/ doğrulanabilir hedefler yazmak esastır."
+        },
+        {
+            "No": 2,
+            "question": "Aşağıdakilerden hangisi fonksiyonel gereksinime örnektir?",
+            "options": {
+                "A": "Sistem 10 ms’den fazla gecikmeyecek",
+                "B": "Sistem 1 saniyede bir sıcaklığı ölçüp hedef değerle karşılaştırarak ısıtıcıyı kontrol edecek",
+                "C": "Batarya en az 1 yıl dayanacak",
+                "D": "Ürün maliyeti 100 TL’yi geçmeyecek",
+                "E": "Jitter en fazla 2 ms olacak"
+            },
+            "correct": "B",
+            "explanation": "Fonksiyonel gereksinimler sistemin “ne yapacağını” tanımlar. Örnekte ölçüm alma, karşılaştırma ve kontrol etme net bir işlevdir. Diğer şıklar zamanlama, güç ve maliyet gibi fonksiyon dışı (non-functional) gereksinimlerdir."
+        },
+        {
+            "No": 3,
+            "question": "Mimari tasarım aşamasında aşağıdaki kararlardan hangisi doğrudan verilir?",
+            "options": {
+                "A": "Sadece değişken isimleri",
+                "B": "Donanım–yazılım bölüşümü ve sistemin modüler yapısı (sürücüler/uygulama/haberleşme)",
+                "C": "Sadece kartın renk seçimi",
+                "D": "Sadece final sınavı çalışma planı",
+                "E": "Sadece kablo uzunluğu"
+            },
+            "correct": "B",
+            "explanation": "Mimari tasarım “nasıl yapacağız?” sorusunu cevaplar. Donanım-yazılım bölüşümü (hangi iş donanımda/hangi iş yazılımda), MCU/MPU/SoC seçimi, super-loop mu RTOS mu, modüller arası sınırlar (sensör katmanı, sürücüler, kontrol, haberleşme) bu aşamada şekillenir."
+        },
+        {
+            "No": 4,
+            "question": "Bileşen seçimi yapılırken sadece CPU hızına bakmak neden hatalı bir yaklaşımdır?",
+            "options": {
+                "A": "Çünkü CPU hızı her zaman gereksizdir",
+                "B": "Çünkü RAM/Flash, ADC/PWM, timer, haberleşme birimleri ve güç modları gibi çevresel yetenekler de gereksinimleri karşılamalıdır",
+                "C": "Çünkü bileşen seçimi sadece yazılım diline bağlıdır",
+                "D": "Çünkü hız arttıkça maliyet her zaman düşer",
+                "E": "Çünkü hız sadece ekran kalitesini etkiler"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemlerde başarı yalnız ham CPU hızına bağlı değildir. RAM/Flash kapasitesi, ADC çözünürlüğü, PWM/timer sayısı, UART/I2C/SPI/CAN gibi çevre birimleri, güç modları ve maliyet/tedarik durumu gibi faktörler birlikte değerlendirilmelidir. Aksi halde hızlı ama işlevsel olarak yetersiz bir seçim yapılabilir."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi “tasarımda denge (trade-off)” örneğidir?",
+            "options": {
+                "A": "Daha hızlı CPU seçmek genellikle daha yüksek maliyet ve güç tüketimi getirebilir",
+                "B": "Daha çok test yapmak her zaman maliyeti düşürür",
+                "C": "Daha çok özellik eklemek her zaman time-to-market’i kısaltır",
+                "D": "Daha düşük güç tüketimi her zaman daha yüksek performans verir",
+                "E": "Tasarımda trade-off yoktur"
+            },
+            "correct": "A",
+            "explanation": "Notlarda performans, fonksiyonellik, maliyet ve time-to-market arasında denge kurmanın zor olduğu vurgulanır. Daha hızlı işlemci seçmek performansı artırabilir; fakat maliyeti ve güç tüketimini de artırabilir. Bu tür karşılıklı etkiler trade-off örneğidir."
+        },
+        {
+            "No": 6,
+            "question": "Derste geçen “6 kriter” çerçevesine göre, görüntü işleme veya yapay zeka gibi ileri iş yüklerinde aşağıdaki platformlardan hangisi daha uygundur?",
+            "options": {
+                "A": "Basit 8-bit MCU (Arduino sınıfı)",
+                "B": "MPU/SoC sınıfı bir platform (Raspberry Pi / Jetson gibi)",
+                "C": "Sadece pasif sensör devresi",
+                "D": "Sadece röle devresi",
+                "E": "Program belleği olmayan bir sistem"
+            },
+            "correct": "B",
+            "explanation": "İşlem yoğunluğu ve karmaşıklık kriterine göre görüntü işleme/AI gibi işler yüksek hesap gücü ve bellek ister. Bu tür senaryolarda MPU/SoC (ör. Raspberry Pi, Jetson) daha uygundur. Arduino sınıfı MCU’lar genelde hem bellek hem performans açısından yetersiz kalır."
+        },
+        {
+            "No": 7,
+            "question": "Hard real-time gerektiren bir projede platform seçiminde aşağıdaki yaklaşımlardan hangisi daha doğru eğilimdir?",
+            "options": {
+                "A": "İşletim sistemi üzerinde çalışan genel amaçlı bilgisayar (öngörülemez gecikme olabilir)",
+                "B": "İşletim sistemi yükü az olan veya doğrudan MCU/RTOS ile deterministik gecikmeye daha yakın yaklaşım",
+                "C": "Sadece en yüksek çözünürlüklü ekran seçimi",
+                "D": "Sadece WiFi üzerinden kontrol",
+                "E": "Sadece bulut tabanlı işlem"
+            },
+            "correct": "B",
+            "explanation": "Hard real-time’da en kritik konu deterministik (öngörülebilir) gecikmedir. Bu nedenle işletim sistemi kaynaklı beklenmeyen gecikmelerin daha az olduğu MCU/RTOS gibi çözümler genellikle tercih edilir. Bu, “kesin zamanlama” vurgusuyla da uyumludur."
+        },
+        {
+            "No": 8,
+            "question": "Bellek ihtiyacı kriteri açısından, “kütüphane kullanmak” neden tasarım kararıdır?",
+            "options": {
+                "A": "Kütüphaneler bellek tüketmez",
+                "B": "Hazır kütüphaneler geliştirmeyi hızlandırır ama kod boyutunu (Flash/ROM) şişirerek bellek sorununa yol açabilir",
+                "C": "Kütüphaneler sadece donanımı değiştirir",
+                "D": "Kütüphaneler sadece kablo seçimini etkiler",
+                "E": "Kütüphane kullanımı sadece sınavda önemlidir"
+            },
+            "correct": "B",
+            "explanation": "Notlarda kodun derlenip ‘hex/firmware’ olarak Flash’ta yer kapladığı ve Servo.h gibi kütüphanelerin bellek maliyeti olabileceği vurgulanır. Kütüphane kullanmak geliştirmeyi hızlandırır; ancak bellek yetmezse daha hafif çözüm, gereksiz fonksiyonları kaldırma veya register seviyesine inme gibi kararlar gündeme gelir."
+        },
+        {
+            "No": 9,
+            "question": "“Test edilebilirlik” (debug planı) düşüncesi tasarım sürecinde neden erken ele alınmalıdır?",
+            "options": {
+                "A": "Çünkü debug yalnızca ürün piyasaya çıktıktan sonra yapılır",
+                "B": "Çünkü gömülü sistemlerde arayüz kısıtlıdır; log/test noktaları gibi mekanizmaları baştan planlamak hata ayıklamayı mümkün kılar",
+                "C": "Çünkü test planı maliyeti hiç etkilemez",
+                "D": "Çünkü test sadece yazılım diline bağlıdır",
+                "E": "Çünkü debug için internet her zaman zorunludur"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemlerde ekran/klavye gibi arayüzler sınırlı olabilir. Bu yüzden UART log, LED durum göstergeleri, test pinleri gibi debug kolaylaştırıcıları baştan tasarlamak gerekir. Aksi halde entegrasyon sırasında sorun kaynağı bulunamaz ve geliştirme süresi uzar."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdakilerden hangisi “donanım–yazılım bölüşümü” kararına örnektir?",
+            "options": {
+                "A": "PWM üretimini timer donanımında yapmak veya yazılımda bit-banging ile yapmak",
+                "B": "Sadece değişkenleri global yapmak",
+                "C": "Sadece yorum satırı eklemek",
+                "D": "Sadece derleyici uyarılarını kapatmak",
+                "E": "Sadece kasa vidasını değiştirmek"
+            },
+            "correct": "A",
+            "explanation": "Donanım–yazılım bölüşümü, belirli bir işlevin donanım birimlerine mi (timer/PWM modülü gibi) yoksa yazılıma mı bırakılacağını seçmektir. PWM’i donanım timer’ı ile üretmek genelde daha hassas/deterministiktir; yazılım bit-banging ise CPU’yu meşgul edip jitter yaratabilir."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdakilerden hangisi bir gereksinimi “ölçülebilir/doğrulanabilir” hale getirme örneğidir?",
+            "options": {
+                "A": "“Sistem hızlı olsun.”",
+                "B": "“Sistem iyi çalışsın.”",
+                "C": "“Sistem 1 saniyede bir ölçüm alacak, maksimum gecikme 10 ms olacak.”",
+                "D": "“Sistem modern olsun.”",
+                "E": "“Sistem güzel görünsün.”"
+            },
+            "correct": "C",
+            "explanation": "Gereksinim analizi belirsiz ifadeleri ölçülebilir hedeflere dönüştürür. Örnekleme periyodu, maksimum gecikme, doğruluk gibi metrikler doğrulanabilir gereksinimlerdir. Bu tür netlik hem bileşen seçiminde hem test planında doğrudan kullanılır."
+        },
+        {
+            "No": 12,
+            "question": "Bir proje için “gerçek zamanlılık” gereksinimini değerlendirirken aşağıdakilerden hangisi en doğru bakış açısıdır?",
+            "options": {
+                "A": "Sadece CPU saat frekansına bakmak",
+                "B": "Worst-case (en kötü durum) gecikmeyi ve jitter’ı değerlendirip deadline’a uyumu garanti edecek mimariyi seçmek",
+                "C": "Sadece RAM’i büyütmek",
+                "D": "Sadece WiFi eklemek",
+                "E": "Sadece ekran çözünürlüğünü artırmak"
+            },
+            "correct": "B",
+            "explanation": "Real-time tasarımda kritik olan worst-case gecikme ve jitter’dır. Deadline’a uyum, kesme stratejileri, RTOS seçimi, task öncelikleri ve donanım çevre birimlerinin kullanımı gibi mimari kararlarla sağlanır. Bu yüzden sadece saat frekansı gibi tek metrikle karar vermek eksik kalır."
+        },
+        {
+            "No": 13,
+            "question": "Tasarım sürecinde “bileşen seçimi” aşamasında aşağıdaki kriterlerden hangisi sensör seçimiyle en doğrudan ilişkilidir?",
+            "options": {
+                "A": "Çözünürlük/doğrusallık/ölçüm aralığı/tepki süresi",
+                "B": "Sadece veri yolu genişliği",
+                "C": "Sadece ekran kartı modeli",
+                "D": "Sadece yazılım lisansı",
+                "E": "Sadece kasa rengi"
+            },
+            "correct": "A",
+            "explanation": "Sensör seçimi ölçüm kalitesini belirler. Ders notlarında sensörler için çözünürlük, doğrusallık ve aralık gibi performans kavramları vurgulanır. Uygulamaya göre tepki süresi, maliyet ve çevresel dayanım gibi kriterler de eklenebilir."
+        },
+        {
+            "No": 14,
+            "question": "Bir tasarımın “güvenilirlik” hedefi arttırıldığında aşağıdaki sonuçlardan hangisi en olasıdır?",
+            "options": {
+                "A": "Test kapsamı ve doğrulama süreci artar; time-to-market uzayabilir",
+                "B": "Maliyet her zaman düşer",
+                "C": "Kod boyutu her zaman sıfıra iner",
+                "D": "Güç tüketimi her zaman azalır",
+                "E": "Haberleşme ihtiyacı tamamen yok olur"
+            },
+            "correct": "A",
+            "explanation": "Güvenilirliği artırmak için daha fazla test, daha sıkı hata yönetimi, fail-safe tasarım ve doğrulama gerekir. Bu durum geliştirme süresini uzatıp time-to-market’i etkileyebilir ve maliyeti artırabilir. Bu, trade-off örneğidir."
+        },
+        {
+            "No": 15,
+            "question": "Aşağıdakilerden hangisi “işlem yoğunluğu ve karmaşıklık” kriterine göre orta seviyeye daha yakındır?",
+            "options": {
+                "A": "Sadece LED yak-söndür",
+                "B": "Wi-Fi haberleşmesi + PID kontrol + RFID okuma gibi karma görevler",
+                "C": "Derin öğrenme ile görüntü sınıflandırma",
+                "D": "Hiç işlem yapmadan pasif ölçüm",
+                "E": "Sadece mekanik anahtar"
+            },
+            "correct": "B",
+            "explanation": "Notlarda basit seviye için sensör okuma/röle gibi görevler, orta seviye için Wi-Fi haberleşmesi, PID kontrol ve RFID gibi daha karmaşık ama hâlâ MCU seviyesinde çözülebilen işler örneklenir. İleri seviye ise görüntü işleme/AI gibi yüksek hesap gücü isteyen işlerdir."
+        },
+        {
+            "No": 16,
+            "question": "Aşağıdakilerden hangisi “yazılım ekosistemi ve geliştirme kolaylığı” kriterinin önemini en iyi gösterir?",
+            "options": {
+                "A": "Sürücü/kütüphane desteği zayıfsa en iyi donanım bile projeyi uzatıp riskli hale getirebilir",
+                "B": "Ekosistem yalnız sınav için önemlidir",
+                "C": "Ekosistem yalnız kasa tasarımını etkiler",
+                "D": "Kütüphaneler bellek tüketmediği için ekosistem fark etmez",
+                "E": "Ekosistem sadece kablo seçimine bağlıdır"
+            },
+            "correct": "A",
+            "explanation": "Donanımın kağıt üzerindeki kapasitesi kadar, sürücü/kütüphane/araç zinciri (IDE, derleyici, debug araçları) desteği de geliştirme süresini belirler. Uygun ekosistem yoksa time-to-market uzar ve hata riski artar."
+        },
+        {
+            "No": 17,
+            "question": "Bir ürünün maliyetini değerlendirirken aşağıdakilerden hangisi ders notlarındaki bakış açısına en uygundur?",
+            "options": {
+                "A": "Maliyet sadece parça fiyatıdır",
+                "B": "Maliyet; donanım + yazılım geliştirme süresi + üretim/test gibi toplam kalemlerin birleşimidir",
+                "C": "Maliyet sadece CPU hızına bağlıdır",
+                "D": "Maliyet sadece enerji tüketimidir",
+                "E": "Maliyet sadece pazarlama bütçesidir"
+            },
+            "correct": "B",
+            "explanation": "Notlarda maliyetin kritik olduğu, ayrıca geliştirme ve üretim maliyetlerinin de toplam maliyetin parçası olduğu vurgulanır. Daha karmaşık donanım veya daha düşük seviyeli yazılım yaklaşımı geliştirme süresini artırabilir; bu da maliyetin bir parçasıdır."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi tasarım sürecinde “tek değişken yaklaşımı” ile aynı mantıktadır?",
+            "options": {
+                "A": "Aynı anda hem donanımı hem yazılımı hem kabloyu değiştirip sonucu gözlemek",
+                "B": "Bir denemede sadece tek değişiklik yapıp etkisini ölçmek",
+                "C": "Hiç test yapmadan üretime geçmek",
+                "D": "Hataları görmezden gelmek",
+                "E": "Tüm sensörleri aynı pine bağlamak"
+            },
+            "correct": "B",
+            "explanation": "Tasarım ve entegrasyon süreçlerinde sorun kök nedenini bulmak için aynı anda çok değişkeni değiştirmemek gerekir. Tek değişken yaklaşımı, hangi değişikliğin hangi etkiyi doğurduğunu izole etmeyi sağlar."
+        },
+        {
+            "No": 19,
+            "question": "Bir gereksinim “batarya en az 1 yıl dayanacak” ise, aşağıdaki tasarım kararlarından hangisi doğrudan bu gereksinimi hedefler?",
+            "options": {
+                "A": "Uyku modları ve enerji yönetimi stratejisi tasarlamak",
+                "B": "Sadece ekran parlaklığını artırmak",
+                "C": "Sadece CPU frekansını sürekli maksimum yapmak",
+                "D": "Haberleşmeyi sürekli aktif tutmak",
+                "E": "Her döngüde gereksiz log basmak"
+            },
+            "correct": "A",
+            "explanation": "Güç tüketimi kriteri pilli sistemlerde belirleyicidir. Uyku modları, periyodik uyanma, düşük güç sensör seçimi ve haberleşme duty-cycle yönetimi gibi stratejiler batarya ömrünü doğrudan etkiler."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdakilerden hangisi tasarım sürecinin doğru sıralamasına en yakındır?",
+            "options": {
+                "A": "Bileşen seçimi → Kodlama → Gereksinim analizi",
+                "B": "Gereksinim analizi → Mimari tasarım → Bileşen seçimi (sonra entegrasyon/test)",
+                "C": "Kodlama → Kasa tasarımı → Gereksinim analizi",
+                "D": "Üretim → Test → Tasarım",
+                "E": "Rastgele sıra önemli değil"
+            },
+            "correct": "B",
+            "explanation": "Ders notlarındaki akış “Ne istiyoruz?” (gereksinim analizi) → “Nasıl yapacağız?” (mimari tasarım) → “Neyi kullanacağız?” (bileşen seçimi) şeklindedir. Ardından entegrasyon ve test/hata ayıklama gelir. Bu sıralama belirsizliği azaltır ve yanlış bileşen seçimi riskini düşürür."
+        }
+    ]
+}

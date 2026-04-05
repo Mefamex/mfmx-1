@@ -1,0 +1,462 @@
+{
+    "unitNumber": 5,
+    "unitTitle": "jQuery: Seçiciler, DOM İşlemleri ve AJAX",
+    "questionCount": 35,
+    "questions": [
+        {
+            "No": 1,
+            "question": "jQuery’de bir element seçmek için kullanılan temel fonksiyon hangisidir?",
+            "options": {
+                "A": "query()",
+                "B": "$()",
+                "C": "get()",
+                "D": "select()",
+                "E": "pick()"
+            },
+            "correct": "B",
+            "explanation": "jQuery’de hemen her şey `$()` ile başlar: CSS seçicisi vererek öğeleri seçer veya bir DOM öğesini jQuery koleksiyonuna sararsın. Dönen nesne zincirleme (chaining) API sunduğu için ardışık işlemler kolaylaşır."
+        },
+        {
+            "No": 2,
+            "question": "Aşağıdakilerden hangisi id’si `menu` olan elementi jQuery ile seçer?",
+            "options": {
+                "A": "$('menu')",
+                "B": "$('#menu')",
+                "C": "$('.menu')",
+                "D": "$('id=menu')",
+                "E": "$('menu#')"
+            },
+            "correct": "B",
+            "explanation": "jQuery seçicileri CSS sözdizimini takip eder. Kimlik seçimi `#` ile yapılır ve hedef öğenin sayfa içinde benzersiz olması beklenir."
+        },
+        {
+            "No": 3,
+            "question": "Aşağıdakilerden hangisi class’ı `card` olan tüm elementleri jQuery ile seçer?",
+            "options": {
+                "A": "$('#card')",
+                "B": "$('card')",
+                "C": "$('.card')",
+                "D": "$('class=card')",
+                "E": "$('..card')"
+            },
+            "correct": "C",
+            "explanation": "Sınıf seçimi nokta ile yapılır ve aynı sınıfa sahip tüm öğeleri seçebilir. Sonuç tek bir öğe olmak zorunda değildir; jQuery koleksiyonu 0, 1 veya çok sayıda öğe içerebilir."
+        },
+        {
+            "No": 4,
+            "question": "jQuery’de DOM hazır olunca çalıştırmak için doğru kullanım hangisidir?",
+            "options": {
+                "A": "$(document).ready(function(){ ... })",
+                "B": "$(window).load(function(){ ... })",
+                "C": "document.ready(function(){ ... })",
+                "D": "$().domReady = function(){ ... }",
+                "E": "$(document).start(function(){ ... })"
+            },
+            "correct": "A",
+            "explanation": "Bu kalıp, DOM ağacı oluşturulup etiketler erişilebilir hale geldiğinde çalışır; görsellerin tamamen yüklenmesini beklemez. Kısa yazım olarak `$(function(){ ... })` da aynı amacı görür."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi `$(function(){ ... })` kısaltmasının anlamıdır?",
+            "options": {
+                "A": "Sayfa tamamen (resimler dahil) yüklendiğinde çalışır",
+                "B": "DOM hazır olduğunda çalışır (document ready)",
+                "C": "Sadece mobilde çalışır",
+                "D": "Sadece CSS yüklendiğinde çalışır",
+                "E": "Kodun senkron çalışmasını sağlar"
+            },
+            "correct": "B",
+            "explanation": "Bu kullanım, document-ready için kısayoldur: HTML parse edilip DOM hazır olduğunda tetiklenir. “Her şey yüklendi” (window load) ile karıştırmamak gerekir."
+        },
+        {
+            "No": 6,
+            "question": "jQuery’de seçilen elementin metnini okumak için hangi metot kullanılır? (Sadece text) ",
+            "options": {
+                "A": ".html()",
+                "B": ".text()",
+                "C": ".val()",
+                "D": ".css()",
+                "E": ".attr()"
+            },
+            "correct": "B",
+            "explanation": "Metin içeriğini güvenli şekilde okur/yazar; HTML olarak yorumlamaz. HTML ekleme ihtiyacı varsa farklı bir metot kullanılır; kullanıcı girdisini HTML’e basmak güvenlik riski doğurabileceği için dikkat ister."
+        },
+        {
+            "No": 7,
+            "question": "Seçilen elementin HTML içeriğini (tag’lerle birlikte) almak/set etmek için hangi metot kullanılır?",
+            "options": {
+                "A": ".text()",
+                "B": ".html()",
+                "C": ".val()",
+                "D": ".prop()",
+                "E": ".appendTo()"
+            },
+            "correct": "B",
+            "explanation": "Seçilen öğenin HTML içeriğini alır veya değiştirir (innerHTML benzeri). Dinamik HTML basarken XSS riskine karşı içerik kaynağına güvenmek veya sanitize etmek önemlidir."
+        },
+        {
+            "No": 8,
+            "question": "Bir `<input>` alanının değerini okumak için jQuery’de en uygun metot hangisidir?",
+            "options": {
+                "A": ".text()",
+                "B": ".html()",
+                "C": ".val()",
+                "D": ".value()",
+                "E": ".input()"
+            },
+            "correct": "C",
+            "explanation": "Input/select/textarea gibi form kontrollerinin değeri bu metotla okunur ve yazılır. Çoklu seçimli select’lerde sonuç dizi şeklinde gelebileceği için tipini kontrol etmek faydalıdır."
+        },
+        {
+            "No": 9,
+            "question": "Bir elemente class eklemek için doğru jQuery metodu hangisidir?",
+            "options": {
+                "A": ".addClass()",
+                "B": ".appendClass()",
+                "C": ".insertClass()",
+                "D": ".setClass()",
+                "E": ".classAdd()"
+            },
+            "correct": "A",
+            "explanation": "Seçilen öğelere sınıf ekler; mevcut sınıfları silmez. Birden fazla sınıf eklemek istersen boşlukla ayrılmış bir liste de verebilirsin."
+        },
+        {
+            "No": 10,
+            "question": "Bir elementte class var mı diye kontrol etmek için hangi metot kullanılır?",
+            "options": {
+                "A": ".hasClass()",
+                "B": ".checkClass()",
+                "C": ".containsClass()",
+                "D": ".existsClass()",
+                "E": ".isClass()"
+            },
+            "correct": "A",
+            "explanation": "Belirli bir sınıfın varlığını boolean olarak döndürür. Seçim birden fazla öğe içeriyorsa kontrol, koleksiyonun en az bir öğesinde sınıf bulunmasına göre sonuç verir."
+        },
+        {
+            "No": 11,
+            "question": "Seçilen element(ler)e inline CSS eklemek için doğru kullanım hangisidir?",
+            "options": {
+                "A": "$('.box').style('color','red')",
+                "B": "$('.box').css('color','red')",
+                "C": "$('.box').setCss('color','red')",
+                "D": "$('.box').color('red')",
+                "E": "$('.box').format('color:red')"
+            },
+            "correct": "B",
+            "explanation": "Inline stil uygular veya okur; tek tek `property, value` verilebildiği gibi bir obje de geçirilebilir. Performans için sık değişen stillerde sınıf toggling yaklaşımı daha sürdürülebilir olabilir."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdaki kod ne yapar? `$('.btn').on('click', function(){ ... })`",
+            "options": {
+                "A": "Butonun tıklanmasını engeller",
+                "B": "`.btn` sınıfındaki elemanlara click event listener ekler",
+                "C": "Sadece ilk butona event ekler",
+                "D": "Sayfayı yeniden yükler",
+                "E": "Butonları gizler"
+            },
+            "correct": "B",
+            "explanation": "Bu metot, seçilen öğelere olay dinleyicisi bağlar ve modern jQuery yaklaşımı olarak kabul edilir. Dinamik eklenen öğeler için delegasyon desenini desteklemesi önemli bir avantajdır."
+        },
+        {
+            "No": 13,
+            "question": "jQuery’de tek bir click handler eklemek için eski ama yaygın kısayol hangisidir?",
+            "options": {
+                "A": ".click(function(){ ... })",
+                "B": ".clicked(function(){ ... })",
+                "C": ".onClick(function(){ ... })",
+                "D": ".tap(function(){ ... })",
+                "E": ".fire('click', ...)"
+            },
+            "correct": "A",
+            "explanation": "Click olayı için pratik bir kısayoldur; ancak delegasyon ve daha esnek kullanım için çoğu senaryoda `.on(...)` tercih edilir. Eski projelerde sık görülse de mantığı aynı olay bağlama işlemidir."
+        },
+        {
+            "No": 14,
+            "question": "Event delegation (olay delegasyonu) için en doğru örnek hangisidir? (Dinamik eklenen `li`’ler de çalışsın)",
+            "options": {
+                "A": "$('li').on('click', handler)",
+                "B": "$('#list').on('click', 'li', handler)",
+                "C": "$('li').delegateOff('click')",
+                "D": "$('#list').click('li', handler)",
+                "E": "$(document).on('li', 'click', handler)"
+            },
+            "correct": "B",
+            "explanation": "Olay delegasyonu, dinleyiciyi üst kapsayıcıya bağlayıp hedef seçiciyi filtrelemeye dayanır; böylece sonradan eklenen öğeler de yakalanır. Bu yaklaşım, çok sayıda öğeye tek tek handler bağlamaktan daha verimli olabilir."
+        },
+        {
+            "No": 15,
+            "question": "Aşağıdakilerden hangisi jQuery’de bir elementi gizlemek için kullanılan metottur?",
+            "options": {
+                "A": ".hide()",
+                "B": ".invisible()",
+                "C": ".displayNone()",
+                "D": ".off()",
+                "E": ".mute()"
+            },
+            "correct": "A",
+            "explanation": "Öğeyi görünmez yapar ve çoğunlukla `display: none` mantığıyla yerleşimden çıkarır. İstenirse süre verilerek animasyonlu gizleme davranışı da kullanılabilir."
+        },
+        {
+            "No": 16,
+            "question": "Aşağıdakilerden hangisi jQuery’de bir elementi göstermek için kullanılan metottur?",
+            "options": {
+                "A": ".show()",
+                "B": ".visible()",
+                "C": ".displayBlock()",
+                "D": ".onShow()",
+                "E": ".revealNow()"
+            },
+            "correct": "A",
+            "explanation": "Gizlenmiş bir öğeyi tekrar görünür yapar ve jQuery çoğu durumda önceki display davranışını geri getirmeye çalışır. Süre parametresiyle animasyonlu gösterme de yapılabilir."
+        },
+        {
+            "No": 17,
+            "question": "`.toggle()` metodu için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Sadece class değiştirir",
+                "B": "Gizliyse gösterir, görünürse gizler",
+                "C": "Elementi siler",
+                "D": "Sadece inputlarda çalışır",
+                "E": "Sadece `display: inline` yapar"
+            },
+            "correct": "B",
+            "explanation": "Mevcut görünürlük durumuna göre göster/gizle arasında geçiş yapar. Görünürlüğü yönetmenin başka bir yolu da sınıf ekleyip CSS üzerinden kontrol etmektir; hangi yaklaşımın doğru olduğu senaryoya bağlıdır."
+        },
+        {
+            "No": 18,
+            "question": "jQuery’de DOM’a en sona eleman eklemek için hangisi kullanılır?",
+            "options": {
+                "A": ".prepend()",
+                "B": ".append()",
+                "C": ".before()",
+                "D": ".after()",
+                "E": ".replaceWith()"
+            },
+            "correct": "B",
+            "explanation": "Seçilen öğenin içine en sona yeni içerik ekler; aynı mantıkla başa eklemek için başka bir ekleme metodu kullanılır. DOM eklemelerinde “içine mi, yanına mı?” ayrımını bilmek yerleşim hatalarını önler."
+        },
+        {
+            "No": 19,
+            "question": "Seçilen elementin içine en başa eleman eklemek için hangisi kullanılır?",
+            "options": {
+                "A": ".append()",
+                "B": ".prepend()",
+                "C": ".before()",
+                "D": ".after()",
+                "E": ".wrap()"
+            },
+            "correct": "B",
+            "explanation": "Seçilen öğenin içine en başa içerik ekler; yani öğenin çocuklarının önüne yerleştirir. Kardeş olarak eklemek gerekiyorsa farklı ekleme metotları tercih edilir."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdakilerden hangisi seçilen elementin kendisinden önce (sibling olarak) eleman ekler?",
+            "options": {
+                "A": ".append()",
+                "B": ".prepend()",
+                "C": ".before()",
+                "D": ".insideBefore()",
+                "E": ".pre()"
+            },
+            "correct": "C",
+            "explanation": "Bu işlem, hedef öğenin içine değil; aynı ebeveyn altında hedefin “kardeşi” olarak ekleme yapar. Benzer şekilde hedefin arkasına eklemek de mümkündür; yerleşim kurarken bu fark önemlidir."
+        },
+        {
+            "No": 21,
+            "question": "Bir elementin attribute değerini (ör. `href`) okumak için doğru metot hangisidir?",
+            "options": {
+                "A": ".attr()",
+                "B": ".propOnly()",
+                "C": ".getAttrValue()",
+                "D": ".attribute()",
+                "E": ".readAttr()"
+            },
+            "correct": "A",
+            "explanation": "Öznitelik değerlerini okumak ve yazmak için kullanılır; tek argümanla okur, iki argümanla yazar. Öznitelik ile DOM özelliği (property) aynı şey değildir; bu ayrım bazı kontrollerde önem kazanır."
+        },
+        {
+            "No": 22,
+            "question": "Checkbox gibi boolean özelliklerde (checked/disabled) jQuery’de genelde hangi metot daha uygundur?",
+            "options": {
+                "A": ".attr()",
+                "B": ".prop()",
+                "C": ".css()",
+                "D": ".data()",
+                "E": ".bool()"
+            },
+            "correct": "B",
+            "explanation": "Checkbox’ın işaretli olması gibi boolean durumlarda DOM property’si daha doğru kaynaktır; bu yüzden `.prop(...)` tercih edilir. `.attr(...)` ise HTML özniteliklerine daha yakındır ve “başlangıç değeri” ile “anlık durum” ayrımı yapabilir."
+        },
+        {
+            "No": 23,
+            "question": "jQuery’de AJAX isteği atmak için kullanılan en yaygın genel metot hangisidir?",
+            "options": {
+                "A": "$.request()",
+                "B": "$.ajax()",
+                "C": "$.http()",
+                "D": "$.fetch()",
+                "E": "$.send()"
+            },
+            "correct": "B",
+            "explanation": "AJAX isteklerini en esnek şekilde yapılandırmaya yarar (URL, yöntem, data, dataType vb.). Daha basit senaryolar için kısayol metotları bulunur; yine de hata/success akışını düzgün yönetmek önemlidir."
+        },
+        {
+            "No": 24,
+            "question": "JSON veri çekmek için jQuery’de hazır bir kısayol metodu hangisidir?",
+            "options": {
+                "A": "$.getJSON()",
+                "B": "$.jsonGet()",
+                "C": "$.fetchJSON()",
+                "D": "$.readJSON()",
+                "E": "$.ajaxJSON()"
+            },
+            "correct": "A",
+            "explanation": "JSON dönen bir endpoint’ten veri çekmek için pratik bir kısayoldur. Günümüzde `fetch` yaygınlaşsa da jQuery kullanılan projelerde bu kalıp sık görülür."
+        },
+        {
+            "No": 25,
+            "question": "AJAX hatasını yakalamak için jQuery’de (Promise-benzeri) hangi metot zinciri kullanılabilir?",
+            "options": {
+                "A": ".catch()",
+                "B": ".error()",
+                "C": ".fail()",
+                "D": ".reject()",
+                "E": ".problem()"
+            },
+            "correct": "C",
+            "explanation": "AJAX çağrıları jqXHR döndürür ve `done/fail/always` gibi zincirlerle başarı-hata akışı yönetilir. Hata durumunda `.fail()` çalışır; loglama ve kullanıcıya geri bildirim burada ele alınır."
+        },
+        {
+            "No": 26,
+            "question": "Aşağıdakilerden hangisi jQuery’de element seti üzerinde döngü yapmak için kullanılır?",
+            "options": {
+                "A": ".for()",
+                "B": ".loop()",
+                "C": ".each()",
+                "D": ".iterate()",
+                "E": ".repeat()"
+            },
+            "correct": "C",
+            "explanation": "Seçilen öğeleri tek tek dolaşmak için kullanılır; callback içinde `this` genellikle ilgili DOM öğesini temsil eder. Diziler için `$.each` ve jQuery koleksiyonları için `.each` ayrımı sık yapılan bir detaydır."
+        },
+        {
+            "No": 27,
+            "question": "jQuery’de seçilen elemanın ilkini almak için en doğru yöntem hangisidir?",
+            "options": {
+                "A": ".first()",
+                "B": ".one()",
+                "C": ".head()",
+                "D": ".top()",
+                "E": ".start()"
+            },
+            "correct": "A",
+            "explanation": "Koleksiyondaki ilk öğeyi yine bir jQuery nesnesi olarak verir; böylece zincirlemeye devam edebilirsin. Ham DOM öğesi gerekirse jQuery koleksiyonundan indeksle erişmek mümkündür."
+        },
+        {
+            "No": 28,
+            "question": "Aşağıdakilerden hangisi jQuery’de bir animasyon örneğidir?",
+            "options": {
+                "A": ".animate({ opacity: 0.5 }, 400)",
+                "B": ".animation('fade')",
+                "C": ".cssAnimate()",
+                "D": ".transition()",
+                "E": ".moveTo()"
+            },
+            "correct": "A",
+            "explanation": "Belirli sayısal CSS özelliklerini (opacity, left/top gibi) zaman içinde değiştirerek animasyon üretir. Modern arayüzlerde performans için CSS transition/transform tercihleri de yaygındır; jQuery animasyonları daha çok basit efektlerde kullanılır."
+        },
+        {
+            "No": 29,
+            "question": "jQuery’de fade efektlerinden biri olan `.fadeOut()` için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Elementi görünür yapar",
+                "B": "Elementi opaklığını azaltarak gizler",
+                "C": "Elementin HTML’ini siler",
+                "D": "Sadece inputlarda çalışır",
+                "E": "Sadece renkleri değiştirir"
+            },
+            "correct": "B",
+            "explanation": "Önce opaklığı azaltarak kaybolma efekti verir, ardından öğeyi gizli duruma getirir. Geri göstermek için ters efekt metotları veya `.show()` benzeri yöntemler kullanılabilir."
+        },
+        {
+            "No": 30,
+            "question": "jQuery’de bir elementin bir attribute’una göre seçmek için doğru seçici hangisidir? (Örn: `data-role=\"admin\"`) ",
+            "options": {
+                "A": "$('[data-role=\"admin\"]')",
+                "B": "$('data-role=admin')",
+                "C": "$('.data-role-admin')",
+                "D": "$('#data-role:admin')",
+                "E": "$('data(role)=admin')"
+            },
+            "correct": "A",
+            "explanation": "Öznitelik seçicileri CSS ile aynı yazılır ve `data-*` gibi alanlarda çok kullanışlıdır. Değer karşılaştırması yapılırken tırnak kullanımı/kaçış kuralları doğru olmalıdır."
+        },
+        {
+            "No": 31,
+            "question": "jQuery’de `$(this)` ifadesi event handler içinde genelde neyi temsil eder?",
+            "options": {
+                "A": "Tüm sayfayı (document)",
+                "B": "Event’i tetikleyen DOM elemanının jQuery sarmalı (wrapper)",
+                "C": "Window nesnesini",
+                "D": "Bir string’i",
+                "E": "Sadece parent elementi"
+            },
+            "correct": "B",
+            "explanation": "Klasik `function(){}` handler’ında `this`, olayı tetikleyen DOM öğesini işaret eder; `$(this)` ise bunu jQuery sarmalına çevirir. Arrow function kullanılırsa `this` bağlamı değişebileceği için dikkat etmek gerekir."
+        },
+        {
+            "No": 32,
+            "question": "Aşağıdakilerden hangisi event handler’ı kaldırmak (unbind) için kullanılan modern jQuery metodudur?",
+            "options": {
+                "A": ".removeEvent()",
+                "B": ".off()",
+                "C": ".unbindAll()",
+                "D": ".detachEvent()",
+                "E": ".stopListen()"
+            },
+            "correct": "B",
+            "explanation": "Bağlanmış bir dinleyiciyi kaldırır; aynı handler referansını kullanmak gerekir. Eski API’lerde farklı isimler görülebilir ama modern yaklaşım bu metottur."
+        },
+        {
+            "No": 33,
+            "question": "jQuery’de bir elementin veri alanı (data-*) ile çalışmak için kullanılan metot hangisidir?",
+            "options": {
+                "A": ".dataset()",
+                "B": ".info()",
+                "C": ".data()",
+                "D": ".meta()",
+                "E": ".attrData()"
+            },
+            "correct": "C",
+            "explanation": "`data-*` alanlarını okumak/yazmak için pratik bir arayüz sunar; jQuery bu veriyi kendi içinde cache’leyebilir. Attribute seviyesindeki ham değeri okumak gerekiyorsa `.attr('data-...')` daha doğrudan olabilir."
+        },
+        {
+            "No": 34,
+            "question": "jQuery’nin saf JavaScript’e göre (native) en büyük avantajlarından biri genelde hangisidir?",
+            "options": {
+                "A": "Her zaman daha hızlıdır",
+                "B": "Tarayıcı uyumluluğunu kolaylaştırması ve kısa/kolay DOM işlemleri",
+                "C": "CSS yazmayı tamamen kaldırır",
+                "D": "HTML’yi otomatik üretir",
+                "E": "Sunucuda çalışır (server-side)"
+            },
+            "correct": "B",
+            "explanation": "jQuery’nin tarihsel gücü, tarayıcı farklarını soyutlayıp kısa ve tutarlı bir DOM/event API sunmasıydı. Günümüzde native API’ler gelişti; yine de jQuery olan projelerde okunabilirliği ve hızlı geliştirmeyi artırabilir."
+        },
+        {
+            "No": 35,
+            "question": "Aşağıdaki ifadelerden hangisi jQuery seçimiyle ilgili doğrudur?",
+            "options": {
+                "A": "`$('.x')` sadece tek bir eleman döndürür",
+                "B": "`$('.x')` bir jQuery nesnesi döndürür ve birden fazla elemanı içerebilir",
+                "C": "`$('.x')` her zaman array döndürür",
+                "D": "`$('.x')` sadece id seçer",
+                "E": "`$('.x')` çalışması için `fetch` zorunludur"
+            },
+            "correct": "B",
+            "explanation": "Seçim sonucu bir jQuery koleksiyonudur; içinde kaç öğe olduğu `.length` ile kontrol edilir. Bu koleksiyon üzerinden zincirleme metod çağrıları yapılabilir ve aynı işlem birden fazla öğeye topluca uygulanabilir."
+        }
+    ]
+}

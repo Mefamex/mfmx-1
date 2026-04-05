@@ -1,0 +1,267 @@
+{
+    "unitNumber": 5,
+    "unitTitle": "Hafıza Yönetimi",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Aşağıdakilerden hangisi RAM için en doğru tanımdır?",
+            "options": {
+                "A": "Kalıcı (non-volatile) ve sadece okunur bellek",
+                "B": "Uçucu (volatile) bellek; program çalışırken değişen verilerin tutulduğu alan",
+                "C": "Sadece üretimde bir kez yazılan bellek",
+                "D": "Blok bazlı silinen ve sadece firmware saklayan bellek",
+                "E": "Sadece sensörlerin fiziksel bir parçası"
+            },
+            "correct": "B",
+            "explanation": "RAM uçucu bellektir: cihaz kapandığında içeriği kaybolur. Program çalışırken değişen değişkenler, buffer’lar, stack gibi geçici yapılar RAM’dedir. Kalıcı saklama ihtiyacı için Flash/EEPROM gibi bellekler kullanılır."
+        },
+        {
+            "No": 2,
+            "question": "Flash bellek için aşağıdakilerden hangisi en doğru ifadedir?",
+            "options": {
+                "A": "Uçucu olup güç kesilince silinir",
+                "B": "Kalıcıdır; blok/sector mantığıyla silinir-yazılır ve MCU’larda program belleği olarak yaygındır",
+                "C": "Sadece analog sinyal saklar",
+                "D": "Sadece tek bit saklayabilir",
+                "E": "Sadece kablosuz haberleşmede kullanılır"
+            },
+            "correct": "B",
+            "explanation": "Flash non-volatile bellektir ve çoğu MCU’da program kodu burada tutulur. Yazma/silme işlemleri genellikle blok/sector seviyesinde olur. Ayrıca yazma ömrü (endurance) sınırlıdır; sürekli yazma gerektiren tasarımlarda bu kritik hale gelir."
+        },
+        {
+            "No": 3,
+            "question": "EEPROM’un Flash’a göre tipik avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Genelde çok daha büyük kapasite",
+                "B": "Kalıcı küçük veriler/ayarlar için daha uygun kullanım modeli (sık küçük yazmalar)",
+                "C": "Uçucu olması",
+                "D": "Her zaman daha hızlı olması",
+                "E": "Mutlaka GPU içermesi"
+            },
+            "correct": "B",
+            "explanation": "EEPROM genellikle küçük miktarda kalıcı veri (kalibrasyon, kullanıcı ayarı) için kullanılır. Flash çoğu zaman blok bazlı silme/yazma mantığı nedeniyle küçük ve sık güncellenen veriler için daha zahmetli olabilir. Her iki bellek türünde de yazma ömrü önemli bir kriterdir."
+        },
+        {
+            "No": 4,
+            "question": "Harvard vs Von Neumann ayrımı bellek yönetimi açısından en çok hangi kavrama bağlanır?",
+            "options": {
+                "A": "Program belleği ile veri belleğinin ayrımı ve erişim yolları",
+                "B": "Sadece batarya kapasitesi",
+                "C": "Sadece sensör doğrusalığı",
+                "D": "Sadece kablosuz bant genişliği",
+                "E": "Sadece PCB katman sayısı"
+            },
+            "correct": "A",
+            "explanation": "Von Neumann’da program komutları ve veriler aynı bellek/tek bus üzerinde olabilir; bu da erişimlerin sıraya girmesine neden olup darboğaz yaratır. Harvard’da program ve veri belleği ayrılabildiği için aynı anda erişim daha mümkündür. Bu, performans ve determinism üzerinde etkili olur."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi bellek seçimi kriterlerinden biri değildir?",
+            "options": {
+                "A": "Kapasite",
+                "B": "Erişim hızı/erişim süresi",
+                "C": "Güç tüketimi",
+                "D": "Yazma ömrü (endurance)",
+                "E": "Kullanıcının ekran teması (dark/light)"
+            },
+            "correct": "E",
+            "explanation": "Notlarda bellek seçimi kriterleri: kapasite, hız, güç tüketimi, maliyet, kalıcılık ve yazma ömrü gibi mühendislik parametreleridir. Ekran teması bellek seçimi kriteri değildir."
+        },
+        {
+            "No": 6,
+            "question": "“Kod boyutu” gömülü sistemlerde neden kritik bir konudur?",
+            "options": {
+                "A": "Çünkü kod boyutu RAM’i hiç etkilemez",
+                "B": "Çünkü derlenen firmware/hex Flash’ta yer kaplar ve Flash sınırlı olabilir",
+                "C": "Çünkü kod boyutu sadece internet hızını belirler",
+                "D": "Çünkü kod boyutu sadece ekran çözünürlüğünü değiştirir",
+                "E": "Çünkü kod boyutu sadece sensör seçimini belirler"
+            },
+            "correct": "B",
+            "explanation": "Notlarda yazılan kodun derlenince firmware/hex’e dönüştüğü ve Flash’ta yer kapladığı belirtilir. Flash kapasitesi sınırlıysa ağır kütüphaneler veya gereksiz özellikler sığmayabilir; bu yüzden kod boyutu bir tasarım kısıtıdır."
+        },
+        {
+            "No": 7,
+            "question": "Hazır kütüphane (örn. Servo.h) kullanımıyla ilgili en doğru trade-off hangisidir?",
+            "options": {
+                "A": "Geliştirmeyi hızlandırır ama bellek maliyeti (Flash/RAM) artırabilir",
+                "B": "Bellek tüketimini azaltır ve geliştirme süresini uzatır",
+                "C": "Sadece donanımı değiştirir; yazılımı etkilemez",
+                "D": "Gerçek zamanlılığı her durumda garanti eder",
+                "E": "Maliyeti her zaman düşürür"
+            },
+            "correct": "A",
+            "explanation": "Kütüphaneler geliştirme hızını artırır; ancak ek soyutlama ve ek fonksiyonlar kod boyutunu büyütebilir. Bellek yetmezse daha hafif kütüphane, gereksiz fonksiyonları kaldırma veya daha düşük seviye (register) yaklaşım gibi seçenekler gündeme gelir."
+        },
+        {
+            "No": 8,
+            "question": "Aşağıdakilerden hangisi RAM içinde tipik olarak bulunan yapılardan biridir?",
+            "options": {
+                "A": "Program kodunun tamamı (kalıcı)",
+                "B": "Stack (fonksiyon çağrıları ve yerel değişkenler)",
+                "C": "Harici disk bölümü",
+                "D": "Sadece I2C adres tablosu",
+                "E": "Sadece PCB izi"
+            },
+            "correct": "B",
+            "explanation": "RAM, çalışma zamanı verilerini tutar. Stack (yığın), fonksiyon çağrıları sırasında oluşan çağrı çerçevelerinin (return address, parametreler, yerel değişkenler) tutulduğu bölgedir. Bu yüzden stack taşması, özellikle gömülü sistemlerde “garip reset/bozulma” gibi belirtilerle ortaya çıkabilir. Program kodu ve sabit veriler ise genellikle Flash/ROM’da durur; bu ayrımı bilmek, bellek hatalarını teşhis ederken kritiktir."
+        },
+        {
+            "No": 9,
+            "question": "Dinamik bellek (heap) kullanımının gerçek zamanlı sistemlerde riskli olmasının temel nedeni aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Heap’in hiç bellek tüketmemesi",
+                "B": "Parçalanma (fragmentation) ve bellek ayırma süresinin öngörülemez olabilmesi",
+                "C": "Heap’in sadece ROM’da çalışması",
+                "D": "Heap’in sadece UART’ta kullanılması",
+                "E": "Heap’in yalnız GPU ile çalışması"
+            },
+            "correct": "B",
+            "explanation": "Dinamik bellek ayırma/serbest bırakma zamanla parçalanmaya neden olabilir ve ayırma süresi deterministik olmayabilir. Bu da real-time beklentisini zedeler. Bu yüzden birçok gömülü projede heap kullanımı sınırlı tutulur veya tamamen kaçınılır."
+        },
+        {
+            "No": 10,
+            "question": "Kalıcı olarak saklanması gereken “küçük ayar/kalibrasyon” verileri için en uygun bellek türü hangisidir?",
+            "options": {
+                "A": "RAM",
+                "B": "EEPROM (veya uygun Flash bölgesi)",
+                "C": "Stack",
+                "D": "Cache",
+                "E": "Register"
+            },
+            "correct": "B",
+            "explanation": "Kalibrasyon ve kullanıcı ayarları güç kesilse de kalmalıdır. Bu yüzden EEPROM veya Flash üzerinde ayrılmış kalıcı bir alan uygundur. RAM uçucu olduğu için uygun değildir."
+        },
+        {
+            "No": 11,
+            "question": "Bir sistemde bellek yetmiyorsa aşağıdaki yaklaşımlardan hangisi notlardaki önerilerle uyumludur?",
+            "options": {
+                "A": "Gereksiz özellikleri kaldırmak ve daha hafif yaklaşım/kütüphane kullanmak",
+                "B": "Her zaman ekran çözünürlüğünü artırmak",
+                "C": "Haberleşme frekansını artırmak",
+                "D": "Her zaman daha fazla delay eklemek",
+                "E": "Tüm değişkenleri double yapmak"
+            },
+            "correct": "A",
+            "explanation": "Notlarda bellek yetmezse kütüphane maliyetini azaltma, gereksiz fonksiyonları silme veya daha düşük seviyeli (register) kod yazma gibi seçenekler önerilir. Amaç, kaynak kısıtlarına uyum sağlamaktır."
+        },
+        {
+            "No": 12,
+            "question": "“Kalıcılık” (non-volatile) kriteri hangi soruya cevap verir?",
+            "options": {
+                "A": "Bu veri güç kesilince kaybolabilir mi?",
+                "B": "Bu veri ekranı kaç piksel?",
+                "C": "Bu veri hangi kabloda taşınacak?",
+                "D": "Bu veri kaç voltla çalışıyor?",
+                "E": "Bu veri kaç ohm?"
+            },
+            "correct": "A",
+            "explanation": "Kalıcılık, güç kesildiğinde verinin korunup korunmadığıyla ilgilidir. RAM uçucudur; Flash/EEPROM/ROM kalıcıdır. Tasarımda hangi verinin kalıcı olması gerektiği belirlenip uygun bellek seçilir."
+        },
+        {
+            "No": 13,
+            "question": "“Endurance (yazma ömrü)” kriteri özellikle hangi bellek türlerinde daha kritik hale gelir?",
+            "options": {
+                "A": "RAM",
+                "B": "Flash ve EEPROM",
+                "C": "CPU register’ları",
+                "D": "Timer birimleri",
+                "E": "Osiloskop"
+            },
+            "correct": "B",
+            "explanation": "Flash/EEPROM belirli sayıda yazma-silme döngüsüne dayanır. Sık yazılan log/ayar verileri tasarımında wear leveling veya yazma sıklığını azaltma gibi stratejiler gerektirebilir."
+        },
+        {
+            "No": 14,
+            "question": "Program (komutlar) ile veri ayrımını bellek açısından en iyi ifade eden seçenek hangisidir?",
+            "options": {
+                "A": "Program: anlık sensör değeri; Veri: derlenmiş firmware",
+                "B": "Program: cihazın ne yapacağını söyleyen komutlar; Veri: sensör okuması, sayaç, ayar gibi çalışma bilgileri",
+                "C": "Program: yalnız analog; Veri: yalnız dijital",
+                "D": "Program: sadece UART; Veri: sadece SPI",
+                "E": "Program ve veri aynı şeydir"
+            },
+            "correct": "B",
+            "explanation": "Program (komutlar) cihazın davranışını belirleyen talimatlardır ve çoğu zaman Flash/ROM’da tutulur. Veri ise sensör ölçümleri, hesap sonuçları, sayaçlar ve ayarlar gibi çalışma bilgilerini ifade eder; çalışma sırasında RAM’de, kalıcı olması gerekiyorsa EEPROM/Flash’ta tutulur."
+        },
+        {
+            "No": 15,
+            "question": "Gömülü sistemlerde “en az kaynakla yeterli performans” düşüncesi aşağıdakilerden hangisini en iyi açıklar?",
+            "options": {
+                "A": "Her zaman en büyük RAM’i seçmek",
+                "B": "Kaynaklar kısıtlı olduğu için kapasiteyi gereksinime göre, israf etmeden seçmek",
+                "C": "Her zaman en pahalı işlemciyi seçmek",
+                "D": "Her zaman ekran eklemek",
+                "E": "Her zaman kablosuz eklemek"
+            },
+            "correct": "B",
+            "explanation": "PC dünyasında kaynak artırmak sık bir çözümdür. Gömülüde ise maliyet, güç, boyut gibi kısıtlar nedeniyle hedef “yeterli” kaynakla gereksinimi karşılamaktır. Bu nedenle bellek yönetimi ve optimizasyon önemlidir."
+        },
+        {
+            "No": 16,
+            "question": "Bir MCU’da tipik bellek yerleşimi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Kod RAM’de, çalışma verisi Flash’ta",
+                "B": "Kod Flash/ROM’da, çalışma verisi RAM’de",
+                "C": "Her şey sadece EEPROM’da",
+                "D": "Her şey sadece register’da",
+                "E": "Bellek kullanılmaz"
+            },
+            "correct": "B",
+            "explanation": "MCU’larda program kodu kalıcı bellek olan Flash/ROM’da tutulur. Program çalışırken değişen veriler RAM’de yer alır. Kalıcı ayarlar için EEPROM/Flash bölgesi kullanılabilir."
+        },
+        {
+            "No": 17,
+            "question": "Bellek hızı/erişim süresi kriteri en çok hangi hedefi etkiler?",
+            "options": {
+                "A": "Gerçek zamanlı deadline’lara uyumu",
+                "B": "Kasa rengini",
+                "C": "Buton sayısını",
+                "D": "LDR’nin fiziksel boyutunu",
+                "E": "Osiloskop probunu"
+            },
+            "correct": "A",
+            "explanation": "Bellek erişim gecikmesi, komut yürütme ve veri işleme sürelerini etkiler. Real-time sistemlerde en kötü durum zamanlaması bellek gecikmelerinden de etkilenebilir. Bu yüzden hız/erişim süresi bir seçim kriteridir."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi Flash/EEPROM yazma ömrünü korumaya yönelik tipik bir yaklaşımdır?",
+            "options": {
+                "A": "Her ölçümü her milisaniyede Flash’a yazmak",
+                "B": "Sadece değişiklik olduğunda yazmak veya yazma sıklığını azaltmak",
+                "C": "Yazmayı artırarak ömrü uzatmak",
+                "D": "Tüm veriyi sürekli silmek",
+                "E": "Yazmayı sadece RAM’de yapmak"
+            },
+            "correct": "B",
+            "explanation": "Endurance sınırlı olduğundan, sık yazılan veriler için yazma sıklığını azaltma, sadece değişiklik olduğunda yazma veya uygun algoritmalar (wear leveling) gibi yöntemler kullanılır. Amaç gereksiz yazma-silme döngülerini azaltmaktır."
+        },
+        {
+            "No": 19,
+            "question": "Bir projede bellek seçimi yapılırken “maliyet” kriteri hangi durumu vurgular?",
+            "options": {
+                "A": "Belleğin sadece hızını",
+                "B": "Parça başı maliyetin ve toplam üretim maliyetinin tasarım kararını etkilemesini",
+                "C": "Sadece sensörün doğrusalığını",
+                "D": "Sadece PWM frekansını",
+                "E": "Sadece UART baud rate’ini"
+            },
+            "correct": "B",
+            "explanation": "Gömülü ürünlerde maliyet duyarlılığı yüksektir. Daha büyük/hızlı bellek daha pahalı olabilir ve ürün başı maliyeti artırır. Yüksek adet üretimde küçük farklar bile toplam maliyeti büyütür."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdakilerden hangisi bellek yönetimi konusunun gömülü sistemlerde “tasarım kararı” olmasının en iyi özetidir?",
+            "options": {
+                "A": "Bellek sınırsızdır, önemi yoktur",
+                "B": "Bellek; kod boyutu, güç, maliyet ve gerçek zamanlılıkla doğrudan ilişkilidir",
+                "C": "Bellek sadece kablo seçimini etkiler",
+                "D": "Bellek sadece ekran parlaklığını etkiler",
+                "E": "Bellek sadece mekanik tasarımla ilgilidir"
+            },
+            "correct": "B",
+            "explanation": "Bellek kapasitesi ve türü; firmware’in sığması, çalışma verisinin tutulması, güç tüketimi, maliyet ve worst-case zamanlama üzerinde etkilidir. Bu nedenle bellek yönetimi sadece “teknik detay” değil, sistemin başarısını belirleyen bir tasarım kararıdır."
+        }
+    ]
+}

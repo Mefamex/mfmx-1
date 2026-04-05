@@ -1,0 +1,658 @@
+{
+    "unitNumber": 1,
+    "unitTitle": "Giriş",
+    "sourceMarkdown": "isletim_sistemleri_md/01-giris.md",
+    "questionCount": 50,
+    "questions": [
+        {
+            "No": 1,
+            "question": "İşletim sistemi en doğru hangi biçimde tanımlanır?",
+            "options": {
+                "A": "Salt bir derleyici ve bağlayıcı yazılımı",
+                "B": "Sistem kaynaklarını kullanıcılar arasında güvenli, hızlı ve verimli paylaştıran yazılım sistemi",
+                "C": "Sadece aygıt sürücülerinden oluşan yazılım katmanı",
+                "D": "Sadece kütük kopyalama/listeleme komutları",
+                "E": "Sadece grafik arayüz (GUI) yazılımı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: İşletim sistemi; AİB, ana bellek ve G/Ç gibi kaynakları kullanıcılar arasında paylaştırıp hizmet niteliği ve verimliliği gözeten yazılım sistemidir. Yanlışlar: A derleme araçlarıdır; C OS’nin yalnız bir parçasıdır; D OS komutlarının küçük alt kümesidir; E arayüz, OS’nin zorunlu eşiti değildir."
+        },
+        {
+            "No": 2,
+            "question": "İşletim sisteminin temel amaçları arasında aşağıdakilerden hangisi yer alır?",
+            "options": {
+                "A": "Sistem kaynaklarını bilinçli olarak boşta tutmak",
+                "B": "Kullanıcılar arasında kolay, hızlı ve güvenli kullanım sağlamak",
+                "C": "Donanım hızlarını yazılımla değiştirmek",
+                "D": "Programların taşınırlığını azaltmak",
+                "E": "Kütüklerin mantıksal-fiziksel eşlemesini tamamen kullanıcıya bırakmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metinde OS’nin amacı kolay, hızlı ve güvenli hizmet + kaynak verimliliği olarak verilir. Yanlışlar: A tersidir; C donanımsal bir iddiadır; D OS genelde taşınırlığı artırmaya çalışır; E kütük yönetiminin temel amacına aykırıdır."
+        },
+        {
+            "No": 3,
+            "question": "Tek iş düzeni (single-job) için doğru ifade hangisidir?",
+            "options": {
+                "A": "Aynı anda birden çok iş işletime alınabilir",
+                "B": "Tüm kaynaklar aynı anda tek bir iş (dolayısıyla tek kullanıcı) tarafından tüketilir",
+                "C": "İşler mutlaka zaman paylaşımlı yürür",
+                "D": "Disk beklemelerinde AİB hiç boşta kalmaz",
+                "E": "Sadece gerçek zamanlı sistemlerde görülür"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Tek iş düzeninde aynı anda tek iş işletime alınır ve kaynaklar tek işte toplanır. Yanlışlar: A çok iş düzenidir; C zaman paylaşımlı etkileşimli işlemdir; D tek işte AİB G/Ç beklerken boş kalabilir; E ile sınırlı değildir."
+        },
+        {
+            "No": 4,
+            "question": "Çok iş düzeni (multi-job) tanımına en uygun ifade hangisidir?",
+            "options": {
+                "A": "Bir iş bitmeden diğer işlerin işletiminin başlatılamaması",
+                "B": "Her işin tüm kaynakları tek başına kullanması",
+                "C": "Birden çok işin aynı anda işletime alınabilmesi; kaynakların işler arasında eşzamanlı paylaştırılması",
+                "D": "Sadece disk üzerinde çok sayıda kütük bulunması",
+                "E": "Sadece kabuk katmanının varlığı"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Çok iş düzeni, bir iş sonlanmadan diğer işlerin de başlatılabilmesi ve kaynakların paylaştırılmasıdır. Yanlışlar: A tek iş düzenini anlatır; B tek işe adama; D/E konu dışıdır."
+        },
+        {
+            "No": 5,
+            "question": "Çok iş düzenine geçişin temel motivasyonlarından biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "AİB’nin disk erişimi sırasında beklerken boşta kalmasını azaltmak",
+                "B": "Disk erişim sürelerini fiziksel olarak sıfırlamak",
+                "C": "Her işi daha uzun süre bekletmek",
+                "D": "Kullanıcıların aynı adlı kütük oluşturmasını engellemek",
+                "E": "Tüm işleri sadece G/Ç ağırlıklı yapmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Disk erişimi yavaştır; tek işte AİB beklerken boş kalır. Çok işte bu boşluklar başka işlerle doldurulur. Yanlışlar: B fiziksel olarak imkânsız; C amaç tersidir; D kılavuz yapısıyla ilgilidir; E gerçekçi/amaç dışı."
+        },
+        {
+            "No": 6,
+            "question": "Metindeki örneğe göre diskten bir öbeğe erişim süresi hangi bileşenlerin toplamıdır?",
+            "options": {
+                "A": "Sadece aktarım süresi",
+                "B": "Yatay erişim (seek) + döngüsel gecikme + aktarım süresi",
+                "C": "CPU saat periyodu + RAM erişimi",
+                "D": "Ön bellek (cache) gecikmesi + derleyici gecikmesi",
+                "E": "Sadece döngüsel gecikme"
+            },
+            "correct": "B",
+            "explanation": "Doğru: to = ty + td + ta olarak verilmiştir (yatay erişim + döngüsel gecikme + aktarım). Yanlışlar: A/E eksik; C/D konu dışıdır."
+        },
+        {
+            "No": 7,
+            "question": "Disk temel işlem süresi ile AİB komut işletim süresi karşılaştırmasından çıkarılan ana sonuç nedir?",
+            "options": {
+                "A": "Disk, AİB’den daha hızlıdır",
+                "B": "AİB beklerken disk milyonlarca komut işletir",
+                "C": "Disk erişimi sırasında AİB çok uzun süre boşta kalabilir",
+                "D": "G/Ç beklemesi yok sayılabilir",
+                "E": "Çok iş düzeni performansı düşürür"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Disk erişimi ms düzeyinde, komut işletimi ns düzeyinde olduğu için tek işte AİB uzun süre bekleyebilir. Yanlışlar: A tersidir; B ifade ters kuruldu; D yanlış; E genelde tersine kaynak verimliliğini artırmayı hedefler."
+        },
+        {
+            "No": 8,
+            "question": "\"İş\" kavramı metinde en doğru nasıl tanımlanır?",
+            "options": {
+                "A": "Bir bilgisayarda fiziksel disk birimi",
+                "B": "Sadece tek bir programın kaynak kodu",
+                "C": "Kullanıcının bir bütün olarak ele alınmasını istediği işlem takımına verilen ad",
+                "D": "Sadece komut satırında girilen tek komut",
+                "E": "Sadece bir kullanıcı hesabı"
+            },
+            "correct": "C",
+            "explanation": "Doğru: İş; kullanıcıların sistemden bir bütün olarak ele alınmasını istediği işlem takımını kapsar; program kavramını genişleterek içerir. Yanlışlar: A donanımdır; B/D gereksiz dar; E kimliktir."
+        },
+        {
+            "No": 9,
+            "question": "MS-DOS ortamında iş tanımlama için metinde verilen yaklaşım hangisidir?",
+            "options": {
+                "A": "Sadece C derleyicisi ile",
+                "B": ".BAT türü özel kütükler kullanarak",
+                "C": "Kesilme vektörünü günleyerek",
+                "D": "Sayfa tanım çizelgesi oluşturarak",
+                "E": "Sadece mount komutu ile"
+            },
+            "correct": "B",
+            "explanation": "Doğru: MS-DOS’ta bir işin adımlarını .BAT kütüğüne yazıp kütük adıyla çalıştırma anlatılır. Yanlışlar: C/D/E başka ünitelerin konuları; A iş tanımı değildir."
+        },
+        {
+            "No": 10,
+            "question": "UNIX’te iş tanım/denetim dili (shell) ile ilgili doğru ifade hangisidir?",
+            "options": {
+                "A": "Sadece donanım mikro-kodu içerir",
+                "B": "Kütük içinde komutları sıraya koyup parametrelerle ve koşullarla işletmeye izin verir",
+                "C": "Sadece GUI tıklamalarıyla çalışır",
+                "D": "Yalnızca kütük silme komutudur",
+                "E": "Sadece gerçek zamanlı sistemlerde kullanılır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metindeki örnek (if/fi, değişken parametreler) shell komutlarıyla iş denetimini gösterir. Yanlışlar: A/C/D/E tanıma uymaz."
+        },
+        {
+            "No": 11,
+            "question": "Çok iş düzeyini (aynı anda işletimde olan iş sayısı) kim belirler?",
+            "options": {
+                "A": "Kütük yönetimi",
+                "B": "İş yönetimi (iş yönetici) kesimi",
+                "C": "Derleyici",
+                "D": "Yalnızca disk arabirimi",
+                "E": "Metin düzenleyici"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Çok iş düzeyini belirleme ve iş karışımını dengeleme iş yönetiminin temel işlevi olarak verilir. Yanlışlar: A başka kesimdir; C/E uygulama aracıdır; D donanım parçasıdır."
+        },
+        {
+            "No": 12,
+            "question": "CPU-ağırlıklı işler ile G/Ç-ağırlıklı işlerin birlikte seçilmesi neden önemlidir?",
+            "options": {
+                "A": "Çünkü bu seçim disk sektör boyunu değiştirir",
+                "B": "Çünkü aynı tür talepler çakışırsa darboğaz oluşabilir ve başarım düşer",
+                "C": "Çünkü kullanıcıların kütük adları çakışmaz",
+                "D": "Çünkü etkileşimli işlem tamamen ortadan kalkar",
+                "E": "Çünkü kesilmeler devre dışı kalır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, CPU ağırlıklı + G/Ç ağırlıklı işlerin dengelenmesini, aksi halde kaynak darboğazı ve başarım düşüşünü açıklar. Yanlışlar: A/C/D/E konu dışıdır."
+        },
+        {
+            "No": 13,
+            "question": "Görev (task) kavramı metinde nasıl ayrıştırılır?",
+            "options": {
+                "A": "Programın durgun komut dizisidir",
+                "B": "Programın işletim (çalışma) halidir",
+                "C": "Sadece kütük adıdır",
+                "D": "Sadece kullanıcı arayüzüdür",
+                "E": "Diskteki bir sektör dizisidir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Program durgun komut dizisini, görev ise bu komut dizisini işletim boyutuyla ele alır. Yanlışlar: A program tanımıdır; C/D/E ilgisizdir."
+        },
+        {
+            "No": 14,
+            "question": "Çok görevli işlem için metindeki temel ölçüt hangisidir?",
+            "options": {
+                "A": "Sistemde mutlaka birden çok görev bulunması",
+                "B": "Kullanıcının bizzat aynı anda birden çok görevi tanımlayıp başlatabilmesi",
+                "C": "Diskte birden çok kütük olması",
+                "D": "AİB’nin hiç kesilmemesi",
+                "E": "Sadece toplu işlem yapılması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Çok görevli işlem kullanıcıya sunulan bir olanaktır; kullanıcı aynı anda birden çok görevi başlatabiliyorsa bu nitelik vardır. Yanlışlar: A çok iş düzeyinde de olabilir; C/D/E konu dışıdır."
+        },
+        {
+            "No": 15,
+            "question": "Bir görevin işletimi kesildiğinde işletim bütünlüğünü korumak için temel olarak ne saklanır?",
+            "options": {
+                "A": "Sadece kütük adının ilk harfi",
+                "B": "Program sayacı, yığıt sayacı gibi yazmaç içerikleri ve görevle ilgili durum bilgileri",
+                "C": "Sadece ekran görüntüsü",
+                "D": "Sadece klavye tamponu",
+                "E": "Sadece disk plaka sayısı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin; PC, SP gibi yazmaçlar ve açık kütük/altkılavuz kimlikleri gibi durumların görev iskeletine saklandığını söyler. Yanlışlar: A/C/D/E yetersiz/ilgisi yok."
+        },
+        {
+            "No": 16,
+            "question": "Görev iskeleti/denetim öbeği (task skeleton/TCB benzeri) yaklaşımının amacı nedir?",
+            "options": {
+                "A": "Programları yalnızca kaynak koda çevirmek",
+                "B": "Kesilip devam edebilmek için görev durum bilgisini yapılandırılmış biçimde tutmak",
+                "C": "Diskin fiziksel adreslemesini kaldırmak",
+                "D": "Kesilmeleri tamamen iptal etmek",
+                "E": "Sadece kullanıcı arayüzünü çizmek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Görevler, işletim bilgileri tutulmuş iskeletlerle ele alınır; anahtarlama bu yapılar üzerinden olur. Yanlışlar: A/C/D/E konu dışıdır."
+        },
+        {
+            "No": 17,
+            "question": "MS-DOS ile çok görevli işlem (kullanıcı açısından) ilişkisi metinde nasıl açıklanır?",
+            "options": {
+                "A": "MS-DOS’ta kullanıcı aynı anda birden çok program başlatamaz",
+                "B": "MS-DOS her zaman gerçek zamanlıdır",
+                "C": "MS-DOS’ta hiç sistem görevi yoktur",
+                "D": "MS-DOS yalnızca çok kullanıcılıdır",
+                "E": "MS-DOS’ta kütük sistemi yoktur"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, MS-DOS’ta kullanıcı açısından bir program bitmeden yenisini başlatma olanağı olmadığını söyler. Yanlışlar: B/C/D/E yanlış/ilgisi yok."
+        },
+        {
+            "No": 18,
+            "question": "UNIX’te çok görevli işlem örneği olarak metinde hangi kullanım geçer?",
+            "options": {
+                "A": "Tek görevde tüm kaynakları kilitlemek",
+                "B": "Background altında birden çok görevi birlikte çalıştırmak",
+                "C": "Sadece .BAT dosyası çalıştırmak",
+                "D": "Kesilmeleri kapatıp hiç açmamak",
+                "E": "Sadece disket formatlamak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: UNIX’te kullanıcıların birden çok görevi background ile birlikte çalıştırabildiği belirtilir. Yanlışlar: A/C/D/E doğru örnek değildir."
+        },
+        {
+            "No": 19,
+            "question": "Toplu işlem (batch processing) için doğru ifade hangisidir?",
+            "options": {
+                "A": "Kullanıcı adımlar arasında anında müdahale eder",
+                "B": "İşler biriktirilir, dönem dönem sunulur; iş adımları kullanıcının müdahalesine kapalı işletilir",
+                "C": "Her iş mutlaka 10 ms zaman diliminde yürür",
+                "D": "Kesilmeler hiç kullanılmaz",
+                "E": "Sadece çevrim içidir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Toplu işlemde işler topluca işletilir; kullanıcı adımlar arasında denetim/müdahale yapmaz. Yanlışlar: A etkileşimlidir; C zaman paylaşımlı örnektir; D/E genelleme hatasıdır."
+        },
+        {
+            "No": 20,
+            "question": "Etkileşimli işlemde (interactive) sistemin kullanıcıya verdiği temel izlenim nedir?",
+            "options": {
+                "A": "Sistem yalnızca yedekleme yapar",
+                "B": "Kullanıcı sistemi tek başına kullanıyormuş gibi hızlı yanıt alır",
+                "C": "İşler yalnız gece çalışır",
+                "D": "Her komut mutlaka toplu işlem kuyruğuna gider",
+                "E": "Kütük adları her zaman benzersiz olmak zorundadır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Etkileşimli işlemde kısa zaman dilimleriyle AİB paylaştırılır ve kullanıcı komutlarına hızlı yanıt alır. Yanlışlar: A/C/D/E konu dışıdır."
+        },
+        {
+            "No": 21,
+            "question": "Etkileşimli işleme \"zaman paylaşımlı işlem\" denmesinin nedeni nedir?",
+            "options": {
+                "A": "Diskin plakaları zamanla aşınır",
+                "B": "AİB’nin kısa zaman dilimleri içinde kullanıcılara sırayla atanması",
+                "C": "Her işin aynı kütükten okuması",
+                "D": "Sadece tek iş düzeninde kullanılabilmesi",
+                "E": "Kesilme istemlerinin yasak olması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: AİB kısa zaman dilimlerinde görevler arasında paylaştırılır. Yanlışlar: A/C/D/E alakasız/ters."
+        },
+        {
+            "No": 22,
+            "question": "İşletim sistemi genelde etkileşimli işlere toplu işlere göre nasıl davranır?",
+            "options": {
+                "A": "Etkileşimli işleri her zaman siler",
+                "B": "Etkileşimli işlere genelde daha öncelikli davranır",
+                "C": "İkisini de hiç işletmez",
+                "D": "Toplu işleri her zaman daha öncelikli işletir",
+                "E": "Öncelik kavramı yoktur"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, etkileşimli ortamda sunulan (kısa süreceği varsayılan) işlere daha öncelikli davranıldığını belirtir. Yanlışlar: A/C/D/E yanlış; D metne ters."
+        },
+        {
+            "No": 23,
+            "question": "Gerçek zamanlı işlem, etkileşimli işlemden hangi yönüyle ayrılır?",
+            "options": {
+                "A": "Kullanıcı hiç yoktur",
+                "B": "Yanıt süresine saniye/ms düzeyinde bir üst sınır konabilmesi (garanti) gerekir",
+                "C": "Sadece tek iş düzenidir",
+                "D": "Disk kullanılmaz",
+                "E": "Her zaman ASCII kütüklerle çalışır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Gerçek zamanlı işlemde yanıt süresine üst sınır getirilebilir olmalıdır. Yanlışlar: A/C/D/E doğru ayrım değildir."
+        },
+        {
+            "No": 24,
+            "question": "Gerçek zamanlı uygulamalarda çok görevli işlemin önemi metinde nasıl gerekçelendirilir?",
+            "options": {
+                "A": "Çünkü her uyarı için görev tanımlanıp önceliklerine göre AİB paylaşımı gerekir",
+                "B": "Çünkü kütük adları çakışmasın diye",
+                "C": "Çünkü derleyici yalnız bu şekilde çalışır",
+                "D": "Çünkü disk fiziksel yapısı bunu zorunlu kılar",
+                "E": "Çünkü tek iş düzeni daha hızlıdır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Dış uyarılara bağlı görevler tanımlanır ve yanıt sürelerine göre önceliklendirilir; bu çok görevli ortamı gerektirir. Yanlışlar: B/C/D/E konu dışı/ters."
+        },
+        {
+            "No": 25,
+            "question": "\"Çevrim içi\" (online) terimi metinde neyi tanımlar?",
+            "options": {
+                "A": "Yanıt süresinin üst sınırını",
+                "B": "Verilerin sisteme dolaysız/aracısız aktarılmasını",
+                "C": "Sadece disk üzerinde çalışmayı",
+                "D": "Yalnız toplu işlem yapmayı",
+                "E": "Kesilmelerin kapalı olmasını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Çevrim içi; verinin sisteme doğrudan aktarılmasıdır. Yanlışlar: A gerçek zamanlıdır; C/D/E alakasızdır."
+        },
+        {
+            "No": 26,
+            "question": "Aşağıdakilerden hangisi doğru bir ayrımdır?",
+            "options": {
+                "A": "Her çevrim içi uygulama mutlaka gerçek zamanlıdır",
+                "B": "Gerçek zamanlı uygulamalar her zaman çevrim içidir; ama her çevrim içi uygulama gerçek zamanlı olmak zorunda değildir",
+                "C": "Çevrim içi uygulamalar asla çevrim dışı veriyi kullanmaz",
+                "D": "Gerçek zamanlı uygulamalar sadece metin düzenlemedir",
+                "E": "Çevrim içi = toplu işlem"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, gerçek zamanlı ile çevrim içinin aynı şey olmadığını; her çevrim içinin gerçek zamanlı olmadığını açıkça ayırır. Yanlışlar: A/E ters; C/D genelleme/yanlış."
+        },
+        {
+            "No": 27,
+            "question": "İşletim sistemi komutları (sistem komutları) metinde nasıl tanımlanır?",
+            "options": {
+                "A": "Donanıma gömülü sabit mikro-komutlar",
+                "B": "Kullanıcıların temel işlemler için kullandığı, OS tarafından yorumlanıp çalıştırılan hazır özel programlar",
+                "C": "Sadece kesilme vektörleri",
+                "D": "Sadece derleme zamanı yönergeleri",
+                "E": "Sadece kütük biçimlendirme işlemleri"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Sistem komutları; kopyalama, listeleme, program işletme vb. için kullanılan hazır programlardır ve OS tarafından yorumlanır/çalıştırılır. Yanlışlar: A/C/D/E tanıma uymaz."
+        },
+        {
+            "No": 28,
+            "question": "Tek düzende AİB’nin G/Ç beklerken boş kalmasına karşı çok iş düzeninin temel çözümü nedir?",
+            "options": {
+                "A": "G/Ç’yi yasaklamak",
+                "B": "G/Ç sırasında başka bir işin/görevin işletimine geçmek",
+                "C": "Diskleri tamamen kaldırmak",
+                "D": "Her işi aynı tür kaynak isteyen işlerle seçmek",
+                "E": "Program sayacını sıfırlamak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: G/Ç istemiyle bir iş beklerken başka iş işletime alınır, AİB boşluğu azalır. Yanlışlar: A/C/D/E yanlış veya anlamsız."
+        },
+        {
+            "No": 29,
+            "question": "Etkileşimli işlemde kullanıcı komutlarının hızlı yanıt almasının temel nedeni olarak metin neyi vurgular?",
+            "options": {
+                "A": "İnsan hızının bilgisayar hızına göre çok yavaş olması",
+                "B": "Disklerin sonsuz hızlı olması",
+                "C": "Her komutun tek başına çalışması",
+                "D": "Hiç kuyruk olmaması",
+                "E": "Kütüklerin sadece salt okunur olması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Zaman dilimleriyle paylaştırmada bilgisayarın insan hızına göre çok hızlı olması “tek başına kullanıyor” izlenimini doğurur. Yanlışlar: B/C/D/E metne uymaz."
+        },
+        {
+            "No": 30,
+            "question": "Bir işin tamamlanma süresi kavramı aşağıdakilerden hangisine en yakındır?",
+            "options": {
+                "A": "Sadece AİB’de işletilme süresi",
+                "B": "Sisteme sunuştan bitişe kadar geçen toplam süre (bekleme + işletim gibi bileşenleri kapsar)",
+                "C": "Sadece disk aktarım süresi",
+                "D": "Sadece derleme süresi",
+                "E": "Sadece ağ gecikmesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metinde tamamlanma süresi; sunuş kuyruğu bekleme + göreve dönüşüm + işletim + beklemeler toplamı olarak ele alınır. Yanlışlar: A/C/D/E eksik veya alakasızdır."
+        },
+        {
+            "No": 31,
+            "question": "Toplu işlem neden kullanıcıyı terminal başında bekleme zahmetinden kurtarır?",
+            "options": {
+                "A": "Çünkü işi oluşturan adımlar topluca işletilir, adım adım izleme gerekmez",
+                "B": "Çünkü tüm işler otomatik silinir",
+                "C": "Çünkü kullanıcı hiçbir zaman çıktı alamaz",
+                "D": "Çünkü disk erişimi yapılmaz",
+                "E": "Çünkü etkileşimli işlem yasaktır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Adımlar değişmeyen sırada topluca çalıştırılır; kullanıcı arada komut girip beklemez. Yanlışlar: B/C/D/E yanlış."
+        },
+        {
+            "No": 32,
+            "question": "Bir programın çalıştırılması (run/execute) kullanıcı açısından genelde nasıl başlatılır?",
+            "options": {
+                "A": "Sadece disk sektör adresi girilerek",
+                "B": "Kabuk tarafından yorumlanan sistem komutlarıyla veya program/kütük adı verilerek",
+                "C": "Sadece kesilme maskesi değiştirilerek",
+                "D": "Sadece sayfa tanım çizelgesi doldurularak",
+                "E": "Sadece öbek listesi yazılarak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin run/execute komutları veya programın derlenmiş kütük adı verilmesiyle başlatmayı anlatır. Yanlışlar: A/C/D/E farklı konular."
+        },
+        {
+            "No": 33,
+            "question": "İş tanım/denetim dillerinin (ör. Shell) önemli bir özelliği nedir?",
+            "options": {
+                "A": "Sadece sabit uzunluklu komutlar içerir",
+                "B": "Parametre aktarımı ve koşullu işletim (if/fi gibi) yapabilir",
+                "C": "Sadece ikili kod üretir",
+                "D": "Sadece RAM içinde çalışır",
+                "E": "Kesilme donanımı olmadan zorunludur"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Örnek iş tanımında parametre ($ ile başlayan değişkenler) ve koşul (if/fi) vardır. Yanlışlar: A/C/D/E doğru değil."
+        },
+        {
+            "No": 34,
+            "question": "Birden çok işin aynı anda işletime alınabilmesi aşağıdakilerden hangisini gerektirir?",
+            "options": {
+                "A": "Kaynakların (AİB, bellek, G/Ç) işler arasında eşzamanlı paylaştırılmasını",
+                "B": "Kütük adlarının tüm sistemde benzersiz olmasını",
+                "C": "Her işin disk kullanmamasını",
+                "D": "Sadece tek kullanıcı olmasını",
+                "E": "Her işin aynı programı çalıştırmasını"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Çok iş düzeninin tanımı gereği paylaştırma zorunludur. Yanlışlar: B/C/D/E gereksiz/yanlış koşullardır."
+        },
+        {
+            "No": 35,
+            "question": "Görev kavramının özellikle kritik olduğu kaynak hangisidir?",
+            "options": {
+                "A": "Yazıcı kağıdı",
+                "B": "Ana işlem birimi (AİB) yönetimi",
+                "C": "Fare imleci",
+                "D": "Klavye tuş takımı",
+                "E": "Sadece optik disk"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin görev kavramının özellikle AİB yönetimi açısından temel olduğunu vurgular. Yanlışlar: A/C/D/E konu dışıdır."
+        },
+        {
+            "No": 36,
+            "question": "Toplu işlem kuyruklarının temel rolü aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Etkileşimli işleri tamamen engellemek",
+                "B": "Sisteme sunulan işleri göreve dönüştürmeden önce bekletmek",
+                "C": "Disk sektörlerini fiziksel sırada tutmak",
+                "D": "Kesilme vektörlerini saklamak",
+                "E": "Sayfa taban yazmaçlarını güncellemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, toplu işlem ortamında sunulan işlerin önce toplu işlem kuyruklarında bekletildiğini söyler. Yanlışlar: A/C/D/E alakasızdır."
+        },
+        {
+            "No": 37,
+            "question": "Etkileşimli ortamda sunulan işlerin göreve dönüşümü nasıl olur?",
+            "options": {
+                "A": "Önce uzun süre toplu işlem kuyruğunda bekler",
+                "B": "Doğrudan göreve dönüşüp hazır görevler kuyruğuna bağlanır",
+                "C": "Sadece yedekleme gününde işletilir",
+                "D": "Sadece disk ön belleğine alınır",
+                "E": "Kütük sistemi devre dışı kalır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, etkileşimli işlerin doğrudan göreve dönüştürülüp hazır kuyruğa bağlandığını belirtir. Yanlışlar: A/C/D/E yanlış."
+        },
+        {
+            "No": 38,
+            "question": "Etkileşimli işlemde işletimin kesilmesi (durdurulması) metinde nasıl ele alınır?",
+            "options": {
+                "A": "Kullanıcı özel denetim tuşlarıyla istediği anda kesebilir",
+                "B": "Asla kesilemez",
+                "C": "Sadece derleyici kesebilir",
+                "D": "Sadece disk motoru kesebilir",
+                "E": "Sadece format komutuyla kesilir"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, etkileşimli işlemde kullanıcının özel denetim tuşlarıyla işletimi kesebileceğini söyler. Yanlışlar: B/C/D/E yanlış."
+        },
+        {
+            "No": 39,
+            "question": "Gerçek zamanlı sistemlerde “yanıt” kavramı hangi tür eylemleri kapsayabilir?",
+            "options": {
+                "A": "Sadece ekrana metin basmayı",
+                "B": "Süreç denetiminde vana/alarmların tetiklenmesi gibi eylemleri",
+                "C": "Sadece dosya kopyalamayı",
+                "D": "Sadece program derlemeyi",
+                "E": "Sadece klasör listelemeyi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin endüstriyel süreç denetiminde yanıtın vanaların açılıp kapanması, alarmların kurulması gibi olabileceğini belirtir. Yanlışlar: A/C/D/E dar veya alakasızdır."
+        },
+        {
+            "No": 40,
+            "question": "Çok iş düzeyi neden sistem başarımını etkiler?",
+            "options": {
+                "A": "Çünkü disk sektör boyu değişir",
+                "B": "Çünkü kaynak kullanım ve hizmet niteliği (verim/hız) bu düzeyden etkilenir",
+                "C": "Çünkü komutların ASCII’ye çevrilmesi gerekir",
+                "D": "Çünkü RAM rastgele erişimli olmaktan çıkar",
+                "E": "Çünkü kılavuz kütükler silinir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin çok iş düzeyinin kaynak kullanımı ve işletim hızlarını önemli ölçüde etkilediğini söyler. Yanlışlar: A/C/D/E alakasız."
+        },
+        {
+            "No": 41,
+            "question": "Tek iş düzeninde G/Ç başlatan bir iş için AİB’nin durumu genelde nasıldır?",
+            "options": {
+                "A": "Başka iş olmadığı için G/Ç bitene kadar beklemek zorunda kalır",
+                "B": "Her zaman başka işe anahtarlanır",
+                "C": "Her zaman disk yerine RAM kullanır",
+                "D": "Kesilme oluşsa bile etkilenmez",
+                "E": "Program sayacını sıfırlar"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Tek işte, G/Ç bitene kadar AİB program işletimini sürdüremez; bekler/boş kalır. Yanlışlar: B çok iş düzenidir; C/D/E yanlış."
+        },
+        {
+            "No": 42,
+            "question": "İşletim sistemi işlevlerinin “yönetim” olarak adlandırılmasının temel nedeni hangisidir?",
+            "options": {
+                "A": "Sadece kullanıcı arayüzünü yönetmesi",
+                "B": "Kaynakların paylaştırımı ve kullanım verimliliğini gözetmesi",
+                "C": "Sadece derleme yapması",
+                "D": "Sadece kütükleri sıkıştırması",
+                "E": "Sadece ağ kablosunu yönetmesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, OS kesimlerinin AİB/ana bellek/G/Ç gibi kaynakları yönetim işlevleri olarak ele aldığını söyler. Yanlışlar: A/C/D/E dar/yanlış."
+        },
+        {
+            "No": 43,
+            "question": "Bir iş tanım kütüğünde \"$\" ile başlayan değişken adları metinde neyi temsil eder?",
+            "options": {
+                "A": "Kesilme türünü",
+                "B": "İşletimin başında işe aktarılacak parametreleri",
+                "C": "Disk silindir numarasını",
+                "D": "Sayfa numarasını",
+                "E": "Sadece yorum satırlarını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: UNIX örneğinde $ ile başlayan değişkenler işletim aşamasında işe verilecek parametrelerdir. Yanlışlar: A/C/D/E yanlış."
+        },
+        {
+            "No": 44,
+            "question": "İş tanımı içinde cmp -s komutundan sonra \"$?\" durum değişkeninin kullanılması ne amaçla yapılır?",
+            "options": {
+                "A": "Disk hızını ölçmek",
+                "B": "Karşılaştırma sonucuna göre koşullu akış (if) yapmak",
+                "C": "Bellek parçalanmasını azaltmak",
+                "D": "Sayfa taban yazmacını günlemek",
+                "E": "Kesilme maskesini sıfırlamak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: cmp sonucu $? içine gider; if ile koşula bağlı olarak program çalıştırma örneklenir. Yanlışlar: A/C/D/E konu dışı."
+        },
+        {
+            "No": 45,
+            "question": "Etkileşimli işlemde sistem aşırı yüklüyse ne gözlenebilir?",
+            "options": {
+                "A": "Yanıtlar gecikebilir ve “tek başına kullanım” izlenimi kaybolur",
+                "B": "Disk tamamen durur",
+                "C": "Kütükler otomatik silinir",
+                "D": "Kesilme donanımı fiziksel olarak bozulur",
+                "E": "Tüm komutlar derleyiciye gider"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kullanıcı sayısı/yük artınca terminal yanıtlarının gecikebileceğini belirtir. Yanlışlar: B/C/D/E abartı/yanlış."
+        },
+        {
+            "No": 46,
+            "question": "Toplu işlem kuyruklarından işlerin ne amaçla işletime alınması vurgulanır?",
+            "options": {
+                "A": "Etkileşimli işleri engellemek",
+                "B": "Etkileşimli işlerden arda kalan sürelerde kaynakları dolu tutup verimliliği artırmak",
+                "C": "Yalnızca kütük adlarını standartlaştırmak",
+                "D": "Her işin önceliğini sıfırlamak",
+                "E": "Sadece ağ paketlerini işlemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Toplu işler, etkileşimli işlerden arta kalan zamanlarda kaynak verimliliği için işletime alınır. Yanlışlar: A/C/D/E alakasız; D keyfi."
+        },
+        {
+            "No": 47,
+            "question": "Bir disk biriminden bir seferde okunup yazılabilen veri birimi metinde nasıl adlandırılır?",
+            "options": {
+                "A": "Komut",
+                "B": "Öbek",
+                "C": "Yazmaç",
+                "D": "Sayfa",
+                "E": "Kesilme"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Diskte giriş/çıkış biriminin bir seferde aktarabildiği veri birimi öbek olarak adlandırılır. Yanlışlar: A/C/D/E farklı kavramlar; D bellek yönetimiyle ilişkilidir."
+        },
+        {
+            "No": 48,
+            "question": "Bir göreve ait durum bilgilerinin saklandığı veri yapısı metinde hangi adlarla anılır?",
+            "options": {
+                "A": "Sektör dizisi",
+                "B": "Görev iskeleti / denetim öbeği",
+                "C": "Kılavuz kütük",
+                "D": "FAT",
+                "E": "RAID"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin programın işletim bilgisinin saklandığı yapıyı görev iskeleti/denetim öbeği olarak anar. Yanlışlar: C/D/E kütük yönetimi konuları; A fiziksel disk düzeyidir."
+        },
+        {
+            "No": 49,
+            "question": "Etkileşimli işlemde zaman dilimi (time slice) yaklaşımında tipik zaman dilimi büyüklüğü hangi mertebededir?",
+            "options": {
+                "A": "Milisaniye mertebesinde (ör. birkaç–onlarca ms)",
+                "B": "Saniyeler mertebesinde",
+                "C": "Dakikalar mertebesinde",
+                "D": "Saatler mertebesinde",
+                "E": "Zaman dilimi kullanılmaz"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metindeki örnekler, etkileşimli sistemlerde zaman dilimlerinin milisaniye mertebesinde seçildiğini gösterir. Yanlışlar: Saniye/dakika/saat mertebesi etkileşimli kullanım için çok büyüktür; zaman dilimi olmaması tipik değildir."
+        },
+        {
+            "No": 50,
+            "question": "Gerçek zamanlı sistemlerde uyarılarla ilgili görevlerin AİB’ye anahtarlanması hangi ilkeye göre yapılır?",
+            "options": {
+                "A": "Alfabetik sıraya göre",
+                "B": "Uyarıların yanıt süresi gereksinimine dayalı öncelik sırasına göre",
+                "C": "Diskteki sektör numarasına göre",
+                "D": "Kütük adının uzantısına göre",
+                "E": "Rastgele"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, görevlerin uyarıların yanıt sürelerine dayalı öncelik sırasında anahtarlanacağını belirtir. Yanlışlar: A/C/D/E alakasızdır."
+        }
+    ]
+}

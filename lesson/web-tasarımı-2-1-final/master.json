@@ -1,0 +1,30 @@
+{
+    "unitCount": 5,
+    "units": [
+        {
+            "unitNumber": 1,
+            "unitTitle": "HTML Temelleri ve Yapı",
+            "fileName": "unite-01-html.json"
+        },
+        {
+            "unitNumber": 2,
+            "unitTitle": "CSS Temelleri, Seçiciler ve Düzen (Layout)",
+            "fileName": "unite-02-css.json"
+        },
+        {
+            "unitNumber": 3,
+            "unitTitle": "JavaScript Temelleri, DOM ve Olaylar (Events)",
+            "fileName": "unite-03-javascript.json"
+        },
+        {
+            "unitNumber": 4,
+            "unitTitle": "Bootstrap: Grid, Utilities ve Bileşenler (Components)",
+            "fileName": "unite-04-bootstrap.json"
+        },
+        {
+            "unitNumber": 5,
+            "unitTitle": "jQuery: Seçiciler, DOM İşlemleri ve AJAX",
+            "fileName": "unite-05-jquery.json"
+        }
+    ]
+}

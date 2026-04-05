@@ -1,0 +1,658 @@
+{
+    "unitNumber": 6,
+    "unitTitle": "Kütük Yönetimi",
+    "sourceMarkdown": "isletim_sistemleri_md/06-kütük-yönetimi.md",
+    "questionCount": 50,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Kütük tanıtıcısı (file descriptor/handle) metindeki sistem çağrısı akışında hangi çağrı tarafından üretilir?",
+            "options": {
+                "A": "close",
+                "B": "open",
+                "C": "read",
+                "D": "write",
+                "E": "seek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: open() bir kütüğü açar ve sonraki read/write/seek işlemlerinde kullanılacak kütük tanıtıcısını döndürür. Yanlışlar: close kapatır; read/write/seek tanıtıcıyı kullanır ama üretmez."
+        },
+        {
+            "No": 2,
+            "question": "Kütük erişimlerinde sıradan (sequential) erişim ile rasgele (random) erişim arasındaki temel fark hangisidir?",
+            "options": {
+                "A": "Sıradan erişimde dosya tanıtıcısı kullanılmaz",
+                "B": "Rasgele erişimde dosya göstericisi (file pointer) istenen konuma taşınabilir",
+                "C": "Sıradan erişim yalnızca disketlerde mümkündür",
+                "D": "Rasgele erişim yalnızca yazma için kullanılır",
+                "E": "İkisi aynı şeydir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Random access’te seek ile kütük işaretçisi istenen konuma alınabilir; sequential access’te okuma/yazma genelde mevcut konumdan ilerler. Yanlışlar: A/C/D/E yanlış, D genelleme değil."
+        },
+        {
+            "No": 3,
+            "question": "Kütük işaretçisini (file pointer) konumlandırmak için kullanılan tipik sistem çağrısı hangisidir?",
+            "options": {
+                "A": "mount",
+                "B": "seek",
+                "C": "sync",
+                "D": "fork",
+                "E": "pipe"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, rasgele erişimde seek (DOS’ta dosya işaretçisini hareket ettirme) işlemini açıkça anar. Yanlışlar: A/C/D/E başka amaçlıdır."
+        },
+        {
+            "No": 4,
+            "question": "Bir süreç için açılabilecek kütük sayısına ilişkin iki ayrı sınır metinde nasıl geçer?",
+            "options": {
+                "A": "Sadece sistem geneli sınır vardır",
+                "B": "Sadece süreç başına sınır vardır",
+                "C": "Hem sistem geneli hem süreç başına sınır olabilir",
+                "D": "Sınır sadece disket için geçerlidir",
+                "E": "Sınır sadece UNIX için geçerlidir"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Metin, open dosya sayısı için hem sistem hem de süreç bazında kısıt bulunabileceğini belirtir."
+        },
+        {
+            "No": 5,
+            "question": "Diskte erişim zamanını oluşturan temel bileşenler, metindeki disk yapısı anlatımına göre hangilerine dayanır?",
+            "options": {
+                "A": "Yalnız CPU frekansı",
+                "B": "Kafa yatay hareketi (seek) + dönme gecikmesi + aktarım",
+                "C": "Sadece ağ gecikmesi",
+                "D": "Sadece TLB kaçırma",
+                "E": "Sadece önbellek (cache)"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Disk erişim süresi tipik olarak kafa hareketi, dönme (rotational latency) ve veri aktarımından oluşur. Yanlışlar: A/C/D/E eksik/yanlış."
+        },
+        {
+            "No": 6,
+            "question": "Diskin fiziksel adresleme öğeleri metinde hangi üçlü ile anılır?",
+            "options": {
+                "A": "PID-PC-SP",
+                "B": "Sayfa-çerçeve-ofset",
+                "C": "Silindir-kafa-sektör (CHS)",
+                "D": "i-node-blok-parite",
+                "E": "Öbek-FAT-root"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Metin, fiziksel disk konumunun silindir, kafa ve başlangıç sektörü üçlüsüyle tanımlanabildiğini söyler."
+        },
+        {
+            "No": 7,
+            "question": "Öbek (cluster) kavramı metinde nasıl konumlandırılır?",
+            "options": {
+                "A": "Tek bir baytlık en küçük birim",
+                "B": "Sektörlerin ikinin katları kadar gruplandığı, kütük atamasında birim kabul edilen bütün",
+                "C": "Yalnızca RAM sayfası",
+                "D": "Sadece ağ paketi",
+                "E": "Sadece kılavuz satırı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, öbeği (cluster) sektörlerden oluşan ve yer atamada taban alınan birim olarak tanımlar."
+        },
+        {
+            "No": 8,
+            "question": "Disk erişiminde CHS gibi fiziksel adreslemeyi ‘mantıksal blok adresleme’ye (LBA) dönüştürme yaklaşımının temel faydası nedir?",
+            "options": {
+                "A": "Kullanıcıdan disk geometrisini gizleyip daha basit bir adresleme sunmak",
+                "B": "Sayfa tablosunu kaldırmak",
+                "C": "Semaforları gereksiz kılmak",
+                "D": "Kütük adlarını şifrelemek",
+                "E": "Yazıcıyı hızlandırmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: LBA, fiziksel geometriden bağımsız daha basit bir soyutlama sağlar. Yanlışlar: B/C/D/E alakasız."
+        },
+        {
+            "No": 9,
+            "question": "Kütük yönetiminde kılavuz/katalog (directory) yapısının temel amacı nedir?",
+            "options": {
+                "A": "Kütüklerin isimlerini fiziksel disk öbeklerine bağlamak",
+                "B": "CPU zamanlamasını yapmak",
+                "C": "Sayfa çıkarma algoritmasını seçmek",
+                "D": "Kesim yazmaçlarını güncellemek",
+                "E": "Kilitlenmeyi önlemek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Directory, sembolik kütük adlarını kütük kimliği/yer bilgisine bağlar. Yanlışlar: B/C/D/E diğer üniteler."
+        },
+        {
+            "No": 10,
+            "question": "Kütük izi (path) kavramı aşağıdakilerden hangisini ifade eder?",
+            "options": {
+                "A": "Diskin fiziksel silindir numarasını",
+                "B": "Bir kütüğe kökten (root) başlayarak alt kılavuzlar üzerinden ulaşan adlandırma yolunu",
+                "C": "TLB girişlerini",
+                "D": "Semafor bekleme kuyruğunu",
+                "E": "Sayfa içi adresi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Path, kılavuz hiyerarşisinde kütüğe erişim yoludur. Yanlışlar: A/C/D/E değil."
+        },
+        {
+            "No": 11,
+            "question": "MS-DOS’ta FAT yaklaşımının temel fikri en doğru nasıl özetlenir?",
+            "options": {
+                "A": "Her kütüğe tek bitişken alan ayırmak",
+                "B": "Kütüğün ilk öbeğinden başlayıp her öbek için bir sonraki öbeği gösteren zinciri tablo (FAT) ile tutmak",
+                "C": "Her kütüğe i-node çizelgesi ayırmak",
+                "D": "Kütükleri yalnızca dizinli atamak",
+                "E": "Kütükleri sadece RAM’de saklamak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: FAT, zincirli yer atamanın bağlantı bilgisini özel bir tabloda tutar; kılavuz satırı ilk öbeği/numarayı gösterir. Yanlışlar: A/C/D/E yanlış."
+        },
+        {
+            "No": 12,
+            "question": "FAT yapısının büyük disklerde tercih edilmemesinin metinde vurgulanan ana nedeni nedir?",
+            "options": {
+                "A": "Sadece okuma yapabilmesi",
+                "B": "FAT’in ana bellekte tutulması gerektiğinden, disk büyüdükçe FAT’in boyutunun çok büyümesi",
+                "C": "Kesimleme ile çalışmaması",
+                "D": "Sadece tek kullanıcı desteklemesi",
+                "E": "Kütük adlarını sınırlaması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, sürücü sığası arttıkça FAT’in MB mertebesine büyüyüp RAM’de saklamanın pratik olmaktan çıktığını söyler."
+        },
+        {
+            "No": 13,
+            "question": "UNIX’te i-node yapısının temel işlevi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Kütük adını saklamak",
+                "B": "Bir kütüğün fiziksel disk öbek adreslerini ve kütüğe ait öznitelikleri tutmak",
+                "C": "Diskin CHS geometrisini saklamak",
+                "D": "Sayfa tablosu erişimini hızlandırmak",
+                "E": "Semafor kuyruğu tutmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: i-node; öbek adresleri (doğrudan/dolaylı) ve sahiplik, boy, zamanlar gibi metadataları içerir. Yanlışlar: A kılavuz satırının işidir; C/D/E alakasız."
+        },
+        {
+            "No": 14,
+            "question": "UNIX’te kılavuz kütük satırları tipik olarak hangi iki bilgiyi içerir?",
+            "options": {
+                "A": "Kütük adı + i-node numarası",
+                "B": "Kütük adı + disk silindir numarası",
+                "C": "Kütük boyu + disk sektörü",
+                "D": "Kütük adı + FAT indeksi",
+                "E": "Kütük adı + sayfa numarası"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, UNIX dizinlerinin ‘ad + inode numarası’ satırlarından oluştuğunu belirtir."
+        },
+        {
+            "No": 15,
+            "question": "UNIX i-node içinde doğrudan + tek/çift/üçlü dolaylı adresleme yapılarının amacı nedir?",
+            "options": {
+                "A": "Küçük kütüklerde hızlı erişim, büyük kütüklerde ise çok daha fazla öbeği adresleyebilmek",
+                "B": "Kütük adını şifrelemek",
+                "C": "Diskin dönme gecikmesini sıfırlamak",
+                "D": "Semafor sayısını azaltmak",
+                "E": "Sayfa hatasını engellemek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Doğrudan adresler küçük kütükleri verimli yapar; dolaylı seviyeler büyük kütükler için ölçek sağlar."
+        },
+        {
+            "No": 16,
+            "question": "UNIX’te bağ sayacı (link count) metinde hangi amaçla açıklanır?",
+            "options": {
+                "A": "Disk erişim hızını ölçmek",
+                "B": "Bir kütüğe kaç farklı alt kılavuzdan (hard link ile) erişildiğini izlemek ve silme semantiğini doğru yapmak",
+                "C": "Sayfa fault sıklığını ölçmek",
+                "D": "FAT’in kopya sayısını belirlemek",
+                "E": "RAID paritesini hesaplamak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bir kütük birden çok dizinde görünürse i-node’un biricik kaldığını ve link count ile ancak son bağ kalkınca silindiğini anlatır."
+        },
+        {
+            "No": 17,
+            "question": "Simgesel bağ (symbolic link) yöntemi metinde hangi farklılıkla anlatılır?",
+            "options": {
+                "A": "Simgesel bağ, aynı i-node’u paylaşır",
+                "B": "Simgesel bağ, kütük izini (path) içeren özel bir kütük yaratır; hedef silinirse bağ boşa düşebilir",
+                "C": "Simgesel bağ, FAT tablosunu büyütür",
+                "D": "Simgesel bağ, diski bitişken yapar",
+                "E": "Simgesel bağ, RAID aynalamadır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, symlink’te bir ‘link kütüğü’ içinde path tutulduğunu ve hedef silinirse erişimin ‘olmayan kütük’ ile biteceğini vurgular."
+        },
+        {
+            "No": 18,
+            "question": "Kütüklere diskte yer atama yöntemlerinde en çok gözetilen kıstas metinde hangisi olarak verilir?",
+            "options": {
+                "A": "CPU önceliği",
+                "B": "Erişim hızı",
+                "C": "Sayfa tablosu boyu",
+                "D": "Semafor sayısı",
+                "E": "Kesim zorlama"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, disk öbeklerinin bitişken/silindir yakınlığına göre erişim hızının temel kıstas olduğunu vurgular."
+        },
+        {
+            "No": 19,
+            "question": "Bitişken (contiguous) yer atama yönteminin en belirgin performans avantajı hangisidir?",
+            "options": {
+                "A": "Rasgele erişimi imkânsız kılması",
+                "B": "Sıradan ve rasgele erişimlerde hızlı olması (bitişkenlik + basit adres hesaplama + cache faydası)",
+                "C": "Her zaman sıfır iç parçalanma yaratması",
+                "D": "Hiç çizelge tutmaması",
+                "E": "FAT gerektirmesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Bitişken atamada öbekler ardışık olduğu için kafa hareketleri azalır, cache daha iyi çalışır ve adresleme basittir."
+        },
+        {
+            "No": 20,
+            "question": "Bitişken yer atama yönteminin metinde vurgulanan ana sakıncası hangisidir?",
+            "options": {
+                "A": "Kütük adlarını sınırlaması",
+                "B": "Diskte iç ve dış parçalanmaya yol açması",
+                "C": "Sadece okuma yapabilmesi",
+                "D": "i-node gerektirmesi",
+                "E": "Mount/dismount’u engellemesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bitişken atamanın hem kütük içi boşluk (iç) hem de küçük boş alanlar (dış) parçalanma yarattığını söyler."
+        },
+        {
+            "No": 21,
+            "question": "Bitişken atamada ‘boş alan çizelgesi’ (free-space list) tipik olarak ne tutar?",
+            "options": {
+                "A": "Her kütüğün i-node numarasını",
+                "B": "Boş alanların başlangıç öbek adresi ve öbek sayısını",
+                "C": "Her sayfanın erişim bitini",
+                "D": "Her semaforun kuyruğunu",
+                "E": "Her diskin CHS bilgisini"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metne göre bu çizelge, diskteki bitişken boşlukların başlangıcını ve uzunluğunu tutar."
+        },
+        {
+            "No": 22,
+            "question": "Zincirli (linked) yer atama yönteminde bir kütüğün i’inci öbeğine erişmenin temel sakıncası hangisidir?",
+            "options": {
+                "A": "Her zaman bitişken olmayı gerektirmesi",
+                "B": "i’inci öbek adresi (i-1)’inci öbekte olduğu için rasgele erişimde ardışık okumalar gerektirmesi",
+                "C": "Kütüklerin silinememesi",
+                "D": "Diskte hiç parçalanma olmaması",
+                "E": "Öbeklerin adreslenememesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Linked allocation, random access’i pahalı yapar; istenen öbeğe ulaşmak için zinciri baştan izlemek gerekir."
+        },
+        {
+            "No": 23,
+            "question": "Zincirli yer atamada bağlantı bilgisini öbeklerin içine dağınık tutmak yerine özel bir tabloda tutmanın (FAT fikri) ana faydası nedir?",
+            "options": {
+                "A": "Rasgele erişimde adres zincirini RAM’de daha hızlı izleyebilmek",
+                "B": "Diskin fiziksel yapısını değiştirmek",
+                "C": "Kesim taşmalarını önlemek",
+                "D": "CPU zamanlamasını hızlandırmak",
+                "E": "Monitörleri kaldırmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, bağ alanlarını özel kütükte toplayıp RAM’e almanın taramayı hızlandırabileceğini anlatır; bu MS-DOS FAT yaklaşımıdır."
+        },
+        {
+            "No": 24,
+            "question": "Zincirli yer atamanın ‘bağ bozulmasına duyarlılık’ sorunu neyi ifade eder?",
+            "options": {
+                "A": "Bir bağ alanı bozulursa zincirin devamındaki öbeklerin kaybolması ve kütüğün bozulması",
+                "B": "Kütüğün her zaman bitişken hale gelmesi",
+                "C": "Diskin hızlanması",
+                "D": "İç parçalanmanın yok olması",
+                "E": "Sayfa fault’un azalması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, zincirdeki bir bağın bozulmasının kalan öbekleri erişilemez kılıp kütüğü bozabileceğini belirtir."
+        },
+        {
+            "No": 25,
+            "question": "Dizinli (indexed) yer atama yönteminde kılavuz satırının temel olarak tuttuğu şey nedir?",
+            "options": {
+                "A": "Kütüğün ilk öbeği",
+                "B": "Kütüğün dizin öbeğinin adresi",
+                "C": "Kütüğün son günlenme tarihi",
+                "D": "Kütüğün CHS adresi",
+                "E": "Kütüğün semaforu"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Indexed allocation’da kütük öbek adresleri dizin öbeğinde toplanır; directory entry dizin öbeğini gösterir."
+        },
+        {
+            "No": 26,
+            "question": "Dizinli yer atamada tek düzey dizinlemenin büyük kütük boyunu sınırlamasının nedeni nedir?",
+            "options": {
+                "A": "Öbek boyunun değişken olması",
+                "B": "Dizin öbeğinin tutabileceği adres sayısının sınırlı olması",
+                "C": "Diskte CHS olmaması",
+                "D": "FAT’in RAM’de olması",
+                "E": "Kütük adının 8.3 formatında olması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, tek bir dizin öbeğinin tutabileceği öbek adresi sayısının sınırlı olması nedeniyle tek düzey dizinlemede en büyük kütük boyunun sınırlı kaldığını açıklar."
+        },
+        {
+            "No": 27,
+            "question": "Dizinli yer atamada çok düzeyli dizinleme kullanmanın temel amacı nedir?",
+            "options": {
+                "A": "Disk erişim süresini sıfırlamak",
+                "B": "Adreslenebilir maksimum kütük boyunu büyütmek",
+                "C": "Kesimleme yapmak",
+                "D": "Semafor kuyruğu tutmak",
+                "E": "Kütükleri bitişken hale getirmek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Çok düzeyli dizinleme, dizin öbeğinin sınırlı adres kapasitesini katlayarak çok daha büyük kütükleri adreslemeyi sağlar."
+        },
+        {
+            "No": 28,
+            "question": "Dizinli yer atamada boş öbekleri izlemek için metinde hangi yöntem öne çıkar?",
+            "options": {
+                "A": "Semafor çizelgesi",
+                "B": "Bit çizelgesi (bitmap)",
+                "C": "Kesim tanım çizelgesi",
+                "D": "Görev iskeleti",
+                "E": "TLB"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, boş öbek yönetiminde her öbeğe bir bit ayıran bit çizelgesini anlatır."
+        },
+        {
+            "No": 29,
+            "question": "Bit çizelgesi (bitmap) yöntemiyle boş alan izlemenin doğal maliyeti hangisidir?",
+            "options": {
+                "A": "Hiç bellek gerektirmemesi",
+                "B": "Büyük disklerde bitmap’in ciddi boyuta ulaşabilmesi",
+                "C": "Sadece bitişken alan ataması ile çalışması",
+                "D": "Sadece UNIX’te çalışması",
+                "E": "Sadece tüketilir kaynaklarda çalışması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, örnekle büyük disklerde bitmap’in MB’lar mertebesine çıkabileceğini belirtir."
+        },
+        {
+            "No": 30,
+            "question": "Disk ön bellek (cache / buffer cache) kullanmanın başarım açısından temel etkisi nedir?",
+            "options": {
+                "A": "Disk erişimlerini azaltarak ortalama erişim süresini düşürmek",
+                "B": "Kütük adlarını şifrelemek",
+                "C": "Sayfa tablosunu kaldırmak",
+                "D": "Semaforları gereksiz kılmak",
+                "E": "Disk geometrisini değiştirmek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, sık kullanılan öbekleri RAM’de tutarak diske gidişi azaltma hedefini açıklar."
+        },
+        {
+            "No": 31,
+            "question": "UNIX’te disk ön bellek (buffer cache) yönetiminde metinde uygun görülen çıkarma yaklaşımı hangisidir?",
+            "options": {
+                "A": "FIFO",
+                "B": "LRU benzeri (uzun süredir kullanılmayanı çıkar) yaklaşım",
+                "C": "Optimal",
+                "D": "Banker algoritması",
+                "E": "Dekker algoritması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, disk ön belleğinde LRU-benzeri kuyruğun kullanılmasını ve kilitli öbeklerin tutulmasını anlatır."
+        },
+        {
+            "No": 32,
+            "question": "Disk ön belleği kullanmanın güvenilirlik açısından başlıca riski nedir?",
+            "options": {
+                "A": "Elektrik kesilince RAM’de kalmış güncellemelerin diske yazılamadan kaybolması",
+                "B": "Kütük adlarının uzaması",
+                "C": "TLB’nin bozulması",
+                "D": "Semaforların negatif olması",
+                "E": "CHS adreslemenin kalkması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, gecikmeli yazmanın elektrik kesintisinde güncellenmiş öbek kaybı riskini artırdığını vurgular."
+        },
+        {
+            "No": 33,
+            "question": "UNIX’te güncellenmiş öbekleri diske yazmayı tetiklemek için metinde geçen sistem çağrısı hangisidir?",
+            "options": {
+                "A": "fsck",
+                "B": "sync",
+                "C": "open",
+                "D": "fork",
+                "E": "exec"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, sync çağrısının buffer cache’deki güncellenmiş öbekleri diske yazdığını söyler."
+        },
+        {
+            "No": 34,
+            "question": "MS-DOS’ta güvenilirlik için anlatılan ‘write-through cache’ yaklaşımı neyi ifade eder?",
+            "options": {
+                "A": "Yazmaların önce RAM’de birikmesi",
+                "B": "Güncellenen öbeğin hemen diske yazılması",
+                "C": "Yazmaların tamamen yasaklanması",
+                "D": "Yazmaların RAID’e yönlendirilmesi",
+                "E": "Yazmaların sadece gece yapılması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, MS-DOS’ta yazılan öbeğin hemen diske aktarılmasıyla veri kaybı riskinin azaltıldığını açıklar."
+        },
+        {
+            "No": 35,
+            "question": "Yedekleme (backup) işlemi kütük sistemi güvenilirliğinde temel olarak neyi hedefler?",
+            "options": {
+                "A": "Disk erişimini hızlandırmak",
+                "B": "Verinin birden çok kopyasını oluşturarak bozulmalarda geri dönmeyi sağlamak",
+                "C": "Kütükleri bitişken yapmak",
+                "D": "Sayfa fault’u azaltmak",
+                "E": "Kilitlenmeyi önlemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, yedeklemenin verinin kopyalarını oluşturarak bozulma/arıza durumunda düzeltme/geri alma sağladığını anlatır."
+        },
+        {
+            "No": 36,
+            "question": "Son yedekten bu yana güncellenen kütükleri yedekleme yaklaşımı metinde hangi bilgiye dayanır?",
+            "options": {
+                "A": "Kütüklerin son günlenme tarihine",
+                "B": "FAT’in iki kopya olmasına",
+                "C": "Sayfa erişim bitine",
+                "D": "Semafor sayacına",
+                "E": "Diskin silindir sayısına"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kılavuz kütüklerde tutulan son günlenme tarihleriyle artımlı yedekleme yapılabildiğini söyler."
+        },
+        {
+            "No": 37,
+            "question": "Aynalama (mirroring) yaklaşımında temel ilke hangisidir?",
+            "options": {
+                "A": "Yazmaların iki diske koşut yapılmasıyla her kütüğün iki kopyasını sürekli tutmak",
+                "B": "Sadece okuma işlemlerini hızlandırmak",
+                "C": "Sadece disk önbelleğini büyütmek",
+                "D": "Kütükleri dizin öbeğine taşımak",
+                "E": "Sadece kılavuzları yedeklemek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, mirroring’de her yazmanın eş disk çiftine yazılarak sürekli yedekli tutulduğunu açıklar."
+        },
+        {
+            "No": 38,
+            "question": "RAID0 modeli metindeki açıklamaya göre hangi özelliğe sahiptir?",
+            "options": {
+                "A": "Parite ile hata toleransı sağlar",
+                "B": "Şeritleme (striping) ile hız sağlar ama yedeklilik sağlamaz",
+                "C": "Aynalama yapar",
+                "D": "Sadece tek disk kullanır",
+                "E": "Sadece disketlerde çalışır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, RAID0’ın striping ile hız sağladığını ancak yedekleme/fault tolerant olmadığını belirtir."
+        },
+        {
+            "No": 39,
+            "question": "RAID1 modeli metindeki tanıma göre hangisine karşılık gelir?",
+            "options": {
+                "A": "Şeritleme",
+                "B": "Aynalama (mirroring)",
+                "C": "Pariteli şeritleme",
+                "D": "Zincirli atama",
+                "E": "Bitişken atama"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, RAID1’i aynalama yaklaşımı olarak açıklar."
+        },
+        {
+            "No": 40,
+            "question": "RAID10 (1+0) modelinin temel fikri hangisidir?",
+            "options": {
+                "A": "Ne hız ne yedeklilik sağlar",
+                "B": "RAID0 ve RAID1’in birleşimi olarak hem şeritleme ile hız hem aynalama ile yedeklilik sağlamak",
+                "C": "Sadece parite kullanmak",
+                "D": "Sadece bitişken atama yapmak",
+                "E": "Sadece FAT kullanmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, RAID10’da disklerin çiftler halinde aynalanıp çiftler arası striping ile hız/yedeklilik birleştiğini anlatır."
+        },
+        {
+            "No": 41,
+            "question": "Dosya sistemi tutarlılık sınaması yapan programlara metindeki örnekler hangileridir?",
+            "options": {
+                "A": "grep ve awk",
+                "B": "chkdsk ve fsck",
+                "C": "fork ve exec",
+                "D": "P ve V",
+                "E": "lea ve mov"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, MS-DOS’ta chkdsk ve UNIX’te fsck ile dosya sistemi denetimi yapıldığını belirtir."
+        },
+        {
+            "No": 42,
+            "question": "fsck/chkdsk türü tutarlılık sınamalarında görülebilecek tipik bir tutarsızlık örneği hangisidir?",
+            "options": {
+                "A": "Bir öbeğin birden çok kütüğe atanmış görünmesi",
+                "B": "TLB’de giriş kalmaması",
+                "C": "Kesim zorlama önekinin eksik olması",
+                "D": "Semaforun 0 olması",
+                "E": "CPU’nun tek çekirdekli olması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kimi öbeklerin birden çok kütüğe atanmış görünebilmesini ve bunun tutarsızlık olduğunu açıklar."
+        },
+        {
+            "No": 43,
+            "question": "Bitişken atamada kütük boyu önceden kestirilemezse metinde hangi pratik çözüm kullanılır?",
+            "options": {
+                "A": "Kütüğü hiç yaratmamak",
+                "B": "Ortalama bir alan ayırıp büyürse bitişken olma zorunluluğu olmayan taşma alanları kullanmak",
+                "C": "Kütüğü i-node’a çevirmek",
+                "D": "Kütüğü sadece RAM’de tutmak",
+                "E": "Kütüğü sadece RAID0’a yazmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, boyu kestirilemeyen kütükler için başlangıçta ortalama alan ve büyüme için taşma alanı yaklaşımını anlatır."
+        },
+        {
+            "No": 44,
+            "question": "Diskte iç parçalanma kapsamına giren ‘öbek içi parçalanma’ ne zaman oluşur?",
+            "options": {
+                "A": "Kütükler hiç silinmezse",
+                "B": "Kütüğün son öbek kümesi tamamen dolamadığında",
+                "C": "FAT iki kopya olduğunda",
+                "D": "RAID kullanıldığında",
+                "E": "Sync çağrısı yapıldığında"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, her kütüğün son öbeğinin tam dolamayacağını ve bunun küçük de olsa iç parçalanma olduğunu belirtir."
+        },
+        {
+            "No": 45,
+            "question": "UNIX’te mount/dismount komutları metindeki anlatımda neyi sağlar?",
+            "options": {
+                "A": "Bir sürücüyü kütük gibi ele alıp kök kılavuza eklemek/çıkarmak",
+                "B": "Sayfa tablosunu büyütmek",
+                "C": "Semafor kuyruğunu temizlemek",
+                "D": "Diskte bitiştirme yapmak",
+                "E": "Kütükleri sadece root altında tutmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, UNIX’te sürücülerin kütük gibi düşünülüp mount/dismount ile adlarının kök kılavuza bağlandığını anlatır."
+        },
+        {
+            "No": 46,
+            "question": "UNIX’te bir kütüğe /bbm/proje/örnek2 gibi bir yol ile erişimde, metindeki örnek akışın doğru özeti hangisidir?",
+            "options": {
+                "A": "Önce /bbm’nin i-node’u bulunur → /bbm kılavuzu okunur → proje’nin i-node’u bulunur → proje kılavuzu okunur → örnek2’nin i-node’u bulunur → öbek adresleri elde edilir",
+                "B": "Önce FAT okunur → sonra i-node okunur",
+                "C": "Önce sayfa tablosu okunur → sonra dizin okunur",
+                "D": "Önce RAID paritesi hesaplanır → sonra kütük açılır",
+                "E": "Hiçbir ara okuma yapılmaz; doğrudan öbeklere gidilir"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metindeki örnek, dizin satırı → inode → dizin öbeği sırasıyla katman katman yol çözümlemeyi açıkça gösterir."
+        },
+        {
+            "No": 47,
+            "question": "Dizinli yer atamada küçük kütüklerde dizin öbeği maliyetinin yüksek olmasının nedeni hangisidir?",
+            "options": {
+                "A": "Dizin öbeğinin kütükten daha büyük olabilmesi",
+                "B": "Her kütük için en az bir dizin öbeği ayırmanın küçük kütükte oransal yer kaybını artırması",
+                "C": "Kütük adının uzun olması",
+                "D": "CHS adresinin büyük olması",
+                "E": "Semaforların fazla olması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, her kütük için en az bir dizin öbeği ayırmanın küçük kütüklerde oransal yer kaybını artırdığını vurgular."
+        },
+        {
+            "No": 48,
+            "question": "MS-DOS’ta FAT’in iki kopya tutulmasının temel gerekçesi metinde hangi riskle ilişkilendirilir?",
+            "options": {
+                "A": "Diskin hızlanması",
+                "B": "Bağ bilgisinin bozulmasına karşı kurtarma olanağı sağlamak",
+                "C": "Kütük adlarını uzatmak",
+                "D": "Kilitlenmeyi önlemek",
+                "E": "Sayfa fault’u azaltmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, zincirli bağ bilgisinin bozulmasının kütüğü bozabileceğini; bu yüzden FAT’in birden çok kopyasının tutulabildiğini söyler."
+        },
+        {
+            "No": 49,
+            "question": "FAT tabanlı bazı dosya sistemlerinde kök kılavuz (root directory) alanının konumunun sabit olması metne göre hangi nedenle ortaya çıkar?",
+            "options": {
+                "A": "Kök kılavuzun yerini gösteren ayrı bir yapı bulunmadığından, formatlama ile sabit bir konuma yerleştirilmesi",
+                "B": "Kök kılavuzun RAM’de tutulması",
+                "C": "Kök kılavuzun i-node ile yönetilmesi",
+                "D": "Kök kılavuzun semaforla korunması",
+                "E": "Kök kılavuzun RAID ile yedeklenmesi"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kök kılavuzun yerini gösteren bir yapı olmadığı için kök kılavuz konumunun sürücü üzerinde değişmez (formatla belirlenen) tutulduğunu ve disk düzeninde sabit bir bölge olarak yer aldığını açıklar."
+        },
+        {
+            "No": 50,
+            "question": "Kütük atama yöntemlerinde ‘erişim hızı’ ile ‘disk kullanım verimliliği’ arasında metinde vurgulanan genel ilişki hangisidir?",
+            "options": {
+                "A": "Her ikisi de aynı anda her zaman en üst düzeye çıkarılabilir",
+                "B": "Bitişkenlik erişim hızını artırır ama parçalanma ile verimliliği düşürebilir; yöntemler bu iki kıstası uzlaştırır",
+                "C": "Sadece verimlilik önemlidir, hız önemsizdir",
+                "D": "Sadece hız önemlidir, verimlilik önemsizdir",
+                "E": "Bu iki kavram dosya yönetimiyle ilgili değildir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bitişken atamanın hızı artırırken parçalanma nedeniyle verimliliği düşürebileceğini ve farklı yöntemlerin bu dengeyi farklı kurduğunu anlatır."
+        }
+    ]
+}

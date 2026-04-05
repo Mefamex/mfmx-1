@@ -1,0 +1,202 @@
+{
+    "unitNumber": 15,
+    "unitTitle": "Derste Söylenilenler (Hoca Notu)",
+    "questionCount": 15,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Derste verilen örneğe göre “kontrol sistemi” ile ilgili temel ayrım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "UART vs SPI",
+                "B": "Açık çevrim vs kapalı çevrim",
+                "C": "RAM vs Flash",
+                "D": "CISC vs RISC",
+                "E": "Harvard vs Von Neumann"
+            },
+            "correct": "B",
+            "explanation": "Derste kontrol sistemleri açık çevrim (open-loop) ve kapalı çevrim (closed-loop) olarak ayrılır; temel ayrım geri besleme (feedback) olup olmamasıdır. Açık çevrimde sistem çıktıyı ölçmeden komut uygular (ör. encoder olmadan step motoru “adım saydım” varsayımıyla sürmek). Kapalı çevrimde sensörle çıktı ölçülür, hedefle karşılaştırılıp hata azaltılır (ör. termostat, servo/encoder’lı motor). Bu fark, bozucu etkilere karşı dayanıklılığı ve doğruluğu belirler."
+        },
+        {
+            "No": 2,
+            "question": "Derste yazıldığı şekliyle hata sinyali formülü aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "e(t)=girdi−çıktı",
+                "B": "e(t)=çıktı−girdi",
+                "C": "e(t)=çıktı×girdi",
+                "D": "e(t)=çıktı/girdi",
+                "E": "e(t)=0"
+            },
+            "correct": "B",
+            "explanation": "Derste-söylenilenler notunda hata sinyali “e(t)=Çıktı−girdi” olarak yazılmış. (Kontrol teorisinde farklı işaret konvansiyonları görülebilir; burada ders notu esas alınır.)"
+        },
+        {
+            "No": 3,
+            "question": "Derste verilen kararlılık benzetmesinde “çukurun dibindeki top” hangi duruma karşılık gelir?",
+            "options": {
+                "A": "Kararsız sistem",
+                "B": "Kararlı sistem",
+                "C": "Sadece open-loop",
+                "D": "Sadece UART",
+                "E": "Sadece PWM"
+            },
+            "correct": "B",
+            "explanation": "Kararlı sistem, itildiğinde tekrar dengeye dönen sistemdir (çukurun dibindeki top). Kararsız sistem ise küçük bir etkiyle devrilen top (tümsek üstü) benzetmesiyle anlatılır."
+        },
+        {
+            "No": 4,
+            "question": "Derste PID’nin anılmasının temel nedeni aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Haberleşme paketlerini şifrelemek",
+                "B": "Hata sinyaline göre sistemi hedefe daha iyi yaklaştırmak (aşma/salınım/kalıcı hata gibi davranışları yönetmek)",
+                "C": "Flash’ı kalıcı yapmak",
+                "D": "I2C adreslemek",
+                "E": "UART stop biti eklemek"
+            },
+            "correct": "B",
+            "explanation": "PID, kapalı çevrim kontrolün klasik yaklaşımıdır. Amaç, hataya göre düzeltme yaparak sistem davranışını iyileştirmektir (overshoot/oscillation/steady-state error gibi)."
+        },
+        {
+            "No": 5,
+            "question": "Derste sensör verilerindeki ani sıçramalara karşı önerilen basit çözüm aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sürekli delay eklemek",
+                "B": "Belirli penceredeki değerlerin aritmetik ortalamasını almak",
+                "C": "UART baud rate’i artırmak",
+                "D": "CS pini eklemek",
+                "E": "Flash’ı her örnekte silmek"
+            },
+            "correct": "B",
+            "explanation": "Derste sensör verileri için en basit filtreleme yaklaşımı olarak hareketli/aritmetik ortalama vurgulanır: art arda birkaç örneği toplayıp ortalamasını alarak ani gürültü sıçramaları yumuşatılır. Bu yöntem kolaydır ama bir trade-off getirir: pencere büyüdükçe sinyal daha pürüzsüz olur, ancak gecikme (lag) artar ve hızlı değişimlere tepki yavaşlayabilir. Sınavda genellikle “gürültüyü azaltır ama tepkiyi yavaşlatır” mantığı beklenir."
+        },
+        {
+            "No": 6,
+            "question": "“Kalman filtresi” derste hangi bağlamda geçmiştir?",
+            "options": {
+                "A": "Haberleşme protokolü",
+                "B": "Filtreleme yöntemlerinden biri olarak isim verilmesi",
+                "C": "PWM üretim yöntemi",
+                "D": "Bellek türü",
+                "E": "Kablo standardı"
+            },
+            "correct": "B",
+            "explanation": "Derste filtrasyon başlığı altında low-pass, high-pass, Kalman filtresi gibi filtre türleri anılır. Buradaki amaç, sensör gürültüsünü azaltma yaklaşımını bilmekti."
+        },
+        {
+            "No": 7,
+            "question": "Ders notlarına göre “kararsız sistem” benzetmesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Çukurun dibindeki top",
+                "B": "Tümseğin üstündeki top (küçük etkiyle devrilir)",
+                "C": "Sabit bir masa",
+                "D": "Flash bellek",
+                "E": "SCL hattı"
+            },
+            "correct": "B",
+            "explanation": "Kararsız (unstable) sistemde küçük bir bozucu etki, sistemi denge noktasından uzaklaştırır ve sistem kendi kendine geri dönme eğilimi göstermez. Derste bunu anlatmak için “tümseğin üstündeki top” benzetmesi kullanılır: top çok küçük bir itmeyle bile yuvarlanıp hızla uzaklaşır. Karşılaştırma için: çukur içindeki top “kararlı” (geri döner), düz yüzeydeki top ise “sınırda/marginal” davranışa benzetilebilir."
+        },
+        {
+            "No": 8,
+            "question": "Kapalı çevrim sistemlerde “geri besleme” neden kritik olabilir?",
+            "options": {
+                "A": "Çünkü maliyeti her zaman sıfırlar",
+                "B": "Çünkü dış etkiyle oluşan sapmayı ölçüp düzeltmeye imkan verir",
+                "C": "Çünkü UART’ı hızlandırır",
+                "D": "Çünkü Flash’ı büyütür",
+                "E": "Çünkü SPI CS’yi kaldırır"
+            },
+            "correct": "B",
+            "explanation": "Geri besleme, sistem çıktısının ölçülmesini sağlar. Böylece dış etkenler ve belirsizlikler karşısında sistem kendini düzeltmeye çalışır. Bu, açık çevrime göre daha kararlı/başarılı kontrol sağlayabilir."
+        },
+        {
+            "No": 9,
+            "question": "Derste geçen “histerezis” kavramı en çok hangi probleme çözüm olarak düşünülür?",
+            "options": {
+                "A": "Eşik çevresinde titreme/çakışma",
+                "B": "EEPROM endurance",
+                "C": "CAN öncelik",
+                "D": "SPI hat sayısı",
+                "E": "UART parity"
+            },
+            "correct": "A",
+            "explanation": "Eşik çevresinde küçük gürültüler kararın sürekli değişmesine (yanıp sönme) yol açabilir. Histerezis (açma ve kapama için farklı eşik) bu titremeyi azaltmak için kullanılır."
+        },
+        {
+            "No": 10,
+            "question": "Kontrol sistemlerinde “overshoot (aşma)” neyi ifade eder?",
+            "options": {
+                "A": "Hedef değere hiç ulaşmamak",
+                "B": "Çıkışın hedef değeri geçip bir miktar üstüne çıkması",
+                "C": "Sadece kablo kopması",
+                "D": "Sadece bellek taşması",
+                "E": "Sadece PWM duty"
+            },
+            "correct": "B",
+            "explanation": "Overshoot (aşma), sistem çıkışının hedef değere giderken hedefi geçici olarak aşmasıdır (örn. hedef 100 ise bir süre 110’a çıkıp sonra geri gelmek). Bu genellikle az sönümlü (underdamped) bir dinamiğin işaretidir ve salınım (oscillation) ile birlikte görülebilir. Kontrol tasarımında amaç, yeterince hızlı yükselme süresi ile kabul edilebilir aşma/yerleşme süresi arasında denge kurmaktır; aşmayı azaltmak çoğu zaman daha “sakin” ama daha yavaş bir yanıt pahasına olabilir."
+        },
+        {
+            "No": 11,
+            "question": "Kontrol sistemlerinde “steady-state error” (kalıcı hata) aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İlk anda olan hata",
+                "B": "Sistem oturduktan sonra bile hedefle arasında kalan hata",
+                "C": "Sadece UART hatası",
+                "D": "Sadece ADC hatası",
+                "E": "Sadece SPI hatası"
+            },
+            "correct": "B",
+            "explanation": "Kalıcı hata, sistem dengeye oturduktan sonra bile hedef değerden sapma kalmasıdır. PID tasarımında integral terimi gibi yaklaşımlar kalıcı hatayı azaltmaya yardım eder."
+        },
+        {
+            "No": 12,
+            "question": "“Oscillation (salınım)” kontrol sistemi davranışında en doğru şekilde neyi anlatır?",
+            "options": {
+                "A": "Çıkışın hedefe tek seferde oturması",
+                "B": "Çıkışın hedef etrafında ileri-geri dalgalanması",
+                "C": "Sadece kablosuz parazit",
+                "D": "Sadece Flash silme",
+                "E": "Sadece CAN arbitration"
+            },
+            "correct": "B",
+            "explanation": "Salınım, sistem çıktısının hedef etrafında dalgalanmasıdır. Çok agresif kazançlar veya yetersiz sönümleme salınımı artırabilir; PID ayarları bu davranışı şekillendirir."
+        },
+        {
+            "No": 13,
+            "question": "Filtreleme ile histerezis arasındaki en doğru fark aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İkisi aynı şeydir",
+                "B": "Filtreleme ölçümü yumuşatır; histerezis karar eşiklerini ayırarak titremeyi azaltır",
+                "C": "Histerezis sadece analog; filtreleme sadece dijital",
+                "D": "Filtreleme sadece UART; histerezis sadece SPI",
+                "E": "İkisi de sadece bellekle ilgilidir"
+            },
+            "correct": "B",
+            "explanation": "Filtreleme sinyalin gürültüsünü azaltır. Histerezis ise karar mekanizmasında iki eşik kullanarak “eşik çevresinde zıplama”yı engeller. Bir sistemde ikisi birlikte de kullanılabilir."
+        },
+        {
+            "No": 14,
+            "question": "Kapalı çevrim kontrolü açık çevrime göre daha “robust” yapan şey hangisidir?",
+            "options": {
+                "A": "Geri beslemenin dış etkileri ölçüp düzeltmeye imkan vermesi",
+                "B": "Sadece daha fazla delay kullanması",
+                "C": "Sadece daha fazla PWM pini",
+                "D": "Sadece daha büyük Flash",
+                "E": "Sadece daha yüksek baud rate"
+            },
+            "correct": "A",
+            "explanation": "Robustluk, belirsizlik ve dış etkilere rağmen hedef davranışı koruyabilmektir. Geri besleme, sapmayı görüp düzeltme imkanı verdiği için kapalı çevrim genellikle daha robust bir kontrol sunar."
+        },
+        {
+            "No": 15,
+            "question": "Derste sensör verisi için filtre türleri sayılırken (low-pass/high-pass/Kalman) ortak amaç neydi?",
+            "options": {
+                "A": "Kablo sayısını artırmak",
+                "B": "Gürültüyü azaltıp daha güvenilir ölçüm/karar elde etmek",
+                "C": "Flash’ı silmek",
+                "D": "UART’ı kablosuz yapmak",
+                "E": "CS’yi kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Farklı filtre türleri farklı frekans bileşenlerini bastırır veya model tabanlı kestirim yapar. Ortak hedef, sensör ölçümündeki gürültüyü/paraziti azaltıp daha stabil sistem davranışı sağlamaktır."
+        }
+    ]
+}

@@ -1,0 +1,202 @@
+{
+    "unitNumber": 16,
+    "unitTitle": "Online Derste Söylenilenler (OCR)",
+    "questionCount": 15,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Online ders notlarında gömülü sistemlerin “Sense–Process–Act” döngüsü hangi sırayı ifade eder?",
+            "options": {
+                "A": "Act → Process → Sense",
+                "B": "Sense → Process → Act",
+                "C": "Process → Sense → Act",
+                "D": "Sense → Act → Process",
+                "E": "Act → Sense → Process"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemler çevreden veri alır (Sense), işler/karar verir (Process) ve fiziksel dünyayı etkiler (Act). Bu, birçok kontrol ve otomasyon sisteminin temel çalışma döngüsüdür."
+        },
+        {
+            "No": 2,
+            "question": "Von Neumann mimarisinde performans kısıtına yol açabilen temel problem aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İki ayrı bellek yolu olması",
+                "B": "Program ve verinin aynı bellek/bus üzerinden taşınması nedeniyle erişimlerin sıraya girmesi (Von Neumann bottleneck)",
+                "C": "Sadece analog çalışması",
+                "D": "ACK kullanması",
+                "E": "CS pini gerektirmesi"
+            },
+            "correct": "B",
+            "explanation": "Von Neumann’da komut ve veri aynı yol üzerinden taşınırsa aynı anda erişim mümkün olmaz; bu da darboğaz oluşturabilir. Harvard yaklaşımında program/veri yolları ayrılarak bu etki azaltılabilir."
+        },
+        {
+            "No": 3,
+            "question": "Online notlarda gömülü sistemlerin yaygın olduğu alanlara örnek olarak hangisi daha uygundur?",
+            "options": {
+                "A": "Sadece masaüstü oyunlar",
+                "B": "Otomotiv, ev elektroniği, endüstriyel otomasyon gibi fiziksel dünya ile etkileşimli sistemler",
+                "C": "Sadece metin editörleri",
+                "D": "Sadece veritabanı sunucuları",
+                "E": "Sadece CAD yazılımları"
+            },
+            "correct": "B",
+            "explanation": "Online ders notları; gömülü sistemlerin çok geniş alanda (otomotiv, beyaz eşya, endüstri, tıbbi cihazlar vb.) kullanıldığını vurgular. Ortak özellik, kısıtlı kaynaklarla fiziksel dünyayı yönetmektir."
+        },
+        {
+            "No": 4,
+            "question": "“Time-to-market” (pazara çıkış süresi) gömülü ürünlerde neden kritik bir parametredir?",
+            "options": {
+                "A": "Çünkü pazara çıkış süresi sadece RAM’i etkiler",
+                "B": "Geç kalmak rekabet dezavantajı ve maliyet artışı doğurur; tasarım kararlarını etkiler",
+                "C": "Çünkü time-to-market sadece kablo seçer",
+                "D": "Çünkü time-to-market sadece PWM’dir",
+                "E": "Çünkü time-to-market sadece I2C adresidir"
+            },
+            "correct": "B",
+            "explanation": "Pazara çıkış süresi, ticari başarıyı etkiler. Bu yüzden hazır kütüphane/SoC seçimi gibi kararlar zaman kazandırabilir; ancak bellek/güç/maliyet trade-off’ları doğurabilir."
+        },
+        {
+            "No": 5,
+            "question": "Online notlarda gömülü sistem tasarımında “trade-off” kavramı en iyi nasıl açıklanır?",
+            "options": {
+                "A": "Her hedef aynı anda maksimum yapılabilir",
+                "B": "Performans, maliyet, güç, boyut gibi hedefler arasında denge kurma zorunluluğu",
+                "C": "Sadece ekran parlaklığı",
+                "D": "Sadece baud rate",
+                "E": "Sadece ADC bit sayısı"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemlerde kaynaklar kısıtlıdır. Daha hızlı CPU daha pahalı ve daha çok güç tüketebilir; daha fazla özellik daha çok bellek gerektirir. Tasarım, bu hedefler arasında denge kurar."
+        },
+        {
+            "No": 6,
+            "question": "MCU’ların MPU’lara göre tipik avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Genellikle daha yüksek güç tüketimi",
+                "B": "CPU + çevre birimleri tek yongada; düşük maliyet ve düşük güç hedeflerine uygunluk",
+                "C": "Mutlaka harici DRAM gerektirmesi",
+                "D": "Mutlaka GPU içermesi",
+                "E": "Sadece kablosuz çalışması"
+            },
+            "correct": "B",
+            "explanation": "MCU’lar timer/ADC/UART gibi çevre birimlerini entegre eder ve çoğu zaman tek yongada yeterli çözüm sağlar. Bu, maliyet ve güç açısından avantajdır. MPU’lar daha yüksek işlem gücü isterken harici bellek/OS gereksinimi artabilir."
+        },
+        {
+            "No": 7,
+            "question": "Online notlarda gömülü sistemler için güvenilirlik neden özellikle vurgulanır?",
+            "options": {
+                "A": "Çünkü gömülü sistemler hiç hata vermez",
+                "B": "Çünkü fiziksel dünyayı etkiler; arıza insan güvenliği veya maliyet açısından kritik olabilir",
+                "C": "Çünkü sadece oyun oynatır",
+                "D": "Çünkü sadece web sayfası gösterir",
+                "E": "Çünkü sadece renk seçer"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemler motoru sürer, ısıtıcıyı kontrol eder, fren sistemine etki eder. Bu nedenle güvenilirlik/sağlamlık ve hata durumunda güvenli moda geçiş gibi tasarımlar öne çıkar."
+        },
+        {
+            "No": 8,
+            "question": "Hard real-time örneği olmaya en yakın senaryo hangisidir?",
+            "options": {
+                "A": "Video izlerken kare düşmesi",
+                "B": "Fren kontrol sinyalinin belirli sürede uygulanması",
+                "C": "Arama motoru sonuç sıralaması",
+                "D": "E-posta bildirimleri",
+                "E": "Sosyal medya akışı"
+            },
+            "correct": "B",
+            "explanation": "Hard real-time’da deadline kaçırmak kabul edilemez. Fren gibi kritik kontrol sistemlerinde gecikme güvenlik riskidir. Video kare düşmesi ise tipik soft real-time örneğidir."
+        },
+        {
+            "No": 9,
+            "question": "Harvard mimarisinin Von Neumann’a göre temel avantajı hangisidir?",
+            "options": {
+                "A": "Program ve veri için ayrı bellek/erişim yolu ile aynı anda erişimi kolaylaştırması",
+                "B": "Sadece analog çalışması",
+                "C": "Sadece kablosuz olması",
+                "D": "ACK kullanması",
+                "E": "CS pini zorunluluğu"
+            },
+            "correct": "A",
+            "explanation": "Harvard’da program ve veri yolu ayrılabildiği için aynı anda komut çekme ve veri erişimi mümkün olabilir. Bu, Von Neumann darboğazını azaltır ve determinism/performance’a katkı verir."
+        },
+        {
+            "No": 10,
+            "question": "Online notlarda gömülü sistemlerin “kısıtlı kaynak” özelliği en çok hangi kararı etkiler?",
+            "options": {
+                "A": "Kasa vida sayısı",
+                "B": "Bileşen seçimi ve yazılım optimizasyonu (bellek, güç, performans dengesi)",
+                "C": "Ekran teması",
+                "D": "Logo tasarımı",
+                "E": "Dosya adı"
+            },
+            "correct": "B",
+            "explanation": "Kısıtlı CPU/RAM/Flash/güç; yazılımın verimli olmasını ve donanımın doğru seçilmesini zorunlu kılar. Bu yüzden trade-off kavramı gömülü sistemlerde temel bir düşünme biçimidir."
+        },
+        {
+            "No": 11,
+            "question": "Online notlarda “gömülü sistem” ile “genel amaçlı bilgisayar” ayrımının temel noktası hangisidir?",
+            "options": {
+                "A": "Gömülü sistemler her zaman internetsizdir",
+                "B": "Gömülü sistemler belirli bir işi hedefler ve kaynakları bu iş için optimize edilir",
+                "C": "Genel amaçlı bilgisayarlar hiç CPU kullanmaz",
+                "D": "Gömülü sistemler sadece RAM’dir",
+                "E": "Gömülü sistemler sadece ekran gösterir"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemler belirli bir fonksiyon için tasarlanır ve maliyet/güç/performans hedefleri o fonksiyona göre optimize edilir. Genel amaçlı bilgisayarlar daha geniş kullanım alanı için daha fazla kaynak sunar."
+        },
+        {
+            "No": 12,
+            "question": "Online notlarda sınıflandırma eksenlerinden biri olarak aşağıdakilerden hangisi geçmeye en yakındır?",
+            "options": {
+                "A": "Standalone / Networked / Mobile",
+                "B": "Sadece masaüstü",
+                "C": "Sadece bulut",
+                "D": "Sadece web",
+                "E": "Sadece oyun"
+            },
+            "correct": "A",
+            "explanation": "Ders içeriğinde gömülü sistemler; stand-alone, networked ve mobile gibi eksenlerde sınıflandırılır. Bu sınıflandırmalar güç, güvenlik ve haberleşme ihtiyaçlarını etkiler."
+        },
+        {
+            "No": 13,
+            "question": "Online notlarda gömülü sistemlerin gelişim trendleri bağlamında en doğru çıkarım hangisidir?",
+            "options": {
+                "A": "Gömülü sistemler giderek daha az kullanılacak",
+                "B": "Bağlanabilirlik (IoT) ve entegrasyon arttıkça güvenlik ve güncelleme ihtiyacı da artar",
+                "C": "Güvenlik hiç önemli değildir",
+                "D": "Güncelleme mümkün değildir",
+                "E": "Sadece analog sistemler kalır"
+            },
+            "correct": "B",
+            "explanation": "Bağlanabilir sistemler daha fazla saldırı yüzeyi taşır. Bu nedenle IoT trendiyle birlikte güvenlik, güncelleme, kimlik doğrulama ve güvenilir haberleşme gibi konular daha kritik hale gelir."
+        },
+        {
+            "No": 14,
+            "question": "Online notlarda “performans” değerlendirmesi yapılırken hangi bakış açısı gömülü sistemler için daha doğru olur?",
+            "options": {
+                "A": "Sadece ortalama hız",
+                "B": "Deadline, latency ve öngörülebilirlik (determinism) ile birlikte değerlendirme",
+                "C": "Sadece ekran FPS",
+                "D": "Sadece internet hızı",
+                "E": "Sadece dosya boyutu"
+            },
+            "correct": "B",
+            "explanation": "Gömülü/real-time sistemlerde “performans” yalnızca ortalama hız değildir; tepki süresi, jitter, deadline uyumu gibi zaman davranışları da kritik performans kriterleridir."
+        },
+        {
+            "No": 15,
+            "question": "Online notlarda geçen mimari/işletim sistemi tartışmalarının sınav açısından en mantıklı çıktısı hangisidir?",
+            "options": {
+                "A": "Her şeyi ezberlemek",
+                "B": "Temel kavramları (Harvard/Von Neumann, hard/soft RT, kısıtlar) ilişkilendirip senaryo sorularında doğru tercih yapabilmek",
+                "C": "Sadece dosya isimlerini bilmek",
+                "D": "Sadece kablo renklerini bilmek",
+                "E": "Sadece terminalleri bilmek"
+            },
+            "correct": "B",
+            "explanation": "Online ders notları genellikle “neden böyle?” sorusunu besler: mimari seçimler performansı/determinismi etkiler, real-time sınıfları deadline etkisiyle ayrılır, kısıtlar tasarım trade-off’larını doğurur. Bu bağ kurma, yorum sorularında belirleyicidir."
+        }
+    ]
+}

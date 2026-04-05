@@ -1,0 +1,267 @@
+{
+    "unitNumber": 8,
+    "unitTitle": "Haberleşme Arabirimleri (UART/RS/Kablosuz)",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "UART haberleşmesinde iki cihazın doğru bağlantısı için en temel kural aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "TX–TX ve RX–RX bağlanır",
+                "B": "TX–RX çapraz bağlanır (birinin TX’i diğerinin RX’ine)",
+                "C": "SDA–SCL bağlanır",
+                "D": "MISO–MOSI bağlanır",
+                "E": "CS–CS bağlanır"
+            },
+            "correct": "B",
+            "explanation": "UART’ta bir cihazın TX (verici) pini karşı tarafın RX (alıcı) pinine bağlanır; aynı şekilde RX karşı tarafın TX’ine gider. Notlarda bu çapraz bağlantı özellikle vurgulanır."
+        },
+        {
+            "No": 2,
+            "question": "UART’ın “asenkron” olmasının temel sonucu aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Ayrı bir clock hattı zorunludur",
+                "B": "İki tarafın baud rate ayarının uyumlu olması gerekir; start/stop bitleri ile senkron sağlanır",
+                "C": "CS hattı ile cihaz seçilir",
+                "D": "Adresleme 7-bit zorunludur",
+                "E": "ACK biti zorunludur"
+            },
+            "correct": "B",
+            "explanation": "UART’ta ayrı clock hattı yoktur (asenkron). Senkronizasyon start/stop bitleriyle ve iki tarafın aynı baud rate’te olmasıyla sağlanır. Baud rate uyuşmazsa veri bozulur."
+        },
+        {
+            "No": 3,
+            "question": "UART’ta tipik bir çerçevede bulunabilen alanlar aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Start biti, veri bitleri, opsiyonel parity, stop biti",
+                "B": "SDA ve SCL",
+                "C": "MISO/MOSI/SCK/CS",
+                "D": "ACK/RW/Address",
+                "E": "CAN arbitration field"
+            },
+            "correct": "A",
+            "explanation": "UART çerçevesi tipik olarak start biti ile başlar, 7/8/9 veri bitleri taşır, opsiyonel parity barındırabilir ve stop biti ile biter. Bu yapı asenkron senkronizasyona yardımcı olur."
+        },
+        {
+            "No": 4,
+            "question": "Derste geçen TTL lojik seviyelerine göre, 5V sistemde “belirsiz bölge” yaklaşık hangi aralıktadır?",
+            "options": {
+                "A": "0–0.8V",
+                "B": "0.8–2.2V",
+                "C": "2.2–5V",
+                "D": "3.3–5V",
+                "E": "1.8–3.3V"
+            },
+            "correct": "B",
+            "explanation": "Notlarda TTL seviyeleri: Lojik 0 (0–0.8V), belirsiz bölge (0.8–2.2V) ve lojik 1 (2.2–5V; bazı sistemlerde 3.3V) olarak verilir. Belirsiz bölge dijital haberleşmede güvenilir kabul edilmez."
+        },
+        {
+            "No": 5,
+            "question": "RS232 ve RS485 kıyaslamasında, endüstride uzun mesafe ve gürültü bağışıklığı için daha uygun olan hangisidir?",
+            "options": {
+                "A": "RS232",
+                "B": "RS485",
+                "C": "UART",
+                "D": "SPI",
+                "E": "I2C"
+            },
+            "correct": "B",
+            "explanation": "Notlarda RS232 daha klasik ve daha kısa mesafe/gürültüye daha hassas; RS485 ise daha uzun mesafe ve daha iyi gürültü bağışıklığı ile endüstride yaygın olarak anlatılır."
+        },
+        {
+            "No": 6,
+            "question": "UART’ın gömülü sistemlerde en sık kullanım amaçlarından biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Görüntü işleme",
+                "B": "Debug/log (Serial Monitor mantığı)",
+                "C": "PWM üretimi",
+                "D": "ADC çözünürlüğü artırma",
+                "E": "Enerji hasatlama"
+            },
+            "correct": "B",
+            "explanation": "UART, geliştirme sırasında en çok debug/log ve cihazla temel etkileşim (komut satırı, konfigürasyon, boot mesajları) için kullanılır. Bunun nedeni basit olması (genelde TX/RX + GND), düşük donanım maliyeti ve hemen her platformda kolay test edilebilmesidir. Derste geçen Serial.begin(9600) ve Serial Monitor örneği de bu pratik kullanımın tipik karşılığıdır; diğer şıklar ise UART’ın doğrudan kullanım amacı değildir."
+        },
+        {
+            "No": 7,
+            "question": "Bluetooth, ZigBee, WiFi ve GSM seçenekleri arasında “düşük güç ve çok düğümlü sensör ağı (IoT)” fikrine en yakın olan hangisidir?",
+            "options": {
+                "A": "WiFi",
+                "B": "ZigBee",
+                "C": "GSM",
+                "D": "RS232",
+                "E": "SPI"
+            },
+            "correct": "B",
+            "explanation": "Notlarda ZigBee düşük güç ve sensör ağı/IoT senaryolarıyla ilişkilendirilir. WiFi daha yüksek bant genişliği sağlar ancak enerji tüketimi daha yüksek olabilir. GSM geniş alan kapsama için uygundur."
+        },
+        {
+            "No": 8,
+            "question": "WiFi’nin kablosuz seçenekler arasında öne çıktığı tipik özellik aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "En düşük güç tüketimi",
+                "B": "Daha yüksek bant genişliği ve ev/ofis altyapısıyla uyumluluk",
+                "C": "Sadece çok uzun mesafede çalışması",
+                "D": "İki hatla adresleme yapması",
+                "E": "CS pini kullanması"
+            },
+            "correct": "B",
+            "explanation": "Notlarda WiFi, daha yüksek bant genişliği ve mevcut ev/ofis altyapısı avantajıyla anlatılır. Güç tüketimi hedefi çok sıkıysa ZigBee gibi alternatifler daha uygun olabilir."
+        },
+        {
+            "No": 9,
+            "question": "GSM’in kablosuz haberleşmede tipik kullanım motivasyonu aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Kart içi kısa mesafe haberleşme",
+                "B": "Hücresel altyapı üzerinden geniş alan kapsama",
+                "C": "Çok yüksek pin tasarrufu",
+                "D": "Start/stop bitleriyle senkron",
+                "E": "ACK mekanizması"
+            },
+            "correct": "B",
+            "explanation": "GSM’in temel motivasyonu, operatörün hücresel altyapısını kullanarak çok geniş coğrafi kapsama alanında veri iletebilmesidir (SIM/şebeke üzerinden). Bu genelde WiFi/Bluetooth’a göre daha yüksek gecikme ve güç tüketimi pahasına gelir; ama “uzakta/dağınık saha cihazı” gibi senaryolarda büyük avantajdır. Bu yüzden kısa mesafe ve düşük güç odaklı Bluetooth/ZigBee yerine, geniş alan erişimi gerektiğinde GSM tercih edilir."
+        },
+        {
+            "No": 10,
+            "question": "MQTT’nin temel iletişim modeli aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Master–Slave",
+                "B": "Publisher–Subscriber",
+                "C": "CSMA/CD",
+                "D": "Peer-to-peer parity",
+                "E": "Start–Stop–ACK"
+            },
+            "correct": "B",
+            "explanation": "Notlarda MQTT’nin publish/subscribe mantığı vurgulanır: cihazlar veriyi publish eder, ilgili aboneler (subscriber) bu veriye abone olup alır. IoT ve TCP/IP tabanlı sistemlerde sık kullanılır."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdakilerden hangisi “Kablosuz = her zaman WiFi” düşüncesinin neden hatalı olduğuna en iyi örnektir?",
+            "options": {
+                "A": "Kablosuz seçenekler enerji, menzil ve veri miktarına göre değişir; düşük güç için ZigBee, geniş alan için GSM daha uygun olabilir",
+                "B": "WiFi tüm protokolleri otomatik çözer",
+                "C": "WiFi yalnız analog çalışır",
+                "D": "WiFi sadece endüstride kullanılır",
+                "E": "WiFi sadece SPI ile çalışır"
+            },
+            "correct": "A",
+            "explanation": "Derste protokol seçiminin “tek doğru” olmadığı; gereksinimlere göre trade-off yapıldığı vurgulanır: enerji tüketimi, menzil, bant genişliği/veri miktarı, gecikme ve altyapı uygunluğu. WiFi genelde yüksek bant genişliği ve mevcut altyapı avantajı sunar ama güç tüketimi daha yüksek olabilir; pil ile yıllarca çalışması beklenen çok düğümlü sensör ağlarında ZigBee gibi düşük güç çözümler daha mantıklı hale gelebilir. Benzer şekilde çok geniş saha kapsaması gerekiyorsa GSM tercih edilebilir. Bu nedenle “kablosuz = WiFi” genellemesi, gereksinim temelli mühendislik seçimini kaçırdığı için hatalıdır."
+        },
+        {
+            "No": 12,
+            "question": "UART’ta “baud rate” en doğru şekilde neyi temsil eder?",
+            "options": {
+                "A": "Sinyalin voltaj seviyesini",
+                "B": "Saniyedeki bit hızını (bit/s)",
+                "C": "Kablo uzunluğunu",
+                "D": "ADC çözünürlüğünü",
+                "E": "PWM duty cycle’ını"
+            },
+            "correct": "B",
+            "explanation": "Baud rate, UART hattında saniyedeki sembol/bit hızını ifade eder (örn. 9600 bit/s). UART asenkron olduğu için ayrı bir clock hattı yoktur; alıcı, bitleri kendi yerel zaman tabanına göre örnekler. Bu nedenle iki tarafın baud rate (ve veri bit/parity/stop gibi çerçeve ayarlarının) uyumlu olması kritik önemdedir; küçük bir uyumsuzluk bile start/stop bit konumunu kaydırarak karakterlerin bozulmasına yol açar."
+        },
+        {
+            "No": 13,
+            "question": "RS232/RS485 farkının sınavda yorum sorusuna dönüşmesi halinde en doğru senaryo eşlemesi hangisidir?",
+            "options": {
+                "A": "Kısa mesafe/gürültüsüz ortam: RS485; uzun mesafe/gürültülü fabrika: RS232",
+                "B": "Kısa mesafe/gürültüsüz ortam: RS232; uzun mesafe/gürültülü fabrika: RS485",
+                "C": "Her durumda RS232",
+                "D": "Her durumda RS485",
+                "E": "İkisi de kablosuzdur"
+            },
+            "correct": "B",
+            "explanation": "Notlarda RS232 daha klasik ve kısa mesafe; RS485 daha uzun mesafe ve daha iyi gürültü bağışıklığı ile endüstride öne çıkar. Bu tür yorum sorularında ortam koşulu ve mesafe ana belirleyicidir."
+        },
+        {
+            "No": 14,
+            "question": "UART haberleşmesinde veri bozulmasının en temel sebeplerinden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "TX/RX çapraz bağlantının yanlış yapılması veya baud rate uyumsuzluğu",
+                "B": "CS pininin high kalması",
+                "C": "ACK gelmesi",
+                "D": "SDA/SCL hatlarının eksik olması",
+                "E": "CAN arbitration’ın çalışması"
+            },
+            "correct": "A",
+            "explanation": "UART için temel riskler: TX/RX’nin yanlış bağlanması, baud rate ayarlarının uyuşmaması ve lojik seviye uyumsuzluklarıdır. SPI/I2C’ye ait terimler (CS, SDA/SCL, ACK) UART için doğrudan geçerli değildir."
+        },
+        {
+            "No": 15,
+            "question": "Aşağıdakilerden hangisi UART ile ilgili “full duplex olabilir” ifadesini doğru açıklar?",
+            "options": {
+                "A": "Aynı anda hem gönderip hem alabilme",
+                "B": "Sadece gönderme",
+                "C": "Sadece alma",
+                "D": "Sadece clock üretme",
+                "E": "Sadece CS seçimi"
+            },
+            "correct": "A",
+            "explanation": "UART’ta TX ve RX iki ayrı fiziksel hat olduğundan, donanım ve sürücü izin verdiği sürece aynı anda veri gönderip alma mümkündür (full duplex). Buradaki kritik nokta, iletim ve alımın ayrı hatlarda gerçekleşmesidir; tek hatlı veya ortak hatlı protokollerde bu her zaman mümkün olmayabilir. Pratikte full duplex, örneğin bir cihazın komut alırken aynı anda log çıktısı verebilmesini sağlar."
+        },
+        {
+            "No": 16,
+            "question": "IoT senaryosunda TCP/IP ile MQTT’nin birlikte anılmasının temel nedeni aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "MQTT’nin sadece analog olması",
+                "B": "MQTT’nin internet tabanlı sistemlerde (TCP/IP üzerinde) publish/subscribe mesajlaşma sağlaması",
+                "C": "MQTT’nin CS pini kullanması",
+                "D": "MQTT’nin sadece kart içi olması",
+                "E": "MQTT’nin ADC’ye bağlı olması"
+            },
+            "correct": "B",
+            "explanation": "Notlarda MQTT & TCP/IP birlikte anılır: MQTT, TCP/IP ağları üzerinde çalışan hafif publish/subscribe protokolüdür. IoT’de cihaz-bulut/cihaz-cihaz mesajlaşmada kullanılır."
+        },
+        {
+            "No": 17,
+            "question": "TTL seviye uyumsuzluğu en çok hangi tür hataya yol açabilir?",
+            "options": {
+                "A": "Haberleşmenin kararsız/bozuk okunması (0/1 eşiğinin yanlış algılanması)",
+                "B": "Flash yazma ömrünün artması",
+                "C": "PWM’in kendiliğinden oluşması",
+                "D": "ADC’nin bit sayısının artması",
+                "E": "CAN’ın otomatik hızlanması"
+            },
+            "correct": "A",
+            "explanation": "Lojik 0/1 eşikleri cihazdan cihaza (5V/3.3V) değişebilir. Uyum yoksa bir tarafın “1” gördüğü seviyeyi diğer taraf belirsiz bölgede algılayabilir; bu da özellikle UART gibi haberleşmelerde bozuk veri üretir."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi kablosuz protokol seçimini belirleyen ana parametrelerden biri değildir?",
+            "options": {
+                "A": "Enerji tüketimi",
+                "B": "Menzil",
+                "C": "Taşınacak veri miktarı (bant genişliği)",
+                "D": "Kasa vida sayısı",
+                "E": "Altyapı uygunluğu (ev/ofis/hücresel)"
+            },
+            "correct": "D",
+            "explanation": "Kablosuz seçiminde enerji, menzil, bant genişliği ve altyapı gibi teknik gereksinimler belirleyicidir. Kasa vida sayısı haberleşme protokolü seçimi kriteri değildir."
+        },
+        {
+            "No": 19,
+            "question": "Aşağıdakilerden hangisi “kablolu seri standart” sınıfında yer alır?",
+            "options": {
+                "A": "RS232",
+                "B": "RS485",
+                "C": "Her ikisi",
+                "D": "ZigBee",
+                "E": "GSM"
+            },
+            "correct": "C",
+            "explanation": "RS232 ve RS485, kablolu seri haberleşme standartlarıdır; ikisi de fiziksel katman/elektriksel seviye açısından tanımlamalar içerir. RS232 genelde tek uçlu (single-ended) ve daha kısa mesafede/point-to-point kullanımda görülürken, RS485 çoğunlukla diferansiyel hat yapısı sayesinde daha uzun mesafe ve gürültülü endüstriyel ortamlara daha uygundur (multi-drop topolojiler de yaygındır). ZigBee ve GSM ise kablosuz teknolojilerdir; bu nedenle doğru sınıflandırma “her ikisi”dir."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdakilerden hangisi UART’ın I2C’ye göre en belirgin farklarından biridir?",
+            "options": {
+                "A": "UART’ta adresleme ve ACK zorunludur",
+                "B": "UART asenkron (clock hattı yok) iken I2C senkron (clock hattı var) çalışır",
+                "C": "UART iki hatla çoklu cihaz adresler",
+                "D": "I2C TX/RX çapraz bağlanır",
+                "E": "I2C parity biti kullanır"
+            },
+            "correct": "B",
+            "explanation": "UART ayrı clock hattı olmadan asenkron çalışır; I2C ise SCL clock hattı ile senkron çalışır. I2C çoklu cihazı adresleme ile yönetir; UART genelde nokta-nokta bağlantıdır."
+        }
+    ]
+}

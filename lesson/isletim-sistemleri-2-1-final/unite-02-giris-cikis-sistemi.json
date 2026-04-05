@@ -1,0 +1,658 @@
+{
+    "unitNumber": 2,
+    "unitTitle": "Giriş/Çıkış Sistemi",
+    "sourceMarkdown": "isletim_sistemleri_md/02-giris-çikis-sistemi.md",
+    "questionCount": 50,
+    "questions": [
+        {
+            "No": 1,
+            "question": "İşletim sistemlerinde giriş/çıkış işlemlerinin çoğu neden kütük işlemleri olarak ele alınır?",
+            "options": {
+                "A": "Çünkü tüm G/Ç birimleri yalnızca diskten ibarettir",
+                "B": "Çünkü OS, veri aktarım birimlerini kütük tanımı içine alarak G/Ç birimi kavramını kütük kavramı ile özdeşleştirir",
+                "C": "Çünkü kullanıcılar kütük yerine sektör numarası kullanır",
+                "D": "Çünkü kütüklerin fiziksel yapısı yoktur",
+                "E": "Çünkü her kütük mutlaka ASCII metindir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, işletim sistemlerinin kütükleri fiziksel sürücülerden bağımsızlaştırdığını ve veri aktarım amaçlı G/Ç birimlerini kütük tanımı içine alarak G/Ç işlemlerini kütük işlemleri gibi ele aldığını söyler. Diğer seçenekler bu gerekçeyi vermez veya yanlıştır."
+        },
+        {
+            "No": 2,
+            "question": "Bir kütüğün mantıksal yapısı ile fiziksel yapısı arasındaki geçişi sağlayan temel işletim sistemi hizmeti hangisidir?",
+            "options": {
+                "A": "Derleme ve bağlama",
+                "B": "Mantıksal tutanak adreslerinden fiziksel öbek adreslerine adres dönüşümü",
+                "C": "Grafik arayüz çizimi",
+                "D": "Donanım saatini hızlandırma",
+                "E": "Şifreleme anahtarı üretimi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin; kütüklerin mantıksal tutanaklarının disk üzerindeki fiziksel öbek adreslerine dönüştürülmesinin OS tarafından sağlandığını vurgular."
+        },
+        {
+            "No": 3,
+            "question": "Giriş/çıkış sisteminin katmanlı bakışında, çekirdek katmandaki G/Ç yordamlarının temel işi hangisidir?",
+            "options": {
+                "A": "Kütük adlandırma ve yerleştirme yapmak",
+                "B": "Kütüklerin mantıksal adreslerini üretmek",
+                "C": "Kütük yönetimi tarafından belirlenen fiziksel adreslerdeki öbekleri ana bellek ile sürücüler arasında aktarmak",
+                "D": "Kullanıcıya kabuk (shell) komutları sağlamak",
+                "E": "Sadece yazıcı kuyruğu tutmak"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Metne göre adlandırma/yerleştirme/dönüşüm kütük yönetiminde; fiziksel öbeklerin bellek-sürücü aktarımı ise çekirdekteki G/Ç yordamlarındadır."
+        },
+        {
+            "No": 4,
+            "question": "Bir giriş/çıkış arabirimi en genel haliyle aşağıdakilerden hangisinden oluşan bir bütün olarak düşünülebilir?",
+            "options": {
+                "A": "Sadece veri yolu kablosu",
+                "B": "Güdüm yazmaçları, durum yazmaçları ve veri yastıkları",
+                "C": "Sadece kütük dizinleri",
+                "D": "Sadece derleyici sembol tablosu",
+                "E": "Sadece güç kaynağı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, arabirimleri güdüm/durum yazmaçları ve veri yastıklarından oluşan birim olarak açıklar."
+        },
+        {
+            "No": 5,
+            "question": "Arabirim veri yastığının temel rolü aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Veriyi kalıcı olarak disk üzerinde saklamak",
+                "B": "Sürücü ile ana bellek arasındaki aktarım sırasında arabirim düzeyinde geçici veri tutmak",
+                "C": "Sadece hata kayıt defteri tutmak",
+                "D": "CPU komutlarını önceden getirmek",
+                "E": "Sadece ağ paketlerini yönlendirmek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Arabirim yastıkları veri aktarımında geçici depolama görevi görür; kalıcı saklama sürücünün kendisidir."
+        },
+        {
+            "No": 6,
+            "question": "Güdüm yazmacı hangi amaçla kullanılır?",
+            "options": {
+                "A": "Arabirimin yaptığı işlem akışını ve hataları raporlamak",
+                "B": "Arabirimin yerine getireceği işlevi/işlemi seçmek ve sürücü üzerinde yapılacak işlemi arabirime bildirmek",
+                "C": "Sadece veri yastığını büyütmek",
+                "D": "Sadece kütük adlarını tutmak",
+                "E": "Sadece program sayacını saklamak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, güdüm yazmaçlarının işlem seçimi ve arabirime komut bildirmek için kullanıldığını belirtir."
+        },
+        {
+            "No": 7,
+            "question": "Durum yazmacı için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Genelde salt okunur olup aktarım akışı/sonucu ve hata durum bitlerini içerir",
+                "B": "Genelde salt yazılır olup sadece hız ayarı tutar",
+                "C": "Sadece kullanıcı adı tutar",
+                "D": "Sadece disk sektör boyunu değiştirir",
+                "E": "Sadece program kodu saklar"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Durum yazmaçları işlem durumu ve hata bitlerini içerir; metin bunların genelde salt okunur olduğunu söyler."
+        },
+        {
+            "No": 8,
+            "question": "Arabirim yazmaç ve yastıklarının giriş/çıkış adres evrenindeki adreslerine ne ad verilir?",
+            "options": {
+                "A": "Sayfa numarası",
+                "B": "Giriş/çıkış kapısı adresi",
+                "C": "Kesim seçici",
+                "D": "Kütük tanıtıcı",
+                "E": "Yığıt tabanı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, arabirim yazmaç/yastıklarının her birinin G/Ç kapısı (port) olarak adlandırıldığını belirtir."
+        },
+        {
+            "No": 9,
+            "question": "Damga tabanlı ve öbek tabanlı giriş/çıkış birimi ayrımını en doğru veren seçenek hangisidir?",
+            "options": {
+                "A": "Damga tabanlı birim tek seferde en az bir öbek aktarır",
+                "B": "Öbek tabanlı birim tek seferde yalnız 1 bit aktarır",
+                "C": "Damga tabanlı birim bir seferde bir damga; öbek tabanlı birim bir seferde en az bir öbek aktarabilir",
+                "D": "İkisi arasında fark yoktur",
+                "E": "Ayrım sadece yazıcılarda geçerlidir"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Metin, bir seferde damga aktarabilenleri damga tabanlı; en az bir öbek aktarabilenleri öbek tabanlı olarak tanımlar."
+        },
+        {
+            "No": 10,
+            "question": "Arabirim düzeyindeki giriş/çıkış yastıkları ile sürücü önbelleği (cache) arasındaki temel fark hangisidir?",
+            "options": {
+                "A": "Arabirim yastığı sürücü üzerinde, cache ana bellektedir",
+                "B": "Arabirim yastığı aktarım sırasında arabirim düzeyinde geçici tutar; sürücü cache’i sürücü üzerinde erişim sayısını azaltmayı hedefler",
+                "C": "İkisi tamamen aynı şeydir",
+                "D": "Cache sadece terminalde bulunur",
+                "E": "Arabirim yastığı yalnız hataları tutar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, arabirim yastıklarının sürücü cache’i ile karıştırılmaması gerektiğini vurgular."
+        },
+        {
+            "No": 11,
+            "question": "Seçmeli (polling) giriş/çıkış programlamada işlem akışı en iyi nasıl özetlenir?",
+            "options": {
+                "A": "Arabirimin durum yazmacı okunur; ilgili bit hazır değilse tekrar okunur; hazırsa giriş/çıkış yastığında okuma/yazma yapılır",
+                "B": "Her G/Ç için mutlaka kesilme gerekir",
+                "C": "Veri doğrudan diskten CPU yazmaçlarına akıtılır; durum bitleri kullanılmaz",
+                "D": "Sadece DMA ile yapılabilir",
+                "E": "Öncelik sorunları hiç ortaya çıkmaz"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metindeki ASM86 örneği; durum yazmacını oku, test et, hazır değilse döngüye dön; hazırsa giriş yastığından oku şeklindedir."
+        },
+        {
+            "No": 12,
+            "question": "Seçmeli G/Ç yönteminin temel ilkesi hangisidir?",
+            "options": {
+                "A": "İstenen koşul oluşana kadar birimi sürekli sınamak",
+                "B": "Her olayda tüm görevleri durdurmak",
+                "C": "Kesilme vektörünü her döngüde silmek",
+                "D": "Her aktarımı mutlaka öbek tabanlı yapmak",
+                "E": "Bellek erişimini tamamen yasaklamak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, seçmeli yöntemin sürekli sınama (busy wait) ilkesi üzerine kurulu olduğunu söyler."
+        },
+        {
+            "No": 13,
+            "question": "Birden çok arabirimli seçmeli G/Ç’de “arabirimlerin taranması” neyi ifade eder?",
+            "options": {
+                "A": "Disk sektörlerinin fiziksel sıraya dizilmesini",
+                "B": "Tüm arabirimlerin durum yazmaçlarını sırayla okuyarak hazır olanlara hizmet verilmesini",
+                "C": "Yalnızca en son arabirimin okunmasını",
+                "D": "Sadece hata bitlerinin sıfırlanmasını",
+                "E": "Kesilme vektör tablosunun yazdırılmasını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, birden çok birimde seçmeli yöntemin durum yazmaçlarını sırayla okuma (tarama) ile yürüdüğünü belirtir."
+        },
+        {
+            "No": 14,
+            "question": "Seçmeli G/Ç’de birimler arası öncelik genelde nasıl belirlenir?",
+            "options": {
+                "A": "Disk plakasının dönüş hızına göre",
+                "B": "Durum yazmaçlarının taranma sırası ve sıklığı ile (en sık taranan daha öncelikli)",
+                "C": "Her zaman rastgele",
+                "D": "Kütük adının uzunluğuna göre",
+                "E": "Yalnızca eşlik bitine göre"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, seçmeli yöntemde önceliğin tarama sırası/sıklığıyla belirlendiğini açıklar."
+        },
+        {
+            "No": 15,
+            "question": "Kesilme (interrupt) düzeneğinin temel avantajı nedir?",
+            "options": {
+                "A": "CPU’nun her zaman G/Ç durum yazmacını döngüyle sınamasını zorunlu kılar",
+                "B": "Zamanuyumsuz (rastgele) G/Ç istemlerini CPU’yu sürekli meşgul etmeden ele almayı sağlar",
+                "C": "G/Ç işlemlerini sadece toplu işleme indirger",
+                "D": "Bellek erişimini kaldırır",
+                "E": "Sadece seri iletişimi mümkün kılar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Kesilme, olay olduğunda CPU’nun özel yordama sapmasını sağlar; sürekli polling ihtiyacını azaltır."
+        },
+        {
+            "No": 16,
+            "question": "Kesilme istemi algılanınca CPU’nun otomatik yaptığı en kritik iş hangisidir?",
+            "options": {
+                "A": "Diskten öbek okumak",
+                "B": "Geri dönüş adresini (ve mimariye göre bazı yazmaçları) yığıta saklamak",
+                "C": "Kütük dizinini sıfırlamak",
+                "D": "Her arabirimin durum yazmacını taramak",
+                "E": "Sürücü önbelleğini boşaltmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kesilme sapışının ilk aşamasında geri dönüş adresinin yığıta saklandığını; bazı mimarilerde PSW vb. yazmaçların da otomatik saklanabileceğini söyler."
+        },
+        {
+            "No": 17,
+            "question": "Kesilme yordamı içinde bağlam saklama/günleme neden gereklidir?",
+            "options": {
+                "A": "Çünkü kesilme yordamı kullanıcı arayüzü çizmek zorundadır",
+                "B": "Çünkü kesilen programın yazmaç içerikleri bozulmadan devam edebilmelidir",
+                "C": "Çünkü disk erişimi için zorunludur",
+                "D": "Çünkü kabuk komutları böyle ister",
+                "E": "Çünkü her kesilmede kütük silinir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Kesilen programın işletim bütünlüğü için yazmaçların saklanıp geri yüklenmesi gerekir."
+        },
+        {
+            "No": 18,
+            "question": "Kesilme istemi devam ederken kesilme yordamının hemen başında kesilmelere açık bırakmak ne tür bir probleme yol açabilir?",
+            "options": {
+                "A": "Kesilme isteği tekrar tekrar aynı yordama sapmaya neden olup sonsuz döngü/yığıt taşmasına yol açabilir",
+                "B": "Diskin fiziksel olarak durmasına yol açar",
+                "C": "CPU’nun saatini iki katına çıkarır",
+                "D": "Ekran çözünürlüğünü düşürür",
+                "E": "Sadece yazıcıyı etkiler"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, istem ortadan kalkmadan kesilmelere açılırsa aynı kesilmenin yeniden tetiklenip yığıtı doldurabileceğini açıklar."
+        },
+        {
+            "No": 19,
+            "question": "Genel maske biti (ör. PSW içindeki IF/M benzeri) kesilme bağlamında ne işe yarar?",
+            "options": {
+                "A": "Disk sektör numarasını tutar",
+                "B": "Engellenir kesilme uyarılarının CPU’ya ulaşıp ulaşmamasını denetler",
+                "C": "Her zaman engellenemez kesilmeleri de kapatır",
+                "D": "Kütük adı çözümlemesi yapar",
+                "E": "Sadece veri yolu genişliğini değiştirir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metinde INTR girişinin IF bitiyle maskelendiği; engellenir kesilmelerin bu bit üzerinden kontrol edildiği anlatılır."
+        },
+        {
+            "No": 20,
+            "question": "Yerel maskeleme (arabirim düzeyinde maske) neden kullanılır?",
+            "options": {
+                "A": "Kesilmeleri tamamen kaldırmak için",
+                "B": "Kesilme yordamı içinde yalnız daha öncelikli birimlerin kesmesine izin verip daha düşük önceliklileri engellemek için",
+                "C": "Sadece seri iletişim hızını seçmek için",
+                "D": "Belleği sayfalara bölmek için",
+                "E": "Kütükleri sıkıştırmak için"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, iç içe kesilmelerde öncelik sırasını korumak için düşük önceliklilerin yerel maskeyle engellendiğini açıklar."
+        },
+        {
+            "No": 21,
+            "question": "Kesilme yordam adresinin ana bellekten (vektör üzerinden) alınması yönteminin temel sakıncası nedir?",
+            "options": {
+                "A": "Arabirimlerin hiç programlanamaması",
+                "B": "Kesilme kaynağını bulmak için tarama kesiminin çalışması gerektiğinden her kesilmede ek zaman maliyeti doğurması",
+                "C": "Kesilme sayısının artmasıyla bellek büyüklüğünün azalması",
+                "D": "Sadece NMI için çalışması",
+                "E": "DMA’yı zorunlu kılması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, ortak kesilme yordamında tüm birleşenlerin taranmasının bedelinin yüksek olabileceğini söyler."
+        },
+        {
+            "No": 22,
+            "question": "Kesilme yordam adresinin arabirimce sağlandığı yöntemde CPU kesilme kaynağını nasıl ayırt eder?",
+            "options": {
+                "A": "Her zaman sabit 0. vektöre gider",
+                "B": "Kesilme alındısı gönderir; kesilme isteyen arabirim kesilme kimlik/parametre bilgisini veri yoluna koyar",
+                "C": "Disk sektör başlığını okur",
+                "D": "Kütük adını okur",
+                "E": "Sadece tarama yapar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, alındı iminden sonra arabirimin kimlik yazmacı içeriğini (başlangıç adresi/parametre) veri yoluna aktardığını anlatır."
+        },
+        {
+            "No": 23,
+            "question": "Zincirleme bağlantı (daisy chain) yapısında öncelik nasıl belirlenir?",
+            "options": {
+                "A": "Arabirimlerin sürücüye uzaklığına göre",
+                "B": "Kesilme alındı iminin arabirimlere ulaştığı ardıl sıraya göre (ilk ulaşan daha öncelikli)",
+                "C": "Kütük boyuna göre",
+                "D": "Rastgele",
+                "E": "Sadece CRC hatasına göre"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, alındı iminin zincirde önceliğe uygun sırada dolaştığını ve ilk yanıt verenin seçildiğini açıklar."
+        },
+        {
+            "No": 24,
+            "question": "Kesilme önceliği denetleme birimi kullanmanın önemli kazanımı hangisidir?",
+            "options": {
+                "A": "Kesilme yordamlarında maskeleme kodlarını kaldırıp yordamları yalınlaştırması",
+                "B": "CPU’nun hiç kesilme almamasını sağlaması",
+                "C": "G/Ç kapılarının adreslerini yok etmesi",
+                "D": "Sadece RS-232C’yi desteklemesi",
+                "E": "Belleği salt okunur yapması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, öncelik denetleme birimi ile maskeleme yükünün donanıma kaydığını ve kesilme yordamlarının kısaldığını söyler."
+        },
+        {
+            "No": 25,
+            "question": "Maskelenebilir (engellenir) kesilme ile maskelenemez (engellenemez) kesilme arasındaki temel fark hangisidir?",
+            "options": {
+                "A": "Maskelenebilir kesilme CPU tarafından geçici olarak engellenebilir; maskelenemez kesilme engellenemez ve kritik olaylar için ayrılmıştır",
+                "B": "Maskelenebilir kesilme yalnız yazılım kesilmesidir; maskelenemez kesilme yalnız donanım kesilmesidir",
+                "C": "Maskelenemez kesilme yalnız G/Ç aygıtlarından gelir; maskelenebilir kesilme yalnız CPU içinden gelir",
+                "D": "Maskelenebilir kesilme her zaman iç kesilmedir; maskelenemez kesilme her zaman dış kesilmedir",
+                "E": "İki kesilme türü arasında işlevsel fark yoktur"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, engellenebilir kesilmelerin maskeleme ile denetlenebildiğini; engellenemez kesilmelerin ise kritik olaylar için ayrıldığını vurgular."
+        },
+        {
+            "No": 26,
+            "question": "Maskelenebilir kesilmeleri geçici olarak kapatıp açma denetimi tipik olarak hangi mekanizma ile yapılır?",
+            "options": {
+                "A": "Sadece sayfa tablosundaki bir bit ile",
+                "B": "Durum yazmacındaki ‘kesilme izni’ (interrupt enable) biti ile (set/clear edilerek)",
+                "C": "DMA sayaç yazmacının sıfırlanması ile",
+                "D": "Disk sektör numarasının değiştirilmesi ile",
+                "E": "Kütük tanıtıcısının kapatılması ile"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, engellenebilir kesilmelerin bir ‘kesilme izni’ biti üzerinden açılıp kapatılabildiğini anlatır (ör. IF bayrağı)."
+        },
+        {
+            "No": 27,
+            "question": "Kesilme türü/vektörü bilgisi (interrupt vector) işletim sisteminde tipik olarak ne için kullanılır?",
+            "options": {
+                "A": "İlgili kesilme yordamının (handler) adresini bulup denetimi oraya aktarmak",
+                "B": "Disk sektörünü seçmek",
+                "C": "Kütük adını çözmek",
+                "D": "AİB saatini ayarlamak",
+                "E": "Yığıt boyunu değiştirmek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kesilme tür bilgisinin vektör tablosunda ilgili yordam adresini seçmekte kullanıldığını açıklar."
+        },
+        {
+            "No": 28,
+            "question": "Bir kesilme geldiğinde, kesilme yordamına sapmadan önce CPU’nun tipik olarak hangi bilgileri saklaması gerekir?",
+            "options": {
+                "A": "Program sayacı (PC) ve durum/flag yazmacı gibi yürütme bağlamı",
+                "B": "Sadece disk öbeği",
+                "C": "Sadece kütük dizini",
+                "D": "Sadece DMA sayacı",
+                "E": "Sadece AL yazmacı"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kesilme sapışında yürütmenin kaldığı yerin ve durum bilgisinin (PC + durum/flag) yığıta saklanarak dönüşte geri yüklendiğini anlatır."
+        },
+        {
+            "No": 29,
+            "question": "Kesilme yordamından dönüş işleminin (interrupt return) ayırt edici özelliği hangisidir?",
+            "options": {
+                "A": "Sadece program sayacını (PC) geri yükler",
+                "B": "Program sayacı (PC) ile birlikte durum/flag bilgisini de geri yükler",
+                "C": "Yalnız yığıtı sıfırlar",
+                "D": "Kesilmeleri kalıcı olarak kapatır",
+                "E": "Yeni bir süreç başlatır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metne göre kesilmeden dönüşte, kesilme öncesi bağlamın (PC + durum/flag) birlikte geri yüklenmesi gerekir; bu yüzden dönüş işlemi sıradan ‘ret’ten daha kapsamlıdır."
+        },
+        {
+            "No": 30,
+            "question": "İç kesilme ile dış kesilme ayrımı için doğru ifade hangisidir?",
+            "options": {
+                "A": "İç kesilmeler yalnız arabirimlerden gelir",
+                "B": "Dış kesilmeler yalnız aritmetik birimden gelir",
+                "C": "İç kesilmeler CPU iç birleşenlerinin ürettiği uyarılardır; dış kesilmeler CPU dışı birleşenlerden gelir",
+                "D": "İç kesilmeler her zaman maskelenebilir",
+                "E": "Dış kesilmeler her zaman yazılım kesilmesidir"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Metin bu ayrımı örneklerle (sıfıra bölme, sayfa yok vb.) verir."
+        },
+        {
+            "No": 31,
+            "question": "Engellenemez kesilme uyarısına metindeki tipik örnek hangisidir?",
+            "options": {
+                "A": "Terminalden bir damga gelmesi",
+                "B": "Elektrik kesintisini algılayan güç kaynağından gelen uyarı",
+                "C": "Diskte CRC hatası",
+                "D": "Yazıcının busy olması",
+                "E": "Kütük adının bulunamaması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, elektrik şebekesi kesintilerinde acil önlem için engellenemez kesilmeyi örnekler."
+        },
+        {
+            "No": 32,
+            "question": "Yazılım kesilmesi (software interrupt) ile ilgili doğru ifade hangisidir?",
+            "options": {
+                "A": "Sadece arabirimler üretir",
+                "B": "Sapılacak yordamın tür/parametresi komut işleneniyle belirlenir",
+                "C": "Kesilme vektörü hiç kullanılmaz",
+                "D": "Her zaman engellenemezdir",
+                "E": "Sadece DMA ile çalışır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, yazılım kesilmelerinde N değerinin komut içi işlenenden geldiğini söyler."
+        },
+        {
+            "No": 33,
+            "question": "Doğrudan bellek erişim (DBE/DMA) düzeneğinin temel amacı nedir?",
+            "options": {
+                "A": "Arabirimleri tamamen kaldırmak",
+                "B": "Arabirim-ana bellek arası veri aktarımını CPU’yu devre dışı bırakarak gerçekleştirmek",
+                "C": "Kütük adlandırmasını hızlandırmak",
+                "D": "Sadece seri iletişim başlatmak",
+                "E": "Sadece kesilme vektörünü günlemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, DMA’nın bellek-arabirim aktarımını CPU yerine yaparak CPU verimliliğini artırdığını açıklar."
+        },
+        {
+            "No": 34,
+            "question": "DMA’da neden “efendi-köle” (master-slave) yaklaşımı kullanılır?",
+            "options": {
+                "A": "Çünkü iki farklı işleyici aynı anda aynı adres/veri yollarını kullanamaz",
+                "B": "Çünkü disk plakası aynı anda iki yönde döner",
+                "C": "Çünkü RAM sadece salt okunurdur",
+                "D": "Çünkü kesilme vektörü buna zorlar",
+                "E": "Çünkü seri iletişimde start/stop biti vardır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, aynı adres/veri yollarını iki birimin aynı anda kullanamayacağını; bu yüzden CPU’nun onayıyla yol kullanımının devredildiğini söyler."
+        },
+        {
+            "No": 35,
+            "question": "DMA denetleme biriminin temel programlanır yazmaç ikilisi hangisidir?",
+            "options": {
+                "A": "CS ve IP",
+                "B": "Adres yazmacı ve sayaç",
+                "C": "RTS ve CTS",
+                "D": "TF ve OF",
+                "E": "Güdüm ve durum yazmaçları tek başına"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, aktarım alanı başlangıç adresi için adres yazmacı ve bayt/sözcük sayısı için sayaç kullanıldığını belirtir."
+        },
+        {
+            "No": 36,
+            "question": "DMA sayacı sıfırlandığında tipik olarak ne yapılır?",
+            "options": {
+                "A": "CPU’ya kesilme uyarısı gönderilerek yeni aktarım için adres/sayaç değerlerinin günlenmesi sağlanır",
+                "B": "Disk fiziksel olarak durdurulur",
+                "C": "IF biti otomatik kurulur",
+                "D": "Kütük sistemi yeniden başlatılır",
+                "E": "Arabirim kapıları silinir"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, sayaç sıfırlandığında DMA’nın CPU’yu kesilme ile uyarabildiğini söyler."
+        },
+        {
+            "No": 37,
+            "question": "DMA kanalı kavramı neyi ifade eder?",
+            "options": {
+                "A": "Bir disk izini",
+                "B": "Bir aktarım istemi/alındı çifti ve buna bağlı adres+sayaç yapısı (kanal başına)",
+                "C": "Bir kesilme vektör girişini",
+                "D": "Bir kütük altkılavuzunu",
+                "E": "Bir RS-232C iğnesini"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, çok kanallı DMA’da her kanal için istem/alındı ve adres-sayaç çiftleri olduğunu açıklar."
+        },
+        {
+            "No": 38,
+            "question": "DMA güdüm yazmaçlarında “yön” biti neyi belirler?",
+            "options": {
+                "A": "Aktarımın arabirimden ana belleğe mi, ana bellekten arabirime mi olacağını",
+                "B": "Kesilmenin iç mi dış mı olduğunu",
+                "C": "Seri iletişimin start bitini",
+                "D": "Kütüğün adını",
+                "E": "Öbek boyunu"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, yön bitinin okuma/yazma yönünü belirlediğini açıkça söyler."
+        },
+        {
+            "No": 39,
+            "question": "DMA’da bayt tabanlı aktarım ile öbek tabanlı aktarımın farkı hangisidir?",
+            "options": {
+                "A": "Bayt tabanlıda tek istem; öbek tabanlıda her bayt için istem vardır",
+                "B": "Bayt tabanlıda her bayt için istem üretilir; öbek tabanlıda aktarım başında bir kez istem üretilir ve sayaç sıfırlanana kadar ardışıl döngüler yapılır",
+                "C": "İkisi aynı çalışır",
+                "D": "Öbek tabanlıda CPU her baytta devreye girer",
+                "E": "Bayt tabanlı sadece disklerde mümkündür"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bayt tabanlı aktarımda her bayt için istem, öbek tabanlıda tek istem ve ardışıl döngü olduğunu anlatır."
+        },
+        {
+            "No": 40,
+            "question": "DMA’da CPU’nun veri yolu (bus) denetimini DMA denetleyicisine devretmesi tipik olarak nasıl bir el sıkışma ile yapılır?",
+            "options": {
+                "A": "Yol kullanım istemi (bus request) ve yol kullanım alındısı (bus grant/ack) sinyalleri ile",
+                "B": "Kesilme girişleri ile",
+                "C": "Seri iletişim akış denetimi imleri ile",
+                "D": "Sadece okuma/yazma imleri ile",
+                "E": "Komut sayacı ve yığıt yazmacı ile"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, DMA için CPU’nun veri yolunu bırakma/teslim etme sürecinin bir istem–alındı (request–ack/grant) el sıkışmasıyla yürüdüğünü açıklar."
+        },
+        {
+            "No": 41,
+            "question": "Giriş/çıkış kanalları en doğru hangi biçimde tanımlanır?",
+            "options": {
+                "A": "Sadece terminal kablosu",
+                "B": "Ana bellekte tutulan özel G/Ç programlarını, CPU istemiyle işletip veri aktarımlarını gerçekleştiren özel amaçlı yardımcı işleyici",
+                "C": "Sadece bir kesilme vektörü",
+                "D": "Sadece bir yazmaç",
+                "E": "Sadece bir kütük dizini"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kanalları DMA’nın gelişmiş türü ve G/Ç programlarını çalıştırabilen özel amaçlı yardımcı işleyici olarak tanımlar."
+        },
+        {
+            "No": 42,
+            "question": "Giriş/çıkış işleyicisi (I/O processor) tanımı için en uygun seçenek hangisidir?",
+            "options": {
+                "A": "CPU ile eşgüdümlü ama bağımsız çalışabilen, yerel belleğe sahip yardımcı işleyici; bazı arabirimleri denetleyebilir",
+                "B": "Sadece bir modem",
+                "C": "Sadece bir kabuk",
+                "D": "Sadece bir disk",
+                "E": "Sadece bir kesilme maskesi"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, I/O işleyicisini yerel bellekli, bağımsız çalışabilen yardımcı işleyici olarak açıklar."
+        },
+        {
+            "No": 43,
+            "question": "Seçici kanal ile ilgili doğru ifade hangisidir?",
+            "options": {
+                "A": "Aynı anda birden çok arabirime hizmet verebilir",
+                "B": "Hizmeti aynı anda tek bir arabirime verir; aktarım bitmeden diğer istekleri ele alamaz",
+                "C": "Sadece damga tabanlı birimlerde kullanılır",
+                "D": "Sadece yazıcıda kullanılır",
+                "E": "Kesilme gerektirmez"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, seçici kanalın birden çok hızlı arabirime hizmet verebilse de aynı anda tekini seçip bitene kadar devam ettiğini söyler."
+        },
+        {
+            "No": 44,
+            "question": "Çoklayıcı kanallar için doğru ifade hangisidir?",
+            "options": {
+                "A": "Aynı anda birden çok arabirime hizmet verebilir",
+                "B": "Sadece tek arabirimle çalışır",
+                "C": "Güdüm yazmacı içermez",
+                "D": "Yalnızca engellenemez kesilmelerde kullanılır",
+                "E": "Sadece RS-232C’de kullanılır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, çoklayıcı kanalların aynı anda birden çok arabirime hizmet verebildiğini açıklar."
+        },
+        {
+            "No": 45,
+            "question": "Bayt çoklayıcı kanalın çalışma fikrini en iyi anlatan seçenek hangisidir?",
+            "options": {
+                "A": "Öbekleri sırayla tek bir arabirime gönderir",
+                "B": "Birden çok damga tabanlı arabirim için damgaları karma sırada aktarır; her damga ilgili arabirime yönlendirilir",
+                "C": "Sadece disk öbeklerini aktarır",
+                "D": "Sadece hata bitlerini taşır",
+                "E": "Sadece kesilme kimliğini taşır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, a1a2..., b1b2..., c1c2... gibi dizgilerin kanaldan karma sırada akabileceğini örnekler."
+        },
+        {
+            "No": 46,
+            "question": "Öbek çoklayıcı kanal hangi ilkeyi uygular?",
+            "options": {
+                "A": "Bayt çoklayıcıdaki fikri öbek tabanlı arabirimlere, öbekler için uygular",
+                "B": "Sadece start/stop bitlerini taşır",
+                "C": "Yalnız terminalde çalışır",
+                "D": "Yalnız tek yönlü iletişim yapar",
+                "E": "Sadece disk kafasını hareket ettirir"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, öbek çoklayıcının bayt çoklayıcı fikrini öbekler düzeyine taşıdığını söyler."
+        },
+        {
+            "No": 47,
+            "question": "Zamanuyumsuz (asenkron) ardıl iletişimde start/stop bitlerinin rolü nedir?",
+            "options": {
+                "A": "Disk sektörünü seçmek",
+                "B": "Damga aktarımının başladığını haber vermek ve damgalar arası sınırı belirlemek",
+                "C": "Öncelik denetlemek",
+                "D": "Kesilme vektörünü günlemek",
+                "E": "DMA sayacını sıfırlamak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, start bitinin başlangıç uyarısı; stop bitinin damga sınırı belirleme görevi olduğunu açıklar."
+        },
+        {
+            "No": 48,
+            "question": "Zamanuyumlu (senkron) ardıl iletişimde SYNC damgaları hangi amaçla kullanılır?",
+            "options": {
+                "A": "Her damganın başına stop biti eklemek",
+                "B": "Gönderici ve alıcının sürekli zamanuyumlu kalmasını sağlamak",
+                "C": "Kesilme türünü taşımak",
+                "D": "Kütük adını saklamak",
+                "E": "Yazıcıya kağıt beslemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, senkron ardıl iletişimde ek bitler yerine SYNC damgalarıyla zamanuyumunun korunduğunu söyler."
+        },
+        {
+            "No": 49,
+            "question": "RS-232C standardı için doğru ifade hangisidir?",
+            "options": {
+                "A": "Koşut (paralel) iletişim standardıdır ve 36 iğnelidir",
+                "B": "Zamanuyumsuz ardıl iletişim için yaygın bir standarttır; gerilim düzeyleri ile bitleri simgeler",
+                "C": "Sadece optik fiber içindir",
+                "D": "Yalnız öbek tabanlı diskler içindir",
+                "E": "TTL {0,5} volt düzeyi kullanır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin RS-232C’yi asenkron seri, ± volt düzeyleri kullanan standart olarak tanımlar; TTL {0,5} volt Centronix’te anlatılır."
+        },
+        {
+            "No": 50,
+            "question": "Centronix standardı ile ilgili doğru ifade hangisidir?",
+            "options": {
+                "A": "Asenkron seri iletişimde kullanılır ve start/stop bit zorunludur",
+                "B": "Koşut (paralel) iletişimde yaygındır; busy, strobe, ack gibi akış denetim imleri kullanır",
+                "C": "Sadece modem bağlantısı içindir",
+                "D": "Kesilme vektörü günlemek için kullanılır",
+                "E": "DMA kanalı tanımlar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, Centronix’in paralel yazıcı arabirimlerinde ve busy/strobe/ack gibi imlerle akış denetiminde kullanıldığını anlatır."
+        }
+    ]
+}

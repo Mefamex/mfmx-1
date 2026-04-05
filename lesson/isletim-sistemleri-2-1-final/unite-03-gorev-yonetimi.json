@@ -1,0 +1,658 @@
+{
+    "unitNumber": 3,
+    "unitTitle": "Görev Yönetimi",
+    "sourceMarkdown": "isletim_sistemleri_md/03-görev-yönetimi.md",
+    "questionCount": 50,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Görev (task) kavramı metinde en doğru nasıl tanımlanır?",
+            "options": {
+                "A": "Bir programın durgun komut dizisi",
+                "B": "Bir programın işletimi sırasında aldığı ad",
+                "C": "Bir kütüğün (dosyanın) disk üzerindeki fiziksel karşılığı",
+                "D": "Bir kullanıcı hesabının kimliği",
+                "E": "Bir aygıt sürücüsünün (driver) adı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin açıkça görevi, programın işletimi (çalışma) sırasında aldığı ad olarak tanımlar. Yanlışlar: A programın statik tanımıdır; C/D/E görev tanımı değildir."
+        },
+        {
+            "No": 2,
+            "question": "Görev anahtarlama (task switching) işleminin temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Program kodunu derleme zamanında optimize etmek",
+                "B": "Bir görevin bıraktığı noktadan tutarlı biçimde devam edebilmesi için durum bilgisini saklayıp başka göreve geçmek",
+                "C": "Disk erişim süresini fiziksel olarak sıfırlamak",
+                "D": "Kütük adlarını benzersiz yapmak",
+                "E": "Kesilmeleri tamamen devre dışı bırakmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Anahtarlanma, AİB’nin bir işletimi ileride sürdürmek üzere bırakıp diğerine geçmesidir; bunun için durum bilgisinin saklanması gerekir. Yanlışlar: A/C/D/E farklı konulardır."
+        },
+        {
+            "No": 3,
+            "question": "Görev iskeleti (görev denetim öbeği) neden işletim bütünlüğü için kritiktir?",
+            "options": {
+                "A": "Sadece ekran çıktısını sakladığı için",
+                "B": "Kesilip devam edebilmek için yazmaç içerikleri ve göreve ilişkin durum/öznitelik bilgilerini tuttuğu için",
+                "C": "Sadece derleyici tarafından üretildiği için",
+                "D": "Disk sektörlerini sıraladığı için",
+                "E": "Sadece ağ paketlerini tamponladığı için"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Görev iskeleti; program sayacı, yığıt sayacı, diğer yazmaçlar ve durum/öncelik/bellek/kütük göstergeleri gibi bilgileri tutarak işletimin kalınan yerden tutarlı sürmesini sağlar. Yanlışlar: A/D/E konu dışı; C doğru gerekçe değildir."
+        },
+        {
+            "No": 4,
+            "question": "Metindeki açıklamaya göre görev anahtarlama ile bağlam anahtarlama arasındaki fark hangisidir?",
+            "options": {
+                "A": "Bağlam anahtarlama daha geniş ve daha pahalıdır",
+                "B": "Görev anahtarlama daha geniş kapsamlıdır; bağlam anahtarlama aynı görev içinde yordam/kesilme gibi durumlarda gerçekleşebilir",
+                "C": "Görev anahtarlama sadece derleme zamanında olur",
+                "D": "Bağlam anahtarlama sadece disk sürücülerinde olur",
+                "E": "İkisi aynı kavramdır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bağlam anahtarlamayı yordam çağrısı/kesilme yordamına sapma gibi durumlarda yazmaçların bir kısmının saklanması/günlenmesi olarak; görev anahtarlamayı ise bundan daha geniş ve daha pahalı olarak ayırır. Yanlışlar: A ters; C/D yanlış; E metne aykırı."
+        },
+        {
+            "No": 5,
+            "question": "Görev durum modelinde ‘hazır’ (ready) durumu en doğru neyi ifade eder?",
+            "options": {
+                "A": "Görevin ana bellekte hiç yerinin olmamasını",
+                "B": "Görevin AİB’yi kullanıyor olmasını",
+                "C": "Görevin AİB’ye anahtarlanmak üzere seçilebilir durumda olmasını",
+                "D": "Görevin mutlaka G/Ç bekliyor olmasını",
+                "E": "Görevin sonlanmış olmasını"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Hazır görevler, AİB’yi kullanabilir duruma gelmiş ve AİB’ye anahtarlanmak üzere bekleyen görevlerdir. Yanlışlar: B çalışır durumudur; D bekler alt türüdür; A/E başka durumlardır."
+        },
+        {
+            "No": 6,
+            "question": "Çalışmakta olan bir görevin G/Ç işlemi başlatması tipik olarak hangi durum geçişini doğurur?",
+            "options": {
+                "A": "Hazır → Çalışır",
+                "B": "Çalışır → Bekler (G/Ç bekler)",
+                "C": "Bekler → Çalışır",
+                "D": "Bitiş → Sunuş",
+                "E": "Yer bekler → Bekler"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metne göre çalışırken G/Ç başlatan görev, G/Ç tümüyle bitene kadar devam edemeyeceği için bekler durumuna geçip AİB’yi bırakır."
+        },
+        {
+            "No": 7,
+            "question": "Etkileşimli işlemde bir görev kendine ayrılan süre dolduğunda genellikle hangi duruma geçirilir?",
+            "options": {
+                "A": "Bitiş",
+                "B": "Hazır",
+                "C": "Yer bekler",
+                "D": "G/Ç bekler",
+                "E": "Sunuş"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, zaman paylaşımlı ortamda görev süresi dolunca görevin yeniden hazır görev durumuna getirildiğini belirtir. Yanlışlar: A ancak görev bitince; C bellek yer açma ile; D G/Ç isteğiyle; E başlangıç aşamasıyla ilgilidir."
+        },
+        {
+            "No": 8,
+            "question": "Bekler durumunun metinde vurgulanan önemli özelliği hangisidir?",
+            "options": {
+                "A": "Tek bir bekleme nedeni vardır ve alt duruma ayrılamaz",
+                "B": "Beklemenin niteliğine göre G/Ç bekler, zamanuyumlama bekler gibi alt durumlara ayrıştırılabilir",
+                "C": "Bekler durumunda görev mutlaka AİB’yi kullanır",
+                "D": "Bekler durumu sadece toplu işlem için geçerlidir",
+                "E": "Bekler durumunda görev sonlanmış sayılır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bekler durumunun bekleme nedenine göre çok sayıda alt duruma ayrılabileceğini söyler. Yanlışlar: C ters; D/E yanlış; A metne aykırı."
+        },
+        {
+            "No": 9,
+            "question": "‘Bellekte yer bekler’ türü bekleme durumu neyi ifade eder?",
+            "options": {
+                "A": "Görevin klavyeden tuş basılmasını beklemesini",
+                "B": "Görevin disk G/Ç’sinin bitmesini beklemesini",
+                "C": "Görevin işletilebilir olmak için ana bellekte kendisine yer açılmasını beklemesini",
+                "D": "Görevin önceliğinin otomatik artmasını",
+                "E": "Görevin program sayacının sıfırlanmasını"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Metin, düşük öncelikli görevlerin bellekten çıkarılıp yeniden işletileceklerinde bellekte yer açılmasını bekleyebileceğini; bunun için özel bir ‘yer bekler’ durumu tanımlanabileceğini anlatır."
+        },
+        {
+            "No": 10,
+            "question": "Görev kuyrukları genel olarak hangi veri yapısı biçiminde gerçekleştirilir?",
+            "options": {
+                "A": "Sabit boylu dizi (array) halinde",
+                "B": "Görev iskeletlerinden oluşan bağlı liste halinde",
+                "C": "Yalnızca yığın (stack) halinde",
+                "D": "Salt ikili ağaç halinde",
+                "E": "Sadece dosya sistemi üzerinde"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kuyrukların gerçekleştirim açısından genellikle görev iskeletlerinden oluşan bağlı listeler olduğunu söyler. Yanlışlar: A/C/D/E genelleme olarak doğru değildir."
+        },
+        {
+            "No": 11,
+            "question": "Görev durum değişimi ile kuyruk değişimi arasındaki ilişki metinde nasıl kurulur?",
+            "options": {
+                "A": "İkisi tamamen bağımsızdır",
+                "B": "Durum değişimi, kuyruk değişimiyle özdeştir (örn. G/Ç bekler kuyruğundan hazır kuyruğa geçiş)",
+                "C": "Kuyruk değişimi yalnız görev sonlanınca olur",
+                "D": "Durum değişimi yalnız kullanıcı komutuyla olur",
+                "E": "Kuyruklar sadece G/Ç için vardır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, durum değiştirme (ör. G/Ç bekler → hazır) ile kuyruk değiştirme (G/Ç bekler kuyruğu → hazır görevler kuyruğu) arasında ayrım olmadığını belirtir."
+        },
+        {
+            "No": 12,
+            "question": "Sistem çağrıları (system calls) metinde hangi amaçla tanımlanır?",
+            "options": {
+                "A": "Donanımın saat frekansını ayarlamak için",
+                "B": "İşletim sistemine ilişkin hizmet yordamlarını üst katmanlardan çağırıp hizmet almak için",
+                "C": "Sadece disk sektörlerini yeniden numaralamak için",
+                "D": "Sadece derleyiciye makro tanımlamak için",
+                "E": "Sadece ağ yönlendirme tablosu tutmak için"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, sistem çağrılarını işletim sistemine ilişkin yordamları çağırıp hizmet almak üzere programlara yerleştirilen özel komutlar olarak tanımlar."
+        },
+        {
+            "No": 13,
+            "question": "create(görev-kimliği, öznitelik-alanı) çağrısının temel sonucu hangisidir?",
+            "options": {
+                "A": "Görevi doğrudan bitiş durumuna almak",
+                "B": "Boş iskeletler listesinden bir iskeleti alıp yeni görev kimliğiyle günleyerek hazır görevler kuyruğuna bağlamak",
+                "C": "Kesilme vektör tablosunu sıfırlamak",
+                "D": "Tüm görevlerin önceliğini eşitlemek",
+                "E": "Diskteki tüm kütükleri kapatmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, create’in boş iskelet listesinden bir iskeleti alıp kimlik/öznitelikler (öncelik, ayrıcalık, bellek boyu, yığıt vb.) ile günleyerek hazır kuyruğa eklediğini açıklar."
+        },
+        {
+            "No": 14,
+            "question": "delete(kill) çağrısı metne göre hangi işlemi yapar?",
+            "options": {
+                "A": "Görevin iskeletini boş iskeletler listesine ekleyerek sistem içindeki varlığına son verir",
+                "B": "Görevi sadece geçici olarak durdurur",
+                "C": "Görevin önceliğini artırır",
+                "D": "Görevi G/Ç bekler kuyruğuna taşır",
+                "E": "Görevi başka bir görevin adres evrenine taşır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: delete(görev-kimliği), kimliği verilen görevin iskeletini boş iskelet listesine iade ederek görevi sistemden kaldırır. Yanlışlar: B suspend; C change-priority; D suspend ile ilgili olabilir; E konu dışı."
+        },
+        {
+            "No": 15,
+            "question": "suspend(görev-kimliği, kuyruk-kimliği) çağrısı hangi amaçla kullanılır?",
+            "options": {
+                "A": "Görevi hazır kuyruktan uygun bekleme kuyruğuna bağlamak",
+                "B": "Görevi doğrudan çalışır duruma getirmek",
+                "C": "Görevi mutlaka sonlandırmak",
+                "D": "Görev kimliğini rastgele değiştirmek",
+                "E": "Görevin yazmaçlarını disk üzerinde sıkıştırmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, suspend’in kimliği verilen görevi belirli bir bekler türü kuyruğa bağlamak için kullanıldığını; bunun çoğu zaman görevin kendisi tarafından (G/Ç, zamanuyumlama vb.) çağrıldığını belirtir."
+        },
+        {
+            "No": 16,
+            "question": "resume(görev-kimliği, kuyruk-kimliği) çağrısının suspend’e göre ayırt edici özelliği nedir?",
+            "options": {
+                "A": "Sadece ilgili görevin kendisi tarafından çağrılabilir",
+                "B": "İlgili görevin dışındaki görevler tarafından da çağrılabilir",
+                "C": "Sadece derleyici tarafından çağrılabilir",
+                "D": "Sadece donanım kesilmesi ile tetiklenir",
+                "E": "Görevi yok eder"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, suspend’in çoğunlukla görevin kendisi tarafından çalıştırıldığını; resume’un ise tersine ilgili görevin dışındaki görevler tarafından çalıştırılabileceğini söyler."
+        },
+        {
+            "No": 17,
+            "question": "delay(süre) çağrısı metinde hangi örnekle UNIX’te karşılanmıştır?",
+            "options": {
+                "A": "fork(n)",
+                "B": "execlp(path, program, ...)",
+                "C": "sleep(n)",
+                "D": "kill(pid)",
+                "E": "mount(dev)"
+            },
+            "correct": "C",
+            "explanation": "Doğru: Metin, UNIX’te delay komutu olarak sleep(n)’in kullanıldığını belirtir. Yanlışlar: fork/exec süreç yaratma; kill sonlandırma; mount kütük sistemi ile ilgilidir."
+        },
+        {
+            "No": 18,
+            "question": "fork() sistem çağrısı metne göre ata göreve ve oğul göreve hangi değerleri döndürür?",
+            "options": {
+                "A": "Ata: 0, Oğul: PID",
+                "B": "Ata: PID, Oğul: 0",
+                "C": "Ata: -1, Oğul: -1",
+                "D": "Ata: 1, Oğul: 1",
+                "E": "Ata: 0, Oğul: 0"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, fork() çağrısının ata göreve yaratılan oğul görevin görev kimliğini (PID), oğul göreve ise 0 değerini döndürdüğünü söyler."
+        },
+        {
+            "No": 19,
+            "question": "execlp çağrısında argüman listesinin NULL ile bitirilmesinin nedeni nedir?",
+            "options": {
+                "A": "Disk bloğu hizalaması yapmak",
+                "B": "Argüman sayısı değişken olduğundan liste sonunu işaretlemek",
+                "C": "Programın PID’sini sıfırlamak",
+                "D": "Kesilme maskesini ayarlamak",
+                "E": "AİB zaman dilimini artırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, argüman sayısının uygulamaya göre değişebileceğini ve satırın 0/NULL damgası ile sonlanması gerektiğini belirtir."
+        },
+        {
+            "No": 20,
+            "question": "Metindeki örnek bağlamında fork + exec ikilisinin tipik amacı nedir?",
+            "options": {
+                "A": "Var olan görevi sonlandırmak",
+                "B": "Ata görevin kopyası olan bir oğul yaratmak ve oğulu başka bir programı çalıştıracak şekilde özelleştirmek",
+                "C": "Hazır görevler kuyruğunu tamamen boşaltmak",
+                "D": "Ana belleği biçimlendirmek",
+                "E": "Kesilme vektörünü günlemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: fork() ata görevin (kimlik hariç) kopyası oğulu yaratır; exec/ execlp oğulun çalıştırdığı programı ve ilgili adres kesimlerini günleyerek oğulu özelleştirir."
+        },
+        {
+            "No": 21,
+            "question": "Görev yönetici (scheduler/dispatcher rolü) metne göre hangi kuyruk üzerinde düzenleme yapar?",
+            "options": {
+                "A": "Toplu işlem kuyruğu",
+                "B": "Hazır görevler kuyruğu",
+                "C": "Disk FAT tablosu",
+                "D": "DNS önbelleği",
+                "E": "Kılavuz kütük (directory) ağacı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Görev yönetici, hazır görevler kuyruğunu düzenler ve kuyruk başındaki görevin AİB’ye anahtarlanmasını gerçekleştirir."
+        },
+        {
+            "No": 22,
+            "question": "Görev yöneticinin ana işlem birimine anahtarlanmasını gerektiren olaylara metinden hangisi örnektir?",
+            "options": {
+                "A": "Kütük adının değiştirilmesi",
+                "B": "Yeni görevin sisteme sunulması (create) veya G/Ç/zamanuyumlama sonlanması (resume) veya gerçek zaman saati vurusu",
+                "C": "Derleyicinin optimizasyon geçişi",
+                "D": "Diskin sektör boyunun değiştirilmesi",
+                "E": "Ekran parlaklığının ayarlanması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, create/resume/gerçek zaman saati vurusu gibi olaylar sonrası görev yöneticinin devreye girip anahtarlanacak görevi belirlediğini vurgular."
+        },
+        {
+            "No": 23,
+            "question": "Görev yönetiminin ‘kısa dönemli planlama’ olarak da anılmasının temel nedeni hangisidir?",
+            "options": {
+                "A": "Toplu işlem kuyruğunu seyrek düzenlemesi",
+                "B": "AİB’ye çok sık anahtarlanarak bir sonraki işletilecek görevi belirlemesi",
+                "C": "Disk yerleşimini optimize etmesi",
+                "D": "Kütük indekslerini düzenlemesi",
+                "E": "Sadece bellekten çıkarılan görevleri yönetmesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, görev yöneticinin çok sık anahtarlanan küçük boyutlu bir sistem görevi olduğunu ve bu yüzden kısa dönemli planlama diye anıldığını söyler."
+        },
+        {
+            "No": 24,
+            "question": "İş yönetimi (uzun dönemli planlama) ile görev yönetimi arasındaki temel fark hangisidir?",
+            "options": {
+                "A": "İş yönetimi hazır kuyruğu düzenler; görev yönetimi toplu işlem kuyruğunu düzenler",
+                "B": "İş yönetimi toplu işlem kuyruğundan işleri görevlere dönüştürerek hazır kuyruğa girdi sağlar; görev yönetimi hazır kuyruğu düzenleyip AİB’ye anahtarlama yapar",
+                "C": "İş yönetimi sadece kesilmeleri işler; görev yönetimi sadece derleme yapar",
+                "D": "İş yönetimi kütük sistemiyle ilgilidir; görev yönetimi ağla ilgilidir",
+                "E": "Aralarında fark yoktur"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, iş yöneticiyi toplu işlem kuyruğunu düzenleyip işleri görevlere dönüştürerek hazır görevlere aktarım yapan kesim; görev yöneticiyi ise hazır görevler kuyruğundan AİB’ye anahtarlama yapan kesim olarak tanımlar."
+        },
+        {
+            "No": 25,
+            "question": "Orta dönemli planlama metne göre hangi kuyruktan hazır görevler kuyruğuna girdi sağlar?",
+            "options": {
+                "A": "Hazır görevler kuyruğundan sunuş kuyruğuna",
+                "B": "Bellekte yer bekler kuyruğundan hazır görevler kuyruğuna",
+                "C": "Klavye tamponundan yazıcı kuyruğuna",
+                "D": "Disk FAT tablosundan dizin ağacına",
+                "E": "Ağ arayüzünden yönlendirme tablosuna"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, orta dönemli planlamanın bellekten çıkarılmış görevlerin beklediği ‘bellekte yer bekler’ kuyruğundan uygun görevi seçip bellekte yer ayırarak hazır kuyruğa bağladığını anlatır."
+        },
+        {
+            "No": 26,
+            "question": "Görev yönetiminde sistem başarımı için metinde sayılan kıstaslardan hangisi kullanıcıya verilen hizmet niteliğiyle doğrudan ilişkilidir?",
+            "options": {
+                "A": "Yanıt süresi (interactive)",
+                "B": "Disk sektör boyu",
+                "C": "Derleyici geçiş sayısı",
+                "D": "Kütük uzantısı",
+                "E": "Ekran çözünürlüğü"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, etkileşimli işlemde kullanıcı komutlarına alınan yanıtların sürelerinin ortalamasını ‘yanıt süresi’ olarak hizmet niteliği ölçütü sayar."
+        },
+        {
+            "No": 27,
+            "question": "Metindeki tanıma göre kesen (preemptive) algoritma için doğru ifade hangisidir?",
+            "options": {
+                "A": "Görev yalnız kendi istemiyle AİB’yi bırakır",
+                "B": "Görev, kendi istemi dışında da AİB’yi bırakmak zorunda kalabilir",
+                "C": "Sadece toplu işlemde kullanılabilir",
+                "D": "Kesilmeleri tamamen yok sayar",
+                "E": "Hazır görevler kuyruğu hiç kullanılmaz"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, hazır kuyruğa yeni görev bağlandığında seçim o anda çalışan görevi de kapsayacak biçimde yapılırsa çalışan görev istemi dışında kesilip AİB’yi bırakabilir; buna kesen algoritma denir."
+        },
+        {
+            "No": 28,
+            "question": "First Come First Served (İlk gelen önce) algoritmasının metne göre temel özelliği hangisidir?",
+            "options": {
+                "A": "Görevleri kalan süre kestirimiyle sıralar",
+                "B": "Görevleri hazır kuyruğa geliş sırasına göre işletir ve eş öncelikli olduğundan kesen değildir",
+                "C": "Her görev için zorunlu zaman dilimi uygular",
+                "D": "Sadece uyarı (event) tabanlıdır",
+                "E": "Çok kuyruklu yapıyı zorunlu kılar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: FCFS, hazır kuyruğa geliş sırasına göre işletir; eş öncelik varsayımıyla kesmeyen (non-preemptive) bir yaklaşımdır."
+        },
+        {
+            "No": 29,
+            "question": "Shortest Remaining Time First (En kısa işletim süresi kalan önce) algoritmasının kuramsal hedefi hangisidir?",
+            "options": {
+                "A": "Ortalama bekleme süresini en aza indirmek",
+                "B": "Disk aktarma hızını en aza indirmek",
+                "C": "Her görevi eşit sayıda kesmek",
+                "D": "Sadece yanıt süresini en kötü yapmak",
+                "E": "Kütük parçalanmasını azaltmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, SRTF’nin ortalama bekleme süresi yönünden kuramsal olarak en iyi sonucu verdiğini vurgular."
+        },
+        {
+            "No": 30,
+            "question": "SRTF yaklaşımında kalan işletim süresi doğrudan ölçülemediği için metinde hangi kestirim yöntemi önerilir?",
+            "options": {
+                "A": "Üstel (eksponansiyel) ortalama",
+                "B": "Rastgele sayı üretimi",
+                "C": "Sadece en son PID’ye bakma",
+                "D": "Disk sektör numarasına göre sıralama",
+                "E": "Kütük adının alfabetik sırası"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, görevlerin gelecek işletim sürelerini kestirmek için τ(n+1)=α t(n) + (1-α) τ(n) üstel ortalama formülünü verir."
+        },
+        {
+            "No": 31,
+            "question": "Üstel (eksponansiyel) ortalama kestiriminde α=1 seçilirse kestirim hangi bilgiye dayanır?",
+            "options": {
+                "A": "Yalnız geçmiş kestirime (τ(n))",
+                "B": "Yalnız son gözlenen değere (t(n))",
+                "C": "Rastgele bir değere",
+                "D": "Sabit 0 değerine",
+                "E": "Disk sektör numarasına"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metindeki τ(n+1)=α t(n) + (1-α) τ(n) formülünde α=1 seçilirse kestirim tamamen son gözleme (t(n)) eşit olur; geçmiş ortalama etkisi kalmaz."
+        },
+        {
+            "No": 32,
+            "question": "Öncelik tabanlı görev yönetiminde görev önceliği metne göre hangi etkenlere dayanabilir?",
+            "options": {
+                "A": "Görevin CPU zamanı, bellek gereksinimi ve G/Ç kanal kullanım sıklığı gibi ölçülebilir taleplerine ve sunuş biçimine",
+                "B": "Sadece kütük uzantısına",
+                "C": "Sadece ekran çözünürlüğüne",
+                "D": "Sadece derleyicinin sürümüne",
+                "E": "Sadece diskin marka/modeline"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, önceliğin kaynak taleplerine, kullanıcı grubuna ve etkileşimli/toplu sunuş biçimine göre belirlendiğini belirtir."
+        },
+        {
+            "No": 33,
+            "question": "Uyarı tabanlı (event driven) görev yönetimi metne göre hangi durumda kullanılır?",
+            "options": {
+                "A": "Sadece toplu işlem sistemlerinde",
+                "B": "Donanımdan gelen uyarılarla (kesilmeler gibi) görevlerin görev yöneticiden bağımsız anahtarlanabildiği, zamana bağımlı gerçek zamanlı uygulamalarda",
+                "C": "Sadece kütük kopyalama işlerinde",
+                "D": "Sadece derleme sırasında",
+                "E": "Sadece ağ yönlendirmede"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kesilme gibi uyarılarla anahtarlanan özel sistem görevleri ve gerçek zamanlı süreç denetimi bağlamında uyarı tabanlı yönetimden söz eder."
+        },
+        {
+            "No": 34,
+            "question": "Öncelik yaşlanması (priority aging) yönteminin temel amacı nedir?",
+            "options": {
+                "A": "Yüksek öncelikli işleri tamamen durdurmak",
+                "B": "Düşük öncelikli görevlerin aşırı gecikmesini önlemek için önceliklerini dönemsel olarak artırmak",
+                "C": "Zaman dilimini sürekli kısaltmak",
+                "D": "Her görevin belleğini sıfırlamak",
+                "E": "Sadece G/Ç bekleme kuyruklarını kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, çok yüklü sistemlerde düşük öncelikli işlerin aç kalmasını önlemek için önceliklerin belirli sıklıkta modulo N artırılmasını (aging) anlatır."
+        },
+        {
+            "No": 35,
+            "question": "Round Robin (zaman dilimli) algoritmasında görev yöneticinin saat uyarısıyla yaptığı tipik işlem hangisidir?",
+            "options": {
+                "A": "Çalışan görevi hazır kuyruğun sonuna eklemek ve kuyruk başını yeni zaman dilimi için çalıştırmak",
+                "B": "Hazır kuyruğu tamamen silmek",
+                "C": "Tüm görevleri bitiş durumuna almak",
+                "D": "Diskte öbek birleştirmek",
+                "E": "Kılavuz kütüğü yeniden düzenlemek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, her t ms’de gelen saat uyarılarıyla görev yöneticinin çalışan görevi kuyruğun sonuna koyduğunu ve kuyruk başındaki görevi AİB’ye anahtarladığını belirtir."
+        },
+        {
+            "No": 36,
+            "question": "Zaman diliminin (quantum) çok kısa seçilmesinin metinde belirtilen temel sakıncası hangisidir?",
+            "options": {
+                "A": "Görevlere sıra gelme sıklığı azalır",
+                "B": "Görev anahtarlama süresinin, faydalı işletim süresine oranı artar ve AİB kullanım verimliliği düşer",
+                "C": "Disk erişim süresi sıfırlanır",
+                "D": "Kuyruk yapıları gereksiz hale gelir",
+                "E": "Hiç kesilme üretilemez"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, quantum çok kısa olursa anahtarlama ek yükünün artacağını ve verimliliği düşüreceğini söyler. Yanlışlar: A ters (sıra daha sık gelir); C/D/E alakasız."
+        },
+        {
+            "No": 37,
+            "question": "Zaman dilimli (Round Robin) algoritmanın metne göre sınıflandırması hangisidir?",
+            "options": {
+                "A": "Doğası gereği kesmeyen (non-preemptive)",
+                "B": "Doğası gereği salt kesen (preemptive)",
+                "C": "Sadece uyarı tabanlıdır",
+                "D": "Sadece iş yönetimi için kullanılır",
+                "E": "Sadece bellek yönetimi için kullanılır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, zaman dilimli algoritmanın zaman aşımıyla görevleri kesmek zorunda olduğu için doğası gereği kesen olduğunu belirtir."
+        },
+        {
+            "No": 38,
+            "question": "Çok kuyruklu (multi-level queues) yaklaşımının temel motivasyonu hangisidir?",
+            "options": {
+                "A": "Tüm görevleri tek kuyruğa koyup tek algoritma uygulamak",
+                "B": "Farklı tür görevler için farklı kuyruklar ve uygun algoritmalar kullanarak avantajları birleştirip sakıncaları azaltmak",
+                "C": "Sadece disk G/Ç’sini hızlandırmak",
+                "D": "Sadece derleyiciyi basitleştirmek",
+                "E": "Kütük sistemini kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, etkileşimli/toplu/sistem görevi gibi farklı nitelikteki görevleri aynı kuyruğa koymanın her görev için uygun olmayabileceğini; bu yüzden görev türüne göre ayrı kuyruklar ve farklı algoritmalar kullanıldığını söyler."
+        },
+        {
+            "No": 39,
+            "question": "Çok kuyruklu yapıda kuyrukların katı önceliklendirilmesi yaklaşımının temel sakıncası nedir?",
+            "options": {
+                "A": "Yüksek öncelikli kuyrukta görev kalmayabilir",
+                "B": "Düşük öncelikli kuyruklardaki görevler çok yüklü sistemlerde aşırı gecikebilir",
+                "C": "Görev anahtarlama maliyeti sıfıra iner",
+                "D": "Kuyruk içi algoritmalar kullanılamaz",
+                "E": "Kesilmeler devre dışı kalır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, katı kuyruk önceliklerinin düşük öncelikli kuyruklarda aç kalma/aşırı gecikme doğurabileceğini vurgular."
+        },
+        {
+            "No": 40,
+            "question": "Çok kuyruklu yapıda kuyruklar arasında Round Robin uygulanırsa beklenen fayda hangisidir?",
+            "options": {
+                "A": "Düşük öncelikli işlere de dönem dönem işletim hakkı tanınarak aşırı gecikmenin azaltılması",
+                "B": "Tüm görevlerin önceliğinin eşitlenmesi",
+                "C": "Kuyrukların tamamen kaldırılması",
+                "D": "Sadece uyarı tabanlı çalışması",
+                "E": "Disk I/O’nun kesilmesiz yapılması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kuyruklara önceliklerine uygun sayıda zaman dilimi verilerek hem önceliklerin korunduğunu hem de düşük önceliklilere arada işletim hakkı tanınarak aç kalmanın azaltıldığını söyler."
+        },
+        {
+            "No": 41,
+            "question": "Metne göre ‘işletim dizileri’ (threads) neden ortaya çıkmıştır?",
+            "options": {
+                "A": "Disk bloklarını büyütmek için",
+                "B": "Tek bir program içindeki koşut çalıştırılabilir kesimlerin aynı adres evrenini paylaşarak daha kolay veri paylaşması ve daha ucuz anahtarlama ile koşut işletilebilmesi için",
+                "C": "Her görevin mutlaka tek yazmaç kullanması için",
+                "D": "Sadece kütük sistemini hızlandırmak için",
+                "E": "Derleyici hatalarını azaltmak için"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, ayrı programlara bölmenin veri paylaşımını pahalı hale getirdiğini; thread’lerin aynı adres evrenini paylaşarak bu sorunu azalttığını ve bağlam anahtarlama ile daha ucuz işletilebildiğini anlatır."
+        },
+        {
+            "No": 42,
+            "question": "İşletim dizileri (threads) ile görev (task) arasında metne göre doğru ilişki hangisidir?",
+            "options": {
+                "A": "Thread, bir görevin çalıştığı ortak işletim ortamı içinde yer alan koşut işletim kesimidir; kaynak atamaları genelde görev düzeyindedir",
+                "B": "Görev, bir thread’in alt türüdür ve kaynaklar thread düzeyinde atanır",
+                "C": "Thread’ler ayrı adres evrenlerine sahiptir",
+                "D": "Thread’lerin program sayacı yoktur",
+                "E": "Thread’ler sadece toplu işlemde vardır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, görevi thread’lerin çalıştığı ortak ortam olarak ele alır; sistem kaynakları (bellek, kütükler vb.) görev düzeyinde atanır/izlenir ve thread’ler bu kaynakları paylaşır; her thread’in kendine özgü program sayacı vardır."
+        },
+        {
+            "No": 43,
+            "question": "Metne göre bir göreve ilişkin thread’lerin AİB’ye anahtarlanması hangi mekanizma ile daha ucuz olur?",
+            "options": {
+                "A": "Görev anahtarlama",
+                "B": "Bağlam anahtarlama",
+                "C": "Disk DMA",
+                "D": "Kütük öbekleme",
+                "E": "Kesilme vektör taraması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, aynı görev içindeki thread anahtarlamalarının görev anahtarlamaya göre daha dar kapsamlı ve hızlı olan bağlam anahtarlama ile gerçekleştiğini belirtir."
+        },
+        {
+            "No": 44,
+            "question": "Kullanıcı evreninde thread yönetimi yaklaşımında işletim sisteminin konumu metne göre nasıldır?",
+            "options": {
+                "A": "İşletim sistemi thread’lerin varlığından haberdardır ve her thread’i ayrı görev sayar",
+                "B": "İşletim sistemi thread’lerin varlığından habersizdir; yönetim aynı görev içinde çalışan bir kullanıcı paketiyle yapılır",
+                "C": "İşletim sistemi sadece disk I/O’yu yönetir",
+                "D": "İşletim sistemi görev yönetimini tamamen devre dışı bırakır",
+                "E": "İşletim sistemi her thread için ayrı adres evreni açar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kullanıcı evreni yönetiminde OS’nin thread’lerden habersiz olduğunu ve aynı görev içindeki thread’lerin hangi sırayla işletileceğini bir kullanıcı paketinin belirlediğini söyler."
+        },
+        {
+            "No": 45,
+            "question": "Metinde kullanıcı evreni thread yönetim paketlerine örnek olarak hangileri verilmiştir?",
+            "options": {
+                "A": "POSIX P-Threads ve Mach C-Threads",
+                "B": "FAT ve NTFS",
+                "C": "INTR ve NMI",
+                "D": "DMA ve Kanal",
+                "E": "fork ve exec"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, POSIX P-Threads ve Mach C-Threads’i örnek verir. Diğerleri farklı konulardır."
+        },
+        {
+            "No": 46,
+            "question": "Metne göre çok işletim dizili işlemi işletim sistemi düzeyinde yöneten sisteme verilen örnek hangisidir?",
+            "options": {
+                "A": "MS-DOS",
+                "B": "Windows NT",
+                "C": "BIOS",
+                "D": "UNIX (sadece kabuk)",
+                "E": "FAT12"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, işletim sistemi düzeyinde thread yönetimini üstlenen modern sistemlere Windows NT’yi belirgin örnek verir."
+        },
+        {
+            "No": 47,
+            "question": "Metne göre CPU’nun ‘çalışır durumda’ olmasının tanımı hangisidir?",
+            "options": {
+                "A": "Her zaman yararlı iş üretmesi",
+                "B": "Makina komutları işletiyor olması (boş döngü komutları dahil)",
+                "C": "Disk aktarımı yapıyor olması",
+                "D": "Kütük sistemi günlüğü yazıyor olması",
+                "E": "Sadece kesilme bekliyor olması ve hiç komut işletmemesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, CPU’nun çalışır olmasını makina komutları işletmesi olarak tanımlar; komutların yararlı iş üretip üretmemesi ayrı bir konudur. Yanlışlar: A metnin vurgusuna aykırı; E boşta tanımıdır."
+        },
+        {
+            "No": 48,
+            "question": "Metinde ‘birim sürede sonlandırılan iş sayısı’ ölçütünün önemi nasıl gerekçelendirilir?",
+            "options": {
+                "A": "CPU kullanım oranı tek başına hizmetin tam ölçüsü olmadığından daha dolaysız bir başarım ölçüsüdür",
+                "B": "Sadece disk markasına bağlı olduğu için",
+                "C": "Sadece GUI hızını ölçtüğü için",
+                "D": "Kütük parçalanmasını doğrudan ölçtüğü için",
+                "E": "Derleyici optimizasyonunu ölçtüğü için"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, CPU’nun çalışır tutulmasının tek başına yeterli ölçü olmadığını; birim sürede tamamlanan iş sayısının daha dolaysız başarım göstergesi olduğunu söyler."
+        },
+        {
+            "No": 49,
+            "question": "İş tamamlanma süresi metinde hangi bileşenleri kapsayan bir toplam olarak ele alınır?",
+            "options": {
+                "A": "Sadece CPU’da işletim süresi",
+                "B": "Sunuş kuyruğu bekleme + göreve dönüşüm + dönüşümlü işletim + G/Ç/zamanuyumlama gibi beklemeler dahil toplam süre",
+                "C": "Sadece disk aktarım süresi",
+                "D": "Sadece ağ gecikmesi",
+                "E": "Sadece derleme süresi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, iş tamamlanma süresini sunuştan bitişe kadar geçen; kuyruk beklemeleri ve işletim/bekleme sürelerini içeren toplam olarak tanımlar."
+        },
+        {
+            "No": 50,
+            "question": "Metne göre yanıt sürelerinin standart sapmasının küçük tutulması ne sağlar?",
+            "options": {
+                "A": "Yanıtların tamamen rastgele olmasını",
+                "B": "Yanıt sürelerinin işletimden işletime çok değişmemesini ve öngörülebilir bir görünüm sağlamayı",
+                "C": "Disk erişimlerinin sıfırlanmasını",
+                "D": "Kesilmelerin devre dışı kalmasını",
+                "E": "Hazır görevler kuyruğunun kaldırılmasını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, standart sapmanın küçük tutulduğu sistemlerde yanıt sürelerinin büyük değişiklik göstermediğini ve öngörülebilir bir sistem görünümü sağlanabildiğini belirtir."
+        }
+    ]
+}

@@ -1,0 +1,202 @@
+{
+    "unitNumber": 14,
+    "unitTitle": "Kritik-Önemli Kısımlar (Hızlı Tekrar)",
+    "questionCount": 15,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Aşağıdakilerden hangisi step motor sürüş metotları arasında yer almaz?",
+            "options": {
+                "A": "Wave drive",
+                "B": "Full step drive",
+                "C": "Half step drive",
+                "D": "Micro step drive",
+                "E": "Start-stop drive"
+            },
+            "correct": "E",
+            "explanation": "Kritik listede step motor sürüş metotları: wave, full step, half step, micro step olarak geçer. “Start-stop drive” bu listede yer alan bir sürüş metodu değildir."
+        },
+        {
+            "No": 2,
+            "question": "Servo motorlarla ilgili kritik notta özellikle hangi kavramlar birlikte vurgulanır?",
+            "options": {
+                "A": "ACK ve R/W",
+                "B": "Duty cycle (doluluk oranı) ve geri bildirim/pozisyon bilgisi",
+                "C": "Harvard ve Von Neumann",
+                "D": "EEPROM ve Flash",
+                "E": "MOSI ve MISO"
+            },
+            "correct": "B",
+            "explanation": "Kritik-önemli kısımlar; servo motorların çalışma prensibi için duty cycle/doluluk oranını ve servo içinde mikroişlemci olsa da pozisyon bilgisi/geri bildirim temasını işaret eder."
+        },
+        {
+            "No": 3,
+            "question": "Gecikme (delay) konusu kritik listede neden “dikkat” başlığı altında değerlendirilir?",
+            "options": {
+                "A": "Delay bellek tüketimini azaltır",
+                "B": "Delay bloklayıcıdır ve zamanlama/tepki sürelerini bozabilir",
+                "C": "Delay sadece I2C’de çalışır",
+                "D": "Delay sadece CAN mesajlarını önceliklendirir",
+                "E": "Delay Flash’ı kalıcı yapar"
+            },
+            "correct": "B",
+            "explanation": "Delay, CPU’yu bekletir. Bu da diğer işlerin gecikmesine ve real-time beklentilerin bozulmasına yol açabilir. Bu nedenle “kolay ama riskli” bir çözümdür; yerine non-blocking zamanlama veya RTOS tercih edilebilir."
+        },
+        {
+            "No": 4,
+            "question": "Sensör verilerinde filtreleme, kritik listede hangi temel probleme çözüm olarak anılır?",
+            "options": {
+                "A": "Kütüphane maliyeti",
+                "B": "Parazit/ani sıçramalar nedeniyle kararsız okuma",
+                "C": "CAN öncelik sistemi",
+                "D": "EEPROM endurance",
+                "E": "UART pin çaprazlama"
+            },
+            "correct": "B",
+            "explanation": "Kritik listede “sensor verilerini filtreleme yöntemleri” başlığı geçer. Amaç, gürültü/parazit kaynaklı ani sıçramaları yumuşatıp daha kararlı ölçüm elde etmektir."
+        },
+        {
+            "No": 5,
+            "question": "SPI için kritik listede belirtilen “4 hatlı yapı” doğru eşleştirmesi hangisidir?",
+            "options": {
+                "A": "SDA, SCL, ACK, R/W",
+                "B": "MISO, MOSI, SCK, SS/CS",
+                "C": "TX, RX, Start, Stop",
+                "D": "CANH, CANL, ID, CRC",
+                "E": "Vcc, GND, A0, A1"
+            },
+            "correct": "B",
+            "explanation": "SPI için “4 hatlı yapı” denildiğinde pratikte MOSI (master→slave veri), MISO (slave→master veri), SCK (clock) ve SS/CS (slave seçme) hatları kastedilir. Veri yönünün iki ayrı hatla ayrılması SPI’yi hızlı ve basit yapar; ancak birden fazla slave varsa CS hattı genellikle her slave için ayrı ayrı gerekir. Bu ayrım, I2C’nin adresleme ile çoklu cihaz bağlamasından önemli bir farktır."
+        },
+        {
+            "No": 6,
+            "question": "Aşağıdakilerden hangisi haberleşme protokolleri kritik listesinde birlikte yer alan bir ikilidir?",
+            "options": {
+                "A": "SPI ve UART",
+                "B": "RAM ve ROM",
+                "C": "PID ve PWM",
+                "D": "FPGA ve ASIC",
+                "E": "Harvard ve Von Neumann"
+            },
+            "correct": "A",
+            "explanation": "Kritik listede haberleşme başlıkları “katman” ve “kullanım alanı” olarak karışık geçer: UART/SPI/I2C mikrodenetleyici seviyesinde kart içi/çipler arası iletişimi temsil ederken, Modbus/Profibus daha çok endüstriyel otomasyon dünyasında sahada kullanılan protokollerdir. MQTT & TCP/IP ise IoT/internet tabanlı haberleşme tarafında sık birlikte anılır (MQTT mesajlaşma modeli, TCP/IP taşıma/ağ altyapısı). Bu yüzden doğru ikiliyi seçerken nottaki eşleşmeye ve aynı bağlamda yazılmış olmasına bakılır."
+        },
+        {
+            "No": 7,
+            "question": "CAN bus için kritik listede özellikle hangi özellik vurgulanır?",
+            "options": {
+                "A": "Start/stop bitleri",
+                "B": "Öncelik (priority) sistemi",
+                "C": "CS pini",
+                "D": "SDA/SCL",
+                "E": "Parity biti"
+            },
+            "correct": "B",
+            "explanation": "CAN bus’ta kritik vurgu “öncelik/priority” ve buna bağlı arbitraj mantığıdır: aynı anda birden fazla düğüm konuşmak istediğinde, protokol çakışmayı çözer ve daha yüksek öncelikli mesajın iletilmesini sağlar. Bu, otomotiv gibi ortamlarda “fren/ABS gibi hayati mesajlar gecikmesin” gereksinimini karşılamaya yöneliktir. Sınavda bu genellikle “hangi mesaj kazanır, neden?” şeklinde senaryo sorusuna dönüşür."
+        },
+        {
+            "No": 8,
+            "question": "MQTT’nin kritik listede “TCP/IP” ile birlikte anılması en doğru şekilde neyi gösterir?",
+            "options": {
+                "A": "MQTT’nin sadece analog olması",
+                "B": "MQTT’nin internet tabanlı ağlarda (TCP/IP üzerinde) IoT mesajlaşması için kullanılması",
+                "C": "MQTT’nin SPI’ın bir parçası olması",
+                "D": "MQTT’nin yalnız kablolu olması",
+                "E": "MQTT’nin sadece RS232 ile çalışması"
+            },
+            "correct": "B",
+            "explanation": "Kritik listede “MQTT & TCP/IP” birlikte geçer. Bu, MQTT’nin TCP/IP üzerinde çalışan hafif publish/subscribe protokolü olduğunu ve IoT dünyasında sık kullanıldığını işaret eder."
+        },
+        {
+            "No": 9,
+            "question": "MCU vs MPU vs SoC ayrımı kritik listede hangi motivasyonla bağlanır?",
+            "options": {
+                "A": "Sadece kablosuz menzil",
+                "B": "İşlem yoğunluğu ve karmaşıklık (hangi sınıf sistem için hangi işlemci türü uygun?)",
+                "C": "Sadece ADC çözünürlüğü",
+                "D": "Sadece PWM duty",
+                "E": "Sadece EEPROM endurance"
+            },
+            "correct": "B",
+            "explanation": "Kritik listede işlemci türleri (MCU/MPU/SoC) başlığıyla birlikte “İşlem Yoğunluğu ve Karmaşıklık” ifadesi geçer. Yani seçim, uygulamanın işlem gücü ve sistem karmaşıklığına göre yapılır."
+        },
+        {
+            "No": 10,
+            "question": "Hard real-time ve soft real-time ayrımı kritik listede hangi temel ölçüte dayanır?",
+            "options": {
+                "A": "Kablo sayısı",
+                "B": "Kesin zamanlama gereksinimi ve deadline kaçırmanın kabul edilebilirliği",
+                "C": "EEPROM kapasitesi",
+                "D": "PWM frekansı",
+                "E": "Harici kristal"
+            },
+            "correct": "B",
+            "explanation": "Kritik listede “Hard Real-Time (Kesin Zamanlama)” ve “Soft Real-Time (Yumuşak Zamanlama)” başlıkları geçer. Temel fark, deadline kaçırmanın sistem açısından kabul edilip edilmemesidir."
+        },
+        {
+            "No": 11,
+            "question": "Kod boyutu konusu kritik listede hangi somut ifadeyle bağlanır?",
+            "options": {
+                "A": "Kod RAM’de saklanır",
+                "B": "Kod derlendikten sonra “Hex kodu”na dönüşür ve Flash’ta yer kaplar",
+                "C": "Kod sadece kabloyu etkiler",
+                "D": "Kod sadece sensör doğrusalığıdır",
+                "E": "Kod sadece PWM duty’dir"
+            },
+            "correct": "B",
+            "explanation": "Kritik listede açıkça: derlenen kodun hex’e dönüştüğü ve Flash bellekte yer kapladığı vurgulanır. Bu, bellek kısıtlarının sınavda özellikle sorulabileceğini gösterir."
+        },
+        {
+            "No": 12,
+            "question": "Kütüphane maliyeti konusunda kritik listede geçen doğru çıkarım hangisidir?",
+            "options": {
+                "A": "Kütüphaneler her zaman bellek tasarrufu sağlar",
+                "B": "Kütüphaneler işi kolaylaştırır ama belleği şişirebilir; hafıza yetmezse register seviyesinde yazmak veya gereksizi silmek gerekebilir",
+                "C": "Kütüphaneler sadece donanımı değiştirir",
+                "D": "Kütüphaneler sadece I2C’de kullanılır",
+                "E": "Kütüphaneler sadece CAN’da kullanılır"
+            },
+            "correct": "B",
+            "explanation": "Kritik listede `Servo.h` örneğiyle; kütüphanelerin geliştirmeyi hızlandırdığı fakat Flash/RAM’i şişirebileceği yazıyor. Kaynak yetmezse “ham (register) kod” veya gereksiz fonksiyonları silme stratejisi öneriliyor."
+        },
+        {
+            "No": 13,
+            "question": "Güç tüketimi ve enerji yönetimi başlığı altında kritik listede hangisi doğrudan örneklenmiştir?",
+            "options": {
+                "A": "Uyku modları",
+                "B": "CS hattı",
+                "C": "ACK",
+                "D": "Parity",
+                "E": "Stop biti"
+            },
+            "correct": "A",
+            "explanation": "Kritik listede güç tüketimi ve enerji yönetimi altında “Uyku Modları” özellikle geçer. Uyku modları yazılım/hardware ortak tasarım kararıdır ve pil ömrünü ciddi etkiler."
+        },
+        {
+            "No": 14,
+            "question": "Enerji hasatlama (energy harvesting) kritik listede hangi bağlamda geçer?",
+            "options": {
+                "A": "Haberleşme frame yapısı",
+                "B": "Enerji yönetimi yaklaşımları kapsamında çevreden enerji toplama",
+                "C": "SPI hat eşlemesi",
+                "D": "I2C ACK",
+                "E": "UART start biti"
+            },
+            "correct": "B",
+            "explanation": "Kritik listede enerji yönetimi altında “Enerji Hasatlama (Energy Harvesting)” başlığı bulunur. Bu, özellikle düşük güç IoT uygulamalarında çevresel kaynaklardan enerji toplama fikridir."
+        },
+        {
+            "No": 15,
+            "question": "Bu kritik listeye göre sınavda “ezber + yorum” karışımı en muhtemel soru tipi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "SPI hatlarını say (ezber) + mesafe artınca frekans nasıl değişmeli (yorum)",
+                "B": "Sadece kasa vida sayısı",
+                "C": "Sadece renk seçimi",
+                "D": "Sadece ekran teması",
+                "E": "Sadece dosya adı"
+            },
+            "correct": "A",
+            "explanation": "Kritik listede hem somut ezber başlıkları (SPI hatları, step sürüş tipleri) hem de tasarım trade-off’ları (delay riski, bellek/kütüphane maliyeti, hard/soft real-time) var. Bu da soruların “bilgi + uygulama/yorum” karması olabileceğini düşündürür."
+        }
+    ]
+}

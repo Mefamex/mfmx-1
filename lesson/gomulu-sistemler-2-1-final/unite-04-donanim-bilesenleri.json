@@ -1,0 +1,267 @@
+{
+    "unitNumber": 4,
+    "unitTitle": "Donanım Bileşenleri",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Aşağıdakilerden hangisi bir mikrodenetleyicinin (MCU) anatomisinde yer alan tipik bir bileşen değildir?",
+            "options": {
+                "A": "CPU (komut yürütme)",
+                "B": "RAM (uçucu çalışma verisi)",
+                "C": "Flash/ROM (program kodu)",
+                "D": "Kesme (interrupt) kontrolü",
+                "E": "Harici ekran kartı (discrete GPU)"
+            },
+            "correct": "E",
+            "explanation": "Online notlarda MCU anatomisi CPU, bellek (Flash/ROM ve RAM), timer/counter, interrupt kontrol, G/Ç portları ve seri portlar gibi entegre çevre birimlerinden oluşur. Harici/dedike ekran kartı (discrete GPU) tipik MCU yapısının parçası değildir (SoC/MPU tarafında GPU görülebilir)."
+        },
+        {
+            "No": 2,
+            "question": "Mikroişlemci (μP) ile mikrodenetleyici (μC) arasındaki en temel fark aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "μP her zaman düşük güç tüketir, μC yüksek güç tüketir",
+                "B": "μC genellikle bellek ve G/Ç gibi çevre birimlerini tek yongada entegre eder; μP ise çoğu zaman harici bellek/G/Ç ile daha genel amaçlı kurulur",
+                "C": "μP sadece analog sinyal işler, μC sadece dijital",
+                "D": "μC asla seri haberleşme desteklemez",
+                "E": "μP yalnızca 8-bit olabilir"
+            },
+            "correct": "B",
+            "explanation": "Notlarda μP’nin bilgisayar mimarisi gibi daha genel amaçlı olup bellek ve G/Ç’nin çoğu zaman harici olduğu; μC’nin ise bellek + G/Ç + timer/ADC/seri port gibi çevre birimlerini tek yongada toplayan kompakt bir yapı olduğu vurgulanır. Bu, kart tasarımını küçültür ve gömülü uygulamalara uygundur."
+        },
+        {
+            "No": 3,
+            "question": "Timer/Counter birimlerinin gömülü sistemlerde tipik kullanım alanlarından biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Gerilim regülasyonu yapmak",
+                "B": "PWM üretmek ve periyodik zaman tabanlı işleri yönetmek",
+                "C": "Sadece flash bellek programlamak",
+                "D": "Sadece Ethernet yönlendirmek",
+                "E": "Sadece görsel arayüz çizmek"
+            },
+            "correct": "B",
+            "explanation": "Timer/Counter birimleri zaman ölçmek ve zaman üretmek için kullanılır. PWM üretimi, periyodik sensör okuma (ör. her 10 ms), darbe sayma gibi pek çok gömülü iş timer’lar üzerinden yapılır. Bu, deterministik zamanlama için temel donanım desteğidir."
+        },
+        {
+            "No": 4,
+            "question": "Kesme (interrupt) mekanizması için en doğru tanım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "CPU’nun hiçbir zaman bölünmeden çalışmasını sağlayan yöntem",
+                "B": "Acil bir olay olduğunda CPU’nun dikkatini çekip hızlı tepki verilmesini sağlayan mekanizma",
+                "C": "Sadece bellek silme yöntemi",
+                "D": "Sadece kablosuz haberleşme protokolü",
+                "E": "Sadece analog filtreleme tekniği"
+            },
+            "correct": "B",
+            "explanation": "Interrupt kontrolü, acil olaylara anında tepki verilmesini sağlar (ör. UART’a veri geldi, butona basıldı). CPU normal akışı geçici olarak kesme servis rutinine (ISR) gider. Bu mekanizma özellikle gerçek zamanlı tepki gerektiren olaylarda kritik önem taşır."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi Harvard ve Von Neumann mimarileri arasındaki farkı doğru ifade eder?",
+            "options": {
+                "A": "Von Neumann’da komut ve veri ayrı belleklerde tutulur",
+                "B": "Harvard’da komut ve veri aynı bellek ve aynı veri yolunu paylaşır",
+                "C": "Von Neumann’da komut+veri aynı bellek/bus paylaşımı nedeniyle darboğaz oluşabilir; Harvard’da ayrım sayesinde eş zamanlı erişim mümkün olabilir",
+                "D": "Harvard mimarisi kesme desteklemez",
+                "E": "Von Neumann mimarisi sadece gömülü sistemlerde kullanılır"
+            },
+            "correct": "C",
+            "explanation": "Von Neumann mimarisinde komut ve veri tek bellek ve tek veri yolunu paylaşır; bu da aynı anda erişimi zorlaştırıp darboğaz yaratabilir. Harvard mimarisinde komut belleği ve veri belleği ayrılabildiği için aynı anda erişim daha olasıdır; bu da performans ve determinism avantajı sağlar."
+        },
+        {
+            "No": 6,
+            "question": "CISC ve RISC ayrımı aşağıdakilerden hangisini ifade eder?",
+            "options": {
+                "A": "İşlemcinin sadece veri yolu genişliğini",
+                "B": "Komut seti felsefesini: CISC daha karmaşık/zengin komutlar, RISC daha basit/pipeline dostu komutlar",
+                "C": "Sadece bellek türünü",
+                "D": "Sadece haberleşme protokolünü",
+                "E": "Sadece güç kaynağı tipini"
+            },
+            "correct": "B",
+            "explanation": "CISC (Complex Instruction Set Computer) daha zengin/karmaşık komutlar yaklaşımını; RISC (Reduced Instruction Set Computer) daha basit komutlar ve optimizasyon/pipelining’e elverişli tasarım felsefesini ifade eder. Sınavda beklenen genellikle kavramsal farkı doğru anlatmaktır."
+        },
+        {
+            "No": 7,
+            "question": "SoC (System on Chip) kavramı aşağıdakilerden hangisini en iyi karşılar?",
+            "options": {
+                "A": "Sadece CPU’nun bulunduğu yonga",
+                "B": "CPU yanında GPU/DSP gibi ek birimler ve çevre birimlerinin de tek yongada toplanabildiği daha kapsamlı sistem",
+                "C": "Sadece harici RAM modülü",
+                "D": "Sadece kablo standardı",
+                "E": "Sadece sensör seti"
+            },
+            "correct": "B",
+            "explanation": "SoC, tek yonga üzerinde daha geniş bir sistemin kurulmasıdır. MCU da bir tür “tek yonga sistem” yaklaşımıdır; ancak SoC genellikle daha güçlü işlem birimleri (CPU + GPU/DSP vb.) ve daha fazla entegre bileşen barındırabilir. Notlarda Jetson gibi örnekler SoC tarafına bağlanır."
+        },
+        {
+            "No": 8,
+            "question": "FPGA ve ASIC kıyaslamasında aşağıdaki ifadelerden hangisi daha doğrudur?",
+            "options": {
+                "A": "FPGA, üretimde sabitlenmiş ve değiştirilemeyen özel entegredir",
+                "B": "ASIC, yeniden programlanabilir olduğu için prototiplemede idealdir",
+                "C": "FPGA yeniden programlanabilir; ASIC belirli iş için üretilmiş sabit tasarımdır",
+                "D": "FPGA her zaman ASIC’ten daha ucuzdur",
+                "E": "ASIC her zaman FPGA’den daha esnektir"
+            },
+            "correct": "C",
+            "explanation": "FPGA (Field Programmable Gate Array) yeniden programlanabilir donanımdır; prototipleme ve esneklik avantajı vardır. ASIC (Application-Specific Integrated Circuit) belirli iş için üretilmiş özel entegredir; performans/güç açısından çok iyi olabilir ama geliştirme maliyeti yüksektir ve değişiklik zordur."
+        },
+        {
+            "No": 9,
+            "question": "MCU içinde Flash/ROM’un temel rolü aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Çalışma sırasında değişen verileri tutmak",
+                "B": "Program kodunu kalıcı olarak saklamak",
+                "C": "Sadece geçici tampon oluşturmak",
+                "D": "Sadece kablosuz paketleri işlemek",
+                "E": "Sadece analog sinyali filtrelemek"
+            },
+            "correct": "B",
+            "explanation": "Flash/ROM kalıcı (non-volatile) bellek türüdür; firmware/program kodu ve genellikle sabit tablolar burada saklanır ve güç kesilince silinmez. RAM ise çalışma zamanı verilerini (stack, heap, değişkenler) tutar ve güç kesilince içeriği kaybolur. Sınavlarda bu ayrım genelde “kod nereye gider?” ve “değişkenler nerede yaşar?” şeklinde sorulur; ayrıca Flash kapasitesi ve yazma ömrü gibi kısıtlar tasarım kararlarını etkileyebilir."
+        },
+        {
+            "No": 10,
+            "question": "MCU içindeki RAM’in temel rolü aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Program kodunu kalıcı saklamak",
+                "B": "Program çalışırken değişen verileri ve geçici yapıları tutmak",
+                "C": "Sadece saat sinyali üretmek",
+                "D": "Sadece sensörün fiziksel yapısını oluşturmak",
+                "E": "Sadece veri yolunu yönlendirmek"
+            },
+            "correct": "B",
+            "explanation": "RAM uçucu (volatile) bellektir; program çalışırken değişen veriler RAM’de yaşar (yerel değişkenler ve çağrı çerçeveleri için stack, dinamik bellek için heap, buffer’lar vb.). Güç kesildiğinde RAM içeriği kaybolur. Bu yüzden RAM yönetimi, özellikle buffer’lar/RTOS task stack’leri büyüdükçe kritik hale gelir; “çalışırken yetti mi?” sorusu doğrudan RAM kapasitesine bağlıdır."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdakilerden hangisi mikrodenetleyici tercihinin pratik bir sonucudur?",
+            "options": {
+                "A": "Kart tasarımı genellikle daha kompakt olur çünkü çevre birimleri entegredir",
+                "B": "Her zaman harici RAM zorunludur",
+                "C": "Her zaman Windows çalıştırır",
+                "D": "Her zaman yüksek güç tüketir",
+                "E": "Her zaman sadece Von Neumann mimarisi kullanır"
+            },
+            "correct": "A",
+            "explanation": "μC yaklaşımında bellek, G/Ç ve çevre birimleri tek yongada toplandığı için kart küçülür, maliyet ve güç tüketimi genelde düşer. μP yaklaşımında ise harici bileşenler artarak sistem büyüyebilir."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdakilerden hangisi “seri portlar” başlığı altında MCU üzerinde bulunabilecek tipik arabirimlerden biridir?",
+            "options": {
+                "A": "UART",
+                "B": "I2C",
+                "C": "SPI",
+                "D": "CAN",
+                "E": "Hepsi"
+            },
+            "correct": "E",
+            "explanation": "MCU’larda dış dünya ile haberleşmek için UART/I2C/SPI/CAN gibi seri arabirimler bulunabilir. Bu arabirimler, sensör/modül haberleşmesinde pin sayısı, hız, topoloji ve gürültü dayanımı gibi trade-off’lara göre seçilir (örn. kart içi sensörler için I2C, yüksek hız için SPI, araç içi ağ için CAN). Bu nedenle “seri portlar” başlığı MCU’nun pratikte çevre birimleriyle konuşabilme yeteneğini temsil eder."
+        },
+        {
+            "No": 13,
+            "question": "Aşağıdakilerden hangisi “Von Neumann mimarisinin” avantajı olarak notlarda geçen fikre en yakındır?",
+            "options": {
+                "A": "Donanımın basit olması ve maliyetin düşük olabilmesi",
+                "B": "Komut ve veriye her zaman aynı anda erişebilmesi",
+                "C": "Gerçek zamanlı sistemler için ideal olması",
+                "D": "Donanımın çok karmaşık olması",
+                "E": "Komut belleğinin hiç olmaması"
+            },
+            "correct": "A",
+            "explanation": "Von Neumann mimarisinde tek bellek ve tek veri yolu yaklaşımı donanımı basitleştirebilir ve maliyeti düşürebilir. Ancak komut/veri aynı yolu paylaştığı için darboğaz oluşabilir ve performans/determinism sınırlanabilir."
+        },
+        {
+            "No": 14,
+            "question": "Bir sistemin “MCU mu MPU mu?” kararında aşağıdakilerden hangisi en güçlü işaretlerden biridir?",
+            "options": {
+                "A": "Sadece LED yakıp söndürme",
+                "B": "İşletim sistemi (Linux/Android) gerektiren büyük yazılım yığını ve yüksek işlem ihtiyacı",
+                "C": "Sadece basit PWM üretimi",
+                "D": "Sadece ADC okuması",
+                "E": "Sadece buton okuma"
+            },
+            "correct": "B",
+            "explanation": "MPU genelde işletim sistemi çalıştıran, daha büyük yazılım yığınları ve yüksek işlem/bellek ihtiyacı olan uygulamalara yöneliktir. MCU ise sensör okuma, kontrol, düşük güç ve düşük maliyet gibi hedeflerde öne çıkar."
+        },
+        {
+            "No": 15,
+            "question": "Bir kesme (ISR) tasarlanırken gömülü sistem pratiğinde en güvenli yaklaşım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "ISR içinde mümkün olduğunca çok iş yapmak",
+                "B": "ISR’ı kısa tutup bayrak/queue ile ana döngü veya göreve iş devretmek",
+                "C": "ISR’ı hiç kullanmamak",
+                "D": "ISR içinde sürekli delay kullanmak",
+                "E": "ISR içinde dinamik bellek ayırmak"
+            },
+            "correct": "B",
+            "explanation": "ISR’lar hızlı tepki için vardır; uzun sürerse diğer kesmeleri geciktirir ve jitter yaratır. Bu yüzden ISR’ı kısa tutup “olay oldu” bilgisini bayrak/queue ile main loop veya RTOS task’ine iletmek iyi pratiktir."
+        },
+        {
+            "No": 16,
+            "question": "Aşağıdakilerden hangisi gömülü sistemlerde donanım seçimini etkileyen “enerji yönetimi” başlığıyla en uyumludur?",
+            "options": {
+                "A": "Uyku modları (sleep/deep sleep) ve düşük güç tüketimi",
+                "B": "Sadece ekran parlaklığı",
+                "C": "Sadece kasa boyası",
+                "D": "Sadece kablo rengi",
+                "E": "Sadece yazı tipi"
+            },
+            "correct": "A",
+            "explanation": "Notlarda güç tüketimi ve enerji yönetimi (uyku modları, enerji hasatlama gibi) tasarım kriterleri arasında yer alır. Pilli/IoT sistemlerde düşük güç modları seçimi donanım kararlarında belirleyicidir."
+        },
+        {
+            "No": 17,
+            "question": "ASIC’in FPGA’ye göre en güçlü avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Yeniden programlanabilirlik",
+                "B": "Sınırsız esneklik",
+                "C": "Belirli iş için optimize edildiğinde çok iyi performans/güç verimliliği sağlayabilmesi",
+                "D": "Prototiplemede en hızlı seçenek olması",
+                "E": "Geliştirme maliyetinin çok düşük olması"
+            },
+            "correct": "C",
+            "explanation": "ASIC’ler belirli iş için özel üretildiğinde performans ve güç verimliliği açısından çok iyi olabilir. Dezavantajları ise geliştirme maliyeti yüksekliği ve tasarım değişikliğinin zor olmasıdır. FPGA ise esneklik ve prototipleme avantajı taşır."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi MCU’nun tipik çevre birimlerinden biri olan ADC’nin amacını doğru açıklar?",
+            "options": {
+                "A": "Dijital veriyi analog gerilime çevirmek",
+                "B": "Analog gerilimi sayısal (dijital) değere çevirmek",
+                "C": "Saat sinyalini üretmek",
+                "D": "Kablosuz paket yönlendirmek",
+                "E": "Belleği silmek"
+            },
+            "correct": "B",
+            "explanation": "ADC (Analog-to-Digital Converter) analog bir sinyali sayısal değere çevirir. Sensörlerden gelen analog gerilimlerin MCU tarafından işlenebilmesi için ADC kullanılır."
+        },
+        {
+            "No": 19,
+            "question": "Bir mikrodenetleyicinin “System Bus” kavramı aşağıdakilerden hangisiyle en yakından ilişkilidir?",
+            "options": {
+                "A": "CPU, bellek ve çevre birimlerinin veri/komut alışverişi yaptığı iç bağlantı yapısı",
+                "B": "Sadece internet omurgası",
+                "C": "Sadece kablosuz anten",
+                "D": "Sadece PCB üzerindeki fiziksel kasa",
+                "E": "Sadece kullanıcı arayüzü"
+            },
+            "correct": "A",
+            "explanation": "Online notlarda MCU anatomisi içinde system bus; CPU, bellek ve çevre birimlerinin birbirine bağlandığı veri/komut yollarını ifade eder. Bu, sistem içi iletişimin temel altyapısıdır."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdaki ifadelerden hangisi ders notlarındaki mimari eğilime en yakındır?",
+            "options": {
+                "A": "Mikrodenetleyiciler genellikle Harvard yaklaşımına daha yakındır; mikroişlemciler çoğu zaman Von Neumann yaklaşımıyla düşünülür",
+                "B": "Mikroişlemciler her zaman Harvard’dır; mikrodenetleyiciler her zaman Von Neumann’dır",
+                "C": "Mimari seçimin gömülü sistemlerde hiçbir etkisi yoktur",
+                "D": "Harvard mimarisi sadece masaüstü PC’lerde kullanılır",
+                "E": "Von Neumann mimarisi sadece sensörlerde kullanılır"
+            },
+            "correct": "A",
+            "explanation": "Notlarda “mikrodenetleyici (Harvard) – mikroişlemci (Von Neumann)” benzetmesi/ eğilimi anlatılır. Elbette gerçek dünyada hibrit yaklaşımlar bulunabilir; ancak sınav bağlamında beklenen, bu mimarilerin komut/veri erişimi ve darboğaz etkisini doğru açıklamaktır."
+        }
+    ]
+}

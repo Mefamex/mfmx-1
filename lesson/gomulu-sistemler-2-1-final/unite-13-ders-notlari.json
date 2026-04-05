@@ -1,0 +1,267 @@
+{
+    "unitNumber": 13,
+    "unitTitle": "Ders Notları (Derin Tekrar)",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Step motor “wave drive” (dalga sürüş) yönteminin temel karakteristiği aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İki bobin aynı anda enerjilenir ve maksimum tork hedeflenir",
+                "B": "Bobinler tek tek enerjilenir; daha düşük tork ve daha düşük güç tüketimi eğilimi",
+                "C": "Sadece sinüs akımı uygulanır",
+                "D": "Mutlaka geri besleme sensörü gerektirir",
+                "E": "Sadece servo motorlarda kullanılır"
+            },
+            "correct": "B",
+            "explanation": "Dalga sürüşte (wave drive) her adımda tek bobin enerjilenir. Bu yaklaşım torku genellikle düşürür; buna karşılık enerji tüketimi/ısı gibi konularda daha “hafif” bir sürüş olabilir. Full-step’te iki bobin birlikte enerjilenerek tork artırılabilir."
+        },
+        {
+            "No": 2,
+            "question": "Full-step sürüşün wave drive’a göre tipik avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Daha düşük tork",
+                "B": "Daha yüksek tork (genellikle iki bobin enerjileme)",
+                "C": "Daha az bobin kullanımı",
+                "D": "Daha kötü tutma",
+                "E": "Mutlaka sinüs dalga"
+            },
+            "correct": "B",
+            "explanation": "Full-step’te iki bobinin aynı anda enerjilenmesiyle motorun tutma ve hareket torku genellikle artar. Bu da yük altında adım kaçırma riskini azaltmaya yardımcı olur."
+        },
+        {
+            "No": 3,
+            "question": "Half-step sürüş, hangi iki yaklaşımın “karışımı” gibi düşünülebilir?",
+            "options": {
+                "A": "UART ve I2C",
+                "B": "Wave drive ve full-step (tek bobin / çift bobin geçişleri)",
+                "C": "PWM ve ADC",
+                "D": "Harvard ve Von Neumann",
+                "E": "RAM ve Flash"
+            },
+            "correct": "B",
+            "explanation": "Yarım adım sürüşte adımlar arasında daha fazla ara konum elde etmek için tek bobin ve iki bobin enerjileme durumları dönüşümlü kullanılır. Bu, hareketi daha akıcı hale getirir ve çözünürlüğü artırır."
+        },
+        {
+            "No": 4,
+            "question": "Microstepping’in temel hedefi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Daha büyük adımlar",
+                "B": "Daha küçük adımlar ve daha yumuşak/sessiz hareket",
+                "C": "Mutlaka daha düşük hız",
+                "D": "Mutlaka daha yüksek tork",
+                "E": "Geri beslemeyi kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Microstepping; bobin akımlarını daha kademeli (sinüs benzeri) ayarlayarak adımları bölmeyi hedefler. Böylece titreşim azalır, hareket daha akıcı olur ve konumlandırma daha hassas hale gelebilir."
+        },
+        {
+            "No": 5,
+            "question": "Açık çevrim (open-loop) kontrol için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Çıktı ölçülür ve hataya göre düzeltme yapılır",
+                "B": "Geri besleme yoktur; sistem sonucu ölçmeden komutu uygular",
+                "C": "Mutlaka PID gerektirir",
+                "D": "Mutlaka servo kullanır",
+                "E": "Mutlaka CAN bus kullanır"
+            },
+            "correct": "B",
+            "explanation": "Open-loop sistem, çıktıyı ölçmeden çalışır. Step motor, ek encoder/geri besleme olmadan tipik open-loop örneğidir: “şu kadar adım verdim, şu kadar döndü” varsayımıyla ilerler."
+        },
+        {
+            "No": 6,
+            "question": "Kapalı çevrim (closed-loop) kontrolün temel bileşeni aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sadece delay",
+                "B": "Geri besleme (feedback) ve hata sinyali",
+                "C": "Sadece CS pini",
+                "D": "Sadece RAM",
+                "E": "Sadece baud rate"
+            },
+            "correct": "B",
+            "explanation": "Closed-loop sistem; sensörle çıktıyı ölçer, hedefle karşılaştırır ve hatayı azaltacak şekilde kontrol sinyali üretir. Bu, dış etkilerle oluşan sapmaları düzeltmeyi mümkün kılar."
+        },
+        {
+            "No": 7,
+            "question": "Servo motorların çalışma prensibinde ders notlarında özellikle vurgulanan kavram hangisidir?",
+            "options": {
+                "A": "ACK",
+                "B": "Duty cycle (doluluk oranı) ile PWM kontrolü",
+                "C": "Harvard mimarisi",
+                "D": "RS485 differansiyel hat",
+                "E": "Flash endurance"
+            },
+            "correct": "B",
+            "explanation": "Servo motorlar genellikle PWM sinyaliyle kontrol edilir. Notlarda “duty cycle / doluluk oranı” ve servo içinde kontrol devresi (mikroişlemci) olduğu bilgisi öne çıkar."
+        },
+        {
+            "No": 8,
+            "question": "PWM’de “duty cycle” en doğru şekilde neyi ifade eder?",
+            "options": {
+                "A": "Bir saniyedeki paket sayısı",
+                "B": "Bir periyotta sinyalin 1 seviyesinde kaldığı sürenin yüzde oranı",
+                "C": "Kablonun uzunluğu",
+                "D": "ADC’nin bit sayısı",
+                "E": "Flash’ın blok boyutu"
+            },
+            "correct": "B",
+            "explanation": "Duty cycle, PWM periyodu içinde ‘HIGH’ süresinin toplam periyoda oranıdır. Ortalama güç/gerilim etkisini belirler; LED parlaklığı ve motor hız/pozisyon kontrolünde bu yüzden kullanılır."
+        },
+        {
+            "No": 9,
+            "question": "Delay kullanımıyla ilgili ders notlarındaki kritik uyarı hangisine daha yakındır?",
+            "options": {
+                "A": "Delay her zaman en iyi çözümdür",
+                "B": "Delay bloklayıcıdır; zamanlamayı bozabilir ve bazı motor sürüşlerinde yanlış frekansla sadece “ötme” gibi davranışlar görülebilir",
+                "C": "Delay bellek tüketimini artırmaz",
+                "D": "Delay CAN bus’ı hızlandırır",
+                "E": "Delay sadece EEPROM’da çalışır"
+            },
+            "correct": "B",
+            "explanation": "Delay CPU’yu bekletir (blocking). Bu hem real-time tepkileri geciktirir hem de motor/sinyal sürüşünde doğru frekans aralığı yakalanamazsa istenmeyen davranışlara (dönmek yerine ötme) yol açabilir."
+        },
+        {
+            "No": 10,
+            "question": "Sensör verilerinde ani sıçramaları azaltmak için ders notlarında önerilen basit yöntem hangisidir?",
+            "options": {
+                "A": "Her örneği Flash’a yazmak",
+                "B": "Aritmetik (hareketli) ortalama ile filtreleme",
+                "C": "Baud rate’i artırmak",
+                "D": "CS pinini terslemek",
+                "E": "Parity bitini kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Hareketli/aritmetik ortalama, kısa süreli gürültü darbelerini yumuşatır. Notlarda ayrıca low-pass/high-pass/Kalman gibi filtre türleri de isim olarak geçer; ama sınav için temel fikir “ölçümü yumuşatmak için filtre”dir."
+        },
+        {
+            "No": 11,
+            "question": "SPI’ın “4 hatlı yapı” olarak anılmasının nedeni aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sadece SDA/SCL olduğu için",
+                "B": "MOSI, MISO, SCK ve SS/CS hatlarını tipik olarak kullanması",
+                "C": "Start/Stop bitleri kullanması",
+                "D": "ACK biti kullanması",
+                "E": "CANH/CANL kullanması"
+            },
+            "correct": "B",
+            "explanation": "SPI’da tipik olarak MOSI, MISO ve SCK hatları ortaktır; buna ek olarak hangi slave’in konuşacağını seçmek için SS/CS hattı kullanılır. Bu nedenle “4 hatlı” denildiğinde pratikte (MOSI, MISO, SCK, CS) seti kastedilir. Önemli nüans: çok slave varsa CS genelde her slave için ayrı ayrı çekilir; yani veri/saat hatları paylaşılırken seçim hattı çoğalabilir. Bu özellik SPI’yi hızlı ve basit yapar ama pin maliyetini artırabilir."
+        },
+        {
+            "No": 12,
+            "question": "I2C’nin iki hatla çoklu cihaz bağlayabilmesinin temel mekanizması hangisidir?",
+            "options": {
+                "A": "Her cihaz için ayrı CS",
+                "B": "Adresleme (7-bit adres + R/W) ve ACK",
+                "C": "Parity",
+                "D": "PWM",
+                "E": "ADC"
+            },
+            "correct": "B",
+            "explanation": "I2C’de tüm cihazlar aynı SDA/SCL hattını paylaşır; hangi cihaza konuşulacağını belirleyen şey adresleme alanıdır (7-bit/10-bit adres + R/W). Her bayttan sonra gelen ACK/NACK bitleri, aktarımın karşı tarafta kabul edilip edilmediğini göstererek protokol akışını kontrol eder. Bu yüzden I2C, iki hatla çoklu cihazı yönetebilir; SPI’daki gibi her cihaza ayrı CS hattı çekme zorunluluğu yoktur (bu da pin tasarrufu sağlar)."
+        },
+        {
+            "No": 13,
+            "question": "CAN bus’ta ders notlarında vurgulanan “öncelik” fikri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her mesaj aynı önemdedir",
+                "B": "Kritik mesajlar (ör. fren) daha önceliklidir; çakışmada öncelikli olan kazanır",
+                "C": "Sadece WiFi önceliklidir",
+                "D": "Sadece UART önceliklidir",
+                "E": "Öncelik sadece PWM’dedir"
+            },
+            "correct": "B",
+            "explanation": "CAN bus, özellikle otomotiv/endöstri uygulamalarında deterministik davranış ve önceliklendirme mantığıyla öne çıkar. Aynı anda birden fazla düğüm konuşmak isterse arbitraj mekanizması devreye girer ve önceliği yüksek olan mesaj hattı kazanır; bu sayede kritik mesajlar (ör. fren/ABS ile ilgili sinyaller) gecikmeye daha az maruz kalır. Sınavda bu genellikle “çakışmada kim kazanır ve neden?” şeklinde yorum sorusuna dönüşür."
+        },
+        {
+            "No": 14,
+            "question": "MQTT’de “broker” bileşeninin temel görevi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sensör verisini ADC ile örnekleyip RAM’e yazmak",
+                "B": "Topic’lere göre publish edilen mesajları abonelere yönlendirmek ve istemcileri birbirinden ayrıştırmak",
+                "C": "SPI’da CS hattını üretmek",
+                "D": "UART’ta start/stop bitlerini sayarak baud rate’i hesaplamak",
+                "E": "I2C’de pull-up dirençlerini zorunlu kılmak"
+            },
+            "correct": "B",
+            "explanation": "MQTT mimarisinde broker, istemcilerin (publisher/subscriber) doğrudan birbirini bilmeden haberleşmesini sağlar: publisher bir “topic”e mesaj yayınlar, broker bu mesajı o topic’e abone olan subscriber’lara dağıtır. Bu, sistemi ölçeklenebilir ve gevşek bağlı (loose-coupled) hale getirir; cihaz eklemek/çıkarmak için üretici-tüketici kodlarını birbirine dokundurmaya gerek kalmaz. Diğer şıklar ise MQTT’nin ağ katmanı/mimari rolüyle ilgisiz donanım seviyesinde kavramlardır."
+        },
+        {
+            "No": 15,
+            "question": "MCU–MPU–SoC ayrımında en doğru eşleştirme aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "MCU: sadece CPU; MPU: CPU + çevre birimleri; SoC: sadece RAM",
+                "B": "MCU: CPU + çevre birimleri tek yonga; MPU: daha güçlü işlemci, genelde harici bellek/çevre birimi ihtiyacı; SoC: sistem bileşenlerini tek yongada birleştirme",
+                "C": "MCU: kablosuz standard; MPU: sensör; SoC: motor",
+                "D": "Üçü aynı şeydir",
+                "E": "SoC mutlaka step motor sürer"
+            },
+            "correct": "B",
+            "explanation": "MCU (mikrodenetleyici) çoğunlukla CPU + timer/ADC/UART gibi çevre birimleriyle tek yongadır. MPU (mikroişlemci) daha genel amaçlı/işlem gücü yüksek olup çoğunlukla harici bellekle çalışır. SoC ise CPU ve birçok bileşeni tek yongada toplayan yaklaşımdır."
+        },
+        {
+            "No": 16,
+            "question": "Hard real-time ile soft real-time arasındaki temel fark aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Hard real-time’da gecikme kaliteyi azaltır; soft real-time’da gecikme kabul edilemez",
+                "B": "Hard real-time’da deadline kaçırmak kabul edilemez; soft real-time’da kaçırma performansı/kaliteyi düşürür",
+                "C": "İkisi aynı şeydir",
+                "D": "Soft real-time sadece otomotivde olur",
+                "E": "Hard real-time sadece oyunlarda olur"
+            },
+            "correct": "B",
+            "explanation": "Hard real-time sistemlerde deadline kaçırmak sistem başarısızlığı sayılabilir. Soft real-time’da gecikme “kötü”dür ama sistem tamamen çökmeyebilir (örn. video akışında kare düşmesi)."
+        },
+        {
+            "No": 17,
+            "question": "Kod boyutu (hex/firmware’in Flash’ta yer kaplaması) neden ders notlarında “kritik” olarak işaretlenmiştir?",
+            "options": {
+                "A": "Çünkü Flash sınırsızdır",
+                "B": "Çünkü Flash sınırlı olabilir ve kütüphaneler kodu büyütür; sığmama riski tasarım kararını etkiler",
+                "C": "Çünkü RAM ile ilgisizdir",
+                "D": "Çünkü sadece kablo seçimini belirler",
+                "E": "Çünkü sadece WiFi menzilini artırır"
+            },
+            "correct": "B",
+            "explanation": "Notlarda derlenen kodun hex olarak Flash’ta yer kapladığı vurgulanır. Hazır kütüphaneler geliştirmeyi hızlandırsa da Flash/RAM maliyeti getirebilir. Sığmıyorsa register seviyesine inmek veya gereksiz fonksiyonları silmek gerekebilir."
+        },
+        {
+            "No": 18,
+            "question": "Güç tüketimi ve enerji yönetiminde yazılımsal olarak en doğrudan etki eden mekanizma hangisidir?",
+            "options": {
+                "A": "CS pini",
+                "B": "Uyku modları ve uyanma (interrupt) stratejisi",
+                "C": "UART parity",
+                "D": "Flash blok boyutu",
+                "E": "SPI kenar seçimi"
+            },
+            "correct": "B",
+            "explanation": "Uyku modları (sleep) ve interrupt ile uyanma, CPU’nun gereksiz çalışmasını azaltır. Enerji yönetimi sadece donanım değil, yazılımın görev zamanlaması ve çevre birimlerini duty-cycle etmesiyle de ilgilidir."
+        },
+        {
+            "No": 19,
+            "question": "Enerji hasatlama (energy harvesting) ifadesi en doğru şekilde neyi anlatır?",
+            "options": {
+                "A": "Enerjiyi sadece kablodan almak",
+                "B": "Çevresel kaynaklardan (ışık, titreşim vb.) enerji toplayarak sistemi beslemek/şarj etmek",
+                "C": "Flash’ı silmek",
+                "D": "CAN mesajlarını önceliklendirmek",
+                "E": "Servo duty cycle ayarı"
+            },
+            "correct": "B",
+            "explanation": "Energy harvesting, çevreden enerji toplama yaklaşımıdır (ör. güneş, titreşim). Düşük güç IoT sensör düğümlerinde pil ömrünü uzatmak veya pil ihtiyacını azaltmak için gündeme gelebilir."
+        },
+        {
+            "No": 20,
+            "question": "“Kütüphane maliyeti” ders notlarında hangi doğru mühendislik kararını işaret eder?",
+            "options": {
+                "A": "Kütüphane her zaman en iyi seçenektir",
+                "B": "Kütüphane geliştirmeyi hızlandırır ama bellek maliyeti getirebilir; kaynak yetmezse daha düşük seviye yaklaşım düşünülür",
+                "C": "Kütüphane sadece donanımı değiştirir",
+                "D": "Kütüphane sadece CAN’da kullanılır",
+                "E": "Kütüphane sadece RAM’i düşürür"
+            },
+            "correct": "B",
+            "explanation": "Kritik-önemli kısımda açıkça: `Servo.h` gibi kütüphaneler kolaylık sağlar ama belleği şişirebilir; hafıza yetmezse register seviyesinde yazma veya gereksiz fonksiyonları silme gibi optimizasyonlar gerekebilir. Bu, “hız vs kaynak” trade-off’udur."
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+    "unitNumber": 1,
+    "unitTitle": "Gömülü Sistemlere Giriş",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Aşağıdakilerden hangisi bir gömülü sistemi genel amaçlı bilgisayardan ayıran en doğru tanımdır?",
+            "options": {
+                "A": "Sadece internete bağlı çalışan, kablosuz haberleşme içeren sistemdir.",
+                "B": "Fiziksel dünyadan veri alıp (ALGILA), işleyip (İŞLE), fiziksel çıktıyı sürerek (EYLE) belirli bir görevi güvenilir ve zamanında yapan özel amaçlı sistemdir.",
+                "C": "Mutlaka yüksek performanslı bir işletim sistemi (Linux/Windows) çalıştıran sistemdir.",
+                "D": "Program ve veri belleği her zaman tek bir bellekte tutulan sistemdir.",
+                "E": "Yalnızca sensörlerden oluşan, aktüatör içermeyen ölçüm cihazıdır."
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemlerde kritik vurgu “özel amaçlılık” ve “Sense–Process–Act (ALGILA–İŞLE–EYLE)” döngüsüdür. Sistem fiziksel dünyayı sensörlerle algılar, mikrodenetleyici/mikroişlemci ile veriyi işler ve motor/röle/ekran gibi aktüatörlerle çıktıyı üretir. Ayrıca gömülü sistemlerde sadece doğru sonuç değil, doğru zamanda sonuç üretmek (gerçek zamanlılık) ve güvenilirlik önemli tasarım hedefleridir. Diğer şıklar ya gereksiz kısıt koyuyor (mutlaka internet/OS) ya da mimari bir detayı (tek bellek) tanım yerine koyuyor."
+        },
+        {
+            "No": 2,
+            "question": "Bir sistemin “gerçek zamanlı” (real-time) kabul edilmesinde aşağıdakilerden hangisi en kritik ölçüttür?",
+            "options": {
+                "A": "Ortalama çalışma hızının yüksek olması",
+                "B": "En kötü durumda gecikmenin (latency) ve değişkenliğin (jitter) kabul edilebilir sınırlar içinde kalması",
+                "C": "Maksimum saat frekansının yüksek olması",
+                "D": "RAM kapasitesinin büyük olması",
+                "E": "Kablosuz iletişim desteklemesi"
+            },
+            "correct": "B",
+            "explanation": "Gerçek zamanlılık “hızlı olmak” ile aynı şey değildir. Esas olan, belirlenmiş zaman kısıtları (deadline) içinde tepki üretmektir. Bu yüzden en kötü durumda oluşan gecikme (latency) ve gecikmenin oynaklığı (jitter) kritik hale gelir. Ortalama hız yüksek olsa bile bazı anlarda gecikme çok artıyorsa kontrol kalitesi bozulur ve sistem real-time beklentisini karşılamaz."
+        },
+        {
+            "No": 3,
+            "question": "“Altın kurallar” bağlamında, aşağıdaki hedeflerden hangisi gömülü sistem tasarımında genellikle en az önceliklidir?",
+            "options": {
+                "A": "Göreve özgüllük (yalnız gerekli fonksiyonlar)",
+                "B": "Kaynak kısıtlılığına uygun tasarım (bellek/CPU/güç/alan)",
+                "C": "Gerçek zamanlılık (doğru zamanda doğru çıktı)",
+                "D": "Maksimum esneklik: aynı donanımın her işi yapabilmesi",
+                "E": "Maliyet duyarlılığı (özellikle yüksek adet üretimde)"
+            },
+            "correct": "D",
+            "explanation": "Gömülü sistemler genellikle belirli bir işi iyi yapmak için tasarlanır. Genel amaçlı bilgisayarlardaki gibi “her işi yapabilme” esnekliği çoğu zaman tasarım hedefi değildir; hatta gereksiz özellikler maliyeti, güç tüketimini ve hata olasılığını artırabilir. Bu yüzden göreve özgüllük, kısıtlı kaynaklar, gerçek zamanlılık, güvenilirlik ve maliyet duyarlılığı ders notlarında özellikle vurgulanan hedeflerdir."
+        },
+        {
+            "No": 4,
+            "question": "Aşağıdakilerden hangisi “Von Neumann darboğazı”nı en doğru şekilde açıklar?",
+            "options": {
+                "A": "Komutlar yalnızca tek yönlü veri yolu üzerinden taşınırken veri çift yönlü taşınır.",
+                "B": "Komut ve veri aynı bellek/veri yolunu paylaştığı için komut getirme ile veri erişimi aynı anda yapılamaz ve bu durum performansı sınırlar.",
+                "C": "Komut belleği ve veri belleği ayrı olduğu için donanım daha karmaşık ve maliyetlidir.",
+                "D": "Kesme mekanizması olmadığı için acil olaylara tepki verilemez.",
+                "E": "Sadece analog sinyallerle çalışıldığı için dijital sistemlere göre yavaştır."
+            },
+            "correct": "B",
+            "explanation": "Von Neumann mimarisinde program komutları ve veriler tek bellek alanı ve tek bir veri yolu üzerinden erişilir. CPU aynı anda hem komut getirip hem veri okuyup/yazamıyorsa, erişimler sıraya girer; buna “Von Neumann darboğazı” denir. Harvard mimarisinde komut ve veri yolları/bellekleri ayrılabildiği için aynı anda erişim daha mümkündür ve gerçek zamanlı/performans odaklı gömülü sistemlerde tercih edilebilir."
+        },
+        {
+            "No": 5,
+            "question": "Harvard mimarisinin gömülü sistemlerde sık tercih edilmesinin en doğru gerekçesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her zaman daha ucuz olması",
+                "B": "Komut ve veriye eş zamanlı erişimi kolaylaştırarak daha yüksek performans ve daha öngörülebilir zamanlama sağlaması",
+                "C": "RAM’in tamamen ortadan kalkmasını sağlaması",
+                "D": "Kablosuz haberleşmeyi donanımsal olarak zorunlu kılması",
+                "E": "Yalnızca 64-bit işlemcilerde kullanılabilmesi"
+            },
+            "correct": "B",
+            "explanation": "Harvard mimarisinin temel fikri komut belleği ile veri belleğini (ve çoğu zaman veri yollarını) ayırmaktır. Böylece CPU komut getirirken aynı anda veri erişimi yapabilir; bu durum performansı artırır ve özellikle kontrol uygulamalarında deterministik zamanlama için avantaj sağlar. Dezavantaj olarak donanım karmaşıklığı/maliyet artabilir; ancak ders notlarında real-time sistemlerde tercih edildiği vurgulanır."
+        },
+        {
+            "No": 6,
+            "question": "Aşağıdakilerden hangisi “Sense–Process–Act (ALGILA–İŞLE–EYLE)” döngüsünde “Process (İŞLE)” katmanına en uygun örnektir?",
+            "options": {
+                "A": "LDR’nin ışığa göre direncinin değişmesi",
+                "B": "ADC’nin analog gerilimi 0–1023 aralığında sayıya çevirmesi",
+                "C": "Mikrodenetleyicinin okunan değere göre karar verip kontrol mantığını çalıştırması",
+                "D": "PWM ile DC motorun hızının ayarlanması",
+                "E": "Rölenin çekip bırakması"
+            },
+            "correct": "C",
+            "explanation": "Sense (ALGILA) fiziksel büyüklüğün ölçülmesi ve elektriksel/veri temsiline dönüştürülmesidir (sensör + ADC gibi). Act (EYLE) fiziksel çıktıyı üretmektir (motor, röle, LED vb.). Process (İŞLE) ise bu veriyi işleyip karar vermek, kontrol algoritmasını çalıştırmak ve ne yapılacağını belirlemektir."
+        },
+        {
+            "No": 7,
+            "question": "Gömülü sistem tasarımında “time-to-market” kavramı en doğru şekilde neyi ifade eder?",
+            "options": {
+                "A": "Ürünün sahada arızasız çalışma süresini",
+                "B": "Ürünün piyasaya çıkarılmasına kadar geçen geliştirme süresini",
+                "C": "İşlemcinin bir komutu yürütme süresini",
+                "D": "Haberleşme paketinin hatta kalma süresini",
+                "E": "Bataryanın tamamen dolma süresini"
+            },
+            "correct": "B",
+            "explanation": "Time-to-market, bir ürün fikrinin geliştirilip piyasaya sürülmesine kadar geçen zamanı ifade eder. Gömülü sistemlerde performans, fonksiyonellik ve maliyetle birlikte sürekli dengelenen (trade-off) ana hedeflerden biridir. Daha erken piyasaya çıkmak, rekabet avantajı yaratır; fakat acele, test kapsamını ve güvenilirliği etkileyebilir."
+        },
+        {
+            "No": 8,
+            "question": "Tarihçe açısından, ders notlarında “modern gerçek zamanlı gömülü sistemlerin erken örnekleri” ile ilişkilendirilen gelişme aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Apollo görevleri için geliştirilen sistemler",
+                "B": "Bluetooth’un standartlaşması",
+                "C": "WiFi yönlendiricilerin yaygınlaşması",
+                "D": "İlk 64-bit masaüstü işlemcinin çıkması",
+                "E": "İlk FPGA kartlarının üretilmesi"
+            },
+            "correct": "A",
+            "explanation": "Online ders notlarında 1960’lar ve Apollo görevleri, modern gerçek zamanlı gömülü sistemlerin erken örnekleri olarak anılıyor. Bu tür görevlerde belirlenmiş zaman kısıtları ve güvenilirlik çok kritik olduğu için real-time yaklaşımın önemi tarihsel olarak vurgulanır."
+        },
+        {
+            "No": 9,
+            "question": "Aşağıdakilerden hangisi gömülü sistemlerde “kaynak kısıtlılığı”nın doğal bir sonucudur?",
+            "options": {
+                "A": "Geliştirici, gereksiz özellikleri ve ağır kütüphaneleri azaltmak zorunda kalabilir.",
+                "B": "Her uygulama mutlaka GPU gerektirir.",
+                "C": "Program kodu her durumda internetten yüklenir.",
+                "D": "Kullanıcı arayüzü her zaman klavye ve fare ile sağlanır.",
+                "E": "İşlemci her zaman Von Neumann mimarisinde seçilir."
+            },
+            "correct": "A",
+            "explanation": "Gömülü sistemlerde bellek, işlem gücü, güç tüketimi, boyut ve maliyet sınırlıdır. Bu nedenle yazılım tarafında gereksiz özellikleri atmak, daha hafif yaklaşımlar kullanmak ve kaynak kullanımını optimize etmek tipik bir zorunluluktur. Bu, “göreve özgüllük” ve “verimlilik” altın kurallarıyla da uyumludur."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdaki uygulamalardan hangisi ders notlarında verilen örneklerle en güçlü şekilde “hard real-time” beklentisiyle ilişkilidir?",
+            "options": {
+                "A": "Müzik çalar arayüzü",
+                "B": "Çamaşır makinesinin durum göstergesi",
+                "C": "Hava yastığı kontrol sistemi",
+                "D": "Akıllı TV menüsü",
+                "E": "Fotoğraf galerisi uygulaması"
+            },
+            "correct": "C",
+            "explanation": "Hard real-time sistemlerde deadline kaçırmak tehlikeli/katastrofik sonuçlar doğurabilir. Ders notlarında hava yastığı kontrolü gibi otomotiv güvenlik sistemleri hard real-time örneği olarak geçer. Çamaşır makinesi gibi örnekler ise gecikmenin kaliteyi düşürdüğü soft real-time sınıfına daha yakındır."
+        },
+        {
+            "No": 11,
+            "question": "Bir gömülü sistem tasarımcısının “denge arayışı” kapsamında, aşağıdaki ikililerden hangisi ders notlarında doğrudan vurgulanan çatışmalardan biridir?",
+            "options": {
+                "A": "Performans ↔ Fonksiyonellik",
+                "B": "Maliyet ↔ Time-to-market",
+                "C": "Gerilim ↔ Akım",
+                "D": "Frekans ↔ Dalga boyu",
+                "E": "Kapasite ↔ Direnç"
+            },
+            "correct": "B",
+            "explanation": "Notlarda gömülü sistem tasarımının bir “denge sanatı” olduğu; performans, fonksiyonellik, pazara çıkış süresi (time-to-market) ve maliyetin sürekli optimize edildiği vurgulanır. Özellikle maliyet ve time-to-market çoğu projede birbirini zorlayabilir: hızlı çıkmak için daha pahalı bileşen/ekip gerekir; maliyeti düşürmek için daha fazla optimizasyon/test/yeniden tasarım gerekir."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdakilerden hangisi gömülü sistemlerin uygulama alanlarına verilen örneklerle en uyumludur?",
+            "options": {
+                "A": "Sadece süper bilgisayar kümeleri",
+                "B": "Ev aletleri, otomotiv, telekom, havacılık/uzay gibi farklı sektörler",
+                "C": "Yalnızca kripto para madenciliği",
+                "D": "Sadece web tarayıcıları",
+                "E": "Sadece masaüstü ofis yazılımları"
+            },
+            "correct": "B",
+            "explanation": "İçindekiler ve OCR notlarında gömülü sistem uygulamaları; ev aletleri (bulaşık makinesi, mikrodalga), otomotiv (ABS/hava yastığı/GPS), telekom (router), havacılık/uzay (navigasyon/iniş sistemleri) gibi geniş bir yelpazede örneklenir. Bu, gömülü sistemlerin “fiziksel dünya ile etkileşim” odağını gösterir."
+        },
+        {
+            "No": 13,
+            "question": "Aşağıdakilerden hangisi Harvard mimarisi için kullanılan ders benzetmesiyle en tutarlıdır?",
+            "options": {
+                "A": "Tek şeritli bir yol: hem kamyon hem servis aracı aynı yoldan gider",
+                "B": "Tek kapılı depo: hem talimat hem veri aynı kapıdan girer",
+                "C": "Ayrı yollar: bir yolda servis araçları, diğer yolda kamyonlar gider; trafik azalır",
+                "D": "Sadece kamyonların gittiği yol: veri hiç taşınmaz",
+                "E": "Tünel: veri ve komutlar aynı anda asla taşınamaz"
+            },
+            "correct": "C",
+            "explanation": "Harvard için ders notlarında “ayrı yollar, trafik yok” benzetmesi kullanılıyor: komut ve veri yollarının ayrılmasıyla aynı anda erişim mümkün olup performans artar. Von Neumann için ise “tek yol, trafik olur” benzetmesi (tek bus/tek bellek paylaşımı) ve darboğaz vurgusu yapılır."
+        },
+        {
+            "No": 14,
+            "question": "Aşağıdakilerden hangisi “göreve özgüllük” ilkesini en iyi örnekler?",
+            "options": {
+                "A": "Bir termostatın, yalnız sıcaklık ölçümü ve kontrolüne odaklanması",
+                "B": "Bir cihazın mümkün olan tüm video oyunlarını çalıştırabilmesi",
+                "C": "Her ürünün mutlaka genel amaçlı ofis yazılımları içermesi",
+                "D": "Donanımın her zaman maksimum RAM ile tasarlanması",
+                "E": "Sensör verisinin hiçbir işlenmeden doğrudan internete gönderilmesi"
+            },
+            "correct": "A",
+            "explanation": "Göreve özgüllük, gömülü sistemlerin gereksiz fonksiyonları taşımadan belirli görevi güvenilir ve verimli şekilde yapmasıdır. Termostat örneğinde sensörü oku, hedefle karşılaştır, kontrol et ve aktüatörü sür; bunun dışında genel amaçlı “her işi yapma” hedefi yoktur. Bu yaklaşım maliyeti, güç tüketimini ve karmaşıklığı azaltır."
+        },
+        {
+            "No": 15,
+            "question": "Gömülü sistemlerde güvenilirlik (reliability) hedefi aşağıdakilerden hangisiyle en iyi ifade edilir?",
+            "options": {
+                "A": "Sistemin yalnızca hızlı çalışması",
+                "B": "Sistemin kullanıcıya sürekli yeni özellikler sunması",
+                "C": "Sistemin kritik uygulamalarda hatasız/öngörülebilir davranması ve arızaya tolerans yaklaşımının olması",
+                "D": "Sistemin sadece internete bağlı iken çalışması",
+                "E": "Sistemin her zaman en yeni donanımı kullanması"
+            },
+            "correct": "C",
+            "explanation": "Güvenilirlik, özellikle kritik uygulamalarda (otomotiv, havacılık, tıbbi vb.) hata kabul edilmemesi ve sistemin beklenen davranışı tutarlı şekilde göstermesidir. Bu, tasarımda test stratejisini, hata yönetimini ve deterministik çalışma yaklaşımını doğrudan etkiler."
+        },
+        {
+            "No": 16,
+            "question": "Aşağıdakilerden hangisi gömülü sistemlerde “maliyet duyarlılığı”nın neden önemli olduğuna en uygun açıklamadır?",
+            "options": {
+                "A": "Çünkü gömülü sistemler sadece tek adet üretilir",
+                "B": "Çünkü yüksek adetli üretimde parça başı küçük farklar toplam maliyeti ciddi etkiler",
+                "C": "Çünkü maliyet yalnız yazılım ile belirlenir",
+                "D": "Çünkü maliyet sadece işlemci saat hızına bağlıdır",
+                "E": "Çünkü maliyet yalnız enerji tüketimiyle ilgilidir"
+            },
+            "correct": "B",
+            "explanation": "Gömülü ürünler çoğu zaman yüksek adetli üretime gider. Bu durumda 1–2 TL’lik parça farkı bile toplam maliyette büyük etki yaratır. Bu yüzden maliyet; donanım seçimini, tasarım karmaşıklığını ve time-to-market dengesini belirleyen kritik bir faktördür."
+        },
+        {
+            "No": 17,
+            "question": "Ders notlarında verilen “gömülü sistemlerin güncel eğilimleri” arasında hangisi yer almaz?",
+            "options": {
+                "A": "IoT (Nesnelerin İnterneti)",
+                "B": "AI/ML (Yapay zeka / makine öğrenmesi)",
+                "C": "Enerji tüketimini azaltma",
+                "D": "Güvenliğin artırılması",
+                "E": "Sadece mekanik toleransların büyütülmesi"
+            },
+            "correct": "E",
+            "explanation": "OCR notlarında ve içindekiler kısmında trendler: IoT, AI/ML, azaltılmış enerji tüketimi, geliştirilmiş güvenlik ve gerçek zamanlı veri görselleştirme gibi başlıklar olarak geçiyor. “Sadece mekanik toleransların büyütülmesi” bu trendler arasında sayılmıyor."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi gömülü sistemlerde “kısıtlı arayüz” gerçeğinin tipik bir sonucudur?",
+            "options": {
+                "A": "Hata ayıklama her zaman grafik arayüzle yapılır",
+                "B": "Debug için seri port logları, LED göstergeler veya test noktaları gibi yöntemler önem kazanır",
+                "C": "Sistem her zaman klavye/fare içerir",
+                "D": "Kullanıcı arayüzü her zaman dokunmatik ekrandır",
+                "E": "Hatalar yalnız bulut sunucusunda görülür"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistemlerde çoğu zaman ekran/klavye gibi zengin arayüzler yoktur. Bu yüzden hata ayıklama ve gözlem için UART log, basit LED durum göstergeleri, test pinleri ve ölçüm cihazları (osiloskop/logic analyzer) gibi yöntemler kritik hale gelir."
+        },
+        {
+            "No": 19,
+            "question": "Aşağıdaki ifadelerden hangisi gömülü sistem ile genel amaçlı sistem ayrımını en iyi özetler?",
+            "options": {
+                "A": "Genel amaçlı sistemler her zaman düşük güç tüketir; gömülü sistemler yüksek güç tüketir.",
+                "B": "Genel amaçlı sistemler geniş fonksiyon ve esneklik hedefler; gömülü sistemler belirli görev ve kısıtlı kaynaklarla verimli çalışmayı hedefler.",
+                "C": "Gömülü sistemler yalnız yazılım içerir; donanım içermez.",
+                "D": "Gömülü sistemler yalnızca web uygulaması çalıştırır.",
+                "E": "Genel amaçlı sistemler gerçek dünyayla hiç etkileşmez."
+            },
+            "correct": "B",
+            "explanation": "Notlarda genel amaçlı sistemlerin fonksiyonellik/esneklik açısından geniş olduğu; gömülü sistemlerin ise düşük güç, düşük maliyet, küçük boyut ve belirli göreve odaklı tasarlandığı vurgulanır. Gömülü sistemler çoğu zaman çevre birimlerini entegre taşır (mikrodenetleyici yaklaşımı) ve deterministik davranış önemlidir."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdakilerden hangisi Harvard mimarisinin olası bir dezavantajı olarak ders notlarında ima edilen noktaya en yakındır?",
+            "options": {
+                "A": "Donanımın daha karmaşık olması ve maliyetin artabilmesi",
+                "B": "Komut ve veriye aynı anda erişimin imkânsız olması",
+                "C": "Gerçek zamanlı sistemlerde kullanılmaması",
+                "D": "Kesme mekanizmasını desteklememesi",
+                "E": "Belleğin hiç kullanılmaması"
+            },
+            "correct": "A",
+            "explanation": "Harvard mimarisinde komut ve veri bellekleri/yolları ayrıldığı için performans ve determinism artabilir; ancak bu ayrım donanımı daha karmaşık hale getirir. Notlarda da Harvard için “donanım daha karmaşık, maliyet yükselebilir” vurgusu yer alır."
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "unitCount": 17,
+    "units": [
+        {
+            "unitNumber": 1,
+            "unitTitle": "Gömülü Sistemlere Giriş",
+            "fileName": "unite-01-gomulu-sistemlere-giris.json"
+        },
+        {
+            "unitNumber": 2,
+            "unitTitle": "Sınıflandırma ve Özellikler",
+            "fileName": "unite-02-siniflandirma-ve-ozellikler.json"
+        },
+        {
+            "unitNumber": 3,
+            "unitTitle": "Tasarım Süreci",
+            "fileName": "unite-03-tasarim-sureci.json"
+        },
+        {
+            "unitNumber": 4,
+            "unitTitle": "Donanım Bileşenleri",
+            "fileName": "unite-04-donanim-bilesenleri.json"
+        },
+        {
+            "unitNumber": 5,
+            "unitTitle": "Hafıza Yönetimi",
+            "fileName": "unite-05-hafiza-yonetimi.json"
+        },
+        {
+            "unitNumber": 6,
+            "unitTitle": "Sensörler ve Aktüatörler",
+            "fileName": "unite-06-sensorler-ve-aktuatorler.json"
+        },
+        {
+            "unitNumber": 7,
+            "unitTitle": "Haberleşme Arabirimleri (I2C/SPI/CAN)",
+            "fileName": "unite-07-haberlesme-arabirimleri-i2c-spi-can.json"
+        },
+        {
+            "unitNumber": 8,
+            "unitTitle": "Haberleşme Arabirimleri (UART/RS/Kablosuz)",
+            "fileName": "unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json"
+        },
+        {
+            "unitNumber": 9,
+            "unitTitle": "Gömülü Yazılım Tasarımı",
+            "fileName": "unite-09-gomulu-yazilim-tasarimi.json"
+        },
+        {
+            "unitNumber": 10,
+            "unitTitle": "RTOS Giriş",
+            "fileName": "unite-10-rtos-giris.json"
+        },
+        {
+            "unitNumber": 11,
+            "unitTitle": "Görevler arası Haberleşme",
+            "fileName": "unite-11-gorevler-arasi-haberlesme.json"
+        },
+        {
+            "unitNumber": 12,
+            "unitTitle": "Proje ve Sistem Entegrasyon",
+            "fileName": "unite-12-proje-ve-sistem-entegrasyon.json"
+        },
+        {
+            "unitNumber": 13,
+            "unitTitle": "Ders Notları (Derin Tekrar)",
+            "fileName": "unite-13-ders-notlari.json"
+        },
+        {
+            "unitNumber": 14,
+            "unitTitle": "Kritik-Önemli Kısımlar (Hızlı Tekrar)",
+            "fileName": "unite-14-kritik-onemli-kisimlar.json"
+        },
+        {
+            "unitNumber": 15,
+            "unitTitle": "Derste Söylenilenler (Hoca Notu)",
+            "fileName": "unite-15-derste-soylenilenler.json"
+        },
+        {
+            "unitNumber": 16,
+            "unitTitle": "Online Derste Söylenilenler (OCR)",
+            "fileName": "unite-16-online-derste-soylenilenler.json"
+        },
+        {
+            "unitNumber": 17,
+            "unitTitle": "Dönemlik İçindekiler (Konu Haritası)",
+            "fileName": "unite-17-icindekiler-konu-haritasi.json"
+        }
+    ]
+}

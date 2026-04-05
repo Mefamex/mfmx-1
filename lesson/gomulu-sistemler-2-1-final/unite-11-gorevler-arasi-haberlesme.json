@@ -1,0 +1,267 @@
+{
+    "unitNumber": 11,
+    "unitTitle": "Görevler arası Haberleşme",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "RTOS’ta görevler arası haberleşme (IPC) neden gereklidir?",
+            "options": {
+                "A": "Çünkü task’ler asla veri paylaşmaz",
+                "B": "Task’ler arasında veri/olay paylaşımı ve senkronizasyon ihtiyacı olduğu için",
+                "C": "Çünkü UART çalışmaz",
+                "D": "Çünkü Flash uçucudur",
+                "E": "Çünkü PWM üretmek gerekir"
+            },
+            "correct": "B",
+            "explanation": "Task’ler sensörden veri okuyup başka task’e iletebilir, bir olay olduğunda diğer task’i uyandırabilir veya paylaşılan kaynağı sırayla kullanmak zorunda olabilir. IPC araçları bu veri akışını ve senkronizasyonu güvenli kılar."
+        },
+        {
+            "No": 2,
+            "question": "Mutex kullanımının temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Olay bildirimi yapmak",
+                "B": "Paylaşılan kaynağa karşılıklı dışlama (mutual exclusion) sağlamak",
+                "C": "Mesaj kuyruklarını büyütmek",
+                "D": "Baud rate ayarlamak",
+                "E": "ADC bit sayısını artırmak"
+            },
+            "correct": "B",
+            "explanation": "Mutex, bir kaynağı aynı anda sadece tek task’in kullanmasını sağlar. Örneğin iki task aynı buffer’a yazarsa veri bozulur. Mutex, kritik bölgeyi koruyarak race condition riskini düşürür."
+        },
+        {
+            "No": 3,
+            "question": "Binary semaphore ile mutex arasındaki farkı en doğru ifade eden seçenek hangisidir?",
+            "options": {
+                "A": "İkisi tamamen aynıdır ve her durumda aynı amaçla kullanılır",
+                "B": "Semaphore daha çok olay/sinyalizasyon için; mutex daha çok paylaşılan kaynak kilitleme için kullanılır",
+                "C": "Mutex olay bildiriminde daha iyidir",
+                "D": "Semaphore sadece UART’ta çalışır",
+                "E": "Mutex sadece I2C’de çalışır"
+            },
+            "correct": "B",
+            "explanation": "Pratikte ikisi benzer görünse de kullanım niyeti farklıdır: semaphore çoğunlukla “olay oldu” sinyali veya sayma (counting) mantığı için; mutex ise paylaşılan kaynağı kilitlemek için tercih edilir. RTOS’lar ayrıca mutex için priority inheritance gibi ek özellik sunabilir."
+        },
+        {
+            "No": 4,
+            "question": "Message queue (mesaj kuyruğu) kullanımının en doğru avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Paylaşılan global değişkenleri artırmak",
+                "B": "Üretici-tüketici (producer-consumer) veri akışını düzenli ve thread-safe şekilde taşımak",
+                "C": "Flash yazma ömrünü artırmak",
+                "D": "ADC’yi hızlandırmak",
+                "E": "PWM’i iptal etmek"
+            },
+            "correct": "B",
+            "explanation": "Kuyruklar, bir task’in ürettiği veriyi diğer task’in sırayla tüketmesini sağlar. Böylece verinin kaybolması azalır ve paylaşım daha güvenli hale gelir. Ayrıca bloklayarak bekleme (queue receive) CPU verimini artırabilir."
+        },
+        {
+            "No": 5,
+            "question": "Race condition en doğru şekilde hangi durumla örneklenir?",
+            "options": {
+                "A": "İki task’in aynı anda aynı değişkeni korumasız güncellemesi",
+                "B": "Tek task’in tek değişkeni okuması",
+                "C": "EEPROM’dan veri okuma",
+                "D": "UART’ta parity kullanma",
+                "E": "SPI’da CS seçme"
+            },
+            "correct": "A",
+            "explanation": "Race condition, yürütme sırasına bağlı olarak sonuçların değiştiği hatalı durumdur. Korumasız paylaşılan değişkenler veya ISR+task birlikte erişimi bu riski artırır."
+        },
+        {
+            "No": 6,
+            "question": "Deadlock (kilitlenme) için en tipik senaryo aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Task’ler hiç mutex kullanmaz",
+                "B": "Task A mutex1’i alır mutex2’yi bekler; Task B mutex2’yi alır mutex1’i bekler",
+                "C": "Bir task delay kullanır",
+                "D": "UART hızını düşürmek",
+                "E": "ADC çözünürlüğünü artırmak"
+            },
+            "correct": "B",
+            "explanation": "Deadlock, iki veya daha fazla task’in birbirinin tuttuğu kaynağı bekleyip ilerleyemediği durumdur. Çoklu mutex kullanımında kilit alma sırası (lock ordering) ve timeout gibi stratejilerle önlenir."
+        },
+        {
+            "No": 7,
+            "question": "Priority inversion, IPC bağlamında neden tehlikelidir?",
+            "options": {
+                "A": "Çünkü yüksek öncelikli task’ler daha da gecikebilir ve deadline kaçırabilir",
+                "B": "Çünkü baud rate düşer",
+                "C": "Çünkü ADC okuması artar",
+                "D": "Çünkü Flash uçucu olur",
+                "E": "Çünkü PWM duty sabitlenir"
+            },
+            "correct": "A",
+            "explanation": "Yüksek öncelikli task’in düşük öncelikli task’in kilidini beklemesi, sistemin en kritik işinin beklenmedik şekilde gecikmesine yol açabilir. Bu, hard real-time sistemlerde ciddi problem doğurur."
+        },
+        {
+            "No": 8,
+            "question": "Counting semaphore en uygun olarak hangi durum için kullanılır?",
+            "options": {
+                "A": "Sadece tek bir kaynağı kilitlemek",
+                "B": "Birden fazla eşdeğer kaynağın sayısını sınırlamak (örn. 3 buffer)",
+                "C": "UART’ta start bit eklemek",
+                "D": "SPI’da CS seçmek",
+                "E": "EEPROM yazmak"
+            },
+            "correct": "B",
+            "explanation": "Counting semaphore, aynı tipten birden fazla (N adet) kaynağı yönetmek için kullanılır: semaphore değeri kaç kaynak boşsa onu temsil eder. Bir task kaynağı almak istediğinde semaphore’u alır (değer azalır), işi bitince geri verir (değer artar). Örneğin 3 adet buffer/kanal varsa, en fazla 3 task aynı anda bu kaynağı kullanabilir; 4. task bloklanır ve biri kaynağı bırakınca devam eder. Bu, mutex’ten farklıdır: mutex genelde “tek kaynak + sahiplik” (ownership) mantığı taşır."
+        },
+        {
+            "No": 9,
+            "question": "IPC’de “timeout” kullanımı en çok hangi riski azaltır?",
+            "options": {
+                "A": "Stack overflow",
+                "B": "Sonsuza kadar bekleme (indefinite block) ve kilitlenme etkisini sınırlama",
+                "C": "EEPROM yazma ömrü",
+                "D": "ADC çözünürlüğü",
+                "E": "WiFi menzili"
+            },
+            "correct": "B",
+            "explanation": "Bir task mutex/queue üzerinde sonsuza kadar beklerse sistemin ilerlemesi durabilir. Timeout ile “bekleme süresi dolduysa hata yönetimi yap” yaklaşımı, sistemin kendini toparlamasını kolaylaştırır."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdakilerden hangisi ISR → task iletişimi için en uygun IPC örneğidir?",
+            "options": {
+                "A": "ISR içinde uzun printf basmak",
+                "B": "ISR içinde semaphore/queue ile task’i uyandırmak veya veri göndermek",
+                "C": "ISR içinde Flash’ı silmek",
+                "D": "ISR içinde malloc yapmak",
+                "E": "ISR içinde dosya sistemi açmak"
+            },
+            "correct": "B",
+            "explanation": "ISR kısa tutulmalı ve task’lere olayı bildirmek için RTOS’un ISR-safe API’leri kullanılmalıdır (semaphore give from ISR, queue send from ISR gibi). Ağır işleri task tarafı yapar."
+        },
+        {
+            "No": 11,
+            "question": "Paylaşılan bir UART sürücüsünü iki task’in aynı anda kullanması hangi probleme yol açabilir?",
+            "options": {
+                "A": "Her zaman hızlanır",
+                "B": "Veri karışması (interleaving) ve bozuk çıktı",
+                "C": "ADC artar",
+                "D": "Flash büyür",
+                "E": "I2C adresi değişir"
+            },
+            "correct": "B",
+            "explanation": "İki task aynı anda UART’a yazarsa karakterler birbirine karışabilir. Bu kaynak paylaşımdır; mutex veya tek bir “logger task” ve queue yaklaşımıyla düzenlenebilir."
+        },
+        {
+            "No": 12,
+            "question": "IPC’de “producer-consumer” deseni aşağıdakilerden hangisiyle en iyi eşleşir?",
+            "options": {
+                "A": "Mutex",
+                "B": "Message queue",
+                "C": "EEPROM",
+                "D": "PWM",
+                "E": "ADC"
+            },
+            "correct": "B",
+            "explanation": "Producer veriyi üretir ve kuyruğa koyar; consumer kuyruğa abone gibi davranıp sırayla alır. Bu desen, sensör okuma task’i ile kontrol task’i arasındaki veri aktarımında çok yaygındır."
+        },
+        {
+            "No": 13,
+            "question": "Mutex ile kritik bölge korumasında “lock ordering” stratejisinin hedefi nedir?",
+            "options": {
+                "A": "Sinyal seviyesini artırmak",
+                "B": "Tüm task’lerin kilitleri aynı sırayla almasını sağlayarak deadlock riskini azaltmak",
+                "C": "Baud rate’i artırmak",
+                "D": "ADC’yi kalibre etmek",
+                "E": "Flash’ı hızlandırmak"
+            },
+            "correct": "B",
+            "explanation": "Deadlock genellikle farklı sıralarda kilit alma nedeniyle oluşur. Herkes kilitleri aynı sırayla alırsa “döngüsel bekleme” koşulu kırılır ve deadlock olasılığı düşer."
+        },
+        {
+            "No": 14,
+            "question": "Bir task’in “starvation” yaşaması ne demektir?",
+            "options": {
+                "A": "Task’in hiç stack’i olmaması",
+                "B": "Task’in sürekli CPU alamaması; sürekli daha öncelikli işlerin araya girmesi",
+                "C": "Task’in her zaman çalışması",
+                "D": "Task’in EEPROM yazması",
+                "E": "Task’in UART kullanması"
+            },
+            "correct": "B",
+            "explanation": "Starvation, bir task’in sürekli ertelenip çalışamamasıdır. Yanlış öncelik tasarımı veya sürekli aktif yüksek öncelikli task’ler buna yol açabilir. IPC tasarımı da dolaylı etkiler."
+        },
+        {
+            "No": 15,
+            "question": "IPC’de “critical section” yaklaşımı en iyi hangi durum için uygundur?",
+            "options": {
+                "A": "Çok uzun işlemler",
+                "B": "Çok kısa, atomik olması gereken bölüm; kesmeleri kısa süreli kapatma veya scheduler’ı kilitleme",
+                "C": "Ağ üzerinden MQTT mesajı",
+                "D": "Flash’ı sürekli silme",
+                "E": "PWM ile motor sürme"
+            },
+            "correct": "B",
+            "explanation": "Critical section genellikle paylaşılan bir değişkeni çok kısa bir süre için korumak amacıyla kullanılır (ör. birkaç register/flag güncellemesi). Bunu yapmanın tipik yolu kesmeleri kısa süreli kapatmak veya scheduler’ı kısa süreli kilitlemektir. Ancak bu yaklaşım uzun sürerse latency/jitter artar, daha yüksek öncelikli işler gecikebilir ve real-time davranış bozulur. Bu yüzden critical section: kısa, deterministik ve minimal tutulmalı; uzun işlemler için mutex/queue/semaphore gibi RTOS primitive’leri tercih edilmelidir."
+        },
+        {
+            "No": 16,
+            "question": "Aşağıdakilerden hangisi IPC tasarımında “kopukluk” (loose coupling) sağlar?",
+            "options": {
+                "A": "Her şeyin aynı global değişkende tutulması",
+                "B": "Queue ile mesajlaşma (veri yapısı tanımlı, üretici-tüketici ayrışmış)",
+                "C": "ISR içinde tüm işin yapılması",
+                "D": "Her task’in diğerinin değişkenine doğrudan yazması",
+                "E": "Her seferinde busy-wait"
+            },
+            "correct": "B",
+            "explanation": "Queue (mesaj kuyruğu) tabanlı tasarım, üretici ve tüketici task’lerin birbirinden gevşek bağlı olmasını sağlar: taraflar sadece mesajın yapısını ve kuyruğun arayüzünü bilir, birbirlerinin iç durumuna doğrudan dokunmaz. Bu yaklaşım yarış durumlarını azaltır (paylaşılan global değişken yerine kopyalanan mesaj), test edilebilirliği artırır ve modüllerin bağımsız evrilmesini kolaylaştırır. Bu yüzden IPC’de “loose coupling” dendiğinde en sık queue/message passing yaklaşımı hedeflenir."
+        },
+        {
+            "No": 17,
+            "question": "“Busy-wait” ile beklemenin IPC açısından temel sorunu nedir?",
+            "options": {
+                "A": "CPU’yu boşa harcar ve diğer task’leri geciktirir",
+                "B": "Her zaman daha iyi determinism sağlar",
+                "C": "Her zaman daha az güç tüketir",
+                "D": "Her zaman daha güvenlidir",
+                "E": "UART’ı hızlandırır"
+            },
+            "correct": "A",
+            "explanation": "Busy-wait (spin) beklemede task sürekli döngü yaparak bir koşulu kontrol eder; bu sırada CPU’yu meşgul eder ve diğer işlerin çalışmasını zorlaştırabilir. RTOS’ta doğru yaklaşım çoğunlukla bloklayarak beklemektir: semaphore/queue/event ile task uykuya alınır, olay gerçekleşince uyandırılır. Bu hem CPU verimini artırır hem de güç yönetimini iyileştirir (boşta çalışmak yerine uyku/idle süreleri artar) ve daha öngörülebilir zamanlama sağlar."
+        },
+        {
+            "No": 18,
+            "question": "Bir RTOS sisteminde “paylaşılan I2C bus” için en uygun koruma yaklaşımı hangisidir?",
+            "options": {
+                "A": "Hiç koruma kullanmamak",
+                "B": "I2C sürücüsünü tek task’te toplamak veya bus erişimini mutex ile korumak",
+                "C": "Sadece baud rate’i artırmak",
+                "D": "Sadece delay eklemek",
+                "E": "Sadece Flash yazmak"
+            },
+            "correct": "B",
+            "explanation": "I2C, paylaşılan bir seri bus’tır; iki task aynı anda bus’ı kullanırsa çerçeveler karışır. Çözüm: tek bir “I2C task” ve istek kuyruğu veya mutex ile erişimi seri hale getirmek."
+        },
+        {
+            "No": 19,
+            "question": "IPC’de “event group/flag” yaklaşımı en çok hangi ihtiyaca hizmet eder?",
+            "options": {
+                "A": "Birden fazla olayın bit maskesiyle temsil edilip task’lerin belirli kombinasyonları beklemesi",
+                "B": "Flash’ı silmek",
+                "C": "ADC kalibrasyonu",
+                "D": "PWM üretimi",
+                "E": "UART pin eşlemesi"
+            },
+            "correct": "A",
+            "explanation": "Event flag’ler, birden fazla olayın “bit” olarak tutulmasını sağlar. Task bir veya birden çok bitin set olmasını bekleyebilir. Bu, çoklu koşullu senkronizasyonda kullanışlıdır."
+        },
+        {
+            "No": 20,
+            "question": "IPC mekanizmalarını doğru seçmenin real-time başarısına etkisi en iyi nasıl özetlenir?",
+            "options": {
+                "A": "IPC seçimi önemsizdir",
+                "B": "Yanlış IPC seçimi/yanlış kullanım; gecikme, deadlock, priority inversion ve veri bozulmasına yol açarak deadline’ları riske atabilir",
+                "C": "IPC sadece hızlandırır",
+                "D": "IPC sadece bellek büyütür",
+                "E": "IPC sadece kablosuz seçer"
+            },
+            "correct": "B",
+            "explanation": "IPC, concurrent sistemin güvenli çalışmasının temelidir. Yanlış kilit tasarımı deadlock üretir; yanlış öncelik inversion yaratır; korumasız paylaşım race condition doğurur. Bunların hepsi real-time hedefleri (deadline/latency/jitter) doğrudan etkiler."
+        }
+    ]
+}

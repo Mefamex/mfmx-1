@@ -1,0 +1,658 @@
+{
+    "unitNumber": 5,
+    "unitTitle": "Ana Bellek Yönetimi",
+    "sourceMarkdown": "isletim_sistemleri_md/05-ana-bellek-yönetimi.md",
+    "questionCount": 50,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Bellek yönetiminde mantıksal (logical) adres ile fiziksel (physical) adres arasındaki temel fark nedir?",
+            "options": {
+                "A": "Mantıksal adres disk üzerindeki sektörü, fiziksel adres RAM üzerindeki sektörü gösterir",
+                "B": "Mantıksal adres programın gördüğü göreli adres uzayıdır; fiziksel adres ana bellekteki gerçek konumdur",
+                "C": "İkisi aynı kavramdır",
+                "D": "Mantıksal adres sadece çekirdek içindir",
+                "E": "Fiziksel adres sadece derleme zamanında oluşur"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Mantıksal adres görev/programın adres evrenindeki göreli konumu, fiziksel adres ise ana bellekteki gerçek konumdur. Yanlışlar: A/C/D/E metindeki temel ayrımı yansıtmaz."
+        },
+        {
+            "No": 2,
+            "question": "Taban (base) ve sınır (bound/limit) yazmaçlarının birlikte kullanılmasının ana amacı nedir?",
+            "options": {
+                "A": "Disk öbeklerini zincirlemek",
+                "B": "Çalışma zamanı adres dönüştürme ve bellek koruma (taşma denetimi) sağlamak",
+                "C": "Kütük adlarını benzersiz yapmak",
+                "D": "Semafor bekleme kuyruğu tutmak",
+                "E": "Kesilmeleri kapatmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Base, göreli adresi fiziksele kaydırır; bound/limit, adresin atanmış aralığı aşmasını engelleyerek koruma sağlar. Yanlışlar: A/C/D/E konu dışı."
+        },
+        {
+            "No": 3,
+            "question": "Sabit bölmeli (fixed partition) bellek yönetiminin en temel sakıncası hangisidir?",
+            "options": {
+                "A": "Dış parçalanmayı tamamen yok etmesi",
+                "B": "İç parçalanmaya (atanan bölme içinde boş kalan alan) yol açması",
+                "C": "Hiç bellek tablosu gerektirmemesi",
+                "D": "Adres dönüştürmeyi imkânsız kılması",
+                "E": "Sadece tek görev çalıştırabilmesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Sabit bölmelerde görev boyu bölmeye tam uymaz; bölme içi boşluk iç parçalanmadır. Yanlışlar: A tersidir; C/D/E genelleme olarak doğru değil."
+        },
+        {
+            "No": 4,
+            "question": "Değişken bölmeli (variable partition) yönetimde dış parçalanma neyi ifade eder?",
+            "options": {
+                "A": "Bir görevin kendi alanında kalan boşlukları",
+                "B": "Atanmış alanlar arasında kalan küçük ve kullanımı zor boşlukların birikmesi",
+                "C": "Sayfa içindeki kullanılmayan baytlar",
+                "D": "TLB kaçırma (miss) olayı",
+                "E": "Kesim yazmaçlarının günlenememesi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Dış parçalanma, serbest alanların küçük parçalara bölünüp büyük isteklere yanıt verememesidir. Yanlışlar: A iç parçalanmadır; C sayfa içi parçalanma; D/E ilgisiz."
+        },
+        {
+            "No": 5,
+            "question": "Bitiştirme (compaction) işleminin değişken bölmeli yönetimde hedefi nedir?",
+            "options": {
+                "A": "Görevleri diske taşımak",
+                "B": "Serbest alan parçalarını birleştirip daha büyük bitişken boş alanlar elde etmek",
+                "C": "Sayfa tablosunu küçültmek",
+                "D": "Kesimleri sayfalara bölmek",
+                "E": "Kütükleri dizinlemek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Compaction, dış parçalanmayı azaltmak için bellek içeriğini kaydırıp boşlukları bir araya getirir. Yanlışlar: A swapping’dir; C/D/E farklı konular."
+        },
+        {
+            "No": 6,
+            "question": "Bitiştirme işleminin pratikte pahalı olmasının temel nedeni hangisidir?",
+            "options": {
+                "A": "Disk önbelleğinin kapanması",
+                "B": "Görevlerin bellek konumlarının değişmesi nedeniyle adreslerin yeniden yerleştirilmesi/kaydırma maliyeti",
+                "C": "Semafor kuyruğu tutması",
+                "D": "Sayfa boyunun küçük olması",
+                "E": "Kritik bölge sorunu"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Compaction bellek içeriğini fiziksel olarak taşır; adreslerin yeniden eşlenmesi ve kopyalama maliyeti yüksektir. Yanlışlar: A/C/D/E değil."
+        },
+        {
+            "No": 7,
+            "question": "İlk uyan (first fit) ile en uygun (best fit) algoritmaları bellek atamada neyi belirler?",
+            "options": {
+                "A": "Hangi sayfanın bellekten çıkarılacağını",
+                "B": "Serbest alan listesinden hangi boşluğa yerleştirileceğini",
+                "C": "Hangi kesmenin iç kesilme oluşturacağını",
+                "D": "Hangi kütüğün silineceğini",
+                "E": "Hangi semaforun V yapılacağını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: First fit/best fit, serbest alanlar arasından uygun boşluğu seçen yerleştirme stratejileridir. Yanlışlar: A sayfa çıkarma; C/D/E alakasız."
+        },
+        {
+            "No": 8,
+            "question": "Yer değiştirmeli (relocatable) bölme yönetiminde base+bound yazmaçları hangi ek faydayı sağlar?",
+            "options": {
+                "A": "Kütüklerin i-node ile adreslenmesini",
+                "B": "Görev bellekten başka yere taşınsa bile çalışmaya devam edebilmesini (çalışma zamanında kaydırma)",
+                "C": "Disk RAID aynalamayı",
+                "D": "Kesilmelerin kaldırılmasını",
+                "E": "Sayfaların hiç çıkarılmamasını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Relocation’da görev taşınabilir; base yazmacı yeni başlangıcı tutarak göreli adresleri fiziksele çevirir. Yanlışlar: A/C/D/E farklı konular."
+        },
+        {
+            "No": 9,
+            "question": "Swapping (diske taşıma) neyi ifade eder?",
+            "options": {
+                "A": "Kütüklerin kopyalanmasını",
+                "B": "Görevin (veya bir kısmının) ana bellekten diske çıkarılıp sonra geri alınmasını",
+                "C": "Disk öbeklerinin bitişken atanmasını",
+                "D": "Semafor sayacını artırmayı",
+                "E": "Kesim zorlama önekini"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Swapping, bellek yer açmak için görevleri diske taşıyıp sonra geri getirmektir. Yanlışlar: A yedekleme; C dosya atama; D/E ilgisiz."
+        },
+        {
+            "No": 10,
+            "question": "Sayfalı bellek yönetiminde mantıksal adresin temel bileşenleri hangileridir?",
+            "options": {
+                "A": "Silindir-kafa-sektör",
+                "B": "Sayfa numarası + sayfa içi adres",
+                "C": "i-node numarası + bağ sayısı",
+                "D": "Kesim numarası + erişim hakkı",
+                "E": "PID + öncelik"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Paging’de mantıksal adres sayfa no + ofset (sayfa içi adres) olarak ayrılır. Yanlışlar: A disk; C dosya sistemi; D kesimleme; E süreç yönetimi."
+        },
+        {
+            "No": 11,
+            "question": "Sayfa tanım çizelgesi (page table) temel olarak neyi tutar?",
+            "options": {
+                "A": "Her sayfanın diskteki kopyasını",
+                "B": "Mantıksal sayfaların hangi fiziksel çerçevede (frame) olduğunu",
+                "C": "Her görevin semaforlarını",
+                "D": "Her kütüğün öbek zincirini",
+                "E": "Her kesmenin yığıtını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Page table, mantıksal sayfa → fiziksel çerçeve eşlemesini (ve genelde bitleri) tutar. Yanlışlar: A kütük tanım çizelgesine benzer; C/D/E değil."
+        },
+        {
+            "No": 12,
+            "question": "Sayfalı yönetimde adres dönüştürmede ‘iki erişim’ problemi neyi ifade eder?",
+            "options": {
+                "A": "Diskte iki kopya FAT tutulmasını",
+                "B": "Önce sayfa tablosuna, sonra hedef veriye erişim gereksinimini",
+                "C": "İki ayrı CPU çekirdeğinin zorunlu olmasını",
+                "D": "İki ayrı görev kuyruğunu",
+                "E": "İki aşamalı kilitlemeyi"
+            },
+            "correct": "B",
+            "explanation": "Doğru: TLB yoksa önce page table girişini okumak, sonra asıl bellek erişimini yapmak gerekir. Yanlışlar: A/E farklı; C/D ilgisiz."
+        },
+        {
+            "No": 13,
+            "question": "TLB/associative memory (ön bellek) kullanımının temel amacı nedir?",
+            "options": {
+                "A": "Sayfa boyunu büyütmek",
+                "B": "Adres dönüştürmeyi hızlandırmak için son kullanılan sayfa çevirilerini hızlı bellekte tutmak",
+                "C": "Diskte parçalanmayı azaltmak",
+                "D": "Görevleri diske taşımak",
+                "E": "Semafor beklemelerini kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: TLB, sayfa→çerçeve çevirilerini önbelleğe alarak iki erişim cezasını azaltır. Yanlışlar: A/C/D/E farklı."
+        },
+        {
+            "No": 14,
+            "question": "Görüntü bellek (virtual memory) düzeninde ‘eksik sayfa uyarısı’ (page fault) ne zaman oluşur?",
+            "options": {
+                "A": "Sayfa bellekte belirteci 1 iken",
+                "B": "Erişilmek istenen sayfa ana bellekte değilken (sayfa bellekte biti 0 iken)",
+                "C": "Disk bozukken",
+                "D": "Görev hazır kuyruğundayken",
+                "E": "Her okuma işleminde"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Page fault, erişilen sayfanın bellekte olmadığını belirten bit ile anlaşılır ve denetim bellek yöneticisine geçer. Yanlışlar: A tersidir; C/D/E genelleme değil."
+        },
+        {
+            "No": 15,
+            "question": "Metindeki sayfalı görüntü bellek yönetiminde page fault sonrası tipik adımların doğru sırası hangi seçenekte daha yakındır?",
+            "options": {
+                "A": "Sayfayı sil → görevi sonlandır → tabloyu sil",
+                "B": "Boş çerçeve bul/yer aç → gerekiyorsa kirli sayfayı diske yaz → istenen sayfayı diske göre oku → çizelgeleri günle → komutu yeniden başlat",
+                "C": "Kesilmeleri kapat → kütüğü yeniden adlandır → yeniden başlat",
+                "D": "Sadece TLB’yi temizle ve devam et",
+                "E": "Yalnız sayfa boyunu büyüt"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin; boş sayfa bulma, gerekirse çıkarma ve kirli sayfayı yazma, istenen sayfayı yükleme, tabloları güncelleme ve komutu baştan çalıştırma adımlarını verir."
+        },
+        {
+            "No": 16,
+            "question": "Sayfa tanım çizelgesindeki ‘değişim (dirty) belirteci’ neyi gösterir?",
+            "options": {
+                "A": "Sayfanın hiç erişilmediğini",
+                "B": "Sayfanın bellekte diskteki kopyasından farklı olacak şekilde yazma ile değiştiğini",
+                "C": "Sayfanın boyunu",
+                "D": "Sayfanın sadece kod içerdiğini",
+                "E": "Sayfanın kilitlendiğini"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Dirty bit, sayfaya yazıldıysa diske geri yazma gerekeceğini işaret eder. Yanlışlar: A referans bitine yakın; C/D/E yanlış/eksik."
+        },
+        {
+            "No": 17,
+            "question": "Sayfa tanım çizelgesindeki ‘erişim (reference) belirteci’ tipik olarak ne için kullanılır?",
+            "options": {
+                "A": "Kütük adı çözümlemek için",
+                "B": "Sayfa çıkarma algoritmalarında yakın geçmişte kullanımı tahmin etmek için",
+                "C": "RAID şeritlemek için",
+                "D": "Semafor V yapmak için",
+                "E": "Kesim zorlama öneki eklemek için"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Reference bit, sayfaya erişildiğini işaretler; FIFO’nun NRU türevi gibi algoritmalar bunu kullanır. Yanlışlar: A/C/D/E değil."
+        },
+        {
+            "No": 18,
+            "question": "Yerel (local) sayfa çıkarma politikası neyi ifade eder?",
+            "options": {
+                "A": "Bir görevin page fault’unda sadece kendi sayfalarından çıkarma yapması",
+                "B": "Her zaman tüm sistem sayfalarından rastgele çıkarma yapılması",
+                "C": "Diskten hiç sayfa okunmaması",
+                "D": "Sadece kesim tabanlı çıkarma",
+                "E": "Kütüklerin silinmesi"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, yerel politikada bir göreve ayrılan çerçeve sayısının sınırlandığını ve yer açmanın kendi çerçevelerinden yapıldığını açıklar."
+        },
+        {
+            "No": 19,
+            "question": "FIFO sayfa çıkarma algoritmasının temel seçimi hangisidir?",
+            "options": {
+                "A": "En son erişilen sayfayı çıkar",
+                "B": "Belleğe en önce gelen sayfayı çıkar",
+                "C": "En geç erişilecek sayfayı çıkar",
+                "D": "En büyük sayfayı çıkar",
+                "E": "En küçük çerçeveyi çıkar"
+            },
+            "correct": "B",
+            "explanation": "Doğru: FIFO, ilk giren sayfayı çıkarır. Yanlışlar: A LRU’dur; C optimal’dir; D/E anlamsız."
+        },
+        {
+            "No": 20,
+            "question": "LRU (Least Recently Used) algoritmasının temel varsayımı hangisidir?",
+            "options": {
+                "A": "Yakın geçmişte kullanılmayan sayfanın yakın gelecekte de kullanılma olasılığı düşüktür",
+                "B": "En eski sayfa her zaman gereksizdir",
+                "C": "Disk her zaman RAM’den hızlıdır",
+                "D": "Kesimler sayfalardan daha küçüktür",
+                "E": "Kütükler bitişken tutulmalıdır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: LRU, yerellik (locality) ilkesine dayanır. Yanlışlar: B FIFO’ya yakın ama LRU değil; C/D/E alakasız."
+        },
+        {
+            "No": 21,
+            "question": "Optimal (en geç erişilecek) sayfa çıkarma algoritması pratikte neden çoğunlukla ‘ölçüt’ olarak kalır?",
+            "options": {
+                "A": "Donanım desteği hiç olmadığı için",
+                "B": "Gelecekte hangi sayfaya ne zaman erişileceğini bilmek pratikte mümkün olmadığı için",
+                "C": "Sadece tek sayfa varken çalıştığı için",
+                "D": "Sadece diskte çalıştığı için",
+                "E": "Sadece küçük sayfa boylarında çalıştığı için"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Optimal seçim geleceği bilmek ister; gerçek sistemlerde bu bilgi yoktur, bu yüzden teorik üst sınır/ölçüt olarak kullanılır."
+        },
+        {
+            "No": 22,
+            "question": "Belady Anormalliği metinde hangi şaşırtıcı durumu ifade eder?",
+            "options": {
+                "A": "Sayfa boyu küçülünce her zaman hızlanmayı",
+                "B": "FIFO’da ayrılan çerçeve sayısı artmasına rağmen page fault sayısının artabilmesini",
+                "C": "TLB kullanınca her zaman yavaşlamayı",
+                "D": "Kesimlemede dış parçalanmanın yok olmasını",
+                "E": "Swapping’in hiç maliyeti olmamasını"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, FIFO’da daha çok sayfa ayrılmasına rağmen page fault’un artabildiğini Belady anormalliği olarak adlandırır."
+        },
+        {
+            "No": 23,
+            "question": "Trashing (thrashing) olayı en doğru nasıl tanımlanır?",
+            "options": {
+                "A": "CPU’nun sürekli kullanıcı kodu çalıştırması",
+                "B": "Sistemin yoğun biçimde page fault işlemleriyle uğraşıp gerçek iş yapamaz hale gelmesi",
+                "C": "Diskin bitişken alan ataması yapması",
+                "D": "Semafor kuyruğunun boş kalması",
+                "E": "Kesim zorlama öneklerinin artması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Thrashing, page fault’lar nedeniyle sürekli sayfa gelgitlerinin olup CPU’nun esas işi yapamaması durumudur."
+        },
+        {
+            "No": 24,
+            "question": "Working Set (WS) kavramı metinde en doğru nasıl tanımlanır?",
+            "options": {
+                "A": "Görevin diskteki tüm sayfaları",
+                "B": "Belirli bir zaman aralığında eksik sayfa üretmeden çalışmasını sağlayan en küçük sayfa takımı",
+                "C": "Sistemdeki toplam çerçeve sayısı",
+                "D": "TLB giriş sayısı",
+                "E": "Diskin toplam silindir sayısı"
+            },
+            "correct": "B",
+            "explanation": "Doğru: WS, yerellik ile uyumlu olarak, o zaman penceresinde gereken minimum sayfa kümesidir. Yanlışlar: A/C/D/E değil."
+        },
+        {
+            "No": 25,
+            "question": "Page fault sıklığına göre dinamik sayfa atama yaklaşımında amaç nedir?",
+            "options": {
+                "A": "Page fault çoksa göreve daha fazla çerçeve vermek; azsa sabit tutmak",
+                "B": "Page fault çoksa görevin çerçevesini azaltmak",
+                "C": "TLB’yi tamamen kapatmak",
+                "D": "Her durumda görevleri diske taşımak",
+                "E": "Her durumda sayfa boyunu büyütmek"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, iki page fault arası süre ölçülerek sıklaşınca ek sayfa verilmesi gibi bir kontrol yaklaşımını anlatır."
+        },
+        {
+            "No": 26,
+            "question": "Sayfa boyunu seçerken metinde belirtilen doğru denge hangisidir?",
+            "options": {
+                "A": "Sayfa boyu büyüdükçe sayfa içi parçalanma artar; küçüldükçe page fault sayısı artma eğilimindedir",
+                "B": "Sayfa boyu büyüdükçe page fault kesin azalır ve parçalanma kesin azalır",
+                "C": "Sayfa boyu küçüldükçe disk aktarımı kesin yavaşlar",
+                "D": "Sayfa boyu seçiminde hiçbir kıstas yoktur",
+                "E": "Sayfa boyu sadece FAT’e bağlıdır"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, büyük sayfanın çizelge boyunu düşürüp iç parçalanmayı artırabileceğini; küçük sayfanın aktarımı hızlandırıp fault sayısını artırabileceğini vurgular."
+        },
+        {
+            "No": 27,
+            "question": "Kesimli bellek yönetiminde kesim tanım çizelgesindeki ‘boy’ bilgisinin önemli kullanımı nedir?",
+            "options": {
+                "A": "Kütük boyunu tutmak",
+                "B": "Kesimden taşmaları saptamak için sınır denetimi yapmak",
+                "C": "Disk erişim süresini hesaplamak",
+                "D": "Semafor değerini saklamak",
+                "E": "Çerçeve sayısını artırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Segment table, base+limit ile taşma denetimi yaparak korumaya katkı verir. Yanlışlar: A/C/D/E alakasız."
+        },
+        {
+            "No": 28,
+            "question": "Kesimli bellek yönetiminde erişim hakkı (okuma/yazma/işletim) bilgisinin amacı nedir?",
+            "options": {
+                "A": "Sadece performans ölçmek",
+                "B": "Paylaşılan kesimlerde koruma ve güvenli erişim sağlamak",
+                "C": "Sayfa fault sayısını artırmak",
+                "D": "Disk öbeklerini adreslemek",
+                "E": "Görev anahtarlamasını kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Segment erişim hakları, örneğin ortak kesimlere yazmayı kısıtlayarak bütünlük ve güvenliği sağlar."
+        },
+        {
+            "No": 29,
+            "question": "Kesim yazmaçları (code/data/stack gibi) kullanmanın metinde vurgulanan performans katkısı nedir?",
+            "options": {
+                "A": "Adres dönüştürmede kesim taban adresine ana bellekten sistemli ek erişimi azaltmak",
+                "B": "Disk erişimini tamamen kaldırmak",
+                "C": "Page table’ı yok etmek",
+                "D": "Kütükleri bitişken yapmak",
+                "E": "Semaforları gereksiz kılmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Kesim taban adreslerini CPU yazmaçlarında tutmak, her erişimde kesim tanım çizelgesine gitme maliyetini azaltır."
+        },
+        {
+            "No": 30,
+            "question": "Kesim zorlama (segment override) öneklerinin temel amacı nedir?",
+            "options": {
+                "A": "Disk sektörünü değiştirmek",
+                "B": "Komutun varsayılan kesim yazmacı yerine belirtilen kesim yazmacını taban almasını sağlamak",
+                "C": "Sayfa bellekte bitini 0 yapmak",
+                "D": "Kilitlenmeyi önlemek",
+                "E": "Swapping’i hızlandırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Segment override, komutun gömülü varsayılan yazmacını geçersiz kılıp istenen kesimi taban aldırır."
+        },
+        {
+            "No": 31,
+            "question": "Kesimli bellek yönetimi dış parçalanmayı sayfalama kadar iyi çözer mi?",
+            "options": {
+                "A": "Evet, sayfalama ile aynı düzeyde çözer",
+                "B": "Hayır, değişken boy kesimler nedeniyle dış parçalanma ve bitiştirme ihtiyacı sürebilir",
+                "C": "Evet, çünkü kesimler daima eşit boydadır",
+                "D": "Hayır, çünkü sayfalar değişkendir",
+                "E": "Bu konu bellek yönetimiyle ilgili değildir"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kesimlemenin dış parçalanma sorununu sayfalama kadar etkili çözemediğini ve compaction ihtiyacını vurgular."
+        },
+        {
+            "No": 32,
+            "question": "Kesimli görüntü bellek yönetiminde ‘eksik kesim uyarısı’ hangi durumda oluşur?",
+            "options": {
+                "A": "Kesim bellekte belirteci 1 iken",
+                "B": "Erişilen kesim ana bellekte değilken (kesim bellekte biti 0 iken)",
+                "C": "Her komutta",
+                "D": "Disk bozukken",
+                "E": "Sadece okuma yapılınca"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Segment-based VM’de erişilen kesim bellekte değilse iç kesilme ile bellek yöneticisi devreye girer."
+        },
+        {
+            "No": 33,
+            "question": "Kesimli görüntü bellek yönetiminin sayfalı görüntü belleğe göre metinde vurgulanan önemli avantajı hangisidir?",
+            "options": {
+                "A": "Mantıksal bütünlüğe uygun kesimler sayesinde daha yüksek yerellik ve daha az thrashing",
+                "B": "Sayfa tablosu erişimini üçe katlaması",
+                "C": "Diskte FAT gerektirmemesi",
+                "D": "Semafor ihtiyacını kaldırması",
+                "E": "Her zaman daha az bellek kullanması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kesimlemenin yordam/döngü gibi bütünlükleri koruyup yerelliği artırarak thrashing’i azaltabildiğini belirtir."
+        },
+        {
+            "No": 34,
+            "question": "Kesimli-sayfalı (segmented-paged) görüntü bellek yönetiminde mantıksal adresin bileşenleri hangileridir?",
+            "options": {
+                "A": "Sayfa no + sayfa içi adres",
+                "B": "Kesim no + kesime göreli sayfa no + sayfa içi adres",
+                "C": "Silindir + kafa + sektör",
+                "D": "i-node + öbek no",
+                "E": "PID + PC"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, bu yapıda adresin üç parçalı olduğunu açıklar: segment, segment-içi sayfa ve ofset."
+        },
+        {
+            "No": 35,
+            "question": "Kesimli-sayfalı yöntemde kesim tanım çizelgesi sayfa tanım çizelgesinden ne tutar?",
+            "options": {
+                "A": "Kesim başlangıç fiziksel adresini",
+                "B": "İlgili kesimin sayfa tanım çizelgesinin başlangıç adresini ve boyunu",
+                "C": "Disk CHS adresini",
+                "D": "Semafor kuyruğunu",
+                "E": "Kütük dizin öbeğini"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metne göre segment table, her kesim için page table başlangıç adresi ve boy gibi bilgileri tutar."
+        },
+        {
+            "No": 36,
+            "question": "Kesimli-sayfalı yöntemde adres dönüştürmenin erişim süresini artırmasının nedeni nedir?",
+            "options": {
+                "A": "İki ayrı çizelgeye (kesim tanım ve sayfa tanım) erişim gerektirmesi",
+                "B": "Diskte iki kez kopyalama yapması",
+                "C": "Her komutta swapping yapması",
+                "D": "Her zaman LRU kullanması",
+                "E": "Pipe tamponu kullanması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, önce kesim çizelgesinden page table adresi, sonra page table’dan çerçeve adresi okunarak toplamda 3 adım erişim oluştuğunu söyler."
+        },
+        {
+            "No": 37,
+            "question": "Görüntü bellek düzeninde DMA/kanal gibi CPU dışı birimlerin adres dönüştürememesi hangi pratik sorunu doğurur?",
+            "options": {
+                "A": "Kütük adlarının çözülememesi",
+                "B": "G/Ç aktarımının fiziksel adres gerektirmesi; sayfanın yer değiştirmesiyle yanlış görevin belleğinin bozulabilmesi",
+                "C": "Semaforların çalışmaması",
+                "D": "TLB’nin büyümemesi",
+                "E": "Kesimden taşma denetiminin kaybolması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, CPU dışı birimlerin fiziksel adresle çalıştığını; aktarım sırasında sayfa el değiştirirse verinin yanlış sayfaya yazılabileceğini anlatır."
+        },
+        {
+            "No": 38,
+            "question": "Bu DMA/G/Ç sorununu azaltmak için metinde geçen yaklaşımlardan biri hangisidir?",
+            "options": {
+                "A": "Sayfa bellekte bitini kaldırmak",
+                "B": "Sayfayı bellekten çıkarılamaz (belleğe bağlı/pinned) olarak işaretlemek veya OS ortak yastık alanı kullanmak",
+                "C": "FAT’i RAM’e almak",
+                "D": "Kilitlenmeyi yok saymak",
+                "E": "Kesim zorlama öneklerini iptal etmek"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, G/Ç aktarım sayfalarını ‘çıkarılamaz’ işaretleme ve/veya OS’nin ortak tampon alanına aktarma yöntemlerini anlatır."
+        },
+        {
+            "No": 39,
+            "question": "Load effective address (lea) benzeri komutların görüntü bellek düzenindeki rolü nedir?",
+            "options": {
+                "A": "Mantıksal adresten fiziksel adresi hesaplayıp yazmaca koymak",
+                "B": "Kütük yolunu çözmek",
+                "C": "Sayfa boyunu değiştirmek",
+                "D": "Diskte bitiştirme yapmak",
+                "E": "Semafor P/V yapmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, bazı durumlarda fiziksel adresin erişimden bağımsız hesaplanması gerektiğini ve lea türü komutların bunu yaptığını belirtir."
+        },
+        {
+            "No": 40,
+            "question": "Çok düzeyli adres dönüştürme (multi-level translation) yönteminin temel bedeli nedir?",
+            "options": {
+                "A": "Disk alanı artışı",
+                "B": "Her düzey için ek çizelge erişimi nedeniyle bellek erişim süresinin düzey sayısıyla katlanması (TLB olmadan) ",
+                "C": "Kilitlenmenin artması",
+                "D": "Kütük sistemi bozulması",
+                "E": "Semaforların gereksiz olması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, çok düzeyli çizelgelerin bellek erişimini çok adımlı hale getirip ön bellek kullanımını zorunlu kıldığını vurgular."
+        },
+        {
+            "No": 41,
+            "question": "Sayfalı görüntü bellek yönetiminde ‘komut işletiminin başına dönmek’ gereği neden vardır?",
+            "options": {
+                "A": "Çünkü page fault komut ortasında oluşabilir; komutun yeniden güvenli biçimde işletilmesi için",
+                "B": "Çünkü disk sadece komut başında okunur",
+                "C": "Çünkü TLB sadece komut başında güncellenir",
+                "D": "Çünkü kesim yazmaçları sadece komut başında değişir",
+                "E": "Çünkü semaforlar bunu zorunlu kılar"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, page fault’un komut algetir veya işlenen erişiminde komut ortasında oluşabileceğini ve bu yüzden komutun baştan yürütülmesi gerektiğini belirtir."
+        },
+        {
+            "No": 42,
+            "question": "Sayfalı yönetimde sayfa tablosunda erişim hakkı bitleri neyi denetler?",
+            "options": {
+                "A": "Sayfanın disk silindirini",
+                "B": "Okuma/okuma-yazma/uygulama gibi izinleri",
+                "C": "Sayfanın FIFO kuyruğundaki yerini",
+                "D": "Sayfanın kütük adını",
+                "E": "Sayfanın semafor değerini"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, erişim haklarının sayfa/segment bazında denetlendiğini ve ihlalde görevin sonlandırılabildiğini anlatır."
+        },
+        {
+            "No": 43,
+            "question": "Paylaşım (sharing) açısından sayfalı bellek yönetiminin tipik kolaylaştırdığı durum hangisidir?",
+            "options": {
+                "A": "Ortak kod sayfalarını birden çok görevin aynı fiziksel çerçeveye eşlemesi",
+                "B": "Her görevin ayrı disk sürücüsü kullanması",
+                "C": "Her görevin ayrı CPU çekirdeği kullanması",
+                "D": "Her kütüğün bitişken olması",
+                "E": "Her semaforun binary olması"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metinde sayfaların paylaşımı ve koruma bitleriyle okuma/yazma kısıtları vurgulanır. Yanlışlar: B/C/D/E ilgisiz."
+        },
+        {
+            "No": 44,
+            "question": "Kesimli yönetimde paylaşılan kesimlerin yer değiştirmesinin bitiştirmeyi zorlaştırmasının nedeni nedir?",
+            "options": {
+                "A": "Çünkü paylaşılan kesim birden çok kesim tanım çizelgesinde yer alır ve hepsinin günlenmesi gerekir",
+                "B": "Çünkü paylaşılan kesim hiç taşınamaz",
+                "C": "Çünkü TLB bunu engeller",
+                "D": "Çünkü FAT bunu engeller",
+                "E": "Çünkü semafor kuyruğu doludur"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, paylaşılan kesim adreslerinin birden çok çizelgede bulunduğunu; taşınırsa çoklu güncelleme gerektirdiğini söyler."
+        },
+        {
+            "No": 45,
+            "question": "Sayfalı görüntü bellek düzeninde ‘kütük tanım çizelgesi’ (file mapping) kavramı neyi tutar?",
+            "options": {
+                "A": "Program sayfalarının diskte saklandığı konumları",
+                "B": "Semafor bekleme kuyruğunu",
+                "C": "Kesim yazmaçlarının değerlerini",
+                "D": "TLB içeriklerini",
+                "E": "RAID parite öbeklerini"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, sayfalı VM’de page table’a ek olarak program sayfalarının diskteki yerlerini tutan kütük tanım çizelgesinden bahseder."
+        },
+        {
+            "No": 46,
+            "question": "FIFO’nun NRU (Not Recently Used) türevi yaklaşımında temel fikir nedir?",
+            "options": {
+                "A": "En yeni sayfayı çıkar",
+                "B": "Periyodik olarak erişim bitlerini sıfırlayıp, erişim biti 0 olan en eski sayfayı seçmek",
+                "C": "Her sayfayı diske yazmak",
+                "D": "Sayfa boyunu küçültmek",
+                "E": "Kesim numarasını kaldırmak"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, erişim bitlerini periyodik sıfırlayıp 0 bulunan ilk/erken sayfayı çıkarmayı anlatır."
+        },
+        {
+            "No": 47,
+            "question": "Kesimli-sayfalı yöntemde ‘olmayan kesim’ ve ‘olmayan sayfa’ uyarıları hangi tür hataları temsil eder?",
+            "options": {
+                "A": "Disk bozuk sektörleri",
+                "B": "Adresin kesim/sayfa sınırlarını aşması veya tanımlı olmayan birimlere erişim",
+                "C": "Semafor değerinin negatif olması",
+                "D": "TLB’nin dolu olması",
+                "E": "Kütük yolunun uzun olması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kesim no çizelge boyunu aşıyorsa olmayan kesim; sayfa no kesim boyunu aşıyorsa olmayan sayfa uyarısı ile görevin sonlanacağını söyler."
+        },
+        {
+            "No": 48,
+            "question": "Kesimli-sayfalı yöntemde kesim ayrıcalık (privilege) bilgisinin tipik kullanımı hangisidir?",
+            "options": {
+                "A": "Kesime erişim için görevin ayrıcalık düzeyinin yeterli olup olmadığını denetlemek",
+                "B": "Disk erişim süresini hesaplamak",
+                "C": "FIFO kuyruğunu oluşturmak",
+                "D": "Kütük yedeklemek",
+                "E": "Semaforları binary yapmak"
+            },
+            "correct": "A",
+            "explanation": "Doğru: Metin, kesim tanım çizelgesindeki ayrıcalık bilgisinin erişim korumasında kullanıldığını belirtir."
+        },
+        {
+            "No": 49,
+            "question": "Kesimli görüntü bellek yönetiminin önemli sakıncası hangisidir?",
+            "options": {
+                "A": "Sayfa tablosu gerektirmesi",
+                "B": "Değişken boy kesimlere bitişken yer ayırma zorunluluğu nedeniyle parçalanma ve karmaşık atama",
+                "C": "TLB kullanması",
+                "D": "Erişim hakkı denetimi yapması",
+                "E": "Yerellik sağlaması"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kesimli VM’nin değişken boy kesimleri nedeniyle parçalanma ve karmaşık bellek atamayı yeniden gündeme getirdiğini söyler."
+        },
+        {
+            "No": 50,
+            "question": "Kesimli-sayfalı görüntü bellek yönetimi metinde nasıl konumlandırılır?",
+            "options": {
+                "A": "En yalın ve en ucuz bellek yönetim biçimi",
+                "B": "Kesimlemenin mantıksal avantajlarını sayfalama ile birleştiren, yetkin ama pahalı/karmaşık bir yöntem",
+                "C": "Sadece disk yönetim yöntemidir",
+                "D": "Sadece semafor temelli senkronizasyondur",
+                "E": "Sadece tek görev çalıştırır"
+            },
+            "correct": "B",
+            "explanation": "Doğru: Metin, kesimli-sayfalı yaklaşımı en yetkin ve pahalı bellek yönetimi olarak; çok çizelge erişimi nedeniyle ön bellek gereksinimiyle anlatır."
+        }
+    ]
+}

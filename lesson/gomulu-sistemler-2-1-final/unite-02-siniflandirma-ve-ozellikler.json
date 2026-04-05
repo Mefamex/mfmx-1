@@ -1,0 +1,267 @@
+{
+    "unitNumber": 2,
+    "unitTitle": "Sınıflandırma ve Özellikler",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Gömülü sistemleri sınıflandırmanın temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sadece pazarlama isimlerini belirlemek",
+                "B": "Gereksinimleri hızlı anlamak ve uygun tasarım/bileşen seçiminde yön bulmak",
+                "C": "Her sistemi aynı donanımda çalıştırmak",
+                "D": "Sadece kablosuz haberleşmeyi zorunlu kılmak",
+                "E": "Kod yazmadan sistemi üretmek"
+            },
+            "correct": "B",
+            "explanation": "Sınıflandırma, sistemin işlem gücü, bellek, güç tüketimi, maliyet, gerçek zamanlılık ve ağ ihtiyacı gibi gereksinimlerini hızlıca konumlandırmak için bir mühendislik kısa yoludur. Böylece “RTOS gerekir mi?”, “hangi işlemci sınıfı uygun?”, “haberleşme türü ne olmalı?” gibi kararlar daha sistematik verilir."
+        },
+        {
+            "No": 2,
+            "question": "Aşağıdakilerden hangisi “stand-alone (bağımsız)” gömülü sistem örneğine en uygundur?",
+            "options": {
+                "A": "Bulut üzerinden çalışmayan hiçbir iş yapmayan akıllı ev hub’ı",
+                "B": "Dış sisteme ihtiyaç duymadan kendi görevini yerine getiren dijital tartı",
+                "C": "Sürekli internetten veri çekerek çalışan web sunucusu",
+                "D": "Dağıtık veritabanı kümesi",
+                "E": "Sadece simülasyon ortamında çalışan yazılım"
+            },
+            "correct": "B",
+            "explanation": "Stand-alone sistemler dış bir sisteme ihtiyaç duymadan çalışır. Online notlarda MP3 çalar, dijital kamera ve basit tartı gibi örnekler bu sınıfa verilir. Networked sistemlerde ise ağ bağlantısı temel bir gereksinimdir."
+        },
+        {
+            "No": 3,
+            "question": "“Networked (ağa bağlı)” gömülü sistemleri stand-alone sistemlerden ayıran en belirgin özellik aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Mutlaka 64-bit işlemci kullanmaları",
+                "B": "Kaynaklara/servislere erişmek için bir ağa bağlanmaları ve bağlantı kopmasına karşı senaryo gerektirmeleri",
+                "C": "Gerçek zamanlı olmamaları",
+                "D": "Sadece analog sensör kullanmaları",
+                "E": "Her zaman FPGA içermeleri"
+            },
+            "correct": "B",
+            "explanation": "Networked sistemlerde ağ üzerinden kaynaklara erişim ve haberleşme kritik gereksinimdir. Bu, güvenlik, hata toleransı (bağlantı kopunca ne olacak?), güncelleme (OTA) ve protokol seçimi gibi ek tasarım başlıklarını doğurur."
+        },
+        {
+            "No": 4,
+            "question": "Aşağıdakilerden hangisi “mobile/gezgin” sınıfına giren gömülü sistemlerde tipik olarak en baskın kısıtlardan biridir?",
+            "options": {
+                "A": "Sınırsız enerji kaynağı",
+                "B": "Güç tüketimi ve batarya ömrü",
+                "C": "Sadece kablolu iletişim",
+                "D": "Mutlaka sabit bir rack kabine monte edilme",
+                "E": "Hiç sensör kullanmama"
+            },
+            "correct": "B",
+            "explanation": "Mobil/taşınabilir sistemlerde batarya ömrü tasarım hedefinin merkezindedir. Bu nedenle düşük güç tüketimi, uyku modları ve enerji yönetimi gibi başlıklar çok daha kritik hale gelir."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi “hard real-time” sistemleri “soft real-time” sistemlerden ayıran en doğru kriterdir?",
+            "options": {
+                "A": "Hard real-time sistemlerin her zaman internete bağlı olması",
+                "B": "Hard real-time sistemlerde deadline kaçırmanın tehlikeli/katastrofik sonuçlar doğurabilmesi",
+                "C": "Soft real-time sistemlerin hiç deadline’ı olmaması",
+                "D": "Soft real-time sistemlerin mutlaka FPGA kullanması",
+                "E": "Hard real-time sistemlerde sensör bulunmaması"
+            },
+            "correct": "B",
+            "explanation": "Hard real-time’da belirlenen zaman sınırını kaçırmak güvenlik/hasar gibi ciddi sonuçlar doğurabilir (ör. hava yastığı, füze). Soft real-time’da gecikme kaliteyi düşürür ama sistemin tamamen “yanlış” çalışması gibi felaket senaryosu beklenmez (ör. çamaşır makinesi)."
+        },
+        {
+            "No": 6,
+            "question": "Performans/ölçek sınıflandırmasında “küçük ölçekli” sistemler ders notlarında tipik olarak hangi aralıkla ifade edilir?",
+            "options": {
+                "A": "8–16 bit tek mikrodenetleyici",
+                "B": "128-bit çok çekirdekli CPU",
+                "C": "Sadece GPU içeren sistem",
+                "D": "Mutlaka 1 TB RAM içeren sistem",
+                "E": "Sadece bulut üzerinde çalışan sistem"
+            },
+            "correct": "A",
+            "explanation": "Online notlarda küçük ölçekli sistemler 8–16 bit tek mikrodenetleyici gibi daha basit donanımlarla ilişkilendirilir. Orta ölçek 16–32 bit, büyük ölçek ise 32–64 bit ve daha karmaşık/çoklu yonga mimarileri olarak özetlenir."
+        },
+        {
+            "No": 7,
+            "question": "Aşağıdakilerden hangisi soft real-time sistem örneğine en yakındır?",
+            "options": {
+                "A": "Uçak iniş kontrol sistemi",
+                "B": "Cerrahi robot kontrolü",
+                "C": "Çamaşır makinesinin kontrolü",
+                "D": "Füze güdüm sistemi",
+                "E": "Hava yastığı tetikleme sistemi"
+            },
+            "correct": "C",
+            "explanation": "Soft real-time’da gecikme kaliteyi düşürür. Çamaşır makinesi örneğinde birkaç yüz ms gecikme çoğu senaryoda “felaket” doğurmaz ama performans/konfor etkilenebilir. Diğer seçenekler güvenlik kritik olduğu için hard real-time’a daha yakındır."
+        },
+        {
+            "No": 8,
+            "question": "Bir sistemin aynı anda hem “networked” hem de “hard real-time” olabilmesi aşağıdakilerden hangisini en iyi açıklar?",
+            "options": {
+                "A": "Sınıflandırmalar tek eksenlidir; bir sistem sadece bir sınıfa girer",
+                "B": "Sınıflandırmalar farklı eksenlerdedir; aynı sistem işlevsellik (ağ) ve zamanlama açısından ayrı ayrı değerlendirilebilir",
+                "C": "Networked sistemlerde gerçek zamanlılık hiç olmaz",
+                "D": "Hard real-time sistemlerde haberleşme kullanılmaz",
+                "E": "Sınıflandırma yalnız işlemci bit sayısına bakar"
+            },
+            "correct": "B",
+            "explanation": "Ders notlarında sınıflandırmanın tek boyutlu olmadığı vurgulanır. Bir otomotiv kontrol ünitesi örneğinde sistem araç içi ağ (networked) üzerinde çalışırken aynı zamanda fren/airbag gibi kritik fonksiyonlar nedeniyle hard real-time gerektirebilir. Yani işlevsellik ve zamanlama gibi farklı eksenler birlikte düşünülür."
+        },
+        {
+            "No": 9,
+            "question": "Aşağıdaki ifadelerden hangisi “real-time” kavramını en doğru tamamlar?",
+            "options": {
+                "A": "Real-time = en yüksek FPS",
+                "B": "Real-time = ortalama hızlı çalışma",
+                "C": "Real-time = çıktının belirli bir zaman sınırı içinde üretilmesi",
+                "D": "Real-time = sadece kablosuz iletişim",
+                "E": "Real-time = sadece yüksek RAM"
+            },
+            "correct": "C",
+            "explanation": "Real-time sistemler çıktıyı belirli bir zaman sınırı içinde üretmek zorundadır. Bu yüzden deadline, latency ve jitter gibi zamanlama kavramları real-time tasarımın merkezindedir."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdakilerden hangisi ağ bağlantılı (networked) sistemlerde ek bir gereksinim olarak en sık ortaya çıkar?",
+            "options": {
+                "A": "Güvenlik (kimlik doğrulama/şifreleme) ve bağlantı kopma senaryoları",
+                "B": "ADC çözünürlüğünün her zaman 24-bit olması",
+                "C": "Sadece PWM çıkışı olması",
+                "D": "Mutlaka harici GPU kullanılması",
+                "E": "Kesme mekanizmasının kapatılması"
+            },
+            "correct": "A",
+            "explanation": "Ağa bağlandığınız anda güvenlik, hata toleransı (bağlantı kopunca davranış), güncelleme (OTA) ve protokol/bant genişliği/enerji dengesi gibi başlıklar tasarımın parçası olur. Bu, stand-alone sistemlerde çoğu zaman daha az baskın bir konudur."
+        },
+        {
+            "No": 11,
+            "question": "“Küçük/orta/büyük ölçek” sınıflandırmasını sadece bit sayısıyla açıklamak neden eksik kalır?",
+            "options": {
+                "A": "Çünkü bit sayısı hiç önemli değildir",
+                "B": "Çünkü iş yükü (sensör sayısı, haberleşme trafiği, kontrol algoritması, güvenlik) gereksinimleri de ölçeği belirler",
+                "C": "Çünkü ölçek sadece ekran boyutuna bağlıdır",
+                "D": "Çünkü ölçek sadece kablo uzunluğuna bağlıdır",
+                "E": "Çünkü ölçek sadece yazılım diliyle belirlenir"
+            },
+            "correct": "B",
+            "explanation": "Notlarda ölçeğin donanım + iş yüküyle birlikte düşünülmesi gerektiği belirtilir. Sensör örnekleme hızı, haberleşme bant genişliği, kontrol algoritmasının karmaşıklığı, şifreleme ihtiyacı ve logging gibi faktörler donanım seçimini ve sistem ölçeğini belirler."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdakilerden hangisi hard real-time sistemlerde ‘deadline kaçırma oranı’ açısından en doğru beklentidir?",
+            "options": {
+                "A": "Arada bir kaçırmak sorun değildir",
+                "B": "Sıfıra çok yakın olmalı; kaçırma ciddi risk doğurabilir",
+                "C": "Deadline kavramı yoktur",
+                "D": "Sadece test aşamasında önemlidir",
+                "E": "Yalnız ağ paketleri için geçerlidir"
+            },
+            "correct": "B",
+            "explanation": "Hard real-time’da deadline kaçırmak güvenlik/hasar riski doğurabileceği için kaçırma oranının sıfıra yakın olması beklenir. Soft real-time’da ise sınırlı kaçırma kabul edilebilir; ancak kalite düşer."
+        },
+        {
+            "No": 13,
+            "question": "Aşağıdakilerden hangisi mobil sistemlerde güç tüketimini azaltmaya yönelik en yaygın stratejilerden biridir?",
+            "options": {
+                "A": "Her zaman maksimum saat frekansında çalışmak",
+                "B": "Uyku modları ve periyodik uyanma ile enerji yönetimi",
+                "C": "Her zaman ekranı açık tutmak",
+                "D": "Haberleşmeyi sürekli aktif tutmak",
+                "E": "Tüm kesmeleri devre dışı bırakmak"
+            },
+            "correct": "B",
+            "explanation": "Mobil/pilli sistemlerde uyku modları ve zamanlama ile uyanma, enerji yönetiminin temel araçlarındandır. İşlemci her zaman tam hızda çalışmak yerine, iş olduğunda uyanıp iş bitince tekrar düşük güç moduna geçerek batarya ömrünü uzatır."
+        },
+        {
+            "No": 14,
+            "question": "Bir sistem “stand-alone” ise aşağıdaki çıkarımlardan hangisi en makuldür?",
+            "options": {
+                "A": "Ağ kesildiğinde temel fonksiyonlar yine de devam edebilir",
+                "B": "Kesinlikle WiFi zorunludur",
+                "C": "Sadece buluttan komut alır",
+                "D": "Her zaman 64-bit olmalıdır",
+                "E": "Gerçek zamanlı olamaz"
+            },
+            "correct": "A",
+            "explanation": "Stand-alone sistem dış bir sisteme ihtiyaç duymadan çalışır. Bu nedenle ağ kesilmesi gibi senaryolar sistemin temel fonksiyonunu tamamen durdurmak zorunda değildir. Networked sistemlerde ise ağ, fonksiyonun bir parçası olduğundan kopma senaryosu kritik hale gelir."
+        },
+        {
+            "No": 15,
+            "question": "Aşağıdakilerden hangisi “soft real-time” sistemlerde gecikmenin etkisini en iyi açıklar?",
+            "options": {
+                "A": "Gecikme hiçbir şeyi etkilemez",
+                "B": "Gecikme felaket sonuçlar doğurur",
+                "C": "Gecikme kalite/performansı düşürür ama sistemin temel amacı tamamen yanlış olmayabilir",
+                "D": "Gecikme sadece donanım hatasıdır",
+                "E": "Gecikme yalnızca I2C protokolünde görülür"
+            },
+            "correct": "C",
+            "explanation": "Soft real-time’da deadline kaçırma kaliteyi düşürür (ör. kontrol daha kaba çalışır, kullanıcı deneyimi kötüleşir) ama genellikle güvenlik açısından katastrofik sonuç beklenmez. Hard real-time’da ise gecikme hayati sonuçlara yol açabilir."
+        },
+        {
+            "No": 16,
+            "question": "Aşağıdakilerden hangisi sınıflandırmanın “tasarım kararlarını hızlandırma” etkisine en iyi örnektir?",
+            "options": {
+                "A": "Sistemi ‘hard real-time’ diye sınıflandırınca, worst-case gecikme/jitter analizi ve deterministik zamanlama ihtiyacı öne çıkar",
+                "B": "Sistemi ‘stand-alone’ diye sınıflandırınca, mutlaka GSM modülü eklenir",
+                "C": "Sistemi ‘mobile’ diye sınıflandırınca, mutlaka FPGA seçilir",
+                "D": "Sistemi ‘networked’ diye sınıflandırınca, RAM sonsuz kabul edilir",
+                "E": "Sınıflandırma sadece proje raporu için yapılır"
+            },
+            "correct": "A",
+            "explanation": "Hard real-time sınıfı seçildiğinde zamanlama (deadline, worst-case latency, jitter) birinci öncelik haline gelir; mimari, RTOS seçimi, kesme stratejileri ve test planı buna göre şekillenir. Bu sınıflandırma tasarım kararlarını netleştirir."
+        },
+        {
+            "No": 17,
+            "question": "Aşağıdakilerden hangisi “büyük ölçek” sistemlerle ilişkilendirilen özelliklerden biridir?",
+            "options": {
+                "A": "Genellikle tek 8-bit MCU ile çözülmesi",
+                "B": "32–64 bit, çoklu yonga/karmaşık mimarilerle daha yüksek işlem kapasitesi",
+                "C": "Haberleşmenin tamamen gereksiz olması",
+                "D": "Sadece analog devrelerden oluşması",
+                "E": "Program belleğinin hiç olmaması"
+            },
+            "correct": "B",
+            "explanation": "Notlarda büyük ölçek sistemler 32–64 bit ve daha karmaşık, çoklu yonga mimarileriyle ilişkilendirilir. Bu tür sistemlerde genellikle daha fazla haberleşme, daha karmaşık kontrol ve daha yüksek veri işleme ihtiyacı bulunur."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi networked sistemlerde güvenlik ihtiyacını en iyi tetikleyen durumdur?",
+            "options": {
+                "A": "Sistem hiç dış dünya ile veri alışverişi yapmıyorsa",
+                "B": "Sistem ağa bağlanıp uzaktan erişim/OTA güncelleme gibi kabiliyetler kazanınca",
+                "C": "Sistem sadece LED yakıp söndürüyorsa",
+                "D": "Sistem yalnız lab ortamında kapalı devre çalışıyorsa",
+                "E": "Sistem hiç firmware içermiyorsa"
+            },
+            "correct": "B",
+            "explanation": "Ağa bağlanmak saldırı yüzeyini artırır. Uzaktan komut alma, veri gönderme, güncelleme gibi özellikler kimlik doğrulama, şifreleme ve güvenli hata yönetimi gerektirir. Bu nedenle networked sistemlerde güvenlik tasarımın ayrılmaz parçası olur."
+        },
+        {
+            "No": 19,
+            "question": "Bir sistemin “mobil” olması aşağıdaki tasarım kararlarından hangisini en güçlü şekilde etkiler?",
+            "options": {
+                "A": "Güç yönetimi ve uyku modlarının kullanımı",
+                "B": "Sadece veri yolu genişliği",
+                "C": "Sadece ekran çözünürlüğü",
+                "D": "Sadece derleyici seçimi",
+                "E": "Sadece kasa renginin seçimi"
+            },
+            "correct": "A",
+            "explanation": "Mobil sistemlerde enerji kaynağı sınırlı olduğu için güç yönetimi tasarımın merkezindedir. İşlemci/platform seçimi, haberleşme protokolü, sensör örnekleme oranı ve yazılım mimarisi dahi enerji tüketimine göre optimize edilir."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdakilerden hangisi sınıflandırma eksenlerinden biri değildir?",
+            "options": {
+                "A": "İşlevselliğe göre (stand-alone/networked/mobile)",
+                "B": "Performansa/ölçeğe göre (küçük/orta/büyük)",
+                "C": "Gerçek zamanlılık seviyesine göre (hard/soft)",
+                "D": "Tasarımın görsel temasına göre (koyu/açık tema)",
+                "E": "Gereksinimlere göre (güç/bellek/maliyet) çıkarım"
+            },
+            "correct": "D",
+            "explanation": "Ders notlarında sınıflandırma; işlevsellik, performans/ölçek ve gerçek zamanlılık gibi mühendislik eksenlerinde yapılır. Görsel tema gibi UI/UX tercihleri bu bağlamda bir sınıflandırma ekseni değildir."
+        }
+    ]
+}

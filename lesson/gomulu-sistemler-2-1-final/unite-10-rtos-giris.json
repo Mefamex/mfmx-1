@@ -1,0 +1,267 @@
+{
+    "unitNumber": 10,
+    "unitTitle": "RTOS Giriş",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "RTOS’un (Real-Time Operating System) temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Grafik arayüz sağlamak",
+                "B": "Görevleri (task) zamanında ve öngörülebilir şekilde planlayıp çalıştırmak",
+                "C": "Sadece dosya sistemi eklemek",
+                "D": "Sadece WiFi yönetmek",
+                "E": "Sadece bellek büyütmek"
+            },
+            "correct": "B",
+            "explanation": "RTOS, task’leri belirli öncelik ve zamanlama kurallarıyla çalıştırarak deadline’lara uyumu kolaylaştırır. Amaç “mutlak hız” değil, deterministik/öngörülebilir zaman davranışıdır."
+        },
+        {
+            "No": 2,
+            "question": "Hard real-time sistem için en doğru tanım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Deadline kaçırılırsa sadece küçük performans kaybı olur",
+                "B": "Deadline kaçırılması kabul edilemez; sistem başarısız sayılır",
+                "C": "Sadece oyunlarda kullanılır",
+                "D": "Sadece kablosuz çalışır",
+                "E": "Sadece büyük ölçekli sistemdir"
+            },
+            "correct": "B",
+            "explanation": "Hard real-time’da deadline kaçırmak sistem için kritik hata olabilir (ör. fren, hava yastığı, medikal cihaz). Soft real-time’da gecikme kaliteyi düşürür ama sistem tamamen başarısız sayılmayabilir."
+        },
+        {
+            "No": 3,
+            "question": "RTOS’ta “task” kavramı aşağıdakilerden hangisine en yakındır?",
+            "options": {
+                "A": "Bir protokolün pin ismi",
+                "B": "Bağımsız yürütme birimi (thread benzeri) ve kendine ait stack/context",
+                "C": "Sadece EEPROM alanı",
+                "D": "Sadece PWM kanalı",
+                "E": "Sadece sensör"
+            },
+            "correct": "B",
+            "explanation": "RTOS’ta task, belirli bir işi yapan ve scheduler tarafından zamanlanan yürütme birimidir (thread benzeri). Her task’in bağlamı (register’lar, program counter vb.) saklanır ve genellikle kendine ait bir stack alanı bulunur; context switch sırasında RTOS bu bağlamı kaydedip başka task’e geçer. Sınavda “task = iş parçacığı + öncelik + stack” şeklinde düşünmek, scheduler/IPC sorularını daha kolay çözer."
+        },
+        {
+            "No": 4,
+            "question": "Preemptive scheduling (ön kesmeli zamanlama) neyi ifade eder?",
+            "options": {
+                "A": "Task’ler sadece sırayla, hiç kesilmeden çalışır",
+                "B": "Daha yüksek öncelikli task hazır olunca, çalışan task’in kesilerek yenisine geçilmesi",
+                "C": "Sadece cooperative çalışır",
+                "D": "Sadece I2C’de olur",
+                "E": "Sadece UART ile olur"
+            },
+            "correct": "B",
+            "explanation": "Preemptive scheduler, önceliğe göre task değiştirebilir. Böylece kritik task’ler hızlı tepki alır. Ancak paylaşılan kaynaklar için senkronizasyon ihtiyacı artar (mutex/semaphore)."
+        },
+        {
+            "No": 5,
+            "question": "Cooperative scheduling için en doğru ifade aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Task, CPU’yu ancak kendi isteğiyle (yield/delay) bırakır",
+                "B": "Task her an başka task tarafından kesilebilir",
+                "C": "Hiç planlama yoktur",
+                "D": "Sadece donanım kesmesiyle çalışır",
+                "E": "Sadece CAN bus’ta çalışır"
+            },
+            "correct": "A",
+            "explanation": "Cooperative yaklaşımda task’ler CPU’yu gönüllü bırakır. Bu basit olabilir ama bir task CPU’yu bırakmazsa sistemin responsivity’si bozulur. Preemptive yaklaşım bu riski azaltır."
+        },
+        {
+            "No": 6,
+            "question": "RTOS’ta “priority inversion” problemi tipik olarak hangi durumda ortaya çıkar?",
+            "options": {
+                "A": "Yüksek öncelikli task düşük öncelikli bir task’in tuttuğu mutex’i beklerken",
+                "B": "UART baud rate’i yükselince",
+                "C": "ADC bit sayısı artınca",
+                "D": "Flash yazma ömrü dolunca",
+                "E": "CS pini ters bağlanınca"
+            },
+            "correct": "A",
+            "explanation": "Priority inversion: düşük öncelikli task bir kaynağı kilitler, yüksek öncelikli task onu bekler; araya orta öncelikli task girip CPU’yu alırsa yüksek öncelikli task daha da gecikir. Çözüm olarak priority inheritance gibi mekanizmalar kullanılır."
+        },
+        {
+            "No": 7,
+            "question": "Bir RTOS’ta “tick” kavramı genellikle neyi temsil eder?",
+            "options": {
+                "A": "ADC örnekleme sayısı",
+                "B": "Scheduler’ın zaman tabanı; periyodik timer kesmesiyle oluşan zaman birimi",
+                "C": "UART stop biti",
+                "D": "SPI CS sinyali",
+                "E": "EEPROM hücresi"
+            },
+            "correct": "B",
+            "explanation": "Tick, RTOS’un zaman tabanıdır: scheduler’ın zaman ölçümü, gecikme (delay) ve timeout hesapları tick cinsinden yapılır. Tick genellikle bir donanım timer kesmesiyle periyodik üretilir (ör. 1 ms, 10 ms). Tick periyodu küçüldükçe zaman çözünürlüğü artar; ancak kesme yükü artar. Bu yüzden gerçek sistemde tick seçimi bir trade-off’tur: hassas zamanlama mı, daha az CPU overhead mi?"
+        },
+        {
+            "No": 8,
+            "question": "RTOS’ta task’ler arasında “context switch” ne anlama gelir?",
+            "options": {
+                "A": "Kablonun değiştirilmesi",
+                "B": "CPU’nun bir task’ten diğerine geçerken register/stack durumunu kaydetmesi ve yüklemesi",
+                "C": "ADC’nin çözünürlüğünü değiştirmek",
+                "D": "PWM duty’yi değiştirmek",
+                "E": "Flash’ı silmek"
+            },
+            "correct": "B",
+            "explanation": "Context switch sırasında CPU, mevcut task’in context’ini (register’lar, stack pointer vb.) kaydedip yeni task’in context’ini yükler. Bu işlem overhead getirir; bu yüzden task sayısı/öncelik tasarımı önemlidir."
+        },
+        {
+            "No": 9,
+            "question": "RTOS kullanmanın super loop’a göre tipik avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her zaman daha az RAM kullanması",
+                "B": "Zamanlama, öncelik ve eşzamanlı iş yönetimini daha sistematik hale getirmesi",
+                "C": "Hiç senkronizasyon gerektirmemesi",
+                "D": "Kesme kullanımını yasaklaması",
+                "E": "Haberleşme protokollerini otomatik seçmesi"
+            },
+            "correct": "B",
+            "explanation": "RTOS; task öncelikleri, delay/timeouts, IPC mekanizmaları gibi araçlarla karmaşık sistemleri daha yönetilebilir kılar. Ancak RAM/flash overhead’i ve doğru konfigürasyon ihtiyacı vardır."
+        },
+        {
+            "No": 10,
+            "question": "RTOS’un getirdiği tipik maliyet (trade-off) aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her zaman daha az bellek tüketimi",
+                "B": "Ek bellek (task stack’leri), context switch overhead’i ve konfigürasyon karmaşıklığı",
+                "C": "Daha düşük güvenilirlik her zaman",
+                "D": "Daha az kod yazma zorunluluğu",
+                "E": "Sadece kablosuz çalışma"
+            },
+            "correct": "B",
+            "explanation": "RTOS task stack’leri ve kernel yapıları nedeniyle RAM/Flash tüketir. Context switch overhead’i ve yanlış öncelik/senkronizasyon ayarları da sorun çıkarabilir. Buna karşın karmaşık sistemlerde yönetilebilirlik sağlar."
+        },
+        {
+            "No": 11,
+            "question": "Aşağıdakilerden hangisi RTOS’ta bir task’in “blocked” durumuna örnektir?",
+            "options": {
+                "A": "Hazır (ready) beklemek",
+                "B": "Bir semaphore/mutex/queue üzerinde beklemek veya delay ile beklemek",
+                "C": "Sürekli CPU kullanmak",
+                "D": "Flash’ı silmek",
+                "E": "PWM üretmek"
+            },
+            "correct": "B",
+            "explanation": "Task, bir olay bekliyorsa (semaphore/queue) veya belirli süre uyuyorsa “blocked” olur. Bu sırada CPU başka task’lere verilir. Bu, CPU kullanımını verimli hale getirir."
+        },
+        {
+            "No": 12,
+            "question": "RTOS’ta “idle task” ne işe yarar?",
+            "options": {
+                "A": "Haberleşme paketlerini şifreler",
+                "B": "Çalışacak başka task yokken CPU’nun boşta kalmasını yönetir; low-power’a geçiş gibi işler de yapılabilir",
+                "C": "ADC’yi kalibre eder",
+                "D": "Sadece PWM üretir",
+                "E": "Sadece Flash yazar"
+            },
+            "correct": "B",
+            "explanation": "Idle task, sistemde başka ready task yokken çalışır. Birçok RTOS’ta idle hook ile sleep/low-power gibi işlemler yapılabilir. Bu, enerji yönetimi açısından önemlidir."
+        },
+        {
+            "No": 13,
+            "question": "Bir sistemde RTOS kullanma kararı en doğru şekilde hangi duruma bağlıdır?",
+            "options": {
+                "A": "Her proje RTOS kullanmalıdır",
+                "B": "İşlerin eşzamanlılığı, deadline ihtiyaçları ve karmaşıklık RTOS ihtiyacını belirler",
+                "C": "Sadece ekran varsa RTOS gerekir",
+                "D": "Sadece I2C varsa RTOS gerekir",
+                "E": "Sadece Flash büyükse RTOS gerekir"
+            },
+            "correct": "B",
+            "explanation": "RTOS, karmaşık ve çok işli sistemlerde büyük fayda sağlar; küçük basit sistemlerde ise gereksiz overhead olabilir. Karar; gereksinim (deadline), görev sayısı, bakım/test, kaynak kısıtlarına göre verilir."
+        },
+        {
+            "No": 14,
+            "question": "“Latency” (gecikme) RTOS bağlamında en çok hangi olayı kapsar?",
+            "options": {
+                "A": "Bir olayın oluşması ile ilgili task’in/ISR’ın başlaması arasındaki süre",
+                "B": "Belleğin kapasitesi",
+                "C": "Kablonun uzunluğu",
+                "D": "PWM duty’nin yüzdesi",
+                "E": "EEPROM hücresi"
+            },
+            "correct": "A",
+            "explanation": "Latency, olay oluştuğunda sistemin tepki vermeye başlaması için geçen süreyi ifade eder. RTOS’ta öncelikler, kesmeler ve scheduler politikası latency’yi etkiler."
+        },
+        {
+            "No": 15,
+            "question": "RTOS’ta “deadline” kavramı en doğru şekilde neyi ifade eder?",
+            "options": {
+                "A": "Görev önceliğinin adı",
+                "B": "Bir işin en geç tamamlanması gereken zaman sınırı",
+                "C": "UART stop biti",
+                "D": "SPI CS seviyesi",
+                "E": "ADC bit sayısı"
+            },
+            "correct": "B",
+            "explanation": "Deadline, işin “geç kalmadan” bitmesi gereken zaman sınırıdır. Real-time sistemlerde hedef, deadline’lara uyumdur. Hard/soft ayrımı deadline kaçırmanın etkisine göre yapılır."
+        },
+        {
+            "No": 16,
+            "question": "Bir RTOS’ta task önceliklerini yanlış ayarlamak hangi sonuca yol açabilir?",
+            "options": {
+                "A": "Her zaman daha hızlı çalışma",
+                "B": "Kritik task’lerin gecikmesi veya düşük öncelikli işlerin sistemi “boğması”",
+                "C": "ADC’nin çözünürlüğünün düşmesi",
+                "D": "Flash’ın uçucu olması",
+                "E": "UART’ın kablosuz olması"
+            },
+            "correct": "B",
+            "explanation": "Öncelik tasarımı RTOS’un kalbidir. Kritik task’ler düşük öncelikte kalırsa deadline kaçırabilir. Tersine, gereksiz yüksek öncelikli task’ler CPU’yu sürekli alıp diğer işlerin ilerlemesini engelleyebilir."
+        },
+        {
+            "No": 17,
+            "question": "RTOS’ta “stack overflow” tipik olarak hangi nedenle görülür?",
+            "options": {
+                "A": "Task stack boyutunun küçük seçilmesi ve derin fonksiyon çağrıları/ büyük yerel değişkenler",
+                "B": "I2C adresinin yanlış olması",
+                "C": "PWM duty’nin düşük olması",
+                "D": "CAN hızının yüksek olması",
+                "E": "EEPROM’un uçucu olması"
+            },
+            "correct": "A",
+            "explanation": "Her task’in stack’i sınırlıdır. Büyük yerel array’ler, derin çağrı zinciri veya recursion stack’i doldurabilir. RTOS’ta task stack boyutu doğru seçilmeli ve taşma tespit mekanizmaları kullanılmalıdır."
+        },
+        {
+            "No": 18,
+            "question": "RTOS’ta “mutex” kullanımı en çok hangi ihtiyacı karşılar?",
+            "options": {
+                "A": "Kabloları otomatik bağlamak",
+                "B": "Paylaşılan kaynağa aynı anda erişimi engelleyerek yarış durumlarını azaltmak",
+                "C": "ADC ölçüm aralığını artırmak",
+                "D": "Flash kapasitesini artırmak",
+                "E": "UART’ı I2C’ye çevirmek"
+            },
+            "correct": "B",
+            "explanation": "Mutex, kritik kaynak (ör. ortak buffer, I2C bus, UART sürücüsü) üzerinde karşılıklı dışlama sağlar. Böylece iki task aynı anda yazıp veri bozmaz. Ancak yanlış kullanım deadlock’a yol açabilir."
+        },
+        {
+            "No": 19,
+            "question": "Aşağıdakilerden hangisi RTOS’ta “semaphore” kullanımına daha iyi örnektir?",
+            "options": {
+                "A": "Bir cihazı resetlemek",
+                "B": "Bir ISR’ın bir task’e “olay oldu” sinyali vermesi",
+                "C": "Flash silmek",
+                "D": "PWM üretmek",
+                "E": "Kabloyu kısaltmak"
+            },
+            "correct": "B",
+            "explanation": "Semaphore iki temel amaçla kullanılır: (1) olay bildirimi (event signaling), (2) sınırlı sayıda kaynağı yönetme (counting semaphore). Örneğin bir interrupt (ISR) bir olay olduğunda semaphore vererek ilgili task’i uyandırabilir; task de semaphore’u alıp olayı işler. Burada kritik nokta şudur: semaphore “bloklayarak bekleme” sağlar; busy-wait yerine CPU’yu boşa harcamadan beklemek ve doğru zamanda uyanmak mümkün olur."
+        },
+        {
+            "No": 20,
+            "question": "RTOS’un “real-time” olabilmesi için en kritik hedef aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "En yüksek FPS",
+                "B": "Öngörülebilir zaman davranışı (bounded latency/jitter) ve deadline’lara uyum",
+                "C": "En büyük Flash",
+                "D": "En yüksek baud rate",
+                "E": "En fazla sensör"
+            },
+            "correct": "B",
+            "explanation": "Real-time demek “çok hızlı” demek değildir. Asıl hedef, sürelerin öngörülebilir olması ve deadline’lara uyumdur. RTOS bu hedefe scheduler ve IPC araçlarıyla yardımcı olur."
+        }
+    ]
+}

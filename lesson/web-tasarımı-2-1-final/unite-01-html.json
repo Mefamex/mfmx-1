@@ -1,0 +1,397 @@
+{
+    "unitNumber": 1,
+    "unitTitle": "HTML Temelleri ve Yapı",
+    "questionCount": 30,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Aşağıdakilerden hangisi HTML5 doküman tipini (doctype) doğru şekilde belirtir?",
+            "options": {
+                "A": "<!DOCTYPE html>",
+                "B": "<DOCTYPE html>",
+                "C": "<!DOCTYPE HTML5>",
+                "D": "<doctype html5>",
+                "E": "<!DOC html>"
+            },
+            "correct": "A",
+            "explanation": "Doctype, tarayıcıya belgenin HTML olarak yorumlanacağını bildirir ve standart (standards) render modunu tetikler. HTML5’te doctype sadeleştirilmiştir; sürüm numarası yazılmaz."
+        },
+        {
+            "No": 2,
+            "question": "Bir HTML sayfasında meta charset etiketi en doğru nereye konumlandırılır?",
+            "options": {
+                "A": "</body> etiketinden hemen önce",
+                "B": "<head> içinde, mümkün olduğunca üstlerde",
+                "C": "<html> etiketinden önce",
+                "D": "<title> etiketinden sonra, <body> içinde",
+                "E": "Her yerde aynı etkiyi verir"
+            },
+            "correct": "B",
+            "explanation": "Karakter kodlaması, tarayıcı metni çözmeden önce bilinmelidir. Bu etiket `head` bölümünde mümkün olduğunca erken yer alırsa Türkçe karakter bozulmaları (mojibake) gibi sorunlar önlenir."
+        },
+        {
+            "No": 3,
+            "question": "Aşağıdakilerden hangisi `lang` (dil) özniteliğinin en doğru kullanım yeridir?",
+            "options": {
+                "A": "<head lang=\"tr\">",
+                "B": "<body lang=\"tr\">",
+                "C": "<html lang=\"tr\">",
+                "D": "<title lang=\"tr\">",
+                "E": "<meta lang=\"tr\">"
+            },
+            "correct": "C",
+            "explanation": "Sayfanın varsayılan dili kök öğede tanımlanır; ekran okuyucular, çeviri araçları ve arama motorları bu bilgiyi buradan alır. Gerekirse sayfanın belirli bölümlerinde daha özel `lang` değerleriyle geçersiz kılınabilir."
+        },
+        {
+            "No": 4,
+            "question": "Aşağıdakilerden hangisi semantik (semantic) bir HTML etiketidir?",
+            "options": {
+                "A": "<div>",
+                "B": "<span>",
+                "C": "<section>",
+                "D": "<b>",
+                "E": "<br>"
+            },
+            "correct": "C",
+            "explanation": "Semantik etiketler, içeriğin rolünü/anlamını açık eder. `section` tematik bir bölümü temsil eder; genel amaçlı kapsayıcılar ise sadece düzen/kaplama içindir ve tek başına anlam taşımaz."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi bir linki yeni sekmede açmak için kullanılan doğru özniteliktir?",
+            "options": {
+                "A": "target=\"_self\"",
+                "B": "target=\"_parent\"",
+                "C": "rel=\"nofollow\"",
+                "D": "target=\"_blank\"",
+                "E": "open=\"new\""
+            },
+            "correct": "D",
+            "explanation": "Bağlantının yeni sekmede/pencerede açılmasını sağlayan mekanizma `target` davranışıdır. Yeni sekme açıldığında güvenlik ve performans için çoğu senaryoda `rel` ile `noopener`/`noreferrer` kullanımı önerilir."
+        },
+        {
+            "No": 6,
+            "question": "Aşağıdakilerden hangisi bir resim için erişilebilirliği (accessibility) en çok artıran zorunlu/önemli bilgidir?",
+            "options": {
+                "A": "width",
+                "B": "height",
+                "C": "alt",
+                "D": "loading",
+                "E": "decoding"
+            },
+            "correct": "C",
+            "explanation": "Erişilebilirlik açısından en kritik bilgi alternatif metindir: görselin ne olduğunu/işlevini metinle anlatır. Dekoratif görsellerde ise ekran okuyucu gürültüsünü azaltmak için boş alternatif metin tercih edilir."
+        },
+        {
+            "No": 7,
+            "question": "Aşağıdakilerden hangisi sıralı liste (ordered list) oluşturur?",
+            "options": {
+                "A": "<ul>",
+                "B": "<ol>",
+                "C": "<li>",
+                "D": "<dl>",
+                "E": "<list>"
+            },
+            "correct": "B",
+            "explanation": "Sıralı liste, adım adım süreçler veya sıra/öncelik önemli olduğunda kullanılır. Liste öğeleri her zaman liste elemanı etiketiyle tanımlanır; sırasız liste ise yalnızca maddeleri kümeler."
+        },
+        {
+            "No": 8,
+            "question": "Aşağıdakilerden hangisi tanım listesinde (description list) terimi belirtmek için kullanılır?",
+            "options": {
+                "A": "<dt>",
+                "B": "<dd>",
+                "C": "<li>",
+                "D": "<term>",
+                "E": "<dfnlist>"
+            },
+            "correct": "A",
+            "explanation": "Tanım listeleri terim–açıklama yapısı içindir. Terim başlığı ve açıklaması ayrı öğelerle yazılır; aynı terime birden fazla açıklama eklemek de mümkündür."
+        },
+        {
+            "No": 9,
+            "question": "Bir formun gönderileceği URL’yi belirleyen öznitelik hangisidir?",
+            "options": {
+                "A": "href",
+                "B": "action",
+                "C": "method",
+                "D": "target",
+                "E": "route"
+            },
+            "correct": "B",
+            "explanation": "Form gönderildiğinde istek hangi adrese gidecekse bu adres burada tanımlanır. İsteğin GET mi POST mu olacağı ayrı bir ayardır; ayrıca değer belirtilmezse tarayıcı genellikle mevcut sayfaya GET ile gönderim yapar."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdakilerden hangisi `<input>` için geçerli bir `type` değeridir?",
+            "options": {
+                "A": "type=\"phone\"",
+                "B": "type=\"mail\"",
+                "C": "type=\"email\"",
+                "D": "type=\"calculator\"",
+                "E": "type=\"address\""
+            },
+            "correct": "C",
+            "explanation": "HTML5, bazı alan türleri için özel giriş davranışları sağlar: tarayıcı basit doğrulama yapabilir ve mobilde uygun klavye düzeni açılır. Yine de asıl doğrulama her zaman sunucu tarafında da yapılmalıdır."
+        },
+        {
+            "No": 11,
+            "question": "Bir `<label>` ile `<input>` öğesini en doğru şekilde ilişkilendiren yöntem hangisidir?",
+            "options": {
+                "A": "`label` içine `id` yazmak",
+                "B": "`input` içine `for` yazmak",
+                "C": "`label for` değeri = `input id` değeri",
+                "D": "`label name` değeri = `input name` değeri",
+                "E": "İlişkilendirmeye gerek yok"
+            },
+            "correct": "C",
+            "explanation": "Erişilebilirlikte amaç, etiket metninin hangi form kontrolüne ait olduğunun net olmasıdır. Bunun için etiketin hedefi ile kontrolün kimliği eşleştirilir; böylece etikete tıklamak alanı odaklar ve ekran okuyucular doğru ilişkiyi kurar. Alternatif olarak kontrol doğrudan etiketin içine de sarılabilir."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdakilerden hangisi tek satırlık metin girişi için en uygun HTML form elemanıdır?",
+            "options": {
+                "A": "<textarea>",
+                "B": "<input type=\"text\">",
+                "C": "<input type=\"paragraph\">",
+                "D": "<text>",
+                "E": "<input type=\"multiline\">"
+            },
+            "correct": "B",
+            "explanation": "Tek satırlık serbest metin girişleri için temel form kontrolü kullanılır; satır sonları beklenmez. Çok satırlı içerikler (açıklama, mesaj vb.) için ayrı bir çok satır kontrolü tercih edilir."
+        },
+        {
+            "No": 13,
+            "question": "Birden fazla seçenekten birini seçtirmek (radio button) için aşağıdaki hangi şart doğrudur?",
+            "options": {
+                "A": "Her radio’nun `name` değeri farklı olmalı",
+                "B": "Tüm radio’ların `name` değeri aynı olmalı",
+                "C": "Radio’da `multiple` yazılmalı",
+                "D": "Radio yerine `<select>` zorunludur",
+                "E": "`checked` özniteliği olmadan radio çalışmaz"
+            },
+            "correct": "B",
+            "explanation": "Radyo butonlarında “grup” mantığı isim alanı üzerinden kurulur: aynı isim, tek seçimlik bir grup demektir. Her seçeneğin gönderilecek değeri ayrıca ayarlanır; varsayılan seçim gerekiyorsa ilgili öğe işaretli gelir."
+        },
+        {
+            "No": 14,
+            "question": "Aşağıdakilerden hangisi bir HTML tablosunda satır (row) oluşturur?",
+            "options": {
+                "A": "<td>",
+                "B": "<th>",
+                "C": "<tr>",
+                "D": "<thead>",
+                "E": "<col>"
+            },
+            "correct": "C",
+            "explanation": "Tablolar satır ve hücrelerden oluşur: satır öğesi bir satırı başlatır, içine veri veya başlık hücreleri yerleştirilir. Büyük tablolarda başlık ve gövde bölümleri ayrıca gruplanabilir."
+        },
+        {
+            "No": 15,
+            "question": "Bir tabloda sütun başlığı (header cell) için doğru etiket hangisidir?",
+            "options": {
+                "A": "<td>",
+                "B": "<thead>",
+                "C": "<caption>",
+                "D": "<th>",
+                "E": "<header>"
+            },
+            "correct": "D",
+            "explanation": "Başlık hücresi, veri hücrelerinin neyi temsil ettiğini belirtir ve tabloyu anlamlandırır. Erişilebilirlik için satır/sütun bağlamı kurulabilir; gerekirse `scope` gibi özniteliklerle başlığın satıra mı sütuna mı ait olduğu netleştirilir."
+        },
+        {
+            "No": 16,
+            "question": "Bir tabloya başlık (caption) eklemek için aşağıdakilerden hangisi kullanılır?",
+            "options": {
+                "A": "<title>",
+                "B": "<caption>",
+                "C": "<summary>",
+                "D": "<thead>",
+                "E": "<legend>"
+            },
+            "correct": "B",
+            "explanation": "Tablonun neyi anlattığını kısa bir cümleyle özetlemek için tabloya başlık eklenir. Bu başlık, tabloyu okuyan kullanıcılar ve yardımcı teknolojiler için bağlam sağlar ve genellikle tablonun ilk çocuğu olarak yer alır."
+        },
+        {
+            "No": 17,
+            "question": "Aşağıdakilerden hangisi HTML’de yorum (comment) satırı yazmanın doğru biçimidir?",
+            "options": {
+                "A": "// yorum",
+                "B": "/* yorum */",
+                "C": "<!-- yorum -->",
+                "D": "# yorum",
+                "E": "** yorum **"
+            },
+            "correct": "C",
+            "explanation": "HTML yorumları tarayıcı tarafından kullanıcıya gösterilmez, ancak kaynak kodda görünür. Bu yüzden yorumlara gizli bilgi yazmamak gerekir; sözdizimi HTML’e özgüdür ve diğer dillerdeki yorum biçimleri burada geçerli değildir."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi ‘blok seviyeli (block-level)’ bir element örneğidir?",
+            "options": {
+                "A": "<span>",
+                "B": "<a>",
+                "C": "<strong>",
+                "D": "<div>",
+                "E": "<img>"
+            },
+            "correct": "D",
+            "explanation": "Blok öğeler akışta yeni satırdan başlar ve genellikle bulunduğu satırın genişliğini kaplar; bu nedenle sayfa yerleşimini bölümlere ayırmada kullanışlıdır. Satır içi öğeler ise metin akışı içinde, satırı bölmeden yer alır."
+        },
+        {
+            "No": 19,
+            "question": "Aşağıdakilerden hangisi bir elemente benzersiz kimlik vermek için kullanılır ve sayfada tekrarlanmamalıdır?",
+            "options": {
+                "A": "class",
+                "B": "id",
+                "C": "name",
+                "D": "type",
+                "E": "tag"
+            },
+            "correct": "B",
+            "explanation": "Kimlik değeri sayfa içinde benzersiz olmalıdır; aynı kimliği iki öğeye vermek CSS seçimi, JavaScript erişimi ve sayfa içi bağlantılar gibi alanlarda hatalara yol açar. Gruplama ve tekrar eden stiller için sınıf kullanılır."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdaki meta etiketi ne işe yarar? `<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">`",
+            "options": {
+                "A": "Sayfanın dilini ayarlar",
+                "B": "Mobil cihazlarda görünüm ölçekleme/viewport ayarı yapar",
+                "C": "Sayfayı şifreler",
+                "D": "Tarayıcı önbelleğini (cache) kapatır",
+                "E": "Sayfaya ikon (favicon) ekler"
+            },
+            "correct": "B",
+            "explanation": "Mobil tarayıcılar sayfayı varsayılan olarak “masaüstü genişliğinde” farz edebilir. Viewport ayarı, düzenin cihaz genişliğine göre kurulmasını ve başlangıç yakınlaştırmasının kontrol edilmesini sağlar; duyarlı tasarımın temel taşlarındandır."
+        },
+        {
+            "No": 21,
+            "question": "Aşağıdakilerden hangisi bir dış CSS dosyasını sayfaya bağlamanın doğru yoludur?",
+            "options": {
+                "A": "<style src=\"style.css\"></style>",
+                "B": "<css href=\"style.css\"></css>",
+                "C": "<link rel=\"stylesheet\" href=\"style.css\">",
+                "D": "<script href=\"style.css\"></script>",
+                "E": "<import rel=\"css\" src=\"style.css\">"
+            },
+            "correct": "C",
+            "explanation": "Dış stil dosyaları `link` etiketiyle bağlanır; tarayıcı CSS’i indirip sayfaya uygular. Genellikle `head` içinde konumlandırılır ki sayfa yüklenirken stiller mümkün olduğunca erken devreye girsin."
+        },
+        {
+            "No": 22,
+            "question": "Bir dış JavaScript dosyasını sayfaya eklemek için doğru HTML etiketi hangisidir?",
+            "options": {
+                "A": "<script src=\"app.js\"></script>",
+                "B": "<js src=\"app.js\"></js>",
+                "C": "<link rel=\"script\" href=\"app.js\">",
+                "D": "<script href=\"app.js\"></script>",
+                "E": "<import src=\"app.js\"></import>"
+            },
+            "correct": "A",
+            "explanation": "Dış JavaScript dosyaları `script` etiketiyle eklenir ve dosya yolu kaynak özniteliğiyle verilir. Yükleme performansı için scripti sayfanın sonuna koymak veya `defer` ile HTML parse’ını bloklamamak yaygın yaklaşımlardır."
+        },
+        {
+            "No": 23,
+            "question": "`defer` özniteliği eklenmiş bir `<script>` etiketi için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Script dosyası hiç indirilmez",
+                "B": "HTML parse edilirken script hemen çalışır",
+                "C": "Script, HTML parse bittikten sonra çalışır (sıra korunur)",
+                "D": "Script sadece mobilde çalışır",
+                "E": "Script her zaman CSS’ten önce çalışır"
+            },
+            "correct": "C",
+            "explanation": "`defer`, dosyayı indirirken HTML’in parse edilmesine izin verir ve çalıştırmayı belge çözümlemesi bittikten sonraya bırakır. Birden fazla ertelenmiş dosyada yürütme sırası HTML’deki sırayı takip eder; bu da bağımlılıkları yönetmeyi kolaylaştırır."
+        },
+        {
+            "No": 24,
+            "question": "Aşağıdakilerden hangisi bir sayfa içi (same page) ankora (anchor) örnektir?",
+            "options": {
+                "A": "<a href=\"#iletisim\">İletişim</a>",
+                "B": "<a src=\"#iletisim\">İletişim</a>",
+                "C": "<a href=\".iletisim\">İletişim</a>",
+                "D": "<a href=\"@iletisim\">İletişim</a>",
+                "E": "<a link=\"#iletisim\">İletişim</a>"
+            },
+            "correct": "A",
+            "explanation": "Sayfa içi bağlantılar, URL’nin parça (fragment) kısmını kullanır ve hedefi sayfadaki bir kimlik değerine bağlar. Bu çalışsın diye hedef öğenin kimliği ile bağlantıdaki parça değeri birebir aynı olmalıdır."
+        },
+        {
+            "No": 25,
+            "question": "Aşağıdakilerden hangisi bir resim dosyası için göreceli (relative) yol örneğidir?",
+            "options": {
+                "A": "C:\\images\\logo.png",
+                "B": "file:///home/user/logo.png",
+                "C": "https://example.com/logo.png",
+                "D": "images/logo.png",
+                "E": "\\\\server\\share\\logo.png"
+            },
+            "correct": "D",
+            "explanation": "Göreceli yol, dosyanın bulunduğu konuma göre çözülür (mevcut klasörden başlayarak). Klasör yukarı çıkmak gerektiğinde `../` kullanılır; internet adresleri veya sistem yolları ise farklı türde (mutlak) adreslemedir."
+        },
+        {
+            "No": 26,
+            "question": "Aşağıdakilerden hangisi HTML’de özel karakter yazımı için entity (HTML entities) kullanımına örnektir?",
+            "options": {
+                "A": "&lt;",
+                "B": "<lt>",
+                "C": "\\lt;",
+                "D": "&<;",
+                "E": "&small;"
+            },
+            "correct": "A",
+            "explanation": "HTML’de bazı karakterler sözdizimin parçası olduğu için doğrudan yazıldığında etiket gibi yorumlanabilir. Bu karakterleri metin olarak göstermek için entity kullanılır; entity’ler `&` ile başlar ve `;` ile biter."
+        },
+        {
+            "No": 27,
+            "question": "Aşağıdakilerden hangisi `<img>` etiketi için doğru bir ifadedir?",
+            "options": {
+                "A": "Kapatma etiketi zorunludur: </img>",
+                "B": "Boş (void) elementtir; kapanış etiketi yoktur",
+                "C": "Sadece `<head>` içinde kullanılabilir",
+                "D": "Sadece `.svg` dosyaları gösterir",
+                "E": "`src` yerine `href` kullanır"
+            },
+            "correct": "B",
+            "explanation": "Bu öğe “void/boş” sınıfındadır: içine içerik yazılmaz ve kapanış etiketi beklenmez. Doğru kullanım için kaynak yolu verilir ve erişilebilirlik amacıyla alternatif metin eklenir."
+        },
+        {
+            "No": 28,
+            "question": "Aşağıdakilerden hangisi bir video dosyasını HTML ile eklemek için en doğru etikettir?",
+            "options": {
+                "A": "<media>",
+                "B": "<movie>",
+                "C": "<video>",
+                "D": "<vid>",
+                "E": "<source>"
+            },
+            "correct": "C",
+            "explanation": "Tarayıcıya video oynatma kabiliyeti kazandıran öğe HTML5 medya öğesidir. Farklı formatlar için birden çok kaynak tanımlanabilir, kullanıcı kontrolü isteniyorsa kontroller açılır ve desteklenmeyen tarayıcılar için yedek metin bırakılabilir."
+        },
+        {
+            "No": 29,
+            "question": "Aşağıdakilerden hangisi semantik olarak sayfanın ana içeriğini temsil eden etikettir?",
+            "options": {
+                "A": "<main>",
+                "B": "<center>",
+                "C": "<content>",
+                "D": "<div class=\"main\">",
+                "E": "<primary>"
+            },
+            "correct": "A",
+            "explanation": "Ana içerik alanı, sayfanın benzersiz ve temel kısmını temsil eder (menü, footer, yan barlar dışında kalan bölüm). Sayfa başına tek bir ana içerik bölümü kullanmak erişilebilirlikte gezinmeyi kolaylaştırır."
+        },
+        {
+            "No": 30,
+            "question": "Aşağıdakilerden hangisi ‘form alanını grup halinde açıklamak’ için kullanılan doğru etiket çiftidir?",
+            "options": {
+                "A": "<group> ve <title>",
+                "B": "<fieldset> ve <legend>",
+                "C": "<section> ve <h1>",
+                "D": "<form> ve <caption>",
+                "E": "<div> ve <label>"
+            },
+            "correct": "B",
+            "explanation": "İlgili form kontrollerini (özellikle tek seçim/çok seçim grupları) mantıksal bir çerçeve altında toplamak okunabilirlik ve erişilebilirliği artırır. Grubun ne olduğunu açıklayan başlık, yardımcı teknolojilerin doğru bağlamla okumasını sağlar."
+        }
+    ]
+}

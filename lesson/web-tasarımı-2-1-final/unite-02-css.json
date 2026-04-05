@@ -1,0 +1,462 @@
+{
+    "unitNumber": 2,
+    "unitTitle": "CSS Temelleri, Seçiciler ve Düzen (Layout)",
+    "questionCount": 35,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Aşağıdakilerden hangisi CSS’i HTML sayfasına bağlamanın doğru yoludur?",
+            "options": {
+                "A": "<css href=\"style.css\"></css>",
+                "B": "<style src=\"style.css\"></style>",
+                "C": "<link rel=\"stylesheet\" href=\"style.css\">",
+                "D": "<script rel=\"stylesheet\" src=\"style.css\"></script>",
+                "E": "<import href=\"style.css\">"
+            },
+            "correct": "C",
+            "explanation": "Dış CSS dosyaları, tarayıcının stil kaynağı olarak tanıdığı `link` etiketiyle bağlanır ve genellikle `head` içinde yer alır. `style` etiketi ise sayfa içine yazılan (inline) CSS içindir; dış dosya yolu vermek için kullanılmaz."
+        },
+        {
+            "No": 2,
+            "question": "CSS’te bir class seçicisi (class selector) aşağıdakilerden hangisiyle yazılır?",
+            "options": {
+                "A": "#menu",
+                "B": ".menu",
+                "C": "menu()",
+                "D": "*menu",
+                "E": "@menu"
+            },
+            "correct": "B",
+            "explanation": "Sınıf (class) seçicisi nokta ile yazılır ve aynı sınıfa sahip birden fazla öğeyi hedefleyebilir. Kimlik (id) seçimi ise `#` ile yapılır ve sayfada tekil olacak şekilde kullanılmalıdır."
+        },
+        {
+            "No": 3,
+            "question": "CSS’te bir id seçicisi (id selector) aşağıdakilerden hangisiyle yazılır?",
+            "options": {
+                "A": "#header",
+                "B": ".header",
+                "C": "header#",
+                "D": "@header",
+                "E": "$header"
+            },
+            "correct": "A",
+            "explanation": "Kimlik (id) seçicisi `#` ile yazılır ve hedeflediği öğe sayfa içinde benzersiz olmalıdır. Bu sayede hem CSS seçimi hem de JavaScript ile erişim daha öngörülebilir hale gelir."
+        },
+        {
+            "No": 4,
+            "question": "Aşağıdaki seçicilerden hangisi sadece `.card` sınıfı içindeki `p` etiketlerini seçer?\n\nHTML: `<div class=\"card\"><p>...</p></div>`",
+            "options": {
+                "A": "p.card",
+                "B": ".card + p",
+                "C": ".card p",
+                "D": "p > .card",
+                "E": ".card.p"
+            },
+            "correct": "C",
+            "explanation": "Boşlukla yazılan seçici, bir öğenin içindeki torunları (descendant) hedefler. Yani kapsayıcı içinde geçen tüm uygun öğeler seçilir; sadece doğrudan çocukları hedeflemek istenirse farklı bir operatör kullanılır."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi child selector (doğrudan çocuk seçici) örneğidir?",
+            "options": {
+                "A": ".box p",
+                "B": ".box > p",
+                "C": ".box ~ p",
+                "D": ".box + p",
+                "E": "p.box"
+            },
+            "correct": "B",
+            "explanation": "Doğrudan çocuk seçici (`>`) yalnızca bir üst öğenin hemen altındaki çocukları hedefler. İç içe daha derindeki torunlara dokunmaz; bu ayrım büyük DOM ağaçlarında beklenmeyen stilleri önler."
+        },
+        {
+            "No": 6,
+            "question": "CSS’te specificity (özgüllük) sıralamasında genel olarak hangisi daha güçlüdür?",
+            "options": {
+                "A": "Element seçici (ör: `p`) class’tan daha güçlüdür",
+                "B": "Class seçici (ör: `.a`) id’den daha güçlüdür",
+                "C": "Id seçici (ör: `#a`) class’tan daha güçlüdür",
+                "D": "Universal seçici (`*`) en güçlüdür",
+                "E": "Hepsi eşittir"
+            },
+            "correct": "C",
+            "explanation": "Özgüllük (specificity) kabaca şu şekilde sıralanır: id seçiciler, sınıf/öznitelik/pseudo-class’lardan; onlar da element/pseudo-element’lerden daha baskındır. Aynı özgüllükteyse, dosyada daha sonra yazılan kural kazanır."
+        },
+        {
+            "No": 7,
+            "question": "Aşağıdaki CSS’te hangi renk uygulanır?\n\nCSS:\n`p { color: blue; }`\n`.note { color: red; }`\n\nHTML: `<p class=\"note\">Merhaba</p>`",
+            "options": {
+                "A": "blue",
+                "B": "red",
+                "C": "Tarayıcı varsayılanı",
+                "D": "İkisi karışır (mor olur)",
+                "E": "Hiçbiri uygulanmaz"
+            },
+            "correct": "B",
+            "explanation": "Aynı öğeye iki kural uygulanabildiğinde özgüllüğü daha yüksek olan seçici önceliklidir. Sınıf seçimi, element seçimine göre daha baskın olduğundan metin rengi sınıf kuralına göre belirlenir."
+        },
+        {
+            "No": 8,
+            "question": "CSS’te `!important` için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Kodun daha hızlı çalışmasını sağlar",
+                "B": "Her zaman tüm kurallardan üstün olur; specificity artık hiç önemli değildir",
+                "C": "Aynı önem seviyesinde `!important` kuralları arasında specificity ve kaynak sırası yine geçerlidir",
+                "D": "Sadece inline style’da çalışır",
+                "E": "Sadece `color` özelliğinde çalışır"
+            },
+            "correct": "C",
+            "explanation": "`!important`, ilgili kuralın önceliğini yükseltir; ancak birden fazla `!important` kuralı çakışırsa yine özgüllük ve kaynak sırası devreye girer. Bakımı zorlaştırdığı için genelde son çare olarak kullanılır."
+        },
+        {
+            "No": 9,
+            "question": "Box model’de (kutu modeli) içerikten dışa doğru doğru sıralama hangisidir?",
+            "options": {
+                "A": "margin → border → padding → content",
+                "B": "content → padding → border → margin",
+                "C": "content → border → padding → margin",
+                "D": "padding → content → border → margin",
+                "E": "border → padding → content → margin"
+            },
+            "correct": "B",
+            "explanation": "Kutu modeli içerikten dışa doğru ilerler: içerik alanı, iç boşluk (padding), kenarlık (border) ve dış boşluk (margin). Yerleşim sorunlarını çözmek için bu sıralamayı bilmek kritik."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdaki CSS’e göre kutunun toplam genişliği kaç px olur?\n\nCSS: `width: 200px; padding: 10px; border: 5px solid; margin: 20px; box-sizing: content-box;`",
+            "options": {
+                "A": "200",
+                "B": "210",
+                "C": "230",
+                "D": "260",
+                "E": "300"
+            },
+            "correct": "C",
+            "explanation": "`content-box` varsayılanında `width` yalnızca içerik alanını temsil eder. Toplam kutu genişliği için padding ve border iki taraftan eklenir; margin ise kutunun dışındaki boşluktur ve kutu genişliğinin parçası sayılmaz."
+        },
+        {
+            "No": 11,
+            "question": "`box-sizing: border-box;` kullanıldığında `width` neyi ifade eder?",
+            "options": {
+                "A": "Sadece content genişliğini",
+                "B": "Content + padding + border toplamını",
+                "C": "Content + margin toplamını",
+                "D": "Sadece padding toplamını",
+                "E": "Sadece border toplamını"
+            },
+            "correct": "B",
+            "explanation": "`border-box` kullanıldığında `width`, içerik + padding + border toplamını ifade eder. Bu yaklaşım özellikle responsive tasarımlarda “kutum neden taştı?” tipindeki hesap hatalarını azaltır."
+        },
+        {
+            "No": 12,
+            "question": "Aşağıdakilerden hangisi bir elementi akıştan tamamen çıkarır (layout’ta yer kaplamaz)?",
+            "options": {
+                "A": "visibility: hidden;",
+                "B": "opacity: 0;",
+                "C": "display: none;",
+                "D": "color: transparent;",
+                "E": "z-index: -1;"
+            },
+            "correct": "C",
+            "explanation": "Bu değer, öğeyi normal akıştan tamamen çıkarır; yani yer kaplamaz ve kullanıcıya görünmez. Sadece görünmez yapıp yerini korumak istiyorsan farklı bir görünürlük kontrolü tercih edilir."
+        },
+        {
+            "No": 13,
+            "question": "Aşağıdakilerden hangisi bir elementi görünmez yapar ama sayfada yerini korur?",
+            "options": {
+                "A": "display: none;",
+                "B": "visibility: hidden;",
+                "C": "position: absolute;",
+                "D": "overflow: hidden;",
+                "E": "float: left;"
+            },
+            "correct": "B",
+            "explanation": "Öğe yerleşimdeki alanını korur ama görünmez olur; bu yüzden sayfa akışı bozulmaz. Erişilebilirlik açısından, görünmez bir öğenin hâlâ odaklanabilir olup olmadığı ayrıca düşünülmelidir."
+        },
+        {
+            "No": 14,
+            "question": "`display: inline` olan bir element için hangisi genelde doğrudur?",
+            "options": {
+                "A": "`width` ve `height` her zaman etkilidir",
+                "B": "Yeni satırdan başlar",
+                "C": "Satır içinde akar; genişlik içeriğe göre şekillenir",
+                "D": "Flex container olur",
+                "E": "Grid container olur"
+            },
+            "correct": "C",
+            "explanation": "Satır içi öğeler metin akışının parçasıdır ve genişlikleri çoğunlukla içerik kadar olur. Belirli bir genişlik/yükseklik kontrolü gerekiyorsa `inline-block` veya blok davranışı tercih edilir."
+        },
+        {
+            "No": 15,
+            "question": "Aşağıdaki seçeneklerden hangisi bir elementi sayfada ortalamak için sık kullanılan modern yaklaşımlardan biridir? (Tek bir kutuyu yatay+dikey ortalama)",
+            "options": {
+                "A": "`text-align: center;` her zaman yeterlidir",
+                "B": "Parent’a `display: flex; justify-content: center; align-items: center;`",
+                "C": "Elemente `float: center;`",
+                "D": "Elemente `position: static; top: 50%; left: 50%;`",
+                "E": "Elemente `clear: both;`"
+            },
+            "correct": "B",
+            "explanation": "Tek bir kutuyu hem yatay hem dikey ortalamada en pratik yöntemlerden biri flexbox’tır: kapsayıcı hizalama kurallarıyla çocuk öğe tam ortaya alınır. Sadece metni ortalamak ile tüm kutuyu ortalamak farklı problemler olduğundan doğru aracı seçmek önemlidir."
+        },
+        {
+            "No": 16,
+            "question": "`position: absolute` için en doğru ifade hangisidir?",
+            "options": {
+                "A": "Her zaman viewport’a göre konumlanır",
+                "B": "Normal akışta yer kaplamaya devam eder",
+                "C": "En yakın ‘positioned’ (static olmayan) ata elemana göre konumlanır",
+                "D": "Sadece `z-index` ile çalışır",
+                "E": "Sadece `display: flex` içinde çalışır"
+            },
+            "correct": "C",
+            "explanation": "Mutlak konumlandırılan öğe normal akıştan çıkar ve en yakın konumlandırılmış (static olmayan) atasına göre hizalanır. Böyle bir ata yoksa başlangıç kapsayıcısına göre konumlanır; bu yüzden çoğu zaman ebeveyne `position: relative` verilir."
+        },
+        {
+            "No": 17,
+            "question": "`position: fixed` ile `position: sticky` arasındaki fark için en doğru ifade hangisidir?",
+            "options": {
+                "A": "İkisi tamamen aynıdır",
+                "B": "Fixed, scroll ile birlikte hareket eder; sticky sabit kalır",
+                "C": "Fixed viewport’a göre sabit kalır; sticky belli eşik (top vb.) aşılınca sabit gibi davranır",
+                "D": "Sticky sadece `z-index` ile çalışır",
+                "E": "Fixed sadece mobilde çalışır"
+            },
+            "correct": "C",
+            "explanation": "Sabit konumlandırma, sayfa kaydırılsa da öğeyi viewport’a “çiviler”. Yapışkan konumlandırma ise başlangıçta akışın parçasıdır; belirlenen eşik (ör. `top`) aşıldığında sabit gibi davranır ve kapsayıcısı içinde çalışır."
+        },
+        {
+            "No": 18,
+            "question": "Aşağıdakilerden hangisi `z-index`in etkili olması için genelde gerekli olan koşullardan biridir?",
+            "options": {
+                "A": "Elementin `position` değeri `static` olmalı",
+                "B": "Elementin ‘positioned’ olması (static olmayan position) veya uygun stacking context koşulları",
+                "C": "Elementin `display: block` olması",
+                "D": "Elementin `float: left` olması",
+                "E": "Elementin `opacity: 1` olması"
+            },
+            "correct": "B",
+            "explanation": "Katman sırası (z-index) çoğunlukla bir “stacking context” içinde anlam kazanır ve genelde konumlandırılmış öğelerde beklediğin gibi çalışır. Z-index’in “tutmaması” çoğu zaman üst/alt öğelerin farklı stacking context’lerde olmasından kaynaklanır."
+        },
+        {
+            "No": 19,
+            "question": "Aşağıdaki CSS bir elementin arka plan rengini ayarlar. Hangi özellik doğrudur?",
+            "options": {
+                "A": "`color` arka planı ayarlar",
+                "B": "`background-color` yazı rengini ayarlar",
+                "C": "`background-color` arka planı ayarlar",
+                "D": "`font-color` yazı rengini ayarlar",
+                "E": "`bg-color` arka planı ayarlar"
+            },
+            "correct": "C",
+            "explanation": "Metin rengi `color` ile, arka plan rengi ise `background-color` ile yönetilir. Bu ayrım özellikle okunabilirlik/kontrast için önemlidir; ikisini birlikte düşünmek gerekir."
+        },
+        {
+            "No": 20,
+            "question": "`color: rgb(255, 0, 0);` ifadesi hangi rengi temsil eder?",
+            "options": {
+                "A": "Mavi",
+                "B": "Yeşil",
+                "C": "Kırmızı",
+                "D": "Siyah",
+                "E": "Beyaz"
+            },
+            "correct": "C",
+            "explanation": "RGB renk modelinde üç kanal (kırmızı/yeşil/mavi) 0–255 aralığında yoğunluk alır. Kırmızı kanalın maksimum, diğerlerinin sıfır olması saf kırmızı üretir."
+        },
+        {
+            "No": 21,
+            "question": "Aşağıdakilerden hangisi 6 haneli hex renk (hex color) örneğidir?",
+            "options": {
+                "A": "#12G45Z",
+                "B": "#ff0000",
+                "C": "rgb(#ff,00,00)",
+                "D": "hex(ff0000)",
+                "E": "#red000"
+            },
+            "correct": "B",
+            "explanation": "Hex renk kodları `#RRGGBB` (veya kısaltılmış `#RGB`) biçimindedir ve her çift, ilgili kanalın 16’lık karşılığıdır. Geçerli karakterler 0–9 ve a–f aralığındadır (büyük/küçük fark etmez)."
+        },
+        {
+            "No": 22,
+            "question": "Aşağıdaki CSS’e göre metin hangi renkte görünür?\n\nCSS: `.box { background-color: black; color: white; }`\nHTML: `<div class=\"box\">Yazı</div>`",
+            "options": {
+                "A": "Siyah",
+                "B": "Beyaz",
+                "C": "Gri",
+                "D": "Kırmızı",
+                "E": "Şeffaf"
+            },
+            "correct": "B",
+            "explanation": "Metnin rengi `color` ile belirlenir; arka plan ise `background-color` ile. Bu iki özellik birlikte kullanıldığında okunabilirlik için kontrastı kontrol etmek iyi bir pratiktir."
+        },
+        {
+            "No": 23,
+            "question": "Aşağıdakilerden hangisi font ailesini (font-family) tanımlamak için doğru bir örnektir?",
+            "options": {
+                "A": "font: Arial;",
+                "B": "font-color: Arial;",
+                "C": "font-family: Arial, sans-serif;",
+                "D": "text-font: Arial;",
+                "E": "font-name: Arial;"
+            },
+            "correct": "C",
+            "explanation": "Yazı tipi ailesi listesi sırasıyla denenir; tarayıcı ilk bulduğunu uygular. Bu yüzden sonuna `serif`/`sans-serif` gibi genel bir yedek aile eklemek ve iki kelimeli font adlarını tırnaklamak iyi bir alışkanlıktır."
+        },
+        {
+            "No": 24,
+            "question": "Aşağıdakilerden hangisi `font-size` için göreceli (relative) birim örneğidir?",
+            "options": {
+                "A": "px",
+                "B": "cm",
+                "C": "em",
+                "D": "pt",
+                "E": "mm"
+            },
+            "correct": "C",
+            "explanation": "Göreceli birimler, yazı boyutunu başka bir referansa göre ölçekler. `em` çoğunlukla ebeveynin font-size değerini temel alır ve iç içe yapıda çarpan etkisi oluşturabilir; bu yüzden tasarımda bilinçli kullanılmalıdır."
+        },
+        {
+            "No": 25,
+            "question": "Aşağıdakilerden hangisi `rem` birimini en doğru açıklar?",
+            "options": {
+                "A": "En yakın parent’ın font-size’ına göre ölçülür",
+                "B": "Root (genelde `html`) elementinin font-size’ına göre ölçülür",
+                "C": "Viewport genişliğine göre ölçülür",
+                "D": "Sadece mobilde çalışır",
+                "E": "Sadece padding için kullanılabilir"
+            },
+            "correct": "B",
+            "explanation": "`rem` ölçüsü kök öğenin (genelde `html`) yazı boyutunu referans alır; bu da ölçeklemeyi daha tutarlı hale getirir. Tema/erişilebilirlik için kök font-size değiştirildiğinde tüm `rem` tabanlı ölçüler birlikte uyum sağlar."
+        },
+        {
+            "No": 26,
+            "question": "Aşağıdaki pseudo-class (sözde sınıf) neyi seçer? `a:hover`",
+            "options": {
+                "A": "Linkin ilk hali (ziyaret edilmemiş)",
+                "B": "Linkin ziyaret edilmiş hali",
+                "C": "Fare linkin üstündeyken",
+                "D": "Linke tıklanmışken (active)",
+                "E": "Linkin içindeki ilk harf"
+            },
+            "correct": "C",
+            "explanation": "`hover` durumu, işaretçinin (fare) öğenin üzerine gelmesiyle tetiklenen etkileşim hâlidir. Dokunmatik cihazlarda davranış farklı olabileceği için hover’a kritik işlev yüklememek iyi bir yaklaşımdır."
+        },
+        {
+            "No": 27,
+            "question": "Aşağıdakilerden hangisi pseudo-element (sözde element) örneğidir?",
+            "options": {
+                "A": ":hover",
+                "B": ":focus",
+                "C": "::before",
+                "D": ":checked",
+                "E": ":not()"
+            },
+            "correct": "C",
+            "explanation": "Pseudo-element’ler, gerçek DOM düğümü eklemeden “üretilmiş” içerik/katman oluşturmaya yarar. `before/after` genellikle `content` ile birlikte kullanılır ve dekoratif ikon/çizgi gibi detaylarda tercih edilir."
+        },
+        {
+            "No": 28,
+            "question": "Aşağıdaki CSS ne yapar? `ul li:first-child { color: red; }`",
+            "options": {
+                "A": "Her listenin son elemanını kırmızı yapar",
+                "B": "Her `li`yi kırmızı yapar",
+                "C": "Her `ul` içindeki ilk `li` öğesini kırmızı yapar",
+                "D": "Sadece ilk `ul`yi kırmızı yapar",
+                "E": "Sadece `ul` etiketini kırmızı yapar"
+            },
+            "correct": "C",
+            "explanation": "`first-child`, bir öğenin kendi ebeveyni içindeki ilk çocuk olma koşulunu arar. Yani listedeki her ebeveyn için “ilk öğe” seçilir; tüm öğeleri etkilemez."
+        },
+        {
+            "No": 29,
+            "question": "Aşağıdaki media query neyi hedefler? `@media (max-width: 600px) { ... }`",
+            "options": {
+                "A": "Ekran genişliği 600px ve üstü",
+                "B": "Ekran genişliği 600px ve altı",
+                "C": "Ekran yüksekliği 600px ve altı",
+                "D": "Sadece yazıcı (print)",
+                "E": "Sadece retina ekran"
+            },
+            "correct": "B",
+            "explanation": "Bu sorgu, viewport genişliği 600px ve altındayken stil bloklarını devreye sokar. Mobile-first yaklaşımda genelde küçük ekran stilleri temel alınır, daha büyük ekranlar için `min-width` ile genişletilir."
+        },
+        {
+            "No": 30,
+            "question": "Flexbox’ta yatay eksende ana hizalama (main axis alignment) için hangi özellik kullanılır? (Varsayılan `flex-direction: row`) ",
+            "options": {
+                "A": "align-items",
+                "B": "justify-content",
+                "C": "place-items",
+                "D": "text-align",
+                "E": "vertical-align"
+            },
+            "correct": "B",
+            "explanation": "Flex düzeninde ana eksendeki (main axis) hizalama `justify-content` ile yönetilir. Varsayılan yön yataysa ana eksen yatay olur; yön değiştirilirse ana eksen de değişir."
+        },
+        {
+            "No": 31,
+            "question": "Flexbox’ta (varsayılan `flex-direction: row`) dikey eksende (cross axis) hizalama için hangi özellik kullanılır?",
+            "options": {
+                "A": "align-items",
+                "B": "justify-content",
+                "C": "float",
+                "D": "clear",
+                "E": "margin-collapse"
+            },
+            "correct": "A",
+            "explanation": "Çapraz eksen (cross axis) hizalaması `align-items` ile yapılır; varsayılan yatay akışta bu dikey hizalamaya karşılık gelir. Satır satır hizalama gerekiyorsa `align-content` gibi farklı kavramlar devreye girer."
+        },
+        {
+            "No": 32,
+            "question": "Grid layout’ta iki sütunlu bir yapı için aşağıdakilerden hangisi doğru bir tanımdır?",
+            "options": {
+                "A": "`display: grid; grid-template-columns: 1fr 1fr;`",
+                "B": "`display: flex; grid-template-columns: 1fr 1fr;`",
+                "C": "`display: grid; grid-columns: 2;`",
+                "D": "`display: block; grid-template: 2;`",
+                "E": "`display: inline-grid; columns: 2;`"
+            },
+            "correct": "A",
+            "explanation": "CSS Grid’de sütun yapısı `grid-template-columns` ile tanımlanır. `fr` birimi “kalan alanın payı” anlamına gelir; iki eşit sütun için iki eşit pay verilir."
+        },
+        {
+            "No": 33,
+            "question": "Aşağıdaki durumda hangi kutu kırmızı olur?\n\nHTML:\n`<div class=\"box\" id=\"x\">A</div>`\n\nCSS:\n`.box { color: blue; }`\n`#x { color: red; }`",
+            "options": {
+                "A": "Mavi olur",
+                "B": "Kırmızı olur",
+                "C": "Tarayıcı varsayılanı olur",
+                "D": "Mavi ve kırmızı sırayla yanıp söner",
+                "E": "Hiç görünmez"
+            },
+            "correct": "B",
+            "explanation": "Çakışan kurallarda id seçicisi sınıf seçicisinden daha yüksek özgüllüğe sahiptir. Bu nedenle kimlik üzerinden verilen renk, aynı öğedeki sınıf kuralını ezer (özel bir `!important` durumu yoksa)."
+        },
+        {
+            "No": 34,
+            "question": "Aşağıdakilerden hangisi CSS değişkeni (CSS custom properties) tanımlamaya örnektir?",
+            "options": {
+                "A": "`$primary: red;`",
+                "B": "`--primary: red;`",
+                "C": "`var-primary: red;`",
+                "D": "`primary(): red;`",
+                "E": "`@primary: red;`"
+            },
+            "correct": "B",
+            "explanation": "CSS custom property’ler `--` ile tanımlanır ve `var(...)` ile okunur. Genellikle `:root` altında tanımlanıp tema/renk sistemi gibi tekrar eden değerleri tek yerden yönetmek için kullanılır; ayrıca `var(--x, fallback)` ile yedek değer verilebilir."
+        },
+        {
+            "No": 35,
+            "question": "Aşağıdaki CSS’te `var(--primary)` neyi döndürür?\n\nCSS:\n`:root { --primary: #00ff00; }`\n`.btn { background-color: var(--primary); }`",
+            "options": {
+                "A": "Kırmızı",
+                "B": "Mavi",
+                "C": "Yeşil",
+                "D": "Siyah",
+                "E": "Beyaz"
+            },
+            "correct": "C",
+            "explanation": "`var(--primary)` ilgili değişkenin değerini çözer ve `background-color` için kullanır. Verilen renk kodunda yeşil kanal maksimum olduğu için sonuç yeşil tonudur; değişken yaklaşımı temayı tek yerden değiştirmeyi kolaylaştırır."
+        }
+    ]
+}

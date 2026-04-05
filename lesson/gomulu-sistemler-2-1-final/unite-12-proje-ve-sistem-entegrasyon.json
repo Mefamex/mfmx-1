@@ -1,0 +1,267 @@
+{
+    "unitNumber": 12,
+    "unitTitle": "Proje ve Sistem Entegrasyon",
+    "questionCount": 20,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Sistem entegrasyonunda “bring-up” sürecinin en doğru tanımı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sadece rapor yazmak",
+                "B": "Yeni donanım/yazılımın ilk kez çalıştırılması; temel doğrulamalarla adım adım ayağa kaldırılması",
+                "C": "Sadece kablosuz eklemek",
+                "D": "Sadece PCB çizmek",
+                "E": "Sadece sensör seçmek"
+            },
+            "correct": "B",
+            "explanation": "Bring-up; kartın güç, clock, reset, temel I/O ve çevre birimleri gibi bileşenlerinin sistematik şekilde doğrulanmasıdır. Amaç, tüm sistemi bir anda çalıştırmak yerine adım adım doğrulama yapmaktır."
+        },
+        {
+            "No": 2,
+            "question": "Entegrasyonda en yaygın hata ayıklama yaklaşımı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Her şeyi aynı anda bağlayıp denemek",
+                "B": "Parça parça doğrulamak (güç → clock → IO → çevre birimleri → protokol) ve basit testler ile ilerlemek",
+                "C": "Sadece kabloyu değiştirmek",
+                "D": "Sadece delay eklemek",
+                "E": "Sadece Flash’ı büyütmek"
+            },
+            "correct": "B",
+            "explanation": "Entegrasyonda en doğru yaklaşım sistematik ve katmanlı ilerlemektir: önce güç (regülatör çıkışları, akım), sonra saat (clock), sonra reset/boot, ardından temel I/O ve en sonda karmaşık protokoller/uygulama. Bu sayede sorun olduğunda arızayı izole etmek kolaylaşır; “her şeyi bağladım çalışmıyor” yerine, hangi adımda bozulduğunu bilirsiniz. Özellikle gömülü sistemlerde osiloskop/logic analyzer ile ölçülebilir ara doğrulamalar yapmak, entegrasyon süresini dramatik biçimde düşürür."
+        },
+        {
+            "No": 3,
+            "question": "I2C entegrasyonunda “ilk bakılacak şey” olarak ders notlarında en çok ne vurgulanır?",
+            "options": {
+                "A": "PWM duty",
+                "B": "ACK geliyor mu ve adres doğru mu?",
+                "C": "Flash yazma ömrü",
+                "D": "ADC bit sayısı",
+                "E": "Kasa rengi"
+            },
+            "correct": "B",
+            "explanation": "I2C’de haberleşmenin temel doğrulaması ACK ile yapılır. ACK yoksa adres, bağlantı, pull-up, besleme gibi kök nedenler araştırılır. Notlarda I2C frame ve ACK kontrolü özellikle geçer."
+        },
+        {
+            "No": 4,
+            "question": "UART ile debug (log) kullanmanın entegrasyonda en büyük avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Sinyal bütünlüğünü artırması",
+                "B": "Sistemin iç durumunu hızlıca gözlemleme ve adım adım ilerlemeyi doğrulama",
+                "C": "Flash’ı otomatik büyütmesi",
+                "D": "WiFi menzilini artırması",
+                "E": "ADC’yi kalibre etmesi"
+            },
+            "correct": "B",
+            "explanation": "Serial log ile “hangi adım çalıştı/nerede kaldı” gözlemlenebilir. Özellikle kart ilk ayağa kalkarken, hata durumlarında veya protokol entegrasyonunda çok hızlı teşhis imkanı sağlar."
+        },
+        {
+            "No": 5,
+            "question": "Aşağıdakilerden hangisi entegrasyon sırasında osiloskop/logic analyzer kullanımının temel nedenidir?",
+            "options": {
+                "A": "Kod boyutunu azaltmak",
+                "B": "Fiziksel sinyali görmek: seviye, zamanlama, kenar, gürültü, protokol dalga şekli",
+                "C": "EEPROM endurance artırmak",
+                "D": "Task önceliği belirlemek",
+                "E": "PID kazancı hesaplamak"
+            },
+            "correct": "B",
+            "explanation": "Birçok entegrasyon sorunu yazılım değil fiziksel sinyaldedir: yanlış seviye, kablo, timing. Osiloskop/logic analyzer; UART/I2C/SPI gibi protokollerin dalga şekillerini ve zamanlamasını doğrulamayı sağlar."
+        },
+        {
+            "No": 6,
+            "question": "“Tek değişkenle debug” yaklaşımı (single variable debugging) en doğru şekilde neyi önerir?",
+            "options": {
+                "A": "Aynı anda birden fazla şeyi değiştirip sonucu yorumlamak",
+                "B": "Bir seferde tek bir şeyi değiştirip etkisini gözleyerek kök nedeni izole etmek",
+                "C": "Hiç ölçüm yapmamak",
+                "D": "Sadece kablo değiştirmek",
+                "E": "Sadece reset atmak"
+            },
+            "correct": "B",
+            "explanation": "Bir anda çok şeyi değiştirirseniz hangi değişikliğin sorunu çözdüğünü/bozduğunu bilemezsiniz. Entegrasyonda disiplinli yaklaşım: tek değişiklik → gözlem → karar."
+        },
+        {
+            "No": 7,
+            "question": "Enerji/akım ölçümü entegrasyonda neden önemlidir?",
+            "options": {
+                "A": "Sadece logları güzelleştirir",
+                "B": "Kısa devre/yanlış bağlantı gibi hataları erken yakalamak ve güç tüketimi hedeflerini doğrulamak",
+                "C": "UART’ı hızlandırmak",
+                "D": "I2C adresini otomatik bulmak",
+                "E": "PWM’i iptal etmek"
+            },
+            "correct": "B",
+            "explanation": "Kart ilk açıldığında beklenmeyen yüksek akım, kısa devre veya yanlış besleme göstergesi olabilir. Ayrıca taşınabilir sistemlerde güç bütçesi hedeflerine uyum entegrasyon testinin parçasıdır."
+        },
+        {
+            "No": 8,
+            "question": "Bir projede “prototip → ürün” geçişinde entegrasyonu zorlaştıran tipik faktör hangisidir?",
+            "options": {
+                "A": "Gereksinimlerin hiç değişmemesi",
+                "B": "Gerçek dünya koşulları: sıcaklık, gürültü, toleranslar, üretim varyasyonu",
+                "C": "Her zaman daha yüksek test kapsamı",
+                "D": "Her zaman daha iyi sinyal",
+                "E": "Her zaman daha az parça"
+            },
+            "correct": "B",
+            "explanation": "Lab ortamında çalışan prototip, saha koşullarında farklı davranabilir. Gürültü, toleranslar, sıcaklık, kablo uzunluğu gibi etkenler entegrasyonda “neden labda çalıştı?” sorusunu doğurur."
+        },
+        {
+            "No": 9,
+            "question": "Firmware güncelleme (programlama) aşamasında “brick” riskini azaltan yaklaşım aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Güncelleme sırasında güç kesilmesini önemsememek",
+                "B": "Bootloader/geri dönüş mekanizması ve doğrulama (checksum) gibi güvenli güncelleme yaklaşımı",
+                "C": "Sadece daha yüksek baud rate",
+                "D": "Sadece kablosuz eklemek",
+                "E": "Sadece daha büyük LED"
+            },
+            "correct": "B",
+            "explanation": "Ürün sahada güncelleniyorsa güç kesilmesi veya bozuk dosya cihazı çalışmaz hale getirebilir. Bootloader, imza/doğrulama ve rollback gibi mekanizmalar bu riski azaltır."
+        },
+        {
+            "No": 10,
+            "question": "Entegrasyon testlerinde “basit örnek program” (blink, I2C scan vb.) yazmanın temel faydası nedir?",
+            "options": {
+                "A": "Final projeyi gereksiz hale getirmek",
+                "B": "Sorunu minimum ortamda izole etmek ve donanımın temel çalışmasını doğrulamak",
+                "C": "Sadece kod boyutunu artırmak",
+                "D": "Sadece UART’ı kapatmak",
+                "E": "Sadece PWM’i artırmak"
+            },
+            "correct": "B",
+            "explanation": "Minimal test yazılımı, karmaşık uygulama katmanını devre dışı bırakıp donanım ve temel sürücünün çalıştığını göstermeyi sağlar. Bu, kök neden analizini hızlandırır."
+        },
+        {
+            "No": 11,
+            "question": "Sistem entegrasyonunda kablo/bağlantı hatası en çok hangi belirtiyle kendini gösterir?",
+            "options": {
+                "A": "Her şeyin kusursuz çalışması",
+                "B": "Aralıklı hata, ACK gelmeme, hatalı okuma, gürültüye bağlı sorunlar",
+                "C": "Flash’ın uçucu olması",
+                "D": "ADC’nin bit sayısının artması",
+                "E": "PWM’in kendiliğinden oluşması"
+            },
+            "correct": "B",
+            "explanation": "Bağlantı/sinyal bütünlüğü problemleri genellikle aralıklı ve “bazen çalışıyor” şeklinde görünür. I2C’de ACK kaybı, UART’ta bozuk karakter, SPI’da yanlış bit okuma gibi belirtiler ortaya çıkar."
+        },
+        {
+            "No": 12,
+            "question": "Entegrasyon sırasında “konfigürasyon yönetimi” (config management) niçin önemlidir?",
+            "options": {
+                "A": "Önemsizdir",
+                "B": "Hangi firmware sürümü/hangi donanım revizyonu ile test yapıldığını bilmek; tekrarlanabilirlik sağlamak",
+                "C": "Sadece WiFi şifresini saklar",
+                "D": "Sadece LED rengi seçer",
+                "E": "Sadece PWM periyodu"
+            },
+            "correct": "B",
+            "explanation": "Entegrasyon hataları bazen “hangi sürümle çalışıyordu?” sorusudur. Sürüm, konfigürasyon, donanım revizyonu kayıt altına alınmazsa sorunlar tekrarlanamaz ve kalıcı çözüm üretmek zorlaşır."
+        },
+        {
+            "No": 13,
+            "question": "Bir haberleşme sorunu yaşandığında “önce fiziksel katman” kontrolü neden kritiktir?",
+            "options": {
+                "A": "Çünkü yazılım asla hata yapmaz",
+                "B": "Çünkü kablo, seviye, pull-up, besleme gibi fiziksel sorunlar protokolden bağımsız olarak iletişimi tamamen kırabilir",
+                "C": "Çünkü fiziksel katman sadece CAN’da vardır",
+                "D": "Çünkü fiziksel katman sadece WiFi’dır",
+                "E": "Çünkü fiziksel katman sadece bellekle ilgilidir"
+            },
+            "correct": "B",
+            "explanation": "Yanlış seviye, kopuk kablo, eksik pull-up, yanlış GND ortaklaması gibi fiziksel problemler varsa üst katman protokolü doğru olsa bile iletişim çalışmaz. Bu yüzden entegrasyonda en alt katmandan başlanır."
+        },
+        {
+            "No": 14,
+            "question": "“Step-by-step entegrasyon” neden “big-bang entegrasyon”dan genellikle üstündür?",
+            "options": {
+                "A": "Big-bang her zaman daha hızlıdır",
+                "B": "Adım adım yaklaşım arızayı izole eder; big-bang’de çok bileşen aynı anda değiştiği için kök neden bulunması zorlaşır",
+                "C": "Adım adım yaklaşım hiç test gerektirmez",
+                "D": "Big-bang sadece UART’ta olur",
+                "E": "Big-bang sadece PWM’de olur"
+            },
+            "correct": "B",
+            "explanation": "Bir anda her şeyi birleştirirseniz, sorun çıkınca hangi bileşenin kaynak olduğunu bulmak zorlaşır. Adım adım doğrulama, sistemin her katmanını güvence altına alır."
+        },
+        {
+            "No": 15,
+            "question": "Saha testlerinde “gürültü bağışıklığı” problemi yaşanıyorsa, aşağıdakilerden hangisi en muhtemel teknik adımdır?",
+            "options": {
+                "A": "UART baud rate’i rastgele artırmak",
+                "B": "Topraklama, kablolama, filtreleme, shielding ve protokol hızını/kenarlarını gözden geçirmek",
+                "C": "Tüm logları kapatmak",
+                "D": "Flash’ı silmek",
+                "E": "Ekran teması değiştirmek"
+            },
+            "correct": "B",
+            "explanation": "Gürültü kaynaklı problemler fiziksel katmanda çözülür: kablo/şase, filtreleme, uygun protokol hızı. Örneğin notlarda mesafe uzadıkça SPI frekansını düşürmek gerektiği gibi pratikler bulunur."
+        },
+        {
+            "No": 16,
+            "question": "Entegrasyonda “test noktaları (test points)” bırakmanın faydası aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "PCB’yi mutlaka büyütür",
+                "B": "Sinyalleri kolay ölçmeyi sağlar; debug süresini ciddi azaltır",
+                "C": "Sadece estetik",
+                "D": "Sadece yazılımı etkiler",
+                "E": "Sadece kütüphane boyutunu etkiler"
+            },
+            "correct": "B",
+            "explanation": "Test point’ler, ölçüm cihazlarının (osiloskop/logic analyzer/multimetre) probunu güvenli ve tekrarlanabilir şekilde bağlamayı kolaylaştırır. Özellikle UART/SPI/I2C/CAN gibi hatlarda dalga şeklini görmek; seviye uyumsuzluğu, pull-up eksikliği, yanlış kenar/clock fazı, hattın gürültüsü gibi kök nedenleri hızlıca ortaya çıkarır. Kısacası test point, “debug için erişilebilirlik” sağlar ve entegrasyonda zaman kazandırır."
+        },
+        {
+            "No": 17,
+            "question": "Bir sensör entegrasyonunda “yanlış değer okuma” sorunu için en iyi ilk teşhis adımı hangisidir?",
+            "options": {
+                "A": "Tüm sistemi yeniden yazmak",
+                "B": "Sensörü minimum kodla oku; referans/kalibrasyon/ölçekleme ve beslemeyi doğrula",
+                "C": "PWM’i artırmak",
+                "D": "Flash’ı büyütmek",
+                "E": "RTOS eklemek"
+            },
+            "correct": "B",
+            "explanation": "Minimum okuma kodu, değerlerin ham mı ölçeklenmiş mi olduğunu netleştirir. ADC referansı, sensör beslemesi, bağlantı ve ölçekleme hataları sık görülür. Entegrasyon yaklaşımı “minimum test → doğrulama”dır."
+        },
+        {
+            "No": 18,
+            "question": "Sistem entegrasyonunda “regresyon” testi neyi hedefler?",
+            "options": {
+                "A": "Yeni değişikliklerden sonra eskiden çalışan fonksiyonların bozulmadığını doğrulamak",
+                "B": "Sadece yeni özellikleri test etmek",
+                "C": "Sadece kablosuz test etmek",
+                "D": "Sadece bellek test etmek",
+                "E": "Sadece PWM test etmek"
+            },
+            "correct": "A",
+            "explanation": "Entegrasyon ilerledikçe yeni eklemeler eski çalışan parçaları bozabilir. Regresyon testleri, önceki fonksiyonların hâlâ çalıştığını kontrol ederek sistemin stabil kalmasını sağlar."
+        },
+        {
+            "No": 19,
+            "question": "Entegrasyonda “log seviyeleri” (info/warn/error) kullanmak ne sağlar?",
+            "options": {
+                "A": "Her zaman daha çok hata",
+                "B": "Önemli bilgileri filtreleyip debug’u yönetilebilir hale getirir; real-time etkisini azaltmaya yardımcı olur",
+                "C": "Belleği otomatik büyütür",
+                "D": "ADC’yi hızlandırır",
+                "E": "CAN’ı kablosuz yapar"
+            },
+            "correct": "B",
+            "explanation": "Aşırı log, zamanlamayı bozabilir. Seviye bazlı log ile kritik anlarda gerekli bilgiyi alıp normalde daha az çıktı üretmek mümkün olur. Bu, entegrasyon ve performans dengelemesidir."
+        },
+        {
+            "No": 20,
+            "question": "Sistem entegrasyonunu “sadece yazılım problemi” olarak görmek neden hatalıdır?",
+            "options": {
+                "A": "Çünkü yazılım hiç hata yapmaz",
+                "B": "Entegrasyon; donanım, sinyal bütünlüğü, güç, protokol zamanlaması ve yazılımın birlikte çalışmasını kapsar",
+                "C": "Çünkü sadece kablo önemlidir",
+                "D": "Çünkü sadece bellek önemlidir",
+                "E": "Çünkü sadece RTOS önemlidir"
+            },
+            "correct": "B",
+            "explanation": "Gömülü sistem entegrasyonu disiplinler arasıdır. Bir protokolün çalışmaması bazen yanlış pull-up, bazen seviye uyumsuzluğu, bazen yanlış sürücü konfigürasyonu olabilir. Bu yüzden sistem yaklaşımı şarttır."
+        }
+    ]
+}

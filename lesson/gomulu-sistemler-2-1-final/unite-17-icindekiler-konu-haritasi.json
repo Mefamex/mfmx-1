@@ -1,0 +1,163 @@
+{
+    "unitNumber": 17,
+    "unitTitle": "Dönemlik İçindekiler (Konu Haritası)",
+    "questionCount": 12,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Bu dersin konu haritasında “temel giriş” konularından sonra en doğal ilerleme aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Doğrudan IPC detayları",
+                "B": "Sınıflandırma/özellikler → tasarım süreci → donanım/bellek temelleri",
+                "C": "Sadece kablosuz protokoller",
+                "D": "Sadece enerji hasatlama",
+                "E": "Sadece SCADA"
+            },
+            "correct": "B",
+            "explanation": "Konu akışı genellikle: Giriş → sistemleri sınıflandırma → tasarım süreci → donanım bileşenleri → bellek → sensör/aktüatör → haberleşme → yazılım tasarımı → RTOS → IPC → entegrasyon şeklinde ilerler. Bu, “temelden uygulamaya” giden tipik ders kurgusudur."
+        },
+        {
+            "No": 2,
+            "question": "“Haberleşme Arabirimleri” başlığı altında dersin en çok odaklandığı mikrodenetleyici protokolleri hangileridir?",
+            "options": {
+                "A": "UART, SPI, I2C (ve CAN)",
+                "B": "Sadece HTTP",
+                "C": "Sadece FTP",
+                "D": "Sadece SQL",
+                "E": "Sadece CSS"
+            },
+            "correct": "A",
+            "explanation": "Ders notlarında özellikle UART/SPI/I2C (ve otomotiv bağlamında CAN) detaylı olarak ele alınır. Modbus/Profibus gibi protokoller de geçer; ancak sınav detayının çoğu mikrodenetleyici seviyesindeki protokollerdedir."
+        },
+        {
+            "No": 3,
+            "question": "Konu haritasında “bellek yönetimi”nin “kütüphane maliyeti/kod boyutu” ile bağlanmasının nedeni nedir?",
+            "options": {
+                "A": "Kod boyutu sadece RAM’i etkiler",
+                "B": "Derlenen kod Flash’ta yer kaplar; kütüphaneler bunu büyüterek sığmama riskine yol açabilir",
+                "C": "Kod boyutu sadece kabloyu etkiler",
+                "D": "Kod boyutu sadece PWM’dir",
+                "E": "Kod boyutu sadece I2C adresidir"
+            },
+            "correct": "B",
+            "explanation": "Konu haritasında bellek sadece “RAM/Flash isimleri” değildir; tasarım kararıdır. Kod boyutu ve kütüphane kullanımı Flash/RAM tüketimini artırabilir; bu da donanım seçimini ve optimizasyon ihtiyacını doğurur."
+        },
+        {
+            "No": 4,
+            "question": "Sensörler/aktüatörler konusu ile “kontrol sistemleri (open/closed loop)” konusu neden aynı haritada yakın durur?",
+            "options": {
+                "A": "Çünkü kontrol sistemleri kablosuzdur",
+                "B": "Çünkü kapalı çevrim kontrol için sensör geri beslemesi gerekir; aktüatör de fiziksel çıktıyı üretir",
+                "C": "Çünkü ikisi sadece bellekle ilgilidir",
+                "D": "Çünkü ikisi sadece UART’tır",
+                "E": "Çünkü ikisi sadece CAN’dır"
+            },
+            "correct": "B",
+            "explanation": "Kontrol döngüsü tipik olarak “sense → decide/control → act” akışıyla düşünülür: sensör ölçüm yapar (geri besleme), kontrolcü hedefle karşılaştırıp hata üretir ve aktüatöre komut verir (fiziksel etki). Açık çevrimde sensör geri beslemesi olmayabilir; kapalı çevrimde sensör ölçümü şarttır ve sistem bu ölçüme göre düzeltme yapar. Bu yüzden sensör/aktüatör konuları, open/closed loop kontrolün doğrudan yapı taşlarıdır ve konu haritasında yan yana yer alması doğaldır."
+        },
+        {
+            "No": 5,
+            "question": "Konu haritasında RTOS’un haberleşme protokollerinden sonra gelmesi en doğru şekilde neyi yansıtır?",
+            "options": {
+                "A": "RTOS haberleşmeyi kaldırır",
+                "B": "Sistem karmaşıklığı arttıkça (birçok I/O, protokol, görev) zamanlama/öncelik yönetimi ihtiyacı artar",
+                "C": "RTOS sadece donanımdır",
+                "D": "RTOS sadece bellek türüdür",
+                "E": "RTOS sadece kablodur"
+            },
+            "correct": "B",
+            "explanation": "Haberleşme, sensör okuma, kontrol, loglama gibi işler çoğaldıkça eşzamanlılık ve deadline yönetimi zorlaşır. RTOS, bu karmaşıklığı task/scheduler ve IPC araçlarıyla yönetmeyi hedefler."
+        },
+        {
+            "No": 6,
+            "question": "Görevler arası haberleşme (IPC) konusu RTOS’tan sonra geliyorsa, bu ilişki en doğru şekilde nasıl okunur?",
+            "options": {
+                "A": "IPC RTOS’tan bağımsızdır ve birlikte hiç kullanılmaz",
+                "B": "RTOS’ta birden fazla task olduğunda veri/olay paylaşımı için IPC mekanizmaları şart hale gelir",
+                "C": "IPC sadece I2C’dedir",
+                "D": "IPC sadece PWM’dir",
+                "E": "IPC sadece EEPROM’dur"
+            },
+            "correct": "B",
+            "explanation": "RTOS ile concurrency artar; concurrency de senkronizasyon ihtiyacını doğurur. Mutex/semaphore/queue gibi IPC araçları olmadan race condition, deadlock, veri bozulması gibi sorunlar büyür."
+        },
+        {
+            "No": 7,
+            "question": "Konu haritasında “entegrasyon”un en sonda olması en iyi hangi gerçeği temsil eder?",
+            "options": {
+                "A": "Entegrasyon önemsizdir",
+                "B": "Tüm bileşenlerin (donanım + yazılım + protokol + güç) birlikte çalıştığı aşama en sonda sistematik olarak doğrulanır",
+                "C": "Entegrasyon sadece dosya adıdır",
+                "D": "Entegrasyon sadece PWM’dir",
+                "E": "Entegrasyon sadece UART’tır"
+            },
+            "correct": "B",
+            "explanation": "Entegrasyon, parçaların bir araya geldiği ve gerçek dünyanın sorunlarının ortaya çıktığı aşamadır. Bu yüzden konu haritasında temel kavramlar ve bileşenler öğrenildikten sonra entegrasyon ve test/disiplinli debug yaklaşımı işlenir."
+        },
+        {
+            "No": 8,
+            "question": "Konu haritasını çalışırken “sınav stratejisi” olarak en mantıklı yaklaşım hangisidir?",
+            "options": {
+                "A": "Sadece protokol isimlerini ezberlemek",
+                "B": "Her başlık için: tanım → avantaj/dezavantaj → tipik kullanım senaryosu → trade-off sorularına hazırlık",
+                "C": "Sadece dosya isimlerini ezberlemek",
+                "D": "Sadece formül ezberlemek",
+                "E": "Sadece hardware marka isimleri"
+            },
+            "correct": "B",
+            "explanation": "Ders boyunca tekrar eden soru tipi: “Bu teknoloji nedir, ne zaman seçilir, neyi etkiler?” Bu yüzden her konu başlığında tanım + pratik senaryo + trade-off bağlantısı kurmak en verimli sınav hazırlığıdır."
+        },
+        {
+            "No": 9,
+            "question": "Konu haritasında “güç tüketimi/enerji yönetimi”nin birçok başlıkla kesişmesinin nedeni nedir?",
+            "options": {
+                "A": "Güç sadece pil kapasitesidir",
+                "B": "Güç; donanım seçimi, haberleşme seçimi, RTOS/task zamanlaması ve uyku modları gibi birçok kararı etkiler",
+                "C": "Güç sadece UART’tır",
+                "D": "Güç sadece SPI’dır",
+                "E": "Güç sadece Flash’tır"
+            },
+            "correct": "B",
+            "explanation": "Enerji yönetimi tek bir üniteye sıkışmaz: kablosuz seçiminden (WiFi vs ZigBee) yazılım zamanlamasına ve uyku modlarına kadar her şey güç bütçesini etkiler. Bu yüzden konu haritasında çapraz bir temadır."
+        },
+        {
+            "No": 10,
+            "question": "Harvard/Von Neumann mimarisi konusu konu haritasında en çok hangi başlıklarla ilişkilidir?",
+            "options": {
+                "A": "Bellek erişimi ve performans/determinism",
+                "B": "Kasa rengi",
+                "C": "Vida sayısı",
+                "D": "Logo tasarımı",
+                "E": "Dosya uzantısı"
+            },
+            "correct": "A",
+            "explanation": "Bu mimari ayrımı; program/veri erişim yollarını ve olası darboğazları açıklar. Bu da performans ve özellikle real-time bağlamında öngörülebilirlik ile ilişkilidir."
+        },
+        {
+            "No": 11,
+            "question": "Konu haritasında “haberleşme → güvenlik” bağlantısı en doğru hangi çıkarımı doğurur?",
+            "options": {
+                "A": "Bağlantı arttıkça saldırı yüzeyi artar; güvenlik tasarım gereksinimi olur",
+                "B": "Güvenlik sadece motor sürüşünde vardır",
+                "C": "Güvenlik sadece EEPROM’dur",
+                "D": "Güvenlik sadece PWM’dir",
+                "E": "Güvenlik sadece ADC’dir"
+            },
+            "correct": "A",
+            "explanation": "Networked/IoT sistemlerde haberleşme, saldırı yüzeyi oluşturur. Bu nedenle güvenlik (kimlik doğrulama, şifreleme, güncelleme) dersin sınıflandırma ve protokol başlıklarıyla ilişkilidir."
+        },
+        {
+            "No": 12,
+            "question": "Bu konu haritasına göre “çoktan seçmeli sınavda en çok gelen” soru tipi hangisine benzer?",
+            "options": {
+                "A": "Sadece tek tanım ezberi",
+                "B": "Kavramları karıştıran şıklar: benzer terimler (MCU/MPU/SoC, UART/SPI/I2C, hard/soft RT) + doğru senaryo eşlemesi",
+                "C": "Sadece sayısal işlem",
+                "D": "Sadece devre çizimi",
+                "E": "Sadece dosya yolu"
+            },
+            "correct": "B",
+            "explanation": "Bu dersin yapısı çok kavramlıdır ve benzer terimler sık karışır. Bu yüzden en verimli soru tipi: kavramları ayırmayı zorlayan şıklar + “hangi senaryoda hangisi?” yorumudur."
+        }
+    ]
+}

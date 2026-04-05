@@ -1,0 +1,462 @@
+{
+    "unitNumber": 4,
+    "unitTitle": "Bootstrap: Grid, Utilities ve Bileşenler (Components)",
+    "questionCount": 35,
+    "questions": [
+        {
+            "No": 1,
+            "question": "Bootstrap’ta sayfa içeriğini ortalayarak sabit genişlikte bir kapsayıcı (container) oluşturmak için en yaygın sınıf hangisidir?",
+            "options": {
+                "A": "container",
+                "B": "container-fixed",
+                "C": "wrap",
+                "D": "box",
+                "E": "page-container"
+            },
+            "correct": "A",
+            "explanation": "Bu kapsayıcı, sayfa içeriğine sol/sağ boşluk verip maksimum genişliği breakpoint’lere göre ayarlayarak içeriği ortalı tutar. Tam genişlik istenen senaryolarda farklı bir kapsayıcı türü tercih edilir."
+        },
+        {
+            "No": 2,
+            "question": "Bootstrap grid sisteminde bir satır (row) kaç kolon üzerinden hesaplanır?",
+            "options": {
+                "A": "10",
+                "B": "8",
+                "C": "12",
+                "D": "16",
+                "E": "24"
+            },
+            "correct": "C",
+            "explanation": "Grid sistemi 12 birimlik bir satır mantığıyla çalışır; kolon sınıfları bu 12 birimi paylaşır. Yan yana iki sütun için toplamın 12’ye tamamlanması (ör. 6+6) beklenen yerleşimi verir."
+        },
+        {
+            "No": 3,
+            "question": "Aşağıdakilerden hangisi Bootstrap’ta responsive tasarımın temel fikrini en doğru açıklar?",
+            "options": {
+                "A": "Sadece masaüstü için tasarım yapmaktır",
+                "B": "Her cihazda aynı piksel genişliğini zorunlu kılmaktır",
+                "C": "Sadece JavaScript ile ekran ölçüsünü dinlemektir",
+                "D": "Tüm elementleri `position: fixed` yapmak",
+                "E": "Breakpoint’lerle (kırılma noktaları) farklı ekran boyutlarına uyum sağlamaktır"
+            },
+            "correct": "E",
+            "explanation": "Duyarlı tasarımın temeli, farklı ekran genişliklerinde farklı yerleşim kuralları uygulamaktır. Bootstrap bunu breakpoint isimleriyle (örn. md, lg) ve bu breakpoint’lere göre değişen sınıflarla pratikleştirir."
+        },
+        {
+            "No": 4,
+            "question": "Bootstrap grid’de kolonları doğru hizalamak için temel yapı genelde hangisidir?",
+            "options": {
+                "A": "`<div class=\"col\">` içine `<div class=\"row\">`",
+                "B": "`<div class=\"row\">` içine `<div class=\"col-...\">`",
+                "C": "`<div class=\"grid\">` içine `<div class=\"cell\">`",
+                "D": "`<div class=\"columns\">` içine `<div class=\"column\">`",
+                "E": "`<div class=\"container\">` içine direkt `<div class=\"gutter\">`"
+            },
+            "correct": "B",
+            "explanation": "Klasik iskelet: kapsayıcı → satır → kolon şeklindedir. Satır, gutter (kolon arası boşluk) hesabını yönetir; kolonlar da satırın çocukları olarak düzgün hizalanır."
+        },
+        {
+            "No": 5,
+            "question": "`col-md-6` sınıfı ne anlama gelir?",
+            "options": {
+                "A": "Her ekranda 6px genişlik",
+                "B": "Sadece mobilde 6 kolon",
+                "C": "Sadece `md` altında 6 kolon",
+                "D": "`md` ve üzeri ekranlarda 12 kolonun 6’sını (yani yarısını) kaplar",
+                "E": "Kolon boşluklarını 6 birim yapar"
+            },
+            "correct": "D",
+            "explanation": "Bu sınıf, orta ve üzeri ekranlarda kolonun satırın yarısını kaplamasını sağlar. Daha küçük ekranlarda kolonlar genellikle alt alta düşer; istenirse küçük ekranlar için ayrıca sınıf eklenerek davranış netleştirilebilir."
+        },
+        {
+            "No": 6,
+            "question": "Bootstrap’ta `mt-3` sınıfı aşağıdakilerden hangisini ifade eder?",
+            "options": {
+                "A": "Üstten (margin-top) belirli bir boşluk verir",
+                "B": "Alttan (margin-bottom) boşluk verir",
+                "C": "Soldan padding verir",
+                "D": "Üstten padding verir",
+                "E": "Metni yukarı taşır (translate)"
+            },
+            "correct": "A",
+            "explanation": "Spacing yardımcılarında harfler yönü/özelliği, sayı ise ölçeği belirtir. Burada üstten dış boşluk uygulanır; aynı mantıkla alt/sağ/sol ve padding varyantları da seçilebilir."
+        },
+        {
+            "No": 7,
+            "question": "Bootstrap’ta bir elementi gizlemek/göstermek için kullanılan `d-*` sınıfları neyi temsil eder?",
+            "options": {
+                "A": "direction",
+                "B": "decoration",
+                "C": "display",
+                "D": "density",
+                "E": "delay"
+            },
+            "correct": "C",
+            "explanation": "Bu yardımcılar, CSS’in `display` değerini değiştirmek için vardır ve görünürlük/yerleşim davranışını doğrudan etkiler. Örneğin `none` yerleşimden çıkarırken, `flex` öğeleri flex konteynır yapar."
+        },
+        {
+            "No": 8,
+            "question": "Bir elementi küçük ekranlarda gizleyip (`none`), orta ve üstünde göstermenin (`block`) doğru sınıf kombinasyonu hangisidir?",
+            "options": {
+                "A": "`hidden-sm show-md`",
+                "B": "`d-hide d-show`",
+                "C": "`sm-none md-block`",
+                "D": "`hide-xs visible-md`",
+                "E": "`d-none d-md-block`"
+            },
+            "correct": "E",
+            "explanation": "Yaklaşım şu: önce her yerde gizle, sonra belirli breakpoint’ten itibaren görünür yap. Bu sayede aynı öğe küçük ekranda saklanırken daha büyük ekranda tekrar yerleşime dahil edilir."
+        },
+        {
+            "No": 9,
+            "question": "Bootstrap’ta butonlara temel buton stilini veren ana sınıf hangisidir?",
+            "options": {
+                "A": "button",
+                "B": "btn",
+                "C": "btn-base",
+                "D": "button-style",
+                "E": "ui-btn"
+            },
+            "correct": "B",
+            "explanation": "Buton stili iki parçalı düşünülür: temel buton sınıfı + varyant (renk/çerçeve). Aynı sınıflar `button` üzerinde de `a` etiketi üzerinde de kullanılabilir; önemli olan doğru sınıf kombinasyonudur."
+        },
+        {
+            "No": 10,
+            "question": "Aşağıdakilerden hangisi dolu (filled) birincil Bootstrap butonunu ifade eder?",
+            "options": {
+                "A": "`button primary`",
+                "B": "`btn main`",
+                "C": "`btn-solid-primary`",
+                "D": "`btn btn-primary`",
+                "E": "`button-primary`"
+            },
+            "correct": "D",
+            "explanation": "Temel sınıf butonu “buton gibi” yapar; varyant sınıfı ise rengini/temasını belirler. Pratikte aynı öğede iki sınıf birlikte kullanılır (ör. `class=\"btn btn-primary\"`)."
+        },
+        {
+            "No": 11,
+            "question": "Bootstrap formlarında input’lara standart görünüm ve genişlik veren sınıf hangisidir?",
+            "options": {
+                "A": "form-control",
+                "B": "input-control",
+                "C": "form-input",
+                "D": "control",
+                "E": "field"
+            },
+            "correct": "A",
+            "explanation": "Form kontrollerine tutarlı görünüm (yükseklik, kenarlık, genişlik) kazandırır ve çoğu zaman tam genişlik davranışı verir. Input/textarea/select gibi kontrollerde aynı yaklaşımla kullanılır."
+        },
+        {
+            "No": 12,
+            "question": "Bir input ile butonu yan yana ‘tek bir grup’ gibi göstermek için kullanılan bileşen hangisidir?",
+            "options": {
+                "A": "form-group",
+                "B": "btn-group",
+                "C": "input-group",
+                "D": "control-group",
+                "E": "group-inline"
+            },
+            "correct": "C",
+            "explanation": "Giriş alanını bir buton veya metin etiketiyle tek bir birleşik bileşen gibi göstermek için kullanılır. Özellikle arama kutusu + buton gibi desenlerde hizalamayı kolaylaştırır."
+        },
+        {
+            "No": 13,
+            "question": "Bootstrap’ta ‘kart’ düzeni için kullanılan bileşen hangisidir?",
+            "options": {
+                "A": "panel",
+                "B": "tile",
+                "C": "box",
+                "D": "paper",
+                "E": "card"
+            },
+            "correct": "E",
+            "explanation": "Kart bileşeni, içerikleri görsel bir kutu içinde gruplamak için standart bir desen sunar. Başlık/gövde/alt bölüm gibi parçalar ayrı sınıflarla tanımlanır; böylece düzen tutarlı kalır."
+        },
+        {
+            "No": 14,
+            "question": "Aşağıdakilerden hangisi bir uyarı mesajı (alert) oluşturmak için kullanılan doğru sınıf çiftine örnektir?",
+            "options": {
+                "A": "`message message-warning`",
+                "B": "`alert alert-warning`",
+                "C": "`warn warn-alert`",
+                "D": "`notice notice-warning`",
+                "E": "`toast toast-warning`"
+            },
+            "correct": "B",
+            "explanation": "Uyarı bileşeni temel bir sınıf ve bir tema varyantıyla kurulur. Erişilebilirlik için uygun `role` kullanımı ve kapatılabilir uyarılarda doğru buton/JS entegrasyonu önemlidir."
+        },
+        {
+            "No": 15,
+            "question": "Bootstrap’ta bir modal’ı butonla açmak için (özellikle Bootstrap 5’te) doğru yaklaşım hangisidir?",
+            "options": {
+                "A": "`onclick=\"openModal('#m')\"` zorunludur",
+                "B": "`href=\"modal:#m\"` yazmak yeterlidir",
+                "C": "`data-toggle=\"modal\"` her zaman doğrudur",
+                "D": "Butonda `data-bs-toggle=\"modal\"` ve `data-bs-target=\"#m\"` kullanmak",
+                "E": "Modal için sadece CSS yeterlidir"
+            },
+            "correct": "D",
+            "explanation": "Bootstrap 5’te etkileşimli bileşenler için `data-bs-*` öznitelikleri kullanılır. Buton, modal’ı hedefleyen ayarı taşır; modal’ın çalışması için Bootstrap JS’in de sayfada yüklü olması gerekir."
+        },
+        {
+            "No": 16,
+            "question": "Bootstrap’ta açılır-kapanır içerik (collapse) yapmak için kullanılan temel bileşen hangisidir?",
+            "options": {
+                "A": "collapse",
+                "B": "dropdown",
+                "C": "tooltip",
+                "D": "badge",
+                "E": "breadcrumb"
+            },
+            "correct": "A",
+            "explanation": "Açılır/kapanır içerik davranışı bu bileşenle sağlanır ve çoğu zaman akordeon yapılarının temelini oluşturur. İçeriğin yüksekliği ve geçiş animasyonları JS tarafından yönetilir."
+        },
+        {
+            "No": 17,
+            "question": "Bootstrap’ta dropdown (açılır menü) bileşeninin doğru çalışması için genelde ne gereklidir?",
+            "options": {
+                "A": "Sadece HTML yeterlidir",
+                "B": "Sadece CSS yeterlidir",
+                "C": "Bootstrap’ın JavaScript’i (bundle) gerekir",
+                "D": "Sadece jQuery gerekir",
+                "E": "Sadece Font Awesome gerekir"
+            },
+            "correct": "C",
+            "explanation": "Dropdown gibi etkileşimli bileşenler yalnızca CSS ile davranış kazanmaz; JS tarafı gerekir. Bootstrap 5’te jQuery bağımlılığı kaldırıldığı için doğru JS paketini eklemek yeterlidir."
+        },
+        {
+            "No": 18,
+            "question": "Tooltip (ipucu balonu) bileşeninde genelde hangi durum doğrudur?",
+            "options": {
+                "A": "Bootstrap’ta tooltip diye bir bileşen yoktur",
+                "B": "Tooltip sadece CSS ile otomatik çalışır",
+                "C": "Tooltip sadece `<title>` ile %100 aynı davranır",
+                "D": "Tooltip sadece `alert` sınıfı ile açılır",
+                "E": "Tooltip çoğu senaryoda JS ile başlatma (initialization) gerektirir"
+            },
+            "correct": "E",
+            "explanation": "Tooltip’ler çoğu projede otomatik çalışmaz; sayfadaki ilgili öğeler JS ile başlatılır. Dokunmatik cihazlarda kullanım zorluğu olabileceği için içerik kritikse alternatif sunmak iyi bir pratiktir."
+        },
+        {
+            "No": 19,
+            "question": "Bootstrap’ta resmin bulunduğu kapsayıcıya göre responsive ölçeklenmesini sağlayan yaygın sınıf hangisidir?",
+            "options": {
+                "A": "img-responsive",
+                "B": "img-fluid",
+                "C": "img-auto",
+                "D": "fluid-img",
+                "E": "w-auto"
+            },
+            "correct": "B",
+            "explanation": "Resmin genişliğini kapsayıcıya göre sınırlar ve oranını koruyarak küçültüp büyütebilir. Böylece taşmalar azalır; özellikle responsive düzenlerde görsellerin akışa uymasını sağlar."
+        },
+        {
+            "No": 20,
+            "question": "Aşağıdakilerden hangisi Bootstrap’ta çizgili tablo (striped table) yapmak için doğru sınıf kullanımına örnektir?",
+            "options": {
+                "A": "`table zebra`",
+                "B": "`table striped`",
+                "C": "`table-line`",
+                "D": "`table table-striped`",
+                "E": "`tbl tbl-striped`"
+            },
+            "correct": "D",
+            "explanation": "Tablonun temel stilini veren sınıf ile çizgili satır görünümünü veren sınıf birlikte kullanılır. İhtiyaca göre hover, bordered gibi ek tablo yardımcıları da eklenebilir."
+        },
+        {
+            "No": 21,
+            "question": "Bootstrap utility sınıflarında `text-danger` genellikle neyi ifade eder?",
+            "options": {
+                "A": "Metin rengini ‘danger’ (genelde kırmızı) yapar",
+                "B": "Arka planı kırmızı yapar",
+                "C": "Metni kalın yapar",
+                "D": "Metni gizler",
+                "E": "Metne underline ekler"
+            },
+            "correct": "A",
+            "explanation": "Metin rengi yardımcıları, yalnızca yazının rengini değiştirir. Arka planı boyamak için ayrı bir yardımcı ailesi vardır; ikisini karıştırmamak tasarım tutarlılığı sağlar."
+        },
+        {
+            "No": 22,
+            "question": "Flex yardımcılarıyla (utilities) iki elemanı yatayda uçlara yaslamak için hangi sınıf kullanılır? (Parent `d-flex` varsay)",
+            "options": {
+                "A": "justify-content-center",
+                "B": "align-items-between",
+                "C": "justify-content-between",
+                "D": "text-between",
+                "E": "flex-between"
+            },
+            "correct": "C",
+            "explanation": "Flex konteynırda ana eksen boyunca boşluğu dağıtarak elemanları iki uca iter. Çalışması için ebeveynin flex olması gerekir; yani önce `d-flex` benzeri bir display ayarı yapılmalıdır."
+        },
+        {
+            "No": 23,
+            "question": "Bootstrap 5’te kolonlar arası boşluğu (gutters) kontrol etmek için kullanılan sınıflardan biri hangisidir?",
+            "options": {
+                "A": "space-3",
+                "B": "gap-row-3",
+                "C": "col-gap-3",
+                "D": "gutter-3",
+                "E": "g-3"
+            },
+            "correct": "E",
+            "explanation": "Gutter sınıfları, grid satır/kolon boşluklarını ölçekli bir şekilde ayarlar. Sadece yatay veya sadece dikey boşluk için özel varyantlar da vardır; bu sayede düzen daha hassas kontrol edilebilir."
+        },
+        {
+            "No": 24,
+            "question": "Navbar bileşeninde menünün mobilde açılıp kapanmasını sağlayan bölüm genelde hangi sınıfla tanımlanır?",
+            "options": {
+                "A": "navbar-items",
+                "B": "collapse navbar-collapse",
+                "C": "nav-collapse-only",
+                "D": "navbar-toggle-area",
+                "E": "menu-collapse"
+            },
+            "correct": "B",
+            "explanation": "Navbar menüsünün açılır-kapanır kısmı collapse bölgesi olarak tanımlanır ve toggler butonu bu bölgeyi hedefler. Doğru `data-bs-target`/`aria-controls` eşleşmesi, hem işlev hem erişilebilirlik için önemlidir."
+        },
+        {
+            "No": 25,
+            "question": "Bootstrap’ta sütun sıralamasını (order) breakpoint’e göre değiştirmek için hangi sınıflar kullanılır?",
+            "options": {
+                "A": "rank-1, rank-2",
+                "B": "sort-first, sort-last",
+                "C": "position-1, position-2",
+                "D": "order-1, order-2, order-md-1 gibi",
+                "E": "row-order-1"
+            },
+            "correct": "D",
+            "explanation": "Sıralama sınıfları, görsel yerleşim sırasını değiştirir ve breakpoint ile koşullandırılabilir. Ancak ekran okuyucu/klavye gezintisi genelde DOM sırasına bağlıdır; bu yüzden erişilebilirlik etkisi düşünülmelidir."
+        },
+        {
+            "No": 26,
+            "question": "Bootstrap’ı CDN ile kullanırken genelde hangi dosyayı eklemek ‘zorunlu’ ilk adımdır? (Sadece tasarım/stil için)",
+            "options": {
+                "A": "Bootstrap CSS (stylesheet) dosyası",
+                "B": "jQuery",
+                "C": "Popper.js tek başına",
+                "D": "Sadece Bootstrap JS",
+                "E": "Font Awesome"
+            },
+            "correct": "A",
+            "explanation": "Bootstrap’ı sadece stil/yerleşim için kullanacaksan önce CSS’i eklemek yeterlidir. Modal, dropdown gibi etkileşimli parçalar için ayrıca Bootstrap’ın JS paketi de gerekir."
+        },
+        {
+            "No": 27,
+            "question": "Bootstrap 5’te etkileşimli bileşenler için önerilen JS dosyası seçeneği hangisidir?",
+            "options": {
+                "A": "Sadece `bootstrap.min.js` (asla bundle değil)",
+                "B": "Sadece `jquery.min.js`",
+                "C": "`bootstrap.bundle.min.js` (genelde Popper dahil)",
+                "D": "Sadece `bootstrap.css`",
+                "E": "`bootstrap.icons.js`"
+            },
+            "correct": "C",
+            "explanation": "Bazı bileşenler (dropdown/tooltip gibi) konumlandırma için Popper kullanır. Bundle paket, bu bağımlılıkları çoğu senaryoda birlikte getirir; böylece tek dosya eklemek yeterli olur."
+        },
+        {
+            "No": 28,
+            "question": "Bootstrap bileşenlerinde erişilebilirlik (accessibility) için sık kullanılan `aria-*` öznitelikleri neyi sağlar?",
+            "options": {
+                "A": "Sayfayı hızlandırır",
+                "B": "CSS derlemesini yapar",
+                "C": "Sadece SEO’yu artırır",
+                "D": "Tarayıcı cache’ini yönetir",
+                "E": "Ekran okuyuculara ve yardımcı teknolojilere anlam/bağlam verir"
+            },
+            "correct": "E",
+            "explanation": "Bu öznitelikler, yardımcı teknolojilere (ekran okuyucu vb.) bileşenin rolünü ve durumunu anlatır. Özellikle açılır/kapanır bileşenlerde `aria-expanded` gibi değerlerin doğru güncellenmesi önemlidir."
+        },
+        {
+            "No": 29,
+            "question": "Bootstrap’ta grid içinde boşluk bırakmak ve içeriği ortalamak için en çok kullanılan ‘container’ türü hangisidir? (Full width istemiyorsun)",
+            "options": {
+                "A": "container-fluid",
+                "B": "container",
+                "C": "w-100",
+                "D": "full-container",
+                "E": "max-container"
+            },
+            "correct": "B",
+            "explanation": "Sabit genişlik + ortalama istediğinde standart kapsayıcı tercih edilir; tam genişlikte kenardan kenara yerleşim gerekiyorsa fluid yaklaşım kullanılır. Projelerde breakpoint’e göre farklı container türleriyle de çalışılabilir."
+        },
+        {
+            "No": 30,
+            "question": "Bootstrap 5’te 16:9 gibi oranlı responsive gömme (embed) alanları için kullanılan yardımcı sınıf hangisidir?",
+            "options": {
+                "A": "embed-responsive",
+                "B": "responsive-embed",
+                "C": "aspect-16by9",
+                "D": "ratio ratio-16x9",
+                "E": "video-fluid"
+            },
+            "correct": "D",
+            "explanation": "Oranlı gömme alanları, kapsayıcıya bir en-boy oranı vererek responsive hale getirilir. Bu yaklaşım iframe/video gibi içeriklerin taşmadan doğru oranda kalmasına yardımcı olur."
+        },
+        {
+            "No": 31,
+            "question": "Sayfanın üstüne sabitlenen bir navbar yapmak için Bootstrap’ta sık kullanılan yardımcı sınıf hangisidir?",
+            "options": {
+                "A": "fixed-top",
+                "B": "top-fixed",
+                "C": "navbar-sticky",
+                "D": "pin-top",
+                "E": "dock-top"
+            },
+            "correct": "A",
+            "explanation": "Öğe viewport’a sabitlenir ve kaydırmada görünür kalır. Üstte sabitlenen navbar’larda içerik üstten örtüşmesin diye sayfa gövdesine uygun bir üst boşluk eklemek gerekebilir."
+        },
+        {
+            "No": 32,
+            "question": "Bootstrap’ta yan panel (sidebar) gibi sayfadan kayan menü/alan için kullanılan bileşen hangisidir?",
+            "options": {
+                "A": "Sidebar",
+                "B": "Drawer",
+                "C": "Offcanvas",
+                "D": "Sidenav",
+                "E": "Panel"
+            },
+            "correct": "C",
+            "explanation": "Ekranın kenarından girip çıkan panel/menü desenini hazır olarak sunar ve çoğu zaman mobil menü veya filtre paneli gibi senaryolarda kullanılır. Etkileşimli olduğundan JS paketi gerektirir."
+        },
+        {
+            "No": 33,
+            "question": "Bootstrap carousel bileşeninin temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Form doğrulama yapmak",
+                "B": "Grid kolonlarını hesaplamak",
+                "C": "Arka plan rengini otomatik seçmek",
+                "D": "Dosya yüklemek",
+                "E": "Slayt/galeri gibi içerikleri sırayla göstermek"
+            },
+            "correct": "E",
+            "explanation": "Slayt/galeri tarzı içerikleri sırayla gösterir ve kontrol butonlarıyla gezinti sağlayabilir. Otomatik kaydırma kullanılıyorsa erişilebilirlik ve dikkat dağıtma etkisi düşünülmelidir."
+        },
+        {
+            "No": 34,
+            "question": "Bir listeyi Bootstrap tarzında ‘list group’ olarak göstermek için temel sınıf hangisidir?",
+            "options": {
+                "A": "group-list",
+                "B": "list-group",
+                "C": "ul-group",
+                "D": "list-style-group",
+                "E": "list-collection"
+            },
+            "correct": "B",
+            "explanation": "Listeyi “bileşen gibi” göstermek için kullanılan bir yapıdır; her öğe ayrı bir item sınıfıyla stillenir. Aktif/disabled durumları ve bağlantılı liste öğeleri için de hazır varyantlar bulunur."
+        },
+        {
+            "No": 35,
+            "question": "Bootstrap’ta küçük etiket/rozet (badge) göstermek için doğru kullanım hangisine en yakındır?",
+            "options": {
+                "A": "`tag tag-primary`",
+                "B": "`label label-info`",
+                "C": "`chip chip-primary`",
+                "D": "`badge bg-primary`",
+                "E": "`badge-primary-only`"
+            },
+            "correct": "D",
+            "explanation": "Küçük sayısal etiketler veya durum rozetleri için kullanılır. Temel rozet sınıfı + arka plan yardımcılarıyla tema verilir; pill görünüm için de ek bir yardımcı tercih edilebilir."
+        }
+    ]
+}
