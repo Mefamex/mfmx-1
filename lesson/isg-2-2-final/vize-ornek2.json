@@ -25,7 +25,7 @@
                 "D": "İş kazası sonucu yaralanan işçinin ailesi, işçinin bedensel bütünlüğünde oluşan zararı gerekçe göstererek işverenden maddi tazminat talep edemezler."
             },
             "correct": "B",
-            "explanation": "İçerik olarak da yanlış ifade B seçeneğidir."
+            "explanation": "İçerik olarak da yanlış ifade zaten diyor gpt abi."
         },
         {
             "No": 3,
@@ -116,7 +116,7 @@
                 "D": "15"
             },
             "correct": "A",
-            "explanation": "Revize anahtarda A (1 gün) önerilse de 5510 kapsamında iş kazasında geçici iş göremezlik ödeneği için prim/sigortalılık günü şartı aranmaz; mevcut seçenekler mevzuatla tam uyumlu değildir."
+            "explanation": "Revize anahtarda 1 GÜN önerilse de 5510 kapsamında iş kazasında geçici iş göremezlik ödeneği için prim/sigortalılık günü şartı aranmaz; mevcut seçenekler mevzuatla tam uyumlu değildir."
         },
         {
             "No": 11,
@@ -128,7 +128,7 @@
                 "D": "İşyerinde kule vincin devrilmesi"
             },
             "correct": "B",
-            "explanation": "Revize anahtarda D işaretlenmiştir; ayrıca Yargıtay içtihatlarında işyerinde gerçekleşen intihar olayları da koşullara göre iş kazası sayılabildiğinden bu soru kaynaklar arasında tartışmalı kabul edilir."
+            "explanation": "Revize anahtarda kule vinci işaretlenmiştir; ayrıca Yargıtay içtihatlarında işyerinde gerçekleşen intihar olayları da koşullara göre iş kazası sayılabildiğinden bu soru kaynaklar arasında tartışmalı kabul edilir."
         },
         {
             "No": 12,
@@ -164,7 +164,7 @@
                 "D": "Vardiyalı çalışmalarda"
             },
             "correct": "B",
-            "explanation": "Revize anahtarda A (1. saat) kabul edilmiştir; işe başlangıç periyodunda dikkat uyumu ve organizasyon kaynaklı risk artışı nedeniyle ilk saat vurgulanır."
+            "explanation": "Revize anahtarda 1. saat kabul edilmiştir; işe başlangıç periyodunda dikkat uyumu ve organizasyon kaynaklı risk artışı nedeniyle ilk saat vurgulanır."
         },
         {
             "No": 15,
