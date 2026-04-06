@@ -448,11 +448,11 @@
             "options": {
                 "A": "Man (İnsan faktörü)",
                 "B": "Makine (Ekipman/fiziksel faktör)",
-                "C": "Medya",
+                "C": "Medya (basın)",
                 "D": "Yönetim"
             },
             "correct": "C",
-            "explanation": "4M içinde medya yer almaz. Neden olduğunu bilmiyom. hocaya sormak lazım. İngilizce media diye var pdf'te. Bir de yönetim(management), M var"
+            "explanation": "Medya, ortam olan media. Basın olan değil"
         },
         {
             "No": 39,
