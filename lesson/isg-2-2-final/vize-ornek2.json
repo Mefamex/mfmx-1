@@ -25,7 +25,7 @@
                 "D": "İş kazası sonucu yaralanan işçinin ailesi, işçinin bedensel bütünlüğünde oluşan zararı gerekçe göstererek işverenden maddi tazminat talep edemezler."
             },
             "correct": "B",
-            "explanation": "İçerik olarak da yanlış ifade B seçeneğidir."
+            "explanation": "İçerik olarak da yanlış ifade zaten diyor gpt abi."
         },
         {
             "No": 3,
@@ -65,7 +65,7 @@
         },
         {
             "No": 6,
-            "question": "(Soru 5 ile aynıdır)",
+            "question": "Aşağıdaki durumlardan hangisinde acil durum planı hazırlanması gerekir?",
             "options": {
                 "A": "İşyeri koşullarını iyileştirmek amacıyla",
                 "B": "Meslek hastalıklarını önlemek amacıyla",
@@ -73,7 +73,7 @@
                 "D": "Yangın, sel, deprem, patlama vb. felaketlerin oluşum olasılığını önlemek amacıyla"
             },
             "correct": "D",
-            "explanation": "Soru 5 ile aynı olduğundan cevap da D'dir."
+            "explanation": "Acil durum planı yangın/deprem/patlama gibi afet ve acil durumlar için hazırlanır."
         },
         {
             "No": 7,
@@ -115,8 +115,8 @@
                 "C": "7",
                 "D": "15"
             },
-            "correct": "",
-            "explanation": "Revize anahtarda A (1 gün) önerilse de 5510 kapsamında iş kazasında geçici iş göremezlik ödeneği için prim/sigortalılık günü şartı aranmaz; mevcut seçenekler mevzuatla tam uyumlu değildir."
+            "correct": "A",
+            "explanation": "Revize anahtarda 1 GÜN önerilse de 5510 kapsamında iş kazasında geçici iş göremezlik ödeneği için prim/sigortalılık günü şartı aranmaz; mevcut seçenekler mevzuatla tam uyumlu değildir."
         },
         {
             "No": 11,
@@ -128,7 +128,7 @@
                 "D": "İşyerinde kule vincin devrilmesi"
             },
             "correct": "B",
-            "explanation": "Revize anahtarda D işaretlenmiştir; ayrıca Yargıtay içtihatlarında işyerinde gerçekleşen intihar olayları da koşullara göre iş kazası sayılabildiğinden bu soru kaynaklar arasında tartışmalı kabul edilir."
+            "explanation": "Revize anahtarda kule vinci işaretlenmiştir; ayrıca Yargıtay içtihatlarında işyerinde gerçekleşen intihar olayları da koşullara göre iş kazası sayılabildiğinden bu soru kaynaklar arasında tartışmalı kabul edilir."
         },
         {
             "No": 12,
@@ -164,7 +164,7 @@
                 "D": "Vardiyalı çalışmalarda"
             },
             "correct": "B",
-            "explanation": "Revize anahtarda A (1. saat) kabul edilmiştir; işe başlangıç periyodunda dikkat uyumu ve organizasyon kaynaklı risk artışı nedeniyle ilk saat vurgulanır."
+            "explanation": "Revize anahtarda 1. saat kabul edilmiştir; işe başlangıç periyodunda dikkat uyumu ve organizasyon kaynaklı risk artışı nedeniyle ilk saat vurgulanır."
         },
         {
             "No": 15,
@@ -236,7 +236,7 @@
                 "D": "1950-1955"
             },
             "correct": "A",
-            "explanation": "Tarihsel olarak 1932/1946 bilgisi bilinir; seçeneklerde 1932 yok, bu yüzden en yakın ve beklenen seçenek A'dır."
+            "explanation": "Tarihsel olarak 1932/1946 bilgisi bilinir; seçeneklerde 1932 yok, bu yüzden en yakın ve beklenen seçenek 39-46"
         },
         {
             "No": 21,
@@ -332,7 +332,7 @@
                 "D": "İhbar tazminatı"
             },
             "correct": "B",
-            "explanation": "Revize anahtarda D (ihbar tazminatı) tercih edilmiştir; ihbar tazminatı fesih rejimiyle ilgilidir. Bu nedenle soru, tazminat türlerinin kapsamına göre kaynaklar arasında tartışmalı yorum içerebilir."
+            "explanation": "Revize anahtarda ihbar tazminatı tercih edilmiştir; ihbar tazminatı fesih rejimiyle ilgilidir. Bu nedenle soru, tazminat türlerinin kapsamına göre kaynaklar arasında tartışmalı yorum içerebilir."
         },
         {
             "No": 29,
@@ -356,7 +356,7 @@
                 "D": "Sektörel kaza sıklık hızı"
             },
             "correct": "B",
-            "explanation": "Bu formül iş kazası ağırlık oranını verir."
+            "explanation": "Bu formül iş kazası AĞIRLIK oranını verir."
         },
         {
             "No": 31,
@@ -440,7 +440,7 @@
                 "D": "Domino teorisi"
             },
             "correct": "B",
-            "explanation": "Bu listede standart kabul edilmeyen seçenek çift etken teorisidir."
+            "explanation": "Bu listede standart kabul edilmeyen seçenek çift etken teorisidir. ÇOK ETKEN teorisi var..."
         },
         {
             "No": 38,
@@ -448,11 +448,11 @@
             "options": {
                 "A": "Man (İnsan faktörü)",
                 "B": "Makine (Ekipman/fiziksel faktör)",
-                "C": "Medya",
+                "C": "Medya (basın)",
                 "D": "Yönetim"
             },
             "correct": "C",
-            "explanation": "4M içinde medya yer almaz."
+            "explanation": "Medya, ortam olan media. Basın olan değil"
         },
         {
             "No": 39,
@@ -476,7 +476,7 @@
                 "D": "10000 gün"
             },
             "correct": "C",
-            "explanation": "Kaza ağırlık oranı hesabında ölüm/sürekli iş göremezlik için 7500 gün kullanılır."
+            "explanation": "Kaza ağırlık oranı hesabında ölüm/sürekli iş göremezlik için 7.500 gün kullanılır."
         },
         {
             "No": 41,
