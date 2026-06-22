@@ -20,7 +20,7 @@ const firebaseConfig = {
     messagingSenderId: "534342191957",
     appId: "1:534342191957:web:94d716820c6097d04b3ddc",
     measurementId: "G-6H5LN5T7V3"
-};
+};/* Note: This API key is protected by strict domain filters. Reusing it elsewhere will not work.*/
 
 let debugMode = false;
 
