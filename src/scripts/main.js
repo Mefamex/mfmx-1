@@ -5,15 +5,19 @@
  * @license MIT
  * @see https://mefamex.com
  * @since 2024-09-13 
- * @lastModified 2025-09-13-T00:00:00Z
+ * @lastModified 2026-06-22-T00:00:00Z
  */
 
 
 // Fonksiyonları sırayla çalıştırma
-async function runAll() {
-    try { initClarity(); } catch (e) { console.warn("Clarity init failed:", e); }
-    try { await displayDeveloperMessage(); } catch (e) { console.warn("Developer message display failed:", e); }
-} runAll();
+(async () => {
+        try { initClarity(); } catch (e) { console.warn("Clarity init failed:", e); }
+        try { await displayDeveloperMessage(); } catch (e) { console.warn("Developer message display failed:", e); }
+        try { initZiyaretciAnalizi(); } catch (e) { console.warn("Ziyaretçi analizi başlatılamadı:", e); }
+    }
+
+)();
+
 
 async function initClarity() { (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt"; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", "t71705cgbn"); };
 
@@ -28,3 +32,4 @@ async function displayDeveloperMessage() {
 }
 
 
+const initZiyaretciAnalizi = () => document.body.appendChild(Object.assign(document.createElement('script'), { type: 'module', src: '/src/scripts/who.js' }));
