@@ -4,7 +4,7 @@
  * @copyright 2024 Mefamex
  * @license MIT
  * @version 1.0.0
- * @see https://mefamex.com
+ * @see https://www.mefamex.com
  * @since 10.09.2024
  * @lastModified 15.09.2024
  */

@@ -3,7 +3,7 @@
  * @author Mefamex <info@mefamex.com> 
  * @copyright 2024 Mefamex
  * @license MIT
- * @see https://mefamex.com
+ * @see https://www.mefamex.com
  * @since 2024-08-20 
  * @lastModified 2025-09-03-T00:00:00Z
  */
@@ -18,7 +18,7 @@ function getScriptPath() {
     // bu ikisi saçma şekilde tarayıcı tarafından hata veriyor. dinamik yüklemede tarayıcı niye kendi dizininde arasında amk
     // absolute path vermeme rağmen tarayıcı bunu benim sitemin kök dizininden başlıyarak alması gerektiğini çözemiyor. 
     // frameworklerde bu hata çözümlüştü....
-    const fallbackPath = 'https://mefamex.com/src/components/importHeaderFooter.js';
+    const fallbackPath = 'https://www.mefamex.com/src/components/importHeaderFooter.js';
     console.log('⚠️ HeaderFooter Script yolu bulunamadı! Varsayılan konum kullanılıyor:', fallbackPath);
     return fallbackPath;
 };
@@ -64,7 +64,7 @@ async function CreateFooter() {
             <span> &copy; 2014-&infin; Mefamex, All rights reserved </span> 
         </div> 
         <div id="footerMid">
-            <a href="https://mefamex.com" title="Anasayfa"> <img src="${scriptPath.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png')}" alt="MEFAMEX"> </a> 
+            <a href="https://www.mefamex.com" title="Anasayfa"> <img src="${scriptPath.replace('importHeaderFooter.js', 'mefamex_logo_bgb.png')}" alt="MEFAMEX"> </a> 
         </div>
         <div id='footerRight'> 
             <a href="https://github.com/Mefamex" target="_blank" rel="noopener noreferrer" title="Github"> <img src="${scriptPath.replace('components/importHeaderFooter.js', 'assets/icons/black/64x64/github_icon.png')}" alt="GitHub" > </a> 
@@ -124,7 +124,7 @@ async function CreateHeader() {
     if (window.innerWidth < 600) { header.classList.add('slim'); }
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
-    divLeft.id = "headerDivLeft"; divLeft.href = "https://mefamex.com"
+    divLeft.id = "headerDivLeft"; divLeft.href = "https://www.mefamex.com"
 
     const divLeftDiv = document.createElement("div"); divLeft.appendChild(divLeftDiv);
     divLeftDiv.id = "headerDivLefticonDiv";

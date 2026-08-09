@@ -3,9 +3,9 @@
 =========================================================================
 "PERSON"   : "Mehmet Akif AKKOÇ"
 "USERNAME" : "mefamex"
-"WEBSITE"  : "https://mefamex.com"
+"WEBSITE"  : "https://www.mefamex.com"
 "INSTAGRAM": "@mefamex"
-"GITHUB"   : "@mefamex" 
+"GITHUB"   : "@mefamex"
 =========================================================================
 
 =========================================================================

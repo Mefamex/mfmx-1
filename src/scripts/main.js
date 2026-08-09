@@ -3,7 +3,7 @@
  * @author Mefamex <info@mefamex.com> 
  * @copyright 2024 Mefamex
  * @license MIT
- * @see https://mefamex.com
+ * @see https://www.mefamex.com
  * @since 2024-09-13 
  * @lastModified 2026-06-22-T00:00:00Z
  */
@@ -29,7 +29,7 @@ async function displayDeveloperMessage() {
     const noteStyle = 'color:#bcdcff; font-size:11px; font-family:cursive';
     const linkline = 'color:#0096ff; text-decoration:none;';
     const linkStyle = 'color:#0096ff; text-decoration:underline;';
-    console.log('%cMEFAMEX%c\npersonal website%c\n\n Eğer geliştiriciyseniz, sohbet etmek için neden iletişime geçmiyorsunuz? 📬 %c\n\nİletişim -> %chttps://mefamex.com/contact/ %c\nGithub   -> %chttps://github.com/Mefamex/mfmx-1', titleStyle, subtitleStyle, noteStyle, linkline, linkStyle, linkline, linkStyle);
+    console.log('%cMEFAMEX%c\npersonal website%c\n\n Eğer geliştiriciyseniz, sohbet etmek için neden iletişime geçmiyorsunuz? 📬 %c\n\nİletişim -> %chttps://www.mefamex.com/contact/ %c\nGithub   -> %chttps://github.com/Mefamex/mfmx-1', titleStyle, subtitleStyle, noteStyle, linkline, linkStyle, linkline, linkStyle);
 }
 
 

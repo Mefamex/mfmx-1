@@ -1,6 +1,6 @@
 #  MEFAMEX - Kişisel Web Sitesi <img align="right" src="https://raw.githubusercontent.com/Mefamex/Mefamex/refs/heads/main/mefamex_logo_bgb(2).png" alt="mefamex_Website" height="35rem" style="max-width: 100%; height: auto; max-height: 15rem;">
 
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fmefamex.com)](https://mefamex.com)
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fmefamex.com)](https://www.mefamex.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Mefamex/mfmx-1)](https://github.com/Mefamex/mfmx-1)
 [![GitHub stars](https://img.shields.io/github/stars/Mefamex/mfmx-1)](https://github.com/Mefamex/mfmx-1/stargazers)
@@ -33,7 +33,7 @@
 
 ## 🎯 Website Hakkında
 
-**MEFAMEX** [mefamex.com](https://mefamex.com), kişisel bir web sitesidir. Site, modern web teknolojileri kullanılarak geliştirilmiş olup, responsive tasarım, SEO optimizasyonu ve yüksek performans odaklıdır. Tasarım ve göz alıcılık arka plandadır.
+**MEFAMEX** [www.mefamex.com](https://www.mefamex.com), kişisel bir web sitesidir. Site, modern web teknolojileri kullanılarak geliştirilmiş olup, responsive tasarım, SEO optimizasyonu ve yüksek performans odaklıdır. Tasarım ve göz alıcılık arka plandadır.
 
 
 <br>
@@ -318,7 +318,7 @@ tamamı yasal koruma altındadır.
 
 ✅ Eğitim amaçlı referans gösterilebilir (kaynak belirtilerek)
 ✅ İzin almak için: 
-    🌐 mefamex.com/contact
+    🌐 www.mefamex.com/contact
     ✉️ info@mefamex.com
 
 Yasal uyarı: Bu içeriklerin izinsiz kullanımı 5846 sayılı 
@@ -345,17 +345,17 @@ Fikir ve Sanat Eserleri Kanunu kapsamında suç teşkil eder.
 
 ### 👨‍💻 Geliştirici: Mehmet Akif Akkoç
 
-- 🌐 **Website:** [mefamex.com](https://mefamex.com)
+- 🌐 **Website:** [www.mefamex.com](https://www.mefamex.com)
 - 📧 **Email:** [info@mefamex.com](mailto:info@mefamex.com)
 - 💼 **LinkedIn:** [linkedin.com/in/mefamex](https://linkedin.com/in/mefamex)
 - 🐙 **GitHub:** [github.com/Mefamex](https://github.com/Mefamex)
 - 📸 **Instagram:** [@mefamex](https://instagram.com/mefamex)
 
 ### 🔗 Bağlantılar
-- 📖 **Blog:** [mefamex.com/blog](https://mefamex.com/blog/)
-- 🛠️ **Projeler:** [mefamex.com/projects](https://mefamex.com/projects/)
-- 📄 **CV:** [mefamex.com/cv](https://mefamex.com/cv/)
-- 📞 **İletişim:** [mefamex.com/contact](https://mefamex.com/contact/)
+- 📖 **Blog:** [mefamex.com/blog](https://www.mefamex.com/blog/)
+- 🛠️ **Projeler:** [mefamex.com/projects](https://www.mefamex.com/projects/)
+- 📄 **CV:** [mefamex.com/cv](https://www.mefamex.com/cv/)
+- 📞 **İletişim:** [mefamex.com/contact](https://www.mefamex.com/contact/)
 
 
 <br><br><br>
@@ -370,7 +370,7 @@ Fikir ve Sanat Eserleri Kanunu kapsamında suç teşkil eder.
 
 **⭐ Eğer bu belgeyi okuduysan, star vermeyi unutmayın!**
 
-Made with ❤️ by [MEFAMEX](https://mefamex.com)
+Made with ❤️ by [MEFAMEX](https://www.mefamex.com)
 
 </div>
 

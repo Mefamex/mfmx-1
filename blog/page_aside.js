@@ -4,7 +4,7 @@
  * @copyright 2024 Mefamex
  * @license MIT
  * @version 1.0.0
- * @see https://mefamex.com/
+ * @see https://www.mefamex.com/
  * @since 2025-02-22
  * @lastModified 2025-02-22
  */
@@ -50,11 +50,11 @@ async function CreateAside() {
     aside.innerHTML = `
     <h2>SON DEĞİŞENLER</h2>
                 <ul>
-                    <li ><a href="https://mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
-                    <li ><a href="https://mefamex.com/projects/html-css-book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/kali-linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
-                    <li ><a href="https://mefamex.com/projects/dizin-listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
+                    <li ><a href="https://www.mefamex.com/projects/image-meta-dataset/" > Image Meta Dataset </a> <p class="p_tooltip noSelect">30.01.2025</p></li>
+                    <li ><a href="https://www.mefamex.com/projects/html-css-book/" > Html-Css Kitaplığı </a>      <p class="p_tooltip noSelect">25.12.2024</p></li>
+                    <li ><a href="https://www.mefamex.com/projects/python-to-exe/" > Python To Exe </a>           <p class="p_tooltip noSelect">18.12.2024</p></li>
+                    <li ><a href="https://www.mefamex.com/projects/kali-linux/" > Kali Linux </a>                 <p class="p_tooltip noSelect">10.12.2024</p></li>
+                    <li ><a href="https://www.mefamex.com/projects/dizin-listeleme/" > Dizin Listeme </a>         <p class="p_tooltip noSelect">09.12.2024</p></li>
                     <li>Tasarıma başlandı <p class="p_tooltip noSelect">07.12.2024</p></li>
                     <li>Sayfa tasarımı <p class="p_tooltip noSelect">05.12.2024</p></li>
                     <li>Talepler toplandı <p class="p_tooltip noSelect">18.11.2024</p></li>

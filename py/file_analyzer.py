@@ -44,7 +44,7 @@ IGNORED_FOLDERS_NAME = {
 IGNORED_FOLDERS_STARTS_WITH = {'.', '__'}
 IGNORED_FOLDERS_ENDS_WITH = { '__pycache__' }
 # NAME ? 
-PROJECT_NAME = "mefamex.com"  # Path(os.getcwd()).name
+PROJECT_NAME = "www.mefamex.com"  # Path(os.getcwd()).name
 
 
 text = f'# Created for : {PROJECT_NAME}\n# Created on  : ' + datetime.datetime.now().isoformat(timespec='seconds') + 'Z\n'

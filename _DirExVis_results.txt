@@ -1,61 +1,51 @@
-# Created for : mefamex.com files
-# Created on  : 2026-01-08T21:57:05Z
+# Created for : www.mefamex.com files
+# Created on  : 2026-08-09T18:22:36Z
 
-/run/media/mfmx/D/SOFTWARE/WEB/Websites/mfmx-1
+/mnt/DiskD/SOFTWARE/Github-repos/mfmx-1
 |      about
 |      |      index.html
+|      the-mefamex-project
+|      |      index.html
+|      |      style.css
 |      blog
-|      |      go-(golang)-nedir
-|      |      |      golang-0.md
-|      |      |      golang-1.md
-|      |      |      golang-2.0.md
-|      |      |      golang-2.1.md
-|      |      |      golang-3-local.md
-|      |      ozlu-sozler
-|      |      |      index.html
 |      |      set-active-brain
+|      |      |      last.md
 |      |      |      ben insanın düşünce yoluyla yani zihniyle bir çok.md
 |      |      |      cerebramax.md
-|      |      |      last.md
-|      |      yapay-zeka-ile-gencin-itibar-savasi
-|      |      |      file(1).md
-|      |      |      file.md
-|      |      |      index.html
-|      |      yapay-zeka-insanin-yerini-alabilir-mi
+|      |      go-(golang)-nedir
+|      |      |      golang-2.1.md
+|      |      |      golang-1.md
+|      |      |      golang-0.md
+|      |      |      golang-3-local.md
+|      |      |      golang-2.0.md
+|      |      zaman-yonetimi
 |      |      |      index.html
 |      |      yapilacaklarin-notlari
 |      |      |      history-of-a-conv.md
-|      |      yazilim-gelistirme-kaynaklari
+|      |      ozlu-sozler
 |      |      |      index.html
 |      |      yazilimci-ve-beyni
 |      |      |      beyin ihyaçları.md
-|      |      |      beyinde kullanılan fonksiyonlar ve ihtiyaçları.md
 |      |      |      last.md
+|      |      |      beyinde kullanılan fonksiyonlar ve ihtiyaçları.md
 |      |      |      Yazılım Mühendisliğinde Beyin Fonksiyonlarının Kul.md
-|      |      zaman-yonetimi
+|      |      yazilim-gelistirme-kaynaklari
+|      |      |      index.html
+|      |      yapay-zeka-ile-gencin-itibar-savasi
+|      |      |      file.md
+|      |      |      file(1).md
+|      |      |      index.html
+|      |      yapay-zeka-insanin-yerini-alabilir-mi
 |      |      |      index.html
 |      |      index.html
-|      |      not123712638727.txt
-|      |      page_aside.css
 |      |      page_aside.js
-|      |      style.css
-|      contact
-|      |      index.html
+|      |      page_aside.css
+|      |      not123712638727.txt
 |      |      style.css
 |      cv
+|      |      index.html
 |      |      cv-2.html
-|      |      index.html
 |      |      style copy.css
-|      |      style.css
-|      gallery
-|      |      pictures
-|      |      |      converted
-|      |      |      converted-100
-|      |      |      main.exe
-|      |      |      main.py
-|      |      |      picture-009.jpeg
-|      |      |      picture-010.jpeg
-|      |      index.html
 |      |      style.css
 |      games
 |      |      queaz
@@ -63,73 +53,94 @@
 |      |      |      queaz_game.js
 |      |      |      style.css
 |      |      index.html
-|      lesson
-|      |      gomulu-sistemler-final
-|      |      |      master.json
-|      |      |      unite-01-gomulu-sistemlere-giris.json
-|      |      |      unite-02-siniflandirma-ve-ozellikler.json
-|      |      |      unite-03-tasarim-sureci.json
-|      |      |      unite-04-donanim-bilesenleri.json
-|      |      |      unite-05-hafiza-yonetimi.json
-|      |      |      unite-06-sensorler-ve-aktuatorler.json
-|      |      |      unite-07-haberlesme-arabirimleri-i2c-spi-can.json
-|      |      |      unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json
-|      |      |      unite-09-gomulu-yazilim-tasarimi.json
-|      |      |      unite-10-rtos-giris.json
-|      |      |      unite-11-gorevler-arasi-haberlesme.json
-|      |      |      unite-12-proje-ve-sistem-entegrasyon.json
-|      |      |      unite-13-ders-notlari.json
-|      |      |      unite-14-kritik-onemli-kisimlar.json
-|      |      |      unite-15-derste-soylenilenler.json
-|      |      |      unite-16-online-derste-soylenilenler.json
-|      |      |      unite-17-icindekiler-konu-haritasi.json
-|      |      isletim-sistemleri-final
-|      |      |      master.json
-|      |      |      unite-01-giris.json
-|      |      |      unite-02-giris-cikis-sistemi.json
-|      |      |      unite-03-gorev-yonetimi.json
-|      |      |      unite-04-birlikte-calisan-gorevler.json
-|      |      |      unite-05-ana-bellek-yonetimi.json
-|      |      |      unite-06-kutuk-yonetimi.json
-|      |      web-tasarımı-ve-programlama-final
-|      |      |      master.json
-|      |      |      unite-01-html.json
-|      |      |      unite-02-css.json
-|      |      |      unite-03-javascript.json
-|      |      |      unite-04-bootstrap.json
-|      |      |      unite-05-jquery.json
-|      |      index.html
+|      sitemap
+|      |      sitemap_pages.xml
 |      mystream
 |      |      index.html
 |      |      script.js
 |      |      style.css
+|      sweetmonstermia
+|      |      Kalsin
+|      |      |      P1030959.JPG
+|      |      |      P1050520.JPG
+|      |      index.html
+|      contact
+|      |      index.html
+|      |      style.css
+|      src
+|      |      styles
+|      |      |      normalize.css
+|      |      |      home.css
+|      |      data
+|      |      |      navigation.json
+|      |      components
+|      |      |      x.ico
+|      |      |      headerFooter.css
+|      |      |      importHeaderFooter.js
+|      |      |      =.ico
+|      |      assets
+|      |      |      icons
+|      |      |      |      black
+|      |      |      |      |      64x64
+|      |      |      |      x.ico
+|      |      |      |      =.ico
+|      |      |      fontss
+|      |      |      images
+|      |      |      |      mfmx_symbol
+|      |      |      |      |      mefamex_logo.svg
+|      |      |      |      mfmx
+|      |      |      |      background
+|      |      |      |      |      gnpToWebp.py
+|      |      |      |      mfmx_icon
+|      |      |      |      language_img
+|      |      |      |      |      png
+|      |      |      |      |      asil
+|      |      scripts
+|      |      |      main.js
+|      |      |      who.js
+|      |      |      ziyaretciInfo.js
+|      |      My_nots
+|      |      |      link_rel.txt
+|      |      |      Legal_terms.txt
+|      |      |      Privacy_Policy.txt
+|      |      |      privacy-policy(2).txt
+|      |      |      SSS.txt
 |      projects
-|      |      dizin-listeleme
+|      |      kali-linux
+|      |      |      index.html
+|      |      python-to-exe
 |      |      |      index.html
 |      |      html-css-book
-|      |      |      index.html
-|      |      image-meta-dataset
-|      |      |      index.html
-|      |      kali-change-boot-background
-|      |      |      image
-|      |      |      index.html
-|      |      kali-linux
 |      |      |      index.html
 |      |      lisans-puan-hesaplama
 |      |      |      index.html
 |      |      |      script.js
 |      |      |      style.css
-|      |      python-to-exe
+|      |      dizin-listeleme
 |      |      |      index.html
 |      |      yedekleme
 |      |      |      _freelance
-|      |      |      |      Gtin-VeriGirme-otomasyon.js
 |      |      |      |      Uyap_ihale_bot.js
-|      |      eklenicek-pyToExeWithCODES.txt
+|      |      |      |      Gtin-VeriGirme-otomasyon.js
+|      |      image-meta-dataset
+|      |      |      index.html
+|      |      kali-change-boot-background
+|      |      |      image
+|      |      |      index.html
 |      |      index.html
-|      |      page_aside.css
 |      |      page_aside.js
+|      |      page_aside.css
 |      |      script.js
+|      |      style.css
+|      |      eklenicek-pyToExeWithCODES.txt
+|      software
+|      |      index.html
+|      |      output.json
+|      |      Yazilim_Ayrintili.txt
+|      |      tempCodeRunnerFile.py
+|      |      cevir.py
+|      |      script.js
+|      |      input.txt
 |      |      style.css
 |      py
 |      |      Filetree
@@ -138,86 +149,84 @@
 |      |      Linktree
 |      |      |      LinkTreeCreator.py
 |      |      |      link_tree.json
-|      |      FileLister.js
-|      |      FileLister.py
+|      |      htmlHeaderAdd.py
 |      |      file_analyzer.py
 |      |      gnpToWebp.py
-|      |      htmlHeaderAdd.py
+|      |      FileLister.py
+|      |      FileLister.js
 |      |      sitemapCreator.py
-|      sitemap
-|      |      sitemap_pages.xml
-|      software
-|      |      cevir.py
-|      |      index.html
-|      |      input.txt
-|      |      output.json
-|      |      script.js
-|      |      style.css
-|      |      tempCodeRunnerFile.py
-|      |      Yazilim_Ayrintili.txt
-|      src
-|      |      assets
-|      |      |      fontss
-|      |      |      icons
-|      |      |      |      black
-|      |      |      |      |      64x64
-|      |      |      |      =.ico
-|      |      |      |      x.ico
-|      |      |      images
-|      |      |      |      background
-|      |      |      |      |      gnpToWebp.py
-|      |      |      |      language_img
-|      |      |      |      |      asil
-|      |      |      |      |      png
-|      |      |      |      mfmx
-|      |      |      |      mfmx_icon
-|      |      |      |      mfmx_symbol
-|      |      components
-|      |      |      =.ico
-|      |      |      headerFooter.css
-|      |      |      importHeaderFooter.js
-|      |      |      x.ico
-|      |      data
-|      |      |      navigation.json
-|      |      My_nots
-|      |      |      Legal_terms.txt
-|      |      |      link_rel.txt
-|      |      |      privacy-policy(2).txt
-|      |      |      Privacy_Policy.txt
-|      |      |      SSS.txt
-|      |      scripts
-|      |      |      main.js
-|      |      styles
-|      |      |      home.css
-|      |      |      normalize.css
-|      sweetmonstermia
-|      |      Kalsin
-|      |      |      P1030959.JPG
-|      |      |      P1050520.JPG
-|      |      index.html
-|      the-mefamex-project
+|      |      cleaner.sh
+|      gallery
+|      |      pictures
+|      |      |      converted
+|      |      |      converted-100
+|      |      |      picture-009.jpeg
+|      |      |      main.py
+|      |      |      main.exe
+|      |      |      picture-010.jpeg
 |      |      index.html
 |      |      style.css
-|      package.json
+|      lesson
+|      |      gomulu-sistemler-2-1-final
+|      |      |      unite-15-derste-soylenilenler.json
+|      |      |      unite-02-siniflandirma-ve-ozellikler.json
+|      |      |      unite-05-hafiza-yonetimi.json
+|      |      |      unite-01-gomulu-sistemlere-giris.json
+|      |      |      unite-13-ders-notlari.json
+|      |      |      unite-07-haberlesme-arabirimleri-i2c-spi-can.json
+|      |      |      unite-16-online-derste-soylenilenler.json
+|      |      |      unite-04-donanim-bilesenleri.json
+|      |      |      unite-12-proje-ve-sistem-entegrasyon.json
+|      |      |      unite-17-icindekiler-konu-haritasi.json
+|      |      |      unite-14-kritik-onemli-kisimlar.json
+|      |      |      unite-08-haberlesme-arabirimleri-uart-rs-kablosuz.json
+|      |      |      unite-03-tasarim-sureci.json
+|      |      |      unite-10-rtos-giris.json
+|      |      |      master.json
+|      |      |      unite-11-gorevler-arasi-haberlesme.json
+|      |      |      unite-09-gomulu-yazilim-tasarimi.json
+|      |      |      unite-06-sensorler-ve-aktuatorler.json
+|      |      web-tasarımı-2-1-final
+|      |      |      unite-01-html.json
+|      |      |      unite-04-bootstrap.json
+|      |      |      unite-03-javascript.json
+|      |      |      master.json
+|      |      |      unite-02-css.json
+|      |      |      unite-05-jquery.json
+|      |      isletim-sistemleri-2-1-final
+|      |      |      unite-03-gorev-yonetimi.json
+|      |      |      unite-06-kutuk-yonetimi.json
+|      |      |      unite-02-giris-cikis-sistemi.json
+|      |      |      unite-01-giris.json
+|      |      |      master.json
+|      |      |      unite-04-birlikte-calisan-gorevler.json
+|      |      |      unite-05-ana-bellek-yonetimi.json
+|      |      isg-2-2-final
+|      |      |      vize-ornek2.json
+|      |      |      vize-ornek1.json
+|      |      |      master.json
+|      |      index.html
+|      visitor-info.html
+|      llm.txt
+|      notlarım472948288433.txt
+|      index.html
+|      domain_notes.md
+|      robots.txt
+|      sitemap.xml
+|      llms.txt
+|      LICENSE
 |      404.html
+|      linktree.html
+|      lafsok.txt
+|      YAPILACAKLAR.txt
+|      navigation.json
+|      site.webmanifest
+|      yandex_dc1b74278af14447.html
+|      README.md
+|      498d435138c64edd99d6a1ec4d4c885d.txt
 |      BingSiteAuth.xml
 |      browserconfig.xml
-|      domain_notes.md
-|      e73328461d254a239f324bc84e3c0c2d.txt
 |      filetree.html
-|      index.html
-|      linktree.html
-|      llm.txt
-|      llms.txt
-|      navigation.json
-|      notlarım472948288433.txt
-|      README.md
-|      robots.txt
-|      site.webmanifest
-|      sitemap.xml
-|      visitor-info.html
-|      yandex_dc1b74278af14447.html
-|      YAPILACAKLAR.txt
-|      ziyaretciInfo.js
+|      package.json
 |      _DirExVis_results.txt
 |      _folder_analysis_results.txt

@@ -258,7 +258,7 @@ class DirExVis:
         Returns:
             None
         """
-        self.data_str ='# Created for : mefamex.com files\n# Created on  : ' + datetime.datetime.now().isoformat(timespec='seconds') + 'Z\n\n' + self.data_str
+        self.data_str ='# Created for : www.mefamex.com files\n# Created on  : ' + datetime.datetime.now().isoformat(timespec='seconds') + 'Z\n\n' + self.data_str
 
         os.chdir(self.path)
         with open(

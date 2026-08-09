@@ -2,7 +2,7 @@
 
 /*
 * @author     : mefamex 
-* @website    : https://mefamex.com/
+* @website    : https://www.mefamex.com/
 * @copyright  : © 2025 Mefamex | All right reserved.
 * @file       : headerFooter.css
 * @created    : 2024-08-20
@@ -480,6 +480,7 @@ header .pageA:not(.showImg) img {
 header .pageA.showImg.showText {
     gap: 0.3rem;
 }
+
 /*
 *
 *

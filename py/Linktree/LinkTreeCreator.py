@@ -12,7 +12,7 @@ Description:
     çıktısı üretme gibi özellikler içerir.
 
 Author:
-    @mefamex (info@mefamex.com) (https://mefamex.com)
+    @mefamex (info@mefamex.com) (https://www.mefamex.com)
 
 Features: 
     - Belirtilen ana dizinden başlayarak tüm alt dizinlerdeki .html dosyalarını bulur.
@@ -75,12 +75,12 @@ Contributors: None
 Contact:
     - E-mail: info@mefamex.com
     - GitHub: https://github.com/Mefamex 
-    - Web   : https://mefamex.com/contact/
+    - Web   : https://www.mefamex.com/contact/
 
 Additional Information: None
 
 Notes:
-    - Bu modul, `https://mefamex.com` adresi için özel olarak tasarlanmıştır.
+    - Bu modul, `https://www.mefamex.com` adresi için özel olarak tasarlanmıştır.
 
 Disclaimer and Legal Notice:
     Bu yazılım, herhangi bir garanti olmaksızın "olduğu gibi" sağlanmaktadır. Yazar, bu yazılımın kullanımı sonucunda oluşabilecek herhangi bir zarardan sorumlu değildir. Kullanıcılar, yazılımı kendi sorumlulukları altında kullanmalıdır.
@@ -95,7 +95,7 @@ __license__ = "MIT"
 __status__ = "PRODUCTION"  
 
 __project_name__ = "LinkTreeCreator"
-__url__ = "https://mefamex.com/py/Linktree/LinkTreeCreator.py"
+__url__ = "https://www.mefamex.com/py/Linktree/LinkTreeCreator.py"
 __url_github__ = "https://github.com/Mefamex/python-code-snippets"
 __copyright__ = "Copyright (c) 2025 Mefamex"
 __description__ = "Bir web sitesi için dizinlerdeki tüm .html dosyalarını tarayarak link ağacı (link tree) oluşturan Python uygulaması."
@@ -120,7 +120,7 @@ from typing import Optional
 
 
 
-BASE_URL = "https://mefamex.com" # base url for the links
+BASE_URL = "https://www.mefamex.com" # base url for the links
 
 class Walker_link:
     def __init__(self, name: str, path: str, url: str, date: str, relative_path : str):

@@ -22,4 +22,4 @@ Allow: /sitemap/sitemap_pages.xml
 Allow: /robots.txt
 Allow: /navigation.json
 
-Sitemap: https://mefamex.com/sitemap.xml
+Sitemap: https://www.mefamex.com/sitemap.xml

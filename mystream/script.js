@@ -4,7 +4,7 @@
  * @copyright 2024 Mefamex
  * @license MIT
  * @version 1.0.0
- * @see https://mefamex.com
+ * @see https://www.mefamex.com
  * @since 2024-12-08
  * @lastModified 2025-03-16
  */
@@ -100,7 +100,7 @@ function buttonCommentClicked(event) {
 
     if (commentedCount >= messages.length && post.querySelector('.commentForm') === null) {
         const tagPforCommentForm = document.createElement('p'); tagPforCommentForm.classList.add('commentForm');
-        tagPforCommentForm.innerHTML = 'Görüş ve önerileriniz için <a href="https://mefamex.com/contact/" title="contact-me" aria-label="contant-me" target="_blank" rel="noopener">iletişime geçebilirsiniz</a>. \n post id: ' + post.dataset.postid;
+        tagPforCommentForm.innerHTML = 'Görüş ve önerileriniz için <a href="https://www.mefamex.com/contact/" title="contact-me" aria-label="contant-me" target="_blank" rel="noopener">iletişime geçebilirsiniz</a>. \n post id: ' + post.dataset.postid;
         post.appendChild(tagPforCommentForm);
     }
     setTimeout(() => { buttonCommentClickedAfterDelay(button); }, 3000);

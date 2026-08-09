@@ -4,7 +4,7 @@ __project__ = "Image To Webp"
 __version__ = "1.0.0"
 __author__ = "Mefamex"
 __email__ = "info@mefamex.com"
-__url__ = "https://mefamex.com/projects/image_to_webp/"
+__url__ = "https://www.mefamex.com/projects/image_to_webp/"
 __license__ = "MIT"
 __description__ = "Image To Webp, çalıştığı klasordeki tüm resimleri webp formatına dönüştürmenizi sağlayan bir Python projesidir."
 __url_github__ = "https://github.com/mefamex/image_to_webp"
@@ -20,7 +20,7 @@ __dependencies__ = {
 
 ___doc___ = """
 Proje Adi: Image To Webp
-Yazar: Mefamex (info@mefamex.com) (https://mefamex.com)
+Yazar: Mefamex (info@mefamex.com) (https://www.mefamex.com)
 Lisans: MIT
 
 Aciklama:

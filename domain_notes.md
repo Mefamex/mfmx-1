@@ -1,6 +1,6 @@
 # DOMAIN NOTES 
 
-> mefamex.com <br>
+> www.mefamex.com <br>
 > created: 2025-09-02 <br>
 
 
@@ -42,12 +42,12 @@ CNAME kayıtları, alan adının başka bir alan adına yönlendirilmesini sağl
 
 - type : CNAME
 - name : (örnek) www
-- value : (örnek) mefamex.com
+- value : (örnek) www.mefamex.com
 - TTL : auto
 
 
 - type : CNAME
-- name : (örnek) mefamex.com
+- name : (örnek) www.mefamex.com
 - value : (örnek) mfmx.pages.dev
 - TTL : auto
 

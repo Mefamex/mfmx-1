@@ -1,7 +1,7 @@
 javascript: (() => {
-    console.log('\n\n %c Mefamex Product\n %c April 2025 %c \n\n %c https://mefamex.com', 'color: green; font-size: 1.5rem; font-weight: bold;', 'color: black; font-size: 1rem; font-weight: bold; background-color: yellow; padding: 0.2rem; border-radius: 0.5rem;', '', 'color: blue; font-size: 0.8rem; text-decoration: underline; cursor: pointer;');
+    console.log('\n\n %c Mefamex Product\n %c April 2025 %c \n\n %c https://www.mefamex.com', 'color: green; font-size: 1.5rem; font-weight: bold;', 'color: black; font-size: 1rem; font-weight: bold; background-color: yellow; padding: 0.2rem; border-radius: 0.5rem;', '', 'color: blue; font-size: 0.8rem; text-decoration: underline; cursor: pointer;');
     /*  Author  : Mefamex 
-            Website     : https://mefamex.com
+            Website     : https://www.mefamex.com
             Instagram   : https://www.instagram.com/mefamex 
         Date    : 2025-07-14
         Customer: https://bionluk.com/hgunay

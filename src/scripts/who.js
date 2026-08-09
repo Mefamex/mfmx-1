@@ -3,7 +3,7 @@
  * @author Mefamex <info@mefamex.com> 
  * @copyright 2026 Mefamex
  * @license MIT
- * @see https://mefamex.com
+ * @see https://www.mefamex.com
  * @since 2026-06-22
  * @lastModified 2026-06-22-T00:00:00Z
  */

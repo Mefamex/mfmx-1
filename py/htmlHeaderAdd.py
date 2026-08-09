@@ -4,7 +4,7 @@ from pathlib import Path
 
 HEADER_CONTENT = """
     <header id="header">
-        <a id="headerDivLeft" href="https://mefamex.com">
+        <a id="headerDivLeft" href="https://www.mefamex.com">
             <div id="headerDivLefticonDiv"><img src="/src/components/mefamex_logo_bgb.png" alt="mefamex_logo"></div>
             <div id="headerDivLeftText">MEFAMEX</div>
         </a>

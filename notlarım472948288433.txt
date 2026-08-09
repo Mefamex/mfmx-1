@@ -57,7 +57,7 @@ Dosya/Network İşlemleri
                 "@context": "https://schema.org",
                 "@type": "WebSite",
                 "name": "MEFAMEX",
-                "url": "https://mefamex.com",
+                "url": "https://www.mefamex.com",
                 "description": "Kişisel Web Sitesi | Hakkımda(CV) | İletişim | Sosyal Medya | Projeler | Blog",
                 "publisher": { "@type": "Person", "name": "Mehmet Akif Akkoç" },
                 "creator": { "@type": "Organization", "name": "MEFAMEX" },
@@ -71,16 +71,16 @@ Dosya/Network İşlemleri
                 "@context": "https://schema.org",
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://mefamex.com" },
-                    { "@type": "ListItem", "position": 3, "name": "CV", "item": "https://mefamex.com/cv/" },
-                    { "@type": "ListItem", "position": 4, "name": "Hakkımda", "item": "https://mefamex.com/about/" },
-                    { "@type": "ListItem", "position": 5, "name": "Blog", "item": "https://mefamex.com/blog/" },
-                    { "@type": "ListItem", "position": 6, "name": "İletişim", "item": "https://mefamex.com/contact/" },
-                    { "@type": "ListItem", "position": 7, "name": "Projeler", "item": "https://mefamex.com/projects/" },
-                    { "@type": "ListItem", "position": 8, "name": "Dizin Listeleme", "item": "https://mefamex.com/projects/dizin-listeleme" },
-                    { "@type": "ListItem", "position": 9, "name": "Kali Linux", "item": "https://mefamex.com/projects/kali-linux" },
-                    { "@type": "ListItem", "position": 10, "name": "HTML & CSS Book", "item": "https://mefamex.com/projects/html-css-book" },
-                    { "@type": "ListItem", "position": 11, "name": "Python to EXE", "item": "https://mefamex.com/projects/python-to-exe" }
+                    { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://www.mefamex.com" },
+                    { "@type": "ListItem", "position": 3, "name": "CV", "item": "https://www.mefamex.com/cv/" },
+                    { "@type": "ListItem", "position": 4, "name": "Hakkımda", "item": "https://www.mefamex.com/about/" },
+                    { "@type": "ListItem", "position": 5, "name": "Blog", "item": "https://www.mefamex.com/blog/" },
+                    { "@type": "ListItem", "position": 6, "name": "İletişim", "item": "https://www.mefamex.com/contact/" },
+                    { "@type": "ListItem", "position": 7, "name": "Projeler", "item": "https://www.mefamex.com/projects/" },
+                    { "@type": "ListItem", "position": 8, "name": "Dizin Listeleme", "item": "https://www.mefamex.com/projects/dizin-listeleme" },
+                    { "@type": "ListItem", "position": 9, "name": "Kali Linux", "item": "https://www.mefamex.com/projects/kali-linux" },
+                    { "@type": "ListItem", "position": 10, "name": "HTML & CSS Book", "item": "https://www.mefamex.com/projects/html-css-book" },
+                    { "@type": "ListItem", "position": 11, "name": "Python to EXE", "item": "https://www.mefamex.com/projects/python-to-exe" }
                 ]
             }
         </script>
@@ -89,11 +89,11 @@ Dosya/Network İşlemleri
     <!-- Güvenlik Meta Etiketleri -->
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self'; 
-    script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://docs.google.com https://mefamex.com https://*.mefamex.com; 
-    style-src 'self' 'unsafe-inline' https://mefamex.com https://*.mefamex.com; ; 
-    img-src 'self' https://mefamex.com https://*.mefamex.com  https://*.google.com data:; 
+    script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://docs.google.com https://www.mefamex.com https://*.mefamex.com; 
+    style-src 'self' 'unsafe-inline' https://www.mefamex.com https://*.mefamex.com; ; 
+    img-src 'self' https://www.mefamex.com https://*.mefamex.com  https://*.google.com data:; 
     frame-src https://docs.google.com; 
-    connect-src 'self' https://mefamex.com https://*.mefamex.com; ; 
+    connect-src 'self' https://www.mefamex.com https://*.mefamex.com; ; 
     font-src 'self'; 
     media-src 'self'; 
     object-src 'none'; 
