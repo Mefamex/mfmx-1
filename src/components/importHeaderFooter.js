@@ -5,7 +5,7 @@
  * @license MIT
  * @see https://www.mefamex.com
  * @since 2024-08-20 
- * @lastModified 2025-09-03-T00:00:00Z
+ * @lastModified 2026-08-13-T01:00:00Z
  */
 
 'use strict';
@@ -120,7 +120,7 @@ async function CreateHeader() {
         else header = header[0];
     }
     if (!header) { header = document.createElement("header"); }
-    header.id = "header"; header.innerHTML = ''; header.classList.add("scrolled", "slim");
+    header.id = "header"; header.innerHTML = ''; header.classList.add();
     if (window.innerWidth < 600) { header.classList.add('slim'); }
 
     const divLeft = document.createElement("a"); header.appendChild(divLeft);
