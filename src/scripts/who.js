@@ -1,6 +1,6 @@
 /**
  * @fileoverview MEFAMEX WHO JavaScript file
- * @author Mefamex <info@mefamex.com> 
+ * @author Mefamex <info@mefamex.com>
  * @copyright 2026 Mefamex
  * @license MIT
  * @see https://www.mefamex.com
