@@ -5,7 +5,7 @@
  * @license MIT
  * @see https://www.mefamex.com
  * @since 2026-06-22
- * @lastModified 2026-06-22-T00:00:00Z
+ * @lastModified 2026-08-22-T00:00:00Z
  */
 
 
@@ -104,7 +104,7 @@ async function sureyiGuncelle() {
 }
 
 function zamanlayiciyiBaslat() {
-    setTimeout(() => ilkKaydiOlustur(), 3000);
+    setTimeout(() => ilkKaydiOlustur(), 5000);
     const ilkGuncellemeler = [20, 30, 40, 50, 60];
     ilkGuncellemeler.forEach(saniye => { setTimeout(() => { sureyiGuncelle(); }, saniye * 1000); });
     setTimeout(() => { setInterval(() => { sureyiGuncelle(); }, 30000); }, 60000);

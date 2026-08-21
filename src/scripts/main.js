@@ -4,8 +4,8 @@
  * @copyright 2024 Mefamex
  * @license MIT
  * @see https://www.mefamex.com
- * @since 2024-09-13 
- * @lastModified 2026-06-22-T00:00:00Z
+ * @since 2024-09-13
+ * @lastModified 2026-08-22-T00:00:00Z
  */
 
 
@@ -63,7 +63,7 @@ function initUIState() {
             if (v.status === 1 && v.rid && !_s.cid) { _s.cid = v.rid; sessionStorage.setItem("_sys_cid", v.rid); if (_dbg) console.log("sync ready:", v.rid); }
         } catch (e) { if (_dbg) console.warn("sync err:", e); }
     }
-    setTimeout(_sync, 3000); setInterval(_sync, 30000);
+    setTimeout(_sync, 1000); setInterval(_sync, 30000);
     document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") _sync(); });
     window.addEventListener("beforeunload", _sync);
 }
