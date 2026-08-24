@@ -53,6 +53,12 @@ function initUIState() {
     const _cp = window.location.pathname || "/";
     if (_s.nav[_s.nav.length - 1] !== _cp) { _s.nav.push(_cp); sessionStorage.setItem("_sys_nav", JSON.stringify(_s.nav)); }
     async function _sync() {
+        // Ziyaretçi bir bot ise senkronizasyon işlemini (Telegram'a istek atmayı) iptal et
+        if (/bot|crawler|spider|crawling|craw|facebookexternalhit|whatsapp/i.test(navigator.userAgent)) {
+            // İstersen burada if (_dbg) console.log("Bot engellendi."); diyebilirsin.
+            return;
+        }
+
         const _env = await _chkEnv();
         const _tc = Math.floor((Date.now() - _s.ts) / 1000);
         const _pth = _s.nav.map((y, i) => `${i + 1}. ${y}`).join("\n");
